@@ -1,0 +1,15 @@
+{
+  "hookLoop": {
+    "enabled": false,
+    "disabledReason": "This brand home has no evidence-backed recurring trigger or return benefit."
+  },
+  "crossProductPaths": [],
+  "toolHandoffs": [
+    {
+      "intent": "Locate Pak Khlong Talat after seeing the documentary photograph.",
+      "destination": "Google Maps, opened in a new tab only after explicit user action",
+      "returnPath": "Copyable evidence-labelled place text remains on the Landometer page.",
+      "benefit": "The provider can supply navigation and current provider-owned place information that this static page does not."
+    }
+  ]
+}

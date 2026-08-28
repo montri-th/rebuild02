@@ -2,13 +2,6 @@
    Landometer Design System v0.9.0 — lds-tokens.css
    Kit lds-kit-0.9.0-r4 · Color Set color-srgb-05 · Token Schema 6
    Copy verbatim. Do not edit values. [TOKEN-01]
-
-   [EXCEPTION-01] — recorded deviation, comments only:
-   trailing "@kind" markers were added so this repository's token classifier can
-   group the gradient, z-index, opacity, leading, motion and type tokens. Every
-   declaration, value and order is byte-identical to the published kit. A build
-   that must prove byte-parity for SC-03 should take the bytes from
-   machine/v0.9.0/build-kit/lds-tokens.css upstream.
    ============================================================ */
 :root {
   color-scheme: light;
@@ -50,31 +43,31 @@
   --semantic-assisted-fill: #DFF3F1; --semantic-assisted-ink: #176C67;
 
   /* Source-status aliases (A2.1 — derived, no new raw values) */
-  --status-source-candidate: var(--semantic-warning-ink); /* @kind color */
-  --status-source-derived: var(--semantic-assisted-ink); /* @kind color */
-  --status-source-other: var(--interaction-accent); /* @kind color */
-  --status-source-verified-bar: var(--brand-blue); /* @kind color */
+  --status-source-candidate: var(--semantic-warning-ink);
+  --status-source-derived: var(--semantic-assisted-ink);
+  --status-source-other: var(--interaction-accent);
+  --status-source-verified-bar: var(--brand-blue);
 
   /* Overlay glass (A2.1 — dark canvas at opacity.strong; theme-invariant) */
-  --overlay-glass: rgba(17, 25, 29, 0.88); /* @kind color */
+  --overlay-glass: rgba(17, 25, 29, 0.88);
   --overlay-glass-ink: #FFFFFF;
   --overlay-glass-ink2: #F1F4EF;
-  --overlay-glass-border: rgba(241, 244, 239, 0.24); /* @kind color */
+  --overlay-glass-border: rgba(241, 244, 239, 0.24);
 
   /* Atmosphere recipes (A4 — exact stops; never edit) */
-  --atmosphere-measure-deep: linear-gradient(135deg, #1D4497 0%, #176B82 54%, #08756F 100%); /* @kind color */
-  --atmosphere-measure-luminous: linear-gradient(135deg, #89CEF6 0%, #5ECAD6 50%, #6CD5B3 100%); /* @kind color */
-  --atmosphere-ground-current: linear-gradient(135deg, #0F5773 0%, #006A6A 50%, #1F744F 100%); /* @kind color */
-  --atmosphere-ground-mist: linear-gradient(135deg, #C4E0EE 0%, #B2E2E2 50%, #CCE6D0 100%); /* @kind color */
-  --atmosphere-cultivate-glow: linear-gradient(135deg, #EB8182 0%, #F5A06F 50%, #EBC573 100%); /* @kind color */
-  --atmosphere-cultivate-mist: linear-gradient(135deg, #F7CBC7 0%, #FBD1B6 50%, #F1E0B4 100%); /* @kind color */
-  --atmosphere-diversity-spectrum: linear-gradient(135deg, #89CEF6 0%, #6CD5B3 34%, #EBC573 67%, #EB8182 100%); /* @kind color */
+  --atmosphere-measure-deep: linear-gradient(135deg, #1D4497 0%, #176B82 54%, #08756F 100%);
+  --atmosphere-measure-luminous: linear-gradient(135deg, #89CEF6 0%, #5ECAD6 50%, #6CD5B3 100%);
+  --atmosphere-ground-current: linear-gradient(135deg, #0F5773 0%, #006A6A 50%, #1F744F 100%);
+  --atmosphere-ground-mist: linear-gradient(135deg, #C4E0EE 0%, #B2E2E2 50%, #CCE6D0 100%);
+  --atmosphere-cultivate-glow: linear-gradient(135deg, #EB8182 0%, #F5A06F 50%, #EBC573 100%);
+  --atmosphere-cultivate-mist: linear-gradient(135deg, #F7CBC7 0%, #FBD1B6 50%, #F1E0B4 100%);
+  --atmosphere-diversity-spectrum: linear-gradient(135deg, #89CEF6 0%, #6CD5B3 34%, #EBC573 67%, #EB8182 100%);
 
   /* Product identity gradients (A4) — only inside the owning product */
-  --product-citymeter-gradient: linear-gradient(135deg, #12669B 0%, #36BCE4 100%); /* @kind color */
-  --product-citywiki-gradient: linear-gradient(135deg, #F7CBC7 0%, #FBD1B6 50%, #F1E0B4 100%); /* @kind color */
-  --product-citychat-gradient: linear-gradient(135deg, #007A58 0%, #007E79 100%); /* @kind color */
-  --product-ijji-gradient: linear-gradient(135deg, #C4E0EE 0%, #B2E2E2 50%, #CCE6D0 100%); /* @kind color */
+  --product-citymeter-gradient: linear-gradient(135deg, #12669B 0%, #36BCE4 100%);
+  --product-citywiki-gradient: linear-gradient(135deg, #F7CBC7 0%, #FBD1B6 50%, #F1E0B4 100%);
+  --product-citychat-gradient: linear-gradient(135deg, #007A58 0%, #007E79 100%);
+  --product-ijji-gradient: linear-gradient(135deg, #C4E0EE 0%, #B2E2E2 50%, #CCE6D0 100%);
 
   /* Local foreground contracts (A4.1 — exact) */
   --fg-on-deep-primary: #FFFFFF;
@@ -85,18 +78,18 @@
   --fg-interactive-ink: #182327;
 
   /* Theme-resolved atmosphere aliases + their contracts (A4.1) */
-  --surface-atmosphere-measure: var(--atmosphere-measure-deep); /* @kind color */
-  --on-atmosphere-measure: var(--fg-on-deep-primary); /* @kind color */
-  --on-atmosphere-measure-2: var(--fg-on-deep-secondary); /* @kind color */
-  --surface-atmosphere-ground: var(--atmosphere-ground-mist); /* @kind color */
-  --on-atmosphere-ground: var(--fg-on-light-primary); /* @kind color */
-  --on-atmosphere-ground-2: var(--fg-on-light-secondary); /* @kind color */
-  --surface-atmosphere-cultivate: var(--atmosphere-cultivate-glow); /* @kind color */
-  --on-atmosphere-cultivate: var(--fg-on-light-primary); /* @kind color */
-  --on-atmosphere-cultivate-2: var(--fg-on-light-secondary); /* @kind color */
-  --surface-atmosphere-diversity: var(--atmosphere-diversity-spectrum); /* @kind color */
-  --on-atmosphere-diversity: var(--fg-on-light-primary); /* @kind color */
-  --on-atmosphere-diversity-2: var(--fg-on-light-secondary); /* @kind color */
+  --surface-atmosphere-measure: var(--atmosphere-measure-deep);
+  --on-atmosphere-measure: var(--fg-on-deep-primary);
+  --on-atmosphere-measure-2: var(--fg-on-deep-secondary);
+  --surface-atmosphere-ground: var(--atmosphere-ground-mist);
+  --on-atmosphere-ground: var(--fg-on-light-primary);
+  --on-atmosphere-ground-2: var(--fg-on-light-secondary);
+  --surface-atmosphere-cultivate: var(--atmosphere-cultivate-glow);
+  --on-atmosphere-cultivate: var(--fg-on-light-primary);
+  --on-atmosphere-cultivate-2: var(--fg-on-light-secondary);
+  --surface-atmosphere-diversity: var(--atmosphere-diversity-spectrum);
+  --on-atmosphere-diversity: var(--fg-on-light-primary);
+  --on-atmosphere-diversity-2: var(--fg-on-light-secondary);
 
   /* Vivid Civic 10 categorical (A5) — assign by category ID, color-only stops at six */
   --series-01: #C33F55; --series-02: #C52C00; --series-03: #A87B00;
@@ -111,43 +104,32 @@
   /* Map and interface (A7) — light */
   --map-active-layer: #347DA8;
   --map-hover-stroke: #347DA8;
-  --map-hover-fill: rgba(52, 125, 168, 0.16); /* @kind color */
+  --map-hover-fill: rgba(52, 125, 168, 0.16);
   --map-selected-stroke: #176B82;
-  --map-selected-fill: rgba(23, 107, 130, 0.18); /* @kind color */
+  --map-selected-fill: rgba(23, 107, 130, 0.18);
   --map-focus-stroke: #176B82;
   --marker-halo: #FFFFFF;
   --marker-stroke: #182327;
 
   /* z-index roles (A7) */
-  --z-base: 0; /* @kind other */
-  --z-raised: 10; /* @kind other */
-  --z-sticky: 100; /* @kind other */
-  --z-dropdown: 200; /* @kind other */
-  --z-overlay: 400; /* @kind other */
-  --z-modal: 500; /* @kind other */
-  --z-toast: 600; /* @kind other */
-  --z-tooltip: 700; /* @kind other */
+  --z-base: 0; --z-raised: 10; --z-sticky: 100; --z-dropdown: 200;
+  --z-overlay: 400; --z-modal: 500; --z-toast: 600; --z-tooltip: 700;
 
   /* Opacity registry (A7) — never the only carrier of meaning */
-  --opacity-solid: 1.00; /* @kind other */
-  --opacity-strong: 0.88; /* @kind other */
-  --opacity-medium: 0.72; /* @kind other */
-  --opacity-soft: 0.56; /* @kind other */
-  --opacity-subtle: 0.40; /* @kind other */
-  --opacity-ghost: 0.24; /* @kind other */
-  --opacity-watermark: 0.12; /* @kind other */
-  --opacity-trace: 0.06; /* @kind other */
+  --opacity-solid: 1.00; --opacity-strong: 0.88; --opacity-medium: 0.72;
+  --opacity-soft: 0.56; --opacity-subtle: 0.40; --opacity-ghost: 0.24;
+  --opacity-watermark: 0.12; --opacity-trace: 0.06;
 
   /* Type scale (A8) */
-  --type-caption: .75rem; /* @kind font */
-  --type-label: .8125rem; /* @kind font */
-  --type-body-sm: .875rem; /* @kind font */
-  --type-body: 1rem; /* @kind font */
-  --type-body-lg: 1.125rem; /* @kind font */
-  --type-h3: clamp(1.35rem, 2vw, 1.75rem); /* @kind font */
-  --type-h2: clamp(2rem, 4vw, 3.25rem); /* @kind font */
-  --type-h1-en: clamp(3.25rem, 7vw, 6.5rem); /* @kind font */
-  --type-h1-th: clamp(2.5rem, 6vw, 5rem); /* @kind font */
+  --type-caption: .75rem;
+  --type-label: .8125rem;
+  --type-body-sm: .875rem;
+  --type-body: 1rem;
+  --type-body-lg: 1.125rem;
+  --type-h3: clamp(1.35rem, 2vw, 1.75rem);
+  --type-h2: clamp(2rem, 4vw, 3.25rem);
+  --type-h1-en: clamp(3.25rem, 7vw, 6.5rem);
+  --type-h1-th: clamp(2.5rem, 6vw, 5rem);
 
   /* Spacing, radius, container, elevation (A9) */
   --space-0: 0; --space-1: 4px; --space-2: 8px; --space-3: 12px;
@@ -157,38 +139,38 @@
   --radius-lg: 24px; --radius-xl: 32px; --radius-pill: 999px;
   --container-reading: 760px; --container-default: 1120px; --container-wide: 1280px;
   --gutter-mobile: 16px; --gutter-tablet: 24px; --gutter-desktop: 32px;
-  --elevation-none: none; /* @kind shadow */
+  --elevation-none: none;
   --elevation-xs: 0 1px 2px rgba(30,34,48,.08);
   --elevation-sm: 0 4px 12px rgba(30,34,48,.10);
   --elevation-md: 0 12px 32px rgba(30,34,48,.14);
   --elevation-lg: 0 24px 64px rgba(30,34,48,.18);
 
   /* Motion (A10) */
-  --motion-duration-feedback: 120ms; /* @kind other */
-  --motion-duration-state: 200ms; /* @kind other */
-  --motion-duration-map: 280ms; /* @kind other */
-  --motion-duration-chart: 360ms; /* @kind other */
-  --motion-duration-reveal: 640ms; /* @kind other */
-  --motion-duration-emphasis: 560ms; /* @kind other */
-  --motion-delay-stagger: 120ms; /* @kind other */
-  --motion-delay-stagger-cap: 600ms; /* @kind other */
-  --motion-distance-feedback: 2px; /* @kind spacing */
-  --motion-distance-reveal: 20px; /* @kind spacing */
-  --motion-ease-state: cubic-bezier(.2,0,0,1); /* @kind other */
-  --motion-ease-enter: cubic-bezier(.16,1,.3,1); /* @kind other */
-  --motion-ease-settle: cubic-bezier(.2,.9,.25,1.08); /* @kind other */
-  --motion-ease-press: cubic-bezier(.3,0,.6,1); /* @kind other */
+  --motion-duration-feedback: 120ms;
+  --motion-duration-state: 200ms;
+  --motion-duration-map: 280ms;
+  --motion-duration-chart: 360ms;
+  --motion-duration-reveal: 640ms;
+  --motion-duration-emphasis: 560ms;
+  --motion-delay-stagger: 120ms;
+  --motion-delay-stagger-cap: 600ms;
+  --motion-distance-feedback: 2px;
+  --motion-distance-reveal: 20px;
+  --motion-ease-state: cubic-bezier(.2,0,0,1);
+  --motion-ease-enter: cubic-bezier(.16,1,.3,1);
+  --motion-ease-settle: cubic-bezier(.2,.9,.25,1.08);
+  --motion-ease-press: cubic-bezier(.3,0,.6,1);
 
   /* Typography delivery (A11) */
-  --leading-display-en: 1.02; /* @kind other */
-  --leading-display-th: 1.16; /* @kind other */
-  --leading-editorial-en: 1.15; /* @kind other */
-  --leading-ui-heading-en: 1.22; /* @kind other */
-  --leading-ui-heading-th: 1.32; /* @kind other */
-  --leading-body: 1.60; /* @kind other */
-  --leading-body-compact: 1.45; /* @kind other */
-  --leading-label: 1.35; /* @kind other */
-  --leading-number: 1.25; /* @kind other */
+  --leading-display-en: 1.02;
+  --leading-display-th: 1.16;
+  --leading-editorial-en: 1.15;
+  --leading-ui-heading-en: 1.22;
+  --leading-ui-heading-th: 1.32;
+  --leading-body: 1.60;
+  --leading-body-compact: 1.45;
+  --leading-label: 1.35;
+  --leading-number: 1.25;
   --font-display-en-fallback: Georgia, Cambria, "Times New Roman", serif;
   --font-display-th-fallback: "Noto Sans Thai Looped", "Leelawadee UI", Tahoma, sans-serif;
   --font-body-fallback: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif;
@@ -232,21 +214,20 @@
   --semantic-neutral-fill: #2B3534;  --semantic-neutral-ink: #C4CECA;
   --semantic-pending-fill: #2C2A22;  --semantic-pending-ink: #D8CFB2;
   --semantic-assisted-fill: #163331; --semantic-assisted-ink: #79D9D1;
-  /* alias choice, not a Brand Blue recolor */
-  --status-source-verified-bar: var(--interaction-accent); /* @kind color */
-  --surface-atmosphere-measure: var(--atmosphere-measure-luminous); /* @kind color */
-  --on-atmosphere-measure: var(--fg-on-light-primary); /* @kind color */
-  --on-atmosphere-measure-2: var(--fg-on-light-secondary); /* @kind color */
-  --surface-atmosphere-ground: var(--atmosphere-ground-current); /* @kind color */
-  --on-atmosphere-ground: var(--fg-on-deep-primary); /* @kind color */
-  --on-atmosphere-ground-2: var(--fg-on-deep-secondary); /* @kind color */
-  --surface-atmosphere-cultivate: var(--atmosphere-cultivate-mist); /* @kind color */
-  --on-atmosphere-cultivate: var(--fg-on-light-primary); /* @kind color */
-  --on-atmosphere-cultivate-2: var(--fg-on-light-secondary); /* @kind color */
-  --product-citymeter-gradient: linear-gradient(135deg, #4C99D5 0%, #59C7E8 100%); /* @kind color */
-  --product-citywiki-gradient: linear-gradient(135deg, #F2F1DF 0%, #E0B443 100%); /* @kind color */
-  --product-citychat-gradient: linear-gradient(135deg, #3BD19B 0%, #3BD3CB 100%); /* @kind color */
-  --product-ijji-gradient: linear-gradient(135deg, #59C7E8 0%, #3BD3CB 100%); /* @kind color */
+  --status-source-verified-bar: var(--interaction-accent); /* alias choice, not a Brand Blue recolor */
+  --surface-atmosphere-measure: var(--atmosphere-measure-luminous);
+  --on-atmosphere-measure: var(--fg-on-light-primary);
+  --on-atmosphere-measure-2: var(--fg-on-light-secondary);
+  --surface-atmosphere-ground: var(--atmosphere-ground-current);
+  --on-atmosphere-ground: var(--fg-on-deep-primary);
+  --on-atmosphere-ground-2: var(--fg-on-deep-secondary);
+  --surface-atmosphere-cultivate: var(--atmosphere-cultivate-mist);
+  --on-atmosphere-cultivate: var(--fg-on-light-primary);
+  --on-atmosphere-cultivate-2: var(--fg-on-light-secondary);
+  --product-citymeter-gradient: linear-gradient(135deg, #4C99D5 0%, #59C7E8 100%);
+  --product-citywiki-gradient: linear-gradient(135deg, #F2F1DF 0%, #E0B443 100%);
+  --product-citychat-gradient: linear-gradient(135deg, #3BD19B 0%, #3BD3CB 100%);
+  --product-ijji-gradient: linear-gradient(135deg, #59C7E8 0%, #3BD3CB 100%);
   --series-01: #FF6B7F; --series-02: #FF8A4C; --series-03: #F4C44E;
   --series-04: #B5E34E; --series-05: #3BD19B; --series-06: #3BD3CB;
   --series-07: #59C7E8; --series-08: #4C99D5; --series-09: #A9C4C7;
@@ -255,9 +236,9 @@
   --dataviz-zero-outline: #93A398;
   --map-active-layer: #65B6DB;
   --map-hover-stroke: #65B6DB;
-  --map-hover-fill: rgba(101, 182, 219, 0.18); /* @kind color */
+  --map-hover-fill: rgba(101, 182, 219, 0.18);
   --map-selected-stroke: #68C4E2;
-  --map-selected-fill: rgba(104, 196, 226, 0.22); /* @kind color */
+  --map-selected-fill: rgba(104, 196, 226, 0.22);
   --map-focus-stroke: #68C4E2;
   --marker-halo: #101318;
   --marker-stroke: #F1F4EF;

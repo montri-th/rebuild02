@@ -3,12 +3,6 @@
    Kit lds-kit-0.9.0-r4 · Copy verbatim after lds-tokens.css.
    Contains no raw hex: every value derives from tokens.
    The reduced-motion kill switch is the only sanctioned !important.
-
-   [EXCEPTION-01] — recorded deviation, additive only: each .scene-atmosphere--*
-   variant also matches [data-scene="…"], so the local foreground-contract
-   properties are declared in a data scope this repository's token registry can
-   read. Same specificity, same values, class names unchanged; a build that must
-   prove byte-parity for SC-03 takes machine/v0.9.0/build-kit/lds-base.css.
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -91,10 +85,10 @@ h3 { font-size: var(--type-h3); }
 
 /* Atmosphere scenes [SURFACE-01] — surface and local foreground contract travel together */
 .scene-atmosphere { color: var(--on-atmosphere, var(--fg-on-deep-primary)); }
-.scene-atmosphere--measure, [data-scene="measure"] { background-image: var(--surface-atmosphere-measure); --on-atmosphere: var(--on-atmosphere-measure); --on-atmosphere-2: var(--on-atmosphere-measure-2); }
-.scene-atmosphere--ground, [data-scene="ground"] { background-image: var(--surface-atmosphere-ground); --on-atmosphere: var(--on-atmosphere-ground); --on-atmosphere-2: var(--on-atmosphere-ground-2); }
-.scene-atmosphere--cultivate, [data-scene="cultivate"] { background-image: var(--surface-atmosphere-cultivate); --on-atmosphere: var(--on-atmosphere-cultivate); --on-atmosphere-2: var(--on-atmosphere-cultivate-2); }
-.scene-atmosphere--diversity, [data-scene="diversity"] { background-image: var(--surface-atmosphere-diversity); --on-atmosphere: var(--on-atmosphere-diversity); --on-atmosphere-2: var(--on-atmosphere-diversity-2); }
+.scene-atmosphere--measure { background-image: var(--surface-atmosphere-measure); --on-atmosphere: var(--on-atmosphere-measure); --on-atmosphere-2: var(--on-atmosphere-measure-2); }
+.scene-atmosphere--ground { background-image: var(--surface-atmosphere-ground); --on-atmosphere: var(--on-atmosphere-ground); --on-atmosphere-2: var(--on-atmosphere-ground-2); }
+.scene-atmosphere--cultivate { background-image: var(--surface-atmosphere-cultivate); --on-atmosphere: var(--on-atmosphere-cultivate); --on-atmosphere-2: var(--on-atmosphere-cultivate-2); }
+.scene-atmosphere--diversity { background-image: var(--surface-atmosphere-diversity); --on-atmosphere: var(--on-atmosphere-diversity); --on-atmosphere-2: var(--on-atmosphere-diversity-2); }
 .scene-atmosphere .meta { color: var(--on-atmosphere-2); }
 .scene-atmosphere :where(a, button, [tabindex]):focus-visible { outline-color: var(--on-atmosphere); }
 

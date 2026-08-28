@@ -1,0 +1,200 @@
+{
+  "artifact": {
+    "id": "landometer-home-rebuild03",
+    "title": "Landometer home page rebuild03",
+    "version": "0.9.0",
+    "buildCardVersion": "0.9.0",
+    "manifestVersion": "2.1",
+    "tokenSchemaVersion": 6,
+    "product": "landometer",
+    "profile": "brand.public",
+    "pageKind": "brand-home-solution-product-proof-careers",
+    "pageKindSourceRef": "Landometer machine package v0.9.0 page-kinds.json",
+    "delivery": "deployable_public",
+    "language": "th",
+    "additionalLanguages": ["en"],
+    "evidenceStatus": "source_limited",
+    "visibility": "public",
+    "indexable": false,
+    "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
+    "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
+    "machineValidation": "pending",
+    "artifactBuildId": "ui-20260828-01"
+  },
+  "colorDelivery": {
+    "registryId": "color-srgb-05",
+    "immutableColorBaseline": {
+      "path": "upstream:Landometer/landometer-design-system-v0.9.0-standalone.color-srgb-05.html",
+      "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
+    },
+    "currentArtifactBuild": {
+      "id": "ui-20260828-01",
+      "path": "governance/site-manifest.json"
+    }
+  },
+  "experience": {
+    "trigger": "Understand what Landometer covers and where each evidence object leads.",
+    "oneJob": "Orient across Land, Location, and Living without merging product evidence boundaries.",
+    "firstAha": "The proof strip distinguishes the four system figures from product-scoped evidence and shows the missing system values honestly.",
+    "cleanCompletion": "Take an exact evidence link, continue to a product-owned route, contact the team, or leave without a synthetic retention loop."
+  },
+  "composition": {
+    "route": ["Measure", "Ground", "Cultivate"],
+    "connectors": ["evidence disclosure", "exact-link share", "Google Maps tool handoff"]
+  },
+  "capabilities": {
+    "motionEnhancement": true,
+    "share": true,
+    "mapHandoff": true,
+    "contactHandoff": true,
+    "personalization": "none",
+    "persistence": false,
+    "telemetry": false,
+    "thirdPartyRuntime": false,
+    "staticInitialHtml": true
+  },
+  "security": {
+    "securityBaselineRef": "none_ui_only"
+  },
+  "deliveryIdentity": {
+    "colorSetId": "color-srgb-05",
+    "artifactBuildId": "ui-20260828-01",
+    "releaseReceipt": {
+      "receiptId": "rebuild03-ui-20260828-01",
+      "catalogOrContentVersion": "landometer-home-rebuild03-v1",
+      "issuedAt": "2026-08-28"
+    }
+  },
+  "network": {
+    "mode": "share_ready",
+    "action": "copy_exact_link",
+    "target": "#proof-citymeter-v28-2026-08-14",
+    "socialPromotion": false,
+    "recipientBoundary": "The deep link preserves the CityMETER object, release v28, source date, and visible limitation."
+  },
+  "identity": {
+    "header": {
+      "path": "assets/identity/landometer-lockup-color-rebuild03.png",
+      "variant": "horizontal_full_colour",
+      "approvalStatus": "pending identity-registry registration after owner-directed protected-blue substitution",
+      "sha256": "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc",
+      "transparentCanvas": true,
+      "themeStrategy": "fixed owned white surface"
+    },
+    "footer": {
+      "path": "assets/identity/landometer-symbol-white-rebuild03.png",
+      "variant": "white symbol",
+      "sha256": "8f1588e6e11049c4f4a01dacc855b0151cb1ff4b6f91f913a99c0db3d5fffa3c",
+      "themeStrategy": "fixed owned Measure-deep surface",
+      "approvalStatus": "pending independent footer-role identity approval"
+    },
+    "omittedRoles": [
+      "favicon and install icon: no approved compact-role record",
+      "social preview: identity approval and destination-render test remain open"
+    ]
+  },
+  "governedObject": {
+    "id": "landometer.system-figures.v1",
+    "classification": "four legacy-system figures sharing one database and one source date",
+    "status": "waiting_for_source_values",
+    "source": "figures.json not supplied",
+    "boundary": "No prior count, estimate, extrapolation, or build date substitutes for a system value or data date.",
+    "figureIds": ["fig-service-users", "fig-title-deeds", "fig-land-area", "fig-land-value"]
+  },
+  "assets": [
+    {
+      "path": "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css",
+      "bytes": 11392,
+      "sha256": "aa834b08c6ecd00704a0c3580da83d291237738815a8e2e408aba12bb9551323"
+    },
+    {
+      "path": "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-base.css",
+      "bytes": 10718,
+      "sha256": "47eb23f0b2a06bd6882080bcc693384f5d59791b434045e7281b98fa2831903c"
+    },
+    {
+      "path": "assets/fonts/material-symbols-rounded-rebuild03.woff2",
+      "bytes": 9940,
+      "sha256": "5b4c9bab54e3b1b64367e2967a4f4832d8f13f81a85ef2658d5c7e38fe4491fb"
+    },
+    {
+      "path": "assets/media/living-city-rebuild03.mp4",
+      "bytes": 2134202,
+      "sha256": "4cfae2befcc2f1d004e2a74ddef5bc0a6baa5b037bc2d9daa33fe4f519b8368a"
+    },
+    {
+      "path": "assets/media/living-poster-360.webp",
+      "bytes": 16358,
+      "sha256": "a12671bd86956138232ebd88eb3c9f4cb11a1a7720e07b2d829612fb2ee3a44b"
+    },
+    {
+      "path": "assets/photos/pak-khlong-talat-900.avif",
+      "bytes": 49745,
+      "sha256": "d83a54f20e328e61ab5fb67f1976e28dbc3b45a00e883fc3ee00a64a9ba1338f"
+    }
+  ],
+  "publication": {
+    "authorizationSource": "current user request dated 2026-08-28",
+    "repository": "https://github.com/montri-th/rebuild02",
+    "branch": "main",
+    "pagesRoot": "/",
+    "liveUrl": "https://montri-th.github.io/rebuild02/",
+    "indexingSignal": "noindex,nofollow",
+    "discoverySet": "omitted while source_limited and non-indexable"
+  },
+  "growth": {
+    "hookLoop": {
+      "enabled": false,
+      "disabledReason": "No evidence-backed recurring trigger or return benefit exists on this brand home."
+    },
+    "crossProductPaths": [],
+    "crossProductOmissionReason": "No candidate had both a version-pinned product-owned intent source and an approved availability status.",
+    "toolHandoffs": [
+      {
+        "handoffId": "pak-khlong-talat-google-maps",
+        "provider": "Google Maps",
+        "activation": "explicit_user_action",
+        "fallback": "copyable evidence-labelled text"
+      }
+    ],
+    "socialPreviews": [],
+    "machineProjection": "governance/growth-record.json"
+  },
+  "qa": {
+    "buildCardPath": "governance/build-card.yaml",
+    "controlInventoryPath": "governance/control-inventory.md",
+    "qaEvidencePath": "governance/qa-evidence.json",
+    "mediaReceiptPath": "governance/media-receipt.json",
+    "fontManifestPath": "assets/fonts/font-assets.manifest.json",
+    "browserEvidence": "blocked_by_in_app_browser_admin_policy",
+    "machineValidation": "pending",
+    "conformanceLevel": "authoring_aligned"
+  },
+  "selfCheck": {
+    "SC-01": "pass",
+    "SC-02": "pass",
+    "SC-03": "fail",
+    "SC-04": "pass",
+    "SC-05": "fail",
+    "SC-06": "pass",
+    "SC-07": "fail",
+    "SC-08": "pass",
+    "SC-09": "pass",
+    "SC-10": "pass",
+    "SC-11": "fail",
+    "SC-12": "fail",
+    "SC-13": "n/a",
+    "SC-14": "fail",
+    "SC-15": "fail",
+    "SC-16": "fail",
+    "SC-17": "pass",
+    "SC-18": "pass",
+    "SC-19": "fail",
+    "SC-20": "fail",
+    "SC-21": "fail",
+    "SC-22": "fail",
+    "SC-23": "fail",
+    "resultPath": "governance/self-check.md",
+    "reason": "Fail rows are reported open rendered, browser, destination, or control-outcome gates; they are not upgraded from source evidence."
+  }
+}

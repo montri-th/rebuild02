@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0",
+  "artifactBuildId": "ui-20260828-01",
+  "sourceInputs": [
+    {
+      "name": "IMG_8633.mov",
+      "sourceLocation": "owner-supplied local attachment (not committed)",
+      "committed": false,
+      "bytes": 51153859,
+      "sha256": "4852856f4c0bed9548bf60f2bf95530efe50fcbb06d57b67807145016b4963d1",
+      "privacyBoundary": "Source contains device, capture-time, and location metadata and is not deployed."
+    },
+    {
+      "name": "pkt.webp",
+      "sourceLocation": "owner-supplied local attachment (not committed)",
+      "committed": false,
+      "bytes": 89340,
+      "sha256": "56d0c0e35e761ddbbbc39d84409ba5444e87d1b3d998989f736adb702eeb00c5",
+      "privacyBoundary": "Source contains no EXIF, ICC, alpha, or orientation metadata and is not deployed."
+    }
+  ],
+  "livingVideo": {
+    "path": "assets/media/living-city-rebuild03.mp4",
+    "bytes": 2134202,
+    "sha256": "4cfae2befcc2f1d004e2a74ddef5bc0a6baa5b037bc2d9daa33fe4f519b8368a",
+    "durationSeconds": 7,
+    "displayDimensions": "360x640",
+    "codec": "H.264 Main Level 3.0",
+    "audioTracks": 0,
+    "metadataRecords": 0,
+    "fastStart": true,
+    "behavior": "controls, muted, playsinline, preload metadata, no autoplay, no loop"
+  },
+  "livingPoster": {
+    "path": "assets/media/living-poster-360.webp",
+    "bytes": 16358,
+    "dimensions": "360x640",
+    "sha256": "a12671bd86956138232ebd88eb3c9f4cb11a1a7720e07b2d829612fb2ee3a44b"
+  },
+  "pakKhlongTalat": {
+    "ownershipLabel": "Landometer material per owner work order",
+    "representationLabel": "Documentary photograph, not a CityWiki screenshot",
+    "responsiveWidths": [360, 640, 900],
+    "preferred900": {
+      "path": "assets/photos/pak-khlong-talat-900.avif",
+      "bytes": 49745,
+      "sha256": "d83a54f20e328e61ab5fb67f1976e28dbc3b45a00e883fc3ee00a64a9ba1338f"
+    },
+    "fallback900": {
+      "path": "assets/photos/pak-khlong-talat-900.webp",
+      "bytes": 94186,
+      "sha256": "38a572368f9608e4e1bb0eb8134332d47e2253753e4f4d2d0ba50569877ec1ad"
+    }
+  },
+  "testimonials": {
+    "mappingEvidence": "Legacy DOM and adjacent asset order checked 2026-08-28; no role inferred where the source did not state one.",
+    "displayOrder": [
+      {"person": "ณภัทร ภัทรอารยสกุล", "portrait": "06", "companyMark": "06"},
+      {"person": "ฐิติรัตน์ พัวไพบูลย์", "portrait": "04", "companyMark": "04"},
+      {"person": "ศุภมงคล ศรีสถาพร", "portrait": "01", "companyMark": "01"},
+      {"person": "ยุทธศักดิ์ รัตนพงศ์", "portrait": "02", "companyMark": "02"},
+      {"person": "พลอยจันทร์ วิฑูรชาติ", "portrait": "03", "companyMark": "03"},
+      {"person": "รัฐวิทย์ อังคสกุลเกียรติ", "portrait": "05", "companyMark": "05"}
+    ],
+    "delivery": "AVIF preferred with WebP fallback for portraits; clean PNG for company marks; every asset is lazy-loaded.",
+    "densityLimitation": "Portraits 01-03 are source-limited to 100x100 and are below 2x density at their 72 CSS px desktop rendering; they are not upscaled or invented."
+  },
+  "identity": {
+    "governedSourceBefore": {
+      "bytes": 903326,
+      "sha256": "8d706f8021bc4b4fdc0e89117244b54868687b74045be54002321de7aaa7ef92",
+      "oldBluePixels": 4244683,
+      "protectedBluePixels": 0
+    },
+    "governedSourceAfter": {
+      "path": "assets/landometer-lockup-color.png",
+      "bytes": 977032,
+      "sha256": "9d04b657c4ad4b5ac6167faeaa7e6476deb44d7eb573369fc20a5a106207fc39",
+      "oldBluePixels": 0,
+      "protectedBluePixels": 4244683,
+      "otherPixelChanges": 0
+    },
+    "webDerivative": {
+      "path": "assets/identity/landometer-lockup-color-rebuild03.png",
+      "bytes": 22204,
+      "sha256": "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc",
+      "oldBluePixels": 0,
+      "protectedBluePixels": 4328,
+      "approval": "pending identity-registry registration"
+    }
+  }
+}

@@ -356,7 +356,7 @@ Contrast is measured from the rendered glyph through the real alpha stack onto t
 
 # ICONOGRAPHY
 
-**Nothing upstream packages an icon set.** `montri-th/Landometer` ships no icon font, no SVG sprite and no icon directory — searched across `deployment/`, `skill/` and the asset manifests. The shipped playground carries its few glyphs typographically instead.
+The upstream authority defines the icon system; this artifact packages the used Material Symbols Rounded face locally and records it in `assets/fonts/font-assets.manifest.json`.
 
 ## The chosen set — Material Symbols Rounded (approved)
 
@@ -370,7 +370,7 @@ The one stated preference in the upstream guidance is *"outline icons with round
 | `GRAD` | **0** | no optical weight compensation |
 | `opsz` | **24** | matched to the 22–28px range this system uses |
 
-It arrives with the design system: `tokens/fonts.css` opens with the Google Fonts `@import`, so any page that links `styles.css` has it. Two ways to use it:
+It arrives with this artifact through a relative `@font-face` in `tokens/fonts.css`, so any page that links `styles.css` has it without a third-party request. Two ways to use it:
 
 ```jsx
 <Icon name="place" />
@@ -379,15 +379,15 @@ It arrives with the design system: `tokens/fonts.css` opens with the Google Font
 ```
 
 ```html
-<span class="ls-icon">place</span>
-<span class="ls-icon" style="font-size:28px">insights</span>
+<span class="icon-symbol">place</span>
+<span class="icon-symbol icon-symbol--sm">insights</span>
 ```
 
 Sizes are `--icon-size-sm 18px` / `--icon-size-md 22px` / `--icon-size-lg 28px`. Glyphs are ligature names, so a failed font load degrades to the readable word rather than to a blank box.
 
 **Approved 16 August 2026** as the Landometer icon system, recorded in `brand/asset-records.md`. Approved for UI, documents and artifacts — **not** as an identity asset. It must never be used to reconstruct, stand in for or decorate the brand mark.
 
-One open item, and it is a real one: the face is fetched from Google's CDN in `tokens/fonts.css`. SC-19 requires production and portable builds to load the icon face from a **self-hosted subset**, and SC-11 requires the artifact to work with third-party requests blocked. Until the two `.woff2` subsets are self-hosted with recorded hashes beside the five text families, any build made from this folder reports SC-11 and SC-19 as **fail** — not `n/a`.
+The face is a **self-hosted subset** with its SHA-256 and Apache-2.0 licence recorded beside all nine self-hosted text faces. Source inspection therefore finds zero third-party runtime font request; SC-11 and SC-19 still require their separate rendered-browser checks before they can pass.
 
 ## Rules for using an icon here
 
@@ -495,7 +495,7 @@ A recreation of the one product surface this repository ships — the internal-t
 
 `logo/` — twelve approved renditions: `landometer-lockup-color.png` (primary horizontal lockup, transparent), `landometer-lockup-banner.png`, `landometer-symbol-192.png` (the approved browser-tab symbol, repo commit `ce785864`), plus colour, white, cream, gray, mono, outline-cream, outline-white and square-white symbol variants.
 `images/` — `team-hero.jpg`, `team-presenting.jpg`, both used unaltered.
-`fonts/` — nine `.woff2` binaries plus `licenses/` (SIL OFL 1.1 for all five text families; the icon face is Apache 2.0 and CDN-delivered).
+`fonts/` — nine `.woff2` text binaries plus `licenses/` (SIL OFL 1.1 for all five text families); the artifact-level Material Symbols subset is Apache 2.0 and self-hosted at the site root.
 
 Also at the root: `guidelines/contrast-evidence.json` — the measured contrast record behind the Contrast evidence card.
 
@@ -506,7 +506,7 @@ Also at the root: `guidelines/contrast-evidence.json` — the measured contrast 
 v0.9.0 exists because the same master produced materially different builds per builder — human or AI — and small-detail drift forced repeated redeploys. The correction is determinism plus governed growth, not new taste. In this folder that means five concrete changes:
 
 1. **The kit is now the source of truth.** `build-kit/lds-tokens.css` and `build-kit/lds-base.css` are the Appendix E bytes, unedited. `styles.css` loads them first; everything else is an extension layer. The old per-topic token files (`colors.css`, `atmosphere.css`, `typography.css`, `spacing.css`, `motion.css`, `elevation.css`, `dataviz.css`) are gone — their values live in the kit, their names live in `tokens/ext-aliases.css`.
-2. **Ten retired colour values.** The purple-brown purge replaced `#795300 #846100 #686354 #8B877A #B6AD98 #A59A80 #9E476F #E982AE #827C68 #85837A`. Metadata, muted and disabled ink moved to the green-gray family; `semantic.warning.ink` is now a vivid amber-orange; Marigold is `#A87B00`. SC-17 fails a build where any retired value still appears — including in a comment.
+2. **Retired colour values.** The purple-brown purge list is maintained in the upstream authoring master and is deliberately not repeated in this deployed bundle because SC-17 rejects those literals even in comments. Metadata, muted and disabled ink now use the governed green-gray family; warning and categorical roles resolve from the current kit.
 3. **Two product gradients were re-pointed.** CityWiki takes Cultivate Mist, ijji takes Ground Mist. The seven shared atmosphere recipes are byte-identical.
 4. **Motion was re-tuned.** `reveal` 400ms → 640ms, travel 12px → 20px, stagger 60ms → 120ms capped at 600ms, and two new curves (`settle`, `press`). Reduced motion is one kill switch instead of per-token collapse.
 5. **Icons are locked at `wght 300`.** `FILL 0 · wght 300 · GRAD 0 · opsz 24`, no second weight, no second icon font, no decorative SVG. `FILL 1` is for an active or selected state only.
@@ -521,7 +521,7 @@ Design System `0.9.0` · authoring revision `v0.9.0-r7` · Build Card `0.9.0` ·
 
 - `machineValidation: pending` for every artifact in this folder. Upstream, the generated package `v0.9.0-mp1` reports `package_internally_consistent` (143 checks, 21 August 2026) — **package availability is never an artifact pass**, and no package-level, artifact-level or Full Living Reference conformance may be claimed here.
 - **No artifact build ID is minted for this folder.** The upstream v0.9.0 UI build is `ui-20260821-05`; do not reuse it as a receipt for work produced here. A build made from this folder mints its own.
-- **Self-check status: not run as a set.** The 23 rows apply to a delivered artifact, not to a token library. Two rows are known **fail** for anything built from this folder as-is: SC-11 and SC-19, because `tokens/fonts.css` still fetches Material Symbols Rounded from `fonts.googleapis.com`. Self-host the subset with recorded hashes before claiming either.
+- **Self-check status: artifact-specific.** The 23 rows apply to the delivered artifact. This bundle self-hosts all text and icon faces with recorded hashes; SC-11 and SC-19 remain open only because the required network-blocked/rendered glyph checks have not run in an allowed browser.
 - One owner decision is open upstream: **Thai display leading `1.16`** — the rendered stress fixtures returned nine findings (deepest overlap 15px at display size), so avoid stacking a deep-descender word above a high stacked-mark word in multi-line Thai display, or break the line. Evidence: `qa/v0.9.0-thai-leading.json`.
 - `fullLivingReference: false` · `map: false` · evidence `source_limited` · `noindex`.
 - Formal identity/media approval records and the manual visual and accessibility gates remain **open**. `brand/release-readiness.md` explains each in plain language: what it blocks, who closes it, and what to do meanwhile.

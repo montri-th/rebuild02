@@ -1,96 +1,118 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" data-ds="landometer" data-ds-version="0.9.0" data-build-card-version="0.9.0" data-manifest-version="2.1" data-token-schema-version="6" data-ds-profile="brand.public" data-delivery-mode="static-initial-html" data-evidence-status="source_limited" data-visibility="public" data-indexable="false" data-theme="light" data-theme-preference="system">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script>
+(function () {
+  var K = "lds-theme", t = null, root = document.documentElement;
+  try { t = localStorage.getItem(K); } catch (e) {}
+  var mode = (t === "light" || t === "dark") ? t : "system";
+  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function resolve(m) { return (m === "dark" || (m === "system" && mq && mq.matches)) ? "dark" : "light"; }
+  root.setAttribute("data-theme", resolve(mode));
+  root.setAttribute("data-theme-preference", mode);
+  if (mq && mq.addEventListener) { mq.addEventListener("change", function () {
+      if (root.getAttribute("data-theme-preference") === "system") { root.setAttribute("data-theme", resolve("system")); }
+  }); }
+})();
+</script>
+<title>Visualize City, Shape Tomorrow. — Landometer</title>
+<meta name="description" content="Landometer connects city data and AI to help people understand land, location and urban living, with evidence sources and limitations kept within each product's scope.">
+<meta name="landometer:ds-version" content="0.9.0">
+<meta name="landometer:color-set" content="color-srgb-05">
+<meta name="landometer:artifact-build" content="ui-20260828-01">
+<meta name="landometer:release-receipt" content="rebuild03-ui-20260828-01">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F7F3">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#11191D">
+<link rel="canonical" href="https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html">
+<link rel="alternate" hreflang="th" href="https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html">
+<link rel="alternate" hreflang="en" href="https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html">
+<link rel="alternate" hreflang="x-default" href="https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preload" as="image" href="assets/photos/hero-lumpini-640.avif" imagesrcset="assets/photos/hero-lumpini-480.avif 480w, assets/photos/hero-lumpini-640.avif 640w, assets/photos/hero-lumpini-768.avif 768w, assets/photos/hero-lumpini-1280.avif 1280w" imagesizes="(min-width: 840px) 50vw, 100vw" type="image/avif">
+<link rel="preload" as="font" href="assets/fonts/material-symbols-rounded-rebuild03.woff2" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/styles.css">
+<link rel="stylesheet" href="site.css">
+<script defer src="site.js"></script>
 </head>
 <body>
-<x-dc>
-<helmet>
-  <title>Landometer — Visualize City, Shape Tomorrow.</title>
-  <link rel="stylesheet" href="_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/tokens/fonts.css">
-  <link rel="stylesheet" href="_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css">
-  <link rel="stylesheet" href="_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-base.css">
-  <link rel="stylesheet" href="_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/tokens/ext-aliases.css">
-  <link rel="stylesheet" href="_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/tokens/ext-registry.css">
-  <link rel="stylesheet" href="_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/tokens/base.css">
-  <link rel="stylesheet" href="_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/styles.css">
-  <script src="_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/_ds_bundle.js"></script>
-  <script src="image-slot.js"></script>
-  <script src="video-slot.js"></script>
-</helmet>
-<div lang="en" data-lds="0.9.0-r7" data-kit="lds-kit-0.9.0-r4" data-build="prototype-en-20260827" data-machine-validation="pending" style="min-height:100vh; background:var(--surface-canvas); color:var(--text-primary)">
+<div data-lds="0.9.0-r7" data-kit="lds-kit-0.9.0-r4" data-build="ui-20260828-01" data-machine-validation="pending" style="min-height:100vh; background:var(--surface-canvas); color:var(--text-primary)">
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header data-screen-label="Header" style="position:sticky; top:0; z-index:var(--z-sticky); background:color-mix(in srgb, var(--surface-canvas) 92%, transparent); backdrop-filter:blur(10px) saturate(1.2); -webkit-backdrop-filter:blur(10px) saturate(1.2); border-bottom:1px solid var(--border-hairline)">
+  <header class="site-header" data-screen-label="Header">
     <div class="container container--wide" style="height:76px; display:flex; align-items:center; justify-content:space-between; gap:var(--space-4)">
-      <a href="#top" aria-label="Landometer — home" style="display:inline-flex; align-items:center">
-        <img src="assets/landometer-lockup-color.png" alt="Landometer" style="height:38px; width:auto">
+      <a class="brand-surface" href="#top" aria-label="Landometer — home">
+        <img class="brand-lockup" src="assets/identity/landometer-lockup-color-rebuild03.png" width="800" height="220" alt="Landometer">
       </a>
       <div style="display:flex; align-items:center; gap:var(--space-3)">
-        <a class="btn" href="https://landometer.com/auth">Sign in</a>
-        <button class="btn btn--quiet btn-icon" type="button" onClick="{{ openMenu }}" aria-haspopup="dialog" aria-expanded="{{ menuOpen }}" aria-controls="site-menu" title="Menu" aria-label="Menu"><span class="icon-symbol" aria-hidden="true">menu</span></button>
+        <a class="btn pressable" href="https://landometer.com/auth">Sign in</a>
+        <button class="btn btn--quiet btn-icon pressable js-only" type="button" data-menu-open aria-haspopup="dialog" aria-expanded="false" aria-controls="site-menu" title="Menu" aria-label="Menu"><span class="icon-symbol" aria-hidden="true">menu</span></button>
       </div>
     </div>
   </header>
 
-  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <div onClick="{{ closeMenu }}" style="position:fixed; inset:0; background:rgba(17,25,29,.66); backdrop-filter:blur(3px); z-index:var(--z-overlay)"></div>
-    <div role="dialog" aria-modal="true" aria-label="Menu" id="site-menu" style="position:fixed; top:0; right:0; bottom:0; width:min(420px, 100%); background:var(--surface-raised); z-index:var(--z-modal); box-shadow:var(--elevation-md); padding:var(--space-5); overflow:auto; display:flex; flex-direction:column; gap:var(--space-4)">
+  <noscript><nav class="noscript-nav" aria-label="Main navigation"><a href="#products">Products and services</a><a href="#citywiki">CityWiki</a><a href="#landom">Landom</a><a href="#news">News</a><a href="#contact">Contact</a><a href="Landometer-Home-TH.dc.html">ไทย</a></nav></noscript>
+
+  <div data-menu-shell hidden>
+    <div class="site-menu-backdrop" data-menu-close></div>
+    <div class="site-menu-panel" role="dialog" aria-modal="true" aria-label="Menu" id="site-menu">
       <div style="display:flex; align-items:center; justify-content:space-between">
         <span class="eyebrow">Menu</span>
-        <button class="btn btn--quiet btn-icon" type="button" onClick="{{ closeMenu }}" aria-label="Close menu"><span class="technical" style="font-size:18px" aria-hidden="true">✕</span></button>
+        <button class="btn btn--quiet pressable" type="button" data-menu-close>Close</button>
       </div>
       <nav aria-label="Main menu" style="display:flex; flex-direction:column; gap:var(--space-1)">
-        <a onClick="{{ closeMenu }}" href="#products" style="display:block; padding:14px 16px; border-radius:var(--radius-sm); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:1.125rem" style-hover="background:var(--surface-blue-tint)">Products and services</a>
-        <a onClick="{{ closeMenu }}" href="#citywiki" style="display:block; padding:14px 16px; border-radius:var(--radius-sm); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:1.125rem" style-hover="background:var(--surface-blue-tint)">CityWiki</a>
-        <a onClick="{{ closeMenu }}" href="#landom" style="display:block; padding:14px 16px; border-radius:var(--radius-sm); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:1.125rem" style-hover="background:var(--surface-blue-tint)">Landom</a>
-        <a onClick="{{ closeMenu }}" href="#news" style="display:block; padding:14px 16px; border-radius:var(--radius-sm); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:1.125rem" style-hover="background:var(--surface-blue-tint)">News</a>
-        <a onClick="{{ closeMenu }}" href="#contact" style="display:block; padding:14px 16px; border-radius:var(--radius-sm); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:1.125rem" style-hover="background:var(--surface-blue-tint)">Contact</a>
+        <a data-menu-close href="#products" style="display:block; padding:14px 16px; border-radius:var(--radius-sm); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:1.125rem">Products and services</a>
+        <a data-menu-close href="#citywiki" style="display:block; padding:14px 16px; border-radius:var(--radius-sm); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:1.125rem">CityWiki</a>
+        <a data-menu-close href="#landom" style="display:block; padding:14px 16px; border-radius:var(--radius-sm); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:1.125rem">Landom</a>
+        <a data-menu-close href="#news" style="display:block; padding:14px 16px; border-radius:var(--radius-sm); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:1.125rem">News</a>
+        <a data-menu-close href="#contact" style="display:block; padding:14px 16px; border-radius:var(--radius-sm); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:1.125rem">Contact</a>
       </nav>
       <div style="border-top:1px solid var(--border-hairline); padding-top:var(--space-4); display:flex; flex-direction:column; gap:var(--space-3)">
         <span class="eyebrow">Display</span>
         <div style="display:flex; align-items:center; gap:var(--space-3); flex-wrap:wrap">
-          <button class="btn" type="button" onClick="{{ cycleTheme }}" aria-label="{{ themeAria }}"><span class="technical" style="font-size:16px" aria-hidden="true">{{ themeGlyph }}</span>{{ themeLabel }}</button>
-          <a class="btn btn--quiet btn-icon" href="Landometer-Home-TH.dc.html" title="ภาษา / Language" aria-label="Switch language, Thai and English"><span class="icon-symbol" aria-hidden="true">language</span></a>
+          <button class="btn pressable" type="button" data-theme-cycle><span data-theme-label>Theme: system</span></button>
+          <a class="btn btn--quiet btn-icon pressable" data-locale-link href="Landometer-Home-TH.dc.html" title="ภาษา / Language" aria-label="Switch language, Thai and English"><span class="icon-symbol" aria-hidden="true">language</span></a>
         </div>
       </div>
     </div>
-  </sc-if>
+  </div>
 
   <main id="main">
-    <section id="top" data-screen-label="S1 Hero" aria-label="Landometer — overview" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 420px), 1fr)); align-items:stretch; min-height:calc(100svh - 76px)" class="scene-atmosphere" data-scene="measure">
+    <section id="top" data-screen-label="S1 Hero" aria-label="Landometer — overview" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 420px), 1fr)); align-items:stretch; min-height:calc(100svh - 76px)" class="scene-atmosphere scene-atmosphere--measure" data-scene="measure">
       <div style="display:flex; flex-direction:column; justify-content:center; padding:clamp(28px, 4vw, 56px); padding-left:max(clamp(28px, 4vw, 56px), calc((100vw - 1280px) / 2))">
         <p class="eyebrow" style="color:var(--on-atmosphere-2); margin:0 0 var(--space-3)">A city data and AI ecosystem, built in Thailand</p>
         <h1 style="font-family:var(--font-display-en); font-weight:700; font-size:clamp(2.1rem, 4.4vw, 4.5rem); line-height:var(--leading-display-en); letter-spacing:-0.02em; color:var(--on-atmosphere); margin:0 0 var(--space-3); max-width:16ch; text-wrap:balance">Visualize City, Shape Tomorrow.</h1>
         <p style="color:var(--on-atmosphere-2); font-size:clamp(.9375rem, 1.2vw, 1.125rem); line-height:1.55; max-width:56ch; margin:0 0 var(--space-3)">Landometer turns scattered city data into maps you can read, insight you can trace to its source, and tools you can act on — across land, location, and city life.</p>
         <p class="technical" style="color:var(--on-atmosphere-2); margin:0 0 var(--space-4); letter-spacing:.04em">Land · Location · Living · Local Decisions</p>
         <p style="margin:0"><a href="#products" style="color:var(--on-atmosphere); font-weight:600; font-size:var(--type-body-lg); text-underline-offset:.22em">See every product →</a></p>
-        <div role="group" aria-label="Live figures from the Landometer ecosystem" style="margin-top:clamp(16px, 3vh, 40px); display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:clamp(12px, 2vw, 28px)">
-          <div>
-            <div class="number" style="font-size:clamp(1.35rem, 2.4vw, 2.25rem); line-height:var(--leading-number); color:var(--on-atmosphere)">38</div>
-            <div style="font-weight:600; color:var(--on-atmosphere)">city data views</div>
-            <div style="color:var(--on-atmosphere-2); font-size:var(--type-label); max-width:34ch">grouped as Land · Location · Living — open any of them on the map</div>
-            <div class="technical" style="color:var(--on-atmosphere-2); margin-top:2px">as of 25 Aug 2026</div>
-          </div>
-          <div>
-            <div class="number" style="font-size:clamp(1.35rem, 2.4vw, 2.25rem); line-height:var(--leading-number); color:var(--on-atmosphere)">45</div>
-            <div style="font-weight:600; color:var(--on-atmosphere)">neighbourhood guides</div>
-            <div style="color:var(--on-atmosphere-2); font-size:var(--type-label); max-width:34ch">written from measured data and on-the-ground research</div>
-            <div class="technical" style="color:var(--on-atmosphere-2); margin-top:2px">as of 25 Aug 2026</div>
-          </div>
-          <div>
-            <div class="number" style="font-size:clamp(1.35rem, 2.4vw, 2.25rem); line-height:var(--leading-number); color:var(--on-atmosphere)">51 · 120</div>
-            <div style="font-weight:600; color:var(--on-atmosphere)">51 Landom people · 120 pieces of work</div>
-            <div style="color:var(--on-atmosphere-2); font-size:var(--type-label); max-width:34ch">behind this ecosystem</div>
-            <div class="technical" style="color:var(--on-atmosphere-2); margin-top:2px">as of 23 Aug 2026</div>
-          </div>
+        <div class="metric-grid" role="group" aria-label="Figures from the Landometer system">
+          <article class="metric-card" data-figure-id="fig-service-users">
+            <span class="icon-symbol" aria-hidden="true">groups</span>
+            <div><div style="font-weight:600">Service users</div><div class="metric-value">Waiting for system value</div><div class="metric-definition">count of contracting parties (person/legal entity) currently served; always exclude test accounts, internal accounts, staff, trials and LOIs</div></div>
+          </article>
+          <article class="metric-card" data-figure-id="fig-title-deeds">
+            <span class="icon-symbol" aria-hidden="true">description</span>
+            <div><div style="font-weight:600">Title deeds</div><div class="metric-value">Waiting for system value</div><div class="metric-definition">count of title-deed (โฉนดที่ดิน) records in the same universe; if other deed types cannot be separated, count them but change the wording to “เอกสารสิทธิ์”</div></div>
+          </article>
+          <article class="metric-card" data-figure-id="fig-land-area">
+            <span class="icon-symbol" aria-hidden="true">square_foot</span>
+            <div><div style="font-weight:600">Total land area (rai)</div><div class="metric-value">Waiting for system value</div><div class="metric-definition">sum of deed area in the same universe, converted to whole ไร่, rounded down</div></div>
+          </article>
+          <article class="metric-card" data-figure-id="fig-land-value">
+            <span class="icon-symbol" aria-hidden="true">payments</span>
+            <div><div style="font-weight:600">Land value under care</div><div class="metric-value">Waiting for system value</div><div class="metric-definition">total value of land only, no structures, on one single price basis (never mixed); parcels with no recorded value are excluded</div></div>
+          </article>
+          <p class="metric-date technical">System data: waiting for the one source date shared by all four figures</p>
         </div>
       </div>
-        <figure style="position:relative; margin:0; overflow:hidden; min-height:min(44vh, 420px)">
-          <img src="assets/photo-hero-lumpini-city.jpg" alt="The Bangkok skyline rising over the green of Lumphini Park" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 62%">
-          <figcaption class="technical" style="position:absolute; bottom:0; right:0; margin:0; padding:5px 10px; font-size:.75rem; letter-spacing:.02em; color:var(--overlay-glass-ink2); background:var(--overlay-glass); border-top-left-radius:var(--radius-xs)">Real photo · Bangkok around Lumphini Park</figcaption>
+        <figure class="media-figure" style="min-height:min(44vh, 420px)">
+          <picture>
+            <source type="image/avif" srcset="assets/photos/hero-lumpini-480.avif 480w, assets/photos/hero-lumpini-640.avif 640w, assets/photos/hero-lumpini-768.avif 768w, assets/photos/hero-lumpini-1280.avif 1280w, assets/photos/hero-lumpini-1600.avif 1600w" sizes="(min-width:840px) 50vw, 100vw">
+            <source type="image/webp" srcset="assets/photos/hero-lumpini-480.webp 480w, assets/photos/hero-lumpini-640.webp 640w, assets/photos/hero-lumpini-768.webp 768w, assets/photos/hero-lumpini-1280.webp 1280w, assets/photos/hero-lumpini-1600.webp 1600w" sizes="(min-width:840px) 50vw, 100vw">
+            <img src="assets/photos/hero-lumpini-768.webp" width="4000" height="6000" fetchpriority="high" decoding="async" alt="The Bangkok skyline rising over the green of Lumphini Park" style="object-position:50% 62%">
+          </picture>
+          <figcaption class="media-caption technical">Real photo · Bangkok around Lumphini Park</figcaption>
         </figure>
     </section>
 
@@ -99,7 +121,10 @@
         <details>
           <summary class="evidence-affordance" style="cursor:pointer">Where these numbers come from</summary>
           <div class="meta" style="max-width:72ch; padding-top:var(--space-3)">
-            <p style="margin:0 0 var(--space-2)">38 views = the number of datasets in the showcase catalog, release v28 (counted 14 Aug 2026) · 45 guides = the number readable today on /v3/citywiki (counted 25 Aug 2026) · 51 people and 120 pieces of work = from the Landom site (counted 23 Aug 2026). Every figure is a count of real items, not an estimate, and it is recounted at every build.</p>
+            <ul class="icon-list">
+              <li class="icon-line"><span class="icon-symbol" aria-hidden="true">database</span><span>All four system figures must come from one database on one date. No <span class="technical">figures.json</span> was present in the handoff, so every tile remains “Waiting for system value”; no prior count, estimate, or build date substitutes for source data.</span></li>
+              <li class="icon-line"><span class="icon-symbol" aria-hidden="true">verified</span><span>38 views = showcase catalog release v28 (counted 14 Aug 2026) · 45 guides = the number readable on /v3/citywiki (counted 25 Aug 2026) · 51 people and 120 pieces of work = the Landom site (counted 23 Aug 2026). These scopes remain separate from the four system figures and never substitute for them.</span></li>
+            </ul>
             <p style="margin:0">See the showcases → <a href="#showcases">CityMETER showcases</a> · See the guides → <a href="#citywiki">CityWiki</a> · See Landom people → <a href="#landom">Landom</a></p>
           </div>
         </details>
@@ -107,37 +132,50 @@
     </div>
 
     <section id="pillars" data-screen-label="S2 Land Location Living" aria-label="Land · Location · Living">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items:stretch; min-height:min(56vh, 520px); background:var(--brand-beige)">
+      <div data-pillar="land" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items:stretch; min-height:min(56vh, 520px); background:var(--brand-beige)">
         <div style="display:flex; flex-direction:column; justify-content:center; gap:var(--space-2); padding:clamp(28px, 4vw, 56px); padding-left:max(clamp(28px, 4vw, 56px), calc((100vw - 1280px) / 2))">
-          <p class="eyebrow" style="color:var(--fg-on-light-secondary); margin:0">LAND</p>
+          <p class="eyebrow icon-line" style="color:var(--fg-on-light-secondary); margin:0"><span class="icon-symbol" aria-hidden="true">square_foot</span><span>LAND</span></p>
           <h2 style="font-family:var(--font-display-en); font-size:clamp(1.6rem, 2.6vw, 2.25rem); line-height:1.08; letter-spacing:-0.02em; color:var(--fg-on-light-primary); margin:0">Land and what is built on it</h2>
           <p style="color:var(--fg-on-light-secondary); max-width:46ch; margin:0">Plots, buildings, and infrastructure — the physical base under every decision.</p>
         </div>
-        <figure style="position:relative; margin:0; overflow:hidden; min-height:min(42vh, 380px)">
-          <img src="assets/capture-buildings-suanphlu.png" alt="A real CityMETER capture — buildings in Suan Phlu, Bangkok, with height and floor area in 3D" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:45% 40%">
-          <figcaption class="technical" style="position:absolute; bottom:0; right:0; margin:0; padding:5px 10px; font-size:.75rem; letter-spacing:.02em; color:var(--overlay-glass-ink2); background:var(--overlay-glass); border-top-left-radius:var(--radius-xs)">CityMETER · buildings, Suan Phlu · interim image</figcaption>
+        <figure class="media-figure" style="min-height:min(42vh, 380px)">
+          <picture>
+            <source type="image/avif" srcset="assets/screens/citymeter-buildings-suanphlu-480.avif 480w, assets/screens/citymeter-buildings-suanphlu-825.avif 825w" sizes="(min-width:840px) 50vw, 100vw">
+            <source type="image/webp" srcset="assets/screens/citymeter-buildings-suanphlu-480.webp 480w, assets/screens/citymeter-buildings-suanphlu-825.webp 825w" sizes="(min-width:840px) 50vw, 100vw">
+            <img src="assets/screens/citymeter-buildings-suanphlu-825.webp" width="825" height="555" loading="lazy" decoding="async" alt="A real CityMETER capture — buildings in Suan Phlu, Bangkok, with height and floor area in 3D" style="object-position:45% 40%">
+          </picture>
+          <figcaption class="media-caption technical">CityMETER · buildings, Suan Phlu · earlier-release capture, checked 27 Aug 2026</figcaption>
         </figure>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items:stretch; min-height:min(56vh, 520px)" class="scene-atmosphere" data-scene="cultivate">
-        <figure style="position:relative; margin:0; overflow:hidden; min-height:min(42vh, 380px)">
-          <img src="assets/photo-location-yaowarat.jpg" alt="Yaowarat road at dusk — taxis, traffic and people under the sign boards" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 58%">
-          <figcaption class="technical" style="position:absolute; bottom:0; right:0; margin:0; padding:5px 10px; font-size:.75rem; letter-spacing:.02em; color:var(--overlay-glass-ink2); background:var(--overlay-glass); border-top-left-radius:var(--radius-xs)">Real photograph · Yaowarat, Bangkok</figcaption>
+      <div data-pillar="location" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items:stretch; min-height:min(56vh, 520px)" class="scene-atmosphere scene-atmosphere--cultivate" data-scene="cultivate">
+        <figure class="media-figure" style="min-height:min(42vh, 380px)">
+          <picture>
+            <source type="image/avif" srcset="assets/photos/location-yaowarat-480.avif 480w, assets/photos/location-yaowarat-960.avif 960w, assets/photos/location-yaowarat-1440.avif 1440w" sizes="(min-width:840px) 50vw, 100vw">
+            <source type="image/webp" srcset="assets/photos/location-yaowarat-480.webp 480w, assets/photos/location-yaowarat-960.webp 960w, assets/photos/location-yaowarat-1440.webp 1440w" sizes="(min-width:840px) 50vw, 100vw">
+            <img src="assets/photos/location-yaowarat-960.webp" width="960" height="318" loading="lazy" decoding="async" alt="Yaowarat road at dusk — taxis, traffic and people under the sign boards" style="object-position:50% 58%">
+          </picture>
+          <figcaption class="media-caption technical">Real photograph · Yaowarat, Bangkok</figcaption>
         </figure>
         <div style="display:flex; flex-direction:column; justify-content:center; gap:var(--space-2); padding:clamp(28px, 4vw, 56px); padding-right:max(clamp(28px, 4vw, 56px), calc((100vw - 1280px) / 2))">
-          <p class="eyebrow" style="color:var(--on-atmosphere-2); margin:0">LOCATION</p>
+          <p class="eyebrow icon-line" style="color:var(--on-atmosphere-2); margin:0"><span class="icon-symbol" aria-hidden="true">map</span><span>LOCATION</span></p>
           <h2 style="font-family:var(--font-display-en); font-size:clamp(1.6rem, 2.6vw, 2.25rem); line-height:1.08; letter-spacing:-0.02em; color:var(--on-atmosphere); margin:0">Place and access</h2>
           <p style="color:var(--on-atmosphere-2); max-width:46ch; margin:0">Business activity, movement, and reach — what a location is actually worth being at.</p>
         </div>
       </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items:stretch; min-height:min(56vh, 520px); background:var(--surface-alt)">
+      <div data-pillar="living" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items:stretch; min-height:min(56vh, 520px); background:var(--surface-alt)">
         <div style="display:flex; flex-direction:column; justify-content:center; gap:var(--space-2); padding:clamp(28px, 4vw, 56px); padding-left:max(clamp(28px, 4vw, 56px), calc((100vw - 1280px) / 2))">
-          <p class="eyebrow" style="color:var(--text-secondary); margin:0">LIVING</p>
+          <p class="eyebrow icon-line" style="color:var(--text-secondary); margin:0"><span class="icon-symbol" aria-hidden="true">groups</span><span>LIVING</span></p>
           <h2 style="font-family:var(--font-display-en); font-size:clamp(1.6rem, 2.6vw, 2.25rem); line-height:1.08; letter-spacing:-0.02em; color:var(--text-primary); margin:0">City life</h2>
           <p style="color:var(--text-secondary); max-width:46ch; margin:0">People, services, and daily life — the city as the people in it experience it.</p>
         </div>
-        <figure style="position:relative; margin:0; overflow:hidden; min-height:min(42vh, 380px)">
-          <video-slot id="living-video" placeholder="Drop the city-life video here" hint="Drag a file in or click to choose · MP4 (H.264) plays everywhere · .mov works if it is H.264, not HEVC" video-label="City life — people and services in a real neighbourhood (no sound)"></video-slot>
-          <figcaption class="technical" style="position:absolute; bottom:0; right:0; margin:0; padding:5px 10px; font-size:.75rem; letter-spacing:.02em; color:var(--overlay-glass-ink2); background:var(--overlay-glass); border-top-left-radius:var(--radius-xs); pointer-events:none">Living · video from the team · no sound · awaiting the real file</figcaption>
+        <figure class="media-figure" style="min-height:min(42vh, 380px)">
+          <div class="media-canvas">
+            <video class="living-video" controls muted playsinline preload="metadata" poster="assets/media/living-poster-360.webp" width="360" height="640" aria-label="Urban life video — Landometer teammates and people on a Bangkok street, with no sound">
+              <source src="assets/media/living-city-rebuild03.mp4" type="video/mp4">
+              This browser cannot play the MP4; the poster image remains available.
+            </video>
+          </div>
+          <figcaption class="media-caption technical">Living · Landometer teammates and people on a Bangkok street · Landometer-owned footage · no sound</figcaption>
         </figure>
       </div>
       <div style="padding:clamp(48px, 8vh, 96px) 0">
@@ -147,19 +185,19 @@
       </div>
     </section>
 
-    <section id="products" data-screen-label="S3 Products" aria-label="Products and services" style="padding:clamp(48px, 7vh, 80px) 0 clamp(56px, 8vh, 96px)">
+    <section id="products" tabindex="-1" data-screen-label="S3 Products" aria-label="Products and services" style="padding:clamp(48px, 7vh, 80px) 0 clamp(56px, 8vh, 96px)">
       <div class="container container--wide">
-        <h2 style="font-family:var(--font-display-en); font-size:var(--type-h2); line-height:1.08; letter-spacing:-0.02em; color:var(--brand-blue); margin:0 0 var(--space-3)">Products and services</h2>
+        <h2 class="local-heading" style="font-family:var(--font-display-en); font-size:var(--type-h2); line-height:1.08; letter-spacing:-0.02em; margin:0 0 var(--space-3)">Products and services</h2>
         <p style="max-width:66ch; margin:0 0 var(--space-6); color:var(--text-secondary); font-size:var(--type-body-lg)">We build tools for people who have to decide about real places — from a single plot to a whole city.</p>
 
-        <h3 style="font-family:var(--font-ui-heading-en); font-size:1.25rem; line-height:var(--leading-ui-heading-en); margin:0 0 var(--space-3)">Use it today</h3>
+        <h3 style="font-family:var(--font-ui-heading-en); font-size:1.25rem; line-height:var(--leading-ui-heading-en); margin:0 0 var(--space-3)">Choose by intent</h3>
         <div style="background:var(--border-default); border:1px solid var(--border-default); border-radius:var(--radius-md); overflow:hidden; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1px">
           <div style="background:var(--surface-card); padding:var(--space-5); display:flex; flex-direction:column; gap:var(--space-3)">
-            <span class="icon-symbol" style="color:var(--brand-blue)" aria-hidden="true">map</span>
+            <span class="icon-symbol local-icon" aria-hidden="true">map</span>
             <h4 style="margin:0; font-family:var(--font-ui-heading-en); font-size:1.125rem; line-height:var(--leading-ui-heading-en)">Land / property tools</h4>
             <p style="margin:0; color:var(--text-secondary)">The land tools we started from — Portfolio, PropertyINFO, land tax, listings, and lending.</p>
             <div style="margin-top:auto; display:flex; flex-direction:column; gap:var(--space-3)">
-              <div><a class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="https://landometer.com/auth">Sign in <span class="icon-symbol" aria-hidden="true" style="font-size:20px; vertical-align:-4px">login</span></a></div>
+              <div><a class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="https://landometer.com/auth">Sign in <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">login</span></a></div>
               <details>
                 <summary class="evidence-affordance" style="cursor:pointer">More entries</summary>
                 <div style="padding-top:var(--space-2); display:flex; flex-direction:column; gap:var(--space-1)">
@@ -170,41 +208,41 @@
             </div>
           </div>
           <div style="background:var(--surface-card); padding:var(--space-5); display:flex; flex-direction:column; gap:var(--space-3)">
-            <span class="icon-symbol" style="color:var(--brand-blue)" aria-hidden="true">monitoring</span>
+            <span class="icon-symbol local-icon" aria-hidden="true">monitoring</span>
             <h4 style="margin:0; font-family:var(--font-ui-heading-en); font-size:1.125rem; line-height:var(--leading-ui-heading-en)">CityMETER</h4>
             <p style="margin:0; color:var(--text-secondary)">See, understand, and compare cities, locations, and risk on one map.</p>
             <div style="margin-top:auto; display:flex; flex-direction:column; gap:var(--space-3)">
-              <div><a class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="https://landometer.com/v3/citymeter">See it on real data <span class="icon-symbol" aria-hidden="true" style="font-size:20px; vertical-align:-4px">arrow_forward</span></a></div>
+              <div><a class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="https://landometer.com/v3/citymeter">See it on real data <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a></div>
               <a href="#showcases" style="font-size:var(--type-body-sm)">See the 38 data views <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a>
             </div>
           </div>
           <div style="background:var(--surface-card); padding:var(--space-5); display:flex; flex-direction:column; gap:var(--space-3)">
-            <span class="icon-symbol" style="color:var(--brand-blue)" aria-hidden="true">storefront</span>
+            <span class="icon-symbol local-icon" aria-hidden="true">storefront</span>
             <h4 style="margin:0; font-family:var(--font-ui-heading-en); font-size:1.125rem; line-height:var(--leading-ui-heading-en)">ijji</h4>
             <p style="margin:0; color:var(--text-secondary)">A business buddy for F&amp;B operators — diagnose the problem, take a mission, act on it, and record what actually changed.</p>
-            <div style="margin-top:auto"><a class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="https://ijji.landometer.com" target="_blank" rel="noopener" aria-label="Try it free — ijji (opens in a new tab)">Try it free <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></a></div>
+            <div style="margin-top:auto"><a class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="https://ijji.landometer.com" target="_blank" rel="noopener" aria-label="Open ijji (opens in a new tab)">Open ijji <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></a></div>
           </div>
         </div>
 
         <h3 style="font-family:var(--font-ui-heading-en); font-size:1.25rem; line-height:var(--leading-ui-heading-en); margin:var(--space-7) 0 var(--space-3)">Start with a conversation</h3>
         <div style="background:var(--border-default); border:1px solid var(--border-default); border-radius:var(--radius-md); overflow:hidden; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1px">
           <div style="background:var(--surface-card); padding:var(--space-5); display:flex; flex-direction:column; gap:var(--space-3)">
-            <span class="icon-symbol" style="color:var(--brand-blue)" aria-hidden="true">forum</span>
+            <span class="icon-symbol local-icon" aria-hidden="true">forum</span>
             <h4 style="margin:0; font-family:var(--font-ui-heading-en); font-size:1.125rem; line-height:var(--leading-ui-heading-en)">CityChat</h4>
             <p style="margin:0; color:var(--text-secondary)">Helps local government see what is happening on the map, talk to residents, and start on smart-city work with the team it already has — including CityScan, which applies the CityStory method.</p>
-            <div style="margin-top:auto"><a class="btn btn--quiet" style="padding-left:0" href="#contact">Talk to us to get started <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a></div>
+            <div style="margin-top:auto"><a class="btn btn--quiet" href="#contact">Talk to us to get started <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a></div>
           </div>
           <div style="background:var(--surface-card); padding:var(--space-5); display:flex; flex-direction:column; gap:var(--space-3)">
-            <span class="icon-symbol" style="color:var(--brand-blue)" aria-hidden="true">graphic_eq</span>
+            <span class="icon-symbol local-icon" aria-hidden="true">graphic_eq</span>
             <h4 style="margin:0; font-family:var(--font-ui-heading-en); font-size:1.125rem; line-height:var(--leading-ui-heading-en)">Location-based market listening (LML)</h4>
             <p style="margin:0; color:var(--text-secondary)">Continuous market listening for assets already in operation — review, decide, test, measure, on a weekly rhythm.</p>
-            <div style="margin-top:auto"><a class="btn btn--quiet" style="padding-left:0" href="#contact">Talk to us to get started <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a></div>
+            <div style="margin-top:auto"><a class="btn btn--quiet" href="#contact">Talk to us to get started <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a></div>
           </div>
           <div style="background:var(--surface-card); padding:var(--space-5); display:flex; flex-direction:column; gap:var(--space-3)">
-            <span class="icon-symbol" style="color:var(--brand-blue)" aria-hidden="true">widgets</span>
+            <span class="icon-symbol local-icon" aria-hidden="true">widgets</span>
             <h4 style="margin:0; font-family:var(--font-ui-heading-en); font-size:1.125rem; line-height:var(--leading-ui-heading-en)">Custom Solutions</h4>
             <p style="margin:0; color:var(--text-secondary)">Products, datasets, and purpose-built systems combined to fit your organisation — with ongoing support and development.</p>
-            <div style="margin-top:auto"><a class="btn btn--quiet" style="padding-left:0" href="#contact">Talk to us to get started <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a></div>
+            <div style="margin-top:auto"><a class="btn btn--quiet" href="#contact">Talk to us to get started <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a></div>
           </div>
         </div>
       </div>
@@ -214,13 +252,13 @@
           <h3 style="font-family:var(--font-ui-heading-en); font-size:1.25rem; line-height:var(--leading-ui-heading-en); margin:0 0 var(--space-3)">Know the neighbourhood — around your home, around your shop</h3>
           <div style="max-width:900px; background:var(--border-default); border:1px solid var(--border-default); border-radius:var(--radius-md); overflow:hidden; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:1px">
             <div style="background:var(--surface-card); padding:var(--space-5); display:flex; flex-direction:column; gap:var(--space-3)">
-              <span class="icon-symbol" style="color:var(--brand-blue)" aria-hidden="true">menu_book</span>
+              <span class="icon-symbol local-icon" aria-hidden="true">menu_book</span>
               <h4 style="margin:0; font-family:var(--font-ui-heading-en); font-size:1.125rem; line-height:var(--leading-ui-heading-en)">CityWiki</h4>
-              <p style="margin:0; color:var(--text-secondary)">Makes places, data, and insight findable, readable, and worth sharing — by people and by AI.</p>
+              <p style="margin:0; color:var(--text-secondary)">Makes places, data, and insight findable, readable, and shareable while keeping each guide's sources and limitations attached.</p>
               <div style="margin-top:auto"><a href="https://landometer.com/v3/citywiki">Read CityWiki <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a></div>
             </div>
             <div style="background:var(--surface-card); padding:var(--space-5); display:flex; flex-direction:column; gap:var(--space-3)">
-              <span class="icon-symbol" style="color:var(--brand-blue)" aria-hidden="true">auto_stories</span>
+              <span class="icon-symbol local-icon" aria-hidden="true">auto_stories</span>
               <h4 style="margin:0; font-family:var(--font-ui-heading-en); font-size:1.125rem; line-height:var(--leading-ui-heading-en)">CityStory</h4>
               <p style="margin:0; color:var(--text-secondary)">Tells the story of a place through its data and what is really happening there.</p>
               <div style="margin-top:auto"><a href="https://landometer.com/v3/citystory">Read CityStory <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a></div>
@@ -232,58 +270,63 @@
       <div class="container container--wide" style="margin-top:clamp(48px, 8vh, 96px)">
         <h3 style="font-family:var(--font-ui-heading-en); font-size:1.25rem; line-height:var(--leading-ui-heading-en); margin:0 0 var(--space-2)">What users say</h3>
         <p class="meta" style="font-size:var(--type-label); margin:0 0 var(--space-4)">Quotes were given in Thai and stay in Thai — the English line under each one is a rendering, not the speaker's words.</p>
-        <p class="technical" style="color:var(--text-metadata); margin:0 0 var(--space-4)">The prototype shows an initial in place of a portrait or logo — those marks belong to other parties, and the real assets go in once each permission is on record.</p>
-        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:var(--space-4)">
-          <div class="card" style="display:flex; flex-direction:column; gap:var(--space-3)">
-            <div style="display:flex; align-items:center; gap:var(--space-3)">
-              <div aria-hidden="true" lang="th" style="width:56px; height:56px; flex:none; border-radius:var(--radius-pill); background:var(--brand-beige); color:var(--brand-blue); display:grid; place-items:center; font-family:var(--font-display-th); font-size:1.5rem; line-height:1">ณ</div>
+        <div class="testimonial-grid">
+          <article class="card testimonial-card">
+            <div class="testimonial-person">
+              <picture class="testimonial-picture"><source type="image/avif" srcset="assets/testimonials/portrait-06.avif"><img class="testimonial-portrait" src="assets/testimonials/portrait-06.webp" width="144" height="144" loading="lazy" decoding="async" alt="คุณ ณภัทร ภัทรอารยสกุล"></picture>
               <div><div style="font-weight:600" lang="th">คุณ ณภัทร ภัทรอารยสกุล</div><div class="meta" style="font-size:var(--type-label)" lang="th">บริษัท ทรัพย์รุ่งเรือง พร็อพเพอร์ตี้ จำกัด</div></div>
             </div>
             <p lang="th" style="margin:0">ใช้งานง่าย รวบรวมข้อมูลหลายๆอย่างให้อยู่ในเว็บเดียว</p>
             <p class="meta" style="margin:0; font-size:var(--type-body-sm)">Easy to use. It pulls a lot of different data together in one place. <span class="technical">(translation)</span></p>
-          </div>
-          <div class="card" style="display:flex; flex-direction:column; gap:var(--space-3)">
-            <div style="display:flex; align-items:center; gap:var(--space-3)">
-              <div aria-hidden="true" lang="th" style="width:56px; height:56px; flex:none; border-radius:var(--radius-pill); background:var(--brand-beige); color:var(--brand-blue); display:grid; place-items:center; font-family:var(--font-display-th); font-size:1.5rem; line-height:1">ฐ</div>
+            <img class="testimonial-company" src="assets/testimonials/company-06.png" width="400" height="400" loading="lazy" decoding="async" alt="">
+          </article>
+          <article class="card testimonial-card">
+            <div class="testimonial-person">
+              <picture class="testimonial-picture"><source type="image/avif" srcset="assets/testimonials/portrait-04.avif"><img class="testimonial-portrait" src="assets/testimonials/portrait-04.webp" width="144" height="144" loading="lazy" decoding="async" alt="คุณ ฐิติรัตน์ พัวไพบูลย์"></picture>
               <div><div style="font-weight:600" lang="th">คุณ ฐิติรัตน์ พัวไพบูลย์</div><div class="meta" style="font-size:var(--type-label)">RE/MAX Commercial Property</div></div>
             </div>
             <p lang="th" style="margin:0">ชอบมากค่ะ ใช้งานง่าย เราทำงานง่ายขึ้น ใช้เวลาน้อยลงมาก ในขณะที่ผลิตงานคุณภาพดีขึ้นมาก ทางทีม Landometer ยังพัฒนา app ทำให้มีฟีเจอร์ใหม่ๆ อยู่เสมอด้วยค่ะ</p>
             <p class="meta" style="margin:0; font-size:var(--type-body-sm)">I like it a lot. It is easy to use, our work got easier, and it takes far less time while the quality of what we produce went up a lot. The Landometer team keeps developing the app, so there are always new features. <span class="technical">(translation)</span></p>
-          </div>
-          <div class="card" style="display:flex; flex-direction:column; gap:var(--space-3)">
-            <div style="display:flex; align-items:center; gap:var(--space-3)">
-              <div aria-hidden="true" lang="th" style="width:56px; height:56px; flex:none; border-radius:var(--radius-pill); background:var(--brand-beige); color:var(--brand-blue); display:grid; place-items:center; font-family:var(--font-display-th); font-size:1.5rem; line-height:1">ศ</div>
+            <img class="testimonial-company" src="assets/testimonials/company-04.png" width="200" height="200" loading="lazy" decoding="async" alt="">
+          </article>
+          <article class="card testimonial-card">
+            <div class="testimonial-person">
+              <picture class="testimonial-picture"><source type="image/avif" srcset="assets/testimonials/portrait-01.avif"><img class="testimonial-portrait" src="assets/testimonials/portrait-01.webp" width="100" height="100" loading="lazy" decoding="async" alt="คุณ ศุภมงคล ศรีสถาพร"></picture>
               <div><div style="font-weight:600" lang="th">คุณ ศุภมงคล ศรีสถาพร</div><div class="meta" style="font-size:var(--type-label)">Sapthip Green Energy</div></div>
             </div>
             <p lang="th" style="margin:0">ธุรกิจพัฒนาบ้านจัดสรรและคอนโดอย่างเรา จำเป็นต้องสะสม Landbank ไว้พัฒนา Landometer.com ช่วยให้เราวางแผนการใช้งาน Landbank ได้มีประสิทธิภาพยิ่งขึ้น</p>
             <p class="meta" style="margin:0; font-size:var(--type-body-sm)">A housing and condo developer like us has to keep building a landbank. Landometer.com helps us plan how we use it more effectively. <span class="technical">(translation)</span></p>
-          </div>
-          <div class="card" style="display:flex; flex-direction:column; gap:var(--space-3)">
-            <div style="display:flex; align-items:center; gap:var(--space-3)">
-              <div aria-hidden="true" lang="th" style="width:56px; height:56px; flex:none; border-radius:var(--radius-pill); background:var(--brand-beige); color:var(--brand-blue); display:grid; place-items:center; font-family:var(--font-display-th); font-size:1.5rem; line-height:1">ย</div>
+            <img class="testimonial-company" src="assets/testimonials/company-01.png" width="200" height="200" loading="lazy" decoding="async" alt="">
+          </article>
+          <article class="card testimonial-card">
+            <div class="testimonial-person">
+              <picture class="testimonial-picture"><source type="image/avif" srcset="assets/testimonials/portrait-02.avif"><img class="testimonial-portrait" src="assets/testimonials/portrait-02.webp" width="100" height="100" loading="lazy" decoding="async" alt="คุณ ยุทธศักดิ์ รัตนพงศ์"></picture>
               <div><div style="font-weight:600" lang="th">คุณ ยุทธศักดิ์ รัตนพงศ์</div><div class="meta" style="font-size:var(--type-label)">KC Grande Resort &amp; Spa Koh Chang</div></div>
             </div>
             <p lang="th" style="margin:0">Landometer.com เปิดโลกให้เราเห็นผลลัพธ์ของทุกความเป็นไปได้ ว่าจะถือครองที่ดินต่อ หรือนำไปทำอะไรจะได้ผลดีกว่ากัน ช่วยได้มากในยามที่มีประเด็นเรื่องภาษีที่ดินใหม่</p>
             <p class="meta" style="margin:0; font-size:var(--type-body-sm)">Landometer.com opened our eyes to how each option would turn out — keep holding the land, or put it to some other use, and which works out better. It helped a great deal when the new land tax became an issue. <span class="technical">(translation)</span></p>
-          </div>
-          <div class="card" style="display:flex; flex-direction:column; gap:var(--space-3)">
-            <div style="display:flex; align-items:center; gap:var(--space-3)">
-              <div aria-hidden="true" lang="th" style="width:56px; height:56px; flex:none; border-radius:var(--radius-pill); background:var(--brand-beige); color:var(--brand-blue); display:grid; place-items:center; font-family:var(--font-display-th); font-size:1.5rem; line-height:1">พ</div>
+            <img class="testimonial-company" src="assets/testimonials/company-02.png" width="200" height="200" loading="lazy" decoding="async" alt="">
+          </article>
+          <article class="card testimonial-card">
+            <div class="testimonial-person">
+              <picture class="testimonial-picture"><source type="image/avif" srcset="assets/testimonials/portrait-03.avif"><img class="testimonial-portrait" src="assets/testimonials/portrait-03.webp" width="100" height="100" loading="lazy" decoding="async" alt="คุณ พลอยจันทร์ วิฑูรชาติ"></picture>
               <div><div style="font-weight:600" lang="th">คุณ พลอยจันทร์ วิฑูรชาติ</div><div class="meta" style="font-size:var(--type-label)">D'Well Grand Asset</div></div>
             </div>
             <p lang="th" style="margin:0">พลอยมีที่ดินทั้งของบริษัท และของที่บ้าน พอได้ลองใช้ Portfolio ของ Landometer เห็นชัดเลย เพราะได้เปรียบเทียบที่ดินของเราทุกโฉนด ทั้งกระดานในคราวเดียว</p>
             <p class="meta" style="margin:0; font-size:var(--type-body-sm)">I have land under the company and land in the family. Once I tried Landometer's Portfolio it was immediately clear, because I could compare every one of our title deeds, the whole board at once. <span class="technical">(translation)</span></p>
-          </div>
-          <div class="card" style="display:flex; flex-direction:column; gap:var(--space-3)">
-            <div style="display:flex; align-items:center; gap:var(--space-3)">
-              <div aria-hidden="true" lang="th" style="width:56px; height:56px; flex:none; border-radius:var(--radius-pill); background:var(--brand-beige); color:var(--brand-blue); display:grid; place-items:center; font-family:var(--font-display-th); font-size:1.5rem; line-height:1">ร</div>
+            <img class="testimonial-company" src="assets/testimonials/company-03.png" width="200" height="200" loading="lazy" decoding="async" alt="">
+          </article>
+          <article class="card testimonial-card">
+            <div class="testimonial-person">
+              <picture class="testimonial-picture"><source type="image/avif" srcset="assets/testimonials/portrait-05.avif"><img class="testimonial-portrait" src="assets/testimonials/portrait-05.webp" width="144" height="144" loading="lazy" decoding="async" alt="คุณ รัฐวิทย์ อังคสกุลเกียรติ"></picture>
               <div><div style="font-weight:600" lang="th">คุณ รัฐวิทย์ อังคสกุลเกียรติ</div><div class="meta" style="font-size:var(--type-label)" lang="th">หจก. สิริมงคลพร๊อพเพอร์ตี้</div></div>
             </div>
             <p lang="th" style="margin:0">ใช้งานได้ดีมาก ระบบหลังบ้านก็ให้คำแนะนำดี</p>
             <p class="meta" style="margin:0; font-size:var(--type-body-sm)">It works very well, and the back office gives good guidance. <span class="technical">(translation)</span></p>
-          </div>
+            <img class="testimonial-company" src="assets/testimonials/company-05.png" width="400" height="400" loading="lazy" decoding="async" alt="">
+          </article>
         </div>
-        <p class="meta" style="font-size:var(--type-label); margin:var(--space-3) 0 0">All six quotes were re-read from landometer.com on 27 Aug 2026 — the third read recovered a missing first sentence in quote 3, so a DOM-level character check is still required before publication.</p>
+        <p class="meta" style="font-size:var(--type-label); margin:var(--space-3) 0 0">All six quotes and portrait/company-mark pairings were checked from the legacy landometer.com DOM and asset adjacency on 28 Aug 2026; no role was inferred where the source did not state one.</p>
       </div>
     </section>
 
@@ -292,94 +335,125 @@
         <p class="eyebrow" style="color:var(--on-atmosphere-2); margin:0 0 var(--space-3)">CityMETER · Showcases</p>
         <h2 style="font-family:var(--font-display-en); font-size:var(--type-h2); line-height:1.08; letter-spacing:-0.02em; color:var(--on-atmosphere); margin:0 0 var(--space-3); max-width:24ch">Place data for decisions that get made</h2>
         <p style="color:var(--on-atmosphere-2); max-width:66ch; margin:0 0 var(--space-2)">Look at the city through 38 data views — land and buildings, business and movement, people and risk. Each one states where it came from, what it covers, and what to know before you use it.</p>
-        <p class="technical" style="color:var(--on-atmosphere-2); margin:0 0 var(--space-5)">showcase catalog · release v28 · counted 14 Aug 2026</p>
-        <figure style="margin:0 0 var(--space-5); border:1px solid var(--overlay-glass-border); border-radius:var(--radius-md); overflow:hidden">
-          <img src="assets/previews/business-dynamics.webp" alt="Business Dynamics view on the CityMETER map" style="width:100%; object-fit:cover">
-          <figcaption class="technical" style="color:var(--on-atmosphere-2); padding:var(--space-2) var(--space-3); border-top:1px solid var(--overlay-glass-border)">Business Dynamics view — a real capture from the CityMETER dataset (design-system archive, 2026)</figcaption>
+        <p id="proof-citymeter-v28-2026-08-14" tabindex="-1" class="technical" style="color:var(--on-atmosphere-2); margin:0 0 var(--space-5)">showcase catalog · release v28 · counted 14 Aug 2026</p>
+        <figure class="showcase-hero">
+          <picture>
+            <source type="image/avif" srcset="assets/screens/business-dynamics-330.avif 330w, assets/screens/business-dynamics-660.avif 660w" sizes="(min-width:900px) 66vw, 100vw">
+            <source type="image/webp" srcset="assets/screens/business-dynamics-330.webp 330w, assets/screens/business-dynamics-660.webp 660w" sizes="(min-width:900px) 66vw, 100vw">
+            <img src="assets/screens/business-dynamics-660.webp" width="660" height="413" loading="lazy" decoding="async" alt="Business Dynamics view on the CityMETER map">
+          </picture>
+          <figcaption class="technical">Business Dynamics view — a real capture from the CityMETER dataset (design-system archive, 2026)</figcaption>
         </figure>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:var(--space-4); margin-bottom:var(--space-6)">
-          <a href="https://landometer.com/v3/citymeter-3d/CBI/D/2001?d=deed" style="position:relative; display:block; aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius-md); text-decoration:none; color:var(--fg-on-deep-primary)" style-hover="box-shadow:inset 0 0 0 3px var(--fg-interactive-surface)">
-            <img src="assets/tiles/land-appraisal.png" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
-            <span style="position:absolute; inset:auto 0 0 0; margin:0; padding:var(--space-5) var(--space-4) var(--space-4); display:flex; align-items:flex-end; justify-content:space-between; gap:var(--space-3); font-weight:600; line-height:1.3; color:var(--fg-on-deep-primary); background:linear-gradient(180deg, rgba(17,25,29,0) 0%, rgba(17,25,29,.56) 46%, rgba(17,25,29,.88) 100%)">Appraised land value and title deeds <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></span>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:var(--space-4); margin-bottom:var(--space-6)" data-reveal-group>
+          <a class="showcase-tile pressable" data-reveal data-reveal-index="0" href="https://landometer.com/v3/citymeter-3d/CBI/D/2001?d=deed">
+            <picture><source type="image/avif" srcset="assets/screens/land-appraisal-330.avif 330w, assets/screens/land-appraisal-660.avif 660w" sizes="(min-width:700px) 33vw, 100vw"><source type="image/webp" srcset="assets/screens/land-appraisal-330.webp 330w, assets/screens/land-appraisal-660.webp 660w" sizes="(min-width:700px) 33vw, 100vw"><img src="assets/screens/land-appraisal-660.webp" width="660" height="500" loading="lazy" decoding="async" alt=""></picture>
+            <span class="showcase-label">Appraised land value and title deeds <span class="icon-symbol icon-symbol--sm" aria-hidden="true">arrow_outward</span></span>
           </a>
-          <a href="https://landometer.com/v3/citymeter?d=businessDynamics" style="position:relative; display:block; aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius-md); text-decoration:none; color:var(--fg-on-deep-primary)" style-hover="box-shadow:inset 0 0 0 3px var(--fg-interactive-surface)">
-            <img src="assets/tiles/business-dynamics.png" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
-            <span style="position:absolute; inset:auto 0 0 0; margin:0; padding:var(--space-5) var(--space-4) var(--space-4); display:flex; align-items:flex-end; justify-content:space-between; gap:var(--space-3); font-weight:600; line-height:1.3; color:var(--fg-on-deep-primary); background:linear-gradient(180deg, rgba(17,25,29,0) 0%, rgba(17,25,29,.56) 46%, rgba(17,25,29,.88) 100%)">Business dynamics <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></span>
+          <a class="showcase-tile pressable" data-reveal data-reveal-index="1" href="https://landometer.com/v3/citymeter?d=businessDynamics">
+            <picture><source type="image/avif" srcset="assets/screens/business-dynamics-tile-330.avif 330w, assets/screens/business-dynamics-tile-580.avif 580w" sizes="(min-width:700px) 33vw, 100vw"><source type="image/webp" srcset="assets/screens/business-dynamics-tile-330.webp 330w, assets/screens/business-dynamics-tile-580.webp 580w" sizes="(min-width:700px) 33vw, 100vw"><img src="assets/screens/business-dynamics-tile-580.webp" width="580" height="363" loading="lazy" decoding="async" alt=""></picture>
+            <span class="showcase-label">Business dynamics <span class="icon-symbol icon-symbol--sm" aria-hidden="true">arrow_outward</span></span>
           </a>
-          <a href="https://landometer.com/v3/citymeter-3d/BKK/L/8b60964e-0c26-408e-95f6-e3f46fe37d46?d=building" style="position:relative; display:block; aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius-md); text-decoration:none; color:var(--fg-on-deep-primary)" style-hover="box-shadow:inset 0 0 0 3px var(--fg-interactive-surface)">
-            <img src="assets/tiles/buildings.png" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
-            <span style="position:absolute; inset:auto 0 0 0; margin:0; padding:var(--space-5) var(--space-4) var(--space-4); display:flex; align-items:flex-end; justify-content:space-between; gap:var(--space-3); font-weight:600; line-height:1.3; color:var(--fg-on-deep-primary); background:linear-gradient(180deg, rgba(17,25,29,0) 0%, rgba(17,25,29,.56) 46%, rgba(17,25,29,.88) 100%)">Buildings (GFA and height) <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></span>
+          <a class="showcase-tile pressable" data-reveal data-reveal-index="2" href="https://landometer.com/v3/citymeter-3d/BKK/L/8b60964e-0c26-408e-95f6-e3f46fe37d46?d=building">
+            <picture><source type="image/avif" srcset="assets/screens/buildings-330.avif 330w, assets/screens/buildings-660.avif 660w" sizes="(min-width:700px) 33vw, 100vw"><source type="image/webp" srcset="assets/screens/buildings-330.webp 330w, assets/screens/buildings-660.webp 660w" sizes="(min-width:700px) 33vw, 100vw"><img src="assets/screens/buildings-660.webp" width="660" height="500" loading="lazy" decoding="async" alt=""></picture>
+            <span class="showcase-label">Buildings (GFA and height) <span class="icon-symbol icon-symbol--sm" aria-hidden="true">arrow_outward</span></span>
           </a>
-          <a href="https://landometer.com/v3/citymeter/AYA/D/1408?d=floodimpact" style="position:relative; display:block; aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius-md); text-decoration:none; color:var(--fg-on-deep-primary)" style-hover="box-shadow:inset 0 0 0 3px var(--fg-interactive-surface)">
-            <img src="assets/tiles/flood-recurrent.png" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover">
-            <span style="position:absolute; inset:auto 0 0 0; margin:0; padding:var(--space-5) var(--space-4) var(--space-4); display:flex; align-items:flex-end; justify-content:space-between; gap:var(--space-3); font-weight:600; line-height:1.3; color:var(--fg-on-deep-primary); background:linear-gradient(180deg, rgba(17,25,29,0) 0%, rgba(17,25,29,.56) 46%, rgba(17,25,29,.88) 100%)">14 years of flood history <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></span>
+          <a class="showcase-tile pressable" data-reveal data-reveal-index="3" href="https://landometer.com/v3/citymeter/AYA/D/1408?d=floodimpact">
+            <picture><source type="image/avif" srcset="assets/screens/flood-recurrent-330.avif 330w, assets/screens/flood-recurrent-660.avif 660w" sizes="(min-width:700px) 33vw, 100vw"><source type="image/webp" srcset="assets/screens/flood-recurrent-330.webp 330w, assets/screens/flood-recurrent-660.webp 660w" sizes="(min-width:700px) 33vw, 100vw"><img src="assets/screens/flood-recurrent-660.webp" width="660" height="500" loading="lazy" decoding="async" alt=""></picture>
+            <span class="showcase-label">14 years of flood history <span class="icon-symbol icon-symbol--sm" aria-hidden="true">arrow_outward</span></span>
           </a>
-          <a href="https://landometer.com/v3/citymeter?d=population" style="position:relative; display:block; aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius-md); text-decoration:none; color:var(--fg-on-deep-primary)" style-hover="box-shadow:inset 0 0 0 3px var(--fg-interactive-surface)">
-            <img src="assets/previews/population-age-sex.webp" alt="" style="position:absolute; right:0; bottom:0; width:200%; height:200%; object-fit:cover; object-position:100% 100%">
-            <span style="position:absolute; inset:auto 0 0 0; margin:0; padding:var(--space-5) var(--space-4) var(--space-4); display:flex; align-items:flex-end; justify-content:space-between; gap:var(--space-3); font-weight:600; line-height:1.3; color:var(--fg-on-deep-primary); background:linear-gradient(180deg, rgba(17,25,29,0) 0%, rgba(17,25,29,.56) 46%, rgba(17,25,29,.88) 100%)">Population by age <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></span>
+          <a class="showcase-tile pressable" data-reveal data-reveal-index="4" href="https://landometer.com/v3/citymeter?d=population">
+            <picture><source type="image/avif" srcset="assets/screens/population-age-sex-330.avif 330w, assets/screens/population-age-sex-660.avif 660w" sizes="(min-width:700px) 33vw, 100vw"><source type="image/webp" srcset="assets/screens/population-age-sex-330.webp 330w, assets/screens/population-age-sex-660.webp 660w" sizes="(min-width:700px) 33vw, 100vw"><img src="assets/screens/population-age-sex-660.webp" width="660" height="413" loading="lazy" decoding="async" alt="" style="object-position:100% 100%"></picture>
+            <span class="showcase-label">Population by age <span class="icon-symbol icon-symbol--sm" aria-hidden="true">arrow_outward</span></span>
           </a>
-          <a href="https://landometer.com/v3/citymeter" style="position:relative; display:flex; flex-direction:column; justify-content:space-between; aspect-ratio:4/3; padding:var(--space-4); border-radius:var(--radius-md); text-decoration:none; background:var(--brand-beige); color:var(--fg-on-light-primary)" style-hover="box-shadow:inset 0 0 0 3px var(--interaction-accent)">
+          <a class="pressable fixed-light-action" href="https://landometer.com/v3/citymeter" style="position:relative; display:flex; flex-direction:column; justify-content:space-between; aspect-ratio:4/3; padding:var(--space-4); border-radius:var(--radius-md); text-decoration:none; background:var(--brand-beige); color:var(--fg-on-light-primary)">
             <span class="number" style="font-size:clamp(2.5rem, 5vw, 4rem); line-height:1; color:var(--brand-blue)">38</span>
             <span style="display:flex; align-items:flex-end; justify-content:space-between; gap:var(--space-3); font-weight:600; line-height:1.3">Browse all 38 city data views <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></span>
           </a>
         </div>
         <div style="display:flex; align-items:center; gap:var(--space-5); flex-wrap:wrap">
-          <a class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="https://landometer.com/v3/citymeter">Browse all 38 city data views <span class="icon-symbol" aria-hidden="true" style="font-size:20px; vertical-align:-4px">arrow_forward</span></a>
+          <a class="btn pressable" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="https://landometer.com/v3/citymeter">Browse all 38 city data views <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a>
           <a href="https://landometer.com/v3/citymeter?d=shoppingCenter" style="color:var(--on-atmosphere); font-weight:600">Shopping centres <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></a>
         </div>
+        <aside class="growth-panel" style="margin-top:var(--space-6)" aria-labelledby="share-proof-title">
+          <div class="icon-line"><span class="icon-symbol" aria-hidden="true">share</span><div><h3 id="share-proof-title" style="margin:0 0 var(--space-1); font-size:var(--type-body-lg)">Share the evidence without upgrading the claim</h3><p class="meta" style="margin:0">This exact link lands on CityMETER showcase catalog release v28, checked 14 Aug 2026; its version, date, and limitation stay attached.</p></div></div>
+          <label for="share-url-en" class="eyebrow">Exact link</label>
+          <input id="share-url-en" class="share-url" type="text" readonly value="https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#proof-citymeter-v28-2026-08-14">
+          <div class="action-row"><button class="btn pressable js-only" type="button" data-copy-target="#share-url-en" data-status-target="#share-status-en" data-success="Evidence link copied." data-failure="Automatic copy failed — select the link above."><span class="icon-symbol" aria-hidden="true">content_copy</span>Copy evidence link</button><p id="share-status-en" class="status-line" aria-live="polite"></p></div>
+        </aside>
       </div>
     </section>
 
-    <section id="citywiki" data-screen-label="S5 CityWiki" aria-label="CityWiki" style="padding:clamp(56px, 8vh, 96px) 0">
+    <section id="citywiki" tabindex="-1" data-screen-label="S5 CityWiki" aria-label="CityWiki" style="padding:clamp(56px, 8vh, 96px) 0">
       <div class="container container--wide" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(24px, 4vw, 64px); align-items:start">
         <div>
           <p class="eyebrow" style="margin:0 0 var(--space-3)">CityWiki</p>
-          <h2 style="font-family:var(--font-display-en); font-size:var(--type-h2); line-height:1.08; letter-spacing:-0.02em; color:var(--brand-blue); margin:0 0 var(--space-3); max-width:20ch">Neighbourhood guides, written the way a local would tell it</h2>
+          <h2 class="local-heading" style="font-family:var(--font-display-en); font-size:var(--type-h2); line-height:1.08; letter-spacing:-0.02em; margin:0 0 var(--space-3); max-width:20ch">Neighbourhood guides, written the way a local would tell it</h2>
           <p style="color:var(--text-secondary); max-width:64ch; margin:0 0 var(--space-4)">CityWiki is a set of guides to neighbourhoods and places, built from CityMETER data and research you can trace — what a place is actually like, how to go, and what to watch out for.</p>
           <div style="display:flex; align-items:baseline; gap:var(--space-3); margin:0 0 var(--space-2)">
             <span class="number" style="font-size:2.5rem; line-height:var(--leading-number)">45</span>
-            <span style="max-width:40ch">places are open to read today, and the set keeps growing</span>
+            <span style="max-width:40ch">guides were readable in the scope of this check</span>
           </div>
           <p class="technical" style="color:var(--text-metadata); margin:0 0 var(--space-4)">as of 25 Aug 2026</p>
           <div style="display:flex; flex-wrap:wrap; gap:var(--space-2); margin:0 0 var(--space-5)">
-            <a href="https://landometer.com/v3/citywiki" style="border:1px solid var(--border-default); background:var(--surface-card); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:var(--type-body-sm); padding:6px 14px; border-radius:var(--radius-pill)" style-hover="background:var(--surface-blue-tint)">Silom</a>
-            <a href="https://landometer.com/v3/citywiki" style="border:1px solid var(--border-default); background:var(--surface-card); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:var(--type-body-sm); padding:6px 14px; border-radius:var(--radius-pill)" style-hover="background:var(--surface-blue-tint)">Yaowarat</a>
-            <a href="https://landometer.com/v3/citywiki" style="border:1px solid var(--border-default); background:var(--surface-card); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:var(--type-body-sm); padding:6px 14px; border-radius:var(--radius-pill)" style-hover="background:var(--surface-blue-tint)">Talat Noi</a>
-            <a href="https://landometer.com/v3/citywiki" style="border:1px solid var(--border-default); background:var(--surface-card); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:var(--type-body-sm); padding:6px 14px; border-radius:var(--radius-pill)" style-hover="background:var(--surface-blue-tint)">Ari</a>
-            <a href="https://landometer.com/v3/citywiki" style="border:1px solid var(--border-default); background:var(--surface-card); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:var(--type-body-sm); padding:6px 14px; border-radius:var(--radius-pill)" style-hover="background:var(--surface-blue-tint)">Siam</a>
-            <a href="https://landometer.com/v3/citywiki" style="border:1px solid var(--border-default); background:var(--surface-card); color:var(--text-primary); text-decoration:none; font-weight:600; font-size:var(--type-body-sm); padding:6px 14px; border-radius:var(--radius-pill)" style-hover="background:var(--surface-blue-tint)">Wang Lang</a>
+            <span class="chip">Silom</span>
+            <span class="chip">Yaowarat</span>
+            <span class="chip">Talat Noi</span>
+            <span class="chip">Ari</span>
+            <span class="chip">Siam</span>
+            <span class="chip">Wang Lang</span>
           </div>
           <p style="margin:0 0 var(--space-4)"><a href="https://landometer.com/v3/citywiki" style="font-weight:600; font-size:var(--type-body-lg)">Pick a neighbourhood and start reading →</a></p>
           <details>
             <summary class="evidence-affordance" style="cursor:pointer">What to know before you use it</summary>
-            <p class="meta" style="max-width:64ch; padding-top:var(--space-2); margin:0">Guides open in stages as a public beta — each one carries its sources and its limits inside the page.</p>
+            <p class="meta" style="max-width:64ch; padding-top:var(--space-2); margin:0">Observed fact: 45 guides were readable on the source route when checked 25 Aug 2026. Current access must be checked at the destination; each guide owns its source and limitation boundary.</p>
           </details>
         </div>
-        <div style="aspect-ratio:4/3; min-height:280px">
-          <image-slot id="citywiki-guide" shape="rounded" radius="16" placeholder="Real capture of a /v3/citywiki guide (M3) — the design system library holds no CityWiki image, so nothing stands in for it"></image-slot>
+        <div>
+          <figure class="media-figure" style="border-radius:var(--radius-md); min-height:280px">
+            <picture>
+              <source type="image/avif" srcset="assets/photos/pak-khlong-talat-360.avif 360w, assets/photos/pak-khlong-talat-640.avif 640w, assets/photos/pak-khlong-talat-900.avif 900w" sizes="(min-width:840px) 50vw, 100vw">
+              <source type="image/webp" srcset="assets/photos/pak-khlong-talat-360.webp 360w, assets/photos/pak-khlong-talat-640.webp 640w, assets/photos/pak-khlong-talat-900.webp 900w" sizes="(min-width:840px) 50vw, 100vw">
+              <img src="assets/photos/pak-khlong-talat-900.webp" width="900" height="599" loading="lazy" decoding="async" alt="Shoppers walking among colorful flower stalls at Pak Khlong Talat in Bangkok.">
+            </picture>
+            <figcaption class="media-caption">Pak Khlong Talat, Bangkok · Landometer-owned photograph · not a CityWiki screen</figcaption>
+          </figure>
+          <aside class="tool-handoff" style="margin-top:var(--space-4)" aria-labelledby="map-handoff-title-en">
+            <div class="icon-line"><span class="icon-symbol" aria-hidden="true">map</span><div><h3 id="map-handoff-title-en" style="margin:0 0 var(--space-1); font-size:var(--type-body-lg)">Continue in Google Maps</h3><p class="meta" style="margin:0">Provider: Google Maps · opens only after your action · public-safe query · the query becomes editable when JavaScript is available; otherwise the link uses the displayed query · photograph checked 28 Aug 2026</p></div></div>
+            <label for="map-query-en" class="eyebrow">Search query</label>
+            <input id="map-query-en" class="tool-query" value="Pak Khlong Talat, Bangkok" readonly data-editable-query>
+            <label for="map-package-en" class="eyebrow">Evidence-labelled copy package</label>
+            <textarea id="map-package-en" class="share-url" rows="3" readonly>Place: Pak Khlong Talat, Bangkok · Evidence: Landometer-owned photograph · Checked: 28 Aug 2026 · Limitation: this is not a CityWiki screen and does not verify opening hours</textarea>
+            <div class="action-row"><a class="btn pressable" data-map-open data-query-target="#map-query-en" href="https://www.google.com/maps/search/?api=1&amp;query=Pak%20Khlong%20Talat%20Bangkok" target="_blank" rel="noopener">Open in Google Maps <span class="icon-symbol" aria-hidden="true">open_in_new</span></a><button class="btn btn--quiet pressable js-only" type="button" data-copy-target="#map-package-en" data-status-target="#map-status-en" data-success="Evidence-labelled text copied." data-failure="Automatic copy failed — select the text above."><span class="icon-symbol" aria-hidden="true">content_copy</span>Copy text</button></div>
+            <p id="map-status-en" class="status-line" aria-live="polite"></p>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section id="landom" data-screen-label="S6 Landom" aria-label="Landom — the people" class="scene-atmosphere scene-atmosphere--cultivate" style="padding:clamp(56px, 8vh, 96px) 0">
+    <section id="landom" tabindex="-1" data-screen-label="S6 Landom" aria-label="Landom — the people" class="scene-atmosphere scene-atmosphere--cultivate" style="padding:clamp(56px, 8vh, 96px) 0">
       <div class="container container--wide" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(24px, 4vw, 64px); align-items:center">
         <div>
           <p class="eyebrow" style="color:var(--on-atmosphere-2); margin:0 0 var(--space-3)">Landom</p>
           <h2 style="font-family:var(--font-display-en); font-size:var(--type-h2); line-height:1.08; letter-spacing:-0.02em; color:var(--on-atmosphere); margin:0 0 var(--space-3)">Not a place. The people.</h2>
           <p style="color:var(--on-atmosphere-2); max-width:60ch; margin:0 0 var(--space-3)">Landom is the community of people who build Landometer — interns, full-time team, and contributors who want to understand the city and help make it better.</p>
-          <p style="color:var(--on-atmosphere); font-weight:600; margin:0 0 2px">51 Landom people · 120 pieces of work · 26 certificates</p>
+          <p style="color:var(--on-atmosphere); font-weight:600; margin:0 0 2px">51 Landom people · 120 pieces of work</p>
           <p class="technical" style="color:var(--on-atmosphere-2); margin:0 0 var(--space-2)">as of 23 Aug 2026</p>
-          <p style="color:var(--on-atmosphere-2); max-width:60ch; margin:0 0 var(--space-3); font-size:var(--type-body-sm)">Every one of them has a profile and work you can actually look at. Certificates are issued by Landometer itself. Many of today's full-time team started as interns here — the work you do during an internship is the credential.</p>
+          <p style="color:var(--on-atmosphere-2); max-width:60ch; margin:0 0 var(--space-3); font-size:var(--type-body-sm)">These counts come from the Landom page inspected on 23 Aug 2026 and describe only the community and work shown there; they are not employee or product-user counts.</p>
           <p style="font-family:var(--font-display-en); font-weight:700; font-size:clamp(1.6rem, 3vw, 2.5rem); line-height:1.1; letter-spacing:-0.02em; color:var(--on-atmosphere); margin:var(--space-5) 0; max-width:18ch; text-wrap:balance">Let us cultivate our city with data.</p>
           <div style="display:flex; align-items:center; gap:var(--space-4); flex-wrap:wrap; margin:0 0 var(--space-3)">
-            <a class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="https://docs.google.com/forms/d/e/1FAIpQLSdGVOA--7YLOP2Go4hB-Edj4452MPJyVuWsPDi_O9H2jM6wiw/viewform" target="_blank" rel="noopener" aria-label="Apply to the team (opens in a new tab)">Join us — apply to the team <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></a>
+            <a class="btn pressable" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="https://docs.google.com/forms/d/e/1FAIpQLSdGVOA--7YLOP2Go4hB-Edj4452MPJyVuWsPDi_O9H2jM6wiw/viewform" target="_blank" rel="noopener" aria-label="Apply to the team (opens in a new tab)">Join us — apply to the team <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></a>
             <a href="https://montri-th.github.io/Landom/" target="_blank" rel="noopener" style="color:var(--on-atmosphere); font-weight:600" aria-label="See what Landom people have built (opens in a new tab)">See what Landom people have built <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></a>
           </div>
+          <p class="career-note"><span class="icon-symbol" aria-hidden="true">login</span><span>Signing in with a Google account is required to apply.</span></p>
           <p style="color:var(--on-atmosphere-2); font-size:var(--type-label); margin:0">If the form will not open, reach us through the <a href="#contact" style="color:var(--on-atmosphere)">contact section</a> or hello@landometer.com</p>
         </div>
-        <figure style="margin:0">
-          <img src="assets/landom-team-mirror-centered.jpg" alt="Six Landom members photographed together in a convex street mirror, in front of an old shophouse in Bangkok's old town" style="width:100%; display:block; aspect-ratio:3/4; max-height:680px; object-fit:cover; object-position:center; background:var(--surface-alt); border-radius:var(--radius-md) var(--radius-md) 0 0">
-          <figcaption class="meta" style="background:var(--surface-alt); color:var(--text-metadata); font-size:var(--type-label); padding:var(--space-2) var(--space-3); border-radius:0 0 var(--radius-md) var(--radius-md)">Landom members at a coffee bar in Bangkok's old town — a real team photo, used unaltered</figcaption>
+        <figure class="media-figure" style="border-radius:var(--radius-md)">
+          <picture>
+            <source type="image/avif" srcset="assets/photos/landom-team-480.avif 480w, assets/photos/landom-team-768.avif 768w, assets/photos/landom-team-1024.avif 1024w" sizes="(min-width:840px) 50vw, 100vw">
+            <source type="image/webp" srcset="assets/photos/landom-team-480.webp 480w, assets/photos/landom-team-768.webp 768w, assets/photos/landom-team-1024.webp 1024w" sizes="(min-width:840px) 50vw, 100vw">
+            <img src="assets/photos/landom-team-768.webp" width="1536" height="2048" loading="lazy" decoding="async" alt="Six Landom members photographed together in a convex street mirror, in front of an old shophouse in Bangkok's old town" style="aspect-ratio:3/4; max-height:680px; object-position:center">
+          </picture>
+          <figcaption class="media-caption meta">Landom members at a coffee bar in Bangkok's old town — a real team photo</figcaption>
         </figure>
       </div>
     </section>
@@ -387,27 +461,11 @@
     <section id="dna" data-screen-label="S7 Our story" aria-label="Our story" style="padding:clamp(64px, 10vh, 128px) 0">
       <div class="container container--reading">
         <p class="eyebrow" style="margin:0 0 var(--space-3)">Our story</p>
-        <h2 style="font-family:var(--font-display-en); font-weight:700; font-size:clamp(1.9rem, 3.6vw, 3rem); line-height:1.08; letter-spacing:-0.02em; color:var(--brand-blue); margin:0 0 var(--space-4); text-wrap:balance">Measure What Matters. Make It Actionable.</h2>
+        <h2 class="local-heading" style="font-family:var(--font-display-en); font-weight:700; font-size:clamp(1.9rem, 3.6vw, 3rem); line-height:1.08; letter-spacing:-0.02em; margin:0 0 var(--space-4); text-wrap:balance">Measure What Matters. Make It Actionable.</h2>
         <p style="font-size:var(--type-body-lg); margin:0 0 var(--space-3); max-width:60ch">We measure what matters, explain why it matters, and help you decide the next step.</p>
-        <p class="technical" style="color:var(--text-metadata); margin:0 0 var(--space-5)">Doing this since 2017 — starting from managing land with a view of what comes next.</p>
-        <p style="margin:0 0 var(--space-8)"><a class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="#contact">Talk to us <span class="icon-symbol" aria-hidden="true" style="font-size:20px; vertical-align:-4px">arrow_forward</span></a></p>
+        <p style="margin:0 0 var(--space-8)"><a class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" href="#contact">Talk to us <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_forward</span></a></p>
 
-        <h3 style="font-family:var(--font-ui-heading-en); font-size:var(--type-h3); line-height:var(--leading-ui-heading-en); margin:0 0 var(--space-4)">How we work</h3>
-        <div style="border-top:1px solid var(--border-hairline)">
-          <div style="display:grid; grid-template-columns:minmax(120px, 160px) 1fr; gap:var(--space-4); padding:var(--space-4) 0; border-bottom:1px solid var(--border-hairline)">
-            <span style="font-family:var(--font-ui-heading-en); font-weight:700">Clear</span>
-            <span style="color:var(--text-secondary)">Complicated things still have to be readable.</span>
-          </div>
-          <div style="display:grid; grid-template-columns:minmax(120px, 160px) 1fr; gap:var(--space-4); padding:var(--space-4) 0; border-bottom:1px solid var(--border-hairline)">
-            <span style="font-family:var(--font-ui-heading-en); font-weight:700">Grounded</span>
-            <span style="color:var(--text-secondary)">We stay with real data and do not tell more than the evidence carries.</span>
-          </div>
-          <div style="display:grid; grid-template-columns:minmax(120px, 160px) 1fr; gap:var(--space-4); padding:var(--space-4) 0; border-bottom:1px solid var(--border-hairline)">
-            <span style="font-family:var(--font-ui-heading-en); font-weight:700">Energetic</span>
-            <span style="color:var(--text-secondary)">Insight should not end at looking; it should end at doing.</span>
-          </div>
-        </div>
-        <details style="margin-top:var(--space-5)">
+        <details>
           <summary class="evidence-affordance" style="cursor:pointer">Our evidence standard</summary>
           <div class="meta" style="max-width:66ch; padding-top:var(--space-3)">
             <p style="margin:0 0 var(--space-2)">Every figure on this site names its source and its date. Every dataset states its scope and what to know before you use it. We do not present as real what we cannot yet show is real — that is how the whole system works.</p>
@@ -417,44 +475,47 @@
       </div>
     </section>
 
-    <section id="news" data-screen-label="S8 News" aria-label="News" style="background:var(--surface-alt); padding:clamp(48px, 7vh, 80px) 0">
+    <section id="news" tabindex="-1" data-screen-label="S8 News" aria-label="News" style="background:var(--surface-alt); padding:clamp(48px, 7vh, 80px) 0">
       <div class="container container--wide">
-        <h2 style="font-family:var(--font-display-en); font-size:var(--type-h2); line-height:1.08; letter-spacing:-0.02em; color:var(--brand-blue); margin:0 0 var(--space-2)">What we are doing, as we do it</h2>
-        <p style="color:var(--text-secondary); margin:0 0 var(--space-2); max-width:60ch">The latest from our team, straight from the channels we post on.</p>
+        <h2 class="local-heading" style="font-family:var(--font-display-en); font-size:var(--type-h2); line-height:1.08; letter-spacing:-0.02em; margin:0 0 var(--space-2)">What we are doing, as we do it</h2>
+        <p style="color:var(--text-secondary); margin:0 0 var(--space-2); max-width:60ch">Follow the channels where our team publishes directly.</p>
         <p class="meta" style="font-size:var(--type-label); margin:0 0 var(--space-5)">Posts are mostly in Thai and stay as posted — a translated quote is no longer verbatim.</p>
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:var(--space-4)">
-          <a class="card" href="https://www.facebook.com/landometer" target="_blank" rel="noopener" style="text-decoration:none; color:var(--text-primary); display:flex; flex-direction:column; gap:var(--space-2)" style-hover="background:var(--surface-blue-tint)" aria-label="Facebook — Landometer (opens in a new tab)">
+          <a class="card" href="https://www.facebook.com/landometer" target="_blank" rel="noopener" style="text-decoration:none; color:var(--text-primary); display:flex; flex-direction:column; gap:var(--space-2)" aria-label="Facebook — Landometer (opens in a new tab)">
             <span style="font-weight:600; font-size:var(--type-body-lg)">Facebook</span>
             <span class="meta" style="font-size:var(--type-label)">landometer</span>
             <span style="margin-top:auto; color:var(--interaction-accent); font-weight:600; font-size:var(--type-body-sm)">Open the channel <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></span>
           </a>
-          <a class="card" href="https://www.instagram.com/landometer" target="_blank" rel="noopener" style="text-decoration:none; color:var(--text-primary); display:flex; flex-direction:column; gap:var(--space-2)" style-hover="background:var(--surface-blue-tint)" aria-label="Instagram — Landometer (opens in a new tab)">
+          <a class="card" href="https://www.instagram.com/landometer" target="_blank" rel="noopener" style="text-decoration:none; color:var(--text-primary); display:flex; flex-direction:column; gap:var(--space-2)" aria-label="Instagram — Landometer (opens in a new tab)">
             <span style="font-weight:600; font-size:var(--type-body-lg)">Instagram</span>
             <span class="meta" style="font-size:var(--type-label)">landometer</span>
             <span style="margin-top:auto; color:var(--interaction-accent); font-weight:600; font-size:var(--type-body-sm)">Open the channel <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></span>
           </a>
-          <a class="card" href="https://www.tiktok.com/@landometer82" target="_blank" rel="noopener" style="text-decoration:none; color:var(--text-primary); display:flex; flex-direction:column; gap:var(--space-2)" style-hover="background:var(--surface-blue-tint)" aria-label="TikTok — landometer82 (opens in a new tab)">
+          <a class="card" href="https://www.tiktok.com/@landometer82" target="_blank" rel="noopener" style="text-decoration:none; color:var(--text-primary); display:flex; flex-direction:column; gap:var(--space-2)" aria-label="TikTok — landometer82 (opens in a new tab)">
             <span style="font-weight:600; font-size:var(--type-body-lg)">TikTok</span>
             <span class="meta" style="font-size:var(--type-label)">@landometer82</span>
             <span style="margin-top:auto; color:var(--interaction-accent); font-weight:600; font-size:var(--type-body-sm)">Open the channel <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></span>
           </a>
-          <a class="card" href="https://www.linkedin.com/company/landometer" target="_blank" rel="noopener" style="text-decoration:none; color:var(--text-primary); display:flex; flex-direction:column; gap:var(--space-2)" style-hover="background:var(--surface-blue-tint)" aria-label="LinkedIn — Landometer (opens in a new tab)">
+          <a class="card" href="https://www.linkedin.com/company/landometer" target="_blank" rel="noopener" style="text-decoration:none; color:var(--text-primary); display:flex; flex-direction:column; gap:var(--space-2)" aria-label="LinkedIn — Landometer (opens in a new tab)">
             <span style="font-weight:600; font-size:var(--type-body-lg)">LinkedIn</span>
             <span class="meta" style="font-size:var(--type-label)">landometer</span>
             <span style="margin-top:auto; color:var(--interaction-accent); font-weight:600; font-size:var(--type-body-sm)">Open the channel <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">arrow_outward</span></span>
           </a>
         </div>
-        <p class="meta" style="font-size:var(--type-label); margin:var(--space-3) 0 0">Per-post embeds are selected at build time and load lazily — the channel link cards (fallback) always render first.</p>
+        <p class="meta" style="font-size:var(--type-label); margin:var(--space-3) 0 0">These cards open the source channels directly; this page does not simulate posts or activity counts.</p>
       </div>
     </section>
 
-    <section id="contact" data-screen-label="S9 Contact + Footer" aria-label="Contact Landometer" class="scene-atmosphere scene-atmosphere--measure" style="padding:0">
-      <div style="height:8px; background:linear-gradient(90deg, var(--energy-coral) 0 25%, var(--energy-yellow) 25% 50%, var(--energy-mint) 50% 75%, var(--energy-sky) 75% 100%)" aria-hidden="true"></div>
+  </main>
+
+    <footer id="contact" tabindex="-1" data-screen-label="S9 Contact + Footer" aria-label="Contact Landometer" class="scene-atmosphere scene-atmosphere--measure" style="padding:0">
+      <div class="measure-line" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
       <div class="container container--wide" style="padding-top:clamp(48px, 7vh, 80px); padding-bottom:var(--space-7); display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(32px, 5vw, 80px)">
         <div>
           <h2 style="font-family:var(--font-display-en); font-size:var(--type-h2); line-height:1.08; letter-spacing:-0.02em; color:var(--on-atmosphere); margin:0 0 var(--space-2)">Hello! What can we help you with?</h2>
           <p style="color:var(--on-atmosphere-2); margin:0 0 var(--space-5); max-width:52ch">Tell us what you are working on — we reply by email at hello@landometer.com</p>
-          <form onSubmit="{{ onFormSubmit }}" style="display:flex; flex-direction:column; gap:var(--space-4); max-width:560px">
+          <p class="technical" style="color:var(--on-atmosphere-2); margin:calc(var(--space-4) * -1) 0 var(--space-5); max-width:64ch">This static page does not send or store the form fields. “Prepare email” passes the visible values to the mail app you choose, where you can review and send them yourself.</p>
+          <form data-contact-form action="mailto:hello@landometer.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:var(--space-4); max-width:560px">
             <div style="display:flex; flex-direction:column; gap:6px">
               <label for="f-topic" style="font-size:var(--type-label); font-weight:600; color:var(--on-atmosphere)">Topic</label>
               <select id="f-topic" name="topic" style="width:100%; padding:12px 14px; border-radius:var(--radius-sm); border:1px solid transparent; background:var(--fg-interactive-surface); color:var(--fg-interactive-ink); font:inherit">
@@ -468,30 +529,30 @@
             </div>
             <div style="display:flex; flex-direction:column; gap:6px">
               <label for="f-name" style="font-size:var(--type-label); font-weight:600; color:var(--on-atmosphere)">Name</label>
-              <input id="f-name" name="name" type="text" required style="width:100%; padding:12px 14px; border-radius:var(--radius-sm); border:1px solid transparent; background:var(--fg-interactive-surface); color:var(--fg-interactive-ink); font:inherit">
+              <input id="f-name" name="name" type="text" autocomplete="name" required style="width:100%; padding:12px 14px; border-radius:var(--radius-sm); border:1px solid transparent; background:var(--fg-interactive-surface); color:var(--fg-interactive-ink); font:inherit">
             </div>
             <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:var(--space-4)">
               <div style="display:flex; flex-direction:column; gap:6px">
                 <label for="f-email" style="font-size:var(--type-label); font-weight:600; color:var(--on-atmosphere)">Email</label>
-                <input id="f-email" name="email" type="email" required style="width:100%; padding:12px 14px; border-radius:var(--radius-sm); border:1px solid transparent; background:var(--fg-interactive-surface); color:var(--fg-interactive-ink); font:inherit">
+                <input id="f-email" name="email" type="email" autocomplete="email" required style="width:100%; padding:12px 14px; border-radius:var(--radius-sm); border:1px solid transparent; background:var(--fg-interactive-surface); color:var(--fg-interactive-ink); font:inherit">
               </div>
               <div style="display:flex; flex-direction:column; gap:6px">
                 <label for="f-phone" style="font-size:var(--type-label); font-weight:600; color:var(--on-atmosphere)">Phone</label>
-                <input id="f-phone" name="phone" type="tel" style="width:100%; padding:12px 14px; border-radius:var(--radius-sm); border:1px solid transparent; background:var(--fg-interactive-surface); color:var(--fg-interactive-ink); font:inherit">
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" style="width:100%; padding:12px 14px; border-radius:var(--radius-sm); border:1px solid transparent; background:var(--fg-interactive-surface); color:var(--fg-interactive-ink); font:inherit">
               </div>
             </div>
             <div style="display:flex; flex-direction:column; gap:6px">
               <label for="f-msg" style="font-size:var(--type-label); font-weight:600; color:var(--on-atmosphere)">Message</label>
               <textarea id="f-msg" name="message" rows="5" required style="width:100%; padding:12px 14px; border-radius:var(--radius-sm); border:1px solid transparent; background:var(--fg-interactive-surface); color:var(--fg-interactive-ink); font:inherit; resize:vertical"></textarea>
             </div>
-            <div><button class="btn" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" type="submit">Send message <span class="icon-symbol" aria-hidden="true" style="font-size:20px; vertical-align:-4px">send</span></button></div>
+            <div><button class="btn pressable" style="padding:13px var(--space-6); font-size:var(--type-body-lg)" type="submit">Prepare email <span class="icon-symbol icon-symbol--sm" aria-hidden="true" style="vertical-align:-4px">send</span></button></div>
             <div aria-live="polite">
-              <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
-                <div style="border:1px solid rgba(241,244,239,.4); border-radius:var(--radius-sm); padding:var(--space-3); color:var(--on-atmosphere)">
-                  <p style="margin:0 0 var(--space-2); font-size:var(--type-body-sm)">This prototype is not wired to the send system yet — your message is still intact in the form. Send it directly:</p>
-                  <a href="{{ mailto }}" style="color:var(--on-atmosphere); font-weight:600">Email hello@landometer.com →</a>
+              <div data-contact-fallback hidden>
+                <div style="border:1px solid var(--on-atmosphere-2); border-radius:var(--radius-sm); padding:var(--space-3); color:var(--on-atmosphere)">
+                  <p style="margin:0 0 var(--space-2); font-size:var(--type-body-sm)">The site prepared an email with your message. If your mail app did not open, use this link; the form remains intact.</p>
+                  <a href="mailto:hello@landometer.com" style="color:var(--on-atmosphere); font-weight:600">Email hello@landometer.com →</a>
                 </div>
-              </sc-if>
+              </div>
             </div>
           </form>
         </div>
@@ -501,37 +562,12 @@
             <p style="color:var(--on-atmosphere-2); max-width:44ch; margin:0; font-size:var(--type-body-sm)">23/34-35 Room 4C-4D, 4th Fl., The Quarter Bangkok Tower, Trimit Road, Talat Noi, Samphanthawong, Bangkok 10100, Thailand</p>
           </div>
           <p style="margin:0"><a href="mailto:hello@landometer.com" style="color:var(--on-atmosphere); font-weight:600">hello@landometer.com</a></p>
-          <div style="display:flex; flex-wrap:wrap; align-items:center; gap:var(--space-1)">
-            <a href="https://www.facebook.com/landometer" target="_blank" rel="noopener" aria-label="Facebook — landometer (opens in a new tab)" style="width:44px; height:44px; border-radius:var(--radius-pill); display:inline-flex; align-items:center; justify-content:center; color:var(--on-atmosphere); text-decoration:none" style-hover="background:color-mix(in srgb, var(--on-atmosphere) 14%, transparent)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="M14.6 8.6h-1.4c-.9 0-1.5.6-1.5 1.5v10.3"></path>
-                <path d="M9.7 13.4h4.4"></path>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/company/landometer" target="_blank" rel="noopener" aria-label="LinkedIn — landometer (opens in a new tab)" style="width:44px; height:44px; border-radius:var(--radius-pill); display:inline-flex; align-items:center; justify-content:center; color:var(--on-atmosphere); text-decoration:none" style-hover="background:color-mix(in srgb, var(--on-atmosphere) 14%, transparent)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-                <rect x="3" y="3" width="18" height="18" rx="4"></rect>
-                <path d="M7.5 10.7v6.5"></path>
-                <circle cx="7.5" cy="7.5" r="1.05" fill="currentColor" stroke="none"></circle>
-                <path d="M11.7 17.2v-6.5"></path>
-                <path d="M11.7 13.6a2.5 2.5 0 0 1 5 0v3.6"></path>
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/landometer" target="_blank" rel="noopener" aria-label="Instagram — landometer (opens in a new tab)" style="width:44px; height:44px; border-radius:var(--radius-pill); display:inline-flex; align-items:center; justify-content:center; color:var(--on-atmosphere); text-decoration:none" style-hover="background:color-mix(in srgb, var(--on-atmosphere) 14%, transparent)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                <circle cx="12" cy="12" r="4"></circle>
-                <circle cx="17" cy="7" r="1.05" fill="currentColor" stroke="none"></circle>
-              </svg>
-            </a>
-            <a href="https://www.tiktok.com/@landometer82" target="_blank" rel="noopener" aria-label="TikTok — @landometer82 (opens in a new tab)" style="width:44px; height:44px; border-radius:var(--radius-pill); display:inline-flex; align-items:center; justify-content:center; color:var(--on-atmosphere); text-decoration:none" style-hover="background:color-mix(in srgb, var(--on-atmosphere) 14%, transparent)">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-                <path d="M14.4 3.6v9.8a3.2 3.2 0 1 1-3.2-3.2c.32 0 .63.05.92.14"></path>
-                <path d="M14.4 3.6c.36 2.3 2.02 3.92 4.32 4.1"></path>
-              </svg>
-            </a>
-          </div>
+          <nav class="social-links" aria-label="Landometer social channels">
+            <a href="https://www.facebook.com/landometer" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.linkedin.com/company/landometer" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/landometer" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@landometer82" target="_blank" rel="noopener">TikTok</a>
+          </nav>
           <div style="border-top:1px solid var(--overlay-glass-border); padding-top:var(--space-4); display:flex; flex-direction:column; gap:var(--space-2)">
             <a href="#dna" style="color:var(--on-atmosphere)">Our story</a>
             <a href="#showcases" style="color:var(--on-atmosphere)">Showcases</a>
@@ -539,88 +575,17 @@
           </div>
         </div>
       </div>
-      <div class="container container--wide" style="padding-bottom:var(--space-3)">
-        <div style="display:flex; gap:6px" aria-hidden="true">
-          <span style="width:64px; height:5px; background:var(--energy-sky); display:inline-block"></span>
-          <span style="width:40px; height:5px; background:var(--energy-yellow); display:inline-block"></span>
-          <span style="width:88px; height:5px; background:var(--energy-mint); display:inline-block"></span>
-        </div>
-      </div>
       <div style="border-top:1px solid var(--overlay-glass-border)">
         <div class="container container--wide" style="padding-top:var(--space-4); padding-bottom:var(--space-5); display:flex; flex-wrap:wrap; align-items:center; gap:var(--space-4); justify-content:space-between">
           <div style="display:flex; align-items:center; gap:var(--space-3)">
-            <img src="assets/landometer-symbol-white.png" alt="" style="height:32px; width:32px">
+            <span class="footer-mark-surface"><img src="assets/identity/landometer-symbol-white-rebuild03.png" width="64" height="68" alt=""></span>
             <span style="color:var(--on-atmosphere-2); font-size:var(--type-label)">© 2017–2026 Landometer Co., Ltd.</span>
+            <span class="technical" style="color:var(--on-atmosphere-2); font-size:var(--type-caption)">Release ui-20260828-01 · DS v0.9.0-r7 · Color Set color-srgb-05</span>
           </div>
-          <p style="color:var(--on-atmosphere-2); font-size:var(--type-caption); max-width:64ch; margin:0">Articles and guides: CC BY-NC-ND 4.0 · Logo, marks, portraits, product screens: all rights reserved · Datasets: licensed per release (proposal — pending confirmation)</p>
+          <p style="color:var(--on-atmosphere-2); font-size:var(--type-caption); max-width:64ch; margin:0">Proposed content licence — pending confirmation: articles and guides under CC BY-NC-ND 4.0 · logos, marks, portraits and product screens all rights reserved · datasets licensed per release.</p>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;defaultTheme&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;system&quot;, &quot;light&quot;, &quot;dark&quot;], &quot;default&quot;: &quot;system&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Display&quot;}}">
-class Component extends DCLogic {
-  state = { menuOpen: false, theme: 'system', sysDark: false, submitted: false, mailto: '' };
-  componentDidMount() {
-    this._mq = window.matchMedia('(prefers-color-scheme: dark)');
-    let saved = null;
-    try { saved = localStorage.getItem('lando_theme'); } catch (e) {}
-    const t = ['system', 'light', 'dark'].includes(saved) ? saved : (this.props.defaultTheme ?? 'system');
-    this._onMq = () => this.setState({ sysDark: this._mq.matches }, () => this.applyTheme());
-    this._mq.addEventListener('change', this._onMq);
-    this._onKey = (e) => { if (e.key === 'Escape' && this.state.menuOpen) this.setState({ menuOpen: false }); };
-    window.addEventListener('keydown', this._onKey);
-    this.setState({ theme: t, sysDark: this._mq.matches }, () => this.applyTheme());
-    this._ambientVideos = () => {
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      document.querySelectorAll('video[data-ambient]').forEach((v) => {
-        if (reduce) { v.loop = false; v.controls = true; v.pause(); return; }
-        v.muted = true;
-        const play = v.play();
-        if (play && play.catch) play.catch(() => { v.controls = true; });
-      });
-    };
-    this._ambientVideos();
-  }
-  componentWillUnmount() {
-    if (this._mq && this._onMq) this._mq.removeEventListener('change', this._onMq);
-    window.removeEventListener('keydown', this._onKey);
-  }
-  applyTheme() {
-    const dark = this.state.theme === 'dark' || (this.state.theme === 'system' && this.state.sysDark);
-    const el = document.documentElement;
-    if (dark) el.setAttribute('data-theme', 'dark'); else el.removeAttribute('data-theme');
-  }
-  renderVals() {
-    const labels = { system: 'Theme: system', light: 'Theme: light', dark: 'Theme: dark' };
-    const glyphs = { system: '◐', light: '○', dark: '◑' };
-    return {
-      menuOpen: this.state.menuOpen,
-      submitted: this.state.submitted,
-      mailto: this.state.mailto,
-      themeLabel: labels[this.state.theme],
-      themeGlyph: glyphs[this.state.theme],
-      themeAria: 'Switch theme, current: ' + labels[this.state.theme],
-      openMenu: () => this.setState({ menuOpen: true }),
-      closeMenu: () => this.setState({ menuOpen: false }),
-      cycleTheme: () => {
-        const order = ['system', 'light', 'dark'];
-        const next = order[(order.indexOf(this.state.theme) + 1) % 3];
-        try { localStorage.setItem('lando_theme', next); } catch (e) {}
-        this.setState({ theme: next }, () => this.applyTheme());
-      },
-      onFormSubmit: (e) => {
-        e.preventDefault();
-        const f = e.target;
-        const v = (n) => { const el = f.elements[n]; return el ? el.value : ''; };
-        const body = 'Topic: ' + v('topic') + '\nName: ' + v('name') + '\nEmail: ' + v('email') + '\nPhone: ' + v('phone') + '\n\n' + v('message');
-        const mailto = 'mailto:hello@landometer.com?subject=' + encodeURIComponent('Contact from the Landometer site') + '&body=' + encodeURIComponent(body);
-        this.setState({ submitted: true, mailto });
-      }
-    };
-  }
-}
-</script>
 </body>
 </html>

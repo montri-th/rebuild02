@@ -1,17 +1,40 @@
-<!DOCTYPE html>
-<html lang="th">
+<!doctype html>
+<html lang="th" data-ds="landometer" data-ds-version="0.9.0" data-build-card-version="0.9.0" data-manifest-version="2.1" data-token-schema-version="6" data-ds-profile="brand.public" data-delivery-mode="static-initial-html" data-evidence-status="source_limited" data-visibility="public" data-indexable="false" data-theme="light" data-theme-preference="system">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+(function () {
+  var K = "lds-theme", t = null, root = document.documentElement;
+  try { t = localStorage.getItem(K); } catch (e) {}
+  var mode = (t === "light" || t === "dark") ? t : "system";
+  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function resolve(m) { return (m === "dark" || (m === "system" && mq && mq.matches)) ? "dark" : "light"; }
+  root.setAttribute("data-theme", resolve(mode));
+  root.setAttribute("data-theme-preference", mode);
+  if (mq && mq.addEventListener) { mq.addEventListener("change", function () {
+    if (root.getAttribute("data-theme-preference") === "system") { root.setAttribute("data-theme", resolve("system")); }
+  }); }
+})();
+</script>
 <title>Landometer — Visualize City, Shape Tomorrow.</title>
-<link rel="canonical" href="Landometer-Home-TH.dc.html">
+<meta name="description" content="Landometer — City Data + AI for decisions about land, location, and urban life.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="landometer:ds-version" content="0.9.0">
+<meta name="landometer:color-set" content="color-srgb-05">
+<meta name="landometer:artifact-build" content="ui-20260828-01">
+<meta name="landometer:release-receipt" content="rebuild03-ui-20260828-01">
+<link rel="canonical" href="https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html">
+<link rel="alternate" hreflang="th" href="https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html">
+<link rel="alternate" hreflang="en" href="https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html">
+<link rel="alternate" hreflang="x-default" href="https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html">
 <meta http-equiv="refresh" content="0; url=Landometer-Home-TH.dc.html">
-<script>location.replace('Landometer-Home-TH.dc.html' + location.hash);</script>
+<script>location.replace('Landometer-Home-TH.dc.html' + location.search + location.hash);</script>
+<link rel="stylesheet" href="_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/styles.css">
 <style>
-  html,body{margin:0;height:100%;background:#F6F7F3;color:#182327;
-    font:400 1rem/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+  html,body{margin:0;height:100%;background:var(--surface-canvas);color:var(--text-primary)}
   main{height:100%;display:grid;place-content:center;gap:12px;text-align:center;padding:24px}
-  a{color:#176B82;font-weight:600}
+  a{color:var(--interaction-accent);font-weight:600}
 </style>
 </head>
 <body>

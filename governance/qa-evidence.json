@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0",
+  "artifactBuildId": "ui-20260828-01",
+  "machineValidation": "pending",
+  "conformanceLevel": "authoring_aligned",
+  "sourceChecks": {
+    "thai": {
+      "ids": 24,
+      "images": 25,
+      "controlsInSourceAcrossEnhancedAndNoScriptModes": 76,
+      "h1": 1,
+      "header": 1,
+      "main": 1,
+      "footer": 1,
+      "duplicateOrUnresolvedReferences": 0
+    },
+    "english": {
+      "ids": 24,
+      "images": 25,
+      "controlsInSourceAcrossEnhancedAndNoScriptModes": 76,
+      "h1": 1,
+      "header": 1,
+      "main": 1,
+      "footer": 1,
+      "duplicateOrUnresolvedReferences": 0
+    },
+    "uniqueImageReferences": 76,
+    "uniqueImageReferencesIncludingVideoPoster": 77,
+    "runtimeMediaReferencesIncludingVideoAndPoster": 78,
+    "srcsetDescriptorOrAspectErrors": 0,
+    "localResourceReferenceErrors": 0,
+    "forbiddenRuntimeOrigins": 0,
+    "slotOrFrameworkRuntimeMarkers": 0,
+    "diffCheckErrors": 0,
+    "retiredColorMatchesInPageLayer": 0,
+    "retiredColorMatchesInDeliveredTree": 0,
+    "importantDeclarationsInPageLayer": 0,
+    "buildCardSchemaValidation": "pass",
+    "siteManifestSchemaValidation": "pass",
+    "growthRecordSchemaValidation": "pass"
+  },
+  "networkBoundary": {
+    "runtimeSubresources": "same-origin relative paths only",
+    "thirdPartyRuntimeRequests": 0,
+    "externalNavigation": "present only after explicit user action",
+    "networkBlockedRenderedTest": "open: in-app browser blocked by administrative policy"
+  },
+  "contrast": {
+    "method": "deterministic WCAG 2.x relative-luminance calculation from settled sRGB tokens; this is not a rendered glyph, alpha-stack, focus, or device audit",
+    "rows": [
+      {
+        "element": "global Brand Blue on dark canvas replaced by theme text contract",
+        "theme": "dark",
+        "before": "1.97:1",
+        "after": "16.03:1"
+      },
+      {
+        "element": "global Brand Blue on dark card replaced by card text contract",
+        "theme": "dark",
+        "before": "1.64:1",
+        "after": "13.36:1"
+      },
+      {
+        "element": "accent icon on Cultivate glow replaced by on-atmosphere icon contract",
+        "theme": "light",
+        "before": "2.31:1 worst stop",
+        "after": "6.11:1 worst stop"
+      },
+      {
+        "element": "Measure luminous primary foreground",
+        "theme": "dark",
+        "before": "1.97:1 representative inherited Brand Blue/dark-canvas pairing",
+        "after": "8.33:1 worst measured stop"
+      },
+      {
+        "element": "full-colour lockup protected Brand Blue on owned white surface",
+        "theme": "light and dark",
+        "before": "background-dependent",
+        "after": "9.03:1"
+      },
+      {
+        "element": "light card accent link",
+        "theme": "light",
+        "before": "unbounded by local card contract",
+        "after": "5.91:1"
+      },
+      {
+        "element": "dark card accent link",
+        "theme": "dark",
+        "before": "unbounded by local card contract",
+        "after": "7.47:1"
+      },
+      {
+        "element": "active link state on dark card or Measure canvas",
+        "theme": "dark",
+        "before": "1.64:1 on card; 1.97:1 on representative canvas",
+        "after": "7.47:1 on card; 8.33:1 on representative canvas"
+      }
+    ],
+    "renderedAutomatedAudit": "open: zero-critical/serious target not claimed"
+  },
+  "pageWeight1280Dpr1": {
+    "method": "static responsive-candidate transfer model at 1280 CSS px and DPR 1; AVIF preferred, WebP fallback reported separately; optional video payload excluded until user activation",
+    "before": {
+      "aboveFoldMediaBytes": 18912831,
+      "trackedMediaBytes": 23860322
+    },
+    "after": {
+      "aboveFoldPreferredAvifBytes": 70654,
+      "aboveFoldWebpFallbackBytes": 140544,
+      "fullScrollPreferredAvifMediaBytes": 522818,
+      "fullScrollWebpFallbackMediaBytes": 870496,
+      "htmlCssJsGzipPlusAllSelfHostedFontsBytes": 167601,
+      "preferredAvifFullScrollPlusCoreBytes": 690419,
+      "webpFallbackFullScrollPlusCoreBytes": 1038097,
+      "livingVideoOnActivationBytes": 2134202,
+      "preferredAvifMediaAfterVideoActivationBytes": 2657020
+    },
+    "budgetDisposition": {
+      "aboveFoldMedia180KB": "pass in preferred AVIF and WebP fallback models",
+      "fullPageMedia900KB": "pass in the preferred AVIF model; fail in the WebP fallback model once core HTML, CSS, JavaScript, and fonts are included",
+      "sectionVideo2Point5MB": "pass",
+      "videoCountedInside900KB": "fail; the work order's 2.5 MB video target and 900 KB whole-page cap conflict when the complete optional video payload is counted",
+      "metadataPreloadCaveat": "a browser-dependent MP4 byte-range may load before play; the WebP media-only model has 29,504 bytes of headroom but already exceeds the whole-page budget once core bytes are included, so a live network trace remains required"
+    },
+    "fieldVitals": {
+      "lcp2Point5Seconds": "not measured",
+      "inp200Milliseconds": "not measured",
+      "cls0Point1": "not measured"
+    }
+  },
+  "identity": {
+    "sourceBeforeSha256": "8d706f8021bc4b4fdc0e89117244b54868687b74045be54002321de7aaa7ef92",
+    "sourceAfterSha256": "9d04b657c4ad4b5ac6167faeaa7e6476deb44d7eb573369fc20a5a106207fc39",
+    "oldBlueBefore": 4244683,
+    "protectedBlueBefore": 0,
+    "oldBlueAfter": 0,
+    "protectedBlueAfter": 4244683,
+    "otherPixelChanges": 0,
+    "headerDerivativeSha256": "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc",
+    "approvalStatus": "pending identity-registry registration",
+    "omittedRoles": ["favicon", "install icon", "social preview"]
+  },
+  "browserAndProductionGates": {
+    "localHttp": "nine requested routes/assets returned 200 with expected HTML, CSS, WOFF2, MP4, and AVIF MIME types",
+    "localRenderedBrowser": "blocked_by_in_app_browser_admin_policy",
+    "liveRenderedBrowser": "pending publish and blocked by same policy",
+    "keyboardRoute": "source implemented; rendered outcome open",
+    "visibleFocus": "source implemented; rendered outcome open",
+    "targetGeometry": "source implemented; rendered outcome open",
+    "lightDarkMobile": "source contracts present; rendered audit open",
+    "liveHttpAndMime": "pending publish"
+  }
+}
