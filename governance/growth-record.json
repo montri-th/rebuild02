@@ -4,11 +4,12 @@
     "disabledReason": "This brand home has no evidence-backed recurring trigger or return benefit."
   },
   "crossProductPaths": [],
+  "crossProductScope": "Contextual closure cards only; persistent CityMETER, CityWiki and Landom ecosystem navigation is recorded in the site manifest instead.",
   "toolHandoffs": [
     {
       "intent": "Locate Pak Khlong Talat after seeing the documentary photograph.",
       "destination": "Google Maps, opened in a new tab only after explicit user action",
-      "returnPath": "Copyable evidence-labelled place text remains on the Landometer page.",
+      "returnPath": "The Landometer page remains open while Google Maps opens in a new tab.",
       "benefit": "The provider can supply navigation and current provider-owned place information that this static page does not."
     }
   ]

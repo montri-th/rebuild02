@@ -1,160 +1,168 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260828-01",
+  "artifactBuildId": "ui-20260829-01",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
   "sourceChecks": {
     "thai": {
-      "ids": 24,
+      "ids": 28,
       "images": 25,
-      "controlsInSourceAcrossEnhancedAndNoScriptModes": 76,
+      "links": 56,
+      "buttons": 15,
+      "inputsIncludingHiddenTopic": 4,
+      "textareas": 1,
+      "nativeSelectsOrDetails": 0,
+      "videoWithoutControls": 1,
+      "rawControlOrMediaOccurrences": 77,
       "h1": 1,
-      "header": 1,
-      "main": 1,
-      "footer": 1,
-      "duplicateOrUnresolvedReferences": 0
+      "duplicateIds": 0,
+      "html5ParseErrors": 0
     },
     "english": {
-      "ids": 24,
+      "ids": 28,
       "images": 25,
-      "controlsInSourceAcrossEnhancedAndNoScriptModes": 76,
+      "links": 56,
+      "buttons": 15,
+      "inputsIncludingHiddenTopic": 4,
+      "textareas": 1,
+      "nativeSelectsOrDetails": 0,
+      "videoWithoutControls": 1,
+      "rawControlOrMediaOccurrences": 77,
       "h1": 1,
-      "header": 1,
-      "main": 1,
-      "footer": 1,
-      "duplicateOrUnresolvedReferences": 0
+      "duplicateIds": 0,
+      "html5ParseErrors": 0
     },
-    "uniqueImageReferences": 76,
-    "uniqueImageReferencesIncludingVideoPoster": 77,
-    "runtimeMediaReferencesIncludingVideoAndPoster": 78,
-    "srcsetDescriptorOrAspectErrors": 0,
+    "revealHooksPerLocale": 50,
+    "lazyImagesPerLocale": 21,
+    "gatedLegacyFigureHooksPerLocale": 4,
+    "visibleLegacyFigureRows": 0,
     "localResourceReferenceErrors": 0,
-    "forbiddenRuntimeOrigins": 0,
-    "slotOrFrameworkRuntimeMarkers": 0,
-    "diffCheckErrors": 0,
-    "retiredColorMatchesInPageLayer": 0,
-    "retiredColorMatchesInDeliveredTree": 0,
-    "importantDeclarationsInPageLayer": 0,
-    "buildCardSchemaValidation": "pass",
-    "siteManifestSchemaValidation": "pass",
-    "growthRecordSchemaValidation": "pass"
+    "forbiddenDefinitionStringMatchesInPublicLocales": 0,
+    "visibleWaitingOrCaveatStringMatches": 0,
+    "missingIconGlyphs": 0,
+    "pageLayerRawColors": 0,
+    "pageLayerImportantDeclarations": 0,
+    "javascriptSyntax": "pass",
+    "gitDiffCheck": "pass"
   },
   "networkBoundary": {
-    "runtimeSubresources": "same-origin relative paths only",
-    "thirdPartyRuntimeRequests": 0,
-    "externalNavigation": "present only after explicit user action",
-    "networkBlockedRenderedTest": "open: in-app browser blocked by administrative policy"
+    "loadTimeRenderingSubresources": "same-origin relative paths only",
+    "thirdPartyRenderingRuntimeRequests": 0,
+    "externalNavigation": "explicit user action only",
+    "contactSubmit": {
+      "method": "POST",
+      "url": "https://landometer.com/api/v2/public/inquiry/save",
+      "contentType": "application/json",
+      "credentials": "include",
+      "payloadFields": ["name", "email", "phone", "message", "topic"],
+      "corsPreflight": "HTTP 200 on 2026-08-29; origin reflected as https://montri-th.github.io; POST and content-type allowed; credentials allowed",
+      "getGuard": "HTTP 405 on 2026-08-29",
+      "productionPostSent": false,
+      "inboxReceiptVerified": false
+    }
   },
   "contrast": {
-    "method": "deterministic WCAG 2.x relative-luminance calculation from settled sRGB tokens; this is not a rendered glyph, alpha-stack, focus, or device audit",
+    "method": "Local Chrome rendered-pixel background sampling with the exact computed foreground token; text was hidden only while sampling its opaque gradient backdrop and screenshot edges were excluded. Ratios use WCAG 2.x relative luminance. No page text is composited over a photograph.",
     "rows": [
       {
-        "element": "global Brand Blue on dark canvas replaced by theme text contract",
-        "theme": "dark",
-        "before": "1.97:1",
-        "after": "16.03:1"
+        "element": "CityMETER showcase metadata on Measure",
+        "locale": "th",
+        "light1280": "6.42:1",
+        "light390": "5.76:1",
+        "dark1280": "7.02:1",
+        "dark390": "6.75:1",
+        "minimumRatio": "5.76:1",
+        "requirement": "4.5:1",
+        "result": "pass"
       },
       {
-        "element": "global Brand Blue on dark card replaced by card text contract",
-        "theme": "dark",
-        "before": "1.64:1",
-        "after": "13.36:1"
+        "element": "CityMETER showcase metadata on Measure",
+        "locale": "en",
+        "light1280": "6.23:1",
+        "light390": "5.83:1",
+        "dark1280": "6.91:1",
+        "dark390": "6.82:1",
+        "minimumRatio": "5.83:1",
+        "requirement": "4.5:1",
+        "result": "pass"
       },
       {
-        "element": "accent icon on Cultivate glow replaced by on-atmosphere icon contract",
-        "theme": "light",
-        "before": "2.31:1 worst stop",
-        "after": "6.11:1 worst stop"
+        "element": "Location body on Cultivate",
+        "locale": "th",
+        "light1280": "6.49:1",
+        "light390": "5.40:1",
+        "dark1280": "9.28:1",
+        "dark390": "9.00:1",
+        "minimumRatio": "5.40:1",
+        "requirement": "4.5:1",
+        "result": "pass"
       },
       {
-        "element": "Measure luminous primary foreground",
-        "theme": "dark",
-        "before": "1.97:1 representative inherited Brand Blue/dark-canvas pairing",
-        "after": "8.33:1 worst measured stop"
-      },
-      {
-        "element": "full-colour lockup protected Brand Blue on owned white surface",
-        "theme": "light and dark",
-        "before": "background-dependent",
-        "after": "9.03:1"
-      },
-      {
-        "element": "light card accent link",
-        "theme": "light",
-        "before": "unbounded by local card contract",
-        "after": "5.91:1"
-      },
-      {
-        "element": "dark card accent link",
-        "theme": "dark",
-        "before": "unbounded by local card contract",
-        "after": "7.47:1"
-      },
-      {
-        "element": "active link state on dark card or Measure canvas",
-        "theme": "dark",
-        "before": "1.64:1 on card; 1.97:1 on representative canvas",
-        "after": "7.47:1 on card; 8.33:1 on representative canvas"
+        "element": "Location body on Cultivate",
+        "locale": "en",
+        "light1280": "6.42:1",
+        "light390": "5.37:1",
+        "dark1280": "9.25:1",
+        "dark390": "8.92:1",
+        "minimumRatio": "5.37:1",
+        "requirement": "4.5:1",
+        "result": "pass"
       }
     ],
-    "renderedAutomatedAudit": "open: zero-critical/serious target not claimed"
+    "fullAutomatedAccessibilityAudit": "open; no zero-critical/serious claim"
   },
   "pageWeight1280Dpr1": {
-    "method": "static responsive-candidate transfer model at 1280 CSS px and DPR 1; AVIF preferred, WebP fallback reported separately; optional video payload excluded until user activation",
-    "before": {
-      "aboveFoldMediaBytes": 18912831,
-      "trackedMediaBytes": 23860322
+    "method": "local Chrome at 1280x800 against uncompressed local HTTP responses",
+    "initial": {
+      "bytes": 470226,
+      "requests": 27,
+      "videoBytes": 0
     },
-    "after": {
-      "aboveFoldPreferredAvifBytes": 70654,
-      "aboveFoldWebpFallbackBytes": 140544,
-      "fullScrollPreferredAvifMediaBytes": 522818,
-      "fullScrollWebpFallbackMediaBytes": 870496,
-      "htmlCssJsGzipPlusAllSelfHostedFontsBytes": 167601,
-      "preferredAvifFullScrollPlusCoreBytes": 690419,
-      "webpFallbackFullScrollPlusCoreBytes": 1038097,
-      "livingVideoOnActivationBytes": 2134202,
-      "preferredAvifMediaAfterVideoActivationBytes": 2657020
+    "fullScrollWithoutVideo": {
+      "bytes": 698288,
+      "requests": 42,
+      "budget900KB": "pass"
     },
-    "budgetDisposition": {
-      "aboveFoldMedia180KB": "pass in preferred AVIF and WebP fallback models",
-      "fullPageMedia900KB": "pass in the preferred AVIF model; fail in the WebP fallback model once core HTML, CSS, JavaScript, and fonts are included",
-      "sectionVideo2Point5MB": "pass",
-      "videoCountedInside900KB": "fail; the work order's 2.5 MB video target and 900 KB whole-page cap conflict when the complete optional video payload is counted",
-      "metadataPreloadCaveat": "a browser-dependent MP4 byte-range may load before play; the WebP media-only model has 29,504 bytes of headroom but already exceeds the whole-page budget once core bytes are included, so a live network trace remains required"
+    "fullScrollWithVideo": {
+      "bytes": 2832490,
+      "requests": 43,
+      "videoBytes": 2134202,
+      "sectionVideo2Point5MB": "pass"
     },
+    "behavior": "The MP4 has no HTML src and preload none. IntersectionObserver attaches it only within a 240 px root margin; the initial trace fetched zero video bytes.",
+    "finalRegressionInitial": [
+      {"locale": "th", "viewport": "1280x800", "bytes": 470226, "requests": 27, "videoBytes": 0},
+      {"locale": "th", "viewport": "390x844", "bytes": 395909, "requests": 27, "videoBytes": 0},
+      {"locale": "en", "viewport": "1280x800", "bytes": 418471, "requests": 23, "videoBytes": 0},
+      {"locale": "en", "viewport": "390x844", "bytes": 344154, "requests": 23, "videoBytes": 0}
+    ],
+    "liveCompressionAndCache": "not represented by this local uncompressed trace",
     "fieldVitals": {
       "lcp2Point5Seconds": "not measured",
       "inp200Milliseconds": "not measured",
       "cls0Point1": "not measured"
     }
   },
-  "identity": {
-    "sourceBeforeSha256": "8d706f8021bc4b4fdc0e89117244b54868687b74045be54002321de7aaa7ef92",
-    "sourceAfterSha256": "9d04b657c4ad4b5ac6167faeaa7e6476deb44d7eb573369fc20a5a106207fc39",
-    "oldBlueBefore": 4244683,
-    "protectedBlueBefore": 0,
-    "oldBlueAfter": 0,
-    "protectedBlueAfter": 4244683,
-    "otherPixelChanges": 0,
-    "headerDerivativeSha256": "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc",
-    "approvalStatus": "pending identity-registry registration",
-    "omittedRoles": ["favicon", "install icon", "social preview"]
+  "localRenderedChecks": {
+    "engine": "Chrome final regression",
+    "viewports": ["1280x800", "390x844", "320x568"],
+    "verified": [
+      "transparent unframed header logo",
+      "one-line mobile login CTA",
+      "hero contained in first viewport at sampled dimensions",
+      "document width equals viewport at 390 and 320",
+      "all used icon ligatures measure 24x24",
+      "menu fragment focus and listbox open/Escape/focusout behavior",
+      "zero initial video bytes",
+      "zero console errors, page errors, failed requests, or HTTP errors across Thai and English at 1280 and 390 px",
+      "all visible interactive targets measure at least 44 px"
+    ],
+    "inAppBrowser": "blocked_by_admin_policy_check"
   },
   "browserAndProductionGates": {
-    "localHttp": "nine requested routes/assets returned 200 with expected HTML, CSS, WOFF2, MP4, and AVIF MIME types",
-    "localRenderedBrowser": "blocked_by_in_app_browser_admin_policy",
-    "liveRenderedBrowser": "blocked_by_in_app_browser_admin_policy_after_publish; no rendered-browser pass claimed",
-    "keyboardRoute": "source implemented; rendered outcome open",
-    "visibleFocus": "source implemented; rendered outcome open",
-    "targetGeometry": "source implemented; rendered outcome open",
-    "lightDarkMobile": "source contracts present; rendered audit open",
-    "pagesBuild": {
-      "status": "built",
-      "contentCommit": "6a8e7f424f0f5a9dd1151eeede7e40b6af9b9ec3",
-      "createdAt": "2026-08-28T16:46:01Z",
-      "updatedAt": "2026-08-28T16:46:28Z"
-    },
-    "liveHttpAndMime": "verified 2026-08-28T23:49:26+07:00: nine checked routes/assets returned 200 with expected HTML, CSS, WOFF2, MP4, and AVIF MIME types; TH, EN, site CSS/JS, DS entry CSS, MP4, and Pak AVIF live SHA-256 values matched disk"
+    "localHttp": "pass; all declared local assets returned HTTP 200 and explicit favicon removed the browser fallback 404",
+    "pagesBuild": "pending current release",
+    "liveHttpAndMime": "pending current release",
+    "liveByteParity": "pending current release"
   }
 }

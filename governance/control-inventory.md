@@ -1,37 +1,39 @@
 # Rebuild03 control inventory
 
-Artifact build: `ui-20260828-01`
+Artifact build: `ui-20260829-01`
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
-Source-inspected inventory: 76 interactive or selectable control occurrences per locale
-across the mutually exclusive enhanced and `noscript` navigation branches. The source
-count is not presented as a claim that all 76 are visible at once. The enhanced source
-model contains 70 occurrences (51 links). The reachable no-JavaScript model contains
-64 occurrences (50 links); the raw no-JavaScript source union is 66/52 because it also
-contains the permanently hidden contact fallback and its link. Rendered visibility and
-outcomes remain an open gate.
+Each locale contains 77 raw interactive/control/media occurrences in source. Seven
+links belong to the mutually exclusive `noscript` navigation, leaving 70 occurrences
+in the enhanced model. Hidden menu/listbox state means the raw count is not a claim
+that all controls are visible together.
 
-| Family | Count per locale | Reachable state or outcome | No-JavaScript behavior |
+| Family | Raw count per locale | Enhanced behavior | No-JavaScript behavior |
 |---|---:|---|---|
-| Links | 57 | In-page target, locale route, mail client, or explicit external destination | Native link behavior remains available; the visible `noscript` navigation replaces the hidden enhanced menu |
-| Buttons | 6 | Open/close menu, cycle theme, copy exact link, copy tool package, prepare email | Menu/theme/copy enhancement is unavailable; contact form falls through to its `mailto:` action |
-| Text inputs | 5 | Read-only exact link, progressively editable Maps query, name, email, and phone | Maps query stays readonly and matches its fixed link; other values remain visible/selectable and native form submission remains available |
-| Textareas | 2 | Read-only evidence package and contact message | Values remain visible/selectable; message is included in native form submission |
-| Select | 1 | Contact topic reaches one selected value | Native select and form behavior |
-| Disclosure summaries | 4 | Closed/open evidence, route, and limitation details | Native `details` behavior |
-| Video | 1 | Poster, play, pause, seek, volume-disabled track, fullscreen where supported | Native controls and poster; no autoplay or loop |
+| Links | 56 | Local sections, locale route, exact product routes, login, careers, social and Maps destinations | Native links remain; seven-link `noscript` navigation replaces the JavaScript menu |
+| Buttons | 15 | Menu/backdrop/in-dialog close, three theme choices, topic trigger plus six options, exact-link share, submit | JavaScript-only controls stay hidden or inert; form topic remains on its first hidden value |
+| Inputs | 4 | Name, email and production-matched phone validation plus hidden topic value | Visible fields remain native; fallback submission encoding is not claimed compatible with the JSON API |
+| Textareas | 1 | Required contact message | Native field remains visible |
+| Native selects/details | 0 | Accessible custom listbox replaces the Safari native popup | No disclosure or native select is exposed |
+| Video | 1 | Source attaches within 240 px of the viewport, then muted inline autoplay/loop with no controls | Poster only because the HTML carries no initial `src` |
 
-Additional source assertions:
+Source and rendered assertions:
 
-- The first focusable element is the skip link to `#main`.
-- The menu dialog moves focus inside, traps Tab, restores its opener after Escape/backdrop/Close, and transfers focus to a fragment target after navigation.
-- The locale link preserves the current hash.
-- Copy controls have selectable exact-text fallbacks and `aria-live` status regions.
-- The Maps handoff requires an explicit user click, enables query editing only after JavaScript is ready, and has a labelled copy fallback; without JavaScript its displayed readonly query agrees with the fixed URL.
-- The contact action is user-activated and prepares a visible email; it does not claim server delivery.
-- All six neighbourhood chips are non-interactive labels; they do not enter the action-geometry count.
-- Button press depth uses the governed 120 ms / 2 px feedback tokens; reduced motion disables it.
-- External links that open a new tab carry `rel="noopener"`.
-
-Rendered-only checks remain open because the in-app browser was blocked by administrative policy: focus-ring visibility, actual target boxes, focus order, clipping, and control outcomes in a real live browser.
+- The skip link is the first focusable source element.
+- The menu moves focus inside, traps Tab, closes on Escape/backdrop, and sends fragment
+  focus to the destination section. Current-page links are present in the menu.
+- The mobile navbar remains 68 px high; the short login CTA and menu button stay on one
+  line at 320–390 px in the local Chrome checks.
+- The custom listbox exposes `aria-controls`, focuses the selected option on open,
+  supports Arrow/Home/End/Enter/Space/Escape, and closes when focus leaves.
+- The enhanced form posts visible values as JSON to
+  `https://landometer.com/api/v2/public/inquiry/save`; fields reset only after 2xx and
+  remain intact after an error. No `mailto:` path exists.
+- The contact API accepted the GitHub Pages origin in a 2026-08-29 CORS preflight and
+  rejected GET with 405. No production POST or inbox receipt is claimed in this source audit.
+- Exact-link share uses Web Share when available and clipboard otherwise, with an
+  `aria-live` status. The locale link preserves query and hash.
+- Every `target="_blank"` link carries `rel="noopener"`.
+- All 13 icon ligatures currently used are present in the self-hosted subset and measured
+  24×24 in local Chrome after the 2026-08-29 source correction.

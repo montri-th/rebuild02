@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260828-01"
+      id: "ui-20260829-01"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -93,7 +93,7 @@ landometerBuild:
     readiness: "share_ready"
     publicSafe: true
     status: "verified"
-    qrOrLinkTest: "verified 2026-08-28T23:49:26+07:00: root, locale routes, exact proof-link route, DS CSS/font, icon font, video, and Pak Khlong Talat AVIF returned 200; critical live bytes matched the recorded SHA-256 values"
+    qrOrLinkTest: "pending current-release Pages build and live verification"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -113,7 +113,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "5db2d523e8f4be9b4f59de10beff4c4dc5955d7a6fdf74133079b31d49dd11f9"
+        copyHash: "788db8c6c6bead8aa5e5d8dd100dec0701e34a150a55ad7c356068b6c3edde73"
         naturalnessReviewRef: "source review complete; rendered review open"
         parityReviewRef: "bilingual source review complete; rendered review open"
       - locale: "en"
@@ -124,21 +124,21 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "1ed1f97de27c7427f3f3b410b9352a3d6e9252054936be1ecb84f319d4f62273"
+        copyHash: "1bf7d007698de709857b20683f139dc1b95cc26777402c3288892bdf8a691d83"
         naturalnessReviewRef: "source review complete; rendered review open"
         parityReviewRef: "bilingual source review complete; rendered review open"
     internalVoiceWordsPrinted: false
   experience:
     trigger: "A visitor needs to understand what Landometer covers and where the evidence leads."
     oneJob: "Orient the visitor across Land, Location, and Living without merging product evidence boundaries."
-    promisedOutcome: "A source-labelled view of the ecosystem and a working next action."
-    firstAha: "The four waiting system figures and the evidence disclosure make known and unknown values explicit."
-    ahaEvidenceCue: "The source disclosure immediately follows the first proof block."
+    promisedOutcome: "An inspiring view of the ecosystem, dated product proof, and a direct next action."
+    firstAha: "The proof band opens 38 CityMETER views, 45 CityWiki guides, 51 Landom people, and 120 works with dates."
+    ahaEvidenceCue: "The four dated, product-scoped proof cards immediately follow the first viewport."
     primaryAction: "Inspect products and CityMETER evidence."
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild03.ui-20260828-01"
+    channelParityKey: "landometer.home.rebuild03.ui-20260829-01"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -146,8 +146,8 @@ landometerBuild:
     cleanCompletion: "No synthetic retention loop; a visitor can leave after taking the evidence or next action."
   composition:
     quietRegions:
-      - "evidence disclosures"
-      - "Our Story evidence standard"
+      - "testimonial reading rail"
+      - "Our Story statement"
     gradientSurfaces:
       - id: "measure"
         surface: "var(--surface-atmosphere-measure)"
@@ -156,13 +156,14 @@ landometerBuild:
         surface: "var(--surface-atmosphere-cultivate)"
         foreground: "var(--on-atmosphere), var(--on-atmosphere-2)"
     localForegroundContracts:
-      - "fixed white plate for full-colour lockup"
+      - "transparent full-colour lockup directly on the light header"
+      - "white symbol plus typeset wordmark directly on the dark header"
       - "theme-aware card/canvas foreground pairs"
       - "opaque captions on surface-card"
       - "deep Measure plate for white footer symbol"
   brandAlignment:
     productStatement: "City Data + AI for decisions about Land, Location, and Living."
-    proofObject: "source-labelled system figures, product evidence, and documentary media"
+    proofObject: "dated product evidence and documentary media"
     ahaProvesPromise: true
     networkAdvancesObjective: true
   investment:
@@ -170,9 +171,9 @@ landometerBuild:
     userBenefit: "The static brand home does not ask for a saved object or recurring commitment."
   proof:
     kind: "documentary"
-    object: "bilingual home with explicit source, date, scope, and limitation labels"
+    object: "customer-facing bilingual home with dated product proof and direct inquiry"
     sourceStatus: "observed"
-    limitation: "All four system figures and their shared data date are waiting because figures.json was not supplied. Product evidence stays product-scoped."
+    limitation: "The Drive figures.json checked 2026-08-29 has a null date and four null values, so the governed legacy row is omitted until its all-values gate passes."
   assets:
     officialLogo: "available"
     fontManifest: "assets/fonts/font-assets.manifest.json"
@@ -181,8 +182,8 @@ landometerBuild:
       variant: "horizontal_full_colour"
       sha256: "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc"
       canvas: "transparent"
-      placement: "separate_plate"
-      surfacePairingRef: "site.css .brand-surface"
+      placement: "direct_surface"
+      surfacePairingRef: "site.css .site-header"
       identityApproval:
         id: "pending-rebuild03-brand-blue-registration"
         authorityRole: "brand_identity_authority"
@@ -192,10 +193,10 @@ landometerBuild:
         variant: "horizontal_full_colour"
         sha256: "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc"
         canvas: "transparent"
-        placement: "separate_plate"
-        surfaceRef: "site.css .brand-surface"
+        placement: "direct_surface"
+        surfaceRef: "site.css .site-header"
         themesOrBackdrops:
-          - "fixed white plate in light and dark themes"
+          - "light header surface; dark theme uses the separate white-symbol/typeset-wordmark composition"
         recordVersion: "pending"
         validFrom: ""
         expiresAt: null
@@ -209,8 +210,8 @@ landometerBuild:
         path: "assets/identity/landometer-lockup-color-rebuild03.png"
         sha256: "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc"
         canvas: "transparent"
-        placement: "separate_plate"
-        surfaceRef: "site.css .brand-surface"
+        placement: "direct_surface"
+        surfaceRef: "site.css .site-header"
         approvalStatus: "pending identity-registry registration"
       - context: "footer white symbol"
         path: "assets/identity/landometer-symbol-white-rebuild03.png"
@@ -239,12 +240,13 @@ landometerBuild:
   motion:
     intensity: "guided"
     patterns:
-      - "five-item Skank stagger for CityMETER showcase tiles"
+      - "grouped once-only entrance reveals across page sections"
       - "Downbeat press for action controls"
       - "One-drop settle for copy feedback"
     omitted:
-      - "Offbeat count-up is intentionally absent while all system values are waiting."
-      - "No autoplay, loop, parallax, hue cycling, or scroll jacking."
+      - "Offbeat count-up is absent because the null legacy-system row is not rendered."
+      - "No parallax, hue cycling, or scroll jacking."
+      - "Owner-directed Living video is the explicit autoplay/loop exception; reduced motion retains the poster."
   capabilities:
     analyticalEvidence: true
     motionEnhancement: true
@@ -254,22 +256,22 @@ landometerBuild:
     map: false
     dataVisualization: false
     coCreation: false
-    persistence: false
-    externalSideEffect: false
+    persistence: true
+    externalSideEffect: true
     authentication: false
     permissions: false
     contextDiscovery: true
     agentReadable: false
     boundedAgentAction: false
-    agentActionEffect: "none"
+    agentActionEffect: "none; the contact POST is a visitor-initiated side effect"
     fullLivingReference: false
   contextDiscoveryActions:
     - provider: "Google Maps"
-      action: "user-activated public-safe place search; editable only after JavaScript enhancement"
+      action: "user-activated public-safe fixed place search in a new tab"
       fields: "displayed Pak Khlong Talat place query only"
       privacy: "no credentials or personal data"
       activation: "explicit user action"
-      fallback: "fixed provider link plus selectable evidence-labelled text"
+      fallback: "fixed provider link"
   agentAction:
     targetObjects: []
     scope: "none"
@@ -277,10 +279,10 @@ landometerBuild:
     confirmation: "none"
     allowedEffects: []
   security:
-    securityBaselineRef: "none_ui_only"
+    securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260828-01"
+    artifactBuildId: "ui-20260829-01"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -312,52 +314,52 @@ landometerBuild:
         sha256: "5b4c9bab54e3b1b64367e2967a4f4832d8f13f81a85ef2658d5c7e38fe4491fb"
       - channel: "hosted_th"
         path: "Landometer-Home-TH.dc.html"
-        bytes: 80477
-        sha256: "5db2d523e8f4be9b4f59de10beff4c4dc5955d7a6fdf74133079b31d49dd11f9"
+        bytes: 52266
+        sha256: "788db8c6c6bead8aa5e5d8dd100dec0701e34a150a55ad7c356068b6c3edde73"
       - channel: "hosted_en"
         path: "Landometer-Home-EN.dc.html"
-        bytes: 70863
-        sha256: "1ed1f97de27c7427f3f3b410b9352a3d6e9252054936be1ecb84f319d4f62273"
+        bytes: 45467
+        sha256: "1bf7d007698de709857b20683f139dc1b95cc26777402c3288892bdf8a691d83"
       - channel: "redirect_alias"
         path: "index.html"
         bytes: 2877
-        sha256: "0008a6e050356634aec18c18586163a107b6fdb8adcf90e9805c1fc019ea9e40"
+        sha256: "5c1cb0fc8a5ed8deb12d027a9f5a72406596208826cf1f63e3afaf46beaac4c2"
       - channel: "site_css"
         path: "site.css"
-        bytes: 9846
-        sha256: "8e7b47339a7bf30c055598eacf917d6e5370db6d1cd1b472245cc29ac2a8c85d"
+        bytes: 28268
+        sha256: "3c59ca18bc5f69e73b25323ab06e8cdee8bcd061d123ccf1a5fa0ac30b3c7538"
       - channel: "site_js"
         path: "site.js"
-        bytes: 10737
-        sha256: "d4e5a842228c88775c48d169781ba1afe0eac34e0d11a0f3b9a845f5c8063b21"
+        bytes: 15502
+        sha256: "11c0780e51f17e6489854d77d9018b306119f635ffb496101d2f8bb08daacfa3"
       - channel: "font_manifest"
         path: "assets/fonts/font-assets.manifest.json"
-        bytes: 9324
-        sha256: "b66259deb416f5f19e7a3ae05f8eb6ac44f0f6148f5716d74cb631d34bef9493"
+        bytes: 9356
+        sha256: "7c1592607ac3606cf5b17eef6065b3a37ebafba4e5179ee7e6bf68fadfb0958e"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild03-ui-20260828-01"
-      catalogOrContentVersion: "landometer-home-rebuild03-v1"
-      issuedAt: "2026-08-28"
+      receiptId: "rebuild03-ui-20260829-01"
+      catalogOrContentVersion: "landometer-home-rebuild03-v2"
+      issuedAt: "2026-08-29"
   privacy:
     personalData: true
     sensitivity: "public"
     redactedPublicProjection: false
     governanceRecord:
-      id: "privacy-static-mailto-ui-20260828-01"
+      id: "privacy-direct-inquiry-ui-20260829-01"
       owner: "Montri (Landometer), per rebuild03 work order"
-      collectionBasisAndMinimumFields: "The visitor elects to prepare an email; name, email, and message are required, topic has a native default selection, and phone is optional."
-      accessAndRetentionDeletion: "This artifact sends nothing to a site server and retains nothing; the visitor can clear or leave before activation, after which the selected mail provider governs access, retention, and deletion."
-      redactionAndExportRules: "Only visible form values chosen by the visitor are serialized into a user-activated mailto URI; there is no hidden context, telemetry, or automatic export."
-      reviewStatusAndDate: "source-reviewed 2026-08-28; rendered review open"
+      collectionBasisAndMinimumFields: "After explicit submit, the form sends topic, name, email, phone, and message; name, email, phone, and message are required."
+      accessAndRetentionDeletion: "The first-party production inquiry backend owns access, retention, and deletion; those backend rules are not documented in this static repository."
+      redactionAndExportRules: "Only the five visible/selected form values are posted; no telemetry or hidden visitor context is added."
+      reviewStatusAndDate: "source-reviewed 2026-08-29; CORS preflight verified; production POST/inbox receipt not performed"
       mediaReceipt: "governance/media-receipt.json"
       collectionMode: "user-supplied local contact form"
-      minimumFields: "name, email, and message required; topic always selected by the native control; phone optional"
-      processing: "browser serializes visible fields into a user-activated mailto URI"
-      serverCollection: "none by this static artifact"
-      retention: "none by this static artifact"
-      access: "the user and the mail client/provider they choose"
-      deletionAndRecovery: "clear or leave before activating; after activation the user's mail provider governs the draft"
+      minimumFields: "name, email, phone, and message required; topic always selected by the custom listbox"
+      processing: "browser sends JSON after explicit submit with credentials include"
+      serverCollection: "https://landometer.com/api/v2/public/inquiry/save"
+      retention: "backend-owned; not publicly documented"
+      access: "backend-owned; production contact UI identifies Landometer administrators"
+      deletionAndRecovery: "not defined by this static artifact; Privacy & Terms remains linked"
   telemetry:
     enabled: false
     scope: "none"
@@ -369,7 +371,7 @@ landometerBuild:
   network:
     mode: "share_ready"
     action: "exact_link"
-    recipientOutcome: "The recipient lands on a version/date-bound CityMETER proof object with visible scope and limitation."
+    recipientOutcome: "The recipient lands on the exact dated CityMETER proof object."
     policyReason: "Copy-only sharing after the first AHA; no recipient pressure or background post."
   hook:
     enabled: false
@@ -394,15 +396,15 @@ landometerBuild:
       composedContext: "displayed public-safe place query: Pak Khlong Talat, Bangkok"
       truthPackage: "Landometer-owned photograph; checked 2026-08-28; not a CityWiki screen; does not verify opening hours"
       activation: "explicit_user_action"
-      destination: "new_tab_or_copyable"
-      fallback: "copyable_text_required"
+      destination: "new_tab"
+      fallback: "fixed provider link"
   growthMachineProjection: "governance/growth-record.json"
   qa:
     evidencePath: "governance/qa-evidence.json"
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "blocked_by_in_app_browser_admin_policy"
+    renderedBrowserGate: "local Chrome spot checks complete at 1280, 390, and 320; in-app browser policy check unavailable"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -416,8 +418,8 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 9
-      rowsFailedOrOpen: 13
+      rowsPassed: 12
+      rowsFailedOrOpen: 10
       rowsNotApplicable: 1
       resultPath: "governance/self-check.md"
   iconSystem:
@@ -429,17 +431,21 @@ landometerBuild:
     secondFamilyPresent: false
   actionGeometry:
     capsuleActions: "source_inspected"
-    circularIconOnlyActions: 2
+    circularIconOnlyActions: 1
     thirdShapePresent: false
   disclosure:
     firstViewCaveatProse: "none"
-    disclosureLayersPath: "details elements in both locale routes"
+    disclosureLayersPath: "none in the public routes"
     mediaLadderTop: "video"
   colorSetPurge:
     retiredTonesPresent: false
     colorSetId: "color-srgb-05"
     scopeNote: "The full delivered tree is clean; deployed documentation refers to the upstream migration list without reproducing retired literals."
   authorityConflicts:
+    - item: "Living video loop"
+      ownerWorkOrder: "autoplay and replay continuously without controls"
+      dsAuthority: "canonical guidance discourages looping ambience"
+      resolution: "latest owner instruction applied; video is muted, viewport-gated, and disabled under reduced motion"
     - item: "icon weight"
       ownerWorkOrder: "wght 200"
       dsAuthority: "wght 300"

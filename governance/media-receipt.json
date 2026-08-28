@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260828-01",
+  "artifactBuildId": "ui-20260829-01",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -29,7 +29,7 @@
     "audioTracks": 0,
     "metadataRecords": 0,
     "fastStart": true,
-    "behavior": "controls, muted, playsinline, preload metadata, no autoplay, no loop"
+    "behavior": "no initial src, preload none, poster first; source attaches within 240px of the viewport, then muted playsinline autoplay loop with no controls; reduced motion keeps the poster"
   },
   "livingPoster": {
     "path": "assets/media/living-poster-360.webp",
@@ -87,6 +87,11 @@
       "oldBluePixels": 0,
       "protectedBluePixels": 4328,
       "approval": "pending identity-registry registration"
+    },
+    "headerPlacement": {
+      "carrierOrPlate": "none",
+      "light": "full-colour transparent lockup directly on the header surface",
+      "dark": "white transparent symbol plus typeset Arvo wordmark directly on the header surface"
     }
   }
 }

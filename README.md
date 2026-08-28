@@ -1,41 +1,45 @@
 # Landometer — home page rebuild03
 
-Static, initial-HTML-first Landometer home page built on **Landometer Design System v0.9.0-r7**.
-It has two sibling language versions, one shared asset set, and no third-party runtime dependency.
+Customer-facing, bilingual Landometer home page built as static initial HTML on
+Landometer Design System v0.9.0-r7. The page has no third-party rendering runtime,
+bundler, package install, or build step.
 
-| File | What it is |
+| File | Purpose |
 |---|---|
-| `index.html` | entry point — redirects to the Thai page |
+| `index.html` | Root entry; preserves query/hash and opens the Thai route |
 | `Landometer-Home-TH.dc.html` | Thai home page |
 | `Landometer-Home-EN.dc.html` | English home page |
-| `_ds/landometer-design-system-…/` | design-system tokens, base CSS, self-hosted webfonts |
-| `site.css`, `site.js` | build-local presentation and progressive enhancement |
-| `assets/` | responsive media, recorded identity derivatives with pending role approvals, testimonials, and self-hosted icon subset |
+| `_ds/landometer-design-system-…/` | DS tokens, base CSS, and self-hosted webfonts |
+| `site.css`, `site.js` | Responsive presentation and progressive enhancement |
+| `assets/` | Responsive media, identity, testimonials, and icon font |
 | `governance/` | Build Card, manifest, control inventory, and QA receipts |
 
-## Publishing on GitHub Pages
+## Current experience
 
-Settings → Pages → Source: `main` / `/ (root)`.
+- The transparent brand lockup sits directly on the 76 px desktop / 68 px mobile
+  navbar. On mobile, the short one-line sign-in action remains visible beside the menu.
+- The hero is sized to the remaining first viewport, with compact-height portrait
+  and landscape rules plus an internal overflow safeguard for enlarged text.
+- The visible proof band contains the dated, product-scoped 38 / 45 / 51 / 120
+  figures. The four legacy-system figures are omitted because the owner Drive
+  `figures.json` checked on 2026-08-29 still has a null date and four null values.
+- Below-fold sections reserve their media ratio on token surfaces, use the available
+  responsive AVIF/WebP sources, and reveal as they approach the viewport.
+- The Living video has no initial `src`. It is attached only near the viewport, then
+  plays muted, inline, and looping without controls; reduced-motion keeps its poster.
+- The contact form sends JSON directly to Landometer's existing public inquiry API.
+  The production contact surface identifies `hello@landometer.com` as the recipient;
+  the GitHub Pages origin passed CORS preflight on 2026-08-29. A successful submit
+  clears the form; an error preserves every field. No mail application is opened.
+- The page stores only the visitor's theme preference. It has no analytics or contact
+  form persistence in this static repository.
 
-`.nojekyll` is required and already present — without it Pages/Jekyll drops the
-`_ds/` directory and every token, font and style 404s.
+## Publishing
 
-## Evidence state
+GitHub Pages source is `main` / `/ (root)`. The tracked root `.nojekyll` file is
+required so the `_ds/` design-system directory is published unchanged. The `.dc.html`
+suffixes are route contracts and must not be renamed.
 
-- The four system figures remain in an explicit waiting state because no populated
-  `figures.json` was supplied. Values and a data date must come from the same database.
-- The site is public but carries truthful `noindex,nofollow` metadata while rendered-browser,
-  destination-preview, and production accessibility gates remain open.
-- Favicon, install-icon, social-preview, structured-data, and sitemap roles are deliberately
-  omitted while their identity approval or destination test remains open.
-- Cross-product closure cards are deliberately omitted because no candidate had both a
-  version-pinned product-owned intent source and an approved availability status.
-- The Living video is a silent, metadata-stripped H.264 excerpt with an explicit play control.
-- The Pak Khlong Talat photograph is presented as Landometer material, not a CityWiki screenshot.
-- Filenames must keep the `.dc.html` suffix because those are the published locale routes.
-
-## Licence
-
-Proposed content notice, pending confirmation: articles and guides CC BY-NC-ND 4.0;
-logos, marks, portraits, and product screens all rights reserved; datasets licensed
-per release.
+The release deliberately retains `machineValidation: pending`,
+`conformanceLevel: authoring_aligned`, `indexable: false`, and
+`hook.mode: none_no_honest_investment` until their independent gates change.
