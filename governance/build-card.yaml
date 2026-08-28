@@ -90,10 +90,10 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "reference_ready"
+    readiness: "share_ready"
     publicSafe: true
-    status: "provisional"
-    qrOrLinkTest: "post_publish_pending"
+    status: "verified"
+    qrOrLinkTest: "verified 2026-08-28T23:49:26+07:00: root, locale routes, exact proof-link route, DS CSS/font, icon font, video, and Pak Khlong Talat AVIF returned 200; critical live bytes matched the recorded SHA-256 values"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"

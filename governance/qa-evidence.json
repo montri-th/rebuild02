@@ -144,11 +144,17 @@
   "browserAndProductionGates": {
     "localHttp": "nine requested routes/assets returned 200 with expected HTML, CSS, WOFF2, MP4, and AVIF MIME types",
     "localRenderedBrowser": "blocked_by_in_app_browser_admin_policy",
-    "liveRenderedBrowser": "pending publish and blocked by same policy",
+    "liveRenderedBrowser": "blocked_by_in_app_browser_admin_policy_after_publish; no rendered-browser pass claimed",
     "keyboardRoute": "source implemented; rendered outcome open",
     "visibleFocus": "source implemented; rendered outcome open",
     "targetGeometry": "source implemented; rendered outcome open",
     "lightDarkMobile": "source contracts present; rendered audit open",
-    "liveHttpAndMime": "pending publish"
+    "pagesBuild": {
+      "status": "built",
+      "contentCommit": "6a8e7f424f0f5a9dd1151eeede7e40b6af9b9ec3",
+      "createdAt": "2026-08-28T16:46:01Z",
+      "updatedAt": "2026-08-28T16:46:28Z"
+    },
+    "liveHttpAndMime": "verified 2026-08-28T23:49:26+07:00: nine checked routes/assets returned 200 with expected HTML, CSS, WOFF2, MP4, and AVIF MIME types; TH, EN, site CSS/JS, DS entry CSS, MP4, and Pak AVIF live SHA-256 values matched disk"
   }
 }

@@ -140,7 +140,15 @@
     "pagesRoot": "/",
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "noindex,nofollow",
-    "discoverySet": "omitted while source_limited and non-indexable"
+    "discoverySet": "omitted while source_limited and non-indexable",
+    "pagesBuild": {
+      "status": "built",
+      "contentCommit": "6a8e7f424f0f5a9dd1151eeede7e40b6af9b9ec3",
+      "createdAt": "2026-08-28T16:46:01Z",
+      "updatedAt": "2026-08-28T16:46:28Z"
+    },
+    "liveHttpVerifiedAt": "2026-08-28T23:49:26+07:00",
+    "liveByteParity": "verified for TH, EN, site CSS/JS, DS entry CSS, MP4, and Pak AVIF"
   },
   "growth": {
     "hookLoop": {
