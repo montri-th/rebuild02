@@ -93,7 +93,7 @@ landometerBuild:
     readiness: "share_ready"
     publicSafe: true
     status: "verified"
-    qrOrLinkTest: "pending current-release Pages build and live verification"
+    qrOrLinkTest: "verified 2026-08-28T19:56:33Z; required routes HTTP 200 and public byte parity passed for artifact commit 19efbc45ae66ab373816de31811c4d272c50d755"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -404,7 +404,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local Chrome spot checks complete at 1280, 390, and 320; in-app browser policy check unavailable"
+    renderedBrowserGate: "local Chrome regression complete at 1280, 390, and 320; GitHub Pages routes and byte parity verified for artifact commit 19efbc45ae66ab373816de31811c4d272c50d755; in-app browser policy check unavailable"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"

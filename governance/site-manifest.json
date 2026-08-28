@@ -169,7 +169,14 @@
     "pagesRoot": "/",
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "noindex,nofollow",
-    "currentReleaseState": "pending publish and live verification"
+    "currentReleaseState": "verified",
+    "verifiedArtifactCommit": "19efbc45ae66ab373816de31811c4d272c50d755",
+    "verifiedArtifactTree": "c3875ad02cb77ac79105f3d5e5e16ce7a6ca36e8",
+    "pagesBuildState": "built",
+    "pagesBuildUpdatedAt": "2026-08-28T19:55:29Z",
+    "verifiedAt": "2026-08-28T19:56:33Z",
+    "liveRouteEvidence": "root, index, Thai, English, and _ds/styles.css returned HTTP 200; CSS, JS, logo, and MP4 also returned HTTP 200 with expected MIME types; live Chrome at 1280x800 and 390x844 showed zero console/page/request/HTTP errors, zero overflow, exact first-viewport hero fit, and zero initial video bytes",
+    "liveByteParity": "index, both locale HTML files, site.css, site.js, and font-assets.manifest.json matched committed SHA-256 values"
   },
   "growth": {
     "hook": {

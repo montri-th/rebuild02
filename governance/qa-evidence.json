@@ -161,8 +161,17 @@
   },
   "browserAndProductionGates": {
     "localHttp": "pass; all declared local assets returned HTTP 200 and explicit favicon removed the browser fallback 404",
-    "pagesBuild": "pending current release",
-    "liveHttpAndMime": "pending current release",
-    "liveByteParity": "pending current release"
+    "pagesBuild": "pass; GitHub Pages built artifact commit 19efbc45ae66ab373816de31811c4d272c50d755 at 2026-08-28T19:55:29Z",
+    "liveHttpAndMime": "pass at 2026-08-28T19:56:33Z; root, index, Thai, English, _ds/styles.css, site.css, site.js, logo PNG, and MP4 returned HTTP 200 with expected MIME types",
+    "liveByteParity": "pass; index, both locale HTML files, site.css, site.js, and font-assets.manifest.json matched committed SHA-256 values",
+    "liveChrome": {
+      "viewports": ["1280x800", "390x844"],
+      "finalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
+      "consolePageRequestOrHttpErrors": 0,
+      "horizontalOverflowPx": 0,
+      "heroFirstViewportFit": "exact at both viewports",
+      "initialVideoBytes": 0,
+      "favicon": "resolved to the declared same-origin brand PNG"
+    }
   }
 }
