@@ -267,16 +267,16 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage JSON-LD"],
-    "currentReleaseState": "candidate_pending_live_verification",
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "pending",
-    "pagesBuildId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending",
-    "liveByteParity": "pending",
+    "currentReleaseState": "published_live_verified",
+    "verifiedArtifactCommit": "e88a5e0a5bed5deb9c0ec2dbfae7532d0f8f0626",
+    "verifiedArtifactTree": "eef560f73a6b06a7c3a3ce97e89801594ed32b51",
+    "pagesBuildState": "built",
+    "pagesBuildId": 1182403688,
+    "pagesBuildDurationMs": 19473,
+    "pagesBuildUpdatedAt": "2026-08-29T16:47:30Z",
+    "verifiedAt": "2026-08-29T17:10:53.259Z",
+    "liveRouteEvidence": "pass: 29/29 production routes and governed assets returned HTTP 200 with expected MIME types",
+    "liveByteParity": "pass: 29/29 responses matched artifact-commit bytes and SHA-256 values at 2026-08-29T17:10:53.259Z",
     "localBrowserEvidence": {
       "matrix": [
         {"locale": "th", "theme": "dark", "viewport": "1440x900", "result": "pass"},
@@ -287,8 +287,11 @@
       "verified": "Local Chromium showed zero horizontal overflow, a sharp right-aligned Land capture, crisp CityMETER tiles, distinct primary/secondary/utility actions, one typographic external-link cue grammar, four Landom entry paths, staged story/rally motion, and TikTok-first responsive masonry with Facebook, Instagram, LinkedIn and X. Reduced-motion CSS and JavaScript retain final visible states."
     },
     "liveBrowserEvidence": {
-      "matrix": [],
-      "verified": "pending"
+      "matrix": [
+        {"locale": "th", "theme": "system", "viewport": "1280x720", "result": "pass"},
+        {"locale": "en", "theme": "system", "viewport": "1280x720", "result": "pass"}
+      ],
+      "verified": "Production Chromium loaded build ui-20260829-05 with zero horizontal overflow. The r5 Land capture selected its 1800 px AVIF and kept the selected-building panel visible; CityMETER cards selected crisp responsive AVIF assets; primary, secondary and utility actions remained distinct; TH/EN map labels and four Landom paths were present; the EN story disclosure ran story-step-in for 820 ms at 80/260/480 ms delays; and the five-card TikTok-first masonry rendered with TikTok at double width. The official TikTok creator embed exposed a playing muted autoplay loop video, and no same-origin console errors were observed."
     }
   },
   "growth": {
@@ -315,7 +318,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "Local Chromium passed Rebuild02 ui-20260829-05; production Pages, HTTP/MIME/byte/SHA, and live-browser verification are pending the artifact push.",
+    "renderedBrowserGate": "pass: local responsive Chromium plus live TH/EN Chromium; Pages build 1182403688 is built from artifact commit e88a5e0a5bed5deb9c0ec2dbfae7532d0f8f0626; 29/29 production HTTP/MIME/byte/SHA checks passed",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -333,7 +336,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "fail",
+    "SC-15": "pass",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

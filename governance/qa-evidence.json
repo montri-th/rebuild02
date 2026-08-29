@@ -76,18 +76,18 @@
   "browserAndProductionGates": {
     "localHttp": "pass",
     "productionArtifact": {
-      "commit": null,
-      "tree": null
+      "commit": "e88a5e0a5bed5deb9c0ec2dbfae7532d0f8f0626",
+      "tree": "eef560f73a6b06a7c3a3ce97e89801594ed32b51"
     },
     "pagesBuild": {
-      "id": null,
-      "status": "pending",
-      "durationMs": null,
-      "updatedAt": null
+      "id": 1182403688,
+      "status": "built",
+      "durationMs": 19473,
+      "updatedAt": "2026-08-29T16:47:30Z"
     },
-    "liveHttpAndMime": "pending",
-    "liveByteParity": "pending",
-    "liveBrowser": "pending"
+    "liveHttpAndMime": "pass: 29/29 production routes and governed assets returned HTTP 200 with the expected MIME type",
+    "liveByteParity": "pass: 29/29 checked production responses matched the artifact commit byte-for-byte and SHA-256-for-SHA-256 at 2026-08-29T17:10:53.259Z",
+    "liveBrowser": "pass: TH and EN loaded build ui-20260829-05 in Codex in-app Chromium at 1280x720 with zero horizontal overflow; the sharp r5 Land capture, responsive CityMETER images, CTA hierarchy, four Landom paths, bilingual map copy, 820 ms staged story motion, four-beat rally and TikTok-first five-provider masonry rendered as authored. The TikTok creator embed exposed a playing muted autoplay loop video. No same-origin console errors were observed."
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

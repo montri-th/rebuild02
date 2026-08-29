@@ -25,7 +25,7 @@ upgrading source inspection into stronger evidence.
 | SC-12 | pass | Both locale routes are indexable and carry canonical/hreflang links, Open Graph and Twitter metadata, Organization/WebSite/WebPage JSON-LD, the r6 favicon, `robots.txt`, and a truthful release-dated sitemap. |
 | SC-13 | pass | TikTok, Facebook, Instagram, LinkedIn and X content surfaces use minimal brand marks in a responsive masonry; TikTok is first and largest, and the exact CityMETER proof share remains separate. |
 | SC-14 | fail | The 87-occurrence source inventory, local keyboard/form states and explicit 44 px `mailto:` action are checked, but a real contact POST/inbox outcome is not included. |
-| SC-15 | fail | Artifact candidate `ui-20260829-05` has passed local checks; GitHub Pages, exact HTTP/MIME/byte/SHA parity and live Chromium remain pending until the artifact commit is pushed. |
+| SC-15 | pass | GitHub Pages build 1182403688 built artifact commit `e88a5e0a5bed5deb9c0ec2dbfae7532d0f8f0626`; 29/29 production HTTP/MIME/byte/SHA checks matched the artifact, and live TH/EN Chromium verified the rendered build with zero horizontal overflow and no same-origin console errors. |
 | SC-16 | fail | The shared manifest records both locale routes but is not claimed as a complete per-route rendered-contract projection. |
 | SC-17 | pass | Retired values are absent from the public page layer; no retired literal was added in this release. |
 | SC-18 | pass | The first view has no caution/caveat block; the dated product proof band follows the hero and the null legacy row is not rendered. |
@@ -35,4 +35,4 @@ upgrading source inspection into stronger evidence.
 | SC-22 | fail | The approved reveals, story staging, four-beat rally, CTA sweep, 32-second hero pan, responsive social masonry and reduced-motion behavior pass local QA. The owner-directed ambient video loop remains an explicit divergence from canonical no-loop guidance. |
 | SC-23 | pass | Rendered icon/label pairs use the canonical 24 px face and governed gaps; all current ligatures resolve. |
 
-Totals: 16 pass · 7 fail/open · 0 not applicable.
+Totals: 17 pass · 6 fail/open · 0 not applicable.

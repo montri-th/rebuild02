@@ -85,7 +85,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "candidate_pending_live_verification"
+      technicalStatus: "live_verified"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -96,10 +96,10 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "candidate"
+    readiness: "share_ready"
     publicSafe: true
-    status: "pending_artifact_push"
-    qrOrLinkTest: "pending artifact push, GitHub Pages build, HTTP/MIME/byte/SHA parity and live Chromium verification"
+    status: "published"
+    qrOrLinkTest: "pass: Pages build 1182403688 built artifact e88a5e0; 29/29 production HTTP/MIME/byte/SHA checks passed; TH and EN passed live Chromium with zero horizontal overflow"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -455,7 +455,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local Chromium passed Rebuild02 ui-20260829-05 snapshot clarity, CTA hierarchy, cue grammar, story motion and responsive masonry checks; Pages, HTTP/MIME/byte/SHA parity and live Chromium are pending"
+    renderedBrowserGate: "pass: local responsive Chromium plus live TH/EN Chromium; Pages build 1182403688 built artifact e88a5e0; 29/29 production HTTP/MIME/byte/SHA checks passed; TikTok creator embed exposed a playing muted autoplay loop video"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
