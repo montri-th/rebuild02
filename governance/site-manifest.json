@@ -19,7 +19,7 @@
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260829-05"
+    "artifactBuildId": "ui-20260830-06"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260829-05",
+      "id": "ui-20260830-06",
       "path": "governance/site-manifest.json"
     }
   },
@@ -39,7 +39,7 @@
     "cleanCompletion": "Explore a product, share an exact example, send the team a message, or leave without a synthetic retention loop."
   },
   "composition": {
-    "route": ["Measure", "Land", "Cultivate", "Living", "Location intelligence", "Products", "CityMETER", "CityWiki", "Landom", "Our story", "Stories", "Contact"],
+    "route": ["Measure", "Land", "Cultivate", "Living", "Location intelligence", "Product ecosystem", "CityMETER", "CityWiki", "Landom", "Our story", "Stories", "Contact"],
     "connectors": ["dated product proof", "exact-link share", "minimal ecosystem navigation", "expandable company story", "lazy official social embeds", "direct inquiry form", "Google Maps link"]
   },
   "capabilities": {
@@ -48,8 +48,9 @@
     "sweepingNavigationCta": true,
     "ambientHeroPan": true,
     "stagedStoryRally": true,
-    "responsiveSocialMasonry": true,
+    "responsiveSocialEditorialGrid": true,
     "locationQuestionFramework": true,
+    "productEcosystem": true,
     "share": true,
     "mapHandoff": true,
     "directContactSubmission": true,
@@ -71,24 +72,23 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260829-05",
+    "artifactBuildId": "ui-20260830-06",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260829-05",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v5",
-      "issuedAt": "2026-08-29"
+      "receiptId": "rebuild02-ui-20260830-06",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v6",
+      "issuedAt": "2026-08-30"
     }
   },
   "network": {
     "loadTimeSubresources": "Primary page rendering remains same-origin. Official platform social embeds begin only when their cards approach the viewport.",
     "socialEmbeds": {
-      "activation": "IntersectionObserver with a 480 px root margin; no social iframe src, TikTok script or X widget script exists before activation; Facebook receives its measured container width clamped to 180–500 px",
-      "freshness": "TikTok creator, Facebook timeline, Instagram profile and X timeline content are rendered from official platform endpoints on each activated page load subject to provider caching; LinkedIn is one explicitly featured post, not a claimed latest feed",
+      "activation": "IntersectionObserver with a 480 px root margin; no social iframe src or TikTok script exists before activation; Facebook receives its measured container width clamped to 180–500 px",
+      "freshness": "TikTok creator, Facebook timeline and Instagram profile content are rendered from official platform endpoints on each activated page load subject to provider caching; LinkedIn is one explicitly featured post, not a claimed latest feed; the non-rendering X timeline is omitted while its outbound profile link remains in the footer",
       "providers": [
         {"name": "TikTok", "mode": "creator embed with provider-owned recent video surface", "endpoint": "https://www.tiktok.com/embed.js"},
         {"name": "Facebook", "mode": "Page Plugin timeline iframe", "endpoint": "https://www.facebook.com/plugins/page.php"},
         {"name": "Instagram", "mode": "profile embed iframe", "endpoint": "https://www.instagram.com/landometer/embed/"},
-        {"name": "LinkedIn", "mode": "featured post iframe", "endpoint": "https://www.linkedin.com/embed/feed/update/urn:li:activity:7413980705484943361"},
-        {"name": "X", "mode": "official timeline widget with visible profile-link fallback", "endpoint": "https://platform.twitter.com/widgets.js"}
+        {"name": "LinkedIn", "mode": "featured post iframe", "endpoint": "https://www.linkedin.com/embed/feed/update/urn:li:activity:7413980705484943361"}
       ]
     },
     "share": {
@@ -170,9 +170,9 @@
       "sha256": "47eb23f0b2a06bd6882080bcc693384f5d59791b434045e7281b98fa2831903c"
     },
     {
-      "path": "assets/fonts/material-symbols-rounded-rebuild02-r7.woff2",
-      "bytes": 10860,
-      "sha256": "d429cd515aac1457a76e99d6887849a635f4c3bb70b3a8c490f07f64dcd1f942"
+      "path": "assets/fonts/material-symbols-rounded-rebuild02-r8.ttf",
+      "bytes": 11632,
+      "sha256": "044e541cf8db19750c21dfc5c8d30f8300d07773ada10e362bac3e73e6a0ceec"
     },
     {"path": "assets/screens/citymeter-buildings-rebuild02-r5-640.avif", "bytes": 64463, "sha256": "c20c4c345474ed95571670c50e7630d727ee384409b9afd6161c7847ac6726da"},
     {"path": "assets/screens/citymeter-buildings-rebuild02-r5-640.webp", "bytes": 127130, "sha256": "1acec5b982701a11b4ec9b8cae3819c159d42f70453b32916a1fe5604a2c87c6"},
@@ -213,6 +213,12 @@
       "bytes": 49745,
       "sha256": "d83a54f20e328e61ab5fb67f1976e28dbc3b45a00e883fc3ee00a64a9ba1338f"
     },
+    {"path": "assets/photos/location-yaowarat-rebuild02-r6-640.avif", "bytes": 119043, "sha256": "c9aa23ee8ce132d5dae8a1dd361216a99741efda004bc6840985626c8d32487a"},
+    {"path": "assets/photos/location-yaowarat-rebuild02-r6-640.webp", "bytes": 157616, "sha256": "40a3219ad4254576ddf2d031cd80b0a4052942db4696c6e23c972819cb984e45"},
+    {"path": "assets/photos/location-yaowarat-rebuild02-r6-1200.avif", "bytes": 287689, "sha256": "b2acc4cbeae8b5431e50ab85f56ef887dffc2e8e5d89749ebf74a2c2b888a42d"},
+    {"path": "assets/photos/location-yaowarat-rebuild02-r6-1200.webp", "bytes": 404434, "sha256": "d915cfc00f4b632a895cba0418e9a09bd97f7041f51d3ae3d85b94930149d288"},
+    {"path": "assets/photos/location-yaowarat-rebuild02-r6-1920.avif", "bytes": 430700, "sha256": "45d9c2dfd655ac61bfe818b259dbf02081f1cf167705d8981e3e88026dac0daf"},
+    {"path": "assets/photos/location-yaowarat-rebuild02-r6-1920.webp", "bytes": 613732, "sha256": "7a396447a4bc3be0bebd0a546467489ba9596ba3ef9ffa35e9f3cbc5920e3d8b"},
     {
       "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
       "bytes": 38962,
@@ -260,23 +266,23 @@
     }
   ],
   "publication": {
-    "authorizationSource": "current user request dated 2026-08-29",
+    "authorizationSource": "current user request dated 2026-08-30",
     "repository": "https://github.com/montri-th/rebuild02",
     "branch": "main",
     "pagesRoot": "/",
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage JSON-LD"],
-    "currentReleaseState": "published_live_verified",
-    "verifiedArtifactCommit": "e88a5e0a5bed5deb9c0ec2dbfae7532d0f8f0626",
-    "verifiedArtifactTree": "eef560f73a6b06a7c3a3ce97e89801594ed32b51",
-    "pagesBuildState": "built",
-    "pagesBuildId": 1182403688,
-    "pagesBuildDurationMs": 19473,
-    "pagesBuildUpdatedAt": "2026-08-29T16:47:30Z",
-    "verifiedAt": "2026-08-29T17:10:53.259Z",
-    "liveRouteEvidence": "pass: 29/29 production routes and governed assets returned HTTP 200 with expected MIME types",
-    "liveByteParity": "pass: 29/29 responses matched artifact-commit bytes and SHA-256 values at 2026-08-29T17:10:53.259Z",
+    "currentReleaseState": "candidate_pending_live_verification",
+    "verifiedArtifactCommit": null,
+    "verifiedArtifactTree": null,
+    "pagesBuildState": "pending",
+    "pagesBuildId": null,
+    "pagesBuildDurationMs": null,
+    "pagesBuildUpdatedAt": null,
+    "verifiedAt": null,
+    "liveRouteEvidence": "pending",
+    "liveByteParity": "pending",
     "localBrowserEvidence": {
       "matrix": [
         {"locale": "th", "theme": "dark", "viewport": "1440x900", "result": "pass"},
@@ -284,14 +290,11 @@
         {"locale": "en", "theme": "light", "viewport": "320x700", "result": "pass"},
         {"locale": "th", "theme": "dark", "viewport": "1440x900", "route": "#contact", "result": "pass"}
       ],
-      "verified": "Local Chromium showed zero horizontal overflow, a sharp right-aligned Land capture, crisp CityMETER tiles, distinct primary/secondary/utility actions, one typographic external-link cue grammar, four Landom entry paths, staged story/rally motion, and TikTok-first responsive masonry with Facebook, Instagram, LinkedIn and X. Reduced-motion CSS and JavaScript retain final visible states."
+      "verified": "Local Chromium showed zero horizontal overflow; the sharper governed Yaowarat Location image; five product-neutral Location Intelligence questions including catchment competition and Location-based Market Listening; six restored, product-scoped ecosystem cards; canonical Material Symbols Rounded at FILL 0 / wght 300 / GRAD 0; text-only underlines; and a readable TikTok-first editorial social grid for TikTok, Facebook, Instagram and LinkedIn. Reduced-motion CSS and JavaScript retain final visible states."
     },
     "liveBrowserEvidence": {
-      "matrix": [
-        {"locale": "th", "theme": "system", "viewport": "1280x720", "result": "pass"},
-        {"locale": "en", "theme": "system", "viewport": "1280x720", "result": "pass"}
-      ],
-      "verified": "Production Chromium loaded build ui-20260829-05 with zero horizontal overflow. The r5 Land capture selected its 1800 px AVIF and kept the selected-building panel visible; CityMETER cards selected crisp responsive AVIF assets; primary, secondary and utility actions remained distinct; TH/EN map labels and four Landom paths were present; the EN story disclosure ran story-step-in for 820 ms at 80/260/480 ms delays; and the five-card TikTok-first masonry rendered with TikTok at double width. The official TikTok creator embed exposed a playing muted autoplay loop video, and no same-origin console errors were observed."
+      "matrix": [],
+      "verified": "pending"
     }
   },
   "growth": {
@@ -318,7 +321,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "pass: local responsive Chromium plus live TH/EN Chromium; Pages build 1182403688 is built from artifact commit e88a5e0a5bed5deb9c0ec2dbfae7532d0f8f0626; 29/29 production HTTP/MIME/byte/SHA checks passed",
+    "renderedBrowserGate": "Local TH and EN Chromium passed Rebuild02 ui-20260830-06 icon, Location image, product ecosystem, copy, underline and social editorial-grid checks; Pages, HTTP/MIME/byte/SHA parity and live Chromium are pending the artifact push.",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -336,7 +339,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "pass",
+    "SC-15": "fail",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

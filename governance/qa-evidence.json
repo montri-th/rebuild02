@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260829-05",
+  "artifactBuildId": "ui-20260830-06",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
   "sourceAndStructure": {
@@ -14,11 +14,11 @@
     "localResourceReferenceErrors": 0,
     "javascriptSyntax": "pass",
     "gitDiffCheck": "pass",
-    "materialSymbolFile": "assets/fonts/material-symbols-rounded-rebuild02-r7.woff2",
-    "materialSymbolFileGlyphs": 28,
-    "activeMaterialSymbolLigatures": 26,
+    "materialSymbolFile": "assets/fonts/material-symbols-rounded-rebuild02-r8.ttf",
+    "materialSymbolFileGlyphs": 31,
+    "activeMaterialSymbolLigatures": 27,
     "missingIconGlyphs": 0,
-    "socialBrandMarks": "five inline SVG marks: TikTok, Facebook, Instagram, LinkedIn, X",
+    "socialBrandMarks": "five inline SVG brand marks: TikTok, Facebook, Instagram, LinkedIn and the outbound-only X footer link",
     "videoContract": "one muted playsinline autoplay loop video without controls in each locale",
     "exactRallyCopy": "Let us cultivate our city with data."
   },
@@ -26,7 +26,7 @@
     "citymeterSnapshots": "pass: the Land pillar and appraisal/building/flood tiles use fresh immutable r5 responsive AVIF/WebP captures; Business Dynamics uses the existing 960/1600/2560 set; Population uses the current governed close-up at its displayed card size",
     "landResponsiveSelection": "pass: 640/1200/1800 candidates with sizes=(min-width:701px) 50vw, 100vw; right-aligned cover preserves the selected-building detail panel",
     "tileResponsiveSelection": "pass: four tiles use CSS-aligned sizes with the horizontal-card branch through 700 px and no missing candidates",
-    "semanticIcons": "pass: the four new location-intelligence topics use radar, location_searching, compare_arrows and query_stats; the three story principles use place, visibility and task_alt",
+    "semanticIcons": "pass: all 27 rendered interface ligatures resolve through the self-hosted canonical Material Symbols Rounded family at FILL 0, wght 300 and GRAD 0; five location topics and six product cards use distinct content-relevant glyphs; social logos remain brand marks rather than UI glyphs",
     "citymeterCtaHierarchy": "pass: one solid primary Explore-all action, one outlined secondary conversation action and one circular share utility",
     "externalLinkCue": "pass: visible external-link terminals use a typographic ↗ cue with no text decoration; target-blank links carry noopener noreferrer",
     "mapCopy": {
@@ -35,8 +35,11 @@
     },
     "landomEntries": "pass: join, team work, company thinking and current work",
     "storyMotion": "pass: three staged 820 ms steps with 80/260/480 ms delays and a four-beat rally; reduced motion resolves immediately",
-    "socialMasonry": "pass: TikTok first and largest; Facebook, Instagram, LinkedIn and X use smaller equal columns; layout collapses responsively with zero horizontal overflow",
-    "locationNarrative": "pass: product-neutral competitive landscape, white space/site selection, branch comparison and area-performance monitoring; same-definition/time-window/boundary condition is stated",
+    "socialEditorialGrid": "pass: TikTok and LinkedIn use full-width rows; Facebook and Instagram use readable paired columns and stack below 1080 px; the blank X embed is absent while the outbound profile link remains in the footer",
+    "locationNarrative": "pass: product-neutral catchment competition, white space/site selection, branch comparison, area-performance monitoring and Location-based Market Listening; the same-definition/time-window/boundary condition is stated",
+    "productEcosystem": "pass: CityMETER, CityWiki, CityChat, ijji, land/property tools and projects/partnerships are restored with each product-specific claim contained inside its own card",
+    "underlineBoundary": "pass: UI icons and arrow cues have no underline; underline decoration is applied only to dedicated visible-text spans",
+    "scrollParallaxDecision": "pass: no new scroll-linked parallax was added because the normative DS has no approved documentary-photo parallax recipe; the already approved slow ambient hero pan and reduced-motion freeze remain unchanged",
     "caveatCopyOnCustomerPage": 0
   },
   "networkBoundary": {
@@ -46,48 +49,44 @@
       "TikTok",
       "Facebook",
       "Instagram",
-      "LinkedIn",
-      "X"
+      "LinkedIn"
     ],
-    "providerFreshness": "provider-rendered when activated, subject to provider caching; LinkedIn remains a featured post",
+    "providerFreshness": "TikTok, Facebook and Instagram are provider-rendered when activated, subject to provider caching; LinkedIn remains a featured post; X is outbound-only because its timeline widget rendered a zero-size hidden frame in local desktop and mobile tests",
     "contactEndpoint": "https://landometer.com/api/v2/public/inquiry/save",
     "contactActivation": "explicit visitor submit only",
     "productionPostSent": false,
     "officeEmail": "mailto:hello@landometer.com after explicit click"
   },
   "localRenderedChecks": {
-    "engine": "Codex in-app Chromium on 2026-08-29",
+    "engine": "Codex in-app Chromium on 2026-08-30",
     "result": "pass",
     "verified": [
       "TH and EN render without horizontal overflow",
-      "new Land capture is sharp at the rendered frame and keeps the right-side detail panel visible",
+      "the governed Yaowarat Location image is materially clearer at the rendered 4:3 frame",
       "four CityMETER tiles select responsive r5/r4 AVIF sources and display at the intended aspect ratio",
       "CTA hierarchy and unified external-link cue grammar are visually distinct and keyboard reachable",
-      "location-intelligence cards, four Landom entry paths and bilingual map labels render as authored",
+      "five location-intelligence cards, six product ecosystem cards, four Landom entry paths and bilingual map labels render as authored",
       "story disclosure and rally motion retain the global reduced-motion kill switch",
-      "TikTok leads the responsive masonry; Facebook, Instagram, LinkedIn and X remain provider-owned lazy surfaces"
+      "TikTok leads the editorial grid; Facebook and Instagram remain readable without clipping; LinkedIn uses a full-width row; X has no empty embed card",
+      "Material Symbols Rounded resolves at the DS-locked axes and link decoration does not cross into icons or arrow cues"
     ],
-    "screenshots": [
-      "/private/tmp/rebuild02-r5-final-land-1440.png",
-      "/private/tmp/rebuild02-r5-final-showcase-700.png",
-      "/private/tmp/rebuild02-r5-final-news-390b.png"
-    ]
+    "screenshots": []
   },
   "browserAndProductionGates": {
     "localHttp": "pass",
     "productionArtifact": {
-      "commit": "e88a5e0a5bed5deb9c0ec2dbfae7532d0f8f0626",
-      "tree": "eef560f73a6b06a7c3a3ce97e89801594ed32b51"
+      "commit": null,
+      "tree": null
     },
     "pagesBuild": {
-      "id": 1182403688,
-      "status": "built",
-      "durationMs": 19473,
-      "updatedAt": "2026-08-29T16:47:30Z"
+      "id": null,
+      "status": "pending",
+      "durationMs": null,
+      "updatedAt": null
     },
-    "liveHttpAndMime": "pass: 29/29 production routes and governed assets returned HTTP 200 with the expected MIME type",
-    "liveByteParity": "pass: 29/29 checked production responses matched the artifact commit byte-for-byte and SHA-256-for-SHA-256 at 2026-08-29T17:10:53.259Z",
-    "liveBrowser": "pass: TH and EN loaded build ui-20260829-05 in Codex in-app Chromium at 1280x720 with zero horizontal overflow; the sharp r5 Land capture, responsive CityMETER images, CTA hierarchy, four Landom paths, bilingual map copy, 820 ms staged story motion, four-beat rally and TikTok-first five-provider masonry rendered as authored. The TikTok creator embed exposed a playing muted autoplay loop video. No same-origin console errors were observed."
+    "liveHttpAndMime": "pending",
+    "liveByteParity": "pending",
+    "liveBrowser": "pending"
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

@@ -1,17 +1,9 @@
-@font-face {
-  font-family: "Material Symbols Rounded Rebuild02";
-  src: url("assets/fonts/material-symbols-rounded-rebuild02-r7.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: block;
-}
-
 :root {
   --site-header-height: 76px;
   --rebuild02-wordmark-light: #757575;
 }
 
-.icon-symbol { font-family: "Material Symbols Rounded Rebuild02"; }
+.icon-symbol { text-decoration: none; }
 
 html {
   overflow-x: hidden;
@@ -714,6 +706,8 @@ html[lang="en"] .pillar-resolution h2 { font-family: var(--font-display-en); lin
   gap: var(--space-4);
 }
 
+.solutions-grid--ecosystem .solution-card { min-height: 320px; }
+
 .solution-card {
   min-width: 0;
   display: flex;
@@ -747,16 +741,16 @@ html[lang="en"] .pillar-resolution h2 { font-family: var(--font-display-en); lin
   gap: var(--space-1);
   color: var(--interaction-accent);
   font-weight: 600;
+  text-decoration: none;
 }
 
-.external-text-link { text-decoration: none; }
 .text-link__label {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: .22em;
 }
-.external-text-link:hover .text-link__label,
-.external-text-link:focus-visible .text-link__label { text-decoration-thickness: 2px; }
+.text-link:hover .text-link__label,
+.text-link:focus-visible .text-link__label { text-decoration-thickness: 2px; }
 .text-link__cue {
   flex: none;
   font-family: var(--font-technical);
@@ -770,7 +764,7 @@ html[lang="en"] .pillar-resolution h2 { font-family: var(--font-display-en); lin
 .location-intelligence .section-intro { max-width: 920px; }
 .location-question-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-4);
   margin-top: var(--space-7);
 }
@@ -1175,13 +1169,12 @@ html[data-theme="dark"] .story-mark--dark { display: block; }
 
 .social-feed-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  gap: var(--space-4);
-  width: min(100%, 1280px);
+  gap: var(--space-5);
+  width: min(100%, 1180px);
   margin-inline: auto;
 }
-.social-feed-grid.is-masonry-ready { grid-auto-rows: 8px; }
 
 .social-feed-card {
   width: 100%;
@@ -1193,7 +1186,8 @@ html[data-theme="dark"] .story-mark--dark { display: block; }
   background: var(--surface-card);
 }
 
-.social-feed-card--tiktok { grid-column: span 2; }
+.social-feed-card--tiktok,
+.social-feed-card--linkedin { grid-column: 1 / -1; }
 
 .social-feed-card__header {
   min-height: 60px;
@@ -1225,29 +1219,26 @@ html[data-theme="dark"] .story-mark--dark { display: block; }
 .social-feed-card__header > a:focus-visible { background: var(--surface-soft); }
 
 .social-embed {
-  min-height: 480px;
   display: grid;
   place-items: start center;
-  overflow: hidden;
   background: linear-gradient(135deg, var(--surface-soft), var(--surface-card));
 }
 .social-embed iframe {
   width: 100%;
-  height: 480px;
   display: block;
   border: 0;
   background: var(--surface-card);
 }
+.social-embed--facebook,
+.social-embed--facebook iframe { min-height: 680px; height: 680px; }
 .social-embed--facebook iframe { width: 100%; max-width: 500px; }
 .social-embed--instagram,
-.social-embed--instagram iframe { min-height: 520px; height: 520px; }
+.social-embed--instagram iframe { min-height: 640px; height: 640px; }
 .social-embed--linkedin,
-.social-embed--linkedin iframe { min-height: 440px; height: 440px; }
-.social-embed--x,
-.social-embed--x iframe { min-height: 480px; height: 480px; width: 100% !important; }
+.social-embed--linkedin iframe { min-height: 1100px; height: 1100px; }
 .social-embed--tiktok { min-height: 0; align-items: start; padding: var(--space-3); }
 .social-embed--tiktok .tiktok-embed,
-.social-embed--tiktok iframe { width: 100% !important; min-width: 0; max-width: 100% !important; margin: 0 !important; }
+.social-embed--tiktok iframe { width: 100% !important; min-width: 288px; max-width: 720px !important; margin: 0 auto !important; }
 
 /* Direct contact */
 .contact-footer { padding: 0; color: var(--on-atmosphere); }
@@ -1403,12 +1394,17 @@ textarea.field-control { min-height: 148px; resize: vertical; }
   gap: var(--space-2);
   color: var(--on-atmosphere);
   font-weight: 600;
+  text-decoration: none;
+}
+.contact-email__label {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: .22em;
 }
 .contact-email:hover,
 .contact-email:focus-visible { color: var(--on-atmosphere); }
+.contact-email:hover .contact-email__label,
+.contact-email:focus-visible .contact-email__label { text-decoration-thickness: 2px; }
 .map-link {
   min-height: 44px;
   width: fit-content;
@@ -1432,7 +1428,14 @@ textarea.field-control { min-height: 148px; resize: vertical; }
   align-items: center;
   color: var(--on-atmosphere);
 }
-.social-links a { gap: var(--space-2); }
+.social-links a { gap: var(--space-2); text-decoration: none; }
+.social-link__label {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .22em;
+}
+.social-links a:hover .social-link__label,
+.social-links a:focus-visible .social-link__label { text-decoration-thickness: 2px; }
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -1528,10 +1531,11 @@ html.motion-ready img[data-lazy-media] {
 @media (max-width: 1080px) {
   .showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .testimonial-grid { grid-auto-columns: minmax(300px, 48%); }
-  .location-question-grid,
-  .social-feed-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .location-question-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .social-feed-grid { grid-template-columns: 1fr; }
   .social-feed-grid { gap: var(--space-4); }
-  .social-feed-card--tiktok { grid-column: span 2; }
+  .social-feed-card--tiktok,
+  .social-feed-card--linkedin { grid-column: 1; }
 }
 
 @media (max-width: 600px) {
@@ -1594,15 +1598,12 @@ html.motion-ready img[data-lazy-media] {
   .landom-paths { grid-template-columns: 1fr; }
   .story-mark { width: 58px; height: 58px; }
   .social-feed-grid { grid-template-columns: 1fr; }
-  .social-feed-card--tiktok { grid-column: span 1; }
-  .social-embed,
-  .social-embed iframe { min-height: 500px; height: 500px; }
+  .social-feed-card--tiktok,
+  .social-feed-card--linkedin { grid-column: 1; }
   .social-embed--instagram,
-  .social-embed--instagram iframe { min-height: 460px; height: 460px; }
+  .social-embed--instagram iframe { min-height: 620px; height: 620px; }
   .social-embed--linkedin,
-  .social-embed--linkedin iframe { min-height: 420px; height: 420px; }
-  .social-embed--x,
-  .social-embed--x iframe { min-height: 460px; height: 460px; }
+  .social-embed--linkedin iframe { min-height: 1100px; height: 1100px; }
   .testimonial-grid { grid-auto-columns: minmax(280px, 88%); }
   .showcase-grid {
     display: grid;

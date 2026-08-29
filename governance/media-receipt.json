@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260829-05",
+  "artifactBuildId": "ui-20260830-06",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -149,6 +149,27 @@
       "bytes": 94186,
       "sha256": "38a572368f9608e4e1bb0eb8134332d47e2253753e4f4d2d0ba50569877ec1ad"
     }
+  },
+  "locationYaowaratR6": {
+    "source": {
+      "repositoryObject": "43057bc:assets/photo-location-yaowarat.jpg",
+      "committedInCurrentTree": false,
+      "dimensions": "1920x635",
+      "bytes": 503753,
+      "sha256": "de8544fe755888c12830b7fa863232088197f5f8552a650f1a2249d3b2d5adc0",
+      "role": "previously approved documentary photograph of Yaowarat retained as the sole image source"
+    },
+    "recipe": "centre-fit to 4:3 with Lanczos resampling; UnsharpMask radius 1.15, percent 105, threshold 3; metadata stripped; AVIF quality 82 speed 6 and WebP quality 92 method 6",
+    "responsiveWidths": [640, 1200, 1920],
+    "outputs": [
+      {"path": "assets/photos/location-yaowarat-rebuild02-r6-640.avif", "bytes": 119043, "dimensions": "640x480", "sha256": "c9aa23ee8ce132d5dae8a1dd361216a99741efda004bc6840985626c8d32487a"},
+      {"path": "assets/photos/location-yaowarat-rebuild02-r6-640.webp", "bytes": 157616, "dimensions": "640x480", "sha256": "40a3219ad4254576ddf2d031cd80b0a4052942db4696c6e23c972819cb984e45"},
+      {"path": "assets/photos/location-yaowarat-rebuild02-r6-1200.avif", "bytes": 287689, "dimensions": "1200x900", "sha256": "b2acc4cbeae8b5431e50ab85f56ef887dffc2e8e5d89749ebf74a2c2b888a42d"},
+      {"path": "assets/photos/location-yaowarat-rebuild02-r6-1200.webp", "bytes": 404434, "dimensions": "1200x900", "sha256": "d915cfc00f4b632a895cba0418e9a09bd97f7041f51d3ae3d85b94930149d288"},
+      {"path": "assets/photos/location-yaowarat-rebuild02-r6-1920.avif", "bytes": 430700, "dimensions": "1920x1440", "sha256": "45d9c2dfd655ac61bfe818b259dbf02081f1cf167705d8981e3e88026dac0daf"},
+      {"path": "assets/photos/location-yaowarat-rebuild02-r6-1920.webp", "bytes": 613732, "dimensions": "1920x1440", "sha256": "7a396447a4bc3be0bebd0a546467489ba9596ba3ef9ffa35e9f3cbc5920e3d8b"}
+    ],
+    "visualReview": "Pass in local Chromium at the authored 4:3 frame: the approved Yaowarat composition is unchanged in meaning and materially clearer than the earlier low-density delivery."
   },
   "socialPreview": {
     "path": "assets/social/landometer-rebuild02-og-1200x630.jpg",
