@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260829-03",
+  "artifactBuildId": "ui-20260829-04",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -55,6 +55,31 @@
       {"path": "assets/screens/business-dynamics-rebuild02-2560.avif", "bytes": 114900, "sha256": "f020f196412a525c8fa7527528f170c567c7946b8995e09a0d7994460662f46c"},
       {"path": "assets/screens/business-dynamics-rebuild02-2560.webp", "bytes": 230662, "sha256": "89cb243e2dc84e914ba5a828324dcb7a4ac7279bbff35c02f3f7c2e913954737"}
     ]
+  },
+  "populationAgeSexCloseup": {
+    "sourceUrl": "https://landometer.com/v3/citymeter?d=population",
+    "representationLabel": "Current public CityMETER Population user-interface capture; aggregate chart, not raw or live population data",
+    "sourceCapture": {
+      "path": "/private/tmp/rebuild02-population-live-dark-1920x1080.png",
+      "actualFormat": "JPEG/JFIF despite the temporary .png suffix",
+      "dimensions": "1920x1080",
+      "bytes": 200521,
+      "sha256": "d57e577934d53e840b474982424710d4521b742a8e55a5714f6cc27e65455dc0",
+      "crop": "x=1486, y=561, width=428, height=321; exact 4:3 composition"
+    },
+    "visualReview": "Pass: the crop includes age bands 95+ through 00–04, both sides of the distribution, the 4M–0–4M axis and male/female legend; aggregate values only, with no personal identifiers.",
+    "responsiveWidths": [336, 660],
+    "outputs": [
+      {"path": "assets/screens/population-age-sex-closeup-rebuild02-r4-336.avif", "bytes": 11988, "dimensions": "336x252", "sha256": "6fad97a187e43c945f1a4514a0daab0634a7efdcbdadeae53532a2a788cefb46"},
+      {"path": "assets/screens/population-age-sex-closeup-rebuild02-r4-336.webp", "bytes": 13036, "dimensions": "336x252", "sha256": "14d5dbf8267be8be6a4776adc70957422de9368b39c33b85a71f7a8b622f312d"},
+      {"path": "assets/screens/population-age-sex-closeup-rebuild02-r4-660.avif", "bytes": 28302, "dimensions": "660x495", "sha256": "cf3fb8ad506d6c20ce6259e72b5527ca5cdf5d852e581a0bdcd21d820172b560"},
+      {"path": "assets/screens/population-age-sex-closeup-rebuild02-r4-660.webp", "bytes": 30610, "dimensions": "660x495", "sha256": "eaf4b468faafdb93fd6c74190f2e27e31a8b78ab7b72587bac862d3ec48f6e4f"}
+    ],
+    "delivery": "AVIF preferred with WebP fallback; decorative alt inside the linked tile because the localized visible label names the destination",
+    "standaloneAlt": {
+      "th": "กราฟประชากรตามช่วงอายุ แยกชายและหญิง ใน CityMETER",
+      "en": "CityMETER population chart by age group and sex"
+    }
   },
   "pakKhlongTalat": {
     "ownershipLabel": "Landometer material per owner work order",
@@ -114,7 +139,8 @@
     "headerPlacement": {
       "carrierOrPlate": "none",
       "themes": "the r6 full-colour symbol plus a typed Arvo 700 Landometer wordmark sits directly on both header themes; #757575 on light canvas and text-primary on dark canvas",
-      "responsiveSymbol": "54x54 desktop; 45x45 mobile"
+      "responsiveSymbol": "prominent 54x54 desktop / 45x45 mobile; calm 38x38 desktop / 32x32 mobile",
+      "behavior": "calm state follows downward scroll and restores for upward scroll, header intent or open menu; reduced motion stays prominent"
     }
   }
 }

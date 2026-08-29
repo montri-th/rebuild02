@@ -48,6 +48,93 @@
     updateThemeControls();
   }
 
+  function installCalmHeader() {
+    var header = document.querySelector('.site-header');
+    if (!header) return;
+    var scrollingElement = document.scrollingElement || document.documentElement;
+    var lastY = new WeakMap();
+    var pointerInside = false;
+    var focusInside = false;
+    var menuOpen = false;
+
+    function reducedMotion() {
+      return Boolean(motionQuery && motionQuery.matches);
+    }
+
+    function setCalm(isCalm) {
+      header.classList.toggle('is-calm', Boolean(isCalm) && !reducedMotion() && !pointerInside && !focusInside && !menuOpen);
+    }
+
+    function syncFromPagePosition() {
+      setCalm(scrollingElement.scrollTop >= 24);
+    }
+
+    function scrollTarget(event) {
+      var target = event.target;
+      if (target === document || target === document.documentElement || target === document.body) return scrollingElement;
+      return target;
+    }
+
+    header.addEventListener('pointerenter', function () {
+      pointerInside = true;
+      setCalm(false);
+    });
+
+    header.addEventListener('pointerleave', function () {
+      pointerInside = false;
+      if (!focusInside && !menuOpen) syncFromPagePosition();
+    });
+
+    header.addEventListener('focusin', function () {
+      focusInside = true;
+      setCalm(false);
+    });
+
+    header.addEventListener('focusout', function () {
+      window.setTimeout(function () {
+        focusInside = header.contains(document.activeElement);
+        if (!focusInside && !pointerInside && !menuOpen) syncFromPagePosition();
+      }, 0);
+    });
+
+    document.addEventListener('landometer-menu-state', function (event) {
+      menuOpen = Boolean(event.detail && event.detail.open);
+      if (menuOpen) setCalm(false);
+      else if (!pointerInside && !focusInside) syncFromPagePosition();
+    });
+
+    document.addEventListener('scroll', function (event) {
+      var target = scrollTarget(event);
+      if (!target || typeof target.scrollTop !== 'number') return;
+      var y = target.scrollTop;
+      var previousY = lastY.has(target) ? lastY.get(target) : 0;
+      var delta = y - previousY;
+      lastY.set(target, y);
+      if (reducedMotion() || pointerInside || focusInside || menuOpen) {
+        setCalm(false);
+        return;
+      }
+      if (y < 24) {
+        setCalm(false);
+        return;
+      }
+      if (delta > 4) setCalm(true);
+      else if (delta < -4) setCalm(false);
+    }, true);
+
+    if (motionQuery) {
+      var onMotionPreference = function (event) {
+        if (event.matches) setCalm(false);
+        else syncFromPagePosition();
+      };
+      if (motionQuery.addEventListener) motionQuery.addEventListener('change', onMotionPreference);
+      else if (motionQuery.addListener) motionQuery.addListener(onMotionPreference);
+    }
+
+    lastY.set(scrollingElement, scrollingElement.scrollTop);
+    syncFromPagePosition();
+  }
+
   function installMenu() {
     var shell = document.querySelector('[data-menu-shell]');
     var openButton = document.querySelector('[data-menu-open]');
@@ -71,6 +158,7 @@
       shell.hidden = true;
       document.body.classList.remove('menu-open');
       setButtonState(false);
+      document.dispatchEvent(new CustomEvent('landometer-menu-state', { detail: { open: false } }));
       if (restoreFocus !== false && previousFocus && previousFocus.focus) previousFocus.focus();
     }
 
@@ -79,6 +167,7 @@
       shell.hidden = false;
       document.body.classList.add('menu-open');
       setButtonState(true);
+      document.dispatchEvent(new CustomEvent('landometer-menu-state', { detail: { open: true } }));
       if (panel) {
         try { panel.focus({ preventScroll: true }); } catch (error) { panel.focus(); }
       }
@@ -490,6 +579,7 @@
   }
 
   installThemeControls();
+  installCalmHeader();
   installMenu();
   installScrollSpy();
   installLocaleLinks();

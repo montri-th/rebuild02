@@ -19,7 +19,7 @@
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260829-03"
+    "artifactBuildId": "ui-20260829-04"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260829-03",
+      "id": "ui-20260829-04",
       "path": "governance/site-manifest.json"
     }
   },
@@ -44,6 +44,9 @@
   },
   "capabilities": {
     "motionEnhancement": true,
+    "calmNavigation": true,
+    "sweepingNavigationCta": true,
+    "ambientHeroPan": true,
     "share": true,
     "mapHandoff": true,
     "directContactSubmission": true,
@@ -65,10 +68,10 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260829-03",
+    "artifactBuildId": "ui-20260829-04",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260829-03",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v3",
+      "receiptId": "rebuild02-ui-20260829-04",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v4",
       "issuedAt": "2026-08-29"
     }
   },
@@ -94,6 +97,11 @@
       "endpoint": "https://landometer.com/api/v2/public/inquiry/save",
       "payloadFields": ["name", "email", "phone", "message", "topic"],
       "claimedOutcome": "HTTP 2xx from the owned inquiry endpoint only; inbox delivery is not asserted by the static client"
+    },
+    "emailNavigation": {
+      "activation": "explicit_user_action",
+      "destination": "mailto:hello@landometer.com",
+      "behavior": "opens the visitor's configured mail application with the recipient populated"
     }
   },
   "identity": {
@@ -103,7 +111,8 @@
       "symbolDimensions": "1601x1601",
       "wordmark": "typed Landometer in Arvo 700 at #757575 on light canvas and text-primary on dark canvas",
       "carrierOrPlate": "none",
-      "themeStrategy": "same r6 construction on light and dark header surfaces"
+      "themeStrategy": "same r6 construction on light and dark header surfaces",
+      "behavior": "prominent at the top and on upward scroll, hover, focus or open menu; calm 58/54 px state after downward scroll; real capsule CTA with an aria-hidden pointer-inert text sweep; reduced motion remains prominent and removes the loop"
     },
     "faviconAndStructuredDataLogo": {
       "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
@@ -197,6 +206,26 @@
       "sha256": "89cb243e2dc84e914ba5a828324dcb7a4ac7279bbff35c02f3f7c2e913954737"
     },
     {
+      "path": "assets/screens/population-age-sex-closeup-rebuild02-r4-336.avif",
+      "bytes": 11988,
+      "sha256": "6fad97a187e43c945f1a4514a0daab0634a7efdcbdadeae53532a2a788cefb46"
+    },
+    {
+      "path": "assets/screens/population-age-sex-closeup-rebuild02-r4-336.webp",
+      "bytes": 13036,
+      "sha256": "14d5dbf8267be8be6a4776adc70957422de9368b39c33b85a71f7a8b622f312d"
+    },
+    {
+      "path": "assets/screens/population-age-sex-closeup-rebuild02-r4-660.avif",
+      "bytes": 28302,
+      "sha256": "cf3fb8ad506d6c20ce6259e72b5527ca5cdf5d852e581a0bdcd21d820172b560"
+    },
+    {
+      "path": "assets/screens/population-age-sex-closeup-rebuild02-r4-660.webp",
+      "bytes": 30610,
+      "sha256": "eaf4b468faafdb93fd6c74190f2e27e31a8b78ab7b72587bac862d3ec48f6e4f"
+    },
+    {
       "path": "assets/social/landometer-rebuild02-og-1200x630.jpg",
       "bytes": 385727,
       "sha256": "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12"
@@ -210,23 +239,24 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage JSON-LD"],
-    "currentReleaseState": "verified",
-    "verifiedArtifactCommit": "24a306b11df8886361cc1de9a8578f12788cbb2d",
-    "verifiedArtifactTree": "c9cdb9c4b6fba138de9a3ceba2aefbc62735d7cd",
-    "pagesBuildState": "built",
-    "pagesBuildId": 1181750063,
-    "pagesBuildDurationMs": 24793,
-    "pagesBuildUpdatedAt": "2026-08-29T08:16:38Z",
-    "verifiedAt": "2026-08-29T08:19:10.616Z",
-    "liveRouteEvidence": "Fifteen production routes and assets returned HTTP 200 with the expected MIME and byte counts, including root, index, both locale routes, the pinned design-system entry, site CSS/JS, r6 identity, icon font, Living video/poster, Business Dynamics snapshot, social preview, robots.txt, and sitemap.xml.",
-    "liveByteParity": "All fifteen checked production responses matched their committed local files byte-for-byte and by SHA-256 for artifact commit 24a306b11df8886361cc1de9a8578f12788cbb2d.",
+    "currentReleaseState": "candidate",
+    "verifiedArtifactCommit": null,
+    "verifiedArtifactTree": null,
+    "pagesBuildState": "pending",
+    "pagesBuildId": null,
+    "pagesBuildDurationMs": null,
+    "pagesBuildUpdatedAt": null,
+    "verifiedAt": null,
+    "liveRouteEvidence": "pending publication verification for ui-20260829-04",
+    "liveByteParity": "pending publication verification for ui-20260829-04",
     "localBrowserEvidence": {
       "matrix": [
         {"locale": "th", "theme": "dark", "viewport": "1440x900", "result": "pass"},
         {"locale": "th", "theme": "dark", "viewport": "390x844", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "320x700", "result": "pass"}
+        {"locale": "en", "theme": "light", "viewport": "320x700", "result": "pass"},
+        {"locale": "th", "theme": "dark", "viewport": "1440x900", "route": "#contact", "result": "pass"}
       ],
-      "verified": "Local and live Chromium showed no horizontal overflow or same-origin errors; the hero matched the first viewport; r6 navbar and menu geometry held at desktop and mobile sizes; opening the menu preserved scroll position; social order was TikTok, Facebook, Instagram, LinkedIn; the TikTok creator surface rendered on live; Living and Business Dynamics used the new Rebuild02 sources; footer map, X, and assembled identity were present."
+      "verified": "Local Chromium showed no horizontal overflow; the hero retained its first-viewport composition while its 32-second alternate pan moved within the crop; the r6 navbar contracted to 58/54 px after downward scroll and restored on upward scroll, pointer/focus intent and menu open; both navbar CTA placements carried the text sweep; the Population age-and-sex crop replaced the duplicate small Business Dynamics tile; dropdown states used neutral surfaces without a coloured rail; and the 44 px office email action resolved to mailto:hello@landometer.com. Reduced-motion kill-switch logic was inspected in the final CSS and JavaScript."
     }
   },
   "growth": {
@@ -253,7 +283,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "Local implementation QA passed TH dark 1440x900, TH dark 390x844, and EN light 320x700. Live Chromium passed TH light 1440x900, the 390x844 menu, and the TikTok-first Stories route. GitHub Pages, HTTP/MIME, and exact byte/hash parity are verified for artifact commit 24a306b11df8886361cc1de9a8578f12788cbb2d.",
+    "renderedBrowserGate": "Local implementation QA passed TH dark 1440x900, TH dark 390x844, EN light 320x700, the calm/prominent navbar transitions, desktop/mobile CTA sweep, hero pan, Population crop, rail-free topic picker and 44 px mailto action. Production verification is pending publication of ui-20260829-04.",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -271,7 +301,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "pass",
+    "SC-15": "fail",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

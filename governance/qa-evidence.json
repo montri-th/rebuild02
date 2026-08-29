@@ -1,20 +1,20 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260829-03",
+  "artifactBuildId": "ui-20260829-04",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
   "sourceChecks": {
     "thai": {
       "ids": 33,
       "images": 26,
-      "links": 64,
+      "links": 65,
       "buttons": 12,
       "inputsIncludingHiddenTopic": 4,
       "textareas": 1,
       "nativeSelectsOrDetails": 1,
       "videoWithoutControls": 1,
       "thirdPartyIframeElements": 3,
-      "rawControlOrMediaOccurrences": 86,
+      "rawControlOrMediaOccurrences": 87,
       "h1": 1,
       "duplicateIds": 0,
       "html5ParseErrors": 0
@@ -22,14 +22,14 @@
     "english": {
       "ids": 33,
       "images": 26,
-      "links": 64,
+      "links": 65,
       "buttons": 12,
       "inputsIncludingHiddenTopic": 4,
       "textareas": 1,
       "nativeSelectsOrDetails": 1,
       "videoWithoutControls": 1,
       "thirdPartyIframeElements": 3,
-      "rawControlOrMediaOccurrences": 86,
+      "rawControlOrMediaOccurrences": 87,
       "h1": 1,
       "duplicateIds": 0,
       "html5ParseErrors": 0
@@ -62,10 +62,15 @@
       "getGuard": "HTTP 405 on 2026-08-29",
       "productionPostSent": false,
       "inboxReceiptVerified": false
+    },
+    "mailtoNavigation": {
+      "activation": "explicit user click on the 44 px office-email action",
+      "destination": "mailto:hello@landometer.com",
+      "networkClaim": "no background request or delivery claim; the visitor's configured mail application owns the handoff"
     }
   },
   "contrast": {
-    "method": "These four ratios are retained from the prior local Chrome rendered-pixel sample because their foreground/background tokens and surfaces are unchanged in ui-20260829-03. The r6 wordmark remains #757575 on light canvas; dark navbar/footer wordmarks use text-primary on canvas to avoid the low-contrast pairing. Ratios use WCAG 2.x relative luminance.",
+    "method": "These four ratios are retained from the prior local Chrome rendered-pixel sample because their foreground/background tokens and surfaces are unchanged in ui-20260829-04. The r6 wordmark remains #757575 on light canvas; dark navbar/footer wordmarks use text-primary on canvas to avoid the low-contrast pairing. Ratios use WCAG 2.x relative luminance.",
     "rows": [
       {
         "element": "CityMETER showcase metadata on Measure",
@@ -115,7 +120,7 @@
     "fullAutomatedAccessibilityAudit": "open; no zero-critical/serious claim"
   },
   "pageWeight1280Dpr1": {
-    "method": "current ui-20260829-03 transfer-byte remeasurement pending; lazy social embeds change the full-scroll network boundary and are reported separately from same-origin assets",
+    "method": "current ui-20260829-04 transfer-byte remeasurement pending; lazy social embeds change the full-scroll network boundary and are reported separately from same-origin assets",
     "initial": {
       "bytes": null,
       "requests": null,
@@ -153,40 +158,38 @@
       "body and document scrollWidth equal the viewport in every matrix row",
       "r6 full-colour symbol and typed wordmark remain carrier-free; dark header/footer wordmarks use the contrast-safe text-primary pairing",
       "mobile header contains only the identity and circular menu control; sign-in moves into the menu",
-      "sticky header is 76 px desktop / 68 px mobile and the hero bottom equals the viewport height",
+      "navbar is 76/68 px when prominent, contracts to 58/54 px on downward scroll, and restores on upward scroll, pointer/focus intent and menu open; the hero bottom equals the viewport height",
+      "desktop and mobile-menu sign-in CTAs preserve the real DS capsule beneath an aria-hidden, pointer-inert 3.7-second sweep and 1.09-second flick overlay",
+      "the hero photograph moves within its crop through a slow 32-second alternating pan without changing the first-viewport layout",
       "open menu has no horizontal overflow; its external toggle changes to the close glyph, opening preserves the current scroll position, and the panel is a non-modal disclosure dialog with Escape/backdrop close",
-      "theme and locale controls are 44 px circles; the theme action toggles light/dark and ecosystem rows use no active accent rail",
+      "theme and locale controls are 44 px circles; the theme action toggles light/dark, ecosystem rows use no active accent rail, and the topic picker uses neutral surface/elevation states without a coloured rail",
+      "the duplicate small Business Dynamics tile is absent; one linked Population age-and-sex chart crop fills the 4:3 proof tile in each locale",
       "social order is TikTok, Facebook, Instagram, LinkedIn; each provider frame is width-matched to its supported maximum; the TikTok wrapper contracts to provider content instead of leaving an empty fixed-height tail; Thai marks the LinkedIn item as โพสต์เด่น",
       "Facebook and Instagram iframe sources and TikTok script load on intersection; Facebook uses the actual container width; LinkedIn remains unloaded on mobile until its own card approaches the viewport",
       "story disclosure opens and its theme-specific mark switches correctly",
-      "reduced-motion presents final visible states without reveal or disclosure animation",
-      "contact-form validation/error preservation, 24-character phone maximum and submit state pass without sending a production inquiry",
+      "reduced-motion CSS and JavaScript guards present final visible states without reveal/disclosure animation, freeze the hero image, hide the CTA sweep and keep the navbar prominent",
+      "contact-form validation/error preservation, 24-character phone maximum and submit state pass without sending a production inquiry; the separate office email action has a 44 px hit area and resolves to mailto:hello@landometer.com",
       "menu, disclosure, topic picker and visible page controls pass the local keyboard/focus regression",
       "zero same-origin console errors, page errors, failed requests, or HTTP errors; observed Facebook/Instagram SDK errors were confined to provider-owned cross-origin scripts"
     ],
     "thirdPartyObservation": "Facebook Page Plugin emitted console chatter inside its own cross-origin frame; it is provider-owned code and not counted as a same-origin page error.",
-    "liveVerified": [
-      "GitHub Pages build 1181750063 reached built for artifact commit 24a306b11df8886361cc1de9a8578f12788cbb2d",
-      "live TH desktop at 1440x900 rendered the r6 identity, first-viewport hero and bookmark rail with no console warnings or errors",
-      "live TH mobile at 390x844 kept the external close control visible, preserved scroll position on open and showed the compact ecosystem menu",
-      "live Stories exposed TikTok, Facebook, Instagram and LinkedIn in that order; the TikTok creator surface rendered provider content"
-    ],
-    "pending": []
+    "liveVerified": [],
+    "pending": ["GitHub Pages build and production-byte verification for ui-20260829-04"]
   },
   "browserAndProductionGates": {
-    "localHttp": "pass for the three sampled in-app Chromium matrices; no same-origin request or HTTP errors",
+    "localHttp": "pass for TH dark 1440x900, TH dark 390x844, EN light 320x700 and TH contact/dropdown sampling; no same-origin request or HTTP errors",
     "productionArtifact": {
-      "commit": "24a306b11df8886361cc1de9a8578f12788cbb2d",
-      "tree": "c9cdb9c4b6fba138de9a3ceba2aefbc62735d7cd"
+      "commit": null,
+      "tree": null
     },
     "pagesBuild": {
-      "id": 1181750063,
-      "status": "built",
-      "durationMs": 24793,
-      "updatedAt": "2026-08-29T08:16:38Z"
+      "id": null,
+      "status": "pending",
+      "durationMs": null,
+      "updatedAt": null
     },
-    "liveHttpAndMime": "pass: 15/15 checked production routes and assets returned HTTP 200 with the expected MIME",
-    "liveByteParity": "pass: 15/15 checked production responses matched committed local bytes and SHA-256 at 2026-08-29T08:19:10.616Z",
-    "liveBrowser": "pass: TH light 1440x900 hero/navbar, TH light 390x844 menu, and TikTok-first Stories/provider rendering"
+    "liveHttpAndMime": "pending for ui-20260829-04",
+    "liveByteParity": "pending for ui-20260829-04",
+    "liveBrowser": "pending for ui-20260829-04"
   }
 }

@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260829-03"
+      id: "ui-20260829-04"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -85,7 +85,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "live_verified"
+      technicalStatus: "candidate"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -98,8 +98,8 @@ landometerBuild:
     url: "https://montri-th.github.io/rebuild02/"
     readiness: "share_ready"
     publicSafe: true
-    status: "published"
-    qrOrLinkTest: "GitHub Pages HTTP 200 and live Chromium navigation verified for ui-20260829-03"
+    status: "candidate"
+    qrOrLinkTest: "pending GitHub Pages HTTP, byte-parity and live Chromium verification for ui-20260829-04"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -119,7 +119,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "f99eb087c502fe0a50fecd13bc7e501100c5bce163681b95a9ff0d44c8d6efda"
+        copyHash: "122f572dae11e00579da6c854fce892b6278ea99871545e6255965e9332199a4"
         naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
         parityReviewRef: "bilingual source review complete; sampled rendered review complete"
       - locale: "en"
@@ -130,7 +130,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "059bde31c25f7733e085aa41a5713e926f00ccb1dd05579c058d3abaa84ef69e"
+        copyHash: "04d7972dec4776b225266824dabeafb45e410be1d710b9df5a7e645c1099f786"
         naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
         parityReviewRef: "bilingual source review complete; sampled rendered review complete"
     internalVoiceWordsPrinted: false
@@ -144,7 +144,7 @@ landometerBuild:
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild02.ui-20260829-03"
+    channelParityKey: "landometer.home.rebuild02.ui-20260829-04"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -241,6 +241,12 @@ landometerBuild:
       - path: "assets/screens/business-dynamics-rebuild02-2560.webp"
         sha256: "89cb243e2dc84e914ba5a828324dcb7a4ac7279bbff35c02f3f7c2e913954737"
         privacy: "current public CityMETER interface capture; metadata stripped"
+      - path: "assets/screens/population-age-sex-closeup-rebuild02-r4-660.avif"
+        sha256: "cf3fb8ad506d6c20ce6259e72b5527ca5cdf5d852e581a0bdcd21d820172b560"
+        privacy: "aggregate age-and-sex chart close-up from the current public CityMETER Population interface; no personal identifiers"
+      - path: "assets/screens/population-age-sex-closeup-rebuild02-r4-660.webp"
+        sha256: "eaf4b468faafdb93fd6c74190f2e27e31a8b78ab7b72587bac862d3ec48f6e4f"
+        privacy: "WebP fallback for the same governed 4:3 close-up"
       - path: "assets/social/landometer-rebuild02-og-1200x630.jpg"
         sha256: "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12"
         privacy: "derived from approved Lumpini city photography for Open Graph and Twitter cards"
@@ -254,6 +260,9 @@ landometerBuild:
     intensity: "guided"
     patterns:
       - "grouped once-only entrance reveals with 32 px vertical or 36 px directional travel, 760/920 ms opacity/settle timing, and 150 ms stagger capped at 450 ms"
+      - "r6 prominent/calm navbar transition over 560 ms, restored by upward scroll, header intent or menu open"
+      - "real navbar CTA capsule with an aria-hidden 3.7-second sweep and 1.09-second flick overlay"
+      - "32-second alternating hero-image pan contained within the fixed first-viewport crop"
       - "Downbeat press for action controls"
       - "One-drop settle for copy feedback"
       - "Story disclosure opens with a short opacity-and-position transition"
@@ -261,6 +270,7 @@ landometerBuild:
       - "Offbeat count-up is absent because the null legacy-system row is not rendered."
       - "No parallax, hue cycling, or scroll jacking."
       - "Owner-directed Living video is the explicit autoplay/loop exception; reduced motion retains the poster."
+      - "Reduced motion also keeps the navbar prominent, removes the CTA sweep and freezes the hero image."
   capabilities:
     analyticalEvidence: true
     motionEnhancement: true
@@ -296,7 +306,7 @@ landometerBuild:
     securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260829-03"
+    artifactBuildId: "ui-20260829-04"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -328,39 +338,39 @@ landometerBuild:
         sha256: "fcf62592518354e675b2b3277725c21abf9352a5bac3f42e6379f73bc2b53c72"
       - channel: "hosted_th"
         path: "Landometer-Home-TH.dc.html"
-        bytes: 65726
-        sha256: "f99eb087c502fe0a50fecd13bc7e501100c5bce163681b95a9ff0d44c8d6efda"
+        bytes: 66250
+        sha256: "122f572dae11e00579da6c854fce892b6278ea99871545e6255965e9332199a4"
       - channel: "hosted_en"
         path: "Landometer-Home-EN.dc.html"
-        bytes: 56563
-        sha256: "059bde31c25f7733e085aa41a5713e926f00ccb1dd05579c058d3abaa84ef69e"
+        bytes: 57016
+        sha256: "04d7972dec4776b225266824dabeafb45e410be1d710b9df5a7e645c1099f786"
       - channel: "redirect_alias"
         path: "index.html"
         bytes: 3058
-        sha256: "f248bf44d86fc3aefd557456f8db3604d8b10523717740bf208e264bd2711595"
+        sha256: "bbf4b451aded1227df837dd2aeb33e0394a95af38201042346ea96a7065f7a42"
       - channel: "site_css"
         path: "site.css"
-        bytes: 35828
-        sha256: "afcbc4d725ff18aa95516a9a29a060c735563bc0695f6626ba011127ce2a15d2"
+        bytes: 39776
+        sha256: "9148688f62b9a4461344cbc248cc1f2b98bbbf7dca76e61651d0dcf5dd08393d"
       - channel: "site_js"
         path: "site.js"
-        bytes: 18999
-        sha256: "41b717393a57d44eaa0835ec42a481cbfc962252e8b701ab3626903ed3ef29b3"
+        bytes: 22059
+        sha256: "1a5cc8244ab5d77e50909de51fd1253030fd848cafa169a70e37de4cadf59521"
       - channel: "font_manifest"
         path: "assets/fonts/font-assets.manifest.json"
         bytes: 9366
-        sha256: "319de73ee8a718c0d2290f703fd4d7207baca1814129f467577def1a9297f307"
+        sha256: "5d994ab793deccc6e95e94134ad88882238f5ae4d87c1142e97310782c906ef4"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild02-ui-20260829-03"
-      catalogOrContentVersion: "landometer-home-rebuild02-v3"
+      receiptId: "rebuild02-ui-20260829-04"
+      catalogOrContentVersion: "landometer-home-rebuild02-v4"
       issuedAt: "2026-08-29"
   privacy:
     personalData: true
     sensitivity: "public"
     redactedPublicProjection: false
     governanceRecord:
-      id: "privacy-direct-inquiry-ui-20260829-03"
+      id: "privacy-direct-inquiry-ui-20260829-04"
       owner: "Montri (Landometer), per Rebuild02 work order"
       collectionBasisAndMinimumFields: "After explicit submit, the form sends topic, name, email, phone, and message; name, email, phone, and message are required."
       accessAndRetentionDeletion: "The first-party production inquiry backend owns access, retention, and deletion; those backend rules are not documented in this static repository."
@@ -387,6 +397,10 @@ landometerBuild:
     action: "exact_link"
     recipientOutcome: "The recipient lands on the exact dated CityMETER proof object."
     policyReason: "Copy-only sharing after the first AHA; no recipient pressure or background post."
+    emailNavigation:
+      activation: "explicit click on the 44 px office-email action"
+      destination: "mailto:hello@landometer.com"
+      outcome: "the visitor's configured mail application opens with the recipient populated"
     socialEmbeds:
       activation: "within 480 px of the viewport by IntersectionObserver; Facebook receives the measured card width clamped to its supported 180–500 px range"
       platformFreshness: "Facebook timeline, Instagram profile, and TikTok creator are platform-rendered at activation subject to provider caching; LinkedIn is a single featured post and is not represented as a latest feed"
@@ -427,7 +441,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local browser QA passed TH dark 1440x900, TH dark 390x844, and EN light 320x700; live Chromium passed TH light 1440x900, the TH 390x844 menu and TikTok-first Stories; Pages build 1181750063, 15/15 HTTP/MIME checks and exact byte/hash parity passed for artifact commit 24a306b"
+    renderedBrowserGate: "local browser QA passed TH dark 1440x900, TH dark 390x844, EN light 320x700, calm/prominent navbar states, both CTA placements, hero pan, Population tile, rail-free listbox and mailto action; production verification is pending for ui-20260829-04"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -441,8 +455,8 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 17
-      rowsFailedOrOpen: 6
+      rowsPassed: 16
+      rowsFailedOrOpen: 7
       rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:
