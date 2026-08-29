@@ -239,16 +239,16 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage JSON-LD"],
-    "currentReleaseState": "candidate",
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "pending",
-    "pagesBuildId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending publication verification for ui-20260829-04",
-    "liveByteParity": "pending publication verification for ui-20260829-04",
+    "currentReleaseState": "verified",
+    "verifiedArtifactCommit": "5cd9e0e9a7b6193a5e1e70b68aa403f91c64dc68",
+    "verifiedArtifactTree": "912af6e079f40f86c7c762b02377c69ece08ee74",
+    "pagesBuildState": "built",
+    "pagesBuildId": 1181907280,
+    "pagesBuildDurationMs": 24380,
+    "pagesBuildUpdatedAt": "2026-08-29T10:27:51Z",
+    "verifiedAt": "2026-08-29T10:36:13.000Z",
+    "liveRouteEvidence": "Twenty production routes and assets returned HTTP 200 with expected MIME, including root, index, both locale routes, the pinned design-system entry, site CSS/JS, r6 identity, icon font, Living video/poster, Business Dynamics AVIF/WebP, all four Population close-up derivatives, social preview, robots.txt and sitemap.xml.",
+    "liveByteParity": "All twenty checked production responses matched their committed local files byte-for-byte and by SHA-256 for artifact commit 5cd9e0e9a7b6193a5e1e70b68aa403f91c64dc68.",
     "localBrowserEvidence": {
       "matrix": [
         {"locale": "th", "theme": "dark", "viewport": "1440x900", "result": "pass"},
@@ -257,6 +257,13 @@
         {"locale": "th", "theme": "dark", "viewport": "1440x900", "route": "#contact", "result": "pass"}
       ],
       "verified": "Local Chromium showed no horizontal overflow; the hero retained its first-viewport composition while its 32-second alternate pan moved within the crop; the r6 navbar contracted to 58/54 px after downward scroll and restored on upward scroll, pointer/focus intent and menu open; both navbar CTA placements carried the text sweep; the Population age-and-sex crop replaced the duplicate small Business Dynamics tile; dropdown states used neutral surfaces without a coloured rail; and the 44 px office email action resolved to mailto:hello@landometer.com. Reduced-motion kill-switch logic was inspected in the final CSS and JavaScript."
+    },
+    "liveBrowserEvidence": {
+      "matrix": [
+        {"locale": "th", "theme": "light", "viewport": "1440x900", "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "320x700", "route": "#showcases", "result": "pass"}
+      ],
+      "verified": "Live Chromium loaded ui-20260829-04 with zero horizontal overflow; the desktop hero transform changed over time, the header reached its 58 px calm state, and the sweep animations were active. At 320 px, the menu restored the 68 px prominent header, its CTA sweep remained pointer-inert, and the Population 4:3 AVIF loaded completely with the correct link and label. The only browser log entry was provider-owned TikTok informational output; no error was recorded."
     }
   },
   "growth": {
@@ -283,7 +290,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "Local implementation QA passed TH dark 1440x900, TH dark 390x844, EN light 320x700, the calm/prominent navbar transitions, desktop/mobile CTA sweep, hero pan, Population crop, rail-free topic picker and 44 px mailto action. Production verification is pending publication of ui-20260829-04.",
+    "renderedBrowserGate": "Local and live Chromium passed the Rebuild02 ui-20260829-04 desktop/mobile checks for calm/prominent navbar transitions, both CTA sweep placements, hero pan, Population crop, rail-free topic picker and 44 px mailto action. GitHub Pages build 1181907280 and exact HTTP/MIME/byte/SHA parity passed 20/20 checks for artifact commit 5cd9e0e9a7b6193a5e1e70b68aa403f91c64dc68.",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -301,7 +308,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "fail",
+    "SC-15": "pass",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

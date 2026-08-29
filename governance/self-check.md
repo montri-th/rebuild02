@@ -25,7 +25,7 @@ upgrading source inspection into stronger evidence.
 | SC-12 | pass | Both locale routes are indexable and carry canonical/hreflang links, Open Graph and Twitter metadata, Organization/WebSite/WebPage JSON-LD, the r6 favicon, `robots.txt`, and a truthful release-dated sitemap. |
 | SC-13 | pass | TikTok, Facebook, Instagram and LinkedIn content surfaces are visible in the requested order with minimal brand marks; the exact CityMETER proof share remains separate. |
 | SC-14 | fail | The 87-occurrence source inventory, local keyboard/form states and explicit 44 px `mailto:` action are checked, but a real contact POST/inbox outcome is not included. |
-| SC-15 | fail | Publication, GitHub Pages build completion and exact live-byte verification are pending for `ui-20260829-04`. |
+| SC-15 | pass | GitHub Pages build `1181907280` reached `built` for artifact commit `5cd9e0e`; 20 production routes/assets returned HTTP 200 with expected MIME and exact local/live byte and SHA-256 parity. Live Chromium also passed desktop and mobile behavior checks. |
 | SC-16 | fail | The shared manifest records both locale routes but is not claimed as a complete per-route rendered-contract projection. |
 | SC-17 | pass | Retired values are absent from the public page layer; no retired literal was added in this release. |
 | SC-18 | pass | The first view has no caution/caveat block; the dated product proof band follows the hero and the null legacy row is not rendered. |
@@ -35,4 +35,4 @@ upgrading source inspection into stronger evidence.
 | SC-22 | fail | The approved reveals remain unchanged; the owner-directed CTA sweep, 32-second alternating hero pan, lazy media/social activation and reduced-motion behavior pass local QA. The ambient video loop remains an explicit divergence from canonical no-loop guidance; the r6 motion patch is implemented here under owner direction without being claimed as normative DS v0.9.0-r7. |
 | SC-23 | pass | Rendered icon/label pairs use the canonical 24 px face and governed gaps; all current ligatures resolve. |
 
-Totals: 16 pass · 7 fail/open · 0 not applicable.
+Totals: 17 pass · 6 fail/open · 0 not applicable.

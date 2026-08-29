@@ -85,7 +85,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "candidate"
+      technicalStatus: "live_verified"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -98,8 +98,8 @@ landometerBuild:
     url: "https://montri-th.github.io/rebuild02/"
     readiness: "share_ready"
     publicSafe: true
-    status: "candidate"
-    qrOrLinkTest: "pending GitHub Pages HTTP, byte-parity and live Chromium verification for ui-20260829-04"
+    status: "published"
+    qrOrLinkTest: "GitHub Pages build 1181907280, 20/20 HTTP/MIME/byte/SHA checks and live Chromium verified for ui-20260829-04 artifact commit 5cd9e0e"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -441,7 +441,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local browser QA passed TH dark 1440x900, TH dark 390x844, EN light 320x700, calm/prominent navbar states, both CTA placements, hero pan, Population tile, rail-free listbox and mailto action; production verification is pending for ui-20260829-04"
+    renderedBrowserGate: "local and live Chromium passed Rebuild02 ui-20260829-04 desktop/mobile checks for calm/prominent navbar states, both CTA sweep placements, hero pan, Population tile, rail-free listbox and mailto action; Pages build 1181907280 and exact HTTP/MIME/byte/SHA parity passed 20/20 checks for artifact commit 5cd9e0e"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -455,8 +455,8 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 16
-      rowsFailedOrOpen: 7
+      rowsPassed: 17
+      rowsFailedOrOpen: 6
       rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:

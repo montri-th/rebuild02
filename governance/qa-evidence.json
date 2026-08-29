@@ -173,23 +173,28 @@
       "zero same-origin console errors, page errors, failed requests, or HTTP errors; observed Facebook/Instagram SDK errors were confined to provider-owned cross-origin scripts"
     ],
     "thirdPartyObservation": "Facebook Page Plugin emitted console chatter inside its own cross-origin frame; it is provider-owned code and not counted as a same-origin page error.",
-    "liveVerified": [],
-    "pending": ["GitHub Pages build and production-byte verification for ui-20260829-04"]
+    "liveVerified": [
+      "GitHub Pages build 1181907280 reached built for artifact commit 5cd9e0e9a7b6193a5e1e70b68aa403f91c64dc68",
+      "live TH light desktop at 1440x900 loaded ui-20260829-04 with zero horizontal overflow; the hero transform changed over time, the navbar reached its 58 px calm state and the CTA sweep was active",
+      "live EN light mobile at 320x700 restored the prominent 68 px header while the menu was open; the mobile CTA sweep remained pointer-inert and the Population 4:3 AVIF loaded with the correct destination and label",
+      "the office email action resolved to mailto:hello@landometer.com; the browser recorded no error-level log entry"
+    ],
+    "pending": []
   },
   "browserAndProductionGates": {
     "localHttp": "pass for TH dark 1440x900, TH dark 390x844, EN light 320x700 and TH contact/dropdown sampling; no same-origin request or HTTP errors",
     "productionArtifact": {
-      "commit": null,
-      "tree": null
+      "commit": "5cd9e0e9a7b6193a5e1e70b68aa403f91c64dc68",
+      "tree": "912af6e079f40f86c7c762b02377c69ece08ee74"
     },
     "pagesBuild": {
-      "id": null,
-      "status": "pending",
-      "durationMs": null,
-      "updatedAt": null
+      "id": 1181907280,
+      "status": "built",
+      "durationMs": 24380,
+      "updatedAt": "2026-08-29T10:27:51Z"
     },
-    "liveHttpAndMime": "pending for ui-20260829-04",
-    "liveByteParity": "pending for ui-20260829-04",
-    "liveBrowser": "pending for ui-20260829-04"
+    "liveHttpAndMime": "pass: 20/20 checked production routes and assets returned HTTP 200 with expected MIME",
+    "liveByteParity": "pass: 20/20 checked production responses matched committed local bytes and SHA-256 at 2026-08-29T10:36:13.000Z",
+    "liveBrowser": "pass: TH light 1440x900 hero/navbar/sweep and EN light 320x700 menu/Population/mailto; no error-level browser log entry"
   }
 }
