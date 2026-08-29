@@ -165,14 +165,28 @@
       "zero same-origin console errors, page errors, failed requests, or HTTP errors; observed Facebook/Instagram SDK errors were confined to provider-owned cross-origin scripts"
     ],
     "thirdPartyObservation": "Facebook Page Plugin emitted console chatter inside its own cross-origin frame; it is provider-owned code and not counted as a same-origin page error.",
-    "pending": ["live GitHub Pages verification for ui-20260829-03"]
+    "liveVerified": [
+      "GitHub Pages build 1181750063 reached built for artifact commit 24a306b11df8886361cc1de9a8578f12788cbb2d",
+      "live TH desktop at 1440x900 rendered the r6 identity, first-viewport hero and bookmark rail with no console warnings or errors",
+      "live TH mobile at 390x844 kept the external close control visible, preserved scroll position on open and showed the compact ecosystem menu",
+      "live Stories exposed TikTok, Facebook, Instagram and LinkedIn in that order; the TikTok creator surface rendered provider content"
+    ],
+    "pending": []
   },
   "browserAndProductionGates": {
     "localHttp": "pass for the three sampled in-app Chromium matrices; no same-origin request or HTTP errors",
-    "productionArtifact": null,
-    "pagesBuild": "pending publication",
-    "liveHttpAndMime": "pending publication",
-    "liveByteParity": "pending publication",
-    "liveBrowser": "pending publication"
+    "productionArtifact": {
+      "commit": "24a306b11df8886361cc1de9a8578f12788cbb2d",
+      "tree": "c9cdb9c4b6fba138de9a3ceba2aefbc62735d7cd"
+    },
+    "pagesBuild": {
+      "id": 1181750063,
+      "status": "built",
+      "durationMs": 24793,
+      "updatedAt": "2026-08-29T08:16:38Z"
+    },
+    "liveHttpAndMime": "pass: 15/15 checked production routes and assets returned HTTP 200 with the expected MIME",
+    "liveByteParity": "pass: 15/15 checked production responses matched committed local bytes and SHA-256 at 2026-08-29T08:19:10.616Z",
+    "liveBrowser": "pass: TH light 1440x900 hero/navbar, TH light 390x844 menu, and TikTok-first Stories/provider rendering"
   }
 }

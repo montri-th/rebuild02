@@ -210,23 +210,23 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage JSON-LD"],
-    "currentReleaseState": "candidate",
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "pending",
-    "pagesBuildId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending publication",
-    "liveByteParity": "pending publication",
+    "currentReleaseState": "verified",
+    "verifiedArtifactCommit": "24a306b11df8886361cc1de9a8578f12788cbb2d",
+    "verifiedArtifactTree": "c9cdb9c4b6fba138de9a3ceba2aefbc62735d7cd",
+    "pagesBuildState": "built",
+    "pagesBuildId": 1181750063,
+    "pagesBuildDurationMs": 24793,
+    "pagesBuildUpdatedAt": "2026-08-29T08:16:38Z",
+    "verifiedAt": "2026-08-29T08:19:10.616Z",
+    "liveRouteEvidence": "Fifteen production routes and assets returned HTTP 200 with the expected MIME and byte counts, including root, index, both locale routes, the pinned design-system entry, site CSS/JS, r6 identity, icon font, Living video/poster, Business Dynamics snapshot, social preview, robots.txt, and sitemap.xml.",
+    "liveByteParity": "All fifteen checked production responses matched their committed local files byte-for-byte and by SHA-256 for artifact commit 24a306b11df8886361cc1de9a8578f12788cbb2d.",
     "localBrowserEvidence": {
       "matrix": [
         {"locale": "th", "theme": "dark", "viewport": "1440x900", "result": "pass"},
         {"locale": "th", "theme": "dark", "viewport": "390x844", "result": "pass"},
         {"locale": "en", "theme": "light", "viewport": "320x700", "result": "pass"}
       ],
-      "verified": "No horizontal overflow or same-origin errors; hero bottom matched the viewport; r6 navbar and menu geometry held at desktop and mobile sizes; menu and theme cycles were keyboard-visible; social order was TikTok, Facebook, Instagram, LinkedIn; Living and Business Dynamics media used the new Rebuild02 sources; footer map, X, and assembled identity were present."
+      "verified": "Local and live Chromium showed no horizontal overflow or same-origin errors; the hero matched the first viewport; r6 navbar and menu geometry held at desktop and mobile sizes; opening the menu preserved scroll position; social order was TikTok, Facebook, Instagram, LinkedIn; the TikTok creator surface rendered on live; Living and Business Dynamics used the new Rebuild02 sources; footer map, X, and assembled identity were present."
     }
   },
   "growth": {
@@ -253,7 +253,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "Local implementation QA passed TH dark 1440x900, TH dark 390x844, and EN light 320x700 for responsive geometry, r6 navbar/menu behavior, theme cycle, full first viewport, TikTok-first social ordering, lazy embed activation, Living crop, sharp Business Dynamics image, footer map/X/identity, form behavior, and keyboard/focus paths. Live production verification is pending publication.",
+    "renderedBrowserGate": "Local implementation QA passed TH dark 1440x900, TH dark 390x844, and EN light 320x700. Live Chromium passed TH light 1440x900, the 390x844 menu, and the TikTok-first Stories route. GitHub Pages, HTTP/MIME, and exact byte/hash parity are verified for artifact commit 24a306b11df8886361cc1de9a8578f12788cbb2d.",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -271,7 +271,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "fail",
+    "SC-15": "pass",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

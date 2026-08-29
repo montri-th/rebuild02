@@ -68,12 +68,12 @@ landometerBuild:
       en: "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
     discoveryStates:
       machineReadableWhenOpened:
-        status: "candidate"
+        status: "verified"
         evidenceRefs:
           - "governance/site-manifest.json"
           - "semantic initial HTML in both locale routes"
       searchDiscoverable:
-        status: "candidate"
+        status: "verified"
         evidenceRefs:
           - "robots.txt"
           - "sitemap.xml"
@@ -85,7 +85,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "local_verified"
+      technicalStatus: "live_verified"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -98,8 +98,8 @@ landometerBuild:
     url: "https://montri-th.github.io/rebuild02/"
     readiness: "share_ready"
     publicSafe: true
-    status: "candidate"
-    qrOrLinkTest: "pending publication for ui-20260829-03"
+    status: "published"
+    qrOrLinkTest: "GitHub Pages HTTP 200 and live Chromium navigation verified for ui-20260829-03"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -427,7 +427,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local browser QA passed TH dark 1440x900, TH dark 390x844, and EN light 320x700 for zero horizontal overflow/same-origin errors, 76/68 px header and exact hero fit, r6 navbar/menu behavior, theme cycle, TikTok/FB/IG/LI order, Living crop, sharp Business Dynamics media, and footer map/X/identity; GitHub Pages verification pending publication"
+    renderedBrowserGate: "local browser QA passed TH dark 1440x900, TH dark 390x844, and EN light 320x700; live Chromium passed TH light 1440x900, the TH 390x844 menu and TikTok-first Stories; Pages build 1181750063, 15/15 HTTP/MIME checks and exact byte/hash parity passed for artifact commit 24a306b"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -441,8 +441,8 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 16
-      rowsFailedOrOpen: 7
+      rowsPassed: 17
+      rowsFailedOrOpen: 6
       rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:
