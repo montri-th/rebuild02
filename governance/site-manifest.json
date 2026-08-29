@@ -1,7 +1,7 @@
 {
   "artifact": {
-    "id": "landometer-home-rebuild03",
-    "title": "Landometer home page rebuild03",
+    "id": "landometer-home-rebuild02",
+    "title": "Landometer home page Rebuild02",
     "version": "0.9.0",
     "buildCardVersion": "0.9.0",
     "manifestVersion": "2.1",
@@ -14,12 +14,12 @@
     "additionalLanguages": ["en"],
     "evidenceStatus": "source_limited",
     "visibility": "public",
-    "indexable": false,
+    "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260829-02"
+    "artifactBuildId": "ui-20260829-03"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260829-02",
+      "id": "ui-20260829-03",
       "path": "governance/site-manifest.json"
     }
   },
@@ -65,10 +65,10 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260829-02",
+    "artifactBuildId": "ui-20260829-03",
     "releaseReceipt": {
-      "receiptId": "rebuild03-ui-20260829-02",
-      "catalogOrContentVersion": "landometer-home-rebuild03-v2",
+      "receiptId": "rebuild02-ui-20260829-03",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v3",
       "issuedAt": "2026-08-29"
     }
   },
@@ -78,9 +78,9 @@
       "activation": "IntersectionObserver with a 480 px root margin; no social iframe src or TikTok script exists before activation; Facebook receives its measured container width clamped to 180–500 px",
       "freshness": "Facebook timeline, Instagram profile, and TikTok creator content are rendered from their official platform endpoints on each activated page load subject to provider caching; LinkedIn is one explicitly featured post, not a claimed latest feed",
       "providers": [
+        {"name": "TikTok", "mode": "creator embed with provider-owned recent video surface", "endpoint": "https://www.tiktok.com/embed.js"},
         {"name": "Facebook", "mode": "Page Plugin timeline iframe", "endpoint": "https://www.facebook.com/plugins/page.php"},
         {"name": "Instagram", "mode": "profile embed iframe", "endpoint": "https://www.instagram.com/landometer/embed/"},
-        {"name": "TikTok", "mode": "creator embed", "endpoint": "https://www.tiktok.com/embed.js"},
         {"name": "LinkedIn", "mode": "featured post iframe", "endpoint": "https://www.linkedin.com/embed/feed/update/urn:li:activity:7413980705484943361"}
       ]
     },
@@ -97,39 +97,32 @@
     }
   },
   "identity": {
-    "headerLight": {
-      "path": "assets/identity/landometer-lockup-color-rebuild03.png",
-      "variant": "horizontal_full_colour",
-      "sha256": "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc",
-      "transparentCanvas": true,
+    "navbar": {
+      "symbolPath": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+      "symbolSha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
+      "symbolDimensions": "1601x1601",
+      "wordmark": "typed Landometer in Arvo 700 at #757575 on light canvas and text-primary on dark canvas",
       "carrierOrPlate": "none",
-      "themeStrategy": "direct on light header surface"
+      "themeStrategy": "same r6 construction on light and dark header surfaces"
     },
-    "favicon": {
-      "path": "assets/identity/landometer-symbol-color-2022-rebuild03.png",
-      "sha256": "23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595",
-      "role": "explicit compact full-colour PNG browser icon; prevents origin-root fallback requests"
-    },
-    "headerDark": {
-      "symbolPath": "assets/identity/landometer-symbol-cream-rebuild03.png",
-      "symbolSha256": "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc",
-      "wordmark": "none; compact supplied mark avoids a duplicate or reconstructed lockup",
-      "carrierOrPlate": "none",
-      "themeStrategy": "direct on dark header surface"
+    "faviconAndStructuredDataLogo": {
+      "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+      "sha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6"
     },
     "storyWayfinding": {
-      "lightPath": "assets/identity/landometer-symbol-color-2022-rebuild03.png",
-      "lightSha256": "23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595",
-      "darkPath": "assets/identity/landometer-symbol-cream-rebuild03.png",
-      "darkSha256": "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc",
-      "role": "theme-aware compact identity cue beside the story label"
+      "lightPath": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+      "lightSha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
+      "darkPath": "assets/identity/landometer-symbol-cream-rebuild02.png",
+      "darkSha256": "9122feecf00e99f5b5fc0a78e648e5a23eae08e0feec959d2ee61ae29fab91d2",
+      "role": "theme-aware identity cue beside the story label"
     },
     "footer": {
-      "path": "assets/identity/landometer-symbol-cream-rebuild03.png",
-      "sha256": "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc",
-      "themeStrategy": "direct on Measure surface"
+      "symbolPath": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+      "symbolSha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
+      "wordmark": "typed Landometer in Arvo 700 at #757575 on light canvas and text-primary on dark canvas",
+      "carrierOrPlate": "none"
     },
-    "omittedRoles": ["install icon", "social preview"]
+    "socialPreview": "assets/social/landometer-rebuild02-og-1200x630.jpg"
   },
   "governedObject": {
     "id": "landometer.system-figures.v1",
@@ -164,14 +157,19 @@
       "sha256": "47eb23f0b2a06bd6882080bcc693384f5d59791b434045e7281b98fa2831903c"
     },
     {
-      "path": "assets/fonts/material-symbols-rounded-rebuild03.woff2",
-      "bytes": 9940,
-      "sha256": "5b4c9bab54e3b1b64367e2967a4f4832d8f13f81a85ef2658d5c7e38fe4491fb"
+      "path": "assets/fonts/material-symbols-rounded-rebuild02-r6.woff2",
+      "bytes": 10680,
+      "sha256": "fcf62592518354e675b2b3277725c21abf9352a5bac3f42e6379f73bc2b53c72"
     },
     {
-      "path": "assets/media/living-city-rebuild03.mp4",
-      "bytes": 2134202,
-      "sha256": "4cfae2befcc2f1d004e2a74ddef5bc0a6baa5b037bc2d9daa33fe4f519b8368a"
+      "path": "assets/media/living-city-rebuild02-r2.mp4",
+      "bytes": 13724404,
+      "sha256": "ab31208c048ab0e3fcd32de1db96f2d0551b762067ec6c333d9e7ab731cfa9b5"
+    },
+    {
+      "path": "assets/media/living-poster-rebuild02-r2-720.webp",
+      "bytes": 77038,
+      "sha256": "c8ec8bda5f5e5baf038285c4047e1839ab57042c4de64ac1243559bf8d4699cb"
     },
     {
       "path": "assets/photos/pak-khlong-talat-900.avif",
@@ -179,24 +177,29 @@
       "sha256": "d83a54f20e328e61ab5fb67f1976e28dbc3b45a00e883fc3ee00a64a9ba1338f"
     },
     {
-      "path": "assets/identity/source/landometer-symbol-color-2022.png",
-      "bytes": 360614,
-      "sha256": "f1329a41fed67dc82081d1dc5c6fb973e5ca9ee6276b878d76b6ba07d7ee90e3"
+      "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+      "bytes": 38962,
+      "sha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6"
     },
     {
-      "path": "assets/identity/landometer-symbol-color-2022-rebuild03.png",
-      "bytes": 32025,
-      "sha256": "23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595"
-    },
-    {
-      "path": "assets/identity/source/landometer-symbol-cream.png",
+      "path": "assets/identity/landometer-symbol-cream-rebuild02.png",
       "bytes": 198704,
       "sha256": "9122feecf00e99f5b5fc0a78e648e5a23eae08e0feec959d2ee61ae29fab91d2"
     },
     {
-      "path": "assets/identity/landometer-symbol-cream-rebuild03.png",
-      "bytes": 64975,
-      "sha256": "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc"
+      "path": "assets/screens/business-dynamics-rebuild02-2560.avif",
+      "bytes": 114900,
+      "sha256": "f020f196412a525c8fa7527528f170c567c7946b8995e09a0d7994460662f46c"
+    },
+    {
+      "path": "assets/screens/business-dynamics-rebuild02-2560.webp",
+      "bytes": 230662,
+      "sha256": "89cb243e2dc84e914ba5a828324dcb7a4ac7279bbff35c02f3f7c2e913954737"
+    },
+    {
+      "path": "assets/social/landometer-rebuild02-og-1200x630.jpg",
+      "bytes": 385727,
+      "sha256": "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12"
     }
   ],
   "publication": {
@@ -205,24 +208,25 @@
     "branch": "main",
     "pagesRoot": "/",
     "liveUrl": "https://montri-th.github.io/rebuild02/",
-    "indexingSignal": "noindex,nofollow",
-    "currentReleaseState": "verified",
-    "verifiedArtifactCommit": "fc2bfc772170ba3f4d0fd9ba909f679d5ac73430",
-    "verifiedArtifactTree": "87db2d3f9d0be014b30ca62c5a15f9a398801763",
-    "pagesBuildState": "built",
-    "pagesBuildId": 1181430732,
-    "pagesBuildDurationMs": 30513,
-    "pagesBuildUpdatedAt": "2026-08-29T03:33:03Z",
-    "verifiedAt": "2026-08-29T03:36:05Z",
-    "liveRouteEvidence": "HTTP 200 with expected MIME and byte counts: root text/html 2978; index text/html 2978; Thai text/html 60327; English text/html 52376; DS styles text/css 947; site.css text/css 32555; site.js application/javascript 18259; full-colour symbol image/png 32025; cream symbol image/png 64975. Live Chrome root navigation resolved to the Thai route.",
-    "liveByteParity": "Exact SHA-256 parity: index aaa714df5070e00c061dec253114a619a6385b0944c74590edf19e7af910cfdb; Thai a1c2151d3eaa4c0c701c7b5f49539e7b65eafce68da35f3dcc0935b143c8d08c; English 5b040f13f06c8c7e0af68d74a6a24c4c39f3e8351e72c7d81ae263d46928cf7c; site.css 9c95273ecf4357d0f1794291db7e0eb497a269a6b78f49809082a43f9b1d56c4; site.js 01850050667dc3a2fd5e6040c95cf178a03ad941374db71e0f889314e26e1a84; colour symbol 23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595; cream symbol 269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc.",
-    "liveBrowserEvidence": {
+    "indexingSignal": "index,follow",
+    "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage JSON-LD"],
+    "currentReleaseState": "candidate",
+    "verifiedArtifactCommit": null,
+    "verifiedArtifactTree": null,
+    "pagesBuildState": "pending",
+    "pagesBuildId": null,
+    "pagesBuildDurationMs": null,
+    "pagesBuildUpdatedAt": null,
+    "verifiedAt": null,
+    "liveRouteEvidence": "pending publication",
+    "liveByteParity": "pending publication",
+    "localBrowserEvidence": {
       "matrix": [
-        {"locale": "th", "theme": "light", "viewport": "1440x900", "facebookWidthPx": 500, "result": "pass"},
-        {"locale": "th", "theme": "dark", "viewport": "390x844", "facebookWidthPx": 350, "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "320x700", "facebookWidthPx": 281, "result": "pass"}
+        {"locale": "th", "theme": "dark", "viewport": "1440x900", "result": "pass"},
+        {"locale": "th", "theme": "dark", "viewport": "390x844", "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "320x700", "result": "pass"}
       ],
-      "verified": "No horizontal overflow or same-origin errors; hero bottom matched the viewport; theme logo was correct; menu had no overflow, one SVG close, no active rail, CityMETER/CityWiki/Landom ecosystem rows, and 999 px theme/locale capsules; story disclosure opened; social order was Facebook, Instagram, TikTok, LinkedIn; every sampled Facebook embed remained inside the page."
+      "verified": "No horizontal overflow or same-origin errors; hero bottom matched the viewport; r6 navbar and menu geometry held at desktop and mobile sizes; menu and theme cycles were keyboard-visible; social order was TikTok, Facebook, Instagram, LinkedIn; Living and Business Dynamics media used the new Rebuild02 sources; footer map, X, and assembled identity were present."
     }
   },
   "growth": {
@@ -249,7 +253,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "Local implementation and live production QA passed TH light 1440x900, TH dark 390x844, and EN light 320x700 for responsive geometry, theme identity, simplified menu, story disclosure, social ordering/localized labels, measured-width Facebook rendering, lazy embed activation, reduced-motion, 24-character phone input, form behavior and keyboard/focus paths. GitHub Pages, live HTTP/MIME and exact public byte/hash parity are verified for commit fc2bfc772170ba3f4d0fd9ba909f679d5ac73430.",
+    "renderedBrowserGate": "Local implementation QA passed TH dark 1440x900, TH dark 390x844, and EN light 320x700 for responsive geometry, r6 navbar/menu behavior, theme cycle, full first viewport, TikTok-first social ordering, lazy embed activation, Living crop, sharp Business Dynamics image, footer map/X/identity, form behavior, and keyboard/focus paths. Live production verification is pending publication.",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -264,7 +268,7 @@
     "SC-09": "pass",
     "SC-10": "fail",
     "SC-11": "pass",
-    "SC-12": "fail",
+    "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
     "SC-15": "fail",

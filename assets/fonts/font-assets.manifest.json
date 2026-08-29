@@ -1,6 +1,6 @@
 {
   "manifestVersion": "1.1",
-  "artifactBuildId": "ui-20260829-02",
+  "artifactBuildId": "ui-20260829-03",
   "fontSynthesis": false,
   "textFacePackageSource": "Fontsource npm packages 5.3.0",
   "textFaceLicense": "SIL Open Font License 1.1",
@@ -75,15 +75,15 @@
       "licenseRecord": {"spdx": "OFL-1.1", "path": "assets/fonts/licenses/ibm-plex-sans-thai-OFL.txt", "sha256": "1b4f4d1f1463b63f1356e7b6034ad5a94311b35ffb53cc4bf83f2fbda24450e4"}
     },
     {
-      "id": "material-symbols-rounded-subset",
-      "family": "Material Symbols Rounded",
+      "id": "material-symbols-rounded-rebuild02-r6-subset",
+      "family": "Material Symbols Rounded Rebuild02",
       "weight": "variable",
       "style": "normal",
       "scripts": ["icons"],
       "axesLock": "FILL 0, wght 300, GRAD 0, opsz 20-48",
       "subset": "used_glyphs_only",
       "files": [
-        {"file": "assets/fonts/material-symbols-rounded-rebuild03.woff2", "sha256": "5b4c9bab54e3b1b64367e2967a4f4832d8f13f81a85ef2658d5c7e38fe4491fb"}
+        {"file": "assets/fonts/material-symbols-rounded-rebuild02-r6.woff2", "sha256": "fcf62592518354e675b2b3277725c21abf9352a5bac3f42e6379f73bc2b53c72"}
       ],
       "licenseRecord": {"spdx": "Apache-2.0", "path": "assets/fonts/LICENSE-Material-Symbols.txt", "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"}
     }
@@ -100,14 +100,14 @@
     {"family": "JetBrains Mono", "subset": "latin", "weight": 400, "file": "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/assets/fonts/jetbrains-mono-latin-400-normal.woff2", "sha256": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb", "licenseFile": "assets/fonts/licenses/jetbrains-mono-OFL.txt"}
   ],
   "iconFace": {
-    "family": "Material Symbols Rounded",
-    "file": "assets/fonts/material-symbols-rounded-rebuild03.woff2",
-    "bytes": 9940,
-    "sha256": "5b4c9bab54e3b1b64367e2967a4f4832d8f13f81a85ef2658d5c7e38fe4491fb",
+    "family": "Material Symbols Rounded Rebuild02",
+    "file": "assets/fonts/material-symbols-rounded-rebuild02-r6.woff2",
+    "bytes": 10680,
+    "sha256": "fcf62592518354e675b2b3277725c21abf9352a5bac3f42e6379f73bc2b53c72",
     "axes": {"FILL": 0, "wght": 300, "GRAD": 0, "opsz": [20, 24]},
-    "glyphs": ["arrow_forward", "arrow_outward", "auto_stories", "content_copy", "database", "description", "forum", "graphic_eq", "groups", "language", "login", "map", "menu", "menu_book", "monitoring", "open_in_new", "payments", "play_arrow", "send", "share", "square_foot", "storefront", "verified", "widgets"],
+    "glyphs": ["arrow_downward", "arrow_forward", "arrow_outward", "brightness_auto", "close", "dark_mode", "groups", "light_mode", "mail", "map", "menu", "menu_book", "monitoring", "newspaper", "open_in_new", "send", "share", "square_foot", "widgets"],
     "license": {"spdx": "Apache-2.0", "path": "assets/fonts/LICENSE-Material-Symbols.txt", "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"},
     "delivery": "self_hosted_subset",
-    "knownSubsetGap": "none for the 10 Material Symbols ligatures currently rendered; menu close and social-brand marks are inline SVG and do not depend on this subset; the binary retains unused glyphs from the previous release"
+    "knownSubsetGap": "none for the 19 Material Symbols ligatures rendered by Rebuild02; social-brand marks are inline SVG and do not depend on this subset"
   }
 }

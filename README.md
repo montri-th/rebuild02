@@ -1,9 +1,9 @@
-# Landometer — home page rebuild03
+# Landometer — home page Rebuild02
 
-Customer-facing, bilingual Landometer home page built as static initial HTML on
-Landometer Design System v0.9.0-r7. Its primary content has no client rendering
-framework, bundler, package install, or build step. Build
-`ui-20260829-02` adds official social embeds that load only near their own cards.
+Customer-facing bilingual Landometer home page delivered as static initial HTML on
+Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
+install, bundler, CI workflow, or build step. Current release candidate:
+`ui-20260829-03`.
 
 | File | Purpose |
 |---|---|
@@ -17,39 +17,32 @@ framework, bundler, package install, or build step. Build
 
 ## Current experience
 
-- The transparent full-colour lockup sits directly on the light 76 px desktop / 68 px
-  mobile navbar. Dark theme uses the supplied cream compact symbol without a carrier,
-  duplicate wordmark, or reconstructed logo. On mobile, the short one-line sign-in
-  action remains visible beside the menu.
-- The compact menu uses one SVG close, plain section rows, capsule theme/language
-  controls and a three-link ecosystem list. It has no duplicated section icons,
-  redundant Home row, active accent rail, or repeated landometer.com destination.
-- The hero is sized to the remaining first viewport, with compact-height portrait
-  and landscape rules plus an internal overflow safeguard for enlarged text.
-- The visible proof band contains the dated, product-scoped 38 / 45 / 51 / 120
-  figures. The four legacy-system figures are omitted because the owner Drive
-  `figures.json` checked on 2026-08-29 still has a null date and four null values.
-- Below-fold sections reserve their media ratio on token surfaces, use the available
-  responsive AVIF/WebP sources, and reveal with slower, more legible directional motion
-  as they approach the viewport. Reduced motion presents the final state immediately.
-- The Living video has no initial `src`. It is attached only near the viewport, then
-  plays muted, inline, and looping without controls; reduced-motion keeps its poster.
-- The contact form sends JSON directly to Landometer's existing public inquiry API.
-  The production contact surface identifies `hello@landometer.com` as the recipient;
-  the GitHub Pages origin passed CORS preflight on 2026-08-29. A successful submit
-  clears the form; an error preserves every field. Phone input accepts 9–24 characters.
-  No mail application is opened.
-- The page stores only the visitor's theme preference. It has no analytics or contact
-  form persistence in this static repository.
-- The concise company statement now opens a native bilingual history/future disclosure,
-  with a theme-aware identity mark that improves section wayfinding.
-- Facebook, Instagram, TikTok and LinkedIn appear in that order with minimal inline-SVG
-  marks. Facebook's timeline, Instagram's profile and TikTok's creator embed are loaded
-  from their official platform endpoints when each card approaches the viewport, so
-  they refresh according to the provider on each activated page load. Facebook receives
-  the actual card width for reliable narrow-screen rendering. LinkedIn shows one
-  explicitly featured post (`โพสต์เด่น` in Thai) because a token-free public company
-  feed is not offered.
+- The r6 unified navbar uses the supplied full-colour symbol with a typed Arvo
+  wordmark directly on the surface. Desktop keeps product links, sign-in, the compact
+  menu and a four-item bookmark rail; mobile moves page links and sign-in into a
+  full-width menu. Theme and locale utilities are 44 px circles, and the ecosystem
+  menu uses a quiet current-location label without an accent rail.
+- The hero fills the first viewport beneath the 76 px desktop / 68 px mobile header.
+  Its section link is a single underlined text action with a downward arrow.
+- The approved page-reveal motion remains unchanged: grouped, once-only entrances with
+  32 px vertical or 36 px directional travel, 760/920 ms timing, and a 150 ms stagger
+  capped at 450 ms. Reduced motion presents the final state immediately.
+- The Living video is a 14.8-second, silent, metadata-stripped portrait excerpt. It is
+  attached only near the viewport, then plays muted, inline, and looping without
+  controls. Responsive 4:3 and 4:5 crops keep faces and surrounding street life in view.
+- The CityMETER Business Dynamics hero uses a current, same-composition 16:9 capture
+  with 960, 1600, and 2560 px AVIF/WebP sources.
+- Stories are presented in TikTok, Facebook, Instagram, then LinkedIn order. The cards
+  occupy a wide single-column frame. Official provider surfaces load only near their
+  cards and refresh provider-owned content when activated; LinkedIn remains one
+  explicitly featured post.
+- Search discovery is enabled through canonical/hreflang metadata, Open Graph and
+  Twitter cards, Organization/WebSite/WebPage JSON-LD, `robots.txt`, and `sitemap.xml`.
+  Release dates change only when Rebuild02 content actually changes.
+- The contact form sends JSON directly to Landometer's public inquiry API. The page
+  stores only the visitor's theme preference and has no analytics or form persistence.
+- The footer includes the office map, Facebook, Instagram, TikTok, LinkedIn, and X,
+  with the same symbol-plus-wordmark construction used by the navbar.
 
 ## Publishing
 
@@ -57,6 +50,6 @@ GitHub Pages source is `main` / `/ (root)`. The tracked root `.nojekyll` file is
 required so the `_ds/` design-system directory is published unchanged. The `.dc.html`
 suffixes are route contracts and must not be renamed.
 
-The release deliberately retains `machineValidation: pending`,
-`conformanceLevel: authoring_aligned`, `indexable: false`, and
-`hook.mode: none_no_honest_investment` until their independent gates change.
+`machineValidation` remains `pending` and `conformanceLevel` remains
+`authoring_aligned`; the public pages themselves contain no customer-facing caveat or
+validation language.

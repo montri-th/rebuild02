@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260829-02"
+      id: "ui-20260829-03"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -36,7 +36,7 @@ landometerBuild:
     packageConformance: "package_internally_consistent"
     downstreamArtifactValidation: "pending"
   artifact:
-    name: "Landometer home page rebuild03"
+    name: "Landometer home page Rebuild02"
     product: "landometer"
     profile: "brand.public"
     pageKind: "brand-home-solution-product-proof-careers"
@@ -61,8 +61,8 @@ landometerBuild:
   publication:
     evidenceStatus: "source_limited"
     visibility: "public"
-    indexable: false
-    robots: "noindex,nofollow"
+    indexable: true
+    robots: "index,follow"
     canonicalUrls:
       th: "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html"
       en: "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
@@ -73,8 +73,11 @@ landometerBuild:
           - "governance/site-manifest.json"
           - "semantic initial HTML in both locale routes"
       searchDiscoverable:
-        status: "not_claimed"
-        evidenceRefs: []
+        status: "candidate"
+        evidenceRefs:
+          - "robots.txt"
+          - "sitemap.xml"
+          - "canonical and hreflang metadata in both locale routes"
       aiSearchDiscoverable:
         status: "not_claimed"
         evidenceRefs: []
@@ -82,18 +85,21 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "not_checked"
-      sitemapRef: ""
-      structuredDataRef: ""
-      observations: []
-    socialPreviews: []
+      technicalStatus: "local_verified"
+      sitemapRef: "sitemap.xml"
+      structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
+      observations:
+        - "sitemap lastmod and JSON-LD dateModified advance only when Rebuild02 content changes"
+        - "provider-owned social embed content can refresh at runtime without falsifying static release dates"
+    socialPreviews:
+      - "assets/social/landometer-rebuild02-og-1200x630.jpg"
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
     readiness: "share_ready"
     publicSafe: true
-    status: "verified"
-    qrOrLinkTest: "verified 2026-08-29T03:36:05Z; root redirected in live Chrome to the Thai route, required routes/assets returned HTTP 200 with expected MIME types and byte counts, and public SHA-256 parity passed for artifact commit fc2bfc772170ba3f4d0fd9ba909f679d5ac73430"
+    status: "candidate"
+    qrOrLinkTest: "pending publication for ui-20260829-03"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -113,7 +119,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "a1c2151d3eaa4c0c701c7b5f49539e7b65eafce68da35f3dcc0935b143c8d08c"
+        copyHash: "f99eb087c502fe0a50fecd13bc7e501100c5bce163681b95a9ff0d44c8d6efda"
         naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
         parityReviewRef: "bilingual source review complete; sampled rendered review complete"
       - locale: "en"
@@ -124,7 +130,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "5b040f13f06c8c7e0af68d74a6a24c4c39f3e8351e72c7d81ae263d46928cf7c"
+        copyHash: "059bde31c25f7733e085aa41a5713e926f00ccb1dd05579c058d3abaa84ef69e"
         naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
         parityReviewRef: "bilingual source review complete; sampled rendered review complete"
     internalVoiceWordsPrinted: false
@@ -138,7 +144,7 @@ landometerBuild:
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild03.ui-20260829-02"
+    channelParityKey: "landometer.home.rebuild02.ui-20260829-03"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -156,11 +162,10 @@ landometerBuild:
         surface: "var(--surface-atmosphere-cultivate)"
         foreground: "var(--on-atmosphere), var(--on-atmosphere-2)"
     localForegroundContracts:
-      - "transparent full-colour lockup directly on the light header"
-      - "cream compact symbol directly on the dark header"
+      - "r6 full-colour symbol plus typed Arvo wordmark directly on both header themes; #757575 on light canvas and text-primary on dark canvas"
       - "theme-aware card/canvas foreground pairs"
       - "opaque captions on surface-card"
-      - "deep Measure plate for the cream footer symbol"
+      - "assembled r6 symbol and typed wordmark directly on the footer surface"
   brandAlignment:
     productStatement: "City Data + AI for decisions about Land, Location, and Living."
     proofObject: "dated product evidence and documentary media"
@@ -178,83 +183,67 @@ landometerBuild:
     officialLogo: "available"
     fontManifest: "assets/fonts/font-assets.manifest.json"
     officialLogoAsset:
-      id: "landometer-lockup-color-rebuild03"
-      variant: "horizontal_full_colour"
-      sha256: "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc"
+      id: "landometer-symbol-color-rebuild02-r6"
+      variant: "r6 full-colour symbol with typed Arvo wordmark"
+      sha256: "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6"
       canvas: "transparent"
       placement: "direct_surface"
-      surfacePairingRef: "site.css .site-header"
+      surfacePairingRef: "site.css .site-header, .footer-brand"
       identityApproval:
-        id: "pending-rebuild03-brand-blue-registration"
-        authorityRole: "brand_identity_authority"
-        delegatedAuthorityRecordId: "none"
-        decision: "unresolved"
-        assetId: "landometer-lockup-color-rebuild03"
-        variant: "horizontal_full_colour"
-        sha256: "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc"
+        id: "owner-navbar-handoff-r6-20260829"
+        authorityRole: "owner"
+        delegatedAuthorityRecordId: "Unified navbar design handoff r6.zip"
+        decision: "approved_for_rebuild02"
+        assetId: "landometer-symbol-color-rebuild02-r6"
+        variant: "r6 full-colour symbol with typed Arvo wordmark"
+        sha256: "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6"
         canvas: "transparent"
         placement: "direct_surface"
-        surfaceRef: "site.css .site-header"
+        surfaceRef: "site.css .site-header, .footer-brand"
         themesOrBackdrops:
-          - "light header surface; dark theme uses the separate supplied cream compact symbol"
-        recordVersion: "pending"
-        validFrom: ""
+          - "light and dark header surfaces; footer surface"
+        recordVersion: "r6"
+        validFrom: "2026-08-29"
         expiresAt: null
-        evidenceRef: "owner work order 3.10; new identity hash is not yet in the approved registry"
+        evidenceRef: "current owner request plus attached Unified navbar design handoff r6"
     identityDelivery:
-      - context: "source identity asset retained for audit"
-        path: "assets/landometer-lockup-color.png"
-        sha256: "9d04b657c4ad4b5ac6167faeaa7e6476deb44d7eb573369fc20a5a106207fc39"
-        note: "owner-directed exact #1E4497 to #1D4497 substitution; every other pixel unchanged"
-      - context: "header horizontal lockup"
-        path: "assets/identity/landometer-lockup-color-rebuild03.png"
-        sha256: "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc"
+      - context: "navbar, favicon, structured-data logo, light story mark, footer"
+        path: "assets/identity/landometer-symbol-color-rebuild02-r6.png"
+        bytes: 38962
+        dimensions: "1601x1601"
+        sha256: "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6"
         canvas: "transparent"
         placement: "direct_surface"
-        surfaceRef: "site.css .site-header"
-        approvalStatus: "pending identity-registry registration"
-      - context: "owner-supplied full-colour symbol source"
-        path: "assets/identity/source/landometer-symbol-color-2022.png"
-        bytes: 360614
-        dimensions: "6402x6402"
-        sha256: "f1329a41fed67dc82081d1dc5c6fb973e5ca9ee6276b878d76b6ba07d7ee90e3"
-        canvas: "transparent"
-        note: "exact committed byte copy of owner-supplied Landometer LOGO 2022.png"
-      - context: "favicon and light-theme story wayfinding"
-        path: "assets/identity/landometer-symbol-color-2022-rebuild03.png"
-        bytes: 32025
-        dimensions: "512x512"
-        sha256: "23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595"
-        canvas: "transparent"
-        lineage: "aspect-preserving 512 px web derivative of assets/identity/source/landometer-symbol-color-2022.png; colour and alpha retained"
-      - context: "owner-supplied cream symbol source"
-        path: "assets/identity/source/landometer-symbol-cream.png"
+        surfaceRef: "site.css .site-header, .story-mark, .footer-brand"
+        lineage: "exact byte copy from the r6 handoff"
+        approvalStatus: "owner approved for Rebuild02"
+      - context: "dark-theme story wayfinding"
+        path: "assets/identity/landometer-symbol-cream-rebuild02.png"
         bytes: 198704
         dimensions: "3457x3661"
         sha256: "9122feecf00e99f5b5fc0a78e648e5a23eae08e0feec959d2ee61ae29fab91d2"
         canvas: "transparent"
-        note: "exact committed byte copy of owner-supplied Landometer.LOGO.Cream.png"
-      - context: "dark header, dark story wayfinding, and footer symbol"
-        path: "assets/identity/landometer-symbol-cream-rebuild03.png"
-        bytes: 64975
-        dimensions: "483x512"
-        sha256: "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc"
-        canvas: "transparent"
         placement: "direct_surface"
-        surfaceRef: "dark header, story label, and Measure deep footer surface"
-        lineage: "aspect-preserving 512 px web derivative of assets/identity/source/landometer-symbol-cream.png; colour and alpha retained"
-        approvalStatus: "owner-supplied; identity-registry registration pending"
+        surfaceRef: "dark story label"
+        lineage: "exact byte copy of owner-supplied Landometer.LOGO.Cream.png"
+        approvalStatus: "owner supplied"
     approvedPhotography:
       - "responsive Lumpini city image family"
       - "responsive Yaowarat image family"
       - "responsive Landom team image family"
       - "responsive Pak Khlong Talat image family"
     mediaAssets:
-      - path: "assets/media/living-city-rebuild03.mp4"
-        sha256: "4cfae2befcc2f1d004e2a74ddef5bc0a6baa5b037bc2d9daa33fe4f519b8368a"
+      - path: "assets/media/living-city-rebuild02-r2.mp4"
+        sha256: "ab31208c048ab0e3fcd32de1db96f2d0551b762067ec6c333d9e7ab731cfa9b5"
         privacy: "no audio; no asset metadata; no timed metadata"
-      - path: "assets/media/living-poster-360.webp"
-        sha256: "a12671bd86956138232ebd88eb3c9f4cb11a1a7720e07b2d829612fb2ee3a44b"
+      - path: "assets/media/living-poster-rebuild02-r2-720.webp"
+        sha256: "c8ec8bda5f5e5baf038285c4047e1839ab57042c4de64ac1243559bf8d4699cb"
+      - path: "assets/screens/business-dynamics-rebuild02-2560.webp"
+        sha256: "89cb243e2dc84e914ba5a828324dcb7a4ac7279bbff35c02f3f7c2e913954737"
+        privacy: "current public CityMETER interface capture; metadata stripped"
+      - path: "assets/social/landometer-rebuild02-og-1200x630.jpg"
+        sha256: "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12"
+        privacy: "derived from approved Lumpini city photography for Open Graph and Twitter cards"
   theme:
     mode: "interactive_auto"
     support: "dual"
@@ -278,7 +267,7 @@ landometerBuild:
     personalization: "none"
     search: false
     share: true
-    map: false
+    map: true
     dataVisualization: false
     coCreation: false
     persistence: true
@@ -307,7 +296,7 @@ landometerBuild:
     securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260829-02"
+    artifactBuildId: "ui-20260829-03"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -334,45 +323,45 @@ landometerBuild:
         bytes: 3310
         sha256: "61d7bfe6e83a0d6040a0f4cb832c5d7f6c67651ec08d58bb489298fdc8963f96"
       - channel: "icon_font"
-        path: "assets/fonts/material-symbols-rounded-rebuild03.woff2"
-        bytes: 9940
-        sha256: "5b4c9bab54e3b1b64367e2967a4f4832d8f13f81a85ef2658d5c7e38fe4491fb"
+        path: "assets/fonts/material-symbols-rounded-rebuild02-r6.woff2"
+        bytes: 10680
+        sha256: "fcf62592518354e675b2b3277725c21abf9352a5bac3f42e6379f73bc2b53c72"
       - channel: "hosted_th"
         path: "Landometer-Home-TH.dc.html"
-        bytes: 60327
-        sha256: "a1c2151d3eaa4c0c701c7b5f49539e7b65eafce68da35f3dcc0935b143c8d08c"
+        bytes: 65726
+        sha256: "f99eb087c502fe0a50fecd13bc7e501100c5bce163681b95a9ff0d44c8d6efda"
       - channel: "hosted_en"
         path: "Landometer-Home-EN.dc.html"
-        bytes: 52376
-        sha256: "5b040f13f06c8c7e0af68d74a6a24c4c39f3e8351e72c7d81ae263d46928cf7c"
+        bytes: 56563
+        sha256: "059bde31c25f7733e085aa41a5713e926f00ccb1dd05579c058d3abaa84ef69e"
       - channel: "redirect_alias"
         path: "index.html"
-        bytes: 2978
-        sha256: "aaa714df5070e00c061dec253114a619a6385b0944c74590edf19e7af910cfdb"
+        bytes: 3058
+        sha256: "f248bf44d86fc3aefd557456f8db3604d8b10523717740bf208e264bd2711595"
       - channel: "site_css"
         path: "site.css"
-        bytes: 32555
-        sha256: "9c95273ecf4357d0f1794291db7e0eb497a269a6b78f49809082a43f9b1d56c4"
+        bytes: 35828
+        sha256: "afcbc4d725ff18aa95516a9a29a060c735563bc0695f6626ba011127ce2a15d2"
       - channel: "site_js"
         path: "site.js"
-        bytes: 18259
-        sha256: "01850050667dc3a2fd5e6040c95cf178a03ad941374db71e0f889314e26e1a84"
+        bytes: 18999
+        sha256: "41b717393a57d44eaa0835ec42a481cbfc962252e8b701ab3626903ed3ef29b3"
       - channel: "font_manifest"
         path: "assets/fonts/font-assets.manifest.json"
-        bytes: 9459
-        sha256: "4383a4d3bdb3f0844f76bcc89b2e4b4406df69d35aefb849b92acf9655074cc8"
+        bytes: 9366
+        sha256: "319de73ee8a718c0d2290f703fd4d7207baca1814129f467577def1a9297f307"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild03-ui-20260829-02"
-      catalogOrContentVersion: "landometer-home-rebuild03-v2"
+      receiptId: "rebuild02-ui-20260829-03"
+      catalogOrContentVersion: "landometer-home-rebuild02-v3"
       issuedAt: "2026-08-29"
   privacy:
     personalData: true
     sensitivity: "public"
     redactedPublicProjection: false
     governanceRecord:
-      id: "privacy-direct-inquiry-ui-20260829-02"
-      owner: "Montri (Landometer), per rebuild03 work order"
+      id: "privacy-direct-inquiry-ui-20260829-03"
+      owner: "Montri (Landometer), per Rebuild02 work order"
       collectionBasisAndMinimumFields: "After explicit submit, the form sends topic, name, email, phone, and message; name, email, phone, and message are required."
       accessAndRetentionDeletion: "The first-party production inquiry backend owns access, retention, and deletion; those backend rules are not documented in this static repository."
       redactionAndExportRules: "Only the five visible/selected form values are posted; no telemetry or hidden visitor context is added."
@@ -438,7 +427,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local and live Chrome passed TH light 1440x900, TH dark 390x844, and EN light 320x700 for zero overflow/same-origin errors, 76/68 px header and exact hero fit, correct theme marks, simplified menu, story disclosure, FB/IG/TT/LI order, and Facebook widths 500/350/281 px inside their cards; GitHub Pages build 1181430732 completed in 30513 ms at 2026-08-29T03:33:03Z and live HTTP/MIME/byte/hash parity passed at 2026-08-29T03:36:05Z for commit fc2bfc772170ba3f4d0fd9ba909f679d5ac73430 and tree 87db2d3f9d0be014b30ca62c5a15f9a398801763"
+    renderedBrowserGate: "local browser QA passed TH dark 1440x900, TH dark 390x844, and EN light 320x700 for zero horizontal overflow/same-origin errors, 76/68 px header and exact hero fit, r6 navbar/menu behavior, theme cycle, TikTok/FB/IG/LI order, Living crop, sharp Business Dynamics media, and footer map/X/identity; GitHub Pages verification pending publication"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -452,20 +441,20 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 15
-      rowsFailedOrOpen: 8
+      rowsPassed: 16
+      rowsFailedOrOpen: 7
       rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:
     family: "material-symbols-rounded"
     axes: "FILL 0, wght 300, GRAD 0, opsz 20-24"
-    selfHostedSubsetPath: "assets/fonts/material-symbols-rounded-rebuild03.woff2"
-    subsetSha256: "5b4c9bab54e3b1b64367e2967a4f4832d8f13f81a85ef2658d5c7e38fe4491fb"
+    selfHostedSubsetPath: "assets/fonts/material-symbols-rounded-rebuild02-r6.woff2"
+    subsetSha256: "fcf62592518354e675b2b3277725c21abf9352a5bac3f42e6379f73bc2b53c72"
     licensePath: "assets/fonts/LICENSE-Material-Symbols.txt"
     secondFamilyPresent: false
   actionGeometry:
     capsuleActions: "source_inspected"
-    circularIconOnlyActions: 5
+    circularIconOnlyActions: 7
     thirdShapePresent: false
   disclosure:
     firstViewCaveatProse: "none"
@@ -487,7 +476,7 @@ landometerBuild:
     - item: "logo pixel substitution"
       ownerWorkOrder: "replace #1E4497 with protected #1D4497"
       dsAuthority: "approved logo bytes may not be recoloured"
-      resolution: "owner instruction applied; resulting hash recorded as pending identity-registry approval"
+      resolution: "superseded by the owner-supplied r6 navbar handoff; Rebuild02 uses the exact r6 symbol bytes unchanged and records the owner approval"
     - item: "Landom cross-product path"
       ownerWorkOrder: "suggests Landom as an adjacent path"
       dsAuthority: "standalone Landom is absent from the product registry"

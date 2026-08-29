@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260829-02",
+  "artifactBuildId": "ui-20260829-03",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -20,22 +20,41 @@
     }
   ],
   "livingVideo": {
-    "path": "assets/media/living-city-rebuild03.mp4",
-    "bytes": 2134202,
-    "sha256": "4cfae2befcc2f1d004e2a74ddef5bc0a6baa5b037bc2d9daa33fe4f519b8368a",
-    "durationSeconds": 7,
-    "displayDimensions": "360x640",
-    "codec": "H.264 Main Level 3.0",
+    "path": "assets/media/living-city-rebuild02-r2.mp4",
+    "bytes": 13724404,
+    "sha256": "ab31208c048ab0e3fcd32de1db96f2d0551b762067ec6c333d9e7ab731cfa9b5",
+    "durationSeconds": 14.803,
+    "displayDimensions": "720x1280",
+    "codec": "H.264 Main; nominal frame rate 30.060934 fps with source/trim-boundary timing retained",
     "audioTracks": 0,
     "metadataRecords": 0,
     "fastStart": true,
-    "behavior": "no initial src, preload none, poster first; source attaches within 240px of the viewport, then muted playsinline autoplay loop with no controls; reduced motion keeps the poster"
+    "sourceSegment": "14.900–29.700 seconds from owner-supplied IMG_8633.mov",
+    "behavior": "no initial src, preload none, poster first; source attaches within 240px of the viewport, then muted playsinline autoplay loop with no controls; reduced motion keeps the poster; 4:3 desktop and 4:5 mobile crops use 50% 14% / 50% 18% object positions"
   },
   "livingPoster": {
-    "path": "assets/media/living-poster-360.webp",
-    "bytes": 16358,
-    "dimensions": "360x640",
-    "sha256": "a12671bd86956138232ebd88eb3c9f4cb11a1a7720e07b2d829612fb2ee3a44b"
+    "path": "assets/media/living-poster-rebuild02-r2-720.webp",
+    "bytes": 77038,
+    "dimensions": "720x1280",
+    "sha256": "c8ec8bda5f5e5baf038285c4047e1839ab57042c4de64ac1243559bf8d4699cb"
+  },
+  "businessDynamicsSnapshot": {
+    "sourceUrl": "https://landometer.com/v3/citymeter?d=businessDynamics",
+    "sourceCapture": {
+      "path": "/private/tmp/rebuild02-citymeter-live-dark-1920x1200@2x.png",
+      "dimensions": "3840x2400",
+      "sha256": "fbd4494694f984cdb74ed4de81ff0654c724ece606db921e7e1df5f62b6d2cf3",
+      "crop": "x=0, y=120, width=3840, height=2160; centred 16:9 composition"
+    },
+    "responsiveWidths": [960, 1600, 2560],
+    "outputs": [
+      {"path": "assets/screens/business-dynamics-rebuild02-960.avif", "bytes": 29290, "sha256": "82d78346238eafbc3df4171394dfb0d5eabc8bad627f38dd995fc76586b1c783"},
+      {"path": "assets/screens/business-dynamics-rebuild02-960.webp", "bytes": 49462, "sha256": "d75d724939375ac5b4f8600f5a031cd5e5b8ace2f2b3df2eebf6315a3385b40b"},
+      {"path": "assets/screens/business-dynamics-rebuild02-1600.avif", "bytes": 65786, "sha256": "351005e7d5441d29424913accf73bc21544f64437901f345ace724156bde3323"},
+      {"path": "assets/screens/business-dynamics-rebuild02-1600.webp", "bytes": 123918, "sha256": "5789afa940889a2fbaebd708ebfba98fa204953964919063245e1efe1e541dda"},
+      {"path": "assets/screens/business-dynamics-rebuild02-2560.avif", "bytes": 114900, "sha256": "f020f196412a525c8fa7527528f170c567c7946b8995e09a0d7994460662f46c"},
+      {"path": "assets/screens/business-dynamics-rebuild02-2560.webp", "bytes": 230662, "sha256": "89cb243e2dc84e914ba5a828324dcb7a4ac7279bbff35c02f3f7c2e913954737"}
+    ]
   },
   "pakKhlongTalat": {
     "ownershipLabel": "Landometer material per owner work order",
@@ -52,6 +71,13 @@
       "sha256": "38a572368f9608e4e1bb0eb8134332d47e2253753e4f4d2d0ba50569877ec1ad"
     }
   },
+  "socialPreview": {
+    "path": "assets/social/landometer-rebuild02-og-1200x630.jpg",
+    "bytes": 385727,
+    "dimensions": "1200x630",
+    "sha256": "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12",
+    "lineage": "centred 1600x840 crop at y=780 from assets/photos/hero-lumpini-1600.webp, resized to 1200x630 JPEG at quality 88"
+  },
   "testimonials": {
     "mappingEvidence": "Legacy DOM and adjacent asset order checked 2026-08-28; no role inferred where the source did not state one.",
     "displayOrder": [
@@ -66,62 +92,29 @@
     "densityLimitation": "Portraits 01-03 are source-limited to 100x100 and are below 2x density at their 72 CSS px desktop rendering; they are not upscaled or invented."
   },
   "identity": {
-    "governedSourceBefore": {
-      "bytes": 903326,
-      "sha256": "8d706f8021bc4b4fdc0e89117244b54868687b74045be54002321de7aaa7ef92",
-      "oldBluePixels": 4244683,
-      "protectedBluePixels": 0
-    },
-    "governedSourceAfter": {
-      "path": "assets/landometer-lockup-color.png",
-      "bytes": 977032,
-      "sha256": "9d04b657c4ad4b5ac6167faeaa7e6476deb44d7eb573369fc20a5a106207fc39",
-      "oldBluePixels": 0,
-      "protectedBluePixels": 4244683,
-      "otherPixelChanges": 0
-    },
-    "webDerivative": {
-      "path": "assets/identity/landometer-lockup-color-rebuild03.png",
-      "bytes": 22204,
-      "sha256": "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc",
-      "oldBluePixels": 0,
-      "protectedBluePixels": 4328,
-      "approval": "pending identity-registry registration"
-    },
-    "ownerSuppliedColorSymbol": {
-      "sourceName": "Landometer LOGO 2022.png",
-      "sourcePath": "assets/identity/source/landometer-symbol-color-2022.png",
-      "sourceBytes": 360614,
-      "sourceDimensions": "6402x6402",
-      "sourceHasAlpha": true,
-      "sourceSha256": "f1329a41fed67dc82081d1dc5c6fb973e5ca9ee6276b878d76b6ba07d7ee90e3",
-      "derivativePath": "assets/identity/landometer-symbol-color-2022-rebuild03.png",
-      "derivativeBytes": 32025,
-      "derivativeDimensions": "512x512",
-      "derivativeHasAlpha": true,
-      "derivativeSha256": "23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595",
-      "transformation": "aspect-preserving resize to a 512 px web derivative; colour and transparency retained",
-      "roles": ["favicon", "light-theme story wayfinding"]
+    "unifiedNavbarColorSymbol": {
+      "sourceName": "Unified navbar design handoff r6 / landometer-symbol-color.png",
+      "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+      "bytes": 38962,
+      "dimensions": "1601x1601",
+      "hasAlpha": true,
+      "sha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
+      "roles": ["light and dark navbar symbol", "favicon", "structured-data logo", "light-theme story wayfinding", "footer symbol"]
     },
     "ownerSuppliedCreamSymbol": {
       "sourceName": "Landometer.LOGO.Cream.png",
-      "sourcePath": "assets/identity/source/landometer-symbol-cream.png",
-      "sourceBytes": 198704,
-      "sourceDimensions": "3457x3661",
-      "sourceHasAlpha": true,
-      "sourceSha256": "9122feecf00e99f5b5fc0a78e648e5a23eae08e0feec959d2ee61ae29fab91d2",
-      "derivativePath": "assets/identity/landometer-symbol-cream-rebuild03.png",
-      "derivativeBytes": 64975,
-      "derivativeDimensions": "483x512",
-      "derivativeHasAlpha": true,
-      "derivativeSha256": "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc",
-      "transformation": "aspect-preserving resize to a 512 px web derivative; colour and transparency retained",
-      "roles": ["dark-theme header", "dark-theme story wayfinding", "footer identity"]
+      "path": "assets/identity/landometer-symbol-cream-rebuild02.png",
+      "bytes": 198704,
+      "dimensions": "3457x3661",
+      "hasAlpha": true,
+      "sha256": "9122feecf00e99f5b5fc0a78e648e5a23eae08e0feec959d2ee61ae29fab91d2",
+      "transformation": "none; exact byte copy of the owner-supplied PNG",
+      "roles": ["dark-theme story wayfinding"]
     },
     "headerPlacement": {
       "carrierOrPlate": "none",
-      "light": "full-colour transparent lockup directly on the header surface",
-      "dark": "cream transparent compact symbol directly on the header surface; no duplicate typeset wordmark"
+      "themes": "the r6 full-colour symbol plus a typed Arvo 700 Landometer wordmark sits directly on both header themes; #757575 on light canvas and text-primary on dark canvas",
+      "responsiveSymbol": "54x54 desktop; 45x45 mobile"
     }
   }
 }

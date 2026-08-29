@@ -22,28 +22,27 @@
   }
 
   function updateThemeControls() {
-    var mode = root.getAttribute('data-theme-preference') || 'system';
-    var labels = root.lang === 'th'
-      ? { system: 'อัตโนมัติ', light: 'สว่าง', dark: 'มืด' }
-      : { system: 'Auto', light: 'Light', dark: 'Dark' };
-    var order = ['system', 'light', 'dark'];
-    var next = order[(order.indexOf(mode) + 1) % order.length];
+    var mode = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = mode === 'dark' ? 'light' : 'dark';
+    var icons = { light: 'light_mode', dark: 'dark_mode' };
     document.querySelectorAll('[data-theme-cycle]').forEach(function (button) {
       var label = button.querySelector('[data-theme-cycle-label]');
-      if (label) label.textContent = labels[mode];
+      var icon = button.querySelector('[data-theme-cycle-icon]');
+      var accessibleLabel = root.lang === 'th'
+        ? (next === 'dark' ? 'สลับเป็นธีมมืด' : 'สลับเป็นธีมสว่าง')
+        : (next === 'dark' ? 'Switch to dark theme' : 'Switch to light theme');
+      if (label) label.textContent = accessibleLabel;
+      if (icon) icon.textContent = icons[next];
       button.setAttribute('data-theme-current', mode);
-      button.setAttribute('aria-label', root.lang === 'th'
-        ? 'ธีมปัจจุบัน ' + labels[mode] + ' กดเพื่อเปลี่ยนเป็น ' + labels[next]
-        : 'Current theme: ' + labels[mode] + '. Change to ' + labels[next]);
+      button.setAttribute('aria-label', accessibleLabel);
+      button.setAttribute('title', accessibleLabel);
     });
   }
 
   function installThemeControls() {
-    var order = ['system', 'light', 'dark'];
     document.querySelectorAll('[data-theme-cycle]').forEach(function (button) {
       button.addEventListener('click', function () {
-        var current = root.getAttribute('data-theme-preference') || 'system';
-        setTheme(order[(order.indexOf(current) + 1) % order.length]);
+        setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
       });
     });
     updateThemeControls();
@@ -54,18 +53,23 @@
     var openButton = document.querySelector('[data-menu-open]');
     if (!shell || !openButton) return;
     var panel = shell.querySelector('[role="dialog"]');
-    var backgroundRegions = Array.from(document.querySelectorAll('main, footer'));
     var previousFocus = null;
 
     function setButtonState(isOpen) {
       openButton.setAttribute('aria-expanded', String(isOpen));
+      var icon = openButton.querySelector('[data-menu-icon]');
+      var label = root.lang === 'th'
+        ? (isOpen ? 'ปิดเมนู' : 'เปิดเมนู')
+        : (isOpen ? 'Close menu' : 'Open menu');
+      if (icon) icon.textContent = isOpen ? 'close' : 'menu';
+      openButton.setAttribute('aria-label', label);
+      openButton.setAttribute('title', label);
     }
 
     function closeMenu(restoreFocus) {
       if (shell.hidden) return;
       shell.hidden = true;
       document.body.classList.remove('menu-open');
-      backgroundRegions.forEach(function (region) { region.inert = false; });
       setButtonState(false);
       if (restoreFocus !== false && previousFocus && previousFocus.focus) previousFocus.focus();
     }
@@ -74,9 +78,10 @@
       previousFocus = document.activeElement;
       shell.hidden = false;
       document.body.classList.add('menu-open');
-      backgroundRegions.forEach(function (region) { region.inert = true; });
       setButtonState(true);
-      if (panel) panel.focus();
+      if (panel) {
+        try { panel.focus({ preventScroll: true }); } catch (error) { panel.focus(); }
+      }
     }
 
     openButton.addEventListener('click', function () {
@@ -98,19 +103,34 @@
         closeMenu();
         return;
       }
-      if (event.key !== 'Tab' || shell.hidden || !panel) return;
-      var items = Array.from(panel.querySelectorAll('button:not([disabled]), a[href], input:not([disabled])'));
-      if (!items.length) return;
-      var first = items[0];
-      var last = items[items.length - 1];
-      if (event.shiftKey && (document.activeElement === first || document.activeElement === panel)) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
     });
+  }
+
+  function installScrollSpy() {
+    var links = Array.from(document.querySelectorAll('[data-scrollspy-link]'));
+    if (!links.length || !('IntersectionObserver' in window)) return;
+    var sections = links.map(function (link) {
+      return document.getElementById(link.getAttribute('data-scrollspy-link'));
+    }).filter(Boolean);
+    var visible = {};
+
+    function setActive(id) {
+      links.forEach(function (link) {
+        if (link.getAttribute('data-scrollspy-link') === id) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) visible[entry.target.id] = entry.intersectionRect.height;
+        else delete visible[entry.target.id];
+      });
+      var active = Object.keys(visible).sort(function (a, b) { return visible[b] - visible[a]; })[0];
+      setActive(active || '');
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.01, 0.25, 0.5] });
+
+    sections.forEach(function (section) { observer.observe(section); });
   }
 
   function installLocaleLinks() {
@@ -471,6 +491,7 @@
 
   installThemeControls();
   installMenu();
+  installScrollSpy();
   installLocaleLinks();
   installTopicPickers();
   installContactForm();
