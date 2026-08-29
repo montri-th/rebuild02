@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260829-01",
+  "artifactBuildId": "ui-20260829-02",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -88,10 +88,40 @@
       "protectedBluePixels": 4328,
       "approval": "pending identity-registry registration"
     },
+    "ownerSuppliedColorSymbol": {
+      "sourceName": "Landometer LOGO 2022.png",
+      "sourcePath": "assets/identity/source/landometer-symbol-color-2022.png",
+      "sourceBytes": 360614,
+      "sourceDimensions": "6402x6402",
+      "sourceHasAlpha": true,
+      "sourceSha256": "f1329a41fed67dc82081d1dc5c6fb973e5ca9ee6276b878d76b6ba07d7ee90e3",
+      "derivativePath": "assets/identity/landometer-symbol-color-2022-rebuild03.png",
+      "derivativeBytes": 32025,
+      "derivativeDimensions": "512x512",
+      "derivativeHasAlpha": true,
+      "derivativeSha256": "23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595",
+      "transformation": "aspect-preserving resize to a 512 px web derivative; colour and transparency retained",
+      "roles": ["favicon", "light-theme story wayfinding"]
+    },
+    "ownerSuppliedCreamSymbol": {
+      "sourceName": "Landometer.LOGO.Cream.png",
+      "sourcePath": "assets/identity/source/landometer-symbol-cream.png",
+      "sourceBytes": 198704,
+      "sourceDimensions": "3457x3661",
+      "sourceHasAlpha": true,
+      "sourceSha256": "9122feecf00e99f5b5fc0a78e648e5a23eae08e0feec959d2ee61ae29fab91d2",
+      "derivativePath": "assets/identity/landometer-symbol-cream-rebuild03.png",
+      "derivativeBytes": 64975,
+      "derivativeDimensions": "483x512",
+      "derivativeHasAlpha": true,
+      "derivativeSha256": "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc",
+      "transformation": "aspect-preserving resize to a 512 px web derivative; colour and transparency retained",
+      "roles": ["dark-theme header", "dark-theme story wayfinding", "footer identity"]
+    },
     "headerPlacement": {
       "carrierOrPlate": "none",
       "light": "full-colour transparent lockup directly on the header surface",
-      "dark": "white transparent symbol plus typeset Arvo wordmark directly on the header surface"
+      "dark": "cream transparent compact symbol directly on the header surface; no duplicate typeset wordmark"
     }
   }
 }

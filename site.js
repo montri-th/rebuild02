@@ -23,15 +23,27 @@
 
   function updateThemeControls() {
     var mode = root.getAttribute('data-theme-preference') || 'system';
-    document.querySelectorAll('[data-theme-set]').forEach(function (button) {
-      button.setAttribute('aria-pressed', String(button.getAttribute('data-theme-set') === mode));
+    var labels = root.lang === 'th'
+      ? { system: 'อัตโนมัติ', light: 'สว่าง', dark: 'มืด' }
+      : { system: 'Auto', light: 'Light', dark: 'Dark' };
+    var order = ['system', 'light', 'dark'];
+    var next = order[(order.indexOf(mode) + 1) % order.length];
+    document.querySelectorAll('[data-theme-cycle]').forEach(function (button) {
+      var label = button.querySelector('[data-theme-cycle-label]');
+      if (label) label.textContent = labels[mode];
+      button.setAttribute('data-theme-current', mode);
+      button.setAttribute('aria-label', root.lang === 'th'
+        ? 'ธีมปัจจุบัน ' + labels[mode] + ' กดเพื่อเปลี่ยนเป็น ' + labels[next]
+        : 'Current theme: ' + labels[mode] + '. Change to ' + labels[next]);
     });
   }
 
   function installThemeControls() {
-    document.querySelectorAll('[data-theme-set]').forEach(function (button) {
+    var order = ['system', 'light', 'dark'];
+    document.querySelectorAll('[data-theme-cycle]').forEach(function (button) {
       button.addEventListener('click', function () {
-        setTheme(button.getAttribute('data-theme-set'));
+        var current = root.getAttribute('data-theme-preference') || 'system';
+        setTheme(order[(order.indexOf(current) + 1) % order.length]);
       });
     });
     updateThemeControls();
@@ -42,17 +54,11 @@
     var openButton = document.querySelector('[data-menu-open]');
     if (!shell || !openButton) return;
     var panel = shell.querySelector('[role="dialog"]');
-    var menuIcon = openButton.querySelector('[data-menu-icon]');
-    var menuLabel = openButton.querySelector('.menu-toggle__label');
     var backgroundRegions = Array.from(document.querySelectorAll('main, footer'));
     var previousFocus = null;
 
     function setButtonState(isOpen) {
       openButton.setAttribute('aria-expanded', String(isOpen));
-      if (menuIcon) menuIcon.textContent = isOpen ? 'close' : 'menu';
-      if (menuLabel) menuLabel.textContent = isOpen
-        ? (root.lang === 'th' ? 'ปิด' : 'Close')
-        : (root.lang === 'th' ? 'เมนู' : 'Menu');
     }
 
     function closeMenu(restoreFocus) {
@@ -329,6 +335,14 @@
   }
 
   function installMotion() {
+    document.querySelectorAll('.pillar, .feature-grid').forEach(function (pair) {
+      var pairItems = Array.from(pair.children).filter(function (item) {
+        return item.hasAttribute('data-reveal');
+      });
+      if (pairItems[0]) pairItems[0].setAttribute('data-reveal-from', 'left');
+      if (pairItems[1]) pairItems[1].setAttribute('data-reveal-from', 'right');
+    });
+
     var items = Array.from(document.querySelectorAll('[data-reveal]'));
     if (!items.length) return;
     if ((motionQuery && motionQuery.matches) || !('IntersectionObserver' in window)) {
@@ -336,9 +350,8 @@
       return;
     }
 
-    var computed = window.getComputedStyle(root);
-    var stagger = parseFloat(computed.getPropertyValue('--motion-delay-stagger')) || 120;
-    var cap = parseFloat(computed.getPropertyValue('--motion-delay-stagger-cap')) || 600;
+    var stagger = 150;
+    var cap = 450;
     document.querySelectorAll('[data-reveal-group]').forEach(function (group) {
       Array.from(group.querySelectorAll(':scope > [data-reveal]')).forEach(function (item, index) {
         var explicit = item.getAttribute('data-reveal-index');
@@ -354,8 +367,61 @@
         entry.target.classList.add('is-revealed');
         observer.unobserve(entry.target);
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    }, { threshold: 0.14, rootMargin: '0px 0px -12% 0px' });
     items.forEach(function (item) { observer.observe(item); });
+  }
+
+  function installSocialEmbeds() {
+    var frames = Array.from(document.querySelectorAll('[data-social-embed]'));
+    var tiktokEmbeds = Array.from(document.querySelectorAll('[data-tiktok-embed]'));
+    if (!frames.length && !tiktokEmbeds.length) return;
+
+    function loadFrame(frame) {
+      if (frame.hasAttribute('src') || !frame.getAttribute('data-src')) return;
+      var source = frame.getAttribute('data-src');
+      if (source.indexOf('https://www.facebook.com/plugins/page.php') === 0) {
+        var container = frame.closest('.social-embed');
+        var width = container ? Math.floor(container.getBoundingClientRect().width) : 500;
+        var facebookUrl = new URL(source);
+        facebookUrl.searchParams.set('width', String(Math.max(180, Math.min(500, width))));
+        source = facebookUrl.toString();
+      }
+      frame.addEventListener('load', function () {
+        frame.closest('.social-embed').classList.add('is-loaded');
+      }, { once: true });
+      frame.src = source;
+    }
+
+    function loadTikTok(container) {
+      if (container.getAttribute('data-embed-loaded') === 'true') return;
+      container.setAttribute('data-embed-loaded', 'true');
+      if (document.getElementById('tiktok-embed-script')) return;
+      var script = document.createElement('script');
+      script.id = 'tiktok-embed-script';
+      script.src = 'https://www.tiktok.com/embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+    function loadTarget(target) {
+      if (target.matches('[data-social-embed]')) loadFrame(target);
+      else loadTikTok(target);
+    }
+
+    var targets = frames.concat(tiktokEmbeds);
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach(loadTarget);
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        loadTarget(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '480px 0px', threshold: 0.01 });
+    targets.forEach(function (target) { observer.observe(target); });
   }
 
   function installVideo() {
@@ -411,6 +477,7 @@
   installShareControls();
   installMediaArrival();
   installMotion();
+  installSocialEmbeds();
   installVideo();
   focusHashTarget();
   window.addEventListener('hashchange', focusHashTarget);

@@ -19,7 +19,7 @@
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260829-01"
+    "artifactBuildId": "ui-20260829-02"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260829-01",
+      "id": "ui-20260829-02",
       "path": "governance/site-manifest.json"
     }
   },
@@ -39,8 +39,8 @@
     "cleanCompletion": "Explore a product, share an exact example, send the team a message, or leave without a synthetic retention loop."
   },
   "composition": {
-    "route": ["Measure", "Land", "Cultivate", "Living", "Products", "CityMETER", "CityWiki", "Landom", "Contact"],
-    "connectors": ["dated product proof", "exact-link share", "persistent ecosystem navigation", "direct inquiry form", "Google Maps link"]
+    "route": ["Measure", "Land", "Cultivate", "Living", "Products", "CityMETER", "CityWiki", "Landom", "Our story", "Stories", "Contact"],
+    "connectors": ["dated product proof", "exact-link share", "minimal ecosystem navigation", "expandable company story", "lazy official social embeds", "direct inquiry form", "Google Maps link"]
   },
   "capabilities": {
     "motionEnhancement": true,
@@ -52,7 +52,7 @@
     "browserPersistence": "local theme preference",
     "serverPersistence": "inquiry endpoint behavior and retention are backend-owned and not publicly documented",
     "telemetry": false,
-    "thirdPartyRenderingRuntime": false,
+    "thirdPartyRenderingRuntime": true,
     "staticInitialHtml": true
   },
   "security": {
@@ -65,15 +65,25 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260829-01",
+    "artifactBuildId": "ui-20260829-02",
     "releaseReceipt": {
-      "receiptId": "rebuild03-ui-20260829-01",
+      "receiptId": "rebuild03-ui-20260829-02",
       "catalogOrContentVersion": "landometer-home-rebuild03-v2",
       "issuedAt": "2026-08-29"
     }
   },
   "network": {
-    "loadTimeSubresources": "same-origin only",
+    "loadTimeSubresources": "Primary page rendering remains same-origin. Official platform social embeds begin only when their cards approach the viewport.",
+    "socialEmbeds": {
+      "activation": "IntersectionObserver with a 480 px root margin; no social iframe src or TikTok script exists before activation; Facebook receives its measured container width clamped to 180–500 px",
+      "freshness": "Facebook timeline, Instagram profile, and TikTok creator content are rendered from their official platform endpoints on each activated page load subject to provider caching; LinkedIn is one explicitly featured post, not a claimed latest feed",
+      "providers": [
+        {"name": "Facebook", "mode": "Page Plugin timeline iframe", "endpoint": "https://www.facebook.com/plugins/page.php"},
+        {"name": "Instagram", "mode": "profile embed iframe", "endpoint": "https://www.instagram.com/landometer/embed/"},
+        {"name": "TikTok", "mode": "creator embed", "endpoint": "https://www.tiktok.com/embed.js"},
+        {"name": "LinkedIn", "mode": "featured post iframe", "endpoint": "https://www.linkedin.com/embed/feed/update/urn:li:activity:7413980705484943361"}
+      ]
+    },
     "share": {
       "mode": "share_ready",
       "action": "exact_link",
@@ -96,20 +106,27 @@
       "themeStrategy": "direct on light header surface"
     },
     "favicon": {
-      "path": "assets/identity/landometer-lockup-color-rebuild03.png",
-      "sha256": "400f305351d236a5812bf0effed8c674506f312a51d7b36d6bf81b41febbecbc",
-      "role": "explicit PNG browser icon; prevents origin-root fallback requests"
+      "path": "assets/identity/landometer-symbol-color-2022-rebuild03.png",
+      "sha256": "23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595",
+      "role": "explicit compact full-colour PNG browser icon; prevents origin-root fallback requests"
     },
     "headerDark": {
-      "symbolPath": "assets/identity/landometer-symbol-white-rebuild03.png",
-      "symbolSha256": "8f1588e6e11049c4f4a01dacc855b0151cb1ff4b6f91f913a99c0db3d5fffa3c",
-      "wordmark": "typeset Arvo 700",
+      "symbolPath": "assets/identity/landometer-symbol-cream-rebuild03.png",
+      "symbolSha256": "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc",
+      "wordmark": "none; compact supplied mark avoids a duplicate or reconstructed lockup",
       "carrierOrPlate": "none",
       "themeStrategy": "direct on dark header surface"
     },
+    "storyWayfinding": {
+      "lightPath": "assets/identity/landometer-symbol-color-2022-rebuild03.png",
+      "lightSha256": "23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595",
+      "darkPath": "assets/identity/landometer-symbol-cream-rebuild03.png",
+      "darkSha256": "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc",
+      "role": "theme-aware compact identity cue beside the story label"
+    },
     "footer": {
-      "path": "assets/identity/landometer-symbol-white-rebuild03.png",
-      "sha256": "8f1588e6e11049c4f4a01dacc855b0151cb1ff4b6f91f913a99c0db3d5fffa3c",
+      "path": "assets/identity/landometer-symbol-cream-rebuild03.png",
+      "sha256": "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc",
       "themeStrategy": "direct on Measure surface"
     },
     "omittedRoles": ["install icon", "social preview"]
@@ -160,6 +177,26 @@
       "path": "assets/photos/pak-khlong-talat-900.avif",
       "bytes": 49745,
       "sha256": "d83a54f20e328e61ab5fb67f1976e28dbc3b45a00e883fc3ee00a64a9ba1338f"
+    },
+    {
+      "path": "assets/identity/source/landometer-symbol-color-2022.png",
+      "bytes": 360614,
+      "sha256": "f1329a41fed67dc82081d1dc5c6fb973e5ca9ee6276b878d76b6ba07d7ee90e3"
+    },
+    {
+      "path": "assets/identity/landometer-symbol-color-2022-rebuild03.png",
+      "bytes": 32025,
+      "sha256": "23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595"
+    },
+    {
+      "path": "assets/identity/source/landometer-symbol-cream.png",
+      "bytes": 198704,
+      "sha256": "9122feecf00e99f5b5fc0a78e648e5a23eae08e0feec959d2ee61ae29fab91d2"
+    },
+    {
+      "path": "assets/identity/landometer-symbol-cream-rebuild03.png",
+      "bytes": 64975,
+      "sha256": "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc"
     }
   ],
   "publication": {
@@ -169,14 +206,14 @@
     "pagesRoot": "/",
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "noindex,nofollow",
-    "currentReleaseState": "verified",
-    "verifiedArtifactCommit": "19efbc45ae66ab373816de31811c4d272c50d755",
-    "verifiedArtifactTree": "c3875ad02cb77ac79105f3d5e5e16ce7a6ca36e8",
-    "pagesBuildState": "built",
-    "pagesBuildUpdatedAt": "2026-08-28T19:55:29Z",
-    "verifiedAt": "2026-08-28T19:56:33Z",
-    "liveRouteEvidence": "root, index, Thai, English, and _ds/styles.css returned HTTP 200; CSS, JS, logo, and MP4 also returned HTTP 200 with expected MIME types; live Chrome at 1280x800 and 390x844 showed zero console/page/request/HTTP errors, zero overflow, exact first-viewport hero fit, and zero initial video bytes",
-    "liveByteParity": "index, both locale HTML files, site.css, site.js, and font-assets.manifest.json matched committed SHA-256 values"
+    "currentReleaseState": "pending",
+    "verifiedArtifactCommit": "",
+    "verifiedArtifactTree": "",
+    "pagesBuildState": "pending",
+    "pagesBuildUpdatedAt": "",
+    "verifiedAt": "",
+    "liveRouteEvidence": "pending for ui-20260829-02",
+    "liveByteParity": "pending for ui-20260829-02"
   },
   "growth": {
     "hook": {
@@ -202,15 +239,15 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "local Chrome spot-check complete; in-app browser policy check unavailable",
+    "renderedBrowserGate": "Local implementation QA passed TH light 1440x900, TH dark 390x844, and EN light 320x700 for responsive geometry, theme identity, simplified menu, story disclosure, social ordering/localized labels, measured-width Facebook rendering, lazy embed activation, reduced-motion, 24-character phone input, form behavior and keyboard/focus paths.",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
     "SC-01": "pass",
     "SC-02": "pass",
     "SC-03": "fail",
-    "SC-04": "fail",
-    "SC-05": "fail",
+    "SC-04": "pass",
+    "SC-05": "pass",
     "SC-06": "pass",
     "SC-07": "pass",
     "SC-08": "pass",
@@ -218,7 +255,7 @@
     "SC-10": "fail",
     "SC-11": "pass",
     "SC-12": "fail",
-    "SC-13": "n/a",
+    "SC-13": "pass",
     "SC-14": "fail",
     "SC-15": "fail",
     "SC-16": "fail",

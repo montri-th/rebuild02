@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260829-01"
+      id: "ui-20260829-02"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -92,8 +92,8 @@ landometerBuild:
     url: "https://montri-th.github.io/rebuild02/"
     readiness: "share_ready"
     publicSafe: true
-    status: "verified"
-    qrOrLinkTest: "verified 2026-08-28T19:56:33Z; required routes HTTP 200 and public byte parity passed for artifact commit 19efbc45ae66ab373816de31811c4d272c50d755"
+    status: "pending"
+    qrOrLinkTest: "pending for ui-20260829-02; do not inherit the prior release result"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -113,9 +113,9 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "788db8c6c6bead8aa5e5d8dd100dec0701e34a150a55ad7c356068b6c3edde73"
-        naturalnessReviewRef: "source review complete; rendered review open"
-        parityReviewRef: "bilingual source review complete; rendered review open"
+        copyHash: "a1c2151d3eaa4c0c701c7b5f49539e7b65eafce68da35f3dcc0935b143c8d08c"
+        naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
+        parityReviewRef: "bilingual source review complete; sampled rendered review complete"
       - locale: "en"
         ruleRefs:
           - "VOICE-01"
@@ -124,9 +124,9 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "1bf7d007698de709857b20683f139dc1b95cc26777402c3288892bdf8a691d83"
-        naturalnessReviewRef: "source review complete; rendered review open"
-        parityReviewRef: "bilingual source review complete; rendered review open"
+        copyHash: "5b040f13f06c8c7e0af68d74a6a24c4c39f3e8351e72c7d81ae263d46928cf7c"
+        naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
+        parityReviewRef: "bilingual source review complete; sampled rendered review complete"
     internalVoiceWordsPrinted: false
   experience:
     trigger: "A visitor needs to understand what Landometer covers and where the evidence leads."
@@ -138,7 +138,7 @@ landometerBuild:
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild03.ui-20260829-01"
+    channelParityKey: "landometer.home.rebuild03.ui-20260829-02"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -147,7 +147,7 @@ landometerBuild:
   composition:
     quietRegions:
       - "testimonial reading rail"
-      - "Our Story statement"
+      - "Our Story statement and optional history/future disclosure"
     gradientSurfaces:
       - id: "measure"
         surface: "var(--surface-atmosphere-measure)"
@@ -157,10 +157,10 @@ landometerBuild:
         foreground: "var(--on-atmosphere), var(--on-atmosphere-2)"
     localForegroundContracts:
       - "transparent full-colour lockup directly on the light header"
-      - "white symbol plus typeset wordmark directly on the dark header"
+      - "cream compact symbol directly on the dark header"
       - "theme-aware card/canvas foreground pairs"
       - "opaque captions on surface-card"
-      - "deep Measure plate for white footer symbol"
+      - "deep Measure plate for the cream footer symbol"
   brandAlignment:
     productStatement: "City Data + AI for decisions about Land, Location, and Living."
     proofObject: "dated product evidence and documentary media"
@@ -196,7 +196,7 @@ landometerBuild:
         placement: "direct_surface"
         surfaceRef: "site.css .site-header"
         themesOrBackdrops:
-          - "light header surface; dark theme uses the separate white-symbol/typeset-wordmark composition"
+          - "light header surface; dark theme uses the separate supplied cream compact symbol"
         recordVersion: "pending"
         validFrom: ""
         expiresAt: null
@@ -213,13 +213,37 @@ landometerBuild:
         placement: "direct_surface"
         surfaceRef: "site.css .site-header"
         approvalStatus: "pending identity-registry registration"
-      - context: "footer white symbol"
-        path: "assets/identity/landometer-symbol-white-rebuild03.png"
-        sha256: "8f1588e6e11049c4f4a01dacc855b0151cb1ff4b6f91f913a99c0db3d5fffa3c"
+      - context: "owner-supplied full-colour symbol source"
+        path: "assets/identity/source/landometer-symbol-color-2022.png"
+        bytes: 360614
+        dimensions: "6402x6402"
+        sha256: "f1329a41fed67dc82081d1dc5c6fb973e5ca9ee6276b878d76b6ba07d7ee90e3"
+        canvas: "transparent"
+        note: "exact committed byte copy of owner-supplied Landometer LOGO 2022.png"
+      - context: "favicon and light-theme story wayfinding"
+        path: "assets/identity/landometer-symbol-color-2022-rebuild03.png"
+        bytes: 32025
+        dimensions: "512x512"
+        sha256: "23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595"
+        canvas: "transparent"
+        lineage: "aspect-preserving 512 px web derivative of assets/identity/source/landometer-symbol-color-2022.png; colour and alpha retained"
+      - context: "owner-supplied cream symbol source"
+        path: "assets/identity/source/landometer-symbol-cream.png"
+        bytes: 198704
+        dimensions: "3457x3661"
+        sha256: "9122feecf00e99f5b5fc0a78e648e5a23eae08e0feec959d2ee61ae29fab91d2"
+        canvas: "transparent"
+        note: "exact committed byte copy of owner-supplied Landometer.LOGO.Cream.png"
+      - context: "dark header, dark story wayfinding, and footer symbol"
+        path: "assets/identity/landometer-symbol-cream-rebuild03.png"
+        bytes: 64975
+        dimensions: "483x512"
+        sha256: "269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc"
         canvas: "transparent"
         placement: "direct_surface"
-        surfaceRef: "Measure deep footer surface"
-        approvalStatus: "pending independent footer-role approval"
+        surfaceRef: "dark header, story label, and Measure deep footer surface"
+        lineage: "aspect-preserving 512 px web derivative of assets/identity/source/landometer-symbol-cream.png; colour and alpha retained"
+        approvalStatus: "owner-supplied; identity-registry registration pending"
     approvedPhotography:
       - "responsive Lumpini city image family"
       - "responsive Yaowarat image family"
@@ -240,9 +264,10 @@ landometerBuild:
   motion:
     intensity: "guided"
     patterns:
-      - "grouped once-only entrance reveals across page sections"
+      - "grouped once-only entrance reveals with 32 px vertical or 36 px directional travel, 760/920 ms opacity/settle timing, and 150 ms stagger capped at 450 ms"
       - "Downbeat press for action controls"
       - "One-drop settle for copy feedback"
+      - "Story disclosure opens with a short opacity-and-position transition"
     omitted:
       - "Offbeat count-up is absent because the null legacy-system row is not rendered."
       - "No parallax, hue cycling, or scroll jacking."
@@ -282,7 +307,7 @@ landometerBuild:
     securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260829-01"
+    artifactBuildId: "ui-20260829-02"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -314,31 +339,31 @@ landometerBuild:
         sha256: "5b4c9bab54e3b1b64367e2967a4f4832d8f13f81a85ef2658d5c7e38fe4491fb"
       - channel: "hosted_th"
         path: "Landometer-Home-TH.dc.html"
-        bytes: 52266
-        sha256: "788db8c6c6bead8aa5e5d8dd100dec0701e34a150a55ad7c356068b6c3edde73"
+        bytes: 60327
+        sha256: "a1c2151d3eaa4c0c701c7b5f49539e7b65eafce68da35f3dcc0935b143c8d08c"
       - channel: "hosted_en"
         path: "Landometer-Home-EN.dc.html"
-        bytes: 45467
-        sha256: "1bf7d007698de709857b20683f139dc1b95cc26777402c3288892bdf8a691d83"
+        bytes: 52376
+        sha256: "5b040f13f06c8c7e0af68d74a6a24c4c39f3e8351e72c7d81ae263d46928cf7c"
       - channel: "redirect_alias"
         path: "index.html"
-        bytes: 2877
-        sha256: "5c1cb0fc8a5ed8deb12d027a9f5a72406596208826cf1f63e3afaf46beaac4c2"
+        bytes: 2978
+        sha256: "aaa714df5070e00c061dec253114a619a6385b0944c74590edf19e7af910cfdb"
       - channel: "site_css"
         path: "site.css"
-        bytes: 28268
-        sha256: "3c59ca18bc5f69e73b25323ab06e8cdee8bcd061d123ccf1a5fa0ac30b3c7538"
+        bytes: 32555
+        sha256: "9c95273ecf4357d0f1794291db7e0eb497a269a6b78f49809082a43f9b1d56c4"
       - channel: "site_js"
         path: "site.js"
-        bytes: 15502
-        sha256: "11c0780e51f17e6489854d77d9018b306119f635ffb496101d2f8bb08daacfa3"
+        bytes: 18259
+        sha256: "01850050667dc3a2fd5e6040c95cf178a03ad941374db71e0f889314e26e1a84"
       - channel: "font_manifest"
         path: "assets/fonts/font-assets.manifest.json"
-        bytes: 9356
-        sha256: "7c1592607ac3606cf5b17eef6065b3a37ebafba4e5179ee7e6bf68fadfb0958e"
+        bytes: 9459
+        sha256: "4383a4d3bdb3f0844f76bcc89b2e4b4406df69d35aefb849b92acf9655074cc8"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild03-ui-20260829-01"
+      receiptId: "rebuild03-ui-20260829-02"
       catalogOrContentVersion: "landometer-home-rebuild03-v2"
       issuedAt: "2026-08-29"
   privacy:
@@ -346,7 +371,7 @@ landometerBuild:
     sensitivity: "public"
     redactedPublicProjection: false
     governanceRecord:
-      id: "privacy-direct-inquiry-ui-20260829-01"
+      id: "privacy-direct-inquiry-ui-20260829-02"
       owner: "Montri (Landometer), per rebuild03 work order"
       collectionBasisAndMinimumFields: "After explicit submit, the form sends topic, name, email, phone, and message; name, email, phone, and message are required."
       accessAndRetentionDeletion: "The first-party production inquiry backend owns access, retention, and deletion; those backend rules are not documented in this static repository."
@@ -373,6 +398,15 @@ landometerBuild:
     action: "exact_link"
     recipientOutcome: "The recipient lands on the exact dated CityMETER proof object."
     policyReason: "Copy-only sharing after the first AHA; no recipient pressure or background post."
+    socialEmbeds:
+      activation: "within 480 px of the viewport by IntersectionObserver; Facebook receives the measured card width clamped to its supported 180–500 px range"
+      platformFreshness: "Facebook timeline, Instagram profile, and TikTok creator are platform-rendered at activation subject to provider caching; LinkedIn is a single featured post and is not represented as a latest feed"
+      privacyBoundary: "the primary page is same-origin; approaching a social card permits that provider to receive the normal iframe/script request context"
+      endpoints:
+        - "Facebook Page Plugin timeline iframe"
+        - "Instagram profile embed iframe"
+        - "TikTok official creator embed script"
+        - "LinkedIn featured-post iframe"
   hook:
     enabled: false
     entryTrigger: ""
@@ -404,7 +438,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local Chrome regression complete at 1280, 390, and 320; GitHub Pages routes and byte parity verified for artifact commit 19efbc45ae66ab373816de31811c4d272c50d755; in-app browser policy check unavailable"
+    renderedBrowserGate: "local implementation QA passed TH light 1440x900, TH dark 390x844, and EN light 320x700 for zero overflow, 76/68 px header and exact hero fit, correct theme marks, simplified menu, story disclosure, social order/localized featured label, container-width Facebook embed, lazy social activation, reduced-motion, form behavior, and keyboard/focus paths; Pages, live HTTP/MIME, and byte parity remain pending"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -418,9 +452,9 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 12
-      rowsFailedOrOpen: 10
-      rowsNotApplicable: 1
+      rowsPassed: 15
+      rowsFailedOrOpen: 8
+      rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:
     family: "material-symbols-rounded"
@@ -431,11 +465,11 @@ landometerBuild:
     secondFamilyPresent: false
   actionGeometry:
     capsuleActions: "source_inspected"
-    circularIconOnlyActions: 1
+    circularIconOnlyActions: 5
     thirdShapePresent: false
   disclosure:
     firstViewCaveatProse: "none"
-    disclosureLayersPath: "none in the public routes"
+    disclosureLayersPath: "below-fold story details disclosure in both locale routes"
     mediaLadderTop: "video"
   colorSetPurge:
     retiredTonesPresent: false
@@ -464,8 +498,8 @@ landometerBuild:
       resolution: "all closure cards omitted because none of the supplied sources resolves both fields; ordinary product links remain in their evidence-owning sections"
     - item: "strict cross-origin href grep"
       ownerWorkOrder: "requires cross-origin src=/href= to return nothing"
-      dsAuthority: "the same work order requires external product, careers, social, and Google Maps destinations"
-      resolution: "zero cross-origin runtime subresources achieved; explicit user-activated external anchors remain and are reported"
+      dsAuthority: "the current owner request requires official current social content in addition to external product, careers, social, and Google Maps destinations"
+      resolution: "primary rendering remains same-origin; social provider iframes/scripts are lazy and load only as their cards approach the viewport; explicit external anchors remain reported"
     - item: "category identity"
       ownerWorkOrder: "requests persistent icon + colour + label mapping where real categories exist"
       dsAuthority: "persistent IDs require a governed category registry and contrast-safe token assignment"

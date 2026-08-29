@@ -1,38 +1,40 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260829-01",
+  "artifactBuildId": "ui-20260829-02",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
   "sourceChecks": {
     "thai": {
-      "ids": 28,
-      "images": 25,
-      "links": 56,
-      "buttons": 15,
+      "ids": 32,
+      "images": 27,
+      "links": 58,
+      "buttons": 13,
       "inputsIncludingHiddenTopic": 4,
       "textareas": 1,
-      "nativeSelectsOrDetails": 0,
+      "nativeSelectsOrDetails": 1,
       "videoWithoutControls": 1,
-      "rawControlOrMediaOccurrences": 77,
+      "thirdPartyIframeElements": 3,
+      "rawControlOrMediaOccurrences": 81,
       "h1": 1,
       "duplicateIds": 0,
       "html5ParseErrors": 0
     },
     "english": {
-      "ids": 28,
-      "images": 25,
-      "links": 56,
-      "buttons": 15,
+      "ids": 32,
+      "images": 27,
+      "links": 58,
+      "buttons": 13,
       "inputsIncludingHiddenTopic": 4,
       "textareas": 1,
-      "nativeSelectsOrDetails": 0,
+      "nativeSelectsOrDetails": 1,
       "videoWithoutControls": 1,
-      "rawControlOrMediaOccurrences": 77,
+      "thirdPartyIframeElements": 3,
+      "rawControlOrMediaOccurrences": 81,
       "h1": 1,
       "duplicateIds": 0,
       "html5ParseErrors": 0
     },
-    "revealHooksPerLocale": 50,
+    "revealHooksPerLocale": 55,
     "lazyImagesPerLocale": 21,
     "gatedLegacyFigureHooksPerLocale": 4,
     "visibleLegacyFigureRows": 0,
@@ -46,8 +48,9 @@
     "gitDiffCheck": "pass"
   },
   "networkBoundary": {
-    "loadTimeRenderingSubresources": "same-origin relative paths only",
-    "thirdPartyRenderingRuntimeRequests": 0,
+    "loadTimeRenderingSubresources": "The primary page is same-origin. Three iframe data-src values and the TikTok embed script are activated only within 480 px of the social cards. Facebook's request width is computed from the rendered card and clamped to 180–500 px.",
+    "thirdPartyRenderingRuntimeRequests": "four official social embed surfaces after intersection: Facebook timeline, Instagram profile, TikTok creator, and LinkedIn featured post",
+    "socialEmbedFreshness": "Facebook, Instagram and TikTok are platform-rendered on activated page loads subject to provider caching. LinkedIn is one fixed featured post and is not claimed as a latest feed.",
     "externalNavigation": "explicit user action only",
     "contactSubmit": {
       "method": "POST",
@@ -62,7 +65,7 @@
     }
   },
   "contrast": {
-    "method": "Local Chrome rendered-pixel background sampling with the exact computed foreground token; text was hidden only while sampling its opaque gradient backdrop and screenshot edges were excluded. Ratios use WCAG 2.x relative luminance. No page text is composited over a photograph.",
+    "method": "These four ratios are retained from the prior local Chrome rendered-pixel sample because their foreground/background tokens and surfaces are unchanged in ui-20260829-02. New menu, disclosure and social surfaces are not represented as a complete contrast audit. Ratios use WCAG 2.x relative luminance.",
     "rows": [
       {
         "element": "CityMETER showcase metadata on Measure",
@@ -112,30 +115,25 @@
     "fullAutomatedAccessibilityAudit": "open; no zero-critical/serious claim"
   },
   "pageWeight1280Dpr1": {
-    "method": "local Chrome at 1280x800 against uncompressed local HTTP responses",
+    "method": "current ui-20260829-02 transfer-byte remeasurement pending; prior figures were intentionally cleared because lazy social embeds change the full-scroll network boundary",
     "initial": {
-      "bytes": 470226,
-      "requests": 27,
-      "videoBytes": 0
+      "bytes": null,
+      "requests": null,
+      "videoBytes": null
     },
     "fullScrollWithoutVideo": {
-      "bytes": 698288,
-      "requests": 42,
-      "budget900KB": "pass"
+      "bytes": null,
+      "requests": null,
+      "budget900KB": "pending; third-party platform bytes must be reported separately from the same-origin artifact"
     },
     "fullScrollWithVideo": {
-      "bytes": 2832490,
-      "requests": 43,
+      "bytes": null,
+      "requests": null,
       "videoBytes": 2134202,
-      "sectionVideo2Point5MB": "pass"
+      "sectionVideo2Point5MB": "source asset remains within budget; current browser trace pending"
     },
-    "behavior": "The MP4 has no HTML src and preload none. IntersectionObserver attaches it only within a 240 px root margin; the initial trace fetched zero video bytes.",
-    "finalRegressionInitial": [
-      {"locale": "th", "viewport": "1280x800", "bytes": 470226, "requests": 27, "videoBytes": 0},
-      {"locale": "th", "viewport": "390x844", "bytes": 395909, "requests": 27, "videoBytes": 0},
-      {"locale": "en", "viewport": "1280x800", "bytes": 418471, "requests": 23, "videoBytes": 0},
-      {"locale": "en", "viewport": "390x844", "bytes": 344154, "requests": 23, "videoBytes": 0}
-    ],
+    "behavior": "The MP4 still has no HTML src and preload none; its observer uses a 240 px root margin. Social providers use a separate 480 px observer and are not initial-viewport dependencies.",
+    "finalRegressionInitial": [],
     "liveCompressionAndCache": "not represented by this local uncompressed trace",
     "fieldVitals": {
       "lcp2Point5Seconds": "not measured",
@@ -144,34 +142,37 @@
     }
   },
   "localRenderedChecks": {
-    "engine": "Chrome final regression",
-    "viewports": ["1280x800", "390x844", "320x568"],
-    "verified": [
-      "transparent unframed header logo",
-      "one-line mobile login CTA",
-      "hero contained in first viewport at sampled dimensions",
-      "document width equals viewport at 390 and 320",
-      "all used icon ligatures measure 24x24",
-      "menu fragment focus and listbox open/Escape/focusout behavior",
-      "zero initial video bytes",
-      "zero console errors, page errors, failed requests, or HTTP errors across Thai and English at 1280 and 390 px",
-      "all visible interactive targets measure at least 44 px"
+    "engine": "local headless Chrome on 2026-08-29",
+    "matrix": [
+      {"locale": "th", "theme": "light", "viewport": "1440x900", "result": "pass"},
+      {"locale": "th", "theme": "dark", "viewport": "390x844", "result": "pass"},
+      {"locale": "en", "theme": "light", "viewport": "320x700", "result": "pass"}
     ],
+    "viewports": ["1440x900", "390x844", "320x700"],
+    "verified": [
+      "body and document scrollWidth equal the viewport in every matrix row",
+      "correct theme-specific transparent logo visibility; no logo carrier or reconstructed dark lockup",
+      "one-line mobile login CTA",
+      "sticky header is 76 px desktop / 68 px mobile and the hero bottom equals the viewport height",
+      "open menu has no horizontal overflow, hides the header toggle, exposes exactly one SVG close, and has no missing ligature or duplicate menu icon",
+      "theme and locale controls are capsules; page and ecosystem rows are simplified with no active accent rail",
+      "social order is Facebook, Instagram, TikTok, LinkedIn; Thai marks the LinkedIn item as โพสต์เด่น",
+      "Facebook and Instagram iframe sources and TikTok script load on intersection; Facebook uses the actual container width; LinkedIn remains unloaded on mobile until its own card approaches the viewport",
+      "story disclosure opens and its theme-specific mark switches correctly",
+      "reduced-motion presents final visible states without reveal or disclosure animation",
+      "contact-form validation/error preservation, 24-character phone maximum and submit state pass without sending a production inquiry",
+      "menu, disclosure, topic picker and visible page controls pass the local keyboard/focus regression",
+      "zero same-origin console errors, page errors, failed requests, or HTTP errors"
+    ],
+    "thirdPartyObservation": "Facebook Page Plugin emitted console chatter inside its own cross-origin frame; it is provider-owned code and not counted as a same-origin page error.",
+    "pending": [],
     "inAppBrowser": "blocked_by_admin_policy_check"
   },
   "browserAndProductionGates": {
-    "localHttp": "pass; all declared local assets returned HTTP 200 and explicit favicon removed the browser fallback 404",
-    "pagesBuild": "pass; GitHub Pages built artifact commit 19efbc45ae66ab373816de31811c4d272c50d755 at 2026-08-28T19:55:29Z",
-    "liveHttpAndMime": "pass at 2026-08-28T19:56:33Z; root, index, Thai, English, _ds/styles.css, site.css, site.js, logo PNG, and MP4 returned HTTP 200 with expected MIME types",
-    "liveByteParity": "pass; index, both locale HTML files, site.css, site.js, and font-assets.manifest.json matched committed SHA-256 values",
-    "liveChrome": {
-      "viewports": ["1280x800", "390x844"],
-      "finalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
-      "consolePageRequestOrHttpErrors": 0,
-      "horizontalOverflowPx": 0,
-      "heroFirstViewportFit": "exact at both viewports",
-      "initialVideoBytes": 0,
-      "favicon": "resolved to the declared same-origin brand PNG"
-    }
+    "localHttp": "pass for the three sampled local Chrome matrices; no same-origin request or HTTP errors",
+    "pagesBuild": "pending for ui-20260829-02",
+    "liveHttpAndMime": "pending for ui-20260829-02",
+    "liveByteParity": "pending for ui-20260829-02",
+    "liveChrome": "pending for ui-20260829-02"
   }
 }
