@@ -25,7 +25,7 @@ upgrading source inspection into stronger evidence.
 | SC-12 | fail | The public page remains deliberately `noindex`; Open Graph, JSON-LD, sitemap inclusion and install/social-preview roles remain outside this release. The favicon now uses the compact full-colour symbol. |
 | SC-13 | pass | Facebook, Instagram, TikTok and LinkedIn destinations are visible in the requested order with minimal brand marks; the exact CityMETER proof share remains separate. |
 | SC-14 | fail | The 81-occurrence source inventory and local keyboard/form states are checked, but a real contact POST/inbox outcome is not included. |
-| SC-15 | fail | Local implementation QA passes and the contact API's prior preflight/GET guard evidence remains recorded; GitHub Pages build, live HTTP/MIME, public byte parity, external destinations and inbox delivery are pending for this build. |
+| SC-15 | fail | GitHub Pages build 1181430732, required live HTTP/MIME checks, sampled live Chrome states and exact public byte/hash parity pass for commit `fc2bfc772170ba3f4d0fd9ba909f679d5ac73430`; external navigation destinations and inbox delivery remain outside this verification. |
 | SC-16 | fail | The shared manifest records both locale routes but is not claimed as a complete per-route rendered-contract projection. |
 | SC-17 | pass | Retired values are absent from the public page layer; no retired literal was added in this release. |
 | SC-18 | pass | The first view has no caution/caveat block; the dated product proof band follows the hero and the null legacy row is not rendered. |

@@ -170,9 +170,29 @@
   },
   "browserAndProductionGates": {
     "localHttp": "pass for the three sampled local Chrome matrices; no same-origin request or HTTP errors",
-    "pagesBuild": "pending for ui-20260829-02",
-    "liveHttpAndMime": "pending for ui-20260829-02",
-    "liveByteParity": "pending for ui-20260829-02",
-    "liveChrome": "pending for ui-20260829-02"
+    "productionArtifact": {
+      "commit": "fc2bfc772170ba3f4d0fd9ba909f679d5ac73430",
+      "tree": "87db2d3f9d0be014b30ca62c5a15f9a398801763",
+      "verifiedAt": "2026-08-29T03:36:05Z"
+    },
+    "pagesBuild": "pass; build 1181430732 completed with status built in 30513 ms and updated_at 2026-08-29T03:33:03Z",
+    "liveHttpAndMime": "pass; root 200 text/html 2978 bytes; index 200 text/html 2978; Thai 200 text/html 60327; English 200 text/html 52376; DS styles 200 text/css 947; site.css 200 text/css 32555; site.js 200 application/javascript 18259; full-colour symbol 200 image/png 32025; cream symbol 200 image/png 64975",
+    "liveByteParity": "pass; index aaa714df5070e00c061dec253114a619a6385b0944c74590edf19e7af910cfdb; Thai a1c2151d3eaa4c0c701c7b5f49539e7b65eafce68da35f3dcc0935b143c8d08c; English 5b040f13f06c8c7e0af68d74a6a24c4c39f3e8351e72c7d81ae263d46928cf7c; site.css 9c95273ecf4357d0f1794291db7e0eb497a269a6b78f49809082a43f9b1d56c4; site.js 01850050667dc3a2fd5e6040c95cf178a03ad941374db71e0f889314e26e1a84; colour symbol 23456af1cfd50cff6dc8ac03372591b909cc004b41772de8b037f4df30b96595; cream symbol 269557e0829a5f11711760d2b6d22fa8ce2eaff8acc6d2ce640a8554e275fefc",
+    "liveChrome": {
+      "rootRedirect": "pass; root navigation resolved to Landometer-Home-TH.dc.html",
+      "matrix": [
+        {"locale": "th", "theme": "light", "viewport": "1440x900", "facebookWidthPx": 500, "result": "pass"},
+        {"locale": "th", "theme": "dark", "viewport": "390x844", "facebookWidthPx": 350, "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "320x700", "facebookWidthPx": 281, "result": "pass"}
+      ],
+      "horizontalOverflowPx": 0,
+      "sameOriginErrors": 0,
+      "heroBottom": "equals viewport in all matrix rows",
+      "themeIdentity": "correct light/dark mark in all matrix rows",
+      "menu": "no overflow; exactly one SVG close; no active rail; CityMETER, CityWiki and Landom ecosystem rows; theme and locale controls use 999 px capsules",
+      "storyDisclosure": "opened successfully",
+      "socialOrder": ["Facebook", "Instagram", "TikTok", "LinkedIn"],
+      "facebookContainment": "500/350/281 px embeds remained inside their pages"
+    }
   }
 }

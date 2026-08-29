@@ -92,8 +92,8 @@ landometerBuild:
     url: "https://montri-th.github.io/rebuild02/"
     readiness: "share_ready"
     publicSafe: true
-    status: "pending"
-    qrOrLinkTest: "pending for ui-20260829-02; do not inherit the prior release result"
+    status: "verified"
+    qrOrLinkTest: "verified 2026-08-29T03:36:05Z; root redirected in live Chrome to the Thai route, required routes/assets returned HTTP 200 with expected MIME types and byte counts, and public SHA-256 parity passed for artifact commit fc2bfc772170ba3f4d0fd9ba909f679d5ac73430"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -438,7 +438,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local implementation QA passed TH light 1440x900, TH dark 390x844, and EN light 320x700 for zero overflow, 76/68 px header and exact hero fit, correct theme marks, simplified menu, story disclosure, social order/localized featured label, container-width Facebook embed, lazy social activation, reduced-motion, form behavior, and keyboard/focus paths; Pages, live HTTP/MIME, and byte parity remain pending"
+    renderedBrowserGate: "local and live Chrome passed TH light 1440x900, TH dark 390x844, and EN light 320x700 for zero overflow/same-origin errors, 76/68 px header and exact hero fit, correct theme marks, simplified menu, story disclosure, FB/IG/TT/LI order, and Facebook widths 500/350/281 px inside their cards; GitHub Pages build 1181430732 completed in 30513 ms at 2026-08-29T03:33:03Z and live HTTP/MIME/byte/hash parity passed at 2026-08-29T03:36:05Z for commit fc2bfc772170ba3f4d0fd9ba909f679d5ac73430 and tree 87db2d3f9d0be014b30ca62c5a15f9a398801763"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
