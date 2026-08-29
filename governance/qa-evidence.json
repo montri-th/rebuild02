@@ -75,18 +75,18 @@
   "browserAndProductionGates": {
     "localHttp": "pass",
     "productionArtifact": {
-      "commit": null,
-      "tree": null
+      "commit": "d732d504532c8afffeaa3c38a327fa1143193d69",
+      "tree": "d0eab9302dd6407e8da7b79b1a699297eaf5cb78"
     },
     "pagesBuild": {
-      "id": null,
-      "status": "pending",
-      "durationMs": null,
-      "updatedAt": null
+      "id": 1182568970,
+      "status": "built",
+      "durationMs": 24375,
+      "updatedAt": "2026-08-29T18:53:28Z"
     },
-    "liveHttpAndMime": "pending",
-    "liveByteParity": "pending",
-    "liveBrowser": "pending"
+    "liveHttpAndMime": "pass: 52/52 production routes and governed assets returned HTTP 200 with the expected MIME type",
+    "liveByteParity": "pass: 52/52 checked production responses matched artifact commit d732d504532c8afffeaa3c38a327fa1143193d69 byte-for-byte and SHA-256-for-SHA-256 at 2026-08-29T18:55:34Z",
+    "liveBrowser": "pass: TH and EN loaded build ui-20260830-06 in production Chromium at 1280x720 with zero horizontal overflow and no same-origin console errors. The governed 1920 px Yaowarat AVIF, five Location Intelligence topics, six product cards, canonical rounded-outline icon family, text-only underlines and four-provider editorial social grid rendered as authored; TikTok and all three lazy iframes activated when approached."
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

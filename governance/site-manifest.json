@@ -273,16 +273,16 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage JSON-LD"],
-    "currentReleaseState": "candidate_pending_live_verification",
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "pending",
-    "pagesBuildId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending",
-    "liveByteParity": "pending",
+    "currentReleaseState": "published_live_verified",
+    "verifiedArtifactCommit": "d732d504532c8afffeaa3c38a327fa1143193d69",
+    "verifiedArtifactTree": "d0eab9302dd6407e8da7b79b1a699297eaf5cb78",
+    "pagesBuildState": "built",
+    "pagesBuildId": 1182568970,
+    "pagesBuildDurationMs": 24375,
+    "pagesBuildUpdatedAt": "2026-08-29T18:53:28Z",
+    "verifiedAt": "2026-08-29T18:58:09Z",
+    "liveRouteEvidence": "pass: 52/52 production routes and governed assets returned HTTP 200 with expected MIME types",
+    "liveByteParity": "pass: 52/52 responses matched artifact-commit bytes and SHA-256 values at 2026-08-29T18:55:34Z",
     "localBrowserEvidence": {
       "matrix": [
         {"locale": "th", "theme": "dark", "viewport": "1440x900", "result": "pass"},
@@ -293,8 +293,11 @@
       "verified": "Local Chromium showed zero horizontal overflow; the sharper governed Yaowarat Location image; five product-neutral Location Intelligence questions including catchment competition and Location-based Market Listening; six restored, product-scoped ecosystem cards; canonical Material Symbols Rounded at FILL 0 / wght 300 / GRAD 0; text-only underlines; and a readable TikTok-first editorial social grid for TikTok, Facebook, Instagram and LinkedIn. Reduced-motion CSS and JavaScript retain final visible states."
     },
     "liveBrowserEvidence": {
-      "matrix": [],
-      "verified": "pending"
+      "matrix": [
+        {"locale": "th", "theme": "system", "viewport": "1280x720", "result": "pass"},
+        {"locale": "en", "theme": "system", "viewport": "1280x720", "result": "pass"}
+      ],
+      "verified": "Production Chromium loaded build ui-20260830-06 in TH and EN with zero horizontal overflow and no same-origin console errors. The 1920 px Yaowarat AVIF was selected; all five Location Intelligence topics, six product cards and the renamed Thai story label rendered as authored. Material Symbols Rounded resolved at FILL 0 / wght 300 / GRAD 0, no icon or arrow cue inherited an underline, and the TikTok-first editorial grid loaded visible TikTok, Facebook, Instagram and LinkedIn provider surfaces without an empty X card."
     }
   },
   "growth": {
@@ -321,7 +324,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "Local TH and EN Chromium passed Rebuild02 ui-20260830-06 icon, Location image, product ecosystem, copy, underline and social editorial-grid checks; Pages, HTTP/MIME/byte/SHA parity and live Chromium are pending the artifact push.",
+    "renderedBrowserGate": "pass: local responsive Chromium plus live TH/EN Chromium; Pages build 1182568970 built artifact commit d732d504532c8afffeaa3c38a327fa1143193d69; 52/52 production HTTP/MIME/byte/SHA checks passed",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -339,7 +342,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "fail",
+    "SC-15": "pass",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

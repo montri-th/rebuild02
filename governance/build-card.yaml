@@ -85,7 +85,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "candidate_pending_live_verification"
+      technicalStatus: "live_verified"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -96,10 +96,10 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "candidate"
+    readiness: "share_ready"
     publicSafe: true
-    status: "pending_artifact_push"
-    qrOrLinkTest: "pending artifact push, GitHub Pages build, HTTP/MIME/byte/SHA parity and live Chromium verification"
+    status: "published"
+    qrOrLinkTest: "pass: Pages build 1182568970 built artifact d732d50; 52/52 production HTTP/MIME/byte/SHA checks passed; TH and EN passed live Chromium with zero horizontal overflow"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -460,7 +460,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local TH and EN Chromium passed Rebuild02 ui-20260830-06 icon, Location image, product ecosystem, copy, underline and social editorial-grid checks; Pages, HTTP/MIME/byte/SHA parity and live Chromium are pending"
+    renderedBrowserGate: "pass: local responsive Chromium plus live TH/EN Chromium; Pages build 1182568970 built artifact d732d50; 52/52 production HTTP/MIME/byte/SHA checks passed; all four lazy social providers activated without an empty X card"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -474,8 +474,8 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 16
-      rowsFailedOrOpen: 7
+      rowsPassed: 17
+      rowsFailedOrOpen: 6
       rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:
