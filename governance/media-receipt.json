@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260829-04",
+  "artifactBuildId": "ui-20260829-05",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -55,6 +55,60 @@
       {"path": "assets/screens/business-dynamics-rebuild02-2560.avif", "bytes": 114900, "sha256": "f020f196412a525c8fa7527528f170c567c7946b8995e09a0d7994460662f46c"},
       {"path": "assets/screens/business-dynamics-rebuild02-2560.webp", "bytes": 230662, "sha256": "89cb243e2dc84e914ba5a828324dcb7a4ac7279bbff35c02f3f7c2e913954737"}
     ]
+  },
+  "citymeterSnapshotRefreshR5": {
+    "sourceUrl": "https://landometer.com/v3/citymeter",
+    "representationLabel": "Current public CityMETER user-interface captures, not raw or live analytical data; source captures remain outside the repository.",
+    "visualReview": "Pass: labels, maps, selected-building detail, 3D columns, and the 2011–2024 flood timeline are legible at their authored frames; no personal identifiers are present.",
+    "landPillar": {
+      "sourceCapture": {"path": "/private/tmp/rebuild02-citymeter-buildings-detail-crop-r5.png", "dimensions": "1800x1211", "bytes": 5823670, "sha256": "8f6fe5a7d8e37476352ac36d8d306e2313d696df05338a328a51f648b5256a5a", "crop": "wide CityMETER building and floor-area composition; right-side selected-building panel preserved by 100% 50% object position"},
+      "responsiveWidths": [640, 1200, 1800],
+      "outputs": [
+        {"path": "assets/screens/citymeter-buildings-rebuild02-r5-640.avif", "bytes": 64463, "sha256": "c20c4c345474ed95571670c50e7630d727ee384409b9afd6161c7847ac6726da"},
+        {"path": "assets/screens/citymeter-buildings-rebuild02-r5-640.webp", "bytes": 127130, "sha256": "1acec5b982701a11b4ec9b8cae3819c159d42f70453b32916a1fe5604a2c87c6"},
+        {"path": "assets/screens/citymeter-buildings-rebuild02-r5-1200.avif", "bytes": 177013, "sha256": "f741d81550b683801f4797295bf0b6375ea8badeb13471c39284612b532e605f"},
+        {"path": "assets/screens/citymeter-buildings-rebuild02-r5-1200.webp", "bytes": 355490, "sha256": "97b47c6e73b3dda67aaf1208ce50040ff2b3d7502bd1940d5342ce967ee641c8"},
+        {"path": "assets/screens/citymeter-buildings-rebuild02-r5-1800.avif", "bytes": 325255, "sha256": "12faa981b10206def058269cb4c510bf60fc526526c9ef329ac924e0a595c9e6"},
+        {"path": "assets/screens/citymeter-buildings-rebuild02-r5-1800.webp", "bytes": 614274, "sha256": "12c3f5165cd4abb405c48779f1e117bee491b9a168ef9164e7fa734c9a6d177a"}
+      ]
+    },
+    "landAppraisalTile": {
+      "sourceCapture": {"path": "/private/tmp/rebuild02-citymeter-land-appraisal-crop-r5.png", "dimensions": "1600x1200", "bytes": 4405077, "sha256": "49a40c76ce2df998b7db03b876372688f0dd03afee48a599a902e997eda5e3c4"},
+      "responsiveWidths": [336, 660, 1200],
+      "outputs": [
+        {"path": "assets/screens/land-appraisal-rebuild02-r5-336.avif", "bytes": 19017, "sha256": "913275bb1ddd745033acea38a6f2b6279fb4c3d2a1cbed31f1c63d44e6ec6926"},
+        {"path": "assets/screens/land-appraisal-rebuild02-r5-336.webp", "bytes": 34624, "sha256": "c2870aa92df38940515612d776646d5a1a9806113fa05904efe12369f2d6d4e8"},
+        {"path": "assets/screens/land-appraisal-rebuild02-r5-660.avif", "bytes": 62022, "sha256": "b774d7f74e9a7ad58a7defcddfa329f97cf05bcb11c3eaaf2e5db6a5cd9cafb5"},
+        {"path": "assets/screens/land-appraisal-rebuild02-r5-660.webp", "bytes": 120128, "sha256": "a6b5e1ec5b091dd493156ebd6fe376b9fb414d600338d4a18acbdbeca98f54c3"},
+        {"path": "assets/screens/land-appraisal-rebuild02-r5-1200.avif", "bytes": 156898, "sha256": "e829b9a8033a164c5eddbe74823816fa3b321749edd23edbfe8064d16afb3a0a"},
+        {"path": "assets/screens/land-appraisal-rebuild02-r5-1200.webp", "bytes": 302114, "sha256": "79b7ecf90f96111bc01fbf1541469149ce1ddc04e4c3cf408d3a3fc9d90a0eb8"}
+      ]
+    },
+    "buildingsTile": {
+      "sourceCapture": {"path": "/private/tmp/rebuild02-citymeter-buildings-tile-crop-r5.png", "dimensions": "1600x1200", "bytes": 5092084, "sha256": "47a433ac56708b55cdfed40e632c01bd9dbdb612fb39a078e2ffe3631961b855"},
+      "responsiveWidths": [336, 660, 1200],
+      "outputs": [
+        {"path": "assets/screens/buildings-rebuild02-r5-336.avif", "bytes": 22716, "sha256": "b3635c6bda761c6b70e4607f39a332c236daccfc115ae4ce9a34ca22b1440998"},
+        {"path": "assets/screens/buildings-rebuild02-r5-336.webp", "bytes": 41842, "sha256": "050d677679befd20597e0b10fa53a866df5c59d592c230e1f5205c65e2470d85"},
+        {"path": "assets/screens/buildings-rebuild02-r5-660.avif", "bytes": 72666, "sha256": "54fa44e0718e427009efe2f43e262b8c972a9e80f4b3fd269dfda973d1f0cb6f"},
+        {"path": "assets/screens/buildings-rebuild02-r5-660.webp", "bytes": 143270, "sha256": "dd9335a6106c2117415ad5b4148e547ffd3bd8484f25ffa0446e71e3a9ae2fbc"},
+        {"path": "assets/screens/buildings-rebuild02-r5-1200.avif", "bytes": 183060, "sha256": "2e633b1dc00a5ca92ba1f2b2ac309cc035e418ea50a175f2c7a41e9edee1be2a"},
+        {"path": "assets/screens/buildings-rebuild02-r5-1200.webp", "bytes": 361518, "sha256": "0b22ea4c39ef8cc1adbdb6a888bc563ee038162ed014f5b982dc0013c7df0525"}
+      ]
+    },
+    "floodTile": {
+      "sourceCapture": {"path": "/private/tmp/rebuild02-citymeter-flood-tile-crop-r5.png", "dimensions": "960x720", "bytes": 874822, "sha256": "60cf0dc997a28d8b8e6005d29300444f243706ba313324aea71a7b5f8e5e19f6"},
+      "responsiveWidths": [336, 660, 960],
+      "outputs": [
+        {"path": "assets/screens/flood-recurrent-rebuild02-r5-336.avif", "bytes": 11970, "sha256": "325061087e0a662ed307b5879712ee5c648dc607968502ed5066c010b0c64445"},
+        {"path": "assets/screens/flood-recurrent-rebuild02-r5-336.webp", "bytes": 19904, "sha256": "147d60d65c6bd2a5ea90c7526302e1f52329ab1b80a31b5f3720cef36b25ab28"},
+        {"path": "assets/screens/flood-recurrent-rebuild02-r5-660.avif", "bytes": 33000, "sha256": "4f411b07dba71748a69227681cf180f4705b59eed41b1aad5c36ae6bf8b4c0d7"},
+        {"path": "assets/screens/flood-recurrent-rebuild02-r5-660.webp", "bytes": 54492, "sha256": "b54333adecf86f70a0eaac9d59e41b806192fabc636fb7c2cd013958af613c56"},
+        {"path": "assets/screens/flood-recurrent-rebuild02-r5-960.avif", "bytes": 59198, "sha256": "11fcab8b25ff239abcfcb597021e023546b2f2168818b7dc6d169277a9ac4547"},
+        {"path": "assets/screens/flood-recurrent-rebuild02-r5-960.webp", "bytes": 92910, "sha256": "4b1ac8208578b26c02f2fa0b1755df46b74112f5b94c5ece766448695937a5eb"}
+      ]
+    },
+    "delivery": "AVIF preferred with WebP fallback; CSS-aligned sizes choose the smallest candidate that covers the rendered frame."
   },
   "populationAgeSexCloseup": {
     "sourceUrl": "https://landometer.com/v3/citymeter?d=population",

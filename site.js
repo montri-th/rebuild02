@@ -483,7 +483,8 @@
   function installSocialEmbeds() {
     var frames = Array.from(document.querySelectorAll('[data-social-embed]'));
     var tiktokEmbeds = Array.from(document.querySelectorAll('[data-tiktok-embed]'));
-    if (!frames.length && !tiktokEmbeds.length) return;
+    var xEmbeds = Array.from(document.querySelectorAll('[data-x-embed]'));
+    if (!frames.length && !tiktokEmbeds.length && !xEmbeds.length) return;
 
     function loadFrame(frame) {
       if (frame.hasAttribute('src') || !frame.getAttribute('data-src')) return;
@@ -512,12 +513,36 @@
       document.body.appendChild(script);
     }
 
-    function loadTarget(target) {
-      if (target.matches('[data-social-embed]')) loadFrame(target);
-      else loadTikTok(target);
+    function loadX(container) {
+      if (container.getAttribute('data-embed-loaded') === 'true') return;
+      container.setAttribute('data-embed-loaded', 'true');
+
+      function renderTimeline() {
+        if (window.twttr && window.twttr.widgets) window.twttr.widgets.load(container);
+      }
+
+      var existing = document.getElementById('x-embed-script');
+      if (existing) {
+        renderTimeline();
+        existing.addEventListener('load', renderTimeline, { once: true });
+        return;
+      }
+
+      var script = document.createElement('script');
+      script.id = 'x-embed-script';
+      script.src = 'https://platform.twitter.com/widgets.js';
+      script.async = true;
+      script.addEventListener('load', renderTimeline, { once: true });
+      document.body.appendChild(script);
     }
 
-    var targets = frames.concat(tiktokEmbeds);
+    function loadTarget(target) {
+      if (target.matches('[data-social-embed]')) loadFrame(target);
+      else if (target.matches('[data-tiktok-embed]')) loadTikTok(target);
+      else loadX(target);
+    }
+
+    var targets = frames.concat(tiktokEmbeds, xEmbeds);
     if (!('IntersectionObserver' in window)) {
       targets.forEach(loadTarget);
       return;
@@ -531,6 +556,40 @@
       });
     }, { rootMargin: '480px 0px', threshold: 0.01 });
     targets.forEach(function (target) { observer.observe(target); });
+  }
+
+  function installSocialMasonry() {
+    var grids = Array.from(document.querySelectorAll('[data-social-masonry]'));
+    if (!grids.length || !('ResizeObserver' in window)) return;
+
+    grids.forEach(function (grid) {
+      var cards = Array.from(grid.children).filter(function (item) {
+        return item.classList.contains('social-feed-card');
+      });
+      var frame = 0;
+
+      function layout() {
+        window.cancelAnimationFrame(frame);
+        frame = window.requestAnimationFrame(function () {
+          grid.classList.add('is-masonry-ready');
+          var styles = window.getComputedStyle(grid);
+          var row = parseFloat(styles.gridAutoRows) || 8;
+          var gap = parseFloat(styles.rowGap) || 0;
+          cards.forEach(function (card) {
+            var height = Math.max(card.scrollHeight, card.getBoundingClientRect().height);
+            var span = Math.max(1, Math.ceil((height + gap) / (row + gap)));
+            var value = 'span ' + span;
+            if (card.style.gridRowEnd !== value) card.style.gridRowEnd = value;
+          });
+        });
+      }
+
+      var resizeObserver = new ResizeObserver(layout);
+      cards.forEach(function (card) { resizeObserver.observe(card); });
+      window.addEventListener('load', layout, { once: true });
+      window.addEventListener('resize', layout);
+      layout();
+    });
   }
 
   function installVideo() {
@@ -588,6 +647,7 @@
   installShareControls();
   installMediaArrival();
   installMotion();
+  installSocialMasonry();
   installSocialEmbeds();
   installVideo();
   focusHashTarget();

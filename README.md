@@ -3,7 +3,7 @@
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
 install, bundler, CI workflow, or build step. Current artifact build:
-`ui-20260829-04`.
+`ui-20260829-05`.
 
 | File | Purpose |
 |---|---|
@@ -35,12 +35,20 @@ install, bundler, CI workflow, or build step. Current artifact build:
   attached only near the viewport, then plays muted, inline, and looping without
   controls. Responsive 4:3 and 4:5 crops keep faces and surrounding street life in view.
 - The CityMETER Business Dynamics hero uses a current, same-composition 16:9 capture
-  with 960, 1600, and 2560 px AVIF/WebP sources. The smaller proof grid now includes a
-  close-up Population age-and-sex chart instead of repeating Business Dynamics.
-- Stories are presented in TikTok, Facebook, Instagram, then LinkedIn order. The cards
-  occupy a wide single-column frame. Official provider surfaces load only near their
-  cards and refresh provider-owned content when activated; LinkedIn remains one
-  explicitly featured post.
+  with 960, 1600, and 2560 px AVIF/WebP sources. The Land pillar and the land-appraisal,
+  building and flood tiles use fresh responsive r5 captures; the fourth tile is a
+  close-up Population age-and-sex chart rather than a Business Dynamics duplicate.
+- A new product-neutral location-intelligence chapter introduces four ways to frame the
+  next question: competitive landscape by area, white space and site selection, branch
+  potential, and operational performance by area. Comparisons explicitly require the
+  same definition, time window, and area boundary.
+- Stories use a responsive TikTok-first masonry, followed by Facebook, Instagram,
+  LinkedIn, and X. TikTok receives the largest frame; the other cards share smaller
+  columns. Official provider surfaces load only near their cards and may refresh when
+  activated; LinkedIn remains one explicitly featured post.
+- The company-story disclosure reveals its two paragraphs in sequence and resolves into
+  the four-beat line “Let us cultivate our city with data.” Reduced motion presents the
+  complete thought immediately.
 - Search discovery is enabled through canonical/hreflang metadata, Open Graph and
   Twitter cards, Organization/WebSite/WebPage JSON-LD, `robots.txt`, and `sitemap.xml`.
   Release dates change only when Rebuild02 content actually changes.

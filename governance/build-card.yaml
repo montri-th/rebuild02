@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260829-04"
+      id: "ui-20260829-05"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -85,7 +85,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "live_verified"
+      technicalStatus: "candidate_pending_live_verification"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -96,10 +96,10 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "share_ready"
+    readiness: "candidate"
     publicSafe: true
-    status: "published"
-    qrOrLinkTest: "GitHub Pages build 1181907280, 20/20 HTTP/MIME/byte/SHA checks and live Chromium verified for ui-20260829-04 artifact commit 5cd9e0e"
+    status: "pending_artifact_push"
+    qrOrLinkTest: "pending artifact push, GitHub Pages build, HTTP/MIME/byte/SHA parity and live Chromium verification"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -119,7 +119,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "122f572dae11e00579da6c854fce892b6278ea99871545e6255965e9332199a4"
+        copyHash: "8ba52c19bf3aed21f0c2fce037edb2fa5808ebfdb8ffbd0570a84eb53dc7a959"
         naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
         parityReviewRef: "bilingual source review complete; sampled rendered review complete"
       - locale: "en"
@@ -130,7 +130,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "04d7972dec4776b225266824dabeafb45e410be1d710b9df5a7e645c1099f786"
+        copyHash: "7f41b18b54819d2ab877fa3b7a70bf06f3ca40365995d7ad751c886ad73b70e3"
         naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
         parityReviewRef: "bilingual source review complete; sampled rendered review complete"
     internalVoiceWordsPrinted: false
@@ -144,7 +144,7 @@ landometerBuild:
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild02.ui-20260829-04"
+    channelParityKey: "landometer.home.rebuild02.ui-20260829-05"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -241,6 +241,18 @@ landometerBuild:
       - path: "assets/screens/business-dynamics-rebuild02-2560.webp"
         sha256: "89cb243e2dc84e914ba5a828324dcb7a4ac7279bbff35c02f3f7c2e913954737"
         privacy: "current public CityMETER interface capture; metadata stripped"
+      - path: "assets/screens/citymeter-buildings-rebuild02-r5-1800.avif"
+        sha256: "12faa981b10206def058269cb4c510bf60fc526526c9ef329ac924e0a595c9e6"
+        privacy: "current public CityMETER building/floor-area interface capture; metadata stripped; right-side selected-building panel preserved"
+      - path: "assets/screens/land-appraisal-rebuild02-r5-1200.avif"
+        sha256: "e829b9a8033a164c5eddbe74823816fa3b321749edd23edbfe8064d16afb3a0a"
+        privacy: "current public CityMETER land-appraisal interface capture; metadata stripped"
+      - path: "assets/screens/buildings-rebuild02-r5-1200.avif"
+        sha256: "2e633b1dc00a5ca92ba1f2b2ac309cc035e418ea50a175f2c7a41e9edee1be2a"
+        privacy: "current public CityMETER building/floor-area interface capture; metadata stripped"
+      - path: "assets/screens/flood-recurrent-rebuild02-r5-960.avif"
+        sha256: "11fcab8b25ff239abcfcb597021e023546b2f2168818b7dc6d169277a9ac4547"
+        privacy: "current public CityMETER flood-impact interface capture with 2011–2024 timeline; metadata stripped"
       - path: "assets/screens/population-age-sex-closeup-rebuild02-r4-660.avif"
         sha256: "cf3fb8ad506d6c20ce6259e72b5527ca5cdf5d852e581a0bdcd21d820172b560"
         privacy: "aggregate age-and-sex chart close-up from the current public CityMETER Population interface; no personal identifiers"
@@ -265,7 +277,8 @@ landometerBuild:
       - "32-second alternating hero-image pan contained within the fixed first-viewport crop"
       - "Downbeat press for action controls"
       - "One-drop settle for copy feedback"
-      - "Story disclosure opens with a short opacity-and-position transition"
+      - "Story disclosure stages two narrative paragraphs over 820 ms with 80/260 ms delays, followed by a four-beat 480 ms rally"
+      - "TikTok-first social masonry recomputes row spans after provider content resizes"
     omitted:
       - "Offbeat count-up is absent because the null legacy-system row is not rendered."
       - "No parallax, hue cycling, or scroll jacking."
@@ -306,7 +319,7 @@ landometerBuild:
     securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260829-04"
+    artifactBuildId: "ui-20260829-05"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -330,47 +343,47 @@ landometerBuild:
         sha256: "4bf6d86dd4ece9e02db754058f91b346415a71f595ede4af77c76b89b7b9a553"
       - channel: "self_hosted_font_css"
         path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/tokens/fonts.css"
-        bytes: 3310
-        sha256: "61d7bfe6e83a0d6040a0f4cb832c5d7f6c67651ec08d58bb489298fdc8963f96"
+        bytes: 3313
+        sha256: "375037006da23f06142ca427093a68b4dee4df546a16d59ba867e3b27c2bdad7"
       - channel: "icon_font"
-        path: "assets/fonts/material-symbols-rounded-rebuild02-r6.woff2"
-        bytes: 10680
-        sha256: "fcf62592518354e675b2b3277725c21abf9352a5bac3f42e6379f73bc2b53c72"
+        path: "assets/fonts/material-symbols-rounded-rebuild02-r7.woff2"
+        bytes: 10860
+        sha256: "d429cd515aac1457a76e99d6887849a635f4c3bb70b3a8c490f07f64dcd1f942"
       - channel: "hosted_th"
         path: "Landometer-Home-TH.dc.html"
-        bytes: 66250
-        sha256: "122f572dae11e00579da6c854fce892b6278ea99871545e6255965e9332199a4"
+        bytes: 76151
+        sha256: "8ba52c19bf3aed21f0c2fce037edb2fa5808ebfdb8ffbd0570a84eb53dc7a959"
       - channel: "hosted_en"
         path: "Landometer-Home-EN.dc.html"
-        bytes: 57016
-        sha256: "04d7972dec4776b225266824dabeafb45e410be1d710b9df5a7e645c1099f786"
+        bytes: 64680
+        sha256: "7f41b18b54819d2ab877fa3b7a70bf06f3ca40365995d7ad751c886ad73b70e3"
       - channel: "redirect_alias"
         path: "index.html"
         bytes: 3058
-        sha256: "bbf4b451aded1227df837dd2aeb33e0394a95af38201042346ea96a7065f7a42"
+        sha256: "21a5b3f73e6608d1e3f431ca252434b39a0f3826cb9cf14e1a55f3e804fbb6cf"
       - channel: "site_css"
         path: "site.css"
-        bytes: 39776
-        sha256: "9148688f62b9a4461344cbc248cc1f2b98bbbf7dca76e61651d0dcf5dd08393d"
+        bytes: 45577
+        sha256: "cbc6a64fa766992c4d326efbf7ccd512caf5fd413cd6e8438aa5c046fb3ea743"
       - channel: "site_js"
         path: "site.js"
-        bytes: 22059
-        sha256: "1a5cc8244ab5d77e50909de51fd1253030fd848cafa169a70e37de4cadf59521"
+        bytes: 24417
+        sha256: "a5fffc1bc514253eed4591bc3b501d1c74bc9205d08fbf5ba6b51e4525a0157a"
       - channel: "font_manifest"
         path: "assets/fonts/font-assets.manifest.json"
-        bytes: 9366
-        sha256: "5d994ab793deccc6e95e94134ad88882238f5ae4d87c1142e97310782c906ef4"
+        bytes: 9629
+        sha256: "d02118d1b59fe64e5738af1c9fcee19a27821d61a72b0c1b2e92bc5a8f34c539"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild02-ui-20260829-04"
-      catalogOrContentVersion: "landometer-home-rebuild02-v4"
+      receiptId: "rebuild02-ui-20260829-05"
+      catalogOrContentVersion: "landometer-home-rebuild02-v5"
       issuedAt: "2026-08-29"
   privacy:
     personalData: true
     sensitivity: "public"
     redactedPublicProjection: false
     governanceRecord:
-      id: "privacy-direct-inquiry-ui-20260829-04"
+      id: "privacy-direct-inquiry-ui-20260829-05"
       owner: "Montri (Landometer), per Rebuild02 work order"
       collectionBasisAndMinimumFields: "After explicit submit, the form sends topic, name, email, phone, and message; name, email, phone, and message are required."
       accessAndRetentionDeletion: "The first-party production inquiry backend owns access, retention, and deletion; those backend rules are not documented in this static repository."
@@ -403,13 +416,14 @@ landometerBuild:
       outcome: "the visitor's configured mail application opens with the recipient populated"
     socialEmbeds:
       activation: "within 480 px of the viewport by IntersectionObserver; Facebook receives the measured card width clamped to its supported 180–500 px range"
-      platformFreshness: "Facebook timeline, Instagram profile, and TikTok creator are platform-rendered at activation subject to provider caching; LinkedIn is a single featured post and is not represented as a latest feed"
+      platformFreshness: "TikTok creator, Facebook timeline, Instagram profile and X timeline are platform-rendered at activation subject to provider caching; LinkedIn is a single featured post and is not represented as a latest feed"
       privacyBoundary: "the primary page is same-origin; approaching a social card permits that provider to receive the normal iframe/script request context"
       endpoints:
         - "Facebook Page Plugin timeline iframe"
         - "Instagram profile embed iframe"
         - "TikTok official creator embed script"
         - "LinkedIn featured-post iframe"
+        - "X official timeline widget with visible profile-link fallback"
   hook:
     enabled: false
     entryTrigger: ""
@@ -441,7 +455,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local and live Chromium passed Rebuild02 ui-20260829-04 desktop/mobile checks for calm/prominent navbar states, both CTA sweep placements, hero pan, Population tile, rail-free listbox and mailto action; Pages build 1181907280 and exact HTTP/MIME/byte/SHA parity passed 20/20 checks for artifact commit 5cd9e0e"
+    renderedBrowserGate: "local Chromium passed Rebuild02 ui-20260829-05 snapshot clarity, CTA hierarchy, cue grammar, story motion and responsive masonry checks; Pages, HTTP/MIME/byte/SHA parity and live Chromium are pending"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -462,8 +476,8 @@ landometerBuild:
   iconSystem:
     family: "material-symbols-rounded"
     axes: "FILL 0, wght 300, GRAD 0, opsz 20-24"
-    selfHostedSubsetPath: "assets/fonts/material-symbols-rounded-rebuild02-r6.woff2"
-    subsetSha256: "fcf62592518354e675b2b3277725c21abf9352a5bac3f42e6379f73bc2b53c72"
+    selfHostedSubsetPath: "assets/fonts/material-symbols-rounded-rebuild02-r7.woff2"
+    subsetSha256: "d429cd515aac1457a76e99d6887849a635f4c3bb70b3a8c490f07f64dcd1f942"
     licensePath: "assets/fonts/LICENSE-Material-Symbols.txt"
     secondFamilyPresent: false
   actionGeometry:

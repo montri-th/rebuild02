@@ -19,7 +19,7 @@
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260829-04"
+    "artifactBuildId": "ui-20260829-05"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260829-04",
+      "id": "ui-20260829-05",
       "path": "governance/site-manifest.json"
     }
   },
@@ -39,7 +39,7 @@
     "cleanCompletion": "Explore a product, share an exact example, send the team a message, or leave without a synthetic retention loop."
   },
   "composition": {
-    "route": ["Measure", "Land", "Cultivate", "Living", "Products", "CityMETER", "CityWiki", "Landom", "Our story", "Stories", "Contact"],
+    "route": ["Measure", "Land", "Cultivate", "Living", "Location intelligence", "Products", "CityMETER", "CityWiki", "Landom", "Our story", "Stories", "Contact"],
     "connectors": ["dated product proof", "exact-link share", "minimal ecosystem navigation", "expandable company story", "lazy official social embeds", "direct inquiry form", "Google Maps link"]
   },
   "capabilities": {
@@ -47,6 +47,9 @@
     "calmNavigation": true,
     "sweepingNavigationCta": true,
     "ambientHeroPan": true,
+    "stagedStoryRally": true,
+    "responsiveSocialMasonry": true,
+    "locationQuestionFramework": true,
     "share": true,
     "mapHandoff": true,
     "directContactSubmission": true,
@@ -68,23 +71,24 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260829-04",
+    "artifactBuildId": "ui-20260829-05",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260829-04",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v4",
+      "receiptId": "rebuild02-ui-20260829-05",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v5",
       "issuedAt": "2026-08-29"
     }
   },
   "network": {
     "loadTimeSubresources": "Primary page rendering remains same-origin. Official platform social embeds begin only when their cards approach the viewport.",
     "socialEmbeds": {
-      "activation": "IntersectionObserver with a 480 px root margin; no social iframe src or TikTok script exists before activation; Facebook receives its measured container width clamped to 180–500 px",
-      "freshness": "Facebook timeline, Instagram profile, and TikTok creator content are rendered from their official platform endpoints on each activated page load subject to provider caching; LinkedIn is one explicitly featured post, not a claimed latest feed",
+      "activation": "IntersectionObserver with a 480 px root margin; no social iframe src, TikTok script or X widget script exists before activation; Facebook receives its measured container width clamped to 180–500 px",
+      "freshness": "TikTok creator, Facebook timeline, Instagram profile and X timeline content are rendered from official platform endpoints on each activated page load subject to provider caching; LinkedIn is one explicitly featured post, not a claimed latest feed",
       "providers": [
         {"name": "TikTok", "mode": "creator embed with provider-owned recent video surface", "endpoint": "https://www.tiktok.com/embed.js"},
         {"name": "Facebook", "mode": "Page Plugin timeline iframe", "endpoint": "https://www.facebook.com/plugins/page.php"},
         {"name": "Instagram", "mode": "profile embed iframe", "endpoint": "https://www.instagram.com/landometer/embed/"},
-        {"name": "LinkedIn", "mode": "featured post iframe", "endpoint": "https://www.linkedin.com/embed/feed/update/urn:li:activity:7413980705484943361"}
+        {"name": "LinkedIn", "mode": "featured post iframe", "endpoint": "https://www.linkedin.com/embed/feed/update/urn:li:activity:7413980705484943361"},
+        {"name": "X", "mode": "official timeline widget with visible profile-link fallback", "endpoint": "https://platform.twitter.com/widgets.js"}
       ]
     },
     "share": {
@@ -166,10 +170,34 @@
       "sha256": "47eb23f0b2a06bd6882080bcc693384f5d59791b434045e7281b98fa2831903c"
     },
     {
-      "path": "assets/fonts/material-symbols-rounded-rebuild02-r6.woff2",
-      "bytes": 10680,
-      "sha256": "fcf62592518354e675b2b3277725c21abf9352a5bac3f42e6379f73bc2b53c72"
+      "path": "assets/fonts/material-symbols-rounded-rebuild02-r7.woff2",
+      "bytes": 10860,
+      "sha256": "d429cd515aac1457a76e99d6887849a635f4c3bb70b3a8c490f07f64dcd1f942"
     },
+    {"path": "assets/screens/citymeter-buildings-rebuild02-r5-640.avif", "bytes": 64463, "sha256": "c20c4c345474ed95571670c50e7630d727ee384409b9afd6161c7847ac6726da"},
+    {"path": "assets/screens/citymeter-buildings-rebuild02-r5-640.webp", "bytes": 127130, "sha256": "1acec5b982701a11b4ec9b8cae3819c159d42f70453b32916a1fe5604a2c87c6"},
+    {"path": "assets/screens/citymeter-buildings-rebuild02-r5-1200.avif", "bytes": 177013, "sha256": "f741d81550b683801f4797295bf0b6375ea8badeb13471c39284612b532e605f"},
+    {"path": "assets/screens/citymeter-buildings-rebuild02-r5-1200.webp", "bytes": 355490, "sha256": "97b47c6e73b3dda67aaf1208ce50040ff2b3d7502bd1940d5342ce967ee641c8"},
+    {"path": "assets/screens/citymeter-buildings-rebuild02-r5-1800.avif", "bytes": 325255, "sha256": "12faa981b10206def058269cb4c510bf60fc526526c9ef329ac924e0a595c9e6"},
+    {"path": "assets/screens/citymeter-buildings-rebuild02-r5-1800.webp", "bytes": 614274, "sha256": "12c3f5165cd4abb405c48779f1e117bee491b9a168ef9164e7fa734c9a6d177a"},
+    {"path": "assets/screens/land-appraisal-rebuild02-r5-336.avif", "bytes": 19017, "sha256": "913275bb1ddd745033acea38a6f2b6279fb4c3d2a1cbed31f1c63d44e6ec6926"},
+    {"path": "assets/screens/land-appraisal-rebuild02-r5-336.webp", "bytes": 34624, "sha256": "c2870aa92df38940515612d776646d5a1a9806113fa05904efe12369f2d6d4e8"},
+    {"path": "assets/screens/land-appraisal-rebuild02-r5-660.avif", "bytes": 62022, "sha256": "b774d7f74e9a7ad58a7defcddfa329f97cf05bcb11c3eaaf2e5db6a5cd9cafb5"},
+    {"path": "assets/screens/land-appraisal-rebuild02-r5-660.webp", "bytes": 120128, "sha256": "a6b5e1ec5b091dd493156ebd6fe376b9fb414d600338d4a18acbdbeca98f54c3"},
+    {"path": "assets/screens/land-appraisal-rebuild02-r5-1200.avif", "bytes": 156898, "sha256": "e829b9a8033a164c5eddbe74823816fa3b321749edd23edbfe8064d16afb3a0a"},
+    {"path": "assets/screens/land-appraisal-rebuild02-r5-1200.webp", "bytes": 302114, "sha256": "79b7ecf90f96111bc01fbf1541469149ce1ddc04e4c3cf408d3a3fc9d90a0eb8"},
+    {"path": "assets/screens/buildings-rebuild02-r5-336.avif", "bytes": 22716, "sha256": "b3635c6bda761c6b70e4607f39a332c236daccfc115ae4ce9a34ca22b1440998"},
+    {"path": "assets/screens/buildings-rebuild02-r5-336.webp", "bytes": 41842, "sha256": "050d677679befd20597e0b10fa53a866df5c59d592c230e1f5205c65e2470d85"},
+    {"path": "assets/screens/buildings-rebuild02-r5-660.avif", "bytes": 72666, "sha256": "54fa44e0718e427009efe2f43e262b8c972a9e80f4b3fd269dfda973d1f0cb6f"},
+    {"path": "assets/screens/buildings-rebuild02-r5-660.webp", "bytes": 143270, "sha256": "dd9335a6106c2117415ad5b4148e547ffd3bd8484f25ffa0446e71e3a9ae2fbc"},
+    {"path": "assets/screens/buildings-rebuild02-r5-1200.avif", "bytes": 183060, "sha256": "2e633b1dc00a5ca92ba1f2b2ac309cc035e418ea50a175f2c7a41e9edee1be2a"},
+    {"path": "assets/screens/buildings-rebuild02-r5-1200.webp", "bytes": 361518, "sha256": "0b22ea4c39ef8cc1adbdb6a888bc563ee038162ed014f5b982dc0013c7df0525"},
+    {"path": "assets/screens/flood-recurrent-rebuild02-r5-336.avif", "bytes": 11970, "sha256": "325061087e0a662ed307b5879712ee5c648dc607968502ed5066c010b0c64445"},
+    {"path": "assets/screens/flood-recurrent-rebuild02-r5-336.webp", "bytes": 19904, "sha256": "147d60d65c6bd2a5ea90c7526302e1f52329ab1b80a31b5f3720cef36b25ab28"},
+    {"path": "assets/screens/flood-recurrent-rebuild02-r5-660.avif", "bytes": 33000, "sha256": "4f411b07dba71748a69227681cf180f4705b59eed41b1aad5c36ae6bf8b4c0d7"},
+    {"path": "assets/screens/flood-recurrent-rebuild02-r5-660.webp", "bytes": 54492, "sha256": "b54333adecf86f70a0eaac9d59e41b806192fabc636fb7c2cd013958af613c56"},
+    {"path": "assets/screens/flood-recurrent-rebuild02-r5-960.avif", "bytes": 59198, "sha256": "11fcab8b25ff239abcfcb597021e023546b2f2168818b7dc6d169277a9ac4547"},
+    {"path": "assets/screens/flood-recurrent-rebuild02-r5-960.webp", "bytes": 92910, "sha256": "4b1ac8208578b26c02f2fa0b1755df46b74112f5b94c5ece766448695937a5eb"},
     {
       "path": "assets/media/living-city-rebuild02-r2.mp4",
       "bytes": 13724404,
@@ -239,16 +267,16 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage JSON-LD"],
-    "currentReleaseState": "verified",
-    "verifiedArtifactCommit": "5cd9e0e9a7b6193a5e1e70b68aa403f91c64dc68",
-    "verifiedArtifactTree": "912af6e079f40f86c7c762b02377c69ece08ee74",
-    "pagesBuildState": "built",
-    "pagesBuildId": 1181907280,
-    "pagesBuildDurationMs": 24380,
-    "pagesBuildUpdatedAt": "2026-08-29T10:27:51Z",
-    "verifiedAt": "2026-08-29T10:36:13.000Z",
-    "liveRouteEvidence": "Twenty production routes and assets returned HTTP 200 with expected MIME, including root, index, both locale routes, the pinned design-system entry, site CSS/JS, r6 identity, icon font, Living video/poster, Business Dynamics AVIF/WebP, all four Population close-up derivatives, social preview, robots.txt and sitemap.xml.",
-    "liveByteParity": "All twenty checked production responses matched their committed local files byte-for-byte and by SHA-256 for artifact commit 5cd9e0e9a7b6193a5e1e70b68aa403f91c64dc68.",
+    "currentReleaseState": "candidate_pending_live_verification",
+    "verifiedArtifactCommit": null,
+    "verifiedArtifactTree": null,
+    "pagesBuildState": "pending",
+    "pagesBuildId": null,
+    "pagesBuildDurationMs": null,
+    "pagesBuildUpdatedAt": null,
+    "verifiedAt": null,
+    "liveRouteEvidence": "pending",
+    "liveByteParity": "pending",
     "localBrowserEvidence": {
       "matrix": [
         {"locale": "th", "theme": "dark", "viewport": "1440x900", "result": "pass"},
@@ -256,14 +284,11 @@
         {"locale": "en", "theme": "light", "viewport": "320x700", "result": "pass"},
         {"locale": "th", "theme": "dark", "viewport": "1440x900", "route": "#contact", "result": "pass"}
       ],
-      "verified": "Local Chromium showed no horizontal overflow; the hero retained its first-viewport composition while its 32-second alternate pan moved within the crop; the r6 navbar contracted to 58/54 px after downward scroll and restored on upward scroll, pointer/focus intent and menu open; both navbar CTA placements carried the text sweep; the Population age-and-sex crop replaced the duplicate small Business Dynamics tile; dropdown states used neutral surfaces without a coloured rail; and the 44 px office email action resolved to mailto:hello@landometer.com. Reduced-motion kill-switch logic was inspected in the final CSS and JavaScript."
+      "verified": "Local Chromium showed zero horizontal overflow, a sharp right-aligned Land capture, crisp CityMETER tiles, distinct primary/secondary/utility actions, one typographic external-link cue grammar, four Landom entry paths, staged story/rally motion, and TikTok-first responsive masonry with Facebook, Instagram, LinkedIn and X. Reduced-motion CSS and JavaScript retain final visible states."
     },
     "liveBrowserEvidence": {
-      "matrix": [
-        {"locale": "th", "theme": "light", "viewport": "1440x900", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "320x700", "route": "#showcases", "result": "pass"}
-      ],
-      "verified": "Live Chromium loaded ui-20260829-04 with zero horizontal overflow; the desktop hero transform changed over time, the header reached its 58 px calm state, and the sweep animations were active. At 320 px, the menu restored the 68 px prominent header, its CTA sweep remained pointer-inert, and the Population 4:3 AVIF loaded completely with the correct link and label. The only browser log entry was provider-owned TikTok informational output; no error was recorded."
+      "matrix": [],
+      "verified": "pending"
     }
   },
   "growth": {
@@ -290,7 +315,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "Local and live Chromium passed the Rebuild02 ui-20260829-04 desktop/mobile checks for calm/prominent navbar transitions, both CTA sweep placements, hero pan, Population crop, rail-free topic picker and 44 px mailto action. GitHub Pages build 1181907280 and exact HTTP/MIME/byte/SHA parity passed 20/20 checks for artifact commit 5cd9e0e9a7b6193a5e1e70b68aa403f91c64dc68.",
+    "renderedBrowserGate": "Local Chromium passed Rebuild02 ui-20260829-05; production Pages, HTTP/MIME/byte/SHA, and live-browser verification are pending the artifact push.",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -308,7 +333,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "pass",
+    "SC-15": "fail",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

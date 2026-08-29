@@ -1,200 +1,93 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260829-04",
+  "artifactBuildId": "ui-20260829-05",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
-  "sourceChecks": {
-    "thai": {
-      "ids": 33,
-      "images": 26,
-      "links": 65,
-      "buttons": 12,
-      "inputsIncludingHiddenTopic": 4,
-      "textareas": 1,
-      "nativeSelectsOrDetails": 1,
-      "videoWithoutControls": 1,
-      "thirdPartyIframeElements": 3,
-      "rawControlOrMediaOccurrences": 87,
-      "h1": 1,
-      "duplicateIds": 0,
-      "html5ParseErrors": 0
-    },
-    "english": {
-      "ids": 33,
-      "images": 26,
-      "links": 65,
-      "buttons": 12,
-      "inputsIncludingHiddenTopic": 4,
-      "textareas": 1,
-      "nativeSelectsOrDetails": 1,
-      "videoWithoutControls": 1,
-      "thirdPartyIframeElements": 3,
-      "rawControlOrMediaOccurrences": 87,
-      "h1": 1,
-      "duplicateIds": 0,
-      "html5ParseErrors": 0
-    },
-    "revealHooksPerLocale": 51,
-    "lazyImagesPerLocale": 21,
-    "gatedLegacyFigureHooksPerLocale": 4,
-    "visibleLegacyFigureRows": 0,
+  "sourceAndStructure": {
+    "locales": [
+      "th",
+      "en"
+    ],
+    "bilingualParity": "pass",
+    "h1PerLocale": 1,
+    "duplicateIds": 0,
     "localResourceReferenceErrors": 0,
-    "forbiddenDefinitionStringMatchesInPublicLocales": 0,
-    "visibleWaitingOrCaveatStringMatches": 0,
-    "missingIconGlyphs": 0,
-    "pageLayerRawColors": 1,
-    "pageLayerImportantDeclarations": 3,
     "javascriptSyntax": "pass",
-    "gitDiffCheck": "pass"
+    "gitDiffCheck": "pass",
+    "materialSymbolFile": "assets/fonts/material-symbols-rounded-rebuild02-r7.woff2",
+    "materialSymbolFileGlyphs": 28,
+    "activeMaterialSymbolLigatures": 26,
+    "missingIconGlyphs": 0,
+    "socialBrandMarks": "five inline SVG marks: TikTok, Facebook, Instagram, LinkedIn, X",
+    "videoContract": "one muted playsinline autoplay loop video without controls in each locale",
+    "exactRallyCopy": "Let us cultivate our city with data."
+  },
+  "currentRoundChecks": {
+    "citymeterSnapshots": "pass: the Land pillar and appraisal/building/flood tiles use fresh immutable r5 responsive AVIF/WebP captures; Business Dynamics uses the existing 960/1600/2560 set; Population uses the current governed close-up at its displayed card size",
+    "landResponsiveSelection": "pass: 640/1200/1800 candidates with sizes=(min-width:701px) 50vw, 100vw; right-aligned cover preserves the selected-building detail panel",
+    "tileResponsiveSelection": "pass: four tiles use CSS-aligned sizes with the horizontal-card branch through 700 px and no missing candidates",
+    "semanticIcons": "pass: the four new location-intelligence topics use radar, location_searching, compare_arrows and query_stats; the three story principles use place, visibility and task_alt",
+    "citymeterCtaHierarchy": "pass: one solid primary Explore-all action, one outlined secondary conversation action and one circular share utility",
+    "externalLinkCue": "pass: visible external-link terminals use a typographic ↗ cue with no text decoration; target-blank links carry noopener noreferrer",
+    "mapCopy": {
+      "th": "ปากคลองตลาด อยู่ตรงไหนใน Google Maps",
+      "en": "Where is Pak Khlong Talat on Google Maps?"
+    },
+    "landomEntries": "pass: join, team work, company thinking and current work",
+    "storyMotion": "pass: three staged 820 ms steps with 80/260/480 ms delays and a four-beat rally; reduced motion resolves immediately",
+    "socialMasonry": "pass: TikTok first and largest; Facebook, Instagram, LinkedIn and X use smaller equal columns; layout collapses responsively with zero horizontal overflow",
+    "locationNarrative": "pass: product-neutral competitive landscape, white space/site selection, branch comparison and area-performance monitoring; same-definition/time-window/boundary condition is stated",
+    "caveatCopyOnCustomerPage": 0
   },
   "networkBoundary": {
-    "loadTimeRenderingSubresources": "The primary page is same-origin. Three iframe data-src values and the TikTok embed script are activated only within 480 px of the social cards. Facebook's request width is computed from the rendered card and clamped to 180–500 px.",
-    "thirdPartyRenderingRuntimeRequests": "four official social embed surfaces after intersection: Facebook timeline, Instagram profile, TikTok creator, and LinkedIn featured post",
-    "socialEmbedFreshness": "Facebook, Instagram and TikTok are platform-rendered on activated page loads subject to provider caching. LinkedIn is one fixed featured post and is not claimed as a latest feed.",
-    "externalNavigation": "explicit user action only",
-    "contactSubmit": {
-      "method": "POST",
-      "url": "https://landometer.com/api/v2/public/inquiry/save",
-      "contentType": "application/json",
-      "credentials": "include",
-      "payloadFields": ["name", "email", "phone", "message", "topic"],
-      "corsPreflight": "HTTP 200 on 2026-08-29; origin reflected as https://montri-th.github.io; POST and content-type allowed; credentials allowed",
-      "getGuard": "HTTP 405 on 2026-08-29",
-      "productionPostSent": false,
-      "inboxReceiptVerified": false
-    },
-    "mailtoNavigation": {
-      "activation": "explicit user click on the 44 px office-email action",
-      "destination": "mailto:hello@landometer.com",
-      "networkClaim": "no background request or delivery claim; the visitor's configured mail application owns the handoff"
-    }
-  },
-  "contrast": {
-    "method": "These four ratios are retained from the prior local Chrome rendered-pixel sample because their foreground/background tokens and surfaces are unchanged in ui-20260829-04. The r6 wordmark remains #757575 on light canvas; dark navbar/footer wordmarks use text-primary on canvas to avoid the low-contrast pairing. Ratios use WCAG 2.x relative luminance.",
-    "rows": [
-      {
-        "element": "CityMETER showcase metadata on Measure",
-        "locale": "th",
-        "light1280": "6.42:1",
-        "light390": "5.76:1",
-        "dark1280": "7.02:1",
-        "dark390": "6.75:1",
-        "minimumRatio": "5.76:1",
-        "requirement": "4.5:1",
-        "result": "pass"
-      },
-      {
-        "element": "CityMETER showcase metadata on Measure",
-        "locale": "en",
-        "light1280": "6.23:1",
-        "light390": "5.83:1",
-        "dark1280": "6.91:1",
-        "dark390": "6.82:1",
-        "minimumRatio": "5.83:1",
-        "requirement": "4.5:1",
-        "result": "pass"
-      },
-      {
-        "element": "Location body on Cultivate",
-        "locale": "th",
-        "light1280": "6.49:1",
-        "light390": "5.40:1",
-        "dark1280": "9.28:1",
-        "dark390": "9.00:1",
-        "minimumRatio": "5.40:1",
-        "requirement": "4.5:1",
-        "result": "pass"
-      },
-      {
-        "element": "Location body on Cultivate",
-        "locale": "en",
-        "light1280": "6.42:1",
-        "light390": "5.37:1",
-        "dark1280": "9.25:1",
-        "dark390": "8.92:1",
-        "minimumRatio": "5.37:1",
-        "requirement": "4.5:1",
-        "result": "pass"
-      }
+    "primaryRendering": "same-origin static HTML/CSS/JS and governed media",
+    "socialActivation": "within 480 px of the viewport",
+    "socialProviders": [
+      "TikTok",
+      "Facebook",
+      "Instagram",
+      "LinkedIn",
+      "X"
     ],
-    "fullAutomatedAccessibilityAudit": "open; no zero-critical/serious claim"
-  },
-  "pageWeight1280Dpr1": {
-    "method": "current ui-20260829-04 transfer-byte remeasurement pending; lazy social embeds change the full-scroll network boundary and are reported separately from same-origin assets",
-    "initial": {
-      "bytes": null,
-      "requests": null,
-      "videoBytes": null
-    },
-    "fullScrollWithoutVideo": {
-      "bytes": null,
-      "requests": null,
-      "budget900KB": "pending; third-party platform bytes must be reported separately from the same-origin artifact"
-    },
-    "fullScrollWithVideo": {
-      "bytes": null,
-      "requests": null,
-      "videoBytes": 13724404,
-      "sectionVideo2Point5MB": "the owner-directed longer 720x1280 clip exceeds the prior asset target; it remains absent from the initial HTML src and activates only near its section"
-    },
-    "behavior": "The MP4 still has no HTML src and preload none; its observer uses a 240 px root margin. Social providers use a separate 480 px observer and are not initial-viewport dependencies.",
-    "finalRegressionInitial": [],
-    "liveCompressionAndCache": "not represented by this local uncompressed trace",
-    "fieldVitals": {
-      "lcp2Point5Seconds": "not measured",
-      "inp200Milliseconds": "not measured",
-      "cls0Point1": "not measured"
-    }
+    "providerFreshness": "provider-rendered when activated, subject to provider caching; LinkedIn remains a featured post",
+    "contactEndpoint": "https://landometer.com/api/v2/public/inquiry/save",
+    "contactActivation": "explicit visitor submit only",
+    "productionPostSent": false,
+    "officeEmail": "mailto:hello@landometer.com after explicit click"
   },
   "localRenderedChecks": {
     "engine": "Codex in-app Chromium on 2026-08-29",
-    "matrix": [
-      {"locale": "th", "theme": "dark", "viewport": "1440x900", "result": "pass"},
-      {"locale": "th", "theme": "dark", "viewport": "390x844", "result": "pass"},
-      {"locale": "en", "theme": "light", "viewport": "320x700", "result": "pass"}
-    ],
-    "viewports": ["1440x900", "390x844", "320x700"],
+    "result": "pass",
     "verified": [
-      "body and document scrollWidth equal the viewport in every matrix row",
-      "r6 full-colour symbol and typed wordmark remain carrier-free; dark header/footer wordmarks use the contrast-safe text-primary pairing",
-      "mobile header contains only the identity and circular menu control; sign-in moves into the menu",
-      "navbar is 76/68 px when prominent, contracts to 58/54 px on downward scroll, and restores on upward scroll, pointer/focus intent and menu open; the hero bottom equals the viewport height",
-      "desktop and mobile-menu sign-in CTAs preserve the real DS capsule beneath an aria-hidden, pointer-inert 3.7-second sweep and 1.09-second flick overlay",
-      "the hero photograph moves within its crop through a slow 32-second alternating pan without changing the first-viewport layout",
-      "open menu has no horizontal overflow; its external toggle changes to the close glyph, opening preserves the current scroll position, and the panel is a non-modal disclosure dialog with Escape/backdrop close",
-      "theme and locale controls are 44 px circles; the theme action toggles light/dark, ecosystem rows use no active accent rail, and the topic picker uses neutral surface/elevation states without a coloured rail",
-      "the duplicate small Business Dynamics tile is absent; one linked Population age-and-sex chart crop fills the 4:3 proof tile in each locale",
-      "social order is TikTok, Facebook, Instagram, LinkedIn; each provider frame is width-matched to its supported maximum; the TikTok wrapper contracts to provider content instead of leaving an empty fixed-height tail; Thai marks the LinkedIn item as โพสต์เด่น",
-      "Facebook and Instagram iframe sources and TikTok script load on intersection; Facebook uses the actual container width; LinkedIn remains unloaded on mobile until its own card approaches the viewport",
-      "story disclosure opens and its theme-specific mark switches correctly",
-      "reduced-motion CSS and JavaScript guards present final visible states without reveal/disclosure animation, freeze the hero image, hide the CTA sweep and keep the navbar prominent",
-      "contact-form validation/error preservation, 24-character phone maximum and submit state pass without sending a production inquiry; the separate office email action has a 44 px hit area and resolves to mailto:hello@landometer.com",
-      "menu, disclosure, topic picker and visible page controls pass the local keyboard/focus regression",
-      "zero same-origin console errors, page errors, failed requests, or HTTP errors; observed Facebook/Instagram SDK errors were confined to provider-owned cross-origin scripts"
+      "TH and EN render without horizontal overflow",
+      "new Land capture is sharp at the rendered frame and keeps the right-side detail panel visible",
+      "four CityMETER tiles select responsive r5/r4 AVIF sources and display at the intended aspect ratio",
+      "CTA hierarchy and unified external-link cue grammar are visually distinct and keyboard reachable",
+      "location-intelligence cards, four Landom entry paths and bilingual map labels render as authored",
+      "story disclosure and rally motion retain the global reduced-motion kill switch",
+      "TikTok leads the responsive masonry; Facebook, Instagram, LinkedIn and X remain provider-owned lazy surfaces"
     ],
-    "thirdPartyObservation": "Facebook Page Plugin emitted console chatter inside its own cross-origin frame; it is provider-owned code and not counted as a same-origin page error.",
-    "liveVerified": [
-      "GitHub Pages build 1181907280 reached built for artifact commit 5cd9e0e9a7b6193a5e1e70b68aa403f91c64dc68",
-      "live TH light desktop at 1440x900 loaded ui-20260829-04 with zero horizontal overflow; the hero transform changed over time, the navbar reached its 58 px calm state and the CTA sweep was active",
-      "live EN light mobile at 320x700 restored the prominent 68 px header while the menu was open; the mobile CTA sweep remained pointer-inert and the Population 4:3 AVIF loaded with the correct destination and label",
-      "the office email action resolved to mailto:hello@landometer.com; the browser recorded no error-level log entry"
-    ],
-    "pending": []
+    "screenshots": [
+      "/private/tmp/rebuild02-r5-final-land-1440.png",
+      "/private/tmp/rebuild02-r5-final-showcase-700.png",
+      "/private/tmp/rebuild02-r5-final-news-390b.png"
+    ]
   },
   "browserAndProductionGates": {
-    "localHttp": "pass for TH dark 1440x900, TH dark 390x844, EN light 320x700 and TH contact/dropdown sampling; no same-origin request or HTTP errors",
+    "localHttp": "pass",
     "productionArtifact": {
-      "commit": "5cd9e0e9a7b6193a5e1e70b68aa403f91c64dc68",
-      "tree": "912af6e079f40f86c7c762b02377c69ece08ee74"
+      "commit": null,
+      "tree": null
     },
     "pagesBuild": {
-      "id": 1181907280,
-      "status": "built",
-      "durationMs": 24380,
-      "updatedAt": "2026-08-29T10:27:51Z"
+      "id": null,
+      "status": "pending",
+      "durationMs": null,
+      "updatedAt": null
     },
-    "liveHttpAndMime": "pass: 20/20 checked production routes and assets returned HTTP 200 with expected MIME",
-    "liveByteParity": "pass: 20/20 checked production responses matched committed local bytes and SHA-256 at 2026-08-29T10:36:13.000Z",
-    "liveBrowser": "pass: TH light 1440x900 hero/navbar/sweep and EN light 320x700 menu/Population/mailto; no error-level browser log entry"
-  }
+    "liveHttpAndMime": "pending",
+    "liveByteParity": "pending",
+    "liveBrowser": "pending"
+  },
+  "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }
