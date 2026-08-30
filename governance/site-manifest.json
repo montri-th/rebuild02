@@ -12,7 +12,7 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_current_release_pending",
+    "evidenceStatus": "source_limited_current_release_verified",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
@@ -337,16 +337,16 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "current_release_pending",
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "pending",
+    "currentReleaseState": "current_release_verified",
+    "verifiedArtifactCommit": "131d05a7a602f05447933257be86d5e1c51a2446",
+    "verifiedArtifactTree": "76d5006e8a34e041b7fee54b73a820532524fd16",
+    "pagesBuildState": "built",
     "pagesBuildId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending for ui-20260830-09",
-    "liveByteParity": "pending for ui-20260830-09",
+    "pagesBuildDurationMs": 26413,
+    "pagesBuildUpdatedAt": "2026-08-30T12:25:12Z",
+    "verifiedAt": "2026-08-30T12:28:39.753Z",
+    "liveRouteEvidence": "pass: root, index, TH, EN and _ds stylesheet returned HTTP 200 with expected HTML/CSS MIME types; all four new immutable PNGs returned HTTP 200 image/png",
+    "liveByteParity": "pass: 11 public checks matched local byte length and SHA-256 at 2026-08-30T12:28:39.753Z, including both locale pages, site CSS/JS, DS CSS and four new immutable PNGs",
     "localBrowserEvidence": {
       "matrix": [
         "EN dark 1440x900",
@@ -358,9 +358,12 @@
     },
     "liveBrowserEvidence": {
       "engine": "Codex in-app Chromium",
-      "verifiedAt": null,
-      "routes": [],
-      "verified": "pending for ui-20260830-09"
+      "verifiedAt": "2026-08-30T12:30:00Z",
+      "routes": [
+        "EN at 1440x900, light theme, #products",
+        "TH at 390x844, light theme, #location-intelligence"
+      ],
+      "verified": "pass for ui-20260830-09: five product cards, six Location cards, zero document overflow, CityMETER/CityWiki Arvo wordmarks, readable CityChat foreground, exact 1418x1320 area-performance media and mobile touch-scroll reachability"
     }
   },
   "growth": {
@@ -387,7 +390,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "local current-build pass at 1440x900, 1024x768, 390x844 and 320x720; current-release Pages build, live route, byte-parity and live-browser attestation pending",
+    "renderedBrowserGate": "pass for ui-20260830-09: local matrix at 1440x900, 1024x768, 390x844 and 320x720 plus live EN 1440x900 and TH 390x844; Pages build, live route/MIME, 11-check byte parity and targeted live browser rendering verified",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -405,7 +408,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "fail",
+    "SC-15": "pass",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

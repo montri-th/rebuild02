@@ -89,19 +89,19 @@
     "productionArtifact": {
       "repository": "https://github.com/montri-th/rebuild02",
       "branch": "main",
-      "commit": null,
-      "tree": null
+      "commit": "131d05a7a602f05447933257be86d5e1c51a2446",
+      "tree": "76d5006e8a34e041b7fee54b73a820532524fd16"
     },
     "pagesBuild": {
       "id": null,
-      "state": "pending",
-      "commit": null,
-      "durationMs": null,
-      "updatedAt": null
+      "state": "built",
+      "commit": "131d05a7a602f05447933257be86d5e1c51a2446",
+      "durationMs": 26413,
+      "updatedAt": "2026-08-30T12:25:12Z"
     },
-    "liveHttpAndMime": "pending for ui-20260830-09",
-    "liveByteParity": "pending for ui-20260830-09",
-    "liveBrowser": "pending for ui-20260830-09"
+    "liveHttpAndMime": "pass: root, index, TH, EN and _ds CSS returned HTTP 200 with expected MIME; four new immutable product/location PNGs returned HTTP 200 image/png",
+    "liveByteParity": "pass at 2026-08-30T12:28:39.753Z: 11 checks matched local bytes and SHA-256 for root/index, both locale pages, site CSS/JS, DS CSS and four new immutable PNGs",
+    "liveBrowser": "pass in Codex in-app Chromium: EN light at 1440x900 #products and TH light at 390x844 #location-intelligence; five product cards, six Location cards, zero document overflow, Arvo wordmarks, readable CityChat and exact 1418x1320 area-performance image verified"
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

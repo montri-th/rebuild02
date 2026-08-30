@@ -25,7 +25,7 @@ upgrading source inspection into stronger evidence.
 | SC-12 | pass | Both locale routes are indexable and carry canonical/hreflang links, Open Graph and Twitter metadata, Organization/WebSite/WebPage JSON-LD, the r6 favicon, `robots.txt`, and a truthful release-dated sitemap. |
 | SC-13 | pass | TikTok, Facebook, Instagram and LinkedIn content surfaces use minimal brand marks in a readable editorial grid; TikTok is first and largest. The X embed is omitted after desktop/mobile tests produced a hidden zero-size provider frame, while the outbound X profile link remains in the footer. |
 | SC-14 | fail | The 108 native raw / 101 enhanced source inventory plus two keyboard-focusable horizontal rails, local keyboard/form states and explicit 44 px `mailto:` action are checked, but a real contact POST/inbox outcome is not included. |
-| SC-15 | fail | Current ui-20260830-09 production deployment and live-byte attestation are pending; evidence from the prior release is not reused as a current pass. |
+| SC-15 | pass | GitHub Pages built artifact commit `131d05a7`; root, index, TH, EN, `_ds` CSS and all four new immutable PNGs returned HTTP 200 with expected MIME, and 11 live resources matched local byte length and SHA-256. Targeted live EN desktop and TH mobile rendering also passed. |
 | SC-16 | fail | The shared manifest records both locale routes but is not claimed as a complete per-route rendered-contract projection. |
 | SC-17 | pass | Retired values are absent from the public page layer; no retired literal was added in this release. |
 | SC-18 | pass | The first view has no caution/caveat block; the dated product proof band follows the hero and the null legacy row is not rendered. |
@@ -35,4 +35,4 @@ upgrading source inspection into stronger evidence.
 | SC-22 | pass | The approved reveals, story staging, four-beat rally, CTA sweep, 32-second hero pan, owner-authorized shallow hero parallax, responsive social editorial grid and reduced-motion behavior pass local QA. Parallax is capped at ±20 px inside overscan and freezes under reduced motion; a runtime preference change also pauses Living video and restores its poster. The owner-directed ambient video loop remains an explicit divergence from canonical no-loop guidance. |
 | SC-23 | pass | Rendered icon/label pairs use the canonical 24 px face and governed gaps; all current ligatures resolve. Six Location Intelligence cards form one CSS-only scroll-snap rail and expose 44 px benefit-led capsule CTAs. Five product cards retain 44 px actions; product-specific wordmarks, exact approved identity assets and the three governed r8 interface examples follow their recorded roles. |
 
-Totals: 17 pass · 6 fail/open · 0 not applicable.
+Totals: 18 pass · 5 fail/open · 0 not applicable.
