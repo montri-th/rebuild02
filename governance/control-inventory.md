@@ -1,6 +1,6 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260830-11` candidate
+Artifact build: `ui-20260830-11` published and live-verified
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
@@ -113,10 +113,14 @@ Source and rendered assertions:
   and type. At widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440, local QA
   found all computed nowrap, zero `.btn` overflow, no Location CTA above 48 px and no page
   overflow.
-- Local candidate gates passed `node --check`, `git diff --check`, JSON/YAML parsing,
+- Local release gates passed `node --check`, `git diff --check`, JSON/YAML parsing,
   resource existence and unique HTML IDs. Root, index, TH and EN returned HTTP 200
-  `text/html`; the DS stylesheet returned HTTP 200 `text/css`. Publication is authorized
-  by the ongoing user request but remains pending.
+  `text/html`; the DS stylesheet returned HTTP 200 `text/css`. GitHub Pages deployment
+  `6168455185` succeeded for artifact commit `ce107609`; all five required routes returned
+  HTTP 200 and seven live HTML/CSS/JS resources matched local bytes. Targeted live TH dark
+  checks at 320/390/1440 also confirmed one-line Location CTA fit, stronger menu hover,
+  four real provider surfaces, theme-state retention, outline footer marks, zero overflow
+  and 3/3 logical carousel reveal parity.
 - Products and Services exposes five product paths with consistent capsule conversation
   CTAs and an explicit fit cue. Desktop uses a 2+3 hierarchy: CityMETER and CityChat lead,
   followed by ijji, CityWiki and land/property tools. The restored CityMETER card pairs the

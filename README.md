@@ -3,7 +3,7 @@
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
 install, bundler, CI workflow, or build step. Current artifact build:
-`ui-20260830-11` (candidate; publication and machine validation pending).
+`ui-20260830-11` (published and live-verified; machine validation pending).
 
 | File | Purpose |
 |---|---|
@@ -124,8 +124,11 @@ suffixes are route contracts and must not be renamed.
 
 `machineValidation` remains `pending` and `conformanceLevel` remains
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
-validation language. Local candidate checks passed script syntax, working-tree diff hygiene,
+validation language. Local release checks passed script syntax, working-tree diff hygiene,
 JSON/YAML parsing, local resource existence, unique IDs, zero-overflow rendering and HTTP
-200/MIME checks for root, index, TH, EN and the DS stylesheet. The ongoing user request
-authorizes publishing the new candidate, but publication remains pending: no commit,
-deployment, live-route or byte-parity evidence is claimed for `ui-20260830-11` yet.
+200/MIME checks for root, index, TH, EN and the DS stylesheet. GitHub Pages deployed
+artifact commit `ce107609659acb7f49b804b4178fa4dd6d9ae863` successfully. Root, index,
+TH, EN and the `_ds` stylesheet returned HTTP 200; seven live HTML/CSS/JS resources
+matched the release bytes exactly. Targeted live Chromium checks also passed the 320 px
+Location CTA, dark hover, four real provider surfaces, theme-state retention, rounded
+outline footer icons, zero page overflow and source/clone carousel reveal parity.

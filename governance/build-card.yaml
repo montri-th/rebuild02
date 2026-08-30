@@ -59,7 +59,7 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "source_limited_candidate_locally_verified"
+    evidenceStatus: "source_limited_current_release_verified"
     authorizationSource: "ongoing user request explicitly includes publishing the new candidate after the current additions"
     visibility: "public"
     indexable: true
@@ -69,12 +69,12 @@ landometerBuild:
       en: "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
     discoveryStates:
       machineReadableWhenOpened:
-        status: "pending"
+        status: "verified"
         evidenceRefs:
           - "governance/site-manifest.json"
           - "semantic initial HTML in both locale routes"
       searchDiscoverable:
-        status: "pending"
+        status: "verified"
         evidenceRefs:
           - "robots.txt"
           - "sitemap.xml"
@@ -86,7 +86,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "candidate_pending_publication"
+      technicalStatus: "current_release_verified"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -97,17 +97,17 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "local_verified_publication_pending"
+    readiness: "live_verified"
     publicSafe: true
-    status: "pending"
-    qrOrLinkTest: "local pass for ui-20260830-11: root/index/TH/EN returned HTTP 200 text/html and the DS stylesheet returned HTTP 200 text/css; commit, Pages build, live-route and byte attestation remain pending"
-    verifiedArtifactCommit: ""
-    verifiedArtifactTree: ""
-    pagesBuildCommit: ""
-    pagesBuildState: "pending"
-    pagesBuildDurationMs: 0
-    pagesBuildUpdatedAt: ""
-    liveByteAttestationAt: ""
+    status: "current_release_verified"
+    qrOrLinkTest: "pass for ui-20260830-11: deployment 6168455185 succeeded for the artifact commit; root/index/TH/EN/_ds returned HTTP 200; seven live HTML/CSS/JS resources matched local bytes; targeted live Chromium checks passed"
+    verifiedArtifactCommit: "ce107609659acb7f49b804b4178fa4dd6d9ae863"
+    verifiedArtifactTree: "f67792995c39cc83617385ef05072005c6b3939b"
+    pagesBuildCommit: "ce107609659acb7f49b804b4178fa4dd6d9ae863"
+    pagesBuildState: "success"
+    pagesBuildDurationMs: 22004
+    pagesBuildUpdatedAt: "2026-08-30T15:55:56Z"
+    liveByteAttestationAt: "2026-08-30T16:09:19Z"
     previousVerifiedRelease: "ui-20260830-10 at commit f9b7826bac8d70f3d53a0994e468feff259828cd; retained as history only"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
@@ -505,8 +505,8 @@ landometerBuild:
     releaseReceipt:
       receiptId: "rebuild02-ui-20260830-11"
       catalogOrContentVersion: "landometer-home-rebuild02-v11"
-      issuedAt: "pending"
-      status: "candidate_pending_publication"
+      issuedAt: "2026-08-30"
+      status: "published_verified"
   privacy:
     personalData: true
     sensitivity: "public"
@@ -585,7 +585,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "targeted local pass for ui-20260830-11: TH/EN widths 320–1440 had zero CTA/page overflow and one-line Location captions; dark hover/focus state changed visibly with light text; both rails preserved 0/3 or 3/3 source/clone reveal parity through boundary traversal at 390/768/1440; real TikTok/Facebook/Instagram/LinkedIn content loaded in dark and survived dark-light-dark without source loss; local HTTP/MIME, script syntax, diff hygiene, JSON/YAML, resource and unique-ID checks passed. Publication/live evidence and the exhaustive SC-20 matrix remain open"
+    renderedBrowserGate: "source-limited live pass for ui-20260830-11: local TH/EN widths 320–1440 passed CTA and page overflow checks; live TH dark at 320/390/1440 confirmed the ui11 build, one-line Location CTA fit, dark menu hover, real TikTok/Facebook/Instagram/LinkedIn surfaces, dark-light-dark source retention, rounded-outline footer icons, zero page overflow and 3/3 logical carousel reveal parity. GitHub Pages deployment and seven-resource byte parity passed; the exhaustive SC-20 matrix remains open"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"

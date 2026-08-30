@@ -70,7 +70,7 @@
   },
   "localRenderedChecks": {
     "engine": "Codex in-app Chromium on 2026-08-30",
-    "result": "targeted local pass for ui-20260830-11; publication/live evidence and the exhaustive SC-20 matrix remain open",
+    "result": "targeted local and live pass for ui-20260830-11; the exhaustive SC-20 matrix remains open",
     "verified": [
       "EN and TH at widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440 had zero .btn overflow, all computed nowrap, no Location CTA above 48 px and no page overflow",
       "dark menu and topic-option hover changed from transparent to color(srgb .244784 .393333 .443686) with light text",
@@ -84,25 +84,25 @@
   "browserAndProductionGates": {
     "localHttp": "pass for ui-20260830-11: root/index/TH/EN returned HTTP 200 text/html and the DS stylesheet returned HTTP 200 text/css",
     "publicationAuthorization": "authorized by the ongoing user request that explicitly includes publishing the new candidate after the current additions",
-    "publicationStatus": "pending; no ui-20260830-11 commit, push, Pages build, live route or byte parity is claimed",
+    "publicationStatus": "verified: ui-20260830-11 was committed, pushed, built by GitHub Pages and checked live",
     "productionArtifact": {
-      "scope": "previous verified ui-20260830-10 release; does not attest ui-20260830-11",
+      "scope": "current verified ui-20260830-11 release",
       "repository": "https://github.com/montri-th/rebuild02",
       "branch": "main",
-      "commit": "f9b7826bac8d70f3d53a0994e468feff259828cd",
-      "tree": "bb7b32ba0bfd07df84be3bdb323924334cec4d47"
+      "commit": "ce107609659acb7f49b804b4178fa4dd6d9ae863",
+      "tree": "f67792995c39cc83617385ef05072005c6b3939b"
     },
     "pagesBuild": {
-      "scope": "previous verified ui-20260830-10 release; no ui-20260830-11 build has been claimed",
-      "id": 6167529645,
+      "scope": "current verified ui-20260830-11 release",
+      "id": 6168455185,
       "state": "success",
-      "commit": "f9b7826bac8d70f3d53a0994e468feff259828cd",
-      "durationMs": 15000,
-      "updatedAt": "2026-08-30T14:13:58Z"
+      "commit": "ce107609659acb7f49b804b4178fa4dd6d9ae863",
+      "durationMs": 22004,
+      "updatedAt": "2026-08-30T15:55:56Z"
     },
-    "liveHttpAndMime": "pending for ui-20260830-11; the previous ui-20260830-10 release passed root/index/TH/EN/_ds and role-critical resource HTTP/MIME checks",
-    "liveByteParity": "pending for ui-20260830-11; the previous ui-20260830-10 release matched 9 public resources at 2026-08-30T14:15:37.636Z",
-    "liveBrowser": "pending for ui-20260830-11; no live provider-theme, one-line CTA, dark-hover or reveal-parity evidence is claimed"
+    "liveHttpAndMime": "pass for ui-20260830-11: root, index, TH, EN and the _ds stylesheet returned HTTP 200",
+    "liveByteParity": "pass for ui-20260830-11: root/index, TH, EN, site CSS/JS and DS CSS matched local bytes and SHA-256 across seven checks at 2026-08-30T16:09:19Z",
+    "liveBrowser": "pass in targeted live Chromium: build id ui-20260830-11; zero page overflow; 320 px Location CTAs all nowrap with zero overflow and height at or below 44 px; dark menu hover visibly changed surface with light text; real TikTok/Facebook/Instagram/LinkedIn surfaces loaded; iframe sources survived dark-light-dark; footer marks remained outline; and Location carousel logical reveal groups completed 3/3 across bidirectional boundary traversal"
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

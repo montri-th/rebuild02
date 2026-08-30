@@ -12,7 +12,7 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_candidate_locally_verified",
+    "evidenceStatus": "source_limited_current_release_verified",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
@@ -87,8 +87,8 @@
     "releaseReceipt": {
       "receiptId": "rebuild02-ui-20260830-11",
       "catalogOrContentVersion": "landometer-home-rebuild02-v11",
-      "issuedAt": "pending",
-      "status": "candidate_pending_publication"
+      "issuedAt": "2026-08-30",
+      "status": "published_verified"
     }
   },
   "network": {
@@ -351,23 +351,23 @@
     {"path": "assets/screens/location-area-performance-rebuild02-r8.png", "bytes": 2182059, "sha256": "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"}
   ],
   "publication": {
-    "authorizationSource": "the ongoing user request explicitly includes publishing the new candidate after the current additions; publication is authorized but not yet executed",
+    "authorizationSource": "the ongoing user request explicitly authorized publishing the new candidate after the current additions",
     "repository": "https://github.com/montri-th/rebuild02",
     "branch": "main",
     "pagesRoot": "/",
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "candidate_pending_publication",
-    "verifiedArtifactCommit": "",
-    "verifiedArtifactTree": "",
-    "pagesBuildState": "pending",
-    "pagesBuildId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": "",
-    "verifiedAt": "",
-    "liveRouteEvidence": "pending for ui-20260830-11; no candidate live-route evidence is claimed",
-    "liveByteParity": "pending for ui-20260830-11; no candidate byte-parity evidence is claimed",
+    "currentReleaseState": "current_release_verified",
+    "verifiedArtifactCommit": "ce107609659acb7f49b804b4178fa4dd6d9ae863",
+    "verifiedArtifactTree": "f67792995c39cc83617385ef05072005c6b3939b",
+    "pagesBuildState": "success",
+    "pagesBuildId": 6168455185,
+    "pagesBuildDurationMs": 22004,
+    "pagesBuildUpdatedAt": "2026-08-30T15:55:56Z",
+    "verifiedAt": "2026-08-30T16:09:19Z",
+    "liveRouteEvidence": "pass: root, index, TH, EN and _ds stylesheet returned HTTP 200 after deployment 6168455185",
+    "liveByteParity": "pass: root/index, both locale pages, site CSS/JS and DS CSS matched local bytes and SHA-256 across seven live checks at 2026-08-30T16:09:19Z",
     "previousVerifiedRelease": {
       "artifactBuildId": "ui-20260830-10",
       "commit": "f9b7826bac8d70f3d53a0994e468feff259828cd",
@@ -384,9 +384,13 @@
     },
     "liveBrowserEvidence": {
       "engine": "Codex in-app Chromium",
-      "verifiedAt": "",
-      "routes": [],
-      "verified": "pending for ui-20260830-11; no live browser evidence is claimed"
+      "verifiedAt": "2026-08-30T16:09:19Z",
+      "routes": [
+        "TH dark at 320x844 for Location Intelligence CTA fit and cyclic reveal parity",
+        "TH dark at 390x844 for all four provider surfaces and footer icon treatment",
+        "TH dark at 1440x900 for menu hover and dark-light-dark feed source retention"
+      ],
+      "verified": "pass for ui-20260830-11: the live build id matched; document overflow remained zero; all Location CTAs were nowrap with zero overflow and height at or below 44 px at 320; the dark CityWiki menu hover changed from transparent to color(srgb .244784 .393333 .443686) with light text; TikTok, Facebook, Instagram and LinkedIn provider surfaces loaded; iframe sources survived dark-light-dark; footer marks computed fill none; and every Location source/clone reveal group finished 3/3 after bidirectional boundary traversal"
     }
   },
   "growth": {
@@ -413,7 +417,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "targeted local pass for ui-20260830-11, including TH/EN widths 320–1440, one-line CTA fit, dark hover/focus, loop reveal parity, real dark-theme provider content, theme switching, icon contracts, zero overflow, HTTP/MIME, syntax, diff, JSON/YAML, resource and unique-ID checks. Publication/live checks and the exhaustive SC-20 matrix remain open",
+    "renderedBrowserGate": "source-limited live pass for ui-20260830-11: local TH/EN widths 320–1440 and targeted live TH dark at 320/390/1440 passed one-line CTA fit, dark hover, source/clone reveal parity, real provider content, theme switching, rounded-outline footer marks and zero overflow. Deployment plus seven-resource byte parity passed; the exhaustive SC-20 matrix remains open",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -431,7 +435,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "fail",
+    "SC-15": "pass",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",
