@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260830-07",
+  "artifactBuildId": "ui-20260830-08",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -203,6 +203,191 @@
     ],
     "visualReview": "Pass in local Chromium at the authored 4:3 frame: the approved Yaowarat composition is unchanged in meaning and materially clearer than the earlier low-density delivery."
   },
+  "experienceMediaR7": {
+    "approvalContext": "The owner explicitly supplied or selected these local source files and assigned their public Rebuild02 roles on 2026-08-30. This role approval is not a separate claim about copyright ownership or third-party licensing.",
+    "sourceBoundary": "Source files remain outside the repository. Public outputs contain only visual pixels needed for the assigned role; metadata is stripped. People shown are not identified and the images must not be presented as evidence that they use a Landometer product or that a market claim has been measured.",
+    "processingRecipe": "Pillow 12.3.0 prepare_image.py; aspect-ratio-preserving width-only resize with LANCZOS; WebP quality 84, method 6, exact mode; no crop; metadata stripped.",
+    "locationPillar": {
+      "source": {
+        "path": "/Users/montri/Downloads/location.jpg",
+        "committed": false,
+        "bytes": 3401628,
+        "dimensions": "6000x4000",
+        "sha256": "eee6cf71574f7a8d48d9f4660a3da19f22de10538975cee21ae797e778a869b6"
+      },
+      "role": "Location pillar atmospheric photograph",
+      "representationBoundary": "A documentary street scene used to convey place, activity and access; not an analytical result.",
+      "responsiveWidths": [720, 1200, 1920],
+      "outputs": [
+        {"path": "assets/photos/location-yaowarat-night-rebuild02-r7-720.webp", "bytes": 91074, "dimensions": "720x480", "sha256": "5a09f2fba0e3694aba5562bbbc9a6cccc739721a26c1bb239d29b0633aa131a7"},
+        {"path": "assets/photos/location-yaowarat-night-rebuild02-r7-1200.webp", "bytes": 203942, "dimensions": "1200x800", "sha256": "fd78e3501f1b5ed39d0e9c9c683806085eb4625d07867afab6680f2fcdb02734"},
+        {"path": "assets/photos/location-yaowarat-night-rebuild02-r7-1920.webp", "bytes": 411988, "dimensions": "1920x1280", "sha256": "af317d2d9ca50eaba19899bc4d7aa28f2cd2f53a4d7b7942399d3041edda4e0b"}
+      ],
+      "alt": {
+        "th": "ถนนเยาวราชยามค่ำคืน มีผู้คน ร้านค้า ป้ายไฟ รถแท็กซี่ และการจราจรหนาแน่น",
+        "en": "Yaowarat Road at night with people, shops, neon signs, taxis and heavy traffic"
+      },
+      "compositionReview": "Pass at full 3:2 delivery frame; runtime cover crop remains subject to viewport QA. Recommended focal point: 50% 50%."
+    },
+    "locationCompetitiveCatchment": {
+      "source": {
+        "path": "/Users/montri/Documents/Competitive landscape within a catchment area.png",
+        "committed": false,
+        "bytes": 5818789,
+        "dimensions": "2202x1772",
+        "colorMode": "RGBA",
+        "sha256": "56cef098dc91447fac9edc5467845ae8c14a6e16e00f032be19f56964f3471d0"
+      },
+      "role": "Location Intelligence competitive-catchment card atmosphere",
+      "representationBoundary": "The source visibly contains commercial brands and telephone numbers. It illustrates a competitive streetscape only and does not establish market share, endorsement or a relationship with the businesses shown.",
+      "responsiveWidths": [720, 1200],
+      "outputs": [
+        {"path": "assets/photos/location-competitive-catchment-rebuild02-r7-720.webp", "bytes": 79034, "dimensions": "720x579", "sha256": "920900b7caf3facf045644736d0400e4a6992010dc9668803256996981ddbb44"},
+        {"path": "assets/photos/location-competitive-catchment-rebuild02-r7-1200.webp", "bytes": 166270, "dimensions": "1200x966", "sha256": "98269fa98c6aa1781d72d32135b52a702a937597fa0a8c9d94c127ba7d5d3e01"}
+      ],
+      "alt": {
+        "th": "อาคารริมถนนที่มีป้ายโฆษณาบริการสินเชื่อและประกันหลายป้าย",
+        "en": "Roadside buildings covered with advertisements for lending and insurance services"
+      },
+      "compositionReview": "No generation crop; full source composition retained. Recommended runtime focal point: 50% 50%."
+    },
+    "locationProofOfDemand": {
+      "source": {
+        "path": "/Users/montri/Downloads/Proof of demand.jpg",
+        "committed": false,
+        "bytes": 3521185,
+        "dimensions": "5616x3744",
+        "sha256": "8c464a4e865bead7f29299a74e806dccd77ba5dc1af58608184ff64bbc6a876e"
+      },
+      "role": "Location Intelligence Proof of demand card atmosphere",
+      "representationBoundary": "Illustrative retail interaction only; it does not establish measured footfall, spending, demand or product use.",
+      "responsiveWidths": [720, 1200],
+      "outputs": [
+        {"path": "assets/photos/location-proof-demand-rebuild02-r7-720.webp", "bytes": 37950, "dimensions": "720x480", "sha256": "611d8cac9d942f413d1c798b4810b9f28a46043f84fe82785b7f546ddc93b478"},
+        {"path": "assets/photos/location-proof-demand-rebuild02-r7-1200.webp", "bytes": 74280, "dimensions": "1200x800", "sha256": "a0a7c8b20d9ef571eab3b70e9ec5a82de5f17a78259895549b3c76a32da09a22"}
+      ],
+      "alt": {
+        "th": "ผู้หญิงสองคนกำลังดูเสื้อผ้าด้วยกันภายในร้าน",
+        "en": "Two women looking at clothing together inside a shop"
+      },
+      "compositionReview": "No generation crop; both people remain in frame. Recommended runtime focal point: 52% 46%."
+    },
+    "locationWhiteSpace": {
+      "source": {
+        "path": "/Users/montri/Downloads/White space and site selection.jpg",
+        "committed": false,
+        "bytes": 4000950,
+        "dimensions": "6240x4160",
+        "sha256": "237f700d78e286b13fe7968cac4f6c3ad2addb798c25abce6e8600cc7784f27b"
+      },
+      "role": "Location Intelligence white-space and site-selection card atmosphere",
+      "representationBoundary": "An overhead market scene used to convey spatial pattern; it is not a site recommendation or analytical output.",
+      "responsiveWidths": [720, 1200],
+      "outputs": [
+        {"path": "assets/photos/location-white-space-rebuild02-r7-720.webp", "bytes": 78080, "dimensions": "720x480", "sha256": "234e9d68a0a221e13d4979014e6a308a9b4de9bf9add9c4c701dad46d64cbc16"},
+        {"path": "assets/photos/location-white-space-rebuild02-r7-1200.webp", "bytes": 169682, "dimensions": "1200x800", "sha256": "368420a174419f13f4da7c7a17fa922cffa9d81479faf3ca097b1ff9752ccd34"}
+      ],
+      "alt": {
+        "th": "มุมสูงของตลาดที่มีเต็นท์ร้านค้าหลากสีเรียงตัวหนาแน่น",
+        "en": "An overhead view of a market filled with rows of colourful vendor tents"
+      },
+      "compositionReview": "No generation crop; full 3:2 composition retained. Recommended runtime focal point: 50% 50%."
+    },
+    "locationMarketListening": {
+      "source": {
+        "path": "/Users/montri/Downloads/Location-based Market Listening.jpg",
+        "committed": false,
+        "bytes": 4364589,
+        "dimensions": "4679x6000",
+        "sha256": "65ec4fb6b75f39bee4d1a63c31ffcb659e557f85d12135c8049959678d4e9ad9"
+      },
+      "role": "Location Intelligence market-listening card atmosphere",
+      "representationBoundary": "A conversation outside a shop used as atmosphere; it does not establish sentiment analysis, interview participation or product use.",
+      "responsiveWidths": [640, 960],
+      "outputs": [
+        {"path": "assets/photos/location-market-listening-rebuild02-r7-640.webp", "bytes": 120106, "dimensions": "640x821", "sha256": "b9c135dd06cce77d84b7cb1e67e7b216d2f8e442132898ebd60cb7aa173fdfc5"},
+        {"path": "assets/photos/location-market-listening-rebuild02-r7-960.webp", "bytes": 243076, "dimensions": "960x1231", "sha256": "71ac5f443ef80e20619be769314bcbb93bfb084de15fbd5bf9c4bd29aa35ef47"}
+      ],
+      "alt": {
+        "th": "ผู้หญิงสูงวัยสองคนพูดคุยกันหน้าร้านค้า โดยมีจักรยานอยู่ด้านหน้า",
+        "en": "Two older women talking outside a shop with a bicycle in front"
+      },
+      "compositionReview": "No generation crop; both people and the bicycle remain in the portrait frame. Recommended runtime focal point: 50% 42%."
+    },
+    "productCityChat": {
+      "source": {
+        "path": "/Users/montri/Downloads/CityChat.jpg",
+        "committed": false,
+        "bytes": 1012893,
+        "dimensions": "4256x2832",
+        "sha256": "21946cf8226935b1489089ab78833d4693b3a83ce986e3a97ff2755fb74163e2"
+      },
+      "role": "CityChat product-card atmosphere",
+      "representationBoundary": "A community reading scene; the people are not represented as CityChat users or endorsers.",
+      "responsiveWidths": [720, 1200],
+      "outputs": [
+        {"path": "assets/photos/product-citychat-community-rebuild02-r7-720.webp", "bytes": 62678, "dimensions": "720x479", "sha256": "dbcff5ee5cb48d3e1c139c9852a8034c63c50b7f148b1b218229a8e1e2883e1e"},
+        {"path": "assets/photos/product-citychat-community-rebuild02-r7-1200.webp", "bytes": 121836, "dimensions": "1200x799", "sha256": "da952092621a758669e8ae8382ad28e2a76abe1b28599c9bb979caaa176395f2"}
+      ],
+      "alt": {
+        "th": "คนสี่คนนั่งอ่านหนังสือเล่มเล็กและพูดคุยกันในพื้นที่ชุมชน",
+        "en": "Four people reading booklets and talking together in a community setting"
+      },
+      "compositionReview": "No generation crop; all four people remain in frame. Recommended runtime focal point: 50% 48%."
+    },
+    "productIjji": {
+      "source": {
+        "path": "/Users/montri/Downloads/ijji.jpg",
+        "committed": false,
+        "bytes": 3230812,
+        "dimensions": "6240x4160",
+        "sha256": "0e27bd5c66371fa66faf2ef56427d431609bccefda9ca9238ce49a52eacbf509"
+      },
+      "role": "ijji product-card atmosphere",
+      "representationBoundary": "A food-vendor work scene; the person is not represented as an ijji user or endorser.",
+      "responsiveWidths": [720, 1200],
+      "outputs": [
+        {"path": "assets/photos/product-ijji-vendor-rebuild02-r7-720.webp", "bytes": 55828, "dimensions": "720x480", "sha256": "33b3eae81a9da9b00e9bc0b5eb099ce29febe48092d21bd0cb3e590823b8ace6"},
+        {"path": "assets/photos/product-ijji-vendor-rebuild02-r7-1200.webp", "bytes": 112108, "dimensions": "1200x800", "sha256": "074db910225949e8178228910f03422e1e1fda82c94168d7a977c87e601e9d7d"}
+      ],
+      "alt": {
+        "th": "ผู้ขายอาหารกำลังยิ้มและเตรียมอาหารในร้าน",
+        "en": "A food vendor smiling while preparing food at a market stall"
+      },
+      "compositionReview": "No generation crop; the vendor's face and work area remain in frame. Recommended runtime focal point: 50% 42%."
+    },
+    "serviceProjectsPartnerships": {
+      "source": {
+        "path": "/Users/montri/Downloads/Projects and partnerships.HEIC",
+        "committed": false,
+        "bytes": 1831897,
+        "dimensions": "4032x3024",
+        "sha256": "032623ef2e12aa314336753fccea0b3ad433602749f64c83db57677ec758b318"
+      },
+      "decode": {
+        "tool": "heif-convert 1.23.2 / libheif 1.23.2",
+        "intermediatePath": "/private/tmp/rebuild02-projects-partnerships-r7-source.png",
+        "intermediateCommitted": false,
+        "bytes": 12506592,
+        "dimensions": "4032x3024",
+        "colorMode": "RGB",
+        "sha256": "bb8ce7820466693e98bff078eba1aadea8f4cf9dfa0a212ff4eedd36ccc08814"
+      },
+      "role": "Projects and partnerships service-route atmosphere",
+      "representationBoundary": "A team presentation scene used to illustrate collaborative work; no participant identity or project outcome is asserted.",
+      "responsiveWidths": [640, 1200, 1600],
+      "outputs": [
+        {"path": "assets/photos/service-projects-partnerships-rebuild02-r7-640.webp", "bytes": 64332, "dimensions": "640x480", "sha256": "c50d8f39157d1300ceea2dd184916d6848a4e23ba39355394c228d692a1d4936"},
+        {"path": "assets/photos/service-projects-partnerships-rebuild02-r7-1200.webp", "bytes": 171756, "dimensions": "1200x900", "sha256": "9bc6ea5d4320ea3c09455ee398b900221a0994b74785a97ae458f9fc82cb01b9"},
+        {"path": "assets/photos/service-projects-partnerships-rebuild02-r7-1600.webp", "bytes": 272880, "dimensions": "1600x1200", "sha256": "5257628cda60c6ee50aec41cb018858afccf9b2235ff963e4f8a24d1813a2791"}
+      ],
+      "alt": {
+        "th": "ทีมงานนั่งร่วมวงฟังการนำเสนอในห้องประชุม",
+        "en": "A team seated around a table during a presentation"
+      },
+      "compositionReview": "No generation crop; the presenter and seated participants remain in frame. Recommended runtime focal point: 52% 48%."
+    }
+  },
   "socialPreview": {
     "path": "assets/social/landometer-rebuild02-og-1200x630.jpg",
     "bytes": 385727,
@@ -245,9 +430,9 @@
     },
     "headerPlacement": {
       "carrierOrPlate": "none",
-      "themes": "the r6 full-colour symbol plus a typed Arvo 700 Landometer wordmark sits directly on both header themes; #757575 on light canvas and text-primary on dark canvas",
-      "responsiveSymbol": "prominent 54x54 desktop / 45x45 mobile; calm 38x38 desktop / 32x32 mobile",
-      "behavior": "calm state follows downward scroll and restores for upward scroll, header intent or open menu; reduced motion stays prominent"
+      "themes": "the r6 full-colour symbol plus a typed Arvo 700 Landometer wordmark sits directly on both r7 header themes; #757575 on light and dark canvas",
+      "responsiveSymbol": "prominent 54x54 desktop / 45x45 mobile; the complete row scales to 50% in calm state, rendering the symbol at 27x27 desktop / 22.5x22.5 mobile",
+      "behavior": "calm state follows downward scroll and restores for upward scroll, header intent or open menu; a transparent wake layer forwards one-tap activation through virtual 44px targets while restoring prominent controls; reduced motion stays prominent"
     }
   }
 }

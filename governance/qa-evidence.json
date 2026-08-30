@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260830-07",
-  "machineValidation": "pending",
+  "artifactBuildId": "ui-20260830-08",
+  "machineValidation": "pass",
   "conformanceLevel": "authoring_aligned",
   "sourceAndStructure": {
     "locales": [
@@ -14,9 +14,9 @@
     "localResourceReferenceErrors": 0,
     "javascriptSyntax": "pass",
     "gitDiffCheck": "pass",
-    "materialSymbolFile": "assets/fonts/material-symbols-rounded-rebuild02-r9.ttf",
-    "materialSymbolFileGlyphs": 26,
-    "activeMaterialSymbolLigatures": 26,
+    "materialSymbolFile": "assets/fonts/material-symbols-rounded-rebuild02-r10.ttf",
+    "materialSymbolFileGlyphs": 25,
+    "activeMaterialSymbolLigatures": 25,
     "missingIconGlyphs": 0,
     "socialBrandMarks": "five inline SVG brand marks: TikTok, Facebook, Instagram, LinkedIn and the outbound-only X footer link",
     "videoContract": "one muted playsinline autoplay loop video without controls in each locale",
@@ -26,7 +26,7 @@
     "citymeterSnapshots": "pass: the Land pillar and appraisal/building/flood tiles use fresh immutable r5 responsive AVIF/WebP captures; Business Dynamics uses the existing 960/1600/2560 set; Population uses the current governed close-up at its displayed card size",
     "landResponsiveSelection": "pass: 640/1200/1800 candidates with sizes=(min-width:701px) 50vw, 100vw; right-aligned cover preserves the selected-building detail panel",
     "tileResponsiveSelection": "pass: four tiles use CSS-aligned sizes with the horizontal-card branch through 700 px and no missing candidates",
-    "semanticIcons": "pass: all 26 rendered interface ligatures resolve through the self-hosted canonical Material Symbols Rounded family at FILL 0, wght 300 and GRAD 0; the bookmark rail uses unique category, preview, auto_stories and contact_support outline glyphs; product and social logos remain identity assets rather than UI glyphs",
+    "semanticIcons": "pass: all 25 rendered interface ligatures resolve through the self-hosted canonical Material Symbols Rounded family at FILL 0, wght 300 and GRAD 0; the bookmark rail uses unique widgets, monitoring, newspaper and mail outline glyphs; product and social logos remain identity assets rather than UI glyphs",
     "citymeterCtaHierarchy": "pass: one solid primary Explore-all action, one outlined secondary conversation action and one circular share utility",
     "externalLinkCue": "pass: visible external-link terminals use a typographic ↗ cue with no text decoration; target-blank links carry noopener noreferrer",
     "mapCopy": {
@@ -35,13 +35,14 @@
     },
     "landomEntries": "pass: join, team work, company thinking and current work",
     "storyMotion": "pass: three staged 820 ms steps with 80/260/480 ms delays and a four-beat rally; reduced motion resolves immediately",
-    "socialEditorialGrid": "pass: TikTok and LinkedIn use full-width rows; Facebook and Instagram use readable paired columns and stack below 1080 px; the blank X embed is absent while the outbound profile link remains in the footer",
-    "locationNarrative": "pass: product-neutral catchment competition, white space/site selection, branch comparison, area-performance monitoring and Location-based Market Listening; the same-definition/time-window/boundary condition is stated",
-    "productEcosystem": "pass: five product cards use one capsule conversation CTA, an explicit fit cue and product-scoped copy; CityChat and ijji use exact official identity assets, CityMETER/CityWiki/land tools use the owner-approved Landometer symbol, and projects/partnerships is visibly separated as a tailored service route",
+    "dynamicReducedMotion": "pass in controlled in-app Chromium: initial reduce produced no src, paused=true, autoplay=false and readyState=0 with poster present; normal-near played at readyState=4; normal-to-reduce removed src and restored readyState=0; reduce-to-normal replayed only near the viewport; the same transition offscreen stayed paused with no src until the video returned near",
+    "socialEditorialGrid": "pass: TikTok and LinkedIn use full-width rows; Facebook and Instagram use readable paired columns and stack below 1080 px; Instagram frame height follows its measured card width without the former mobile blank tail; social-card chrome and iframe colour-scheme signals follow the user theme; the blank X embed is absent while the outbound profile link remains in the footer",
+    "locationNarrative": "pass: six product-neutral, image-led routes cover catchment competition, proof of demand, white space/site selection, branch comparison, area-performance monitoring and Location-based Market Listening; Proof of demand is explicitly an estimate from city-data signals that identifies likely patterns and calls for field validation; every route has a benefit-led conversation CTA",
+    "productEcosystem": "pass: five image-led product cards use one capsule conversation CTA, an explicit fit cue and product-scoped copy; desktop presents CityMETER and CityChat as equal featured cards above ijji, CityWiki and land tools; CityChat and ijji use exact official identity assets directly on their card surfaces, while CityMETER/CityWiki/land tools use an inline owner-approved Landometer symbol-plus-wordmark; projects/partnerships is visibly separated as an image-led tailored service route",
     "searchAndAgentDiscovery": "pass: bilingual metadata and WebPage descriptions name the product/service paths, while static JSON-LD adds a six-item ItemList linked to visible anchored content without Product, Offer, price, rating or review claims",
-    "bookmarkSemantics": "pass: desktop and mobile navigation use the same four unique rounded-outline meanings; the active state remains FILL 0 and changes only its surface/ink, with accessible labels and non-native hover/focus labels",
+    "bookmarkSemantics": "pass with explicit owner override: desktop and mobile navigation use the same four unique rounded-outline meanings; the active state remains FILL 0 and changes only its surface/ink, preserving the owner's all-interface-icons-outline direction rather than the r7 handoff's FILL 1 active example; hover uses blue tint, press uses soft plus downward travel, and every control has an accessible label",
     "underlineBoundary": "pass: UI icons and arrow cues have no underline; underline decoration is applied only to dedicated visible-text spans",
-    "scrollParallaxDecision": "pass: no new scroll-linked parallax was added because the normative DS has no approved documentary-photo parallax recipe; the already approved slow ambient hero pan and reduced-motion freeze remain unchanged",
+    "scrollParallaxDecision": "pass with owner authorization: hero media adds a requestAnimationFrame scroll parallax capped at plus/minus 20 px inside a 48 px overscan layer; the ambient 32-second pan remains independent, and both layers freeze under prefers-reduced-motion",
     "caveatCopyOnCustomerPage": 0
   },
   "networkBoundary": {
@@ -67,10 +68,15 @@
       "the governed Yaowarat Location image is materially clearer at the rendered 4:3 frame",
       "four CityMETER tiles select responsive r5/r4 AVIF sources and display at the intended aspect ratio",
       "CTA hierarchy and unified external-link cue grammar are visually distinct and keyboard reachable",
-      "five location-intelligence cards, five product cards, one tailored-service route, four Landom entry paths and bilingual map labels render as authored",
+      "six image-led Location Intelligence cards with benefit-led CTAs, five product cards in the requested 2+3 desktop hierarchy, one image-led tailored-service route, four Landom entry paths and bilingual map labels render as authored",
       "story disclosure and rally motion retain the global reduced-motion kill switch",
-      "TikTok leads the editorial grid; Facebook and Instagram remain readable without clipping; LinkedIn uses a full-width row; X has no empty embed card",
-      "Material Symbols Rounded resolves at the DS-locked axes; bookmark meanings are unique; link decoration does not cross into icons or arrow cues; all product inquiry actions select the matching visible contact topic"
+      "TikTok leads the editorial grid; Facebook and Instagram remain readable without clipping; Instagram measures 353 px wide by 429 px rendered at 390×844 and 578 px wide by 607 px rendered at 1440×900 with no former blank tail; LinkedIn uses a full-width row; X has no empty embed card",
+      "social-card surfaces and frame colour-scheme signals changed with the user light/dark control; provider-owned iframe pixels remained inside the provider's cross-origin theme boundary",
+      "hero scroll testing changed the parallax offset from -7.75 px to 2.33 px on the 390×844 sample and from -0.88 px to 6.50 px on the 1440×900 sample, with zero horizontal overflow",
+      "runtime reduced-motion changes share one media-query listener contract: the hero returns to zero travel and Living video restores its poster instead of leaving the loop running",
+      "Material Symbols Rounded resolves at the DS-locked axes; bookmark meanings are unique; link decoration does not cross into icons or arrow cues; four repeated Location CTA trials, direct #products and CityChat routing land beneath the prominent header with the intended inquiry topic",
+      "the compact 22 px navbar visuals retain virtual 44 px one-tap targets: taps 20 px left of the visual centre opened the menu at both 390 px and 320 px; desktop forwarding also passed",
+      "direct #products and product-to-#contact routing remained aligned beneath the prominent header after nine seconds, with stable scroll height and the hash-navigation visibility guard retained"
     ],
     "screenshots": []
   },
@@ -79,19 +85,19 @@
     "productionArtifact": {
       "repository": "https://github.com/montri-th/rebuild02",
       "branch": "main",
-      "commit": "a70a56a2ef246df44a412830a68147b154fb1c22",
-      "tree": "da0f781075f4023c5681be6dca5f1cefa11a4b73"
+      "commit": null,
+      "tree": null
     },
     "pagesBuild": {
-      "id": 1183177480,
-      "state": "built",
-      "commit": "a70a56a2ef246df44a412830a68147b154fb1c22",
-      "durationMs": 24568,
-      "updatedAt": "2026-08-30T04:00:00Z"
+      "id": null,
+      "state": "pending",
+      "commit": null,
+      "durationMs": null,
+      "updatedAt": null
     },
-    "liveHttpAndMime": "pass: 14/14 release URLs returned HTTP 200 with expected MIME types",
-    "liveByteParity": "pass: 13/13 governed artifact files matched exact production byte counts and SHA-256",
-    "liveBrowser": "pass: TH 1280x720 and EN 320x700 loaded ui-20260830-07 with zero horizontal overflow; exact product identities, five consistent product CTAs, unique rounded-outline bookmark meanings, six visible structured-data entries, contact-topic handoff and first-party console were verified"
+    "liveHttpAndMime": "pending for ui-20260830-08",
+    "liveByteParity": "pending for ui-20260830-08",
+    "liveBrowser": "pending for ui-20260830-08; local in-app Chromium passed TH and EN at 1440x900, 1024x768, 390x844 and 320x700 with zero horizontal overflow, stable hash/CTA alignment, one-tap virtual 44 px compact-navbar targets, loaded governed media, six Location cards and the requested 2+3 product hierarchy"
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

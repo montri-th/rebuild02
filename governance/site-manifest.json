@@ -12,14 +12,14 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited",
+    "evidenceStatus": "source_limited_current_release_pending",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
-    "machineValidation": "pending",
+    "machineValidation": "pass",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260830-07"
+    "artifactBuildId": "ui-20260830-08"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260830-07",
+      "id": "ui-20260830-08",
       "path": "governance/site-manifest.json"
     }
   },
@@ -50,7 +50,11 @@
     "stagedStoryRally": true,
     "responsiveSocialEditorialGrid": true,
     "locationQuestionFramework": true,
+    "locationQuestionCount": 6,
+    "locationQuestionMediaAndLeadRouting": true,
     "productEcosystem": true,
+    "productDesktopHierarchy": "two featured cards above three standard cards",
+    "governedProductMedia": true,
     "productFitRouting": true,
     "share": true,
     "mapHandoff": true,
@@ -73,18 +77,19 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260830-07",
+    "artifactBuildId": "ui-20260830-08",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260830-07",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v7",
+      "receiptId": "rebuild02-ui-20260830-08",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v8",
       "issuedAt": "2026-08-30"
     }
   },
   "network": {
     "loadTimeSubresources": "Primary page rendering remains same-origin. Official platform social embeds begin only when their cards approach the viewport.",
     "socialEmbeds": {
-      "activation": "IntersectionObserver with a 480 px root margin; no social iframe src or TikTok script exists before activation; Facebook receives its measured container width clamped to 180–500 px",
+      "activation": "IntersectionObserver with a 480 px root margin; no social iframe src or TikTok script exists before activation; Facebook receives its measured container width clamped to 180–500 px; Instagram height is recalculated from its measured card width by ResizeObserver",
       "freshness": "TikTok creator, Facebook timeline and Instagram profile content are rendered from official platform endpoints on each activated page load subject to provider caching; LinkedIn is one explicitly featured post, not a claimed latest feed; the non-rendering X timeline is omitted while its outbound profile link remains in the footer",
+      "themeBoundary": "Social-card chrome follows the stored light/dark page preference and passes the resolved CSS color-scheme into provider frames. Cross-origin provider pixels retain the theme behavior offered by that provider and are not filtered or restyled.",
       "providers": [
         {"name": "TikTok", "mode": "creator embed with provider-owned recent video surface", "endpoint": "https://www.tiktok.com/embed.js"},
         {"name": "Facebook", "mode": "Page Plugin timeline iframe", "endpoint": "https://www.facebook.com/plugins/page.php"},
@@ -114,10 +119,10 @@
       "symbolPath": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
       "symbolSha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
       "symbolDimensions": "1601x1601",
-      "wordmark": "typed Landometer in Arvo 700 at #757575 on light canvas and text-primary on dark canvas",
+      "wordmark": "typed Landometer in Arvo 700 at #757575 on light and dark canvas",
       "carrierOrPlate": "none",
       "themeStrategy": "same r6 construction on light and dark header surfaces",
-      "behavior": "prominent at the top and on upward scroll, hover, focus or open menu; calm 58/54 px state after downward scroll; real capsule CTA with an aria-hidden pointer-inert text sweep; reduced motion remains prominent and removes the loop"
+      "behavior": "r7 prominent state at the top and on upward scroll, hover, focus or open menu; the complete row scales to 50% for a 29/27 px calm state after downward scroll, while a transparent wake layer forwards one-tap activation through virtual 44 px targets and restores full-size controls; real capsule CTA with an aria-hidden pointer-inert text sweep; reduced motion remains prominent and removes the loop"
     },
     "faviconAndStructuredDataLogo": {
       "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
@@ -133,7 +138,7 @@
     "footer": {
       "symbolPath": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
       "symbolSha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
-      "wordmark": "typed Landometer in Arvo 700 at #757575 on light canvas and text-primary on dark canvas",
+      "wordmark": "typed Landometer in Arvo 700 at #757575 on light and dark canvas",
       "carrierOrPlate": "none"
     },
     "productCards": {
@@ -149,7 +154,7 @@
         "dimensions": "380x82",
         "sha256": "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62",
         "sourceAssetId": "citychat-horizontal-lockup-png-94055c9b",
-        "placement": "exact transparent lockup on DS brand-beige identity surface"
+        "placement": "exact transparent lockup directly on the card content surface with no nested logo frame"
       },
       "ijji": {
         "path": "assets/products/ijji-logo-official.png",
@@ -195,9 +200,9 @@
       "sha256": "47eb23f0b2a06bd6882080bcc693384f5d59791b434045e7281b98fa2831903c"
     },
     {
-      "path": "assets/fonts/material-symbols-rounded-rebuild02-r9.ttf",
-      "bytes": 9680,
-      "sha256": "ca26be053b6514d57ba5e7dc339aa1661933430c594768263f2d715c7efcaf5d"
+      "path": "assets/fonts/material-symbols-rounded-rebuild02-r10.ttf",
+      "bytes": 9464,
+      "sha256": "bbcc034717d243cd5a3653dd1169cec00e8f11f289c20ef949078db24dc680f5"
     },
     {
       "path": "assets/products/citychat-primary-logo-official.png",
@@ -298,7 +303,25 @@
       "path": "assets/social/landometer-rebuild02-og-1200x630.jpg",
       "bytes": 385727,
       "sha256": "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12"
-    }
+    },
+    {"path": "assets/photos/location-yaowarat-night-rebuild02-r7-720.webp", "bytes": 91074, "sha256": "5a09f2fba0e3694aba5562bbbc9a6cccc739721a26c1bb239d29b0633aa131a7"},
+    {"path": "assets/photos/location-yaowarat-night-rebuild02-r7-1200.webp", "bytes": 203942, "sha256": "fd78e3501f1b5ed39d0e9c9c683806085eb4625d07867afab6680f2fcdb02734"},
+    {"path": "assets/photos/location-yaowarat-night-rebuild02-r7-1920.webp", "bytes": 411988, "sha256": "af317d2d9ca50eaba19899bc4d7aa28f2cd2f53a4d7b7942399d3041edda4e0b"},
+    {"path": "assets/photos/location-competitive-catchment-rebuild02-r7-720.webp", "bytes": 79034, "sha256": "920900b7caf3facf045644736d0400e4a6992010dc9668803256996981ddbb44"},
+    {"path": "assets/photos/location-competitive-catchment-rebuild02-r7-1200.webp", "bytes": 166270, "sha256": "98269fa98c6aa1781d72d32135b52a702a937597fa0a8c9d94c127ba7d5d3e01"},
+    {"path": "assets/photos/location-proof-demand-rebuild02-r7-720.webp", "bytes": 37950, "sha256": "611d8cac9d942f413d1c798b4810b9f28a46043f84fe82785b7f546ddc93b478"},
+    {"path": "assets/photos/location-proof-demand-rebuild02-r7-1200.webp", "bytes": 74280, "sha256": "a0a7c8b20d9ef571eab3b70e9ec5a82de5f17a78259895549b3c76a32da09a22"},
+    {"path": "assets/photos/location-white-space-rebuild02-r7-720.webp", "bytes": 78080, "sha256": "234e9d68a0a221e13d4979014e6a308a9b4de9bf9add9c4c701dad46d64cbc16"},
+    {"path": "assets/photos/location-white-space-rebuild02-r7-1200.webp", "bytes": 169682, "sha256": "368420a174419f13f4da7c7a17fa922cffa9d81479faf3ca097b1ff9752ccd34"},
+    {"path": "assets/photos/location-market-listening-rebuild02-r7-640.webp", "bytes": 120106, "sha256": "b9c135dd06cce77d84b7cb1e67e7b216d2f8e442132898ebd60cb7aa173fdfc5"},
+    {"path": "assets/photos/location-market-listening-rebuild02-r7-960.webp", "bytes": 243076, "sha256": "71ac5f443ef80e20619be769314bcbb93bfb084de15fbd5bf9c4bd29aa35ef47"},
+    {"path": "assets/photos/product-citychat-community-rebuild02-r7-720.webp", "bytes": 62678, "sha256": "dbcff5ee5cb48d3e1c139c9852a8034c63c50b7f148b1b218229a8e1e2883e1e"},
+    {"path": "assets/photos/product-citychat-community-rebuild02-r7-1200.webp", "bytes": 121836, "sha256": "da952092621a758669e8ae8382ad28e2a76abe1b28599c9bb979caaa176395f2"},
+    {"path": "assets/photos/product-ijji-vendor-rebuild02-r7-720.webp", "bytes": 55828, "sha256": "33b3eae81a9da9b00e9bc0b5eb099ce29febe48092d21bd0cb3e590823b8ace6"},
+    {"path": "assets/photos/product-ijji-vendor-rebuild02-r7-1200.webp", "bytes": 112108, "sha256": "074db910225949e8178228910f03422e1e1fda82c94168d7a977c87e601e9d7d"},
+    {"path": "assets/photos/service-projects-partnerships-rebuild02-r7-640.webp", "bytes": 64332, "sha256": "c50d8f39157d1300ceea2dd184916d6848a4e23ba39355394c228d692a1d4936"},
+    {"path": "assets/photos/service-projects-partnerships-rebuild02-r7-1200.webp", "bytes": 171756, "sha256": "9bc6ea5d4320ea3c09455ee398b900221a0994b74785a97ae458f9fc82cb01b9"},
+    {"path": "assets/photos/service-projects-partnerships-rebuild02-r7-1600.webp", "bytes": 272880, "sha256": "5257628cda60c6ee50aec41cb018858afccf9b2235ff963e4f8a24d1813a2791"}
   ],
   "publication": {
     "authorizationSource": "current user request dated 2026-08-30",
@@ -308,36 +331,34 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "published_live_verified",
-    "verifiedArtifactCommit": "a70a56a2ef246df44a412830a68147b154fb1c22",
-    "verifiedArtifactTree": "da0f781075f4023c5681be6dca5f1cefa11a4b73",
-    "pagesBuildState": "built",
-    "pagesBuildId": 1183177480,
-    "pagesBuildDurationMs": 24568,
-    "pagesBuildUpdatedAt": "2026-08-30T04:00:00Z",
-    "verifiedAt": "2026-08-30T04:04:44Z",
-    "liveRouteEvidence": "pass: 14/14 release URLs returned HTTP 200 with the expected HTML, CSS, JavaScript, JSON, font or PNG MIME type",
-    "liveByteParity": "pass: all 13 governed artifact files matched the exact local SHA-256 and byte count in production",
+    "currentReleaseState": "current_release_pending",
+    "verifiedArtifactCommit": null,
+    "verifiedArtifactTree": null,
+    "pagesBuildState": "pending",
+    "pagesBuildId": null,
+    "pagesBuildDurationMs": null,
+    "pagesBuildUpdatedAt": null,
+    "verifiedAt": null,
+    "liveRouteEvidence": "pending for ui-20260830-08",
+    "liveByteParity": "pending for ui-20260830-08",
     "localBrowserEvidence": {
       "matrix": [
-        {"locale": "th", "theme": "dark", "viewport": "1280x720", "route": "#products", "result": "pass"},
-        {"locale": "th", "theme": "dark", "viewport": "390x844", "route": "#products", "result": "pass"},
-        {"locale": "th", "theme": "light", "viewport": "390x844", "route": "#products", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "320x700", "route": "#products", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "900x700", "route": "#products", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "1100x720", "route": "#products", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "1280x720", "route": "#products and #contact", "result": "pass"}
+        {"locale": "th", "theme": "dark", "viewport": "1440x900", "route": "top, #location-intelligence, #products and menu", "result": "pass"},
+        {"locale": "th", "theme": "dark", "viewport": "1024x768", "route": "#products", "result": "pass"},
+        {"locale": "th", "theme": "dark", "viewport": "390x844", "route": "top, #location-intelligence, #products and menu", "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "1440x900", "route": "#products", "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "390x844", "route": "top", "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "320x700", "route": "top and #products", "result": "pass"},
+        {"locale": "th", "theme": "dark", "viewport": "390x844", "route": "top, #news, #products and #contact", "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "1440x900", "route": "top and #news", "result": "pass"}
       ],
-      "verified": "Local Chromium loaded build ui-20260830-07 with zero horizontal overflow. Five product cards render exact Landometer, CityChat and ijji identities; all five use a capsule conversation CTA and visible fit cue; the tailored service route is separate. The bookmark rail uses unique category, preview, auto_stories and contact_support glyphs at FILL 0 / wght 300 / GRAD 0, and product CTAs update the visible contact topic."
+      "verified": "Local in-app Chromium loaded build ui-20260830-08 with zero horizontal overflow. The hero ends at the first viewport and its overscanned parallax moves within the plus/minus 20 px cap; reduced-motion CSS freezes both hero motion layers. The r7 prominent/calm navbar and mobile menu render as authored, including one-tap virtual 44 px targets at 390 and 320 px. Repeated Location CTA, CityChat and direct #products routing land beneath the prominent header and remained stable after nine seconds. All six Location Intelligence cards load governed media and benefit-led CTAs; five product cards render the requested 2+3 desktop hierarchy, approved identities and responsive media; the service route uses governed media. Instagram fills its profile content height on mobile and desktop without the former blank tail. Social-card chrome and frame colour-scheme signals follow light/dark preference while provider-owned cross-origin pixels retain provider theming. Bookmark roles resolve as widgets, monitoring, newspaper and mail from the r10 FILL 0 font."
     },
     "liveBrowserEvidence": {
       "engine": "Codex in-app Chromium",
-      "verifiedAt": "2026-08-30T04:04:44Z",
-      "routes": [
-        {"locale": "th", "viewport": "1280x720", "route": "Landometer-Home-TH.dc.html#products", "result": "pass"},
-        {"locale": "en", "viewport": "320x700", "route": "Landometer-Home-EN.dc.html#products and #contact", "result": "pass"}
-      ],
-      "verified": "Live build ui-20260830-07 rendered with zero horizontal overflow. All five primary product CTAs are consistent, exact logo assets loaded at their intrinsic dimensions, the four bookmark meanings resolve from the rounded-outline r9 font at FILL 0, the six-item ItemList matches visible content, the ijji CTA selected the matching visible contact topic, and no first-party console errors were recorded."
+      "verifiedAt": null,
+      "routes": [],
+      "verified": "pending for ui-20260830-08"
     }
   },
   "growth": {
@@ -364,7 +385,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "pass: Pages build 1183177480 built artifact a70a56a2ef246df44a412830a68147b154fb1c22; 14/14 release URLs returned 200 with expected MIME, 13/13 governed artifact files matched exact production bytes and SHA-256, and live TH/EN Chromium passed",
+    "renderedBrowserGate": "local pass; current-release Pages build, live route, byte-parity and live-browser attestation pending",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -382,14 +403,14 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "pass",
+    "SC-15": "fail",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",
     "SC-19": "pass",
     "SC-20": "fail",
     "SC-21": "pass",
-    "SC-22": "fail",
+    "SC-22": "pass",
     "SC-23": "pass",
     "resultPath": "governance/self-check.md"
   }

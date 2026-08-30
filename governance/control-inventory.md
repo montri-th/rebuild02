@@ -1,11 +1,11 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260830-07`
+Artifact build: `ui-20260830-08`
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
-Each locale contains 101 native interactive/control/media occurrences in source. Seven
-links belong to the mutually exclusive `noscript` navigation, leaving 94 native
+Each locale contains 106 native interactive/control/media occurrences in source. Seven
+links belong to the mutually exclusive `noscript` navigation, leaving 99 native
 occurrences in the enhanced model. The TikTok creator placeholder is not counted as a
 native control or media element; its official script creates the provider UI only after
 intersection. Hidden menu/listbox state means the raw count is not a claim
@@ -13,7 +13,7 @@ that all controls are visible together.
 
 | Family | Raw count per locale | Enhanced behavior | No-JavaScript behavior |
 |---|---:|---|---|
-| Links | 75 | Local sections, locale route, five product conversation routes, product evidence routes, one tailored-service route, login, careers, bookmark rail, ordered social destinations, social-card exits, office map, clickable office email and outbound X profile | Native links remain; seven-link `noscript` navigation replaces the JavaScript menu |
+| Links | 80 | Local sections, locale route, six Location Intelligence conversation routes, five product conversation routes, product evidence routes, one tailored-service route, login, careers, bookmark rail, ordered social destinations, social-card exits, office map, clickable office email and outbound X profile | Native links remain; seven-link `noscript` navigation replaces the JavaScript menu |
 | Buttons | 16 | Menu and pointer-only backdrop, one light/dark theme circle, topic trigger plus ten options, exact-link share, submit | JavaScript-only controls stay hidden or inert; form topic remains on its first hidden value |
 | Inputs | 4 | Name, email and production-matched phone validation (9–24 characters) plus hidden topic value | Visible fields remain native; fallback submission encoding is not claimed compatible with the JSON API |
 | Textareas | 1 | Required contact message | Native field remains visible |
@@ -29,9 +29,9 @@ Source and rendered assertions:
   closes it. Fragment navigation sends focus to the destination section.
 - Theme and language are separate 44 px circles. The theme action toggles Light/Dark
   with an action-labelled icon; the locale control preserves query and hash.
-- The navbar begins at 76 px desktop / 68 px mobile, contracts to 58/54 px after a
-  downward scroll, and returns to prominence on upward scroll, pointer/focus intent or
-  menu open. Mobile contains only the carrier-free identity and circular menu control;
+- The navbar begins at 76 px desktop / 68 px mobile, scales the complete row to a
+  29/27 px calm state after a downward scroll, and returns to prominence on upward
+  scroll, pointer/focus intent or menu open. Mobile contains only the carrier-free identity and circular menu control;
   the one-line sign-in action moves into the menu. Both CTA placements retain the real
   capsule beneath a pointer-inert, aria-hidden text sweep. Reduced motion stays prominent
   and removes that loop.
@@ -49,11 +49,16 @@ Source and rendered assertions:
 - Stories use TikTok, Facebook, Instagram and LinkedIn in a responsive editorial grid,
   with TikTok and LinkedIn on full-width rows and Facebook/Instagram paired only while
   their provider surfaces remain readable. Facebook, Instagram and LinkedIn iframe
-  sources plus the TikTok official script load only when each card approaches the viewport. LinkedIn
+  sources plus the TikTok official script load only when each card approaches the viewport.
+  Instagram height follows the measured card width, and the site theme governs card chrome
+  plus the colour-scheme signal passed to each provider frame. Cross-origin provider content
+  keeps the palette exposed by that provider. LinkedIn
   is explicitly a featured post, localized as `โพสต์เด่น` in Thai, and is not claimed
   as a latest feed. The X timeline embed is omitted because its provider widget rendered
   a hidden zero-size iframe at tested desktop and mobile widths. Footer social links remain
   Facebook, Instagram, TikTok, LinkedIn and X.
+- Hero media uses a 48 px overscan layer for a scroll-linked translation capped at ±20 px,
+  independent of its ambient pan. Reduced-motion users receive neither movement.
 - The bilingual company history and future direction are available through a native
   disclosure; its compact identity mark changes between full-colour and cream with the theme.
 - The CityMETER proof grid links four distinct, responsive captures and no longer repeats
@@ -62,12 +67,19 @@ Source and rendered assertions:
 - All visible external-link terminals use the same typographic `↗` cue without an icon
   underline. Underlines are scoped to visible-text spans and never cross UI icons or
   arrow cues. Every `target="_blank"` link carries `rel="noopener noreferrer"`.
-- All 26 Material Symbols ligatures currently rendered by Rebuild02 are present in the
-  26-glyph self-hosted r9 canonical Material Symbols Rounded file at FILL 0 / wght 300 /
-  GRAD 0. Bookmark roles use four unique outline glyphs; product and social logos remain
+- All 25 Material Symbols ligatures currently rendered by Rebuild02 are present in the
+  25-glyph self-hosted r10 canonical Material Symbols Rounded file at FILL 0 / wght 300 /
+  GRAD 0. Bookmark roles use widgets, monitoring, newspaper and mail as four unique
+  outline glyphs. Keeping the current bookmark at FILL 0 is an explicit owner override of
+  the r7 handoff's FILL 1 active example so every interface icon remains rounded-outline;
+  product and social logos remain
   identity assets rather than UI glyphs.
+- Location Intelligence exposes six image-led, benefit-specific conversation routes.
+  Proof of demand remains framed as an estimate from city-data signals and directs the
+  reader toward field validation rather than asserting measured demand.
 - Products and Services exposes five product paths with consistent capsule conversation
-  CTAs and an explicit fit cue. CityMETER, CityWiki and land/property tools use the
-  Landometer symbol; CityChat and ijji use exact official marks. Projects/partnerships is
-  separated as a tailored service route. Product-specific copy is not generalized across
-  Landometer.
+  CTAs and an explicit fit cue. Desktop uses a 2+3 hierarchy: CityMETER and CityChat lead,
+  followed by ijji, CityWiki and land/property tools. The three Landometer-family cards use
+  an inline symbol-plus-wordmark; CityChat and ijji use exact official marks directly on
+  their card surfaces. Projects/partnerships is separated as an image-led tailored service
+  route. Product-specific copy is not generalized across Landometer.

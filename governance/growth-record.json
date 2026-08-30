@@ -5,6 +5,21 @@
   },
   "crossProductPaths": [],
   "crossProductScope": "Contextual closure cards only; persistent CityMETER, CityWiki and Landom ecosystem navigation is recorded in the site manifest instead.",
+  "leadRoutes": {
+    "activation": "explicit visitor click followed by an explicit contact-form submit",
+    "destination": "#contact",
+    "locationIntelligenceCards": [
+      "competitive landscape within a catchment area",
+      "proof of demand",
+      "white space and site selection",
+      "branch potential comparison",
+      "operational performance by area",
+      "location-based market listening"
+    ],
+    "productCards": ["CityMETER", "CityChat", "ijji", "CityWiki", "land and property tools"],
+    "tailoredServiceRoute": "projects and partnerships",
+    "evidenceBoundary": "Location routes stay product-neutral. Product-specific claims remain inside their own cards; the contact route does not imply fit, price or outcome before the team reviews the visitor's question."
+  },
   "toolHandoffs": [
     {
       "intent": "Locate Pak Khlong Talat after seeing the documentary photograph.",

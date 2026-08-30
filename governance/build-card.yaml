@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260830-07"
+      id: "ui-20260830-08"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -59,7 +59,7 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "source_limited"
+    evidenceStatus: "source_limited_current_release_pending"
     visibility: "public"
     indexable: true
     robots: "index,follow"
@@ -96,10 +96,10 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "share_ready"
+    readiness: "local_verified_release_pending"
     publicSafe: true
-    status: "published"
-    qrOrLinkTest: "pass: Pages build 1183177480 built artifact a70a56a2ef246df44a412830a68147b154fb1c22; 14/14 release URLs returned 200 with correct MIME, 13/13 governed artifact files matched exact production SHA-256, and live TH/EN Chromium passed without horizontal overflow"
+    status: "current_release_pending"
+    qrOrLinkTest: "pending for ui-20260830-08; prior published release is not reused as current evidence"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -119,7 +119,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "b49cfe6f9105cc9bad11348ed35903c76c6ea0af0814046b409016c37afa9869"
+        copyHash: "4c721fb4c07dc04edc86211e4f2a38eb69008e0cbe8affd8e6f4e58764c394d0"
         naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
         parityReviewRef: "bilingual source review complete; sampled rendered review complete"
       - locale: "en"
@@ -130,7 +130,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "f22c59540768c0d5efc65a1d712774af031bd8d8cd07c9d3ab7087f3ba0c39a8"
+        copyHash: "df027491eb2394589f9d2de628e090adafdeb3ba0ec24e0f3fb813a1d014d91e"
         naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
         parityReviewRef: "bilingual source review complete; sampled rendered review complete"
     internalVoiceWordsPrinted: false
@@ -144,7 +144,7 @@ landometerBuild:
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild02.ui-20260830-07"
+    channelParityKey: "landometer.home.rebuild02.ui-20260830-08"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -162,10 +162,10 @@ landometerBuild:
         surface: "var(--surface-atmosphere-cultivate)"
         foreground: "var(--on-atmosphere), var(--on-atmosphere-2)"
     localForegroundContracts:
-      - "r6 full-colour symbol plus typed Arvo wordmark directly on both header themes; #757575 on light canvas and text-primary on dark canvas"
+      - "owner-approved r6 full-colour symbol plus typed Arvo wordmark directly on both r7 header themes; #757575 wordmark on light and dark canvas"
       - "theme-aware card/canvas foreground pairs"
       - "opaque captions on surface-card"
-      - "assembled r6 symbol and typed wordmark directly on the footer surface"
+      - "assembled r6 symbol and typed #757575 wordmark directly on the footer surface"
   brandAlignment:
     productStatement: "City Data + AI for decisions about Land, Location, and Living."
     proofObject: "dated product evidence and documentary media"
@@ -242,7 +242,7 @@ landometerBuild:
         dimensions: "380x82"
         sha256: "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62"
         canvas: "transparent"
-        placement: "DS brand-beige identity surface"
+        placement: "directly on the card content surface; no nested logo frame"
         lineage: "exact governed CityChat runtime asset citychat-horizontal-lockup-png-94055c9b"
         approvalStatus: "owner assigned Rebuild02 product-card role on 2026-08-30"
       - context: "ijji product card"
@@ -256,9 +256,11 @@ landometerBuild:
         approvalStatus: "owner assigned Rebuild02 product-card role on 2026-08-30"
     approvedPhotography:
       - "responsive Lumpini city image family"
-      - "responsive Yaowarat image family"
+      - "responsive Yaowarat night r7 image family"
       - "responsive Landom team image family"
       - "responsive Pak Khlong Talat image family"
+      - "six governed Location Intelligence card media roles"
+      - "governed CityChat, ijji and projects/partnerships media roles"
     mediaAssets:
       - path: "assets/media/living-city-rebuild02-r2.mp4"
         sha256: "ab31208c048ab0e3fcd32de1db96f2d0551b762067ec6c333d9e7ab731cfa9b5"
@@ -292,6 +294,30 @@ landometerBuild:
       - path: "assets/photos/location-yaowarat-rebuild02-r6-1920.webp"
         sha256: "7a396447a4bc3be0bebd0a546467489ba9596ba3ef9ffa35e9f3cbc5920e3d8b"
         privacy: "WebP fallback for the same governed 4:3 Location image"
+      - path: "assets/photos/location-yaowarat-night-rebuild02-r7-1920.webp"
+        sha256: "af317d2d9ca50eaba19899bc4d7aa28f2cd2f53a4d7b7942399d3041edda4e0b"
+        privacy: "owner-supplied documentary street scene; metadata stripped; not an analytical result"
+      - path: "assets/photos/location-competitive-catchment-rebuild02-r7-1200.webp"
+        sha256: "98269fa98c6aa1781d72d32135b52a702a937597fa0a8c9d94c127ba7d5d3e01"
+        privacy: "owner-supplied competitive streetscape; metadata stripped; does not establish market share or endorsement"
+      - path: "assets/photos/location-proof-demand-rebuild02-r7-1200.webp"
+        sha256: "a0a7c8b20d9ef571eab3b70e9ec5a82de5f17a78259895549b3c76a32da09a22"
+        privacy: "owner-supplied retail interaction; metadata stripped; does not establish measured demand or product use"
+      - path: "assets/photos/location-white-space-rebuild02-r7-1200.webp"
+        sha256: "368420a174419f13f4da7c7a17fa922cffa9d81479faf3ca097b1ff9752ccd34"
+        privacy: "owner-supplied market scene; metadata stripped; not a site recommendation"
+      - path: "assets/photos/location-market-listening-rebuild02-r7-960.webp"
+        sha256: "71ac5f443ef80e20619be769314bcbb93bfb084de15fbd5bf9c4bd29aa35ef47"
+        privacy: "owner-supplied conversation scene; metadata stripped; does not establish measured sentiment or product use"
+      - path: "assets/photos/product-citychat-community-rebuild02-r7-1200.webp"
+        sha256: "da952092621a758669e8ae8382ad28e2a76abe1b28599c9bb979caaa176395f2"
+        privacy: "owner-supplied community scene; metadata stripped; people are not represented as CityChat users"
+      - path: "assets/photos/product-ijji-vendor-rebuild02-r7-1200.webp"
+        sha256: "074db910225949e8178228910f03422e1e1fda82c94168d7a977c87e601e9d7d"
+        privacy: "owner-supplied food-vendor scene; metadata stripped; person is not represented as an ijji user"
+      - path: "assets/photos/service-projects-partnerships-rebuild02-r7-1600.webp"
+        sha256: "5257628cda60c6ee50aec41cb018858afccf9b2235ff963e4f8a24d1813a2791"
+        privacy: "owner-supplied team scene; metadata stripped; no participant identity or project outcome is asserted"
       - path: "assets/social/landometer-rebuild02-og-1200x630.jpg"
         sha256: "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12"
         privacy: "derived from approved Lumpini city photography for Open Graph and Twitter cards"
@@ -305,18 +331,19 @@ landometerBuild:
     intensity: "guided"
     patterns:
       - "grouped once-only entrance reveals with 32 px vertical or 36 px directional travel, 760/920 ms opacity/settle timing, and 150 ms stagger capped at 450 ms"
-      - "r6 prominent/calm navbar transition over 560 ms, restored by upward scroll, header intent or menu open"
+      - "r7 prominent/calm navbar transition over 560 ms; the whole row scales to 50% for a 29/27 px calm state, and a transparent wake layer forwards one-tap activation through virtual 44 px targets while restoring full-size controls; upward scroll, header intent or menu open also restore the prominent state"
       - "real navbar CTA capsule with an aria-hidden 3.7-second sweep and 1.09-second flick overlay"
       - "32-second alternating hero-image pan contained within the fixed first-viewport crop"
+      - "scroll-linked hero parallax capped at plus/minus 20 px inside a 48 px overscan layer, updated through requestAnimationFrame"
       - "Downbeat press for action controls"
       - "One-drop settle for copy feedback"
       - "Story disclosure stages two narrative paragraphs over 820 ms with 80/260 ms delays, followed by a four-beat 480 ms rally"
-      - "TikTok-first editorial social grid uses full-width TikTok and LinkedIn rows, with Facebook and Instagram paired only at readable widths"
+      - "TikTok-first editorial social grid uses full-width TikTok and LinkedIn rows, with Facebook and Instagram paired only at readable widths; Instagram height follows its measured card width"
     omitted:
       - "Offbeat count-up is absent because the null legacy-system row is not rendered."
-      - "No parallax, hue cycling, or scroll jacking."
+      - "No hue cycling or scroll jacking; the owner-authorized hero parallax is shallow, bounded and non-essential."
       - "Owner-directed Living video is the explicit autoplay/loop exception; reduced motion retains the poster."
-      - "Reduced motion also keeps the navbar prominent, removes the CTA sweep and freezes the hero image."
+      - "Reduced motion also keeps the navbar prominent, removes the CTA sweep and freezes both hero motion layers."
   capabilities:
     analyticalEvidence: true
     motionEnhancement: true
@@ -352,7 +379,7 @@ landometerBuild:
     securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260830-07"
+    artifactBuildId: "ui-20260830-08"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -376,36 +403,36 @@ landometerBuild:
         sha256: "4bf6d86dd4ece9e02db754058f91b346415a71f595ede4af77c76b89b7b9a553"
       - channel: "self_hosted_font_css"
         path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/tokens/fonts.css"
-        bytes: 3314
-        sha256: "558ce6e11fda1668b5d79e4c3de8aa927565f54a7cba305f7e2747aa3a380cec"
+        bytes: 3315
+        sha256: "016930440f7e24d7fb396de64479850e1835103f539a44cc9d09bb3ecb61ec53"
       - channel: "icon_font"
-        path: "assets/fonts/material-symbols-rounded-rebuild02-r9.ttf"
-        bytes: 9680
-        sha256: "ca26be053b6514d57ba5e7dc339aa1661933430c594768263f2d715c7efcaf5d"
+        path: "assets/fonts/material-symbols-rounded-rebuild02-r10.ttf"
+        bytes: 9464
+        sha256: "bbcc034717d243cd5a3653dd1169cec00e8f11f289c20ef949078db24dc680f5"
       - channel: "hosted_th"
         path: "Landometer-Home-TH.dc.html"
-        bytes: 87076
-        sha256: "b49cfe6f9105cc9bad11348ed35903c76c6ea0af0814046b409016c37afa9869"
+        bytes: 99937
+        sha256: "570309b7b8a0f316cc4a8d1c05afb72fc99d2fd25e1b43816cb28242b06ff067"
       - channel: "hosted_en"
         path: "Landometer-Home-EN.dc.html"
-        bytes: 72468
-        sha256: "f22c59540768c0d5efc65a1d712774af031bd8d8cd07c9d3ab7087f3ba0c39a8"
+        bytes: 82962
+        sha256: "237c6c1bdd29af33ba6deb4583410d78f6b70e6a86e76484403cee6172e1a0a9"
       - channel: "redirect_alias"
         path: "index.html"
         bytes: 3069
-        sha256: "85b47879f08b2cab1f385194fc14dc2f6dca47f96ee359e9ccb46387c510f50a"
+        sha256: "83025ba12bec30354dfc0ec95fd7c9781f36d914e6671fb3e4059db4daa06196"
       - channel: "site_css"
         path: "site.css"
-        bytes: 49033
-        sha256: "2836493b781c9a913f21fadf57f93d70f81f7197a40f4b52a8f24e7fa019ac51"
+        bytes: 52846
+        sha256: "099d2d9fa717ef82128577beb96b19bb77c1606e18b5bd78a155d3e92639b696"
       - channel: "site_js"
         path: "site.js"
-        bytes: 22059
-        sha256: "1a5cc8244ab5d77e50909de51fd1253030fd848cafa169a70e37de4cadf59521"
+        bytes: 28688
+        sha256: "72e9dfcdb1d2926375c11765751473d87ed90121f90cf30c34de667d736b87b9"
       - channel: "font_manifest"
         path: "assets/fonts/font-assets.manifest.json"
-        bytes: 9454
-        sha256: "cd886d0e3626d1cfebf704bc7d046f7232766a37270d9f500c01b218c504a609"
+        bytes: 10406
+        sha256: "7ae69206b3935af5d5bef06dbfb1de16cffb849c9ce891fbdafc2fe76244f801"
       - channel: "product_identity_citychat"
         path: "assets/products/citychat-primary-logo-official.png"
         bytes: 8371
@@ -416,15 +443,15 @@ landometerBuild:
         sha256: "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild02-ui-20260830-07"
-      catalogOrContentVersion: "landometer-home-rebuild02-v7"
+      receiptId: "rebuild02-ui-20260830-08"
+      catalogOrContentVersion: "landometer-home-rebuild02-v8"
       issuedAt: "2026-08-30"
   privacy:
     personalData: true
     sensitivity: "public"
     redactedPublicProjection: false
     governanceRecord:
-      id: "privacy-direct-inquiry-ui-20260830-07"
+      id: "privacy-direct-inquiry-ui-20260830-08"
       owner: "Montri (Landometer), per Rebuild02 work order"
       collectionBasisAndMinimumFields: "After explicit submit, the form sends topic, name, email, phone, and message; name, email, phone, and message are required."
       accessAndRetentionDeletion: "The first-party production inquiry backend owns access, retention, and deletion; those backend rules are not documented in this static repository."
@@ -456,9 +483,10 @@ landometerBuild:
       destination: "mailto:hello@landometer.com"
       outcome: "the visitor's configured mail application opens with the recipient populated"
     socialEmbeds:
-      activation: "within 480 px of the viewport by IntersectionObserver; Facebook receives the measured card width clamped to its supported 180–500 px range"
+      activation: "within 480 px of the viewport by IntersectionObserver; Facebook receives the measured card width clamped to its supported 180–500 px range; Instagram height follows its card width through ResizeObserver"
       platformFreshness: "TikTok creator, Facebook timeline and Instagram profile are platform-rendered at activation subject to provider caching; LinkedIn is a single featured post and is not represented as a latest feed; X is outbound-only because its timeline widget rendered a hidden zero-size frame in desktop and mobile tests"
       privacyBoundary: "the primary page is same-origin; approaching a social card permits that provider to receive the normal iframe/script request context"
+      themeBoundary: "social-card chrome and the iframe color-scheme signal follow the stored page theme; cross-origin provider pixels retain the theme behavior supported by each provider and are never inverted or restyled"
       endpoints:
         - "Facebook Page Plugin timeline iframe"
         - "Instagram profile embed iframe"
@@ -495,7 +523,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "pass: local responsive Chromium passed for ui-20260830-07 at 320, 900, 1100 and 1280 px; Pages build 1183177480 built artifact a70a56a2ef246df44a412830a68147b154fb1c22; 14/14 live release URLs returned 200, 13/13 governed artifact files matched exact production SHA-256, and live TH/EN Chromium passed"
+    renderedBrowserGate: "local pass: ui-20260830-08 rendered at 1440x900, 1024x768, 390x844 and 320x700 with zero horizontal overflow; repeated Location, CityChat and direct #products routing passed; compact navbar one-tap virtual 44 px targets passed at 390 and 320 px; current-release production attestation pending"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -516,8 +544,8 @@ landometerBuild:
   iconSystem:
     family: "material-symbols-rounded"
     axes: "FILL 0, wght 300, GRAD 0, opsz 20-24"
-    selfHostedSubsetPath: "assets/fonts/material-symbols-rounded-rebuild02-r9.ttf"
-    subsetSha256: "ca26be053b6514d57ba5e7dc339aa1661933430c594768263f2d715c7efcaf5d"
+    selfHostedSubsetPath: "assets/fonts/material-symbols-rounded-rebuild02-r10.ttf"
+    subsetSha256: "bbcc034717d243cd5a3653dd1169cec00e8f11f289c20ef949078db24dc680f5"
     licensePath: "assets/fonts/LICENSE-Material-Symbols.txt"
     secondFamilyPresent: false
   actionGeometry:

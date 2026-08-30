@@ -1,6 +1,6 @@
 {
   "manifestVersion": "1.1",
-  "artifactBuildId": "ui-20260830-07",
+  "artifactBuildId": "ui-20260830-08",
   "fontSynthesis": false,
   "textFacePackageSource": "Fontsource npm packages 5.3.0",
   "textFaceLicense": "SIL Open Font License 1.1",
@@ -75,15 +75,21 @@
       "licenseRecord": {"spdx": "OFL-1.1", "path": "assets/fonts/licenses/ibm-plex-sans-thai-OFL.txt", "sha256": "1b4f4d1f1463b63f1356e7b6034ad5a94311b35ffb53cc4bf83f2fbda24450e4"}
     },
     {
-      "id": "material-symbols-rounded-rebuild02-r9-subset",
+      "id": "material-symbols-rounded-rebuild02-r10-subset",
       "family": "Material Symbols Rounded",
-      "weight": "variable",
+      "weight": 300,
       "style": "normal",
       "scripts": ["icons"],
-      "axesLock": "FILL 0, wght 300, GRAD 0, opsz 20-48",
-      "subset": "26 active interface glyphs",
+      "axesLock": "static instance: FILL 0, wght 300, GRAD 0, opsz 24",
+      "subset": "25 active interface glyphs",
+      "source": {
+        "provider": "Google Fonts official CSS API",
+        "url": "https://fonts.gstatic.com/l/font?kit=syl0-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvDmUSVOK7BDB_Qb9vUSzq3wzLK-P0J-V_Zs-QtQth3-jOcbTCVpeRL2w5rwZu2rNmlXxKRNccDe81u7DANSS1DH1lE6hjbcz4aXsBdQbFL6l4wUBnjBla82oSFuS6Dk0UdJMPEORq6_j6nhOWw8kD9CdYlbtyPTVk&skey=70ddea8fe54d532e&v=v369",
+        "version": "v369",
+        "fetched": "2026-08-30"
+      },
       "files": [
-        {"file": "assets/fonts/material-symbols-rounded-rebuild02-r9.ttf", "sha256": "ca26be053b6514d57ba5e7dc339aa1661933430c594768263f2d715c7efcaf5d"}
+        {"file": "assets/fonts/material-symbols-rounded-rebuild02-r10.ttf", "bytes": 9464, "sha256": "bbcc034717d243cd5a3653dd1169cec00e8f11f289c20ef949078db24dc680f5"}
       ],
       "licenseRecord": {"spdx": "Apache-2.0", "path": "assets/fonts/LICENSE-Material-Symbols.txt", "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"}
     }
@@ -101,13 +107,21 @@
   ],
   "iconFace": {
     "family": "Material Symbols Rounded",
-    "file": "assets/fonts/material-symbols-rounded-rebuild02-r9.ttf",
-    "bytes": 9680,
-    "sha256": "ca26be053b6514d57ba5e7dc339aa1661933430c594768263f2d715c7efcaf5d",
-    "axes": {"FILL": 0, "wght": 300, "GRAD": 0, "opsz": [20, 24]},
-    "glyphs": ["arrow_downward", "arrow_forward", "auto_stories", "category", "close", "compare_arrows", "contact_support", "dark_mode", "expand_more", "graphic_eq", "groups", "handshake", "light_mode", "location_searching", "mail", "map", "menu", "place", "preview", "query_stats", "radar", "send", "share", "square_foot", "task_alt", "visibility"],
+    "fontName": "Material Symbols Rounded Light",
+    "fontVersion": "2.966",
+    "file": "assets/fonts/material-symbols-rounded-rebuild02-r10.ttf",
+    "bytes": 9464,
+    "sha256": "bbcc034717d243cd5a3653dd1169cec00e8f11f289c20ef949078db24dc680f5",
+    "axes": {"FILL": 0, "wght": 300, "GRAD": 0, "opsz": 24, "instance": "static"},
+    "glyphs": ["arrow_downward", "arrow_forward", "close", "compare_arrows", "dark_mode", "expand_more", "graphic_eq", "groups", "handshake", "light_mode", "location_searching", "mail", "map", "menu", "monitoring", "newspaper", "place", "query_stats", "radar", "send", "share", "square_foot", "task_alt", "visibility", "widgets"],
+    "source": {
+      "provider": "Google Fonts official CSS API",
+      "url": "https://fonts.gstatic.com/l/font?kit=syl0-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvDmUSVOK7BDB_Qb9vUSzq3wzLK-P0J-V_Zs-QtQth3-jOcbTCVpeRL2w5rwZu2rNmlXxKRNccDe81u7DANSS1DH1lE6hjbcz4aXsBdQbFL6l4wUBnjBla82oSFuS6Dk0UdJMPEORq6_j6nhOWw8kD9CdYlbtyPTVk&skey=70ddea8fe54d532e&v=v369",
+      "version": "v369",
+      "fetched": "2026-08-30"
+    },
     "license": {"spdx": "Apache-2.0", "path": "assets/fonts/LICENSE-Material-Symbols.txt", "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"},
     "delivery": "self_hosted_subset",
-    "knownSubsetGap": "none for the 26 Material Symbols ligatures rendered by Rebuild02; product and social logos remain exact brand assets rather than UI glyphs"
+    "knownSubsetGap": "none for the 25 Material Symbols ligatures rendered or toggled by Rebuild02; product and social logos remain exact brand assets rather than UI glyphs"
   }
 }
