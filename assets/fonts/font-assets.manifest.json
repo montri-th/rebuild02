@@ -1,6 +1,6 @@
 {
   "manifestVersion": "1.1",
-  "artifactBuildId": "ui-20260830-06",
+  "artifactBuildId": "ui-20260830-07",
   "fontSynthesis": false,
   "textFacePackageSource": "Fontsource npm packages 5.3.0",
   "textFaceLicense": "SIL Open Font License 1.1",
@@ -75,15 +75,15 @@
       "licenseRecord": {"spdx": "OFL-1.1", "path": "assets/fonts/licenses/ibm-plex-sans-thai-OFL.txt", "sha256": "1b4f4d1f1463b63f1356e7b6034ad5a94311b35ffb53cc4bf83f2fbda24450e4"}
     },
     {
-      "id": "material-symbols-rounded-rebuild02-r8-subset",
+      "id": "material-symbols-rounded-rebuild02-r9-subset",
       "family": "Material Symbols Rounded",
       "weight": "variable",
       "style": "normal",
       "scripts": ["icons"],
       "axesLock": "FILL 0, wght 300, GRAD 0, opsz 20-48",
-      "subset": "31 active interface glyphs",
+      "subset": "26 active interface glyphs",
       "files": [
-        {"file": "assets/fonts/material-symbols-rounded-rebuild02-r8.ttf", "sha256": "044e541cf8db19750c21dfc5c8d30f8300d07773ada10e362bac3e73e6a0ceec"}
+        {"file": "assets/fonts/material-symbols-rounded-rebuild02-r9.ttf", "sha256": "ca26be053b6514d57ba5e7dc339aa1661933430c594768263f2d715c7efcaf5d"}
       ],
       "licenseRecord": {"spdx": "Apache-2.0", "path": "assets/fonts/LICENSE-Material-Symbols.txt", "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"}
     }
@@ -101,13 +101,13 @@
   ],
   "iconFace": {
     "family": "Material Symbols Rounded",
-    "file": "assets/fonts/material-symbols-rounded-rebuild02-r8.ttf",
-    "bytes": 11632,
-    "sha256": "044e541cf8db19750c21dfc5c8d30f8300d07773ada10e362bac3e73e6a0ceec",
+    "file": "assets/fonts/material-symbols-rounded-rebuild02-r9.ttf",
+    "bytes": 9680,
+    "sha256": "ca26be053b6514d57ba5e7dc339aa1661933430c594768263f2d715c7efcaf5d",
     "axes": {"FILL": 0, "wght": 300, "GRAD": 0, "opsz": [20, 24]},
-    "glyphs": ["arrow_downward", "arrow_forward", "arrow_outward", "brightness_auto", "close", "compare_arrows", "dark_mode", "expand_more", "forum", "graphic_eq", "groups", "handshake", "light_mode", "location_searching", "mail", "map", "menu", "menu_book", "monitoring", "newspaper", "place", "query_stats", "radar", "real_estate_agent", "send", "share", "square_foot", "storefront", "task_alt", "visibility", "widgets"],
+    "glyphs": ["arrow_downward", "arrow_forward", "auto_stories", "category", "close", "compare_arrows", "contact_support", "dark_mode", "expand_more", "graphic_eq", "groups", "handshake", "light_mode", "location_searching", "mail", "map", "menu", "place", "preview", "query_stats", "radar", "send", "share", "square_foot", "task_alt", "visibility"],
     "license": {"spdx": "Apache-2.0", "path": "assets/fonts/LICENSE-Material-Symbols.txt", "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"},
     "delivery": "self_hosted_subset",
-    "knownSubsetGap": "none for the 31 Material Symbols ligatures rendered by Rebuild02; social-brand marks remain inline SVG brand identifiers rather than UI glyphs"
+    "knownSubsetGap": "none for the 26 Material Symbols ligatures rendered by Rebuild02; product and social logos remain exact brand assets rather than UI glyphs"
   }
 }

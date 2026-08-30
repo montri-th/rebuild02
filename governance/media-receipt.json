@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260830-06",
+  "artifactBuildId": "ui-20260830-07",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -19,6 +19,38 @@
       "privacyBoundary": "Source contains no EXIF, ICC, alpha, or orientation metadata and is not deployed."
     }
   ],
+  "productIdentityAssets": {
+    "approvalContext": "The owner explicitly assigned compact Rebuild02 product-card roles on 2026-08-30. Exact supplied or Landometer-owned runtime bytes are preserved without crop, trim, filter, recolour, animation, redraw or derived variants.",
+    "landometerProductCards": {
+      "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+      "bytes": 38962,
+      "dimensions": "1601x1601",
+      "sha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
+      "roles": ["CityMETER product card", "CityWiki product card", "land and property tools product card"],
+      "transformations": "none"
+    },
+    "citychat": {
+      "path": "assets/products/citychat-primary-logo-official.png",
+      "bytes": 8371,
+      "dimensions": "380x82",
+      "sha256": "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62",
+      "sourceAssetId": "citychat-horizontal-lockup-png-94055c9b",
+      "sourceCommit": "a0b70489f587c8b71395f88e3da076119a085205",
+      "sourceEvidence": "governed CityChat runtime identity manifest; exact transparent PNG bytes",
+      "role": "CityChat product card horizontal lockup on a DS brand-beige identity surface",
+      "transformations": "none"
+    },
+    "ijji": {
+      "path": "assets/products/ijji-logo-official.png",
+      "bytes": 32921,
+      "dimensions": "725x725",
+      "sha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f",
+      "sourceUrl": "https://ijji.landometer.com/static/images/ijji/ijjiLogoNoText.png",
+      "sourceEvidence": "current Landometer-owned ijji production runtime; exact transparent PNG bytes",
+      "role": "ijji compact product-card mark",
+      "transformations": "none"
+    }
+  },
   "livingVideo": {
     "path": "assets/media/living-city-rebuild02-r2.mp4",
     "bytes": 13724404,

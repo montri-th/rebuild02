@@ -19,7 +19,7 @@
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260830-06"
+    "artifactBuildId": "ui-20260830-07"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260830-06",
+      "id": "ui-20260830-07",
       "path": "governance/site-manifest.json"
     }
   },
@@ -39,7 +39,7 @@
     "cleanCompletion": "Explore a product, share an exact example, send the team a message, or leave without a synthetic retention loop."
   },
   "composition": {
-    "route": ["Measure", "Land", "Cultivate", "Living", "Location intelligence", "Product ecosystem", "CityMETER", "CityWiki", "Landom", "Our story", "Stories", "Contact"],
+    "route": ["Measure", "Land", "Cultivate", "Living", "Location intelligence", "Products and Services", "CityMETER", "CityWiki", "Landom", "Our story", "Stories", "Contact"],
     "connectors": ["dated product proof", "exact-link share", "minimal ecosystem navigation", "expandable company story", "lazy official social embeds", "direct inquiry form", "Google Maps link"]
   },
   "capabilities": {
@@ -51,6 +51,7 @@
     "responsiveSocialEditorialGrid": true,
     "locationQuestionFramework": true,
     "productEcosystem": true,
+    "productFitRouting": true,
     "share": true,
     "mapHandoff": true,
     "directContactSubmission": true,
@@ -72,10 +73,10 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260830-06",
+    "artifactBuildId": "ui-20260830-07",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260830-06",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v6",
+      "receiptId": "rebuild02-ui-20260830-07",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v7",
       "issuedAt": "2026-08-30"
     }
   },
@@ -135,6 +136,30 @@
       "wordmark": "typed Landometer in Arvo 700 at #757575 on light canvas and text-primary on dark canvas",
       "carrierOrPlate": "none"
     },
+    "productCards": {
+      "landometerSymbol": {
+        "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+        "sha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
+        "roles": ["CityMETER", "CityWiki", "land and property tools"],
+        "approval": "owner-assigned Rebuild02 product-card role on 2026-08-30"
+      },
+      "citychat": {
+        "path": "assets/products/citychat-primary-logo-official.png",
+        "bytes": 8371,
+        "dimensions": "380x82",
+        "sha256": "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62",
+        "sourceAssetId": "citychat-horizontal-lockup-png-94055c9b",
+        "placement": "exact transparent lockup on DS brand-beige identity surface"
+      },
+      "ijji": {
+        "path": "assets/products/ijji-logo-official.png",
+        "bytes": 32921,
+        "dimensions": "725x725",
+        "sha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f",
+        "sourceUrl": "https://ijji.landometer.com/static/images/ijji/ijjiLogoNoText.png",
+        "placement": "exact transparent no-text production mark"
+      }
+    },
     "socialPreview": "assets/social/landometer-rebuild02-og-1200x630.jpg"
   },
   "governedObject": {
@@ -170,9 +195,19 @@
       "sha256": "47eb23f0b2a06bd6882080bcc693384f5d59791b434045e7281b98fa2831903c"
     },
     {
-      "path": "assets/fonts/material-symbols-rounded-rebuild02-r8.ttf",
-      "bytes": 11632,
-      "sha256": "044e541cf8db19750c21dfc5c8d30f8300d07773ada10e362bac3e73e6a0ceec"
+      "path": "assets/fonts/material-symbols-rounded-rebuild02-r9.ttf",
+      "bytes": 9680,
+      "sha256": "ca26be053b6514d57ba5e7dc339aa1661933430c594768263f2d715c7efcaf5d"
+    },
+    {
+      "path": "assets/products/citychat-primary-logo-official.png",
+      "bytes": 8371,
+      "sha256": "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62"
+    },
+    {
+      "path": "assets/products/ijji-logo-official.png",
+      "bytes": 32921,
+      "sha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f"
     },
     {"path": "assets/screens/citymeter-buildings-rebuild02-r5-640.avif", "bytes": 64463, "sha256": "c20c4c345474ed95571670c50e7630d727ee384409b9afd6161c7847ac6726da"},
     {"path": "assets/screens/citymeter-buildings-rebuild02-r5-640.webp", "bytes": 127130, "sha256": "1acec5b982701a11b4ec9b8cae3819c159d42f70453b32916a1fe5604a2c87c6"},
@@ -272,33 +307,30 @@
     "pagesRoot": "/",
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
-    "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage JSON-LD"],
-    "currentReleaseState": "published_live_verified",
-    "verifiedArtifactCommit": "d732d504532c8afffeaa3c38a327fa1143193d69",
-    "verifiedArtifactTree": "d0eab9302dd6407e8da7b79b1a699297eaf5cb78",
-    "pagesBuildState": "built",
-    "pagesBuildId": 1182568970,
-    "pagesBuildDurationMs": 24375,
-    "pagesBuildUpdatedAt": "2026-08-29T18:53:28Z",
-    "verifiedAt": "2026-08-29T18:58:09Z",
-    "liveRouteEvidence": "pass: 52/52 production routes and governed assets returned HTTP 200 with expected MIME types",
-    "liveByteParity": "pass: 52/52 responses matched artifact-commit bytes and SHA-256 values at 2026-08-29T18:55:34Z",
+    "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
+    "currentReleaseState": "ready_for_release",
+    "verifiedArtifactCommit": null,
+    "verifiedArtifactTree": null,
+    "pagesBuildState": "pending",
+    "pagesBuildId": null,
+    "pagesBuildDurationMs": null,
+    "pagesBuildUpdatedAt": null,
+    "verifiedAt": null,
+    "liveRouteEvidence": "pending publication",
+    "liveByteParity": "pending publication",
     "localBrowserEvidence": {
       "matrix": [
-        {"locale": "th", "theme": "dark", "viewport": "1440x900", "result": "pass"},
-        {"locale": "th", "theme": "dark", "viewport": "390x844", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "320x700", "result": "pass"},
-        {"locale": "th", "theme": "dark", "viewport": "1440x900", "route": "#contact", "result": "pass"}
+        {"locale": "th", "theme": "dark", "viewport": "1280x720", "route": "#products", "result": "pass"},
+        {"locale": "th", "theme": "dark", "viewport": "390x844", "route": "#products", "result": "pass"},
+        {"locale": "th", "theme": "light", "viewport": "390x844", "route": "#products", "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "320x700", "route": "#products", "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "900x700", "route": "#products", "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "1100x720", "route": "#products", "result": "pass"},
+        {"locale": "en", "theme": "light", "viewport": "1280x720", "route": "#products and #contact", "result": "pass"}
       ],
-      "verified": "Local Chromium showed zero horizontal overflow; the sharper governed Yaowarat Location image; five product-neutral Location Intelligence questions including catchment competition and Location-based Market Listening; six restored, product-scoped ecosystem cards; canonical Material Symbols Rounded at FILL 0 / wght 300 / GRAD 0; text-only underlines; and a readable TikTok-first editorial social grid for TikTok, Facebook, Instagram and LinkedIn. Reduced-motion CSS and JavaScript retain final visible states."
+      "verified": "Local Chromium loaded build ui-20260830-07 with zero horizontal overflow. Five product cards render exact Landometer, CityChat and ijji identities; all five use a capsule conversation CTA and visible fit cue; the tailored service route is separate. The bookmark rail uses unique category, preview, auto_stories and contact_support glyphs at FILL 0 / wght 300 / GRAD 0, and product CTAs update the visible contact topic."
     },
-    "liveBrowserEvidence": {
-      "matrix": [
-        {"locale": "th", "theme": "system", "viewport": "1280x720", "result": "pass"},
-        {"locale": "en", "theme": "system", "viewport": "1280x720", "result": "pass"}
-      ],
-      "verified": "Production Chromium loaded build ui-20260830-06 in TH and EN with zero horizontal overflow and no same-origin console errors. The 1920 px Yaowarat AVIF was selected; all five Location Intelligence topics, six product cards and the renamed Thai story label rendered as authored. Material Symbols Rounded resolved at FILL 0 / wght 300 / GRAD 0, no icon or arrow cue inherited an underline, and the TikTok-first editorial grid loaded visible TikTok, Facebook, Instagram and LinkedIn provider surfaces without an empty X card."
-    }
+    "liveBrowserEvidence": null
   },
   "growth": {
     "hook": {
@@ -324,7 +356,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "pass: local responsive Chromium plus live TH/EN Chromium; Pages build 1182568970 built artifact commit d732d504532c8afffeaa3c38a327fa1143193d69; 52/52 production HTTP/MIME/byte/SHA checks passed",
+    "renderedBrowserGate": "pending: local responsive Chromium passed for ui-20260830-07; production HTTP, MIME, byte, SHA and live TH/EN Chromium verification remains pending",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -342,7 +374,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "pass",
+    "SC-15": "fail",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

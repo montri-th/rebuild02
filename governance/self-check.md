@@ -1,6 +1,6 @@
 # Deterministic self-check — Rebuild02
 
-Artifact build: `ui-20260830-06`
+Artifact build: `ui-20260830-07`
 
 Machine validation: `pending`
 
@@ -25,14 +25,14 @@ upgrading source inspection into stronger evidence.
 | SC-12 | pass | Both locale routes are indexable and carry canonical/hreflang links, Open Graph and Twitter metadata, Organization/WebSite/WebPage JSON-LD, the r6 favicon, `robots.txt`, and a truthful release-dated sitemap. |
 | SC-13 | pass | TikTok, Facebook, Instagram and LinkedIn content surfaces use minimal brand marks in a readable editorial grid; TikTok is first and largest. The X embed is omitted after desktop/mobile tests produced a hidden zero-size provider frame, while the outbound X profile link remains in the footer. |
 | SC-14 | fail | The 95-occurrence source inventory, local keyboard/form states and explicit 44 px `mailto:` action are checked, but a real contact POST/inbox outcome is not included. |
-| SC-15 | pass | GitHub Pages build 1182568970 built artifact commit `d732d504532c8afffeaa3c38a327fa1143193d69`; 52/52 production HTTP/MIME/byte/SHA checks matched the artifact, and live TH/EN Chromium verified the rendered build with zero horizontal overflow and no same-origin console errors. |
+| SC-15 | fail | Publication, Pages terminal success, live HTTP/MIME/byte parity and live TH/EN browser checks remain pending for this artifact build. |
 | SC-16 | fail | The shared manifest records both locale routes but is not claimed as a complete per-route rendered-contract projection. |
 | SC-17 | pass | Retired values are absent from the public page layer; no retired literal was added in this release. |
 | SC-18 | pass | The first view has no caution/caveat block; the dated product proof band follows the hero and the null legacy row is not rendered. |
-| SC-19 | pass | All 27 active interface ligatures exist in the 31-glyph self-hosted r8 canonical Material Symbols Rounded file at FILL 0 / wght 300 / GRAD 0. Five social marks use inline SVG brand geometry rather than UI glyphs. |
+| SC-19 | pass | All 26 active interface ligatures exist in the 26-glyph self-hosted r9 canonical Material Symbols Rounded file at FILL 0 / wght 300 / GRAD 0. Bookmark roles use unique category, preview, auto_stories and contact_support outline glyphs; product and social marks remain brand assets. |
 | SC-20 | fail | In-app Chromium passes TH dark 1440×900, TH dark 390×844 and EN light 320×700, but a complete locale × theme × viewport visual baseline remains open. |
 | SC-21 | pass | The navbar is 76/68 px when prominent and 58/54 px when calm; it restores on upward scroll, pointer/focus intent and menu open. Mobile shows only the carrier-free brand and circular menu control, while the one-line sign-in action moves inside the full-width menu. |
 | SC-22 | fail | The approved reveals, story staging, four-beat rally, CTA sweep, 32-second hero pan, responsive social editorial grid and reduced-motion behavior pass local QA. No new scroll-linked parallax was added because the normative DS has no approved documentary-photo recipe. The owner-directed ambient video loop remains an explicit divergence from canonical no-loop guidance. |
-| SC-23 | pass | Rendered icon/label pairs use the canonical 24 px face and governed gaps; all current ligatures resolve. |
+| SC-23 | pass | Rendered icon/label pairs use the canonical 24 px face and governed gaps; all current ligatures resolve. Five product cards use exact approved identity assets and one consistent capsule conversation CTA. |
 
-Totals: 17 pass · 6 fail/open · 0 not applicable.
+Totals: 16 pass · 7 fail/open · 0 not applicable.

@@ -3,7 +3,7 @@
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
 install, bundler, CI workflow, or build step. Current artifact build:
-`ui-20260830-06`.
+`ui-20260830-07`.
 
 | File | Purpose |
 |---|---|
@@ -42,9 +42,12 @@ install, bundler, CI workflow, or build step. Current artifact build:
   competition within a catchment area, white space and site selection, branch
   potential, operational performance by area, and location-based market listening.
   Comparisons explicitly require the same definition, time window, and area boundary.
-- The product ecosystem again includes CityMETER, CityWiki, CityChat, ijji, specialist
-  land/property tools, and projects/partnerships. Product-specific claims remain inside
-  their own cards rather than being generalized across Landometer.
+- Products and Services presents five product paths with one consistent conversation
+  CTA and an explicit “A fit when” decision cue. CityMETER, CityWiki, and specialist
+  land/property tools use the Landometer symbol; CityChat and ijji use exact official
+  identity assets. Projects and partnerships is separated as a tailored service route.
+  Product-specific claims remain inside their own cards rather than being generalized
+  across Landometer.
 - Stories use a responsive editorial grid: TikTok and LinkedIn receive full-width rows,
   while Facebook and Instagram share a readable two-column row and stack on narrower
   viewports. The unreliable blank X timeline embed is removed; the outbound X profile
@@ -54,7 +57,8 @@ install, bundler, CI workflow, or build step. Current artifact build:
   the four-beat line “Let us cultivate our city with data.” Reduced motion presents the
   complete thought immediately.
 - Search discovery is enabled through canonical/hreflang metadata, Open Graph and
-  Twitter cards, Organization/WebSite/WebPage JSON-LD, `robots.txt`, and `sitemap.xml`.
+  Twitter cards, Organization/WebSite/WebPage JSON-LD plus a visible-content ItemList
+  for the five products and tailored service route, `robots.txt`, and `sitemap.xml`.
   Release dates change only when Rebuild02 content actually changes.
 - The contact form sends JSON directly to Landometer's public inquiry API. The office
   email is also a 44 px `mailto:` action for visitors who prefer their mail app. The page

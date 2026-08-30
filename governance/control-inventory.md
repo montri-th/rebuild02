@@ -1,11 +1,11 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260830-06`
+Artifact build: `ui-20260830-07`
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
-Each locale contains 95 native interactive/control/media occurrences in source. Seven
-links belong to the mutually exclusive `noscript` navigation, leaving 88 native
+Each locale contains 101 native interactive/control/media occurrences in source. Seven
+links belong to the mutually exclusive `noscript` navigation, leaving 94 native
 occurrences in the enhanced model. The TikTok creator placeholder is not counted as a
 native control or media element; its official script creates the provider UI only after
 intersection. Hidden menu/listbox state means the raw count is not a claim
@@ -13,8 +13,8 @@ that all controls are visible together.
 
 | Family | Raw count per locale | Enhanced behavior | No-JavaScript behavior |
 |---|---:|---|---|
-| Links | 72 | Local sections, locale route, six product-ecosystem routes/actions, login, careers, bookmark rail, ordered social destinations, social-card exits, office map, clickable office email and outbound X profile | Native links remain; seven-link `noscript` navigation replaces the JavaScript menu |
-| Buttons | 13 | Menu and pointer-only backdrop, one light/dark theme circle, topic trigger plus seven options, exact-link share, submit | JavaScript-only controls stay hidden or inert; form topic remains on its first hidden value |
+| Links | 75 | Local sections, locale route, five product conversation routes, product evidence routes, one tailored-service route, login, careers, bookmark rail, ordered social destinations, social-card exits, office map, clickable office email and outbound X profile | Native links remain; seven-link `noscript` navigation replaces the JavaScript menu |
+| Buttons | 16 | Menu and pointer-only backdrop, one light/dark theme circle, topic trigger plus ten options, exact-link share, submit | JavaScript-only controls stay hidden or inert; form topic remains on its first hidden value |
 | Inputs | 4 | Name, email and production-matched phone validation (9–24 characters) plus hidden topic value | Visible fields remain native; fallback submission encoding is not claimed compatible with the JSON API |
 | Textareas | 1 | Required contact message | Native field remains visible |
 | Native selects/details | 1 | Accessible custom listbox replaces the Safari native popup; the company history/future uses native `details`/`summary` | The story disclosure remains available without JavaScript; no native select is exposed |
@@ -62,9 +62,12 @@ Source and rendered assertions:
 - All visible external-link terminals use the same typographic `↗` cue without an icon
   underline. Underlines are scoped to visible-text spans and never cross UI icons or
   arrow cues. Every `target="_blank"` link carries `rel="noopener noreferrer"`.
-- All 27 Material Symbols ligatures currently rendered by Rebuild02 are present in the
-  31-glyph self-hosted r8 canonical Material Symbols Rounded file at FILL 0 / wght 300 /
-  GRAD 0. Five social marks are inline SVG brand identifiers.
-- The product ecosystem exposes six clearly scoped paths: CityMETER, CityWiki, CityChat,
-  ijji, specialist land/property tools and projects/partnerships. CityChat and ijji copy
-  remains product-specific and is not generalized across Landometer.
+- All 26 Material Symbols ligatures currently rendered by Rebuild02 are present in the
+  26-glyph self-hosted r9 canonical Material Symbols Rounded file at FILL 0 / wght 300 /
+  GRAD 0. Bookmark roles use four unique outline glyphs; product and social logos remain
+  identity assets rather than UI glyphs.
+- Products and Services exposes five product paths with consistent capsule conversation
+  CTAs and an explicit fit cue. CityMETER, CityWiki and land/property tools use the
+  Landometer symbol; CityChat and ijji use exact official marks. Projects/partnerships is
+  separated as a tailored service route. Product-specific copy is not generalized across
+  Landometer.
