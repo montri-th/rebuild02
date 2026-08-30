@@ -85,7 +85,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "pending_live_verification"
+      technicalStatus: "live_verified"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -96,10 +96,10 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "ready_for_release"
+    readiness: "share_ready"
     publicSafe: true
-    status: "pending_publication_verification"
-    qrOrLinkTest: "pending: publish ui-20260830-07, wait for terminal Pages success, then verify production HTTP, MIME, bytes, SHA and live TH/EN Chromium"
+    status: "published"
+    qrOrLinkTest: "pass: Pages build 1183177480 built artifact a70a56a2ef246df44a412830a68147b154fb1c22; 14/14 release URLs returned 200 with correct MIME, 13/13 governed artifact files matched exact production SHA-256, and live TH/EN Chromium passed without horizontal overflow"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -495,7 +495,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "pending: local responsive Chromium passed for ui-20260830-07 at 320, 900, 1100 and 1280 px; production HTTP, MIME, byte, SHA and live TH/EN Chromium verification remains pending"
+    renderedBrowserGate: "pass: local responsive Chromium passed for ui-20260830-07 at 320, 900, 1100 and 1280 px; Pages build 1183177480 built artifact a70a56a2ef246df44a412830a68147b154fb1c22; 14/14 live release URLs returned 200, 13/13 governed artifact files matched exact production SHA-256, and live TH/EN Chromium passed"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -509,8 +509,8 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 16
-      rowsFailedOrOpen: 7
+      rowsPassed: 17
+      rowsFailedOrOpen: 6
       rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:

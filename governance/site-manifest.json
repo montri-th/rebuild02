@@ -308,16 +308,16 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "ready_for_release",
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "pending",
-    "pagesBuildId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending publication",
-    "liveByteParity": "pending publication",
+    "currentReleaseState": "published_live_verified",
+    "verifiedArtifactCommit": "a70a56a2ef246df44a412830a68147b154fb1c22",
+    "verifiedArtifactTree": "da0f781075f4023c5681be6dca5f1cefa11a4b73",
+    "pagesBuildState": "built",
+    "pagesBuildId": 1183177480,
+    "pagesBuildDurationMs": 24568,
+    "pagesBuildUpdatedAt": "2026-08-30T04:00:00Z",
+    "verifiedAt": "2026-08-30T04:04:44Z",
+    "liveRouteEvidence": "pass: 14/14 release URLs returned HTTP 200 with the expected HTML, CSS, JavaScript, JSON, font or PNG MIME type",
+    "liveByteParity": "pass: all 13 governed artifact files matched the exact local SHA-256 and byte count in production",
     "localBrowserEvidence": {
       "matrix": [
         {"locale": "th", "theme": "dark", "viewport": "1280x720", "route": "#products", "result": "pass"},
@@ -330,7 +330,15 @@
       ],
       "verified": "Local Chromium loaded build ui-20260830-07 with zero horizontal overflow. Five product cards render exact Landometer, CityChat and ijji identities; all five use a capsule conversation CTA and visible fit cue; the tailored service route is separate. The bookmark rail uses unique category, preview, auto_stories and contact_support glyphs at FILL 0 / wght 300 / GRAD 0, and product CTAs update the visible contact topic."
     },
-    "liveBrowserEvidence": null
+    "liveBrowserEvidence": {
+      "engine": "Codex in-app Chromium",
+      "verifiedAt": "2026-08-30T04:04:44Z",
+      "routes": [
+        {"locale": "th", "viewport": "1280x720", "route": "Landometer-Home-TH.dc.html#products", "result": "pass"},
+        {"locale": "en", "viewport": "320x700", "route": "Landometer-Home-EN.dc.html#products and #contact", "result": "pass"}
+      ],
+      "verified": "Live build ui-20260830-07 rendered with zero horizontal overflow. All five primary product CTAs are consistent, exact logo assets loaded at their intrinsic dimensions, the four bookmark meanings resolve from the rounded-outline r9 font at FILL 0, the six-item ItemList matches visible content, the ijji CTA selected the matching visible contact topic, and no first-party console errors were recorded."
+    }
   },
   "growth": {
     "hook": {
@@ -356,7 +364,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "pending: local responsive Chromium passed for ui-20260830-07; production HTTP, MIME, byte, SHA and live TH/EN Chromium verification remains pending",
+    "renderedBrowserGate": "pass: Pages build 1183177480 built artifact a70a56a2ef246df44a412830a68147b154fb1c22; 14/14 release URLs returned 200 with expected MIME, 13/13 governed artifact files matched exact production bytes and SHA-256, and live TH/EN Chromium passed",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -374,7 +382,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "fail",
+    "SC-15": "pass",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

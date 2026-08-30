@@ -76,11 +76,22 @@
   },
   "browserAndProductionGates": {
     "localHttp": "pass",
-    "productionArtifact": null,
-    "pagesBuild": null,
-    "liveHttpAndMime": "pending publication",
-    "liveByteParity": "pending publication",
-    "liveBrowser": "pending publication"
+    "productionArtifact": {
+      "repository": "https://github.com/montri-th/rebuild02",
+      "branch": "main",
+      "commit": "a70a56a2ef246df44a412830a68147b154fb1c22",
+      "tree": "da0f781075f4023c5681be6dca5f1cefa11a4b73"
+    },
+    "pagesBuild": {
+      "id": 1183177480,
+      "state": "built",
+      "commit": "a70a56a2ef246df44a412830a68147b154fb1c22",
+      "durationMs": 24568,
+      "updatedAt": "2026-08-30T04:00:00Z"
+    },
+    "liveHttpAndMime": "pass: 14/14 release URLs returned HTTP 200 with expected MIME types",
+    "liveByteParity": "pass: 13/13 governed artifact files matched exact production byte counts and SHA-256",
+    "liveBrowser": "pass: TH 1280x720 and EN 320x700 loaded ui-20260830-07 with zero horizontal overflow; exact product identities, five consistent product CTAs, unique rounded-outline bookmark meanings, six visible structured-data entries, contact-topic handoff and first-party console were verified"
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

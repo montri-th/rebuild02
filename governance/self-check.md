@@ -25,7 +25,7 @@ upgrading source inspection into stronger evidence.
 | SC-12 | pass | Both locale routes are indexable and carry canonical/hreflang links, Open Graph and Twitter metadata, Organization/WebSite/WebPage JSON-LD, the r6 favicon, `robots.txt`, and a truthful release-dated sitemap. |
 | SC-13 | pass | TikTok, Facebook, Instagram and LinkedIn content surfaces use minimal brand marks in a readable editorial grid; TikTok is first and largest. The X embed is omitted after desktop/mobile tests produced a hidden zero-size provider frame, while the outbound X profile link remains in the footer. |
 | SC-14 | fail | The 95-occurrence source inventory, local keyboard/form states and explicit 44 px `mailto:` action are checked, but a real contact POST/inbox outcome is not included. |
-| SC-15 | fail | Publication, Pages terminal success, live HTTP/MIME/byte parity and live TH/EN browser checks remain pending for this artifact build. |
+| SC-15 | pass | Pages build 1183177480 built artifact `a70a56a2ef246df44a412830a68147b154fb1c22`; 14/14 release URLs returned HTTP 200 with expected MIME, all 13 governed artifact files matched production byte-for-byte, and live TH/EN Chromium passed without horizontal overflow. |
 | SC-16 | fail | The shared manifest records both locale routes but is not claimed as a complete per-route rendered-contract projection. |
 | SC-17 | pass | Retired values are absent from the public page layer; no retired literal was added in this release. |
 | SC-18 | pass | The first view has no caution/caveat block; the dated product proof band follows the hero and the null legacy row is not rendered. |
@@ -35,4 +35,4 @@ upgrading source inspection into stronger evidence.
 | SC-22 | fail | The approved reveals, story staging, four-beat rally, CTA sweep, 32-second hero pan, responsive social editorial grid and reduced-motion behavior pass local QA. No new scroll-linked parallax was added because the normative DS has no approved documentary-photo recipe. The owner-directed ambient video loop remains an explicit divergence from canonical no-loop guidance. |
 | SC-23 | pass | Rendered icon/label pairs use the canonical 24 px face and governed gaps; all current ligatures resolve. Five product cards use exact approved identity assets and one consistent capsule conversation CTA. |
 
-Totals: 16 pass · 7 fail/open · 0 not applicable.
+Totals: 17 pass · 6 fail/open · 0 not applicable.
