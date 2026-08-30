@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260830-09",
+  "artifactBuildId": "ui-20260830-10",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
   "sourceAndStructure": {
@@ -36,22 +36,23 @@
     "landomEntries": "pass: join, team work, company thinking and current work",
     "storyMotion": "pass: three staged 820 ms steps with 80/260/480 ms delays and a four-beat rally; reduced motion resolves immediately",
     "dynamicReducedMotion": "pass in controlled in-app Chromium: initial reduce produced no src, paused=true, autoplay=false and readyState=0 with poster present; normal-near played at readyState=4; normal-to-reduce removed src and restored readyState=0; reduce-to-normal replayed only near the viewport; the same transition offscreen stayed paused with no src until the video returned near",
-    "socialEditorialGrid": "pass: TikTok and LinkedIn use full-width rows; Facebook and Instagram use readable paired columns and stack below 1080 px; Instagram frame height follows its measured card width without the former mobile blank tail; social-card chrome and iframe colour-scheme signals follow the user theme; the blank X embed is absent while the outbound profile link remains in the footer",
-    "locationNarrative": "pass at source: six product-neutral, image-led routes cover catchment competition, proof of demand, white space/site selection, branch comparison, area-performance monitoring and Location-based Market Listening; the monitoring card uses an exact owner-supplied CityMETER municipal-income screenshot instead of repeating Business Dynamics; Proof of demand is explicitly an estimate from city-data signals that identifies likely patterns and calls for field validation; every route has a benefit-led conversation CTA",
-    "locationQuestionCarousel": "pass at source: both locale routes contain one localized, keyboard-focusable Location rail with exactly six direct-child cards; CSS provides scroll snap with 34%, 48% and 88% responsive columns; site.js neither creates nor clones cards",
-    "productEcosystem": "pass at source: five image-led product cards use one capsule conversation CTA, an explicit fit cue and product-scoped copy; desktop presents CityMETER and CityChat as equal featured cards above ijji, CityWiki and land tools; CityMETER, CityWiki and land tools pair the r6 Landometer symbol with their product-specific wordmarks, with CityMETER and CityWiki in Arvo 700 in both locales; projects/partnerships remains a separate image-led tailored service route",
-    "productMediaR8": "pass at source: CityMETER, CityWiki and Property Tax Simulator product cards use exact immutable PNG copies with hashes 9dbfe9a2…, b371882d… and 422b0a35…; the Location area-performance card uses the exact immutable 198c0d59… PNG; all are lazy below the fold, CityWiki exposes source/license/change credit, and the tax asset is visibly labelled legacy/retrieved rather than current",
+    "socialEditorialGrid": "pass at source: an initial dark theme shows same-origin DS channel cards and initializes no provider iframe or TikTok script; light theme retains official provider surfaces and lazily activates them within 480 px; Facebook and Instagram stack below 1080 px, Instagram height follows measured width, X remains outbound-only, and switching dark after a light-theme load hides rather than claims to unload provider activity",
+    "locationNarrative": "pass at source: six product-neutral, image-led routes cover catchment competition, proof of demand, white space/site selection, branch comparison, area-performance monitoring and Location-based Market Listening; branch comparison now owns the exact automotive market-share CityMETER PNG, while monitoring retains its distinct municipal-income screenshot; neither is represented as current analytical evidence; every route has a benefit-led conversation CTA",
+    "locationQuestionCarousel": "pass at source: both locale routes contain one localized, keyboard-focusable Location rail with exactly six semantic source cards; site.js adds sanitized aria-hidden inert six-card head and tail clone cycles, normalizes after pointer/touch/keyboard movement in either direction, and preserves the logical card across ResizeObserver remeasurement",
+    "testimonialCarousel": "pass at source: both locale routes contain six semantic testimonial source cards and use the same sanitized, inert, bidirectional and resize-stable loop implementation as Location Intelligence",
+    "productEcosystem": "pass at source: five image-led product cards use one capsule conversation CTA, an explicit fit cue and product-scoped copy; desktop presents CityMETER and CityChat as equal featured cards above ijji, CityWiki and land tools; the restored CityMETER card pairs the r6 symbol and Landometer Arvo wordmark with a separate CityMETER heading, while CityWiki retains its Arvo product wordmark and land tools retains the shared lockup geometry; projects/partnerships remains separate",
+    "productMediaR8": "pass at source: CityMETER restores the responsive 960/1600 AVIF/WebP Business Dynamics family; the exact 9dbfe9a2… automotive market-share PNG moves exclusively to Location Intelligence branch potential; CityWiki and Property Tax Simulator retain the exact b371882d… and 422b0a35… PNG product examples; Location area performance retains 198c0d59…",
     "overlayCreditFocus": "pass at source and computed style: CityWiki attribution links keep the 3 px / 2 px focus geometry and override the theme ring with the overlay's white foreground, preserving a high-contrast indicator on the opaque dark caption surface in both themes",
     "cityChatContrast": "pass: source-token calculations establish primary/secondary/hover contrast, and current-build computed styles confirm 10.31:1 for the dark outlined action against the beige card, 8.31:1 for secondary text against the beige card, and 9.30:1 for fit text against its local light surface in dark mode; the fixed-light card remains readable under both page themes.",
     "searchAndAgentDiscovery": "pass: bilingual metadata and WebPage descriptions name the product/service paths, while static JSON-LD adds a six-item ItemList linked to visible anchored content without Product, Offer, price, rating or review claims",
     "bookmarkSemantics": "pass with explicit owner override: desktop and mobile navigation use the same four unique rounded-outline meanings; the active state remains FILL 0 and changes only its surface/ink, preserving the owner's all-interface-icons-outline direction rather than the r7 handoff's FILL 1 active example; hover uses blue tint, press uses soft plus downward travel, and every control has an accessible label",
     "underlineBoundary": "pass: UI icons and arrow cues have no underline; underline decoration is applied only to dedicated visible-text spans",
-    "scrollParallaxDecision": "pass with owner authorization: hero media adds a requestAnimationFrame scroll parallax capped at plus/minus 20 px inside a 48 px overscan layer; the ambient 32-second pan remains independent, and both layers freeze under prefers-reduced-motion",
+    "scrollParallaxDecision": "pass at source with owner authorization: hero media retains its requestAnimationFrame parallax capped at plus/minus 20 px; substantial static imagery in pillar, Location Intelligence, product, tailored-service and CityMETER showcase frames receives a separately bounded requestAnimationFrame layer; reduced motion freezes every layer, and brand marks, provider surfaces, video and testimonial identity assets are excluded",
     "caveatCopyOnCustomerPage": 0
   },
   "networkBoundary": {
     "primaryRendering": "same-origin static HTML/CSS/JS and governed media",
-    "socialActivation": "within 480 px of the viewport",
+    "socialActivation": "light theme only within 480 px of the viewport; an initial dark theme initializes no provider surface",
     "socialProviders": [
       "TikTok",
       "Facebook",
@@ -66,42 +67,28 @@
   },
   "localRenderedChecks": {
     "engine": "Codex in-app Chromium on 2026-08-30",
-    "result": "pass for current ui-20260830-09 product and Location Intelligence scope",
-    "verified": [
-      "EN dark at 1440x900: five product cards and six Location Intelligence cards; zero duplicate IDs and zero horizontal document overflow; CityMETER/CityWiki computed Arvo; exact r8 PNG natural dimensions loaded; visible CityWiki source/license/change credit; CityChat local contrast computed",
-      "TH light at 1024x768: zero horizontal document overflow; responsive two-column product layout; Location rail uses 48% columns and mandatory horizontal scroll snap",
-      "EN light at 390x844: zero horizontal document overflow; CityMETER/CityWiki computed Arvo; long Land and property tools wordmark wraps without overflow; product media fill each card; Location rail uses 88% columns",
-      "TH dark at 320x720: zero horizontal document overflow; all three product wordmarks fit; CityMETER and CityChat cards remain readable; Location rail uses 88% columns",
-      "final media check at EN 1440x900 and TH 390x844: the fifth Location card loads the exact 1418x1320 area-performance PNG, keeps the municipal map and income panel visible in its responsive 4:3 crop, and introduces zero document overflow",
-      "desktop and 320px touch-scroll checks reached the sixth Location Intelligence card at the rail maximum; six direct children and zero clones",
-      "CityWiki credit links open the Commons source and CC BY 2.0 deed in new tabs with noopener noreferrer"
-    ],
-    "screenshots": [
-      "EN dark 1440x900 product section",
-      "EN dark 1440x900 Location Intelligence carousel",
-      "EN light 390x844 CityMETER and CityChat product cards",
-      "TH dark 320x720 CityMETER product card",
-      "TH dark 320x720 first and final Location Intelligence cards"
-    ]
+    "result": "pending for ui-20260830-10",
+    "verified": [],
+    "screenshots": []
   },
   "browserAndProductionGates": {
-    "localHttp": "pass",
+    "localHttp": "pending for ui-20260830-10",
     "productionArtifact": {
       "repository": "https://github.com/montri-th/rebuild02",
       "branch": "main",
-      "commit": "131d05a7a602f05447933257be86d5e1c51a2446",
-      "tree": "76d5006e8a34e041b7fee54b73a820532524fd16"
+      "commit": null,
+      "tree": null
     },
     "pagesBuild": {
       "id": null,
-      "state": "built",
-      "commit": "131d05a7a602f05447933257be86d5e1c51a2446",
-      "durationMs": 26413,
-      "updatedAt": "2026-08-30T12:25:12Z"
+      "state": "pending",
+      "commit": null,
+      "durationMs": null,
+      "updatedAt": null
     },
-    "liveHttpAndMime": "pass: root, index, TH, EN and _ds CSS returned HTTP 200 with expected MIME; four new immutable product/location PNGs returned HTTP 200 image/png",
-    "liveByteParity": "pass at 2026-08-30T12:28:39.753Z: 11 checks matched local bytes and SHA-256 for root/index, both locale pages, site CSS/JS, DS CSS and four new immutable PNGs",
-    "liveBrowser": "pass in Codex in-app Chromium: EN light at 1440x900 #products and TH light at 390x844 #location-intelligence; five product cards, six Location cards, zero document overflow, Arvo wordmarks, readable CityChat and exact 1418x1320 area-performance image verified"
+    "liveHttpAndMime": "pending for ui-20260830-10",
+    "liveByteParity": "pending for ui-20260830-10",
+    "liveBrowser": "pending for ui-20260830-10"
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

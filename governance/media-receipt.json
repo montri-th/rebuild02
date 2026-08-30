@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260830-09",
+  "artifactBuildId": "ui-20260830-10",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -51,6 +51,12 @@
       "transformations": "none"
     }
   },
+  "staticImagePresentation": {
+    "scope": ["Land, CityWiki and Landom pillar figures", "Location Intelligence cards", "Products and Services cards", "Projects and partnerships tailored service", "CityMETER showcase hero and tiles"],
+    "excluded": ["identity and product logos", "social provider surfaces", "Living video", "testimonial portraits and company marks"],
+    "runtimeBehavior": "requestAnimationFrame scroll parallax applies a bounded translation and small presentation scale only while relevant frames are near the viewport; prefers-reduced-motion freezes the layer",
+    "assetBoundary": "CSS classes and transforms do not alter, crop, resize, recompress, recolour or rewrite any governed media bytes"
+  },
   "livingVideo": {
     "path": "assets/media/living-city-rebuild02-r2.mp4",
     "bytes": 13724404,
@@ -79,6 +85,9 @@
       "crop": "x=0, y=120, width=3840, height=2160; centred 16:9 composition"
     },
     "responsiveWidths": [960, 1600, 2560],
+    "roles": ["CityMETER showcase hero", "CityMETER product-card interface example"],
+    "productCardDelivery": "the restored product card uses the 960/1600 AVIF/WebP candidates with responsive sizes; the 2560 outputs remain available to the larger showcase",
+    "representationBoundary": "Public CityMETER interface example, not raw or live analytical data; runtime parallax changes presentation only and leaves every output byte unchanged.",
     "outputs": [
       {"path": "assets/screens/business-dynamics-rebuild02-960.avif", "bytes": 29290, "sha256": "82d78346238eafbc3df4171394dfb0d5eabc8bad627f38dd995fc76586b1c783"},
       {"path": "assets/screens/business-dynamics-rebuild02-960.webp", "bytes": 49462, "sha256": "d75d724939375ac5b4f8600f5a031cd5e5b8ace2f2b3df2eebf6315a3385b40b"},
@@ -408,15 +417,15 @@
     "delivery": "AVIF preferred with WebP fallback for portraits; clean PNG for company marks; every asset is lazy-loaded.",
     "densityLimitation": "Portraits 01-03 are source-limited to 100x100 and are below 2x density at their 72 CSS px desktop rendering; they are not upscaled or invented."
   },
-  "productCardMediaR8": {
-    "approvalContext": "The owner supplied or selected all three source files and assigned their Rebuild02 product-card roles on 2026-08-30.",
+  "governedInterfaceMediaR8": {
+    "approvalContext": "The owner supplied or selected these exact interface files and assigned their Rebuild02 roles on 2026-08-30; the automotive market-share role was reassigned from the CityMETER product card to Location Intelligence branch potential later the same day.",
     "processing": "Exact byte copies only. No crop, resize, recompression, colour adjustment or metadata rewrite was applied to the committed files; runtime object-position and card clipping control presentation.",
-    "deliveryBoundary": "Each new source remains one immutable PNG loaded lazily below the fold. Responsive layout and object-position change the visible card frame but do not constitute responsive-media delivery.",
-    "metadataBoundary": "Exact-copy delivery retains source metadata: the CityMETER and CityWiki PNGs include ICC colour profiles, while the legacy Property Tax Simulator PNG retains Adobe/ImageReady text and Photoshop XMP records.",
-    "citymeter": {
-      "assetId": "citymeter-market-share-product-r8-9dbfe9a2",
+    "deliveryBoundary": "Each source remains one immutable PNG loaded lazily below the fold. Responsive layout, object-position and bounded parallax change only the visible runtime frame and do not constitute asset transformation.",
+    "metadataBoundary": "Exact-copy delivery retains source metadata: the market-share and CityWiki PNGs include ICC colour profiles, while the legacy Property Tax Simulator PNG retains Adobe/ImageReady text and Photoshop XMP records.",
+    "branchPotentialMarketShare": {
+      "assetId": "citymeter-market-share-location-branch-potential-r8-9dbfe9a2",
       "mime": "image/png",
-      "approvalStatus": "owner-approved for the Rebuild02 CityMETER product card on 2026-08-30",
+      "approvalStatus": "owner-reassigned to the Rebuild02 Location Intelligence branch-potential card on 2026-08-30",
       "source": {
         "path": "/var/folders/5d/bhv92yqd5rjcdfc8_4034zzh0000gn/T/codex-clipboard-d2e68707-e335-48d4-a767-00e90518ff0a.png",
         "committed": false,
@@ -430,15 +439,15 @@
         "dimensions": "2914x1962",
         "sha256": "9dbfe9a20d1a723f649224358edecb566c3ab7afa0f7d8f4c46db5ca92fd802f"
       },
-      "role": "CityMETER product-card interface example",
-      "prohibitedRoles": ["current analytical result", "live data", "automotive endorsement", "cross-product capability proof"],
+      "role": "Location Intelligence branch-potential interface example",
+      "prohibitedRoles": ["CityMETER product-card media", "current analytical result", "live data", "automotive endorsement", "cross-product capability proof"],
       "alt": {
-        "th": "ตัวอย่างหน้าจอ CityMETER แสดงแผนที่ ภูมิทัศน์ตลาด และสัดส่วนแบรนด์รายพื้นที่",
-        "en": "CityMETER interface example showing a map, local market landscape and brand-share views"
+        "th": "มุมมอง CityMETER ของจังหวัดชลบุรี แสดงส่วนแบ่งตลาดแบรนด์รถบนแผนที่ พร้อมตัวกรองและกราฟ",
+        "en": "CityMETER view of Chonburi showing car-brand market share on a map with filters and charts"
       },
       "cacheRevision": "r8 immutable filename",
       "privacyAndMetadataReview": "No GPS, creator or capture date is asserted. The exact screenshot bytes retain an ICC profile and screenshot-related XMP/EXIF records.",
-      "representationBoundary": "An owner-supplied interface example showing location and market-share views; visible values and automotive brand names or marks are not claimed as current research findings, live data, endorsements or commercial relationships."
+      "representationBoundary": "An owner-supplied interface example used only for the branch-potential question; visible values and automotive brand names or marks are not claimed as current research findings, live data, endorsements or commercial relationships."
     },
     "citywiki": {
       "assetId": "citywiki-wang-lang-product-r8-b371882d",
@@ -507,7 +516,7 @@
       "privacyAndMetadataReview": "Visible names, parcel details and values are treated as unverified interface samples rather than real-person or property assertions. Exact-copy delivery retains Adobe/ImageReady text and Photoshop XMP/document identifiers.",
       "representationBoundary": "A visibly labelled legacy asset retrieved on 2026-08-26; it is not represented as the current Property Tax Simulator interface."
     },
-    "visualReview": "Pass in local in-app Chromium at 1440x900, 390x844 and 320x720: card media fills each frame, key interface content remains legible, CityWiki credit remains visible, and no horizontal overflow was observed."
+    "visualReview": "Pending for ui-20260830-10 after the role reassignment, restored CityMETER responsive media and generalized static-image parallax."
   },
   "locationAreaPerformanceR8": {
     "assetId": "location-area-performance-r8-198c0d59",

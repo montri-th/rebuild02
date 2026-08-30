@@ -12,14 +12,14 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_current_release_verified",
+    "evidenceStatus": "source_limited_pending_release",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260830-09"
+    "artifactBuildId": "ui-20260830-10"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260830-09",
+      "id": "ui-20260830-10",
       "path": "governance/site-manifest.json"
     }
   },
@@ -47,12 +47,14 @@
     "calmNavigation": true,
     "sweepingNavigationCta": true,
     "ambientHeroPan": true,
+    "staticContentParallax": "bounded scroll-linked translation on substantial static content imagery; reduced-motion freezes every layer; brand marks, provider surfaces, video and testimonial identity assets are excluded",
     "stagedStoryRally": true,
     "responsiveSocialEditorialGrid": true,
     "locationQuestionFramework": true,
     "locationQuestionCount": 6,
     "locationQuestionMediaAndLeadRouting": true,
-    "locationQuestionCarousel": "CSS-only keyboard-focusable horizontal scroll-snap rail; no cloned cards or JavaScript slide owner",
+    "locationQuestionCarousel": "six semantic source cards plus sanitized aria-hidden inert six-card head and tail clone cycles; loops in both directions for pointer, touch and arrow keys and preserves the logical card after resize",
+    "testimonialCarousel": "six semantic source cards plus sanitized aria-hidden inert six-card head and tail clone cycles with the same bidirectional and resize-stable behavior",
     "productEcosystem": true,
     "productDesktopHierarchy": "two featured cards above three standard cards",
     "governedProductMedia": true,
@@ -65,7 +67,7 @@
     "browserPersistence": "local theme preference",
     "serverPersistence": "inquiry endpoint behavior and retention are backend-owned and not publicly documented",
     "telemetry": false,
-    "thirdPartyRenderingRuntime": true,
+    "thirdPartyRenderingRuntime": "light theme only; initial dark theme uses same-origin DS channel cards without initializing provider surfaces",
     "staticInitialHtml": true
   },
   "security": {
@@ -78,19 +80,19 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260830-09",
+    "artifactBuildId": "ui-20260830-10",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260830-09",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v9",
+      "receiptId": "rebuild02-ui-20260830-10",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v10",
       "issuedAt": "2026-08-30"
     }
   },
   "network": {
-    "loadTimeSubresources": "Primary page rendering remains same-origin. Official platform social embeds begin only when their cards approach the viewport.",
+    "loadTimeSubresources": "Primary page rendering remains same-origin. In an initial dark theme, same-origin DS channel cards render and no provider surface initializes. In light theme, official platform embeds begin only when their cards approach the viewport.",
     "socialEmbeds": {
-      "activation": "IntersectionObserver with a 480 px root margin; no social iframe src or TikTok script exists before activation; Facebook receives its measured container width clamped to 180–500 px; Instagram height is recalculated from its measured card width by ResizeObserver",
+      "activation": "In light theme, IntersectionObserver uses a 480 px root margin and no social iframe src or TikTok script exists before activation; an initial dark theme initializes neither provider iframes nor the TikTok script; Facebook receives its measured width clamped to 180–500 px and Instagram height follows its measured card width",
       "freshness": "TikTok creator, Facebook timeline and Instagram profile content are rendered from official platform endpoints on each activated page load subject to provider caching; LinkedIn is one explicitly featured post, not a claimed latest feed; the non-rendering X timeline is omitted while its outbound profile link remains in the footer",
-      "themeBoundary": "Social-card chrome follows the stored light/dark page preference and passes the resolved CSS color-scheme into provider frames. Cross-origin provider pixels retain the theme behavior offered by that provider and are not filtered or restyled.",
+      "themeBoundary": "Initial dark theme shows same-origin DS dark channel cards and does not initialize provider surfaces. Light theme shows lazily activated official embeds. Switching to dark after a provider loaded in light hides the surface without claiming to terminate already-started provider activity.",
       "providers": [
         {"name": "TikTok", "mode": "creator embed with provider-owned recent video surface", "endpoint": "https://www.tiktok.com/embed.js"},
         {"name": "Facebook", "mode": "Page Plugin timeline iframe", "endpoint": "https://www.facebook.com/plugins/page.php"},
@@ -113,6 +115,24 @@
       "activation": "explicit_user_action",
       "destination": "mailto:hello@landometer.com",
       "behavior": "opens the visitor's configured mail application with the recipient populated"
+    }
+  },
+  "mediaRoles": {
+    "locationBranchPotential": {
+      "path": "assets/screens/citymeter-market-share-product-rebuild02-r8.png",
+      "sha256": "9dbfe9a20d1a723f649224358edecb566c3ab7afa0f7d8f4c46db5ca92fd802f",
+      "role": "Location Intelligence branch-potential interface example",
+      "prohibitedRoles": ["CityMETER product-card media", "current analytical result", "live data", "automotive endorsement"]
+    },
+    "productCitymeter": {
+      "family": "assets/screens/business-dynamics-rebuild02-{960,1600}.{avif,webp}",
+      "role": "responsive CityMETER product-card interface example restored from the preceding Rebuild02 release",
+      "representationBoundary": "public CityMETER interface example; not raw or live analytical data"
+    },
+    "staticParallax": {
+      "scope": ["pillar media", "Location Intelligence", "product cards", "tailored service", "CityMETER showcase"],
+      "excluded": ["brand marks", "provider surfaces", "video", "testimonial portraits and company marks"],
+      "assetTransformation": "none; presentation is a bounded runtime transform and freezes under prefers-reduced-motion"
     }
   },
   "identity": {
@@ -147,7 +167,7 @@
         "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
         "sha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
         "roles": ["CityMETER", "CityWiki", "land and property tools"],
-        "wordmarks": "product names appear beside the symbol; CityMETER and CityWiki use Arvo 700 in both locales; the longer land-tools name wraps without overflow",
+        "wordmarks": "the restored CityMETER card pairs the symbol with the Landometer Arvo wordmark and names CityMETER in a separate heading; CityWiki uses its Arvo product wordmark beside the symbol; the longer land-tools name uses the same lockup geometry and may wrap",
         "approval": "owner-assigned Rebuild02 product-card role on 2026-08-30"
       },
       "citychat": {
@@ -271,16 +291,12 @@
       "bytes": 198704,
       "sha256": "9122feecf00e99f5b5fc0a78e648e5a23eae08e0feec959d2ee61ae29fab91d2"
     },
-    {
-      "path": "assets/screens/business-dynamics-rebuild02-2560.avif",
-      "bytes": 114900,
-      "sha256": "f020f196412a525c8fa7527528f170c567c7946b8995e09a0d7994460662f46c"
-    },
-    {
-      "path": "assets/screens/business-dynamics-rebuild02-2560.webp",
-      "bytes": 230662,
-      "sha256": "89cb243e2dc84e914ba5a828324dcb7a4ac7279bbff35c02f3f7c2e913954737"
-    },
+    {"path": "assets/screens/business-dynamics-rebuild02-960.avif", "bytes": 29290, "sha256": "82d78346238eafbc3df4171394dfb0d5eabc8bad627f38dd995fc76586b1c783"},
+    {"path": "assets/screens/business-dynamics-rebuild02-960.webp", "bytes": 49462, "sha256": "d75d724939375ac5b4f8600f5a031cd5e5b8ace2f2b3df2eebf6315a3385b40b"},
+    {"path": "assets/screens/business-dynamics-rebuild02-1600.avif", "bytes": 65786, "sha256": "351005e7d5441d29424913accf73bc21544f64437901f345ace724156bde3323"},
+    {"path": "assets/screens/business-dynamics-rebuild02-1600.webp", "bytes": 123918, "sha256": "5789afa940889a2fbaebd708ebfba98fa204953964919063245e1efe1e541dda"},
+    {"path": "assets/screens/business-dynamics-rebuild02-2560.avif", "bytes": 114900, "sha256": "f020f196412a525c8fa7527528f170c567c7946b8995e09a0d7994460662f46c"},
+    {"path": "assets/screens/business-dynamics-rebuild02-2560.webp", "bytes": 230662, "sha256": "89cb243e2dc84e914ba5a828324dcb7a4ac7279bbff35c02f3f7c2e913954737"},
     {
       "path": "assets/screens/population-age-sex-closeup-rebuild02-r4-336.avif",
       "bytes": 11988,
@@ -337,33 +353,25 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "current_release_verified",
-    "verifiedArtifactCommit": "131d05a7a602f05447933257be86d5e1c51a2446",
-    "verifiedArtifactTree": "76d5006e8a34e041b7fee54b73a820532524fd16",
-    "pagesBuildState": "built",
+    "currentReleaseState": "pending_release",
+    "verifiedArtifactCommit": null,
+    "verifiedArtifactTree": null,
+    "pagesBuildState": "pending",
     "pagesBuildId": null,
-    "pagesBuildDurationMs": 26413,
-    "pagesBuildUpdatedAt": "2026-08-30T12:25:12Z",
-    "verifiedAt": "2026-08-30T12:28:39.753Z",
-    "liveRouteEvidence": "pass: root, index, TH, EN and _ds stylesheet returned HTTP 200 with expected HTML/CSS MIME types; all four new immutable PNGs returned HTTP 200 image/png",
-    "liveByteParity": "pass: 11 public checks matched local byte length and SHA-256 at 2026-08-30T12:28:39.753Z, including both locale pages, site CSS/JS, DS CSS and four new immutable PNGs",
+    "pagesBuildDurationMs": null,
+    "pagesBuildUpdatedAt": null,
+    "verifiedAt": null,
+    "liveRouteEvidence": "pending for ui-20260830-10",
+    "liveByteParity": "pending for ui-20260830-10",
     "localBrowserEvidence": {
-      "matrix": [
-        "EN dark 1440x900",
-        "TH light 1024x768",
-        "EN light 390x844",
-        "TH dark 320x720"
-      ],
-      "verified": "pass for ui-20260830-09 product and Location Intelligence scope: no document overflow; five product cards and six carousel cards; Arvo product wordmarks; responsive media; CityChat fixed-light contrast; visible CityWiki credit; final carousel card reachable by touch scroll"
+      "matrix": [],
+      "verified": "pending for ui-20260830-10: source contracts are recorded; current-build rendered interaction checks are not yet attested"
     },
     "liveBrowserEvidence": {
-      "engine": "Codex in-app Chromium",
-      "verifiedAt": "2026-08-30T12:30:00Z",
-      "routes": [
-        "EN at 1440x900, light theme, #products",
-        "TH at 390x844, light theme, #location-intelligence"
-      ],
-      "verified": "pass for ui-20260830-09: five product cards, six Location cards, zero document overflow, CityMETER/CityWiki Arvo wordmarks, readable CityChat foreground, exact 1418x1320 area-performance media and mobile touch-scroll reachability"
+      "engine": null,
+      "verifiedAt": null,
+      "routes": [],
+      "verified": "pending for ui-20260830-10"
     }
   },
   "growth": {
@@ -390,7 +398,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "pass for ui-20260830-09: local matrix at 1440x900, 1024x768, 390x844 and 320x720 plus live EN 1440x900 and TH 390x844; Pages build, live route/MIME, 11-check byte parity and targeted live browser rendering verified",
+    "renderedBrowserGate": "pending for ui-20260830-10: source checks, local interaction/rendering, Pages delivery and live byte parity are not yet fully attested",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -408,7 +416,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "pass",
+    "SC-15": "fail",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",
