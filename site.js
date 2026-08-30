@@ -512,8 +512,17 @@
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-revealed');
-        observer.unobserve(entry.target);
+        var loopItem = entry.target.getAttribute('data-loop-item');
+        var loopRail = entry.target.closest('[data-loop-rail]');
+        var revealSet = loopItem !== null && loopRail
+          ? Array.from(loopRail.querySelectorAll('[data-loop-item]')).filter(function (item) {
+              return item.getAttribute('data-loop-item') === loopItem;
+            })
+          : [entry.target];
+        revealSet.forEach(function (item) {
+          item.classList.add('is-revealed');
+          observer.unobserve(item);
+        });
       });
     }, { threshold: 0.14, rootMargin: '0px 0px -12% 0px' });
     items.forEach(function (item) { observer.observe(item); });
@@ -525,6 +534,9 @@
         return !item.hasAttribute('data-loop-clone');
       });
       if (originals.length < 2) return;
+      originals.forEach(function (item, index) {
+        item.setAttribute('data-loop-item', String(index));
+      });
 
       var cycleStart = 0;
       var cycleEnd = 0;
@@ -565,11 +577,13 @@
           item.removeAttribute('aria-owns');
           item.removeAttribute('for');
           item.removeAttribute('headers');
-          item.removeAttribute('data-reveal');
-          item.removeAttribute('data-reveal-group');
-          item.removeAttribute('data-reveal-index');
-          item.removeAttribute('data-reveal-from');
-          item.style.removeProperty('--reveal-delay');
+          if (item !== clone) {
+            item.removeAttribute('data-reveal');
+            item.removeAttribute('data-reveal-group');
+            item.removeAttribute('data-reveal-index');
+            item.removeAttribute('data-reveal-from');
+            item.style.removeProperty('--reveal-delay');
+          }
           item.classList.remove('static-parallax__layer');
 
           if (item.matches('a, button, input, select, textarea, summary, [tabindex]')) {
@@ -582,7 +596,6 @@
           }
         });
 
-        clone.classList.add('is-revealed');
         return clone;
       }
 
@@ -734,10 +747,6 @@
     var tiktokEmbeds = Array.from(document.querySelectorAll('[data-tiktok-embed]'));
     if (!frames.length && !tiktokEmbeds.length) return;
 
-    function providerSurfacesEnabled() {
-      return root.getAttribute('data-theme') !== 'dark';
-    }
-
     function sizeInstagramFrame(frame) {
       var container = frame.closest('.social-embed--instagram');
       if (!container) return;
@@ -789,46 +798,24 @@
     }
 
     function loadTarget(target) {
-      if (!providerSurfacesEnabled()) return false;
       if (target.matches('[data-social-embed]')) loadFrame(target);
       else loadTikTok(target);
-      return true;
     }
 
     var targets = frames.concat(tiktokEmbeds);
     if (!('IntersectionObserver' in window)) {
-      if (providerSurfacesEnabled()) targets.forEach(loadTarget);
-      var fallbackThemeObserver = new MutationObserver(function () {
-        if (providerSurfacesEnabled()) targets.forEach(loadTarget);
-      });
-      fallbackThemeObserver.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+      targets.forEach(loadTarget);
       return;
     }
 
-    var nearTargets = new Set();
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (!entry.isIntersecting) {
-          nearTargets.delete(entry.target);
-          return;
-        }
-        nearTargets.add(entry.target);
-        if (!loadTarget(entry.target)) return;
-        nearTargets.delete(entry.target);
+        if (!entry.isIntersecting) return;
+        loadTarget(entry.target);
         observer.unobserve(entry.target);
       });
     }, { rootMargin: '480px 0px', threshold: 0.01 });
     targets.forEach(function (target) { observer.observe(target); });
-
-    var themeObserver = new MutationObserver(function () {
-      if (!providerSurfacesEnabled()) return;
-      nearTargets.forEach(function (target) {
-        loadTarget(target);
-        observer.unobserve(target);
-      });
-      nearTargets.clear();
-    });
-    themeObserver.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
   }
 
   function installHeroParallax() {
@@ -1086,8 +1073,8 @@
   installContactForm();
   installShareControls();
   installMediaArrival();
-  installMotion();
   installLoopingRails();
+  installMotion();
   installSocialEmbeds();
   installHeroParallax();
   installStaticImageParallax();

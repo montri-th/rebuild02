@@ -12,14 +12,14 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_current_release_verified",
+    "evidenceStatus": "source_limited_candidate_locally_verified",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260830-10"
+    "artifactBuildId": "ui-20260830-11"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260830-10",
+      "id": "ui-20260830-11",
       "path": "governance/site-manifest.json"
     }
   },
@@ -53,8 +53,11 @@
     "locationQuestionFramework": true,
     "locationQuestionCount": 6,
     "locationQuestionMediaAndLeadRouting": true,
-    "locationQuestionCarousel": "six semantic source cards plus sanitized aria-hidden inert six-card head and tail clone cycles; loops in both directions for pointer, touch and arrow keys and preserves the logical card after resize",
-    "testimonialCarousel": "six semantic source cards plus sanitized aria-hidden inert six-card head and tail clone cycles with the same bidirectional and resize-stable behavior",
+    "locationQuestionCarousel": "six semantic source cards plus sanitized aria-hidden inert six-card head and tail clone cycles; matching logical source/clone cards reveal together, the rail loops in both directions for pointer, touch and arrow keys, and it preserves the logical card after resize",
+    "testimonialCarousel": "six semantic source cards plus sanitized aria-hidden inert six-card head and tail clone cycles with the same reveal-parity, bidirectional and resize-stable behavior",
+    "locationCtaSingleLine": "local TH/EN verification at 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440 px: all computed nowrap, zero .btn overflow, no Location CTA above 48 px and no page overflow",
+    "darkHoverContrast": "dark-theme menu and topic-option hover changed from transparent to color(srgb .244784 .393333 .443686) with light text; utility/menu-toggle use the same 34% interaction-accent mix and selected states use 16%",
+    "socialIconTreatment": "computed local pass: all .icon-symbol instances use Material Symbols Rounded at FILL 0 / wght 300; social SVGs use fill none, stroke width 1.65 and round caps/joins; five footer destinations are 44 px, icon-only and retain visually hidden accessible labels",
     "productEcosystem": true,
     "productDesktopHierarchy": "two featured cards above three standard cards",
     "governedProductMedia": true,
@@ -67,7 +70,7 @@
     "browserPersistence": "local theme preference",
     "serverPersistence": "inquiry endpoint behavior and retention are backend-owned and not publicly documented",
     "telemetry": false,
-    "thirdPartyRenderingRuntime": "light theme only; initial dark theme uses same-origin DS channel cards without initializing provider surfaces",
+    "thirdPartyRenderingRuntime": "lazy near-viewport activation in both themes; DS-owned shells follow the selected theme while cross-origin provider internals retain provider styling",
     "staticInitialHtml": true
   },
   "security": {
@@ -80,19 +83,21 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260830-10",
+    "artifactBuildId": "ui-20260830-11",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260830-10",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v10",
-      "issuedAt": "2026-08-30"
+      "receiptId": "rebuild02-ui-20260830-11",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v11",
+      "issuedAt": "pending",
+      "status": "candidate_pending_publication"
     }
   },
   "network": {
-    "loadTimeSubresources": "Primary page rendering remains same-origin. In an initial dark theme, same-origin DS channel cards render and no provider surface initializes. In light theme, official platform embeds begin only when their cards approach the viewport.",
+    "loadTimeSubresources": "Primary page rendering remains same-origin. In both themes, official provider surfaces begin only when their cards approach the viewport.",
     "socialEmbeds": {
-      "activation": "In light theme, IntersectionObserver uses a 480 px root margin and no social iframe src or TikTok script exists before activation; an initial dark theme initializes neither provider iframes nor the TikTok script; Facebook receives its measured width clamped to 180–500 px and Instagram height follows its measured card width",
-      "freshness": "TikTok creator, Facebook timeline and Instagram profile content are rendered from official platform endpoints on each activated page load subject to provider caching; LinkedIn is one explicitly featured post, not a claimed latest feed; the non-rendering X timeline is omitted while its outbound profile link remains in the footer",
-      "themeBoundary": "Initial dark theme shows same-origin DS dark channel cards and does not initialize provider surfaces. Light theme shows lazily activated official embeds. Switching to dark after a provider loaded in light hides the surface without claiming to terminate already-started provider activity.",
+      "activation": "In both light and dark themes, IntersectionObserver uses a 480 px root margin and no social iframe src or TikTok script exists before near-viewport activation; Facebook receives its measured width clamped to 180–500 px and Instagram height follows its measured card width",
+      "freshness": "TikTok creator, Facebook timeline and Instagram profile content are rendered from provider-owned endpoints on each activated page load subject to provider caching; LinkedIn is one explicitly featured post, not a claimed latest feed; the non-rendering X timeline is omitted while its outbound profile link remains in the footer",
+      "themeBoundary": "Landometer-owned card shells, headers and surrounding surfaces follow the selected DS theme. Cross-origin provider internals retain provider styling and are not recoloured, inverted or represented as DS-themed content.",
+      "localObserved": "Real TikTok, Facebook, Instagram and LinkedIn provider content loaded in dark. A dark-light-dark switch preserved every iframe src and TikTok loaded state; the DS shell changed from rgb(252, 252, 250) to rgb(32, 41, 45), the dark embed surround was rgb(43, 53, 52), and no substitute cards appeared. At 390 px the Instagram iframe/card measured 436/499 px with 57 px before the next card and no fake blank tail.",
       "providers": [
         {"name": "TikTok", "mode": "creator embed with provider-owned recent video surface", "endpoint": "https://www.tiktok.com/embed.js"},
         {"name": "Facebook", "mode": "Page Plugin timeline iframe", "endpoint": "https://www.facebook.com/plugins/page.php"},
@@ -346,39 +351,42 @@
     {"path": "assets/screens/location-area-performance-rebuild02-r8.png", "bytes": 2182059, "sha256": "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"}
   ],
   "publication": {
-    "authorizationSource": "current user request dated 2026-08-30",
+    "authorizationSource": "the ongoing user request explicitly includes publishing the new candidate after the current additions; publication is authorized but not yet executed",
     "repository": "https://github.com/montri-th/rebuild02",
     "branch": "main",
     "pagesRoot": "/",
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "current_release_verified",
-    "verifiedArtifactCommit": "f9b7826bac8d70f3d53a0994e468feff259828cd",
-    "verifiedArtifactTree": "bb7b32ba0bfd07df84be3bdb323924334cec4d47",
-    "pagesBuildState": "success",
-    "pagesBuildId": 6167529645,
-    "pagesBuildDurationMs": 15000,
-    "pagesBuildUpdatedAt": "2026-08-30T14:13:58Z",
-    "verifiedAt": "2026-08-30T14:36:55Z",
-    "liveRouteEvidence": "pass: root, index, TH, EN and _ds stylesheet returned HTTP 200 with expected HTML/CSS MIME types; site CSS/JS and both role-critical image assets also returned HTTP 200 with expected MIME",
-    "liveByteParity": "pass: 9 public checks matched local byte length and SHA-256 at 2026-08-30T14:15:37.636Z, including both locale pages, site CSS/JS, DS CSS, the automotive market-share PNG and restored Business Dynamics 1600 AVIF",
+    "currentReleaseState": "candidate_pending_publication",
+    "verifiedArtifactCommit": "",
+    "verifiedArtifactTree": "",
+    "pagesBuildState": "pending",
+    "pagesBuildId": null,
+    "pagesBuildDurationMs": null,
+    "pagesBuildUpdatedAt": "",
+    "verifiedAt": "",
+    "liveRouteEvidence": "pending for ui-20260830-11; no candidate live-route evidence is claimed",
+    "liveByteParity": "pending for ui-20260830-11; no candidate byte-parity evidence is claimed",
+    "previousVerifiedRelease": {
+      "artifactBuildId": "ui-20260830-10",
+      "commit": "f9b7826bac8d70f3d53a0994e468feff259828cd",
+      "pagesBuildId": 6167529645,
+      "scope": "historical evidence only; does not attest ui-20260830-11"
+    },
     "localBrowserEvidence": {
       "matrix": [
-        "EN light and dark at 1440x900",
-        "TH light and dark at 390x844",
-        "responsive resize check at 430x900"
+        "EN and TH at widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440",
+        "both loop rails at 390, 768 and 1440 through ArrowLeft/ArrowRight boundary traversal",
+        "dark provider load and dark-light-dark theme switching"
       ],
-      "verified": "pass for ui-20260830-10 targeted scope: restored CityMETER media; automotive branch-potential media; substantial-image parallax without exposed background; six-source-card bidirectional Location and testimonial loops with inert head/tail clone cycles; initial-dark social boundary; zero document overflow"
+      "verified": "targeted pass for ui-20260830-11: all CTAs remained nowrap with zero button/page overflow and no Location CTA above 48 px; dark menu/topic hover resolved to color(srgb .244784 .393333 .443686) with light text; both rails stayed exclusively 0/3 or 3/3 revealed with no mixed logical group; real provider content loaded in dark and retained frame/TikTok state across dark-light-dark; Instagram had no fake blank tail; computed icon contracts passed"
     },
     "liveBrowserEvidence": {
       "engine": "Codex in-app Chromium",
-      "verifiedAt": "2026-08-30T14:36:55Z",
-      "routes": [
-        "EN at 1440x900, light theme, #products and cyclic rails",
-        "TH at 390x844, initial dark theme, #news"
-      ],
-      "verified": "pass for ui-20260830-10: restored Business Dynamics responsive media, exact automotive branch-potential PNG, 33 parallax owners, both cyclic rails wrapping last-to-first and first-to-last, four dark social cards, zero visible provider surfaces, no provider initialization on initial dark load and zero document overflow"
+      "verifiedAt": "",
+      "routes": [],
+      "verified": "pending for ui-20260830-11; no live browser evidence is claimed"
     }
   },
   "growth": {
@@ -405,7 +413,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "pass for ui-20260830-10 targeted scope: local and live interaction/rendering, GitHub Pages deployment success and 9-resource byte parity are attested; the complete locale by theme by viewport visual baseline remains open under SC-20",
+    "renderedBrowserGate": "targeted local pass for ui-20260830-11, including TH/EN widths 320–1440, one-line CTA fit, dark hover/focus, loop reveal parity, real dark-theme provider content, theme switching, icon contracts, zero overflow, HTTP/MIME, syntax, diff, JSON/YAML, resource and unique-ID checks. Publication/live checks and the exhaustive SC-20 matrix remain open",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -423,7 +431,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "pass",
+    "SC-15": "fail",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

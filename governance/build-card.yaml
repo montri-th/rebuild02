@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260830-10"
+      id: "ui-20260830-11"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -59,7 +59,8 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "source_limited_current_release_verified"
+    evidenceStatus: "source_limited_candidate_locally_verified"
+    authorizationSource: "ongoing user request explicitly includes publishing the new candidate after the current additions"
     visibility: "public"
     indexable: true
     robots: "index,follow"
@@ -68,12 +69,12 @@ landometerBuild:
       en: "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
     discoveryStates:
       machineReadableWhenOpened:
-        status: "verified"
+        status: "pending"
         evidenceRefs:
           - "governance/site-manifest.json"
           - "semantic initial HTML in both locale routes"
       searchDiscoverable:
-        status: "verified"
+        status: "pending"
         evidenceRefs:
           - "robots.txt"
           - "sitemap.xml"
@@ -85,7 +86,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "current_release_verified"
+      technicalStatus: "candidate_pending_publication"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -96,17 +97,18 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "live_verified"
+    readiness: "local_verified_publication_pending"
     publicSafe: true
-    status: "current_release_verified"
-    qrOrLinkTest: "pass for ui-20260830-10: GitHub Pages deployment 6167529645 succeeded for the exact artifact commit; root/index/TH/EN/_ds returned HTTP 200; 9 live resources matched local bytes and SHA-256; targeted EN desktop and TH dark mobile browser checks passed"
-    verifiedArtifactCommit: "f9b7826bac8d70f3d53a0994e468feff259828cd"
-    verifiedArtifactTree: "bb7b32ba0bfd07df84be3bdb323924334cec4d47"
-    pagesBuildCommit: "f9b7826bac8d70f3d53a0994e468feff259828cd"
-    pagesBuildState: "success"
-    pagesBuildDurationMs: 15000
-    pagesBuildUpdatedAt: "2026-08-30T14:13:58Z"
-    liveByteAttestationAt: "2026-08-30T14:15:37.636Z"
+    status: "pending"
+    qrOrLinkTest: "local pass for ui-20260830-11: root/index/TH/EN returned HTTP 200 text/html and the DS stylesheet returned HTTP 200 text/css; commit, Pages build, live-route and byte attestation remain pending"
+    verifiedArtifactCommit: ""
+    verifiedArtifactTree: ""
+    pagesBuildCommit: ""
+    pagesBuildState: "pending"
+    pagesBuildDurationMs: 0
+    pagesBuildUpdatedAt: ""
+    liveByteAttestationAt: ""
+    previousVerifiedRelease: "ui-20260830-10 at commit f9b7826bac8d70f3d53a0994e468feff259828cd; retained as history only"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -151,7 +153,7 @@ landometerBuild:
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild02.ui-20260830-10"
+    channelParityKey: "landometer.home.rebuild02.ui-20260830-11"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -369,8 +371,10 @@ landometerBuild:
       - "Downbeat press for action controls"
       - "One-drop settle for copy feedback"
       - "Story disclosure stages two narrative paragraphs over 820 ms with 80/260 ms delays, followed by a four-beat 480 ms rally"
-      - "TikTok-first editorial social grid uses same-origin DS channel cards without provider initialization in an initial dark theme; light theme lazily loads the official provider surfaces near the viewport"
-      - "Location Intelligence and testimonials each retain six semantic source cards and add one sanitized aria-hidden inert six-card clone cycle at the head and tail; pointer, touch and keyboard movement loops in both directions and resize preserves the logical card"
+      - "TikTok-first editorial social grid lazily loads actual TikTok, Facebook, Instagram and LinkedIn provider surfaces near the viewport in both themes; DS-owned shells follow the selected theme while provider internals retain provider styling"
+      - "Location Intelligence and testimonials each retain six semantic source cards and add one sanitized aria-hidden inert six-card clone cycle at the head and tail; matching logical source/clone cards reveal together, pointer, touch and keyboard movement loops in both directions, and resize preserves the logical card"
+      - "all six localized Location CTA captions use shortened one-line labels with max-width, nowrap and responsive padding/type; local TH/EN checks at 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440 px found zero button overflow, all nowrap, no Location CTA above 48 px and no page overflow"
+      - "dark-theme menu, utility, menu-toggle and topic-option hover/focus states use a stronger 34% accent mix on the raised surface while selected states use 16%; local computed hover changed from transparent to color(srgb .244784 .393333 .443686) with light text"
     omitted:
       - "Offbeat count-up is absent because the null legacy-system row is not rendered."
       - "No hue cycling or scroll jacking; the owner-authorized hero parallax is shallow, bounded and non-essential."
@@ -411,7 +415,7 @@ landometerBuild:
     securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260830-10"
+    artifactBuildId: "ui-20260830-11"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -443,24 +447,24 @@ landometerBuild:
         sha256: "bbcc034717d243cd5a3653dd1169cec00e8f11f289c20ef949078db24dc680f5"
       - channel: "hosted_th"
         path: "Landometer-Home-TH.dc.html"
-        bytes: 102235
-        sha256: "ce87c2ab9d326d32b2d72e02de0215eea75c9bbecfe743a72fb1e6f08deba0fe"
+        bytes: 98083
+        sha256: "a0880cb123f841eec3d2504a8431022d5d5d40a092c5324e64bf8d2cde4d7459"
       - channel: "hosted_en"
         path: "Landometer-Home-EN.dc.html"
-        bytes: 84330
-        sha256: "2f1fabdef9c44e36955b0b4fd8e72576aa7e40568cb65111be64d82206f9a1a8"
+        bytes: 80736
+        sha256: "4430b4acacaa6fbb33efa3b48a81cf8ee92aa958260d895f2fdcc08f69b3ed09"
       - channel: "redirect_alias"
         path: "index.html"
         bytes: 3069
         sha256: "8b3342e6bfbb2a27afce20dde3628e458db12cb62d6343cc5f6d0def8fc28cb3"
       - channel: "site_css"
         path: "site.css"
-        bytes: 58000
-        sha256: "a6d60b916989e19c5c8cfc9b7d74caf1c3e453866d5b4759139f57b453abab08"
+        bytes: 57273
+        sha256: "32343798c01fc35c76bbbf224641da17f0eb36e18116f71754814f4be7c906ae"
       - channel: "site_js"
         path: "site.js"
-        bytes: 40402
-        sha256: "8b4efd26a1d6426f1c5715b2243f9b76feb1a1f6e568699690b64c257c565b8c"
+        bytes: 39977
+        sha256: "d3b28b9789583c6e2130b28842d3d2fedc66426b21db6016913c8e6b77579a3f"
       - channel: "font_manifest"
         path: "assets/fonts/font-assets.manifest.json"
         bytes: 10406
@@ -499,15 +503,16 @@ landometerBuild:
         sha256: "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild02-ui-20260830-10"
-      catalogOrContentVersion: "landometer-home-rebuild02-v10"
-      issuedAt: "2026-08-30"
+      receiptId: "rebuild02-ui-20260830-11"
+      catalogOrContentVersion: "landometer-home-rebuild02-v11"
+      issuedAt: "pending"
+      status: "candidate_pending_publication"
   privacy:
     personalData: true
     sensitivity: "public"
     redactedPublicProjection: false
     governanceRecord:
-      id: "privacy-direct-inquiry-ui-20260830-10"
+      id: "privacy-direct-inquiry-ui-20260830-11"
       owner: "Montri (Landometer), per Rebuild02 work order"
       collectionBasisAndMinimumFields: "After explicit submit, the form sends topic, name, email, phone, and message; name, email, phone, and message are required."
       accessAndRetentionDeletion: "The first-party production inquiry backend owns access, retention, and deletion; those backend rules are not documented in this static repository."
@@ -539,10 +544,11 @@ landometerBuild:
       destination: "mailto:hello@landometer.com"
       outcome: "the visitor's configured mail application opens with the recipient populated"
     socialEmbeds:
-      activation: "in light theme, within 480 px of the viewport by IntersectionObserver; an initial dark theme initializes no provider iframe or TikTok script and instead exposes same-origin DS channel cards; Facebook receives the measured card width clamped to 180–500 px and Instagram height follows its card width"
+      activation: "in both light and dark themes, within 480 px of the viewport by IntersectionObserver; Facebook receives the measured card width clamped to 180–500 px and Instagram height follows its card width"
       platformFreshness: "TikTok creator, Facebook timeline and Instagram profile are platform-rendered at activation subject to provider caching; LinkedIn is a single featured post and is not represented as a latest feed; X is outbound-only because its timeline widget rendered a hidden zero-size frame in desktop and mobile tests"
-      privacyBoundary: "the primary page and dark channel cards are same-origin; only approaching a social card in light theme permits that provider to receive the normal iframe/script request context"
-      themeBoundary: "initial dark theme shows same-origin DS dark channel cards and does not initialize provider surfaces; light theme shows lazily activated official embeds; switching to dark after a light-theme provider load hides the surface without claiming to terminate already-started provider activity"
+      privacyBoundary: "the primary page remains same-origin; approaching a social card in either theme permits that provider to receive the normal iframe/script request context"
+      themeBoundary: "Landometer-owned social-card shells, headers and surrounding surfaces follow the selected DS theme; cross-origin provider iframe/script internals retain provider styling and are not recoloured, inverted or claimed as DS-themed content"
+      localObserved: "real TikTok, Facebook, Instagram and LinkedIn provider content loaded in dark; dark-light-dark preserved every iframe src and TikTok loaded state; DS shell changed rgb(252,252,250) to rgb(32,41,45), dark embed surround was rgb(43,53,52), no substitute cards appeared, and the 390 px Instagram iframe/card measured 436/499 px with a 57 px following gap and no fake blank tail"
       endpoints:
         - "Facebook Page Plugin timeline iframe"
         - "Instagram profile embed iframe"
@@ -579,7 +585,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "pass for ui-20260830-10 targeted scope: local EN/TH light/dark desktop/mobile checks plus live EN 1440x900 and TH dark 390x844; restored CityMETER media, automotive branch-potential media, substantial-image parallax, both bidirectional cyclic rails, initial-dark social boundary, zero document overflow, Pages success and 9-resource byte parity verified"
+    renderedBrowserGate: "targeted local pass for ui-20260830-11: TH/EN widths 320–1440 had zero CTA/page overflow and one-line Location captions; dark hover/focus state changed visibly with light text; both rails preserved 0/3 or 3/3 source/clone reveal parity through boundary traversal at 390/768/1440; real TikTok/Facebook/Instagram/LinkedIn content loaded in dark and survived dark-light-dark without source loss; local HTTP/MIME, script syntax, diff hygiene, JSON/YAML, resource and unique-ID checks passed. Publication/live evidence and the exhaustive SC-20 matrix remain open"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -593,8 +599,8 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 18
-      rowsFailedOrOpen: 5
+      rowsPassed: 17
+      rowsFailedOrOpen: 6
       rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:
@@ -603,6 +609,8 @@ landometerBuild:
     selfHostedSubsetPath: "assets/fonts/material-symbols-rounded-rebuild02-r10.ttf"
     subsetSha256: "bbcc034717d243cd5a3653dd1169cec00e8f11f289c20ef949078db24dc680f5"
     licensePath: "assets/fonts/LICENSE-Material-Symbols.txt"
+    socialMarks: "five inline SVG marks use fill none, currentColor strokes and rounded linecap/linejoin; footer controls are icon-only with visually hidden platform labels"
+    computedLocal: "all .icon-symbol elements resolve to Material Symbols Rounded at FILL 0 / wght 300; all social SVGs resolve to fill none, stroke width 1.65 and round caps/joins; footer social targets are 44 px"
     secondFamilyPresent: false
   actionGeometry:
     capsuleActions: "source_inspected"
@@ -640,7 +648,7 @@ landometerBuild:
     - item: "strict cross-origin href grep"
       ownerWorkOrder: "requires cross-origin src=/href= to return nothing"
       dsAuthority: "the current owner request requires official current social content in addition to external product, careers, social, and Google Maps destinations"
-      resolution: "primary rendering remains same-origin; social provider iframes/scripts are lazy and load only as their cards approach the viewport; explicit external anchors remain reported"
+      resolution: "primary rendering remains same-origin; social provider iframes/scripts are lazy and load in both themes only as their cards approach the viewport; DS-owned shells follow theme while provider internals retain provider styling; explicit external anchors remain reported"
     - item: "category identity"
       ownerWorkOrder: "requests persistent icon + colour + label mapping where real categories exist"
       dsAuthority: "persistent IDs require a governed category registry and contrast-safe token assignment"

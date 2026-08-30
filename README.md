@@ -3,7 +3,7 @@
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
 install, bundler, CI workflow, or build step. Current artifact build:
-`ui-20260830-10`.
+`ui-20260830-11` (candidate; publication and machine validation pending).
 
 | File | Purpose |
 |---|---|
@@ -23,8 +23,11 @@ install, bundler, CI workflow, or build step. Current artifact build:
   down, then returns to full prominence on upward scroll, focus, hover, or menu use. The
   desktop and in-menu sign-in CTA retain their real capsule action beneath a repeating
   text sweep. Reduced motion keeps the navbar prominent and removes the loop. Theme and
-  locale utilities remain 44 px circles, and menu states use quiet surface changes
-  without an accent rail.
+  locale utilities remain 44 px circles. Dark-theme menu, utility, menu-toggle and
+  topic-option hover/focus states now mix a stronger accent tint into the raised surface;
+  selected states remain quieter and no accent rail is introduced. Local computed-state
+  QA confirmed the dark hover surface changes from transparent to
+  `color(srgb .244784 .393333 .443686)` while retaining light text.
 - The hero fills the first viewport beneath the 76 px desktop / 68 px mobile header.
   Its photograph pans slowly within its crop, alternates direction, and becomes static
   when reduced motion is requested. Its section link is a single underlined text action
@@ -46,10 +49,17 @@ install, bundler, CI workflow, or build step. Current artifact build:
   with the same responsive rhythm as “What users say.” The branch-potential card owns the
   automotive market-share CityMETER PNG, while operational performance uses its distinct
   municipal-income screenshot. Every
-  card keeps its benefit-led conversation CTA. The rail and the six-card testimonial
+  card keeps its benefit-led conversation CTA. All six localized Location CTAs use
+  shortened labels plus a nowrap/max-width contract. Local TH/EN checks at 320, 360, 390,
+  600, 768, 900, 1080, 1081, 1280 and 1440 px confirmed nowrap, no button overflow,
+  no Location CTA taller than 48 px and no page overflow. The rail and the six-card testimonial
   rail both loop in either direction: JavaScript adds one sanitized, `aria-hidden`,
   inert copy of the six source cards before and after the original cycle, then recentres
-  without an animated jump after pointer, touch, or keyboard navigation. Resize handling
+  without an animated jump after pointer, touch, or keyboard navigation. Source and clone
+  copies share a logical reveal index, so whichever copy intersects first reveals the same
+  card across all three cycles instead of exposing an unrevealed clone. At 390, 768 and
+  1440 px, both rails survived left/right boundary traversal and every logical reveal group
+  remained consistently 0/3 or 3/3 revealed, never mixed. Resize handling
   preserves the logical card rather than resetting the reader's place.
   Comparisons explicitly require the same definition, time window, and area boundary;
   demand language remains an estimate that calls for field validation.
@@ -71,14 +81,18 @@ install, bundler, CI workflow, or build step. Current artifact build:
 - Stories use a responsive editorial grid: TikTok and LinkedIn receive full-width rows,
   while Facebook and Instagram share a readable two-column row and stack on narrower
   viewports. The unreliable blank X timeline embed is removed; the outbound X profile
-  link remains in the footer. Official provider surfaces load only near their cards;
+  link remains in the footer. Actual TikTok, Facebook, Instagram and LinkedIn provider
+  content lazily loads when its card approaches the viewport in both light and dark themes;
   LinkedIn remains one explicitly featured post. The Instagram profile frame is sized
   from its rendered card width instead of a fixed mobile height, removing the blank tail.
-  In an initial dark theme, no provider surface initializes: each channel instead shows
-  a same-origin DS dark card with a direct exit. Light theme keeps the official embeds and
-  loads them only when their cards approach the viewport. If a provider was already loaded
-  in light mode, switching to dark hides that surface but does not claim to stop provider
-  network activity already started.
+  Landometer-owned card shells, headers and surrounding surfaces follow the selected DS
+  theme. Cross-origin provider internals retain the provider's own styling and are not
+  recoloured, inverted or represented as DS-themed content. Local dark-theme QA loaded real
+  TikTok, Facebook, Instagram and LinkedIn content; dark→light→dark preserved all frame
+  sources and TikTok state while the DS shell changed from `rgb(252, 252, 250)` to
+  `rgb(32, 41, 45)` and the dark embed surround resolved to `rgb(43, 53, 52)`. The 390 px
+  Instagram frame/card measured 436/499 px with 57 px before the following card, with no
+  substitute surface or fake blank tail.
 - The hero keeps its 32-second ambient pan and adds a shallow, overscanned scroll parallax
   capped at 20 px. Substantial static content imagery in the Land/CityWiki/Landom pillars,
   Location Intelligence, Products and Services, tailored service, and CityMETER showcase
@@ -95,8 +109,12 @@ install, bundler, CI workflow, or build step. Current artifact build:
 - The contact form sends JSON directly to Landometer's public inquiry API. The office
   email is also a 44 px `mailto:` action for visitors who prefer their mail app. The page
   stores only the visitor's theme preference and has no analytics or form persistence.
-- The footer includes the office map, Facebook, Instagram, TikTok, LinkedIn, and X,
-  with the same symbol-plus-wordmark construction used by the navbar.
+- The footer includes the office map plus 44 px circular, icon-only Facebook, Instagram,
+  TikTok, LinkedIn and X links. Their accessible platform names remain in the markup while
+  the visible marks use rounded outline strokes. Other interface icons continue to use the
+  self-hosted rounded-outline Material Symbols contract. Computed local QA confirmed all
+  `.icon-symbol` instances use Material Symbols Rounded at FILL 0 / wght 300; all social
+  SVGs use fill none, 1.65 px strokes and round caps/joins, and footer targets are 44 px.
 
 ## Publishing
 
@@ -106,4 +124,8 @@ suffixes are route contracts and must not be renamed.
 
 `machineValidation` remains `pending` and `conformanceLevel` remains
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
-validation language.
+validation language. Local candidate checks passed script syntax, working-tree diff hygiene,
+JSON/YAML parsing, local resource existence, unique IDs, zero-overflow rendering and HTTP
+200/MIME checks for root, index, TH, EN and the DS stylesheet. The ongoing user request
+authorizes publishing the new candidate, but publication remains pending: no commit,
+deployment, live-route or byte-parity evidence is claimed for `ui-20260830-11` yet.

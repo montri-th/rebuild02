@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260830-10",
+  "artifactBuildId": "ui-20260830-11",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
   "sourceAndStructure": {
@@ -18,7 +18,7 @@
     "materialSymbolFileGlyphs": 25,
     "activeMaterialSymbolLigatures": 25,
     "missingIconGlyphs": 0,
-    "socialBrandMarks": "five inline SVG brand marks: TikTok, Facebook, Instagram, LinkedIn and the outbound-only X footer link",
+    "socialBrandMarks": "computed local pass: five inline rounded-outline SVG marks resolve to fill none, stroke width 1.65 and round caps/joins; footer targets are 44 px and icon-only while platform labels remain available to assistive technology",
     "videoContract": "one muted playsinline autoplay loop video without controls in each locale",
     "exactRallyCopy": "Let us cultivate our city with data."
   },
@@ -26,7 +26,7 @@
     "citymeterSnapshots": "pass: the Land pillar and appraisal/building/flood tiles use fresh immutable r5 responsive AVIF/WebP captures; Business Dynamics uses the existing 960/1600/2560 set; Population uses the current governed close-up at its displayed card size",
     "landResponsiveSelection": "pass: 640/1200/1800 candidates with sizes=(min-width:701px) 50vw, 100vw; right-aligned cover preserves the selected-building detail panel",
     "tileResponsiveSelection": "pass: four tiles use CSS-aligned sizes with the horizontal-card branch through 700 px and no missing candidates",
-    "semanticIcons": "pass: all 25 rendered interface ligatures resolve through the self-hosted canonical Material Symbols Rounded family at FILL 0, wght 300 and GRAD 0; the bookmark rail uses unique widgets, monitoring, newspaper and mail outline glyphs; product and social logos remain identity assets rather than UI glyphs",
+    "semanticIcons": "pass at source and computed local style: all .icon-symbol instances resolve through Material Symbols Rounded at FILL 0 and wght 300; the bookmark rail uses unique widgets, monitoring, newspaper and mail outline glyphs; the five social marks use rounded outline strokes; product logos remain identity assets rather than UI glyphs",
     "citymeterCtaHierarchy": "pass: one solid primary Explore-all action, one outlined secondary conversation action and one circular share utility",
     "externalLinkCue": "pass: visible external-link terminals use a typographic ↗ cue with no text decoration; target-blank links carry noopener noreferrer",
     "mapCopy": {
@@ -36,10 +36,13 @@
     "landomEntries": "pass: join, team work, company thinking and current work",
     "storyMotion": "pass: three staged 820 ms steps with 80/260/480 ms delays and a four-beat rally; reduced motion resolves immediately",
     "dynamicReducedMotion": "pass in controlled in-app Chromium: initial reduce produced no src, paused=true, autoplay=false and readyState=0 with poster present; normal-near played at readyState=4; normal-to-reduce removed src and restored readyState=0; reduce-to-normal replayed only near the viewport; the same transition offscreen stayed paused with no src until the video returned near",
-    "socialEditorialGrid": "pass at source: an initial dark theme shows same-origin DS channel cards and initializes no provider iframe or TikTok script; light theme retains official provider surfaces and lazily activates them within 480 px; Facebook and Instagram stack below 1080 px, Instagram height follows measured width, X remains outbound-only, and switching dark after a light-theme load hides rather than claims to unload provider activity",
+    "socialEditorialGrid": "pass in local rendering: real TikTok, Facebook, Instagram and LinkedIn provider content loaded in dark; dark-light-dark preserved all frame src values and TikTok loaded state; DS shell changed rgb(252,252,250) to rgb(32,41,45), dark embed surround was rgb(43,53,52), no substitute appeared, and the 390 px Instagram iframe/card measured 436/499 px with 57 px before the next card and no fake blank tail",
+    "locationCtaSingleLine": "pass in local TH/EN rendering at widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440: all computed nowrap, zero .btn overflow, no Location CTA above 48 px and no page overflow",
+    "darkHoverContrast": "pass in local computed-state QA: dark menu and topic-option hover changed from transparent to color(srgb .244784 .393333 .443686) with light text; utility and menu-toggle use the same stronger dark hover/focus treatment",
     "locationNarrative": "pass at source: six product-neutral, image-led routes cover catchment competition, proof of demand, white space/site selection, branch comparison, area-performance monitoring and Location-based Market Listening; branch comparison now owns the exact automotive market-share CityMETER PNG, while monitoring retains its distinct municipal-income screenshot; neither is represented as current analytical evidence; every route has a benefit-led conversation CTA",
     "locationQuestionCarousel": "pass at source: both locale routes contain one localized, keyboard-focusable Location rail with exactly six semantic source cards; site.js adds sanitized aria-hidden inert six-card head and tail clone cycles, normalizes after pointer/touch/keyboard movement in either direction, and preserves the logical card across ResizeObserver remeasurement",
     "testimonialCarousel": "pass at source: both locale routes contain six semantic testimonial source cards and use the same sanitized, inert, bidirectional and resize-stable loop implementation as Location Intelligence",
+    "loopRevealParity": "pass in local rendering at 390, 768 and 1440: both loop rails survived ArrowLeft/ArrowRight boundary traversal; every data-loop-item source/clone group was always 0/3 or 3/3 revealed, never mixed, with no page overflow",
     "productEcosystem": "pass at source: five image-led product cards use one capsule conversation CTA, an explicit fit cue and product-scoped copy; desktop presents CityMETER and CityChat as equal featured cards above ijji, CityWiki and land tools; the restored CityMETER card pairs the r6 symbol and Landometer Arvo wordmark with a separate CityMETER heading, while CityWiki retains its Arvo product wordmark and land tools retains the shared lockup geometry; projects/partnerships remains separate",
     "productMediaR8": "pass at source: CityMETER restores the responsive 960/1600 AVIF/WebP Business Dynamics family; the exact 9dbfe9a2… automotive market-share PNG moves exclusively to Location Intelligence branch potential; CityWiki and Property Tax Simulator retain the exact b371882d… and 422b0a35… PNG product examples; Location area performance retains 198c0d59…",
     "overlayCreditFocus": "pass at source and computed style: CityWiki attribution links keep the 3 px / 2 px focus geometry and override the theme ring with the overlay's white foreground, preserving a high-contrast indicator on the opaque dark caption surface in both themes",
@@ -52,7 +55,7 @@
   },
   "networkBoundary": {
     "primaryRendering": "same-origin static HTML/CSS/JS and governed media",
-    "socialActivation": "light theme only within 480 px of the viewport; an initial dark theme initializes no provider surface",
+    "socialActivation": "both themes within 480 px of the viewport; no provider surface initializes before its target approaches the observer margin",
     "socialProviders": [
       "TikTok",
       "Facebook",
@@ -67,38 +70,39 @@
   },
   "localRenderedChecks": {
     "engine": "Codex in-app Chromium on 2026-08-30",
-    "result": "pass for current ui-20260830-10 media, motion, carousel and social-theme scope",
+    "result": "targeted local pass for ui-20260830-11; publication/live evidence and the exhaustive SC-20 matrix remain open",
     "verified": [
-      "EN and TH at desktop and mobile widths: branch-potential owns the 2914x1962 automotive market-share PNG while the CityMETER product card restores the responsive Business Dynamics AVIF/WebP family",
-      "substantial static imagery in pillar, Location Intelligence, product, tailored-service and CityMETER showcase frames receives bounded scroll-linked parallax; measured media layers remain overfilled with no exposed background strip",
-      "Location Intelligence and testimonials each expose six semantic source cards plus six inert head and six inert tail clones; End then ArrowRight resolves to source index 0 and Home then ArrowLeft resolves to source index 5 in both rails",
-      "resize from 390x844 to 430x900 preserves 18 rail children and current parallax layers without stale cloned offsets or horizontal document overflow",
-      "initial dark social rendering shows four same-origin channel cards, zero visible provider surfaces, null iframe src values and no TikTok script; light rendering retains the lazy provider surfaces and switching back to dark hides them"
+      "EN and TH at widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440 had zero .btn overflow, all computed nowrap, no Location CTA above 48 px and no page overflow",
+      "dark menu and topic-option hover changed from transparent to color(srgb .244784 .393333 .443686) with light text",
+      "both loop rails at 390, 768 and 1440 survived ArrowLeft/ArrowRight boundary traversal; every logical source/clone reveal group remained 0/3 or 3/3, never mixed, with no page overflow",
+      "real TikTok, Facebook, Instagram and LinkedIn content loaded in dark; dark-light-dark preserved all frame sources and TikTok state while only the DS-owned shell/surround changed theme",
+      "all .icon-symbol computed Material Symbols Rounded FILL 0 / wght 300; social SVGs computed fill none, stroke width 1.65 and round caps/joins; footer social targets were 44 px and icon-only with hidden accessible labels",
+      "node --check, git diff --check, JSON/YAML parse, local resource existence and unique HTML ID checks passed"
     ],
-    "screenshots": [
-      "EN light 1440x900 Location Intelligence carousel",
-      "EN light 1440x900 Products and Services CityMETER card",
-      "TH dark 390x844 Stories and work in motion"
-    ]
+    "screenshots": []
   },
   "browserAndProductionGates": {
-    "localHttp": "pass for ui-20260830-10",
+    "localHttp": "pass for ui-20260830-11: root/index/TH/EN returned HTTP 200 text/html and the DS stylesheet returned HTTP 200 text/css",
+    "publicationAuthorization": "authorized by the ongoing user request that explicitly includes publishing the new candidate after the current additions",
+    "publicationStatus": "pending; no ui-20260830-11 commit, push, Pages build, live route or byte parity is claimed",
     "productionArtifact": {
+      "scope": "previous verified ui-20260830-10 release; does not attest ui-20260830-11",
       "repository": "https://github.com/montri-th/rebuild02",
       "branch": "main",
       "commit": "f9b7826bac8d70f3d53a0994e468feff259828cd",
       "tree": "bb7b32ba0bfd07df84be3bdb323924334cec4d47"
     },
     "pagesBuild": {
+      "scope": "previous verified ui-20260830-10 release; no ui-20260830-11 build has been claimed",
       "id": 6167529645,
       "state": "success",
       "commit": "f9b7826bac8d70f3d53a0994e468feff259828cd",
       "durationMs": 15000,
       "updatedAt": "2026-08-30T14:13:58Z"
     },
-    "liveHttpAndMime": "pass: root, index, TH, EN and _ds CSS returned HTTP 200 with expected HTML/CSS MIME; site CSS/JS, the automotive market-share PNG and the restored Business Dynamics AVIF also returned HTTP 200 with expected MIME",
-    "liveByteParity": "pass at 2026-08-30T14:15:37.636Z: 9 checks matched local byte length and SHA-256 for root/index, both locale pages, site CSS/JS, DS CSS, the automotive market-share PNG and the restored Business Dynamics 1600 AVIF",
-    "liveBrowser": "pass in Codex in-app Chromium at 2026-08-30T14:36:55Z: EN light 1440x900 verified restored CityMETER media, automotive branch-potential media, 33 substantial-image parallax owners, zero overflow and both cyclic rails wrapping in both directions; TH dark 390x844 verified four same-origin dark social cards, zero visible provider surfaces, null iframe src values, no TikTok script and zero overflow"
+    "liveHttpAndMime": "pending for ui-20260830-11; the previous ui-20260830-10 release passed root/index/TH/EN/_ds and role-critical resource HTTP/MIME checks",
+    "liveByteParity": "pending for ui-20260830-11; the previous ui-20260830-10 release matched 9 public resources at 2026-08-30T14:15:37.636Z",
+    "liveBrowser": "pending for ui-20260830-11; no live provider-theme, one-line CTA, dark-hover or reveal-parity evidence is claimed"
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

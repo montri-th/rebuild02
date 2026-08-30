@@ -42,7 +42,7 @@ body.menu-open { overflow: clip; }
 
 a:active { color: var(--interaction-accent); }
 .scene-atmosphere a:not(.btn):not(.showcase-tile):active { color: var(--on-atmosphere); }
-.btn { white-space: nowrap; }
+.btn { max-width: 100%; white-space: nowrap; }
 
 /* Unified navbar */
 .site-header {
@@ -497,6 +497,18 @@ a:active { color: var(--interaction-accent); }
 .site-menu__links a:focus-visible {
   background: var(--surface-blue-tint);
   color: var(--text-primary);
+}
+
+html[data-theme="dark"] .site-menu__links a:is(:hover, :focus-visible),
+html[data-theme="dark"] .utility-circle:is(:hover, :focus-visible),
+html[data-theme="dark"] .menu-toggle:is(:hover, :focus-visible) {
+  background: color-mix(in srgb, var(--interaction-accent) 34%, var(--surface-raised));
+  color: var(--text-primary);
+}
+
+html[data-theme="dark"] .site-menu__ecosystem a[aria-current="page"] {
+  background: color-mix(in srgb, var(--interaction-accent) 16%, var(--surface-raised));
+  box-shadow: none;
 }
 
 /* First viewport */
@@ -1099,7 +1111,9 @@ html[lang="en"] .pillar-resolution h2 { font-family: var(--font-display-en); lin
   justify-content: center;
   max-width: 100%;
   margin-top: auto;
-  white-space: normal;
+  padding-inline: clamp(14px, 2vw, 24px);
+  font-size: clamp(.82rem, 1.2vw, .96rem);
+  white-space: nowrap;
   text-align: center;
 }
 .location-intelligence__close {
@@ -1495,7 +1509,11 @@ html[data-theme="dark"] .story-mark--dark { display: block; }
   width: 22px;
   height: 22px;
   flex: none;
-  fill: currentColor;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .social-feed-grid {
@@ -1553,11 +1571,10 @@ html[data-theme="dark"] .story-mark--dark { display: block; }
   display: grid;
   place-items: start center;
   background: linear-gradient(135deg, var(--surface-soft), var(--surface-card));
-  color-scheme: light;
+  color-scheme: light dark;
 }
 .social-embed iframe,
 .social-embed .tiktok-embed { color-scheme: inherit; }
-html[data-theme="dark"] .social-embed { color-scheme: dark; }
 .social-embed iframe {
   width: 100%;
   display: block;
@@ -1579,65 +1596,9 @@ html[data-theme="dark"] .social-embed { color-scheme: dark; }
 .social-embed--tiktok .tiktok-embed,
 .social-embed--tiktok iframe { width: 100% !important; min-width: 288px; max-width: 720px !important; margin: 0 auto !important; }
 
-.social-dark-card { display: none; }
-
 html[data-theme="dark"] .social-embed {
-  min-height: 0;
-  padding: 0;
+  background: var(--surface-soft);
   color-scheme: dark;
-}
-html[data-theme="dark"] .social-embed > :is(iframe, .tiktok-embed) { display: none !important; }
-html[data-theme="dark"] .social-dark-card {
-  min-height: clamp(280px, 34vw, 460px);
-  display: grid;
-  align-content: end;
-  justify-items: start;
-  gap: var(--space-3);
-  width: 100%;
-  padding: clamp(28px, 5vw, 56px);
-  background:
-    radial-gradient(circle at 82% 18%, color-mix(in srgb, var(--energy-sky) 28%, transparent) 0, transparent 34%),
-    radial-gradient(circle at 12% 92%, color-mix(in srgb, var(--energy-mint) 20%, transparent) 0, transparent 38%),
-    var(--surface-card);
-  color: var(--text-primary);
-  text-decoration: none;
-}
-html[data-theme="dark"] .social-dark-card__icon {
-  width: 52px;
-  height: 52px;
-  margin-bottom: auto;
-  fill: var(--interaction-accent);
-}
-html[data-theme="dark"] .social-dark-card > span:first-of-type {
-  color: var(--text-metadata);
-  font-family: var(--font-technical);
-  font-size: var(--type-label);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-html[data-theme="dark"] .social-dark-card strong {
-  max-width: 34ch;
-  font-family: var(--font-ui-heading-en);
-  font-size: clamp(1.35rem, 3vw, 2.2rem);
-  line-height: 1.25;
-  text-wrap: balance;
-}
-html[lang="th"][data-theme="dark"] .social-dark-card strong { font-family: var(--font-ui-heading-th); }
-html[data-theme="dark"] .social-dark-card__action {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  color: var(--interaction-accent);
-  font-weight: 600;
-}
-html[data-theme="dark"] .social-dark-card:hover .social-dark-card__action,
-html[data-theme="dark"] .social-dark-card:focus-visible .social-dark-card__action { text-decoration: underline; text-underline-offset: .22em; }
-html[data-theme="dark"] :is(.social-embed--facebook, .social-embed--facebook iframe,
-  .social-embed--instagram, .social-embed--instagram iframe,
-  .social-embed--linkedin, .social-embed--linkedin iframe) {
-  min-height: 0;
-  height: auto;
 }
 
 /* Direct contact */
@@ -1768,6 +1729,16 @@ textarea.field-control { min-height: 148px; resize: vertical; }
   box-shadow: none;
 }
 
+html[data-theme="dark"] .topic-picker__option[aria-selected="true"] {
+  background: color-mix(in srgb, var(--interaction-accent) 16%, var(--surface-raised));
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .topic-picker__option:is(:hover, :focus-visible) {
+  background: color-mix(in srgb, var(--interaction-accent) 34%, var(--surface-raised));
+  color: var(--text-primary);
+}
+
 .contact-submit-row {
   display: flex;
   flex-wrap: wrap;
@@ -1820,7 +1791,7 @@ textarea.field-control { min-height: 148px; resize: vertical; }
 }
 .map-link:hover,
 .map-link:focus-visible { background: color-mix(in srgb, currentColor 10%, transparent); }
-.social-links { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); }
+.social-links { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .social-links a,
 .footer-links a {
   min-height: 44px;
@@ -1828,7 +1799,18 @@ textarea.field-control { min-height: 148px; resize: vertical; }
   align-items: center;
   color: var(--on-atmosphere);
 }
-.social-links a { gap: var(--space-2); text-decoration: none; }
+.social-links a {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  justify-content: center;
+  gap: 0;
+  border: 1px solid var(--overlay-glass-border);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+}
+.social-links a:hover,
+.social-links a:focus-visible { background: color-mix(in srgb, currentColor 10%, transparent); }
 .social-link__label {
   text-decoration: underline;
   text-decoration-thickness: 1px;
