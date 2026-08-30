@@ -67,28 +67,38 @@
   },
   "localRenderedChecks": {
     "engine": "Codex in-app Chromium on 2026-08-30",
-    "result": "pending for ui-20260830-10",
-    "verified": [],
-    "screenshots": []
+    "result": "pass for current ui-20260830-10 media, motion, carousel and social-theme scope",
+    "verified": [
+      "EN and TH at desktop and mobile widths: branch-potential owns the 2914x1962 automotive market-share PNG while the CityMETER product card restores the responsive Business Dynamics AVIF/WebP family",
+      "substantial static imagery in pillar, Location Intelligence, product, tailored-service and CityMETER showcase frames receives bounded scroll-linked parallax; measured media layers remain overfilled with no exposed background strip",
+      "Location Intelligence and testimonials each expose six semantic source cards plus six inert head and six inert tail clones; End then ArrowRight resolves to source index 0 and Home then ArrowLeft resolves to source index 5 in both rails",
+      "resize from 390x844 to 430x900 preserves 18 rail children and current parallax layers without stale cloned offsets or horizontal document overflow",
+      "initial dark social rendering shows four same-origin channel cards, zero visible provider surfaces, null iframe src values and no TikTok script; light rendering retains the lazy provider surfaces and switching back to dark hides them"
+    ],
+    "screenshots": [
+      "EN light 1440x900 Location Intelligence carousel",
+      "EN light 1440x900 Products and Services CityMETER card",
+      "TH dark 390x844 Stories and work in motion"
+    ]
   },
   "browserAndProductionGates": {
-    "localHttp": "pending for ui-20260830-10",
+    "localHttp": "pass for ui-20260830-10",
     "productionArtifact": {
       "repository": "https://github.com/montri-th/rebuild02",
       "branch": "main",
-      "commit": null,
-      "tree": null
+      "commit": "f9b7826bac8d70f3d53a0994e468feff259828cd",
+      "tree": "bb7b32ba0bfd07df84be3bdb323924334cec4d47"
     },
     "pagesBuild": {
-      "id": null,
-      "state": "pending",
-      "commit": null,
-      "durationMs": null,
-      "updatedAt": null
+      "id": 6167529645,
+      "state": "success",
+      "commit": "f9b7826bac8d70f3d53a0994e468feff259828cd",
+      "durationMs": 15000,
+      "updatedAt": "2026-08-30T14:13:58Z"
     },
-    "liveHttpAndMime": "pending for ui-20260830-10",
-    "liveByteParity": "pending for ui-20260830-10",
-    "liveBrowser": "pending for ui-20260830-10"
+    "liveHttpAndMime": "pass: root, index, TH, EN and _ds CSS returned HTTP 200 with expected HTML/CSS MIME; site CSS/JS, the automotive market-share PNG and the restored Business Dynamics AVIF also returned HTTP 200 with expected MIME",
+    "liveByteParity": "pass at 2026-08-30T14:15:37.636Z: 9 checks matched local byte length and SHA-256 for root/index, both locale pages, site CSS/JS, DS CSS, the automotive market-share PNG and the restored Business Dynamics 1600 AVIF",
+    "liveBrowser": "pass in Codex in-app Chromium at 2026-08-30T14:36:55Z: EN light 1440x900 verified restored CityMETER media, automotive branch-potential media, 33 substantial-image parallax owners, zero overflow and both cyclic rails wrapping in both directions; TH dark 390x844 verified four same-origin dark social cards, zero visible provider surfaces, null iframe src values, no TikTok script and zero overflow"
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

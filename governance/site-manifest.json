@@ -12,7 +12,7 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_pending_release",
+    "evidenceStatus": "source_limited_current_release_verified",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
@@ -353,25 +353,32 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "pending_release",
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "pending",
-    "pagesBuildId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending for ui-20260830-10",
-    "liveByteParity": "pending for ui-20260830-10",
+    "currentReleaseState": "current_release_verified",
+    "verifiedArtifactCommit": "f9b7826bac8d70f3d53a0994e468feff259828cd",
+    "verifiedArtifactTree": "bb7b32ba0bfd07df84be3bdb323924334cec4d47",
+    "pagesBuildState": "success",
+    "pagesBuildId": 6167529645,
+    "pagesBuildDurationMs": 15000,
+    "pagesBuildUpdatedAt": "2026-08-30T14:13:58Z",
+    "verifiedAt": "2026-08-30T14:36:55Z",
+    "liveRouteEvidence": "pass: root, index, TH, EN and _ds stylesheet returned HTTP 200 with expected HTML/CSS MIME types; site CSS/JS and both role-critical image assets also returned HTTP 200 with expected MIME",
+    "liveByteParity": "pass: 9 public checks matched local byte length and SHA-256 at 2026-08-30T14:15:37.636Z, including both locale pages, site CSS/JS, DS CSS, the automotive market-share PNG and restored Business Dynamics 1600 AVIF",
     "localBrowserEvidence": {
-      "matrix": [],
-      "verified": "pending for ui-20260830-10: source contracts are recorded; current-build rendered interaction checks are not yet attested"
+      "matrix": [
+        "EN light and dark at 1440x900",
+        "TH light and dark at 390x844",
+        "responsive resize check at 430x900"
+      ],
+      "verified": "pass for ui-20260830-10 targeted scope: restored CityMETER media; automotive branch-potential media; substantial-image parallax without exposed background; six-source-card bidirectional Location and testimonial loops with inert head/tail clone cycles; initial-dark social boundary; zero document overflow"
     },
     "liveBrowserEvidence": {
-      "engine": null,
-      "verifiedAt": null,
-      "routes": [],
-      "verified": "pending for ui-20260830-10"
+      "engine": "Codex in-app Chromium",
+      "verifiedAt": "2026-08-30T14:36:55Z",
+      "routes": [
+        "EN at 1440x900, light theme, #products and cyclic rails",
+        "TH at 390x844, initial dark theme, #news"
+      ],
+      "verified": "pass for ui-20260830-10: restored Business Dynamics responsive media, exact automotive branch-potential PNG, 33 parallax owners, both cyclic rails wrapping last-to-first and first-to-last, four dark social cards, zero visible provider surfaces, no provider initialization on initial dark load and zero document overflow"
     }
   },
   "growth": {
@@ -398,7 +405,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "pending for ui-20260830-10: source checks, local interaction/rendering, Pages delivery and live byte parity are not yet fully attested",
+    "renderedBrowserGate": "pass for ui-20260830-10 targeted scope: local and live interaction/rendering, GitHub Pages deployment success and 9-resource byte parity are attested; the complete locale by theme by viewport visual baseline remains open under SC-20",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {
@@ -416,7 +423,7 @@
     "SC-12": "pass",
     "SC-13": "pass",
     "SC-14": "fail",
-    "SC-15": "fail",
+    "SC-15": "pass",
     "SC-16": "fail",
     "SC-17": "pass",
     "SC-18": "pass",

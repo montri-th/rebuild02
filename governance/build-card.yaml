@@ -59,7 +59,7 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "source_limited_pending_release"
+    evidenceStatus: "source_limited_current_release_verified"
     visibility: "public"
     indexable: true
     robots: "index,follow"
@@ -68,12 +68,12 @@ landometerBuild:
       en: "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
     discoveryStates:
       machineReadableWhenOpened:
-        status: "pending_current_release_verification"
+        status: "verified"
         evidenceRefs:
           - "governance/site-manifest.json"
           - "semantic initial HTML in both locale routes"
       searchDiscoverable:
-        status: "pending_current_release_verification"
+        status: "verified"
         evidenceRefs:
           - "robots.txt"
           - "sitemap.xml"
@@ -85,7 +85,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "pending_current_release_verification"
+      technicalStatus: "current_release_verified"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -96,17 +96,17 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "pending_live_verification"
+    readiness: "live_verified"
     publicSafe: true
-    status: "pending"
-    qrOrLinkTest: "pending for ui-20260830-10: production routes, MIME types, bytes and rendered behavior must be checked after the content commit is published"
-    verifiedArtifactCommit: null
-    verifiedArtifactTree: null
-    pagesBuildCommit: null
-    pagesBuildState: "pending"
-    pagesBuildDurationMs: null
-    pagesBuildUpdatedAt: null
-    liveByteAttestationAt: null
+    status: "current_release_verified"
+    qrOrLinkTest: "pass for ui-20260830-10: GitHub Pages deployment 6167529645 succeeded for the exact artifact commit; root/index/TH/EN/_ds returned HTTP 200; 9 live resources matched local bytes and SHA-256; targeted EN desktop and TH dark mobile browser checks passed"
+    verifiedArtifactCommit: "f9b7826bac8d70f3d53a0994e468feff259828cd"
+    verifiedArtifactTree: "bb7b32ba0bfd07df84be3bdb323924334cec4d47"
+    pagesBuildCommit: "f9b7826bac8d70f3d53a0994e468feff259828cd"
+    pagesBuildState: "success"
+    pagesBuildDurationMs: 15000
+    pagesBuildUpdatedAt: "2026-08-30T14:13:58Z"
+    liveByteAttestationAt: "2026-08-30T14:15:37.636Z"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -579,7 +579,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "pending for ui-20260830-10: source contracts are recorded, but local interaction/rendering and post-publication live verification remain open"
+    renderedBrowserGate: "pass for ui-20260830-10 targeted scope: local EN/TH light/dark desktop/mobile checks plus live EN 1440x900 and TH dark 390x844; restored CityMETER media, automotive branch-potential media, substantial-image parallax, both bidirectional cyclic rails, initial-dark social boundary, zero document overflow, Pages success and 9-resource byte parity verified"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -593,8 +593,8 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 17
-      rowsFailedOrOpen: 6
+      rowsPassed: 18
+      rowsFailedOrOpen: 5
       rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:
