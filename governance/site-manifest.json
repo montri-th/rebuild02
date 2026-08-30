@@ -17,9 +17,9 @@
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
-    "machineValidation": "pass",
+    "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260830-08"
+    "artifactBuildId": "ui-20260830-09"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260830-08",
+      "id": "ui-20260830-09",
       "path": "governance/site-manifest.json"
     }
   },
@@ -52,6 +52,7 @@
     "locationQuestionFramework": true,
     "locationQuestionCount": 6,
     "locationQuestionMediaAndLeadRouting": true,
+    "locationQuestionCarousel": "CSS-only keyboard-focusable horizontal scroll-snap rail; no cloned cards or JavaScript slide owner",
     "productEcosystem": true,
     "productDesktopHierarchy": "two featured cards above three standard cards",
     "governedProductMedia": true,
@@ -77,10 +78,10 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260830-08",
+    "artifactBuildId": "ui-20260830-09",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260830-08",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v8",
+      "receiptId": "rebuild02-ui-20260830-09",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v9",
       "issuedAt": "2026-08-30"
     }
   },
@@ -146,6 +147,7 @@
         "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
         "sha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
         "roles": ["CityMETER", "CityWiki", "land and property tools"],
+        "wordmarks": "product names appear beside the symbol; CityMETER and CityWiki use Arvo 700 in both locales; the longer land-tools name wraps without overflow",
         "approval": "owner-assigned Rebuild02 product-card role on 2026-08-30"
       },
       "citychat": {
@@ -321,7 +323,11 @@
     {"path": "assets/photos/product-ijji-vendor-rebuild02-r7-1200.webp", "bytes": 112108, "sha256": "074db910225949e8178228910f03422e1e1fda82c94168d7a977c87e601e9d7d"},
     {"path": "assets/photos/service-projects-partnerships-rebuild02-r7-640.webp", "bytes": 64332, "sha256": "c50d8f39157d1300ceea2dd184916d6848a4e23ba39355394c228d692a1d4936"},
     {"path": "assets/photos/service-projects-partnerships-rebuild02-r7-1200.webp", "bytes": 171756, "sha256": "9bc6ea5d4320ea3c09455ee398b900221a0994b74785a97ae458f9fc82cb01b9"},
-    {"path": "assets/photos/service-projects-partnerships-rebuild02-r7-1600.webp", "bytes": 272880, "sha256": "5257628cda60c6ee50aec41cb018858afccf9b2235ff963e4f8a24d1813a2791"}
+    {"path": "assets/photos/service-projects-partnerships-rebuild02-r7-1600.webp", "bytes": 272880, "sha256": "5257628cda60c6ee50aec41cb018858afccf9b2235ff963e4f8a24d1813a2791"},
+    {"path": "assets/screens/citymeter-market-share-product-rebuild02-r8.png", "bytes": 2688910, "sha256": "9dbfe9a20d1a723f649224358edecb566c3ab7afa0f7d8f4c46db5ca92fd802f"},
+    {"path": "assets/screens/citywiki-wang-lang-product-rebuild02-r8.png", "bytes": 2015253, "sha256": "b371882d0f8386b31e59db97f6f05e99403007152da8e2e3295341fe97828a41"},
+    {"path": "assets/screens/property-tax-simulator-product-rebuild02-r8.png", "bytes": 83291, "sha256": "422b0a3533c9290079f3107a5c282dfd14cecda4925184ca786a7984b8dc7edc"},
+    {"path": "assets/screens/location-area-performance-rebuild02-r8.png", "bytes": 2182059, "sha256": "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"}
   ],
   "publication": {
     "authorizationSource": "current user request dated 2026-08-30",
@@ -339,26 +345,22 @@
     "pagesBuildDurationMs": null,
     "pagesBuildUpdatedAt": null,
     "verifiedAt": null,
-    "liveRouteEvidence": "pending for ui-20260830-08",
-    "liveByteParity": "pending for ui-20260830-08",
+    "liveRouteEvidence": "pending for ui-20260830-09",
+    "liveByteParity": "pending for ui-20260830-09",
     "localBrowserEvidence": {
       "matrix": [
-        {"locale": "th", "theme": "dark", "viewport": "1440x900", "route": "top, #location-intelligence, #products and menu", "result": "pass"},
-        {"locale": "th", "theme": "dark", "viewport": "1024x768", "route": "#products", "result": "pass"},
-        {"locale": "th", "theme": "dark", "viewport": "390x844", "route": "top, #location-intelligence, #products and menu", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "1440x900", "route": "#products", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "390x844", "route": "top", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "320x700", "route": "top and #products", "result": "pass"},
-        {"locale": "th", "theme": "dark", "viewport": "390x844", "route": "top, #news, #products and #contact", "result": "pass"},
-        {"locale": "en", "theme": "light", "viewport": "1440x900", "route": "top and #news", "result": "pass"}
+        "EN dark 1440x900",
+        "TH light 1024x768",
+        "EN light 390x844",
+        "TH dark 320x720"
       ],
-      "verified": "Local in-app Chromium loaded build ui-20260830-08 with zero horizontal overflow. The hero ends at the first viewport and its overscanned parallax moves within the plus/minus 20 px cap; reduced-motion CSS freezes both hero motion layers. The r7 prominent/calm navbar and mobile menu render as authored, including one-tap virtual 44 px targets at 390 and 320 px. Repeated Location CTA, CityChat and direct #products routing land beneath the prominent header and remained stable after nine seconds. All six Location Intelligence cards load governed media and benefit-led CTAs; five product cards render the requested 2+3 desktop hierarchy, approved identities and responsive media; the service route uses governed media. Instagram fills its profile content height on mobile and desktop without the former blank tail. Social-card chrome and frame colour-scheme signals follow light/dark preference while provider-owned cross-origin pixels retain provider theming. Bookmark roles resolve as widgets, monitoring, newspaper and mail from the r10 FILL 0 font."
+      "verified": "pass for ui-20260830-09 product and Location Intelligence scope: no document overflow; five product cards and six carousel cards; Arvo product wordmarks; responsive media; CityChat fixed-light contrast; visible CityWiki credit; final carousel card reachable by touch scroll"
     },
     "liveBrowserEvidence": {
       "engine": "Codex in-app Chromium",
       "verifiedAt": null,
       "routes": [],
-      "verified": "pending for ui-20260830-08"
+      "verified": "pending for ui-20260830-09"
     }
   },
   "growth": {
@@ -385,7 +387,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "local pass; current-release Pages build, live route, byte-parity and live-browser attestation pending",
+    "renderedBrowserGate": "local current-build pass at 1440x900, 1024x768, 390x844 and 320x720; current-release Pages build, live route, byte-parity and live-browser attestation pending",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {

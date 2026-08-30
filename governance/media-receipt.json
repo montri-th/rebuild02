@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260830-08",
+  "artifactBuildId": "ui-20260830-09",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -407,6 +407,135 @@
     ],
     "delivery": "AVIF preferred with WebP fallback for portraits; clean PNG for company marks; every asset is lazy-loaded.",
     "densityLimitation": "Portraits 01-03 are source-limited to 100x100 and are below 2x density at their 72 CSS px desktop rendering; they are not upscaled or invented."
+  },
+  "productCardMediaR8": {
+    "approvalContext": "The owner supplied or selected all three source files and assigned their Rebuild02 product-card roles on 2026-08-30.",
+    "processing": "Exact byte copies only. No crop, resize, recompression, colour adjustment or metadata rewrite was applied to the committed files; runtime object-position and card clipping control presentation.",
+    "deliveryBoundary": "Each new source remains one immutable PNG loaded lazily below the fold. Responsive layout and object-position change the visible card frame but do not constitute responsive-media delivery.",
+    "metadataBoundary": "Exact-copy delivery retains source metadata: the CityMETER and CityWiki PNGs include ICC colour profiles, while the legacy Property Tax Simulator PNG retains Adobe/ImageReady text and Photoshop XMP records.",
+    "citymeter": {
+      "assetId": "citymeter-market-share-product-r8-9dbfe9a2",
+      "mime": "image/png",
+      "approvalStatus": "owner-approved for the Rebuild02 CityMETER product card on 2026-08-30",
+      "source": {
+        "path": "/var/folders/5d/bhv92yqd5rjcdfc8_4034zzh0000gn/T/codex-clipboard-d2e68707-e335-48d4-a767-00e90518ff0a.png",
+        "committed": false,
+        "bytes": 2688910,
+        "dimensions": "2914x1962",
+        "sha256": "9dbfe9a20d1a723f649224358edecb566c3ab7afa0f7d8f4c46db5ca92fd802f"
+      },
+      "output": {
+        "path": "assets/screens/citymeter-market-share-product-rebuild02-r8.png",
+        "bytes": 2688910,
+        "dimensions": "2914x1962",
+        "sha256": "9dbfe9a20d1a723f649224358edecb566c3ab7afa0f7d8f4c46db5ca92fd802f"
+      },
+      "role": "CityMETER product-card interface example",
+      "prohibitedRoles": ["current analytical result", "live data", "automotive endorsement", "cross-product capability proof"],
+      "alt": {
+        "th": "ตัวอย่างหน้าจอ CityMETER แสดงแผนที่ ภูมิทัศน์ตลาด และสัดส่วนแบรนด์รายพื้นที่",
+        "en": "CityMETER interface example showing a map, local market landscape and brand-share views"
+      },
+      "cacheRevision": "r8 immutable filename",
+      "privacyAndMetadataReview": "No GPS, creator or capture date is asserted. The exact screenshot bytes retain an ICC profile and screenshot-related XMP/EXIF records.",
+      "representationBoundary": "An owner-supplied interface example showing location and market-share views; visible values and automotive brand names or marks are not claimed as current research findings, live data, endorsements or commercial relationships."
+    },
+    "citywiki": {
+      "assetId": "citywiki-wang-lang-product-r8-b371882d",
+      "mime": "image/png",
+      "approvalStatus": "owner-approved for the Rebuild02 CityWiki product card on 2026-08-30",
+      "sourceProvenance": "Owner-supplied screenshot captured from landometer.com; the page capture is Landometer-owned, while the embedded Wang Lang photograph retains its separate CC BY 2.0 attribution.",
+      "source": {
+        "path": "/var/folders/5d/bhv92yqd5rjcdfc8_4034zzh0000gn/T/codex-clipboard-68939ccd-25eb-4a8d-a371-14e5b71c983a.png",
+        "committed": false,
+        "bytes": 2015253,
+        "dimensions": "872x1390",
+        "sha256": "b371882d0f8386b31e59db97f6f05e99403007152da8e2e3295341fe97828a41"
+      },
+      "output": {
+        "path": "assets/screens/citywiki-wang-lang-product-rebuild02-r8.png",
+        "bytes": 2015253,
+        "dimensions": "872x1390",
+        "sha256": "b371882d0f8386b31e59db97f6f05e99403007152da8e2e3295341fe97828a41"
+      },
+      "role": "CityWiki product-card page example",
+      "prohibitedRoles": ["current guide-count proof", "readership evidence", "endorsement by people shown", "cross-product capability proof"],
+      "alt": {
+        "th": "ตัวอย่างหน้า CityWiki เรื่องวังหลัง พร้อมภาพผู้คนบริเวณท่าเรือและบทนำของพื้นที่",
+        "en": "CityWiki Wang Lang page example with people at the riverside landing and a concise place introduction"
+      },
+      "cacheRevision": "r8 immutable filename",
+      "privacyAndMetadataReview": "People appear in a public documentary photograph and are not identified as users or endorsers. The exact screenshot bytes retain an ICC profile and screenshot-related XMP/EXIF records.",
+      "embeddedPhotoAttribution": {
+        "title": "Wang Lang Pier Bangkok",
+        "creator": "David McKelvey",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wang_Lang_Pier_Bangkok.jpg",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "verifiedAtSource": "Local source evidence reviewed 2026-08-07 and release credit patch recorded 2026-08-11; Wikimedia Commons identifies David McKelvey and CC BY 2.0, and the Creative Commons deed requires credit, a license link and change indication",
+        "changeIndication": "The owner-supplied CityWiki page screenshot is clipped by the runtime card frame; visible bilingual credit links identify the source and license."
+      },
+      "representationBoundary": "A CityWiki page example; it does not establish current guide coverage, readership or a measured outcome."
+    },
+    "propertyTaxSimulator": {
+      "assetId": "property-tax-simulator-product-r8-422b0a35",
+      "mime": "image/png",
+      "approvalStatus": "owner-selected from the governed legacy web archive for the Rebuild02 land-and-property-tools card on 2026-08-30",
+      "source": {
+        "path": "/Users/montri/Downloads/legacy-assets/06_product-screenshots/intro__feature__ipad__taxsim-01.png",
+        "committed": false,
+        "bytes": 83291,
+        "dimensions": "1200x839",
+        "sha256": "422b0a3533c9290079f3107a5c282dfd14cecda4925184ca786a7984b8dc7edc",
+        "observedSourceUrl": "https://landometer.com/static/images/intro/feature/ipad/taxsim-01.png",
+        "observedAt": "2026-08-25",
+        "retrievedAt": "2026-08-26"
+      },
+      "output": {
+        "path": "assets/screens/property-tax-simulator-product-rebuild02-r8.png",
+        "bytes": 83291,
+        "dimensions": "1200x839",
+        "sha256": "422b0a3533c9290079f3107a5c282dfd14cecda4925184ca786a7984b8dc7edc"
+      },
+      "role": "Land and property tools card interface example",
+      "prohibitedRoles": ["current interface", "current tax result", "verified person or parcel record", "cross-product capability proof"],
+      "alt": {
+        "th": "หน้าจอ Property Tax Simulator รุ่นเดิม แสดงแผนที่ มูลค่าทรัพย์สิน และกราฟประมาณการภาษี",
+        "en": "Legacy Property Tax Simulator interface showing a map, property values and estimated-tax charts"
+      },
+      "cacheRevision": "r8 immutable filename",
+      "privacyAndMetadataReview": "Visible names, parcel details and values are treated as unverified interface samples rather than real-person or property assertions. Exact-copy delivery retains Adobe/ImageReady text and Photoshop XMP/document identifiers.",
+      "representationBoundary": "A visibly labelled legacy asset retrieved on 2026-08-26; it is not represented as the current Property Tax Simulator interface."
+    },
+    "visualReview": "Pass in local in-app Chromium at 1440x900, 390x844 and 320x720: card media fills each frame, key interface content remains legible, CityWiki credit remains visible, and no horizontal overflow was observed."
+  },
+  "locationAreaPerformanceR8": {
+    "assetId": "location-area-performance-r8-198c0d59",
+    "mime": "image/png",
+    "approvalStatus": "owner-supplied and assigned to the Rebuild02 Location Intelligence area-performance card on 2026-08-30",
+    "source": {
+      "path": "/var/folders/5d/bhv92yqd5rjcdfc8_4034zzh0000gn/T/codex-clipboard-06b702d6-079d-419c-a964-7035d57ad64b.png",
+      "committed": false,
+      "bytes": 2182059,
+      "dimensions": "1418x1320",
+      "sha256": "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"
+    },
+    "output": {
+      "path": "assets/screens/location-area-performance-rebuild02-r8.png",
+      "bytes": 2182059,
+      "dimensions": "1418x1320",
+      "sha256": "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"
+    },
+    "role": "Location Intelligence area-performance card interface example",
+    "prohibitedRoles": ["audited financial statement", "current municipality record", "measured product outcome", "cross-product capability proof"],
+    "alt": {
+      "th": "มุมมองพื้นที่ใน CityMETER ที่เชื่อมขอบเขตเทศบาล แผนที่ และตัวชี้วัดรายได้ของพื้นที่",
+      "en": "CityMETER area view combining municipal boundaries, a map, and local income indicators"
+    },
+    "processing": "Exact byte copy only. No crop, resize, recompression, colour adjustment or metadata rewrite; the responsive card uses CSS-only object-fit clipping.",
+    "cacheRevision": "r8 immutable filename",
+    "privacyAndMetadataReview": "The screenshot contains aggregate municipal and income labels rather than person-level data. No GPS, creator or capture date is asserted; exact-copy delivery preserves source metadata.",
+    "representationBoundary": "An owner-supplied CityMETER interface example used to illustrate an area-performance question. Visible place names and values are not represented as audited, current or outcome evidence."
   },
   "identity": {
     "unifiedNavbarColorSymbol": {

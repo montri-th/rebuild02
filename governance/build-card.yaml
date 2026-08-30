@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260830-08"
+      id: "ui-20260830-09"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -85,7 +85,7 @@ landometerBuild:
         status: "not_claimed"
         evidenceRefs: []
     webDiscovery:
-      technicalStatus: "live_verified"
+      technicalStatus: "current_release_pending"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both locale routes"
       observations:
@@ -99,7 +99,7 @@ landometerBuild:
     readiness: "local_verified_release_pending"
     publicSafe: true
     status: "current_release_pending"
-    qrOrLinkTest: "pending for ui-20260830-08; prior published release is not reused as current evidence"
+    qrOrLinkTest: "pending for ui-20260830-09; prior published release is not reused as current evidence"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -119,7 +119,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "4c721fb4c07dc04edc86211e4f2a38eb69008e0cbe8affd8e6f4e58764c394d0"
+        copyHash: "7ea57edf8517b9e4c245b5d222011068da35f3dff50c0094a9cccab280eaa27a"
         naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
         parityReviewRef: "bilingual source review complete; sampled rendered review complete"
       - locale: "en"
@@ -130,7 +130,7 @@ landometerBuild:
         normativeSourceRef: "Landometer Design System v0.9.0-r7 authoring master"
         authoringBasisRef: "owner work order v1 and source-labelled artifact evidence"
         fixtureSetRef: "Appendix D"
-        copyHash: "df027491eb2394589f9d2de628e090adafdeb3ba0ec24e0f3fb813a1d014d91e"
+        copyHash: "8d1b09555651941a73c6f8021a484cf8facb0f9c3111c5ce5ecfbf7ee0a8a347"
         naturalnessReviewRef: "source review complete; story disclosure sampled in rendered QA"
         parityReviewRef: "bilingual source review complete; sampled rendered review complete"
     internalVoiceWordsPrinted: false
@@ -144,7 +144,7 @@ landometerBuild:
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild02.ui-20260830-08"
+    channelParityKey: "landometer.home.rebuild02.ui-20260830-09"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -166,6 +166,9 @@ landometerBuild:
       - "theme-aware card/canvas foreground pairs"
       - "opaque captions on surface-card"
       - "assembled r6 symbol and typed #757575 wordmark directly on the footer surface"
+      - "CityMETER and CityWiki product wordmarks use Arvo beside the owner-approved r6 symbol; the longer Land and property tools label uses the same product-lockup geometry and may wrap"
+      - "product media notes use an opaque local surface and inherit its foreground contract instead of placing text directly on photography"
+      - "CityChat remains a fixed-light product card: beige canvas with dark foreground, dark outlined action, and a white-on-dark hover pair"
   brandAlignment:
     productStatement: "City Data + AI for decisions about Land, Location, and Living."
     proofObject: "dated product evidence and documentary media"
@@ -227,15 +230,16 @@ landometerBuild:
         surfaceRef: "dark story label"
         lineage: "exact byte copy of owner-supplied Landometer.LOGO.Cream.png"
         approvalStatus: "owner supplied"
-      - context: "CityMETER, CityWiki and land/property product cards"
+      - context: "CityMETER, CityWiki and Land and property tools product cards, paired respectively with those product names"
         path: "assets/identity/landometer-symbol-color-rebuild02-r6.png"
         bytes: 38962
         dimensions: "1601x1601"
         sha256: "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6"
         canvas: "transparent"
         placement: "direct_surface"
+        surfaceRef: "site.css .product-brand-lockup"
         lineage: "exact byte reuse of the owner-approved Rebuild02 r6 symbol"
-        approvalStatus: "owner assigned these three product-card roles on 2026-08-30"
+        approvalStatus: "owner assigned these three product-card roles and product-specific wordmarks on 2026-08-30"
       - context: "CityChat product card"
         path: "assets/products/citychat-primary-logo-official.png"
         bytes: 8371
@@ -261,6 +265,8 @@ landometerBuild:
       - "responsive Pak Khlong Talat image family"
       - "six governed Location Intelligence card media roles"
       - "governed CityChat, ijji and projects/partnerships media roles"
+      - "three exact-byte product-card screenshots for CityMETER, CityWiki and Property Tax Simulator"
+      - "one exact-byte CityMETER area-performance screenshot for the Location Intelligence monitoring card"
     mediaAssets:
       - path: "assets/media/living-city-rebuild02-r2.mp4"
         sha256: "ab31208c048ab0e3fcd32de1db96f2d0551b762067ec6c333d9e7ab731cfa9b5"
@@ -321,6 +327,22 @@ landometerBuild:
       - path: "assets/social/landometer-rebuild02-og-1200x630.jpg"
         sha256: "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12"
         privacy: "derived from approved Lumpini city photography for Open Graph and Twitter cards"
+      - path: "assets/screens/citymeter-market-share-product-rebuild02-r8.png"
+        sha256: "9dbfe9a20d1a723f649224358edecb566c3ab7afa0f7d8f4c46db5ca92fd802f"
+        privacy: "exact owner-supplied public CityMETER interface screenshot; source ICC/XMP/EXIF screenshot records retained; vehicle brands are interface examples and not endorsements"
+        deliveryBoundary: "lazy-loaded below the fold; no crop, resize, recompression or metadata rewrite; responsive composition is CSS-only"
+      - path: "assets/screens/citywiki-wang-lang-product-rebuild02-r8.png"
+        sha256: "b371882d0f8386b31e59db97f6f05e99403007152da8e2e3295341fe97828a41"
+        privacy: "exact screenshot from landometer.com supplied by the owner; source ICC/XMP/EXIF screenshot records retained; embedded Wang Lang photograph credited in the visible card note"
+        deliveryBoundary: "lazy-loaded below the fold; no crop, resize, recompression or metadata rewrite; responsive composition is CSS-only"
+      - path: "assets/screens/property-tax-simulator-product-rebuild02-r8.png"
+        sha256: "422b0a3533c9290079f3107a5c282dfd14cecda4925184ca786a7984b8dc7edc"
+        privacy: "exact Landometer legacy Property Tax Simulator interface asset; Adobe/ImageReady and Photoshop XMP records retained; retrieved from the governed legacy archive on 2026-08-26"
+        deliveryBoundary: "lazy-loaded below the fold; no crop, resize, recompression or metadata rewrite; responsive composition is CSS-only"
+      - path: "assets/screens/location-area-performance-rebuild02-r8.png"
+        sha256: "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"
+        privacy: "exact owner-supplied CityMETER area-performance interface screenshot; aggregate municipal and income labels only; source metadata retained"
+        deliveryBoundary: "lazy-loaded below the fold; no crop, resize, recompression or metadata rewrite; responsive composition is CSS-only"
   theme:
     mode: "interactive_auto"
     support: "dual"
@@ -339,6 +361,7 @@ landometerBuild:
       - "One-drop settle for copy feedback"
       - "Story disclosure stages two narrative paragraphs over 820 ms with 80/260 ms delays, followed by a four-beat 480 ms rally"
       - "TikTok-first editorial social grid uses full-width TikTok and LinkedIn rows, with Facebook and Instagram paired only at readable widths; Instagram height follows its measured card width"
+      - "Location Intelligence is a native horizontal scroll-snap rail with responsive 34/48/88 percent cards, no cloned items and keyboard-focusable overflow"
     omitted:
       - "Offbeat count-up is absent because the null legacy-system row is not rendered."
       - "No hue cycling or scroll jacking; the owner-authorized hero parallax is shallow, bounded and non-essential."
@@ -379,7 +402,7 @@ landometerBuild:
     securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260830-08"
+    artifactBuildId: "ui-20260830-09"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -411,20 +434,20 @@ landometerBuild:
         sha256: "bbcc034717d243cd5a3653dd1169cec00e8f11f289c20ef949078db24dc680f5"
       - channel: "hosted_th"
         path: "Landometer-Home-TH.dc.html"
-        bytes: 99937
-        sha256: "570309b7b8a0f316cc4a8d1c05afb72fc99d2fd25e1b43816cb28242b06ff067"
+        bytes: 99171
+        sha256: "7ea57edf8517b9e4c245b5d222011068da35f3dff50c0094a9cccab280eaa27a"
       - channel: "hosted_en"
         path: "Landometer-Home-EN.dc.html"
-        bytes: 82962
-        sha256: "237c6c1bdd29af33ba6deb4583410d78f6b70e6a86e76484403cee6172e1a0a9"
+        bytes: 82078
+        sha256: "8d1b09555651941a73c6f8021a484cf8facb0f9c3111c5ce5ecfbf7ee0a8a347"
       - channel: "redirect_alias"
         path: "index.html"
         bytes: 3069
-        sha256: "83025ba12bec30354dfc0ec95fd7c9781f36d914e6671fb3e4059db4daa06196"
+        sha256: "c5387c937a33dbdb8b42f78a6ba21be5e4e3711c57feef5c78f7cbd934be98d5"
       - channel: "site_css"
         path: "site.css"
-        bytes: 52846
-        sha256: "099d2d9fa717ef82128577beb96b19bb77c1606e18b5bd78a155d3e92639b696"
+        bytes: 54904
+        sha256: "45b1283f3285432a846101407ea30b41035888d130767b8150df276abb07a121"
       - channel: "site_js"
         path: "site.js"
         bytes: 28688
@@ -441,17 +464,33 @@ landometerBuild:
         path: "assets/products/ijji-logo-official.png"
         bytes: 32921
         sha256: "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f"
+      - channel: "product_media_citymeter"
+        path: "assets/screens/citymeter-market-share-product-rebuild02-r8.png"
+        bytes: 2688910
+        sha256: "9dbfe9a20d1a723f649224358edecb566c3ab7afa0f7d8f4c46db5ca92fd802f"
+      - channel: "product_media_citywiki"
+        path: "assets/screens/citywiki-wang-lang-product-rebuild02-r8.png"
+        bytes: 2015253
+        sha256: "b371882d0f8386b31e59db97f6f05e99403007152da8e2e3295341fe97828a41"
+      - channel: "product_media_property_tax_simulator"
+        path: "assets/screens/property-tax-simulator-product-rebuild02-r8.png"
+        bytes: 83291
+        sha256: "422b0a3533c9290079f3107a5c282dfd14cecda4925184ca786a7984b8dc7edc"
+      - channel: "location_media_area_performance"
+        path: "assets/screens/location-area-performance-rebuild02-r8.png"
+        bytes: 2182059
+        sha256: "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild02-ui-20260830-08"
-      catalogOrContentVersion: "landometer-home-rebuild02-v8"
+      receiptId: "rebuild02-ui-20260830-09"
+      catalogOrContentVersion: "landometer-home-rebuild02-v9"
       issuedAt: "2026-08-30"
   privacy:
     personalData: true
     sensitivity: "public"
     redactedPublicProjection: false
     governanceRecord:
-      id: "privacy-direct-inquiry-ui-20260830-08"
+      id: "privacy-direct-inquiry-ui-20260830-09"
       owner: "Montri (Landometer), per Rebuild02 work order"
       collectionBasisAndMinimumFields: "After explicit submit, the form sends topic, name, email, phone, and message; name, email, phone, and message are required."
       accessAndRetentionDeletion: "The first-party production inquiry backend owns access, retention, and deletion; those backend rules are not documented in this static repository."
@@ -523,7 +562,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local pass: ui-20260830-08 rendered at 1440x900, 1024x768, 390x844 and 320x700 with zero horizontal overflow; repeated Location, CityChat and direct #products routing passed; compact navbar one-tap virtual 44 px targets passed at 390 and 320 px; current-release production attestation pending"
+    renderedBrowserGate: "local current-build pass for product and Location Intelligence scope at 1440x900, 1024x768, 390x844 and 320x720: five product cards, six carousel cards, zero document overflow, computed Arvo product wordmarks, CityChat local-surface contrast, visible CityWiki credit and touch-scroll reachability to the final card; current-release Pages and live-browser attestation pending"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"

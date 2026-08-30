@@ -3,7 +3,7 @@
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
 install, bundler, CI workflow, or build step. Current artifact build:
-`ui-20260830-08`.
+`ui-20260830-09`.
 
 | File | Purpose |
 |---|---|
@@ -42,18 +42,25 @@ install, bundler, CI workflow, or build step. Current artifact build:
 - The product-neutral location-intelligence chapter now frames six questions:
   competition within a catchment area, proof of demand, white space and site selection,
   branch potential, operational performance by area, and location-based market
-  listening. Every card combines governed documentary or product evidence with a
-  benefit-led conversation CTA. Comparisons explicitly require the same definition,
-  time window, and area boundary; demand language remains an estimate that calls for
-  field validation.
+  listening. The six image-led cards form a keyboard-focusable CSS scroll-snap rail
+  with the same responsive rhythm as “What users say”; no JavaScript clones or hidden
+  duplicate content are introduced. The operational-performance card uses its own exact
+  CityMETER municipal-income screenshot rather than repeating Business Dynamics. Every
+  card keeps its benefit-led conversation CTA.
+  Comparisons explicitly require the same definition, time window, and area boundary;
+  demand language remains an estimate that calls for field validation.
 - Products and Services presents five product paths with one consistent conversation
   CTA and an explicit “A fit when” decision cue. On desktop, CityMETER and CityChat lead
   as two equal featured cards, followed by ijji, CityWiki, and land/property tools in a
-  three-card row. Each path carries responsive, governed media. CityMETER, CityWiki, and
-  land/property tools use an inline Landometer symbol-plus-wordmark; CityChat and ijji
-  use exact official identity assets. Projects and partnerships is separated as a
-  tailored service route. Product-specific claims remain inside their own cards rather
-  than being generalized across Landometer.
+  three-card row. CityMETER, CityWiki, and land/property tools pair the Landometer symbol
+  with their own product names; CityMETER and CityWiki use the Arvo display face in both
+  locales. Their new owner-selected interface examples are exact immutable PNG copies,
+  lazy-loaded below the fold; the CityWiki frame carries linked CC BY 2.0 attribution,
+  and Property Tax Simulator is visibly identified as a legacy asset. CityChat and ijji
+  retain exact official identity assets, while CityChat uses a complete fixed-light
+  contrast contract without a filled Brand Blue action. Projects and partnerships is
+  separated as a tailored service route. Product-specific claims remain inside their
+  own cards rather than being generalized across Landometer.
 - Stories use a responsive editorial grid: TikTok and LinkedIn receive full-width rows,
   while Facebook and Instagram share a readable two-column row and stack on narrower
   viewports. The unreliable blank X timeline embed is removed; the outbound X profile

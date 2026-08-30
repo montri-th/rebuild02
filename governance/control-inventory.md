@@ -1,19 +1,20 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260830-08`
+Artifact build: `ui-20260830-09`
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
-Each locale contains 106 native interactive/control/media occurrences in source. Seven
-links belong to the mutually exclusive `noscript` navigation, leaving 99 native
+Each locale contains 108 native interactive/control/media occurrences in source. Seven
+links belong to the mutually exclusive `noscript` navigation, leaving 101 native
 occurrences in the enhanced model. The TikTok creator placeholder is not counted as a
 native control or media element; its official script creates the provider UI only after
-intersection. Hidden menu/listbox state means the raw count is not a claim
+intersection. Two additional `tabindex="0"` horizontal rails—Location Intelligence and
+testimonials—make the all-focusable totals 110 raw and 103 enhanced. Hidden menu/listbox state means the raw count is not a claim
 that all controls are visible together.
 
 | Family | Raw count per locale | Enhanced behavior | No-JavaScript behavior |
 |---|---:|---|---|
-| Links | 80 | Local sections, locale route, six Location Intelligence conversation routes, five product conversation routes, product evidence routes, one tailored-service route, login, careers, bookmark rail, ordered social destinations, social-card exits, office map, clickable office email and outbound X profile | Native links remain; seven-link `noscript` navigation replaces the JavaScript menu |
+| Links | 82 | Local sections, locale route, six Location Intelligence conversation routes, five product conversation routes, product evidence routes, one tailored-service route, two CityWiki source/license credits, login, careers, bookmark rail, ordered social destinations, social-card exits, office map, clickable office email and outbound X profile | Native links remain; seven-link `noscript` navigation replaces the JavaScript menu |
 | Buttons | 16 | Menu and pointer-only backdrop, one light/dark theme circle, topic trigger plus ten options, exact-link share, submit | JavaScript-only controls stay hidden or inert; form topic remains on its first hidden value |
 | Inputs | 4 | Name, email and production-matched phone validation (9–24 characters) plus hidden topic value | Visible fields remain native; fallback submission encoding is not claimed compatible with the JSON API |
 | Textareas | 1 | Required contact message | Native field remains visible |
@@ -64,6 +65,9 @@ Source and rendered assertions:
 - The CityMETER proof grid links four distinct, responsive captures and no longer repeats
   the Business Dynamics snapshot used by the large showcase. The Land pillar uses a new
   640/1200/1800 source family with the detail panel kept inside the crop.
+- The Location Intelligence area-performance card uses its own exact, owner-supplied
+  CityMETER municipal-income screenshot; visible labels and values are interface examples,
+  not audited or current-result claims.
 - All visible external-link terminals use the same typographic `↗` cue without an icon
   underline. Underlines are scoped to visible-text spans and never cross UI icons or
   arrow cues. Every `target="_blank"` link carries `rel="noopener noreferrer"`.
@@ -74,12 +78,18 @@ Source and rendered assertions:
   the r7 handoff's FILL 1 active example so every interface icon remains rounded-outline;
   product and social logos remain
   identity assets rather than UI glyphs.
-- Location Intelligence exposes six image-led, benefit-specific conversation routes.
-  Proof of demand remains framed as an estimate from city-data signals and directs the
-  reader toward field validation rather than asserting measured demand.
+- Location Intelligence exposes six image-led, benefit-specific conversation routes in
+  one localized, keyboard-focusable CSS scroll-snap rail. Every card remains a direct DOM
+  child; no JavaScript clone or hidden duplicate is created. Proof of demand remains
+  framed as an estimate from city-data signals and directs the reader toward field
+  validation rather than asserting measured demand.
 - Products and Services exposes five product paths with consistent capsule conversation
   CTAs and an explicit fit cue. Desktop uses a 2+3 hierarchy: CityMETER and CityChat lead,
-  followed by ijji, CityWiki and land/property tools. The three Landometer-family cards use
-  an inline symbol-plus-wordmark; CityChat and ijji use exact official marks directly on
-  their card surfaces. Projects/partnerships is separated as an image-led tailored service
-  route. Product-specific copy is not generalized across Landometer.
+  followed by ijji, CityWiki and land/property tools. The three Landometer-family cards pair
+  the r6 symbol with product-specific wordmarks; CityMETER and CityWiki use Arvo 700 in both
+  locales. Their exact r8 PNG examples are lazy-loaded below the fold; CityWiki carries two
+  linked source/license credits and the tax simulator is visibly labelled as a legacy asset
+  retrieved on 26 Aug 2026. CityChat and ijji use exact official marks directly on their
+  card surfaces. CityChat owns a fixed-light foreground contract and an outlined action,
+  with no filled Brand Blue CTA. Projects/partnerships is separated as an image-led tailored
+  service route. Product-specific copy is not generalized across Landometer.

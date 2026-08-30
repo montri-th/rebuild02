@@ -809,10 +809,11 @@ html[lang="en"] .pillar-resolution h2 { font-family: var(--font-display-en); lin
 }
 
 .solution-card__media {
+  position: relative;
   width: 100%;
   margin: 0;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 2;
   background: var(--surface-soft);
 }
 
@@ -825,6 +826,29 @@ html[lang="en"] .pillar-resolution h2 { font-family: var(--font-display-en); lin
   transition: transform 920ms var(--motion-ease-settle);
 }
 .solution-card:hover .solution-card__media img { transform: scale(1.025); }
+.solution-card__media-note {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+  width: fit-content;
+  max-width: calc(100% - 20px);
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--overlay-glass);
+  color: var(--overlay-glass-ink2);
+  font-size: clamp(.68rem, 1.1vw, .76rem);
+  line-height: 1.35;
+}
+.solution-card__media-note a {
+  color: inherit;
+  text-decoration-color: currentColor;
+  text-underline-offset: .16em;
+}
+.solution-card__media-note a:focus-visible {
+  outline-color: var(--overlay-glass-ink);
+}
 
 .solution-card__content {
   min-height: 0;
@@ -866,13 +890,21 @@ html[lang="en"] .pillar-resolution h2 { font-family: var(--font-display-en); lin
 .solution-card__logo--ijji { width: 58px; height: 58px; }
 .solution-card__logo--citychat { width: 100%; }
 .solution-card__wordmark {
-  color: var(--rebuild02-wordmark-light);
+  min-width: 0;
+  color: var(--text-primary);
   font-family: var(--font-display-en);
   font-size: 23px;
   font-weight: 700;
   letter-spacing: -.02em;
   line-height: 1.02;
   white-space: nowrap;
+}
+.solution-card__wordmark--long {
+  max-width: 18ch;
+  font-size: clamp(18px, 1.6vw, 23px);
+  line-height: 1.12;
+  white-space: normal;
+  text-wrap: balance;
 }
 
 .solution-card :is(h3, p) { margin: 0; }
@@ -889,6 +921,28 @@ html[lang="en"] .pillar-resolution h2 { font-family: var(--font-display-en); lin
   margin-bottom: var(--space-1);
   color: var(--interaction-accent);
   font-size: var(--type-label);
+}
+
+.solution-card--citychat .solution-card__content {
+  --interaction-accent: var(--fg-on-light-primary);
+  --interaction-focus-ring: var(--fg-on-light-primary);
+}
+.solution-card--citychat .solution-card__fit {
+  background: color-mix(in srgb, var(--brand-beige) 76%, white);
+  color: var(--fg-on-light-primary);
+}
+.solution-card--citychat .solution-card__fit strong { color: var(--fg-on-light-primary); }
+.solution-card--citychat .solution-card__actions .btn {
+  border-color: var(--fg-on-light-primary);
+  background: transparent;
+  color: var(--fg-on-light-primary);
+}
+.solution-card--citychat .solution-card__actions .btn:hover {
+  background: var(--fg-interactive-surface);
+  color: var(--fg-interactive-ink);
+}
+.solution-card--citychat .solution-card__actions .btn:focus-visible {
+  outline-color: var(--fg-on-light-primary);
 }
 
 .solution-card__actions,
@@ -982,9 +1036,22 @@ html[lang="en"] .pillar-resolution h2 { font-family: var(--font-display-en); lin
 .location-intelligence .section-intro { max-width: 920px; }
 .location-question-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-template-columns: none;
+  grid-auto-columns: minmax(300px, 34%);
   gap: var(--space-4);
   margin-top: var(--space-7);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 2px 2px var(--space-4);
+  scroll-padding-inline: 2px;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--interaction-accent) var(--surface-soft);
+  scrollbar-gutter: stable;
+}
+.location-question-grid:focus-visible {
+  outline: 3px solid var(--interaction-focus-ring);
+  outline-offset: 2px;
 }
 .location-question {
   min-width: 0;
@@ -994,6 +1061,7 @@ html[lang="en"] .pillar-resolution h2 { font-family: var(--font-display-en); lin
   border: 1px solid var(--border-default);
   border-radius: var(--radius-md);
   background: var(--surface-card);
+  scroll-snap-align: start;
 }
 .location-question__media {
   width: 100%;
@@ -1789,7 +1857,7 @@ html.motion-ready img[data-lazy-media] {
   .solutions-grid--products .solution-card:last-child { grid-column: 1 / -1; }
   .showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .testimonial-grid { grid-auto-columns: minmax(300px, 48%); }
-  .location-question-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .location-question-grid { grid-auto-columns: minmax(300px, 48%); }
   .social-feed-grid { grid-template-columns: 1fr; }
   .social-feed-grid { gap: var(--space-4); }
   .social-feed-card--tiktok,
@@ -1851,7 +1919,6 @@ html.motion-ready img[data-lazy-media] {
   .living-video { object-position: 50% 18%; }
   .solutions-grid,
   .story-list,
-  .location-question-grid,
   .landom-paths { grid-template-columns: 1fr; }
   .solutions-grid--products .solution-card--featured,
   .solutions-grid--products .solution-card--standard,
@@ -1866,6 +1933,7 @@ html.motion-ready img[data-lazy-media] {
   .social-embed--linkedin,
   .social-embed--linkedin iframe { min-height: 1100px; height: 1100px; }
   .testimonial-grid { grid-auto-columns: minmax(280px, 88%); }
+  .location-question-grid { grid-auto-columns: minmax(280px, 88%); }
   .showcase-grid {
     display: grid;
     grid-auto-flow: column;
