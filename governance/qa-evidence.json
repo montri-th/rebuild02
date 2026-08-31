@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260830-11",
+  "artifactBuildId": "ui-20260831-01",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
   "sourceAndStructure": {
@@ -47,7 +47,7 @@
     "productMediaR8": "pass at source: CityMETER restores the responsive 960/1600 AVIF/WebP Business Dynamics family; the exact 9dbfe9a2… automotive market-share PNG moves exclusively to Location Intelligence branch potential; CityWiki and Property Tax Simulator retain the exact b371882d… and 422b0a35… PNG product examples; Location area performance retains 198c0d59…",
     "overlayCreditFocus": "pass at source and computed style: CityWiki attribution links keep the 3 px / 2 px focus geometry and override the theme ring with the overlay's white foreground, preserving a high-contrast indicator on the opaque dark caption surface in both themes",
     "cityChatContrast": "pass: source-token calculations establish primary/secondary/hover contrast, and current-build computed styles confirm 10.31:1 for the dark outlined action against the beige card, 8.31:1 for secondary text against the beige card, and 9.30:1 for fit text against its local light surface in dark mode; the fixed-light card remains readable under both page themes.",
-    "searchAndAgentDiscovery": "pass: bilingual metadata and WebPage descriptions name the product/service paths, while static JSON-LD adds a six-item ItemList linked to visible anchored content without Product, Offer, price, rating or review claims",
+    "searchAndAgentDiscovery": "candidate local pass: root, Thai and English metadata align with explicit city-data and Location Intelligence intent, and the Thai primary H1 now carries Thai intent while retaining the English brand line as secondary copy; canonical-locale Organization/WebSite/WebPage JSON-LD uses one stable organization identifier and only visible contact, address, identity and page facts; the redirect shell intentionally carries no JSON-LD; canonical locale pages retain the evidence-bound six-item ItemList without Product, Offer, Dataset, price, rating or review claims; a branded noindex 404 and navigation-only llms.txt were added. Repository-level robots.txt and sitemap.xml remain project artifacts only because GitHub Pages cannot publish montri-th.github.io host-root policy files from this project path; llms.txt is not treated as ranking evidence, a permission grant or agent authority",
     "bookmarkSemantics": "pass with explicit owner override: desktop and mobile navigation use the same four unique rounded-outline meanings; the active state remains FILL 0 and changes only its surface/ink, preserving the owner's all-interface-icons-outline direction rather than the r7 handoff's FILL 1 active example; hover uses blue tint, press uses soft plus downward travel, and every control has an accessible label",
     "underlineBoundary": "pass: UI icons and arrow cues have no underline; underline decoration is applied only to dedicated visible-text spans",
     "scrollParallaxDecision": "pass at source with owner authorization: hero media retains its requestAnimationFrame parallax capped at plus/minus 20 px; substantial static imagery in pillar, Location Intelligence, product, tailored-service and CityMETER showcase frames receives a separately bounded requestAnimationFrame layer; reduced motion freezes every layer, and brand marks, provider surfaces, video and testimonial identity assets are excluded",
@@ -69,40 +69,48 @@
     "officeEmail": "mailto:hello@landometer.com after explicit click"
   },
   "localRenderedChecks": {
-    "engine": "Codex in-app Chromium on 2026-08-30",
-    "result": "targeted local and live pass for ui-20260830-11; the exhaustive SC-20 matrix remains open",
+    "engine": "Codex in-app Chromium on 2026-08-30 plus installed headless Chrome and deterministic source/local-HTTP discovery checks on 2026-08-31",
+    "result": "candidate ui-20260831-01 passed source, structured-data, local HTTP/MIME and targeted Thai-H1 render gates; CSS, JavaScript and governed media are byte-unchanged from the ui-20260830-11 browser baseline; candidate deployment and exhaustive SC-20 remain open",
     "verified": [
       "EN and TH at widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440 had zero .btn overflow, all computed nowrap, no Location CTA above 48 px and no page overflow",
       "dark menu and topic-option hover changed from transparent to color(srgb .244784 .393333 .443686) with light text",
       "both loop rails at 390, 768 and 1440 survived ArrowLeft/ArrowRight boundary traversal; every logical source/clone reveal group remained 0/3 or 3/3, never mixed, with no page overflow",
       "real TikTok, Facebook, Instagram and LinkedIn content loaded in dark; dark-light-dark preserved all frame sources and TikTok state while only the DS-owned shell/surround changed theme",
       "all .icon-symbol computed Material Symbols Rounded FILL 0 / wght 300; social SVGs computed fill none, stroke width 1.65 and round caps/joins; footer social targets were 44 px and icon-only with hidden accessible labels",
-      "node --check, git diff --check, JSON/YAML parse, local resource existence and unique HTML ID checks passed"
+      "node --check, git diff --check, JSON/YAML parse, local resource existence and unique HTML ID checks passed",
+      "candidate root/index, TH, EN and 404 returned local HTTP 200 text/html; llms.txt returned text/plain, sitemap.xml returned application/xml and the DS stylesheet returned text/css; all inline JSON-LD blocks parsed",
+      "the new Thai primary H1 rendered at 320x568, 390x844, 768x1024 and 1440x900 with zero document overflow and remained inside the hero at every viewport"
     ],
     "screenshots": []
   },
   "browserAndProductionGates": {
-    "localHttp": "pass for ui-20260830-11: root/index/TH/EN returned HTTP 200 text/html and the DS stylesheet returned HTTP 200 text/css",
+    "localHttp": "pass for ui-20260831-01: root/index/TH/EN/404 returned HTTP 200 text/html, llms.txt returned HTTP 200 text/plain, sitemap.xml returned HTTP 200 application/xml and the DS stylesheet returned HTTP 200 text/css",
     "publicationAuthorization": "authorized by the ongoing user request that explicitly includes publishing the new candidate after the current additions",
-    "publicationStatus": "verified: ui-20260830-11 was committed, pushed, built by GitHub Pages and checked live",
+    "publicationStatus": "pending: ui-20260831-01 is a locally verified candidate not yet attested on GitHub Pages",
     "productionArtifact": {
-      "scope": "current verified ui-20260830-11 release",
+      "scope": "candidate ui-20260831-01",
       "repository": "https://github.com/montri-th/rebuild02",
       "branch": "main",
-      "commit": "ce107609659acb7f49b804b4178fa4dd6d9ae863",
-      "tree": "f67792995c39cc83617385ef05072005c6b3939b"
+      "commit": null,
+      "tree": null,
+      "previousVerifiedRelease": {
+        "artifactBuildId": "ui-20260830-11",
+        "commit": "ce107609659acb7f49b804b4178fa4dd6d9ae863",
+        "tree": "f67792995c39cc83617385ef05072005c6b3939b"
+      }
     },
     "pagesBuild": {
-      "scope": "current verified ui-20260830-11 release",
-      "id": 6168455185,
-      "state": "success",
-      "commit": "ce107609659acb7f49b804b4178fa4dd6d9ae863",
-      "durationMs": 22004,
-      "updatedAt": "2026-08-30T15:55:56Z"
+      "scope": "candidate ui-20260831-01",
+      "id": null,
+      "state": "pending",
+      "commit": null,
+      "durationMs": null,
+      "updatedAt": null,
+      "previousVerifiedBuildId": 6168455185
     },
-    "liveHttpAndMime": "pass for ui-20260830-11: root, index, TH, EN and the _ds stylesheet returned HTTP 200",
-    "liveByteParity": "pass for ui-20260830-11: root/index, TH, EN, site CSS/JS and DS CSS matched local bytes and SHA-256 across seven checks at 2026-08-30T16:09:19Z",
-    "liveBrowser": "pass in targeted live Chromium: build id ui-20260830-11; zero page overflow; 320 px Location CTAs all nowrap with zero overflow and height at or below 44 px; dark menu hover visibly changed surface with light text; real TikTok/Facebook/Instagram/LinkedIn surfaces loaded; iframe sources survived dark-light-dark; footer marks remained outline; and Location carousel logical reveal groups completed 3/3 across bidirectional boundary traversal"
+    "liveHttpAndMime": "pending for ui-20260831-01",
+    "liveByteParity": "pending for ui-20260831-01",
+    "liveBrowser": "pending for ui-20260831-01; ui-20260830-11 remains the targeted live visual baseline because this candidate does not change CSS, JavaScript or governed media"
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

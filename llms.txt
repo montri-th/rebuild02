@@ -1,0 +1,39 @@
+# Landometer Rebuild02
+
+> Public navigation index for Landometer's Rebuild02 website in Thai and English.
+
+Updated: 2026-08-31
+
+## Main pages
+
+- [ภาษาไทย — ข้อมูลเมืองและ Location Intelligence](https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html)
+- [English — City Data and Location Intelligence](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html)
+
+## Products and services
+
+- [CityMETER](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#product-citymeter)
+- [CityChat](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#product-citychat)
+- [ijji](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#product-ijji)
+- [CityWiki](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#product-citywiki)
+- [Land and property tools](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#product-land-tools)
+- [Projects and partnerships](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#service-projects)
+
+## Public stories and examples
+
+- [Location Intelligence questions](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#location-intelligence)
+- [CityMETER showcases](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#showcases)
+- [CityWiki place story](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#citywiki)
+- [Landom people and work](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#landom)
+- [Stories and work in motion](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#news)
+
+## Contact
+
+- [Contact form](https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html#contact)
+- Email: hello@landometer.com
+- [Landometer company website](https://landometer.com/)
+
+## Machine-use boundary
+
+- This file is a navigation index for public pages.
+- The linked pages remain authoritative for scope, dates, evidence, licences, access and permissions.
+- This file does not grant data access, expand product claims or authorize an agent to take actions.

@@ -2,14 +2,18 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. Current artifact build:
-`ui-20260830-11` (published and live-verified; machine validation pending).
+install, bundler, CI workflow, or build step. Current artifact candidate:
+`ui-20260831-01` (local release gates passed; GitHub Pages publication and live-byte
+verification pending; machine validation pending).
 
 | File | Purpose |
 |---|---|
 | `index.html` | Root entry; preserves query/hash and opens the Thai route |
 | `Landometer-Home-TH.dc.html` | Thai home page |
 | `Landometer-Home-EN.dc.html` | English home page |
+| `404.html` | Branded bilingual recovery page for missing GitHub Pages routes |
+| `llms.txt` | Navigation-only public index for AI and agent retrieval |
+| `robots.txt`, `sitemap.xml` | Project-path crawler and canonical locale discovery files |
 | `_ds/landometer-design-system-…/` | DS tokens, base CSS, and self-hosted webfonts |
 | `site.css`, `site.js` | Responsive presentation and progressive enhancement |
 | `assets/` | Responsive media, identity, testimonials, and icon font |
@@ -102,10 +106,15 @@ install, bundler, CI workflow, or build step. Current artifact build:
 - The company-story disclosure reveals its two paragraphs in sequence and resolves into
   the four-beat line “Let us cultivate our city with data.” Reduced motion presents the
   complete thought immediately.
-- Search discovery is enabled through canonical/hreflang metadata, Open Graph and
-  Twitter cards, Organization/WebSite/WebPage JSON-LD plus a visible-content ItemList
-  for the five products and tailored service route, `robots.txt`, and `sitemap.xml`.
-  Release dates change only when Rebuild02 content actually changes.
+- Search discovery uses intent-bearing bilingual titles, canonical/hreflang metadata,
+  Open Graph and Twitter cards, a stable owned-domain Organization identity with the
+  visible address and contact route, WebSite/WebPage JSON-LD, and a visible-content
+  ItemList for the five products and tailored service route. The root redirect shell now
+  mirrors the Thai canonical metadata and offers substantive fallback navigation. The
+  project also publishes a branded `404.html` and navigation-only `llms.txt`; neither is
+  represented as a ranking guarantee or agent authority. Project-path `robots.txt` and
+  `sitemap.xml` remain useful files but cannot govern the `montri-th.github.io` hostname
+  root. Release dates change only when Rebuild02 content actually changes.
 - The contact form sends JSON directly to Landometer's public inquiry API. The office
   email is also a 44 px `mailto:` action for visitors who prefer their mail app. The page
   stores only the visitor's theme preference and has no analytics or form persistence.
@@ -124,11 +133,10 @@ suffixes are route contracts and must not be renamed.
 
 `machineValidation` remains `pending` and `conformanceLevel` remains
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
-validation language. Local release checks passed script syntax, working-tree diff hygiene,
-JSON/YAML parsing, local resource existence, unique IDs, zero-overflow rendering and HTTP
-200/MIME checks for root, index, TH, EN and the DS stylesheet. GitHub Pages deployed
-artifact commit `ce107609659acb7f49b804b4178fa4dd6d9ae863` successfully. Root, index,
-TH, EN and the `_ds` stylesheet returned HTTP 200; seven live HTML/CSS/JS resources
-matched the release bytes exactly. Targeted live Chromium checks also passed the 320 px
-Location CTA, dark hover, four real provider surfaces, theme-state retention, rounded
-outline footer icons, zero page overflow and source/clone carousel reveal parity.
+validation language. Candidate release checks passed script syntax, diff hygiene,
+JSON-LD/JSON/YAML parsing, local resource existence, unique IDs and local HTTP/MIME checks
+for root, index, TH, EN, the branded 404, `llms.txt`, sitemap and the DS stylesheet. The
+new Thai primary H1 was rendered at 320, 390, 768 and 1440 px with zero horizontal
+overflow and remained inside the first-view hero. The preceding visual release
+`ui-20260830-11` remains the latest live-byte-attested baseline for unchanged interaction
+and media behavior until this candidate is deployed and checked against GitHub Pages.

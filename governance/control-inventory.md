@@ -1,6 +1,6 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260830-11` published and live-verified
+Artifact build: `ui-20260831-01` candidate; local release gates passed and live verification is pending
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
@@ -50,6 +50,19 @@ Source and rendered assertions:
   `mailto:hello@landometer.com` after explicit visitor action.
 - The contact API accepted the GitHub Pages origin in a 2026-08-29 CORS preflight and
   rejected GET with 405. No production POST or inbox receipt is claimed in this source audit.
+- Root, Thai and English page metadata now use explicit city-data and Location Intelligence
+  intent, and the Thai page carries a Thai primary H1 while retaining the English brand
+  line as secondary copy. The canonical locale pages retain static semantic HTML, canonical/hreflang,
+  social metadata and evidence-bound JSON-LD. Organization, WebSite and WebPage nodes use
+  one stable official-organization identifier and only identity, address, contact and page
+  facts that are visible in the public artifact. No Product, Offer, Dataset, price, rating
+  or review claim was added without a dedicated evidence page.
+- A branded `404.html` provides noindex recovery, and `llms.txt` is a navigation-only map to
+  the canonical locale and anchored product/contact sections. It is not a ranking signal,
+  evidence substitute, permission grant or agent-action authority. The repository-level
+  `robots.txt` and `sitemap.xml` remain project artifacts only: this project-path GitHub
+  Pages deployment cannot control `https://montri-th.github.io/robots.txt` or other
+  host-root discovery files. That host and redirect work is deferred to the production plan.
 - Exact-link share uses Web Share when available and clipboard otherwise, with an
   `aria-live` status. The locale link preserves query and hash.
 - Stories use TikTok, Facebook, Instagram and LinkedIn in a responsive editorial grid,
@@ -113,14 +126,15 @@ Source and rendered assertions:
   and type. At widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440, local QA
   found all computed nowrap, zero `.btn` overflow, no Location CTA above 48 px and no page
   overflow.
-- Local release gates passed `node --check`, `git diff --check`, JSON/YAML parsing,
-  resource existence and unique HTML IDs. Root, index, TH and EN returned HTTP 200
-  `text/html`; the DS stylesheet returned HTTP 200 `text/css`. GitHub Pages deployment
-  `6168455185` succeeded for artifact commit `ce107609`; all five required routes returned
-  HTTP 200 and seven live HTML/CSS/JS resources matched local bytes. Targeted live TH dark
-  checks at 320/390/1440 also confirmed one-line Location CTA fit, stronger menu hover,
-  four real provider surfaces, theme-state retention, outline footer marks, zero overflow
-  and 3/3 logical carousel reveal parity.
+- Candidate `ui-20260831-01` local release gates passed `node --check`, `git diff --check`,
+  JSON-LD/JSON/YAML parsing, resource existence and unique HTML IDs. Root, index, TH, EN and
+  404 returned HTTP 200 `text/html`; `llms.txt` returned `text/plain`, the sitemap returned
+  `application/xml`, and the DS stylesheet returned `text/css`. Installed headless Chrome
+  rendered the new Thai H1 at 320/390/768/1440 with zero horizontal overflow and inside the
+  first-view hero. GitHub Pages publication and
+  live-byte attestation remain pending. Deployment `6168455185`, artifact commit `ce107609`
+  and the targeted 320/390/1440 browser checks remain historical evidence for visual release
+  `ui-20260830-11`; CSS, JavaScript and governed media bytes are unchanged in this candidate.
 - Products and Services exposes five product paths with consistent capsule conversation
   CTAs and an explicit fit cue. Desktop uses a 2+3 hierarchy: CityMETER and CityChat lead,
   followed by ijji, CityWiki and land/property tools. The restored CityMETER card pairs the
