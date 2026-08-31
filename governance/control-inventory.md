@@ -1,6 +1,6 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260831-01` candidate; local release gates passed and live verification is pending
+Artifact build: `ui-20260831-01` published and live-byte verified
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
@@ -126,15 +126,17 @@ Source and rendered assertions:
   and type. At widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440, local QA
   found all computed nowrap, zero `.btn` overflow, no Location CTA above 48 px and no page
   overflow.
-- Candidate `ui-20260831-01` local release gates passed `node --check`, `git diff --check`,
+- Release `ui-20260831-01` passed `node --check`, `git diff --check`,
   JSON-LD/JSON/YAML parsing, resource existence and unique HTML IDs. Root, index, TH, EN and
   404 returned HTTP 200 `text/html`; `llms.txt` returned `text/plain`, the sitemap returned
   `application/xml`, and the DS stylesheet returned `text/css`. Installed headless Chrome
   rendered the new Thai H1 at 320/390/768/1440 with zero horizontal overflow and inside the
-  first-view hero. GitHub Pages publication and
-  live-byte attestation remain pending. Deployment `6168455185`, artifact commit `ce107609`
-  and the targeted 320/390/1440 browser checks remain historical evidence for visual release
-  `ui-20260830-11`; CSS, JavaScript and governed media bytes are unchanged in this candidate.
+  first-view hero. GitHub Pages build `1185423885` published artifact commit
+  `e1d47bbebf8e1be3404b1f9f90d62326ad59e081` (tree `01f96b4…`). Live route/MIME,
+  branded HTTP 404, nine crawler-user-agent, ten-file SHA-256 parity and TH/EN Chrome
+  checks at 390/1440 passed with no horizontal overflow or first-party request failure.
+  CSS, JavaScript and governed media bytes remain unchanged from the targeted interaction
+  baseline `ui-20260830-11`; the exhaustive SC-20 matrix remains open.
 - Products and Services exposes five product paths with consistent capsule conversation
   CTAs and an explicit fit cue. Desktop uses a 2+3 hierarchy: CityMETER and CityChat lead,
   followed by ijji, CityWiki and land/property tools. The restored CityMETER card pairs the

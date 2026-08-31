@@ -59,7 +59,7 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "source_limited_candidate_local_verified"
+    evidenceStatus: "source_limited_live_verified"
     authorizationSource: "ongoing user request explicitly includes publishing the new candidate after the current additions"
     visibility: "public"
     indexable: true
@@ -69,12 +69,12 @@ landometerBuild:
       en: "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
     discoveryStates:
       machineReadableWhenOpened:
-        status: "candidate_local_verified"
+        status: "live_verified"
         evidenceRefs:
           - "governance/site-manifest.json"
           - "semantic initial HTML in both locale routes"
       searchDiscoverable:
-        status: "candidate_local_verified_with_host_root_limit"
+        status: "live_verified_with_host_root_limit"
         evidenceRefs:
           - "robots.txt"
           - "sitemap.xml"
@@ -84,12 +84,12 @@ landometerBuild:
         evidenceRefs:
           - "llms.txt is a navigation-only aid and not represented as a ranking signal"
       agentReadableOrActionable:
-        status: "readable_not_actionable_candidate"
+        status: "readable_not_actionable_live_verified"
         evidenceRefs:
           - "semantic initial HTML in both locale routes"
           - "llms.txt machine-use boundary"
     webDiscovery:
-      technicalStatus: "candidate_local_verified"
+      technicalStatus: "live_verified"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both canonical locale routes; visible-content ItemList in locale routes; redirect-shell root intentionally carries metadata but no JSON-LD"
       observations:
@@ -102,17 +102,17 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "candidate_local_verified"
+    readiness: "live_verified"
     publicSafe: true
-    status: "pending_live_verification"
-    qrOrLinkTest: "pending for ui-20260831-01; local root/index/TH/EN/404/llms/sitemap/_ds HTTP and MIME checks passed"
-    verifiedArtifactCommit: null
-    verifiedArtifactTree: null
-    pagesBuildCommit: null
-    pagesBuildState: "pending"
-    pagesBuildDurationMs: null
-    pagesBuildUpdatedAt: null
-    liveByteAttestationAt: null
+    status: "published_live_verified"
+    qrOrLinkTest: "pass for ui-20260831-01: live root/index/TH/EN/404/llms/robots/sitemap/_ds returned expected status and MIME; an unknown route returned the branded HTTP 404"
+    verifiedArtifactCommit: "e1d47bbebf8e1be3404b1f9f90d62326ad59e081"
+    verifiedArtifactTree: "01f96b41950718e02a596a90d84e39dbe8607fb8"
+    pagesBuildCommit: "e1d47bbebf8e1be3404b1f9f90d62326ad59e081"
+    pagesBuildState: "built"
+    pagesBuildDurationMs: 21076
+    pagesBuildUpdatedAt: "2026-08-31T09:23:02Z"
+    liveByteAttestationAt: "2026-08-31T09:30:36Z"
     previousVerifiedRelease: "ui-20260830-11 artifact commit ce107609659acb7f49b804b4178fa4dd6d9ae863 with attestation commit fc3e7696f7c7e6a1491db03fd641ba43bd752b44; retained as history only"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
@@ -527,7 +527,7 @@ landometerBuild:
       receiptId: "rebuild02-ui-20260831-01"
       catalogOrContentVersion: "landometer-home-rebuild02-v12"
       issuedAt: "2026-08-31"
-      status: "candidate_local_verified"
+      status: "published_live_verified"
   privacy:
     personalData: true
     sensitivity: "public"
@@ -606,7 +606,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "candidate local source/HTTP pass for ui-20260831-01; installed headless Chrome rendered the new Thai H1 at 320, 390, 768 and 1440 with zero horizontal overflow and inside the hero. Unchanged CSS/JS/media interaction behavior retains ui-20260830-11 local/live baseline evidence. Root/index/TH/EN/404/llms/sitemap/_ds HTTP and MIME checks passed; current-candidate GitHub Pages and live-byte verification remain pending; the exhaustive SC-20 matrix remains open"
+    renderedBrowserGate: "live pass for ui-20260831-01: installed headless Chrome rendered TH and EN at 390x844 and 1440x900 with the expected title, H1, canonical, build receipt and JSON-LD, zero horizontal overflow and no first-party request failures; the branded missing route returned HTTP 404. Ten governed files matched GitHub Pages byte-for-byte. The exhaustive SC-20 matrix remains open"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"

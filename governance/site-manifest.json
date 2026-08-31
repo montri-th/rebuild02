@@ -12,7 +12,7 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_candidate_local_verified",
+    "evidenceStatus": "source_limited_live_verified",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
@@ -89,7 +89,7 @@
       "receiptId": "rebuild02-ui-20260831-01",
       "catalogOrContentVersion": "landometer-home-rebuild02-v12",
       "issuedAt": "2026-08-31",
-      "status": "candidate_local_verified"
+      "status": "published_live_verified"
     },
     "releaseFileHashes": [
       {"path": "index.html", "bytes": 6124, "sha256": "51d1f78c3d93fe79a859ce0b24514da2a4bd2f0b7ccdfd40cf7ec4ea4a57466b"},
@@ -368,16 +368,16 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "llms.txt navigation index", "branded noindex 404.html", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "candidate_local_verified_pending_live",
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "pending",
-    "pagesBuildId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending for ui-20260831-01",
-    "liveByteParity": "pending for ui-20260831-01",
+    "currentReleaseState": "published_live_verified",
+    "verifiedArtifactCommit": "e1d47bbebf8e1be3404b1f9f90d62326ad59e081",
+    "verifiedArtifactTree": "01f96b41950718e02a596a90d84e39dbe8607fb8",
+    "pagesBuildState": "built",
+    "pagesBuildId": 1185423885,
+    "pagesBuildDurationMs": 21076,
+    "pagesBuildUpdatedAt": "2026-08-31T09:23:02Z",
+    "verifiedAt": "2026-08-31T09:30:36Z",
+    "liveRouteEvidence": "pass: root/index/TH/EN/404/llms/robots/sitemap/_ds returned expected status and MIME; unknown route returned HTTP 404 with branded noindex recovery; nine browser/search/AI crawler user agents received the full 99406-byte Thai semantic HTML",
+    "liveByteParity": "pass: index, TH, EN, 404, llms, robots, sitemap, site.css, site.js and DS styles.css matched artifact SHA-256 byte-for-byte",
     "previousVerifiedRelease": {
       "artifactBuildId": "ui-20260830-11",
       "artifactCommit": "ce107609659acb7f49b804b4178fa4dd6d9ae863",
@@ -395,14 +395,14 @@
       "verified": "targeted pass for ui-20260830-11: all CTAs remained nowrap with zero button/page overflow and no Location CTA above 48 px; dark menu/topic hover resolved to color(srgb .244784 .393333 .443686) with light text; both rails stayed exclusively 0/3 or 3/3 revealed with no mixed logical group; real provider content loaded in dark and retained frame/TikTok state across dark-light-dark; Instagram had no fake blank tail; computed icon contracts passed"
     },
     "liveBrowserEvidence": {
-      "engine": "Codex in-app Chromium",
-      "verifiedAt": "2026-08-30T16:09:19Z",
+      "engine": "installed headless Chrome via Playwright",
+      "verifiedAt": "2026-08-31T09:30:36Z",
       "routes": [
-        "TH dark at 320x844 for Location Intelligence CTA fit and cyclic reveal parity",
-        "TH dark at 390x844 for all four provider surfaces and footer icon treatment",
-        "TH dark at 1440x900 for menu hover and dark-light-dark feed source retention"
+        "TH at 390x844 and 1440x900",
+        "EN at 390x844 and 1440x900",
+        "branded missing route at 390x844"
       ],
-      "verified": "pass for ui-20260830-11: the live build id matched; document overflow remained zero; all Location CTAs were nowrap with zero overflow and height at or below 44 px at 320; the dark CityWiki menu hover changed from transparent to color(srgb .244784 .393333 .443686) with light text; TikTok, Facebook, Instagram and LinkedIn provider surfaces loaded; iframe sources survived dark-light-dark; footer marks computed fill none; and every Location source/clone reveal group finished 3/3 after bidirectional boundary traversal"
+      "verified": "pass for ui-20260831-01: both locale routes returned HTTP 200 and exposed the expected localized title, H1, canonical URL, one JSON-LD block and build ui-20260831-01; each H1 stayed within the viewport, document overflow remained zero and no first-party request failed. The missing route returned HTTP 404 with the branded noindex recovery page. Unchanged interaction behavior retains the targeted ui-20260830-11 baseline evidence."
     }
   },
   "growth": {
@@ -429,7 +429,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "candidate local source/HTTP pass for ui-20260831-01; the new Thai H1 passed targeted 320/390/768/1440 render fit, while unchanged CSS/JS/media interaction behavior retains the ui-20260830-11 targeted rendered baseline. Current-candidate deployment and live-byte verification remain pending; the exhaustive SC-20 matrix remains open",
+    "renderedBrowserGate": "live pass for ui-20260831-01: TH and EN rendered at 390x844 and 1440x900 with expected title, H1, canonical, build receipt and JSON-LD, zero horizontal overflow and no first-party request failures; the branded missing route returned HTTP 404. Ten governed files matched production byte-for-byte. The exhaustive SC-20 matrix remains open",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {

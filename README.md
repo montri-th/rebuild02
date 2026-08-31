@@ -2,9 +2,10 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. Current artifact candidate:
-`ui-20260831-01` (local release gates passed; GitHub Pages publication and live-byte
-verification pending; machine validation pending).
+install, bundler, CI workflow, or build step. Current published artifact:
+`ui-20260831-01` (GitHub Pages build `1185423885`; artifact commit
+`e1d47bbebf8e1be3404b1f9f90d62326ad59e081`; live-byte verification passed;
+machine validation remains pending).
 
 | File | Purpose |
 |---|---|
@@ -133,10 +134,15 @@ suffixes are route contracts and must not be renamed.
 
 `machineValidation` remains `pending` and `conformanceLevel` remains
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
-validation language. Candidate release checks passed script syntax, diff hygiene,
+validation language. Release checks passed script syntax, diff hygiene,
 JSON-LD/JSON/YAML parsing, local resource existence, unique IDs and local HTTP/MIME checks
 for root, index, TH, EN, the branded 404, `llms.txt`, sitemap and the DS stylesheet. The
 new Thai primary H1 was rendered at 320, 390, 768 and 1440 px with zero horizontal
-overflow and remained inside the first-view hero. The preceding visual release
-`ui-20260830-11` remains the latest live-byte-attested baseline for unchanged interaction
-and media behavior until this candidate is deployed and checked against GitHub Pages.
+overflow and remained inside the first-view hero. GitHub Pages build `1185423885`
+published artifact commit `e1d47bb…`. Root, index, TH, EN, the branded 404,
+`llms.txt`, `robots.txt`, sitemap and DS CSS returned the expected live status and MIME;
+an unknown route returned the branded HTTP 404. Ten governed public files matched the
+artifact byte-for-byte. Live headless Chrome at 390×844 and 1440×900 loaded both locale
+pages with the expected title, H1, canonical, build receipt and JSON-LD, with no
+horizontal overflow or first-party request failure. The exhaustive SC-20 matrix and
+production accessibility audit remain open.
