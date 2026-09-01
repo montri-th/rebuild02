@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260831-01"
+      id: "ui-20260901-01"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -59,7 +59,7 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "source_limited_live_verified"
+    evidenceStatus: "source_limited_local_verified"
     authorizationSource: "ongoing user request explicitly includes publishing the new candidate after the current additions"
     visibility: "public"
     indexable: true
@@ -102,18 +102,18 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "live_verified"
+    readiness: "candidate_local_verified"
     publicSafe: true
-    status: "published_live_verified"
-    qrOrLinkTest: "pass for ui-20260831-01: live root/index/TH/EN/404/llms/robots/sitemap/_ds returned expected status and MIME; an unknown route returned the branded HTTP 404"
-    verifiedArtifactCommit: "e1d47bbebf8e1be3404b1f9f90d62326ad59e081"
-    verifiedArtifactTree: "01f96b41950718e02a596a90d84e39dbe8607fb8"
-    pagesBuildCommit: "e1d47bbebf8e1be3404b1f9f90d62326ad59e081"
-    pagesBuildState: "built"
-    pagesBuildDurationMs: 21076
-    pagesBuildUpdatedAt: "2026-08-31T09:23:02Z"
-    liveByteAttestationAt: "2026-08-31T09:30:36Z"
-    previousVerifiedRelease: "ui-20260830-11 artifact commit ce107609659acb7f49b804b4178fa4dd6d9ae863 with attestation commit fc3e7696f7c7e6a1491db03fd641ba43bd752b44; retained as history only"
+    status: "candidate_local_verified"
+    qrOrLinkTest: "pending for ui-20260901-01; previous ui-20260831-01 live evidence is retained as history only"
+    verifiedArtifactCommit: ""
+    verifiedArtifactTree: ""
+    pagesBuildCommit: ""
+    pagesBuildState: "pending"
+    pagesBuildDurationMs: 0
+    pagesBuildUpdatedAt: ""
+    liveByteAttestationAt: ""
+    previousVerifiedRelease: "ui-20260831-01 artifact commit e1d47bbebf8e1be3404b1f9f90d62326ad59e081 with attestation commit da46a8b8f51b8b41de8dd82f455821bbcb9a676e; retained as history only"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -158,7 +158,7 @@ landometerBuild:
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild02.ui-20260831-01"
+    channelParityKey: "landometer.home.rebuild02.ui-20260901-01"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -420,7 +420,7 @@ landometerBuild:
     securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260831-01"
+    artifactBuildId: "ui-20260901-01"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -452,24 +452,24 @@ landometerBuild:
         sha256: "bbcc034717d243cd5a3653dd1169cec00e8f11f289c20ef949078db24dc680f5"
       - channel: "hosted_th"
         path: "Landometer-Home-TH.dc.html"
-        bytes: 99406
-        sha256: "4e15a809bee6a42ede8f44abcb1a8d97be5713027a81fdc531833d33bfcac45a"
+        bytes: 99303
+        sha256: "5e61609b5ae0e1d5a4ab38d3a0b237f75a8a120fbd41432e1ede5e5e8672f65a"
       - channel: "hosted_en"
         path: "Landometer-Home-EN.dc.html"
         bytes: 81900
-        sha256: "01a2207a8f8faa860300c14b81f683290e55551d6690851875f9ea79361ff70d"
+        sha256: "f948064f73c7ea0b4d5593210793dba0f80faa211a8ae251e42a11b09d7c8793"
       - channel: "redirect_alias"
         path: "index.html"
         bytes: 6124
-        sha256: "51d1f78c3d93fe79a859ce0b24514da2a4bd2f0b7ccdfd40cf7ec4ea4a57466b"
+        sha256: "5305f6531d97742b275775435d400c2d8c099fb5934bec58f24bda27c0a86374"
       - channel: "branded_not_found"
         path: "404.html"
         bytes: 4556
-        sha256: "785384df34647567f91d78d7eb978daa39ab7e11a50c910c23d1935dc6b16adc"
+        sha256: "29cf3bdba08988784aa0a57c7ba7d6deaa5c5bf2292e37e2b06ffea00384a101"
       - channel: "agent_navigation_index"
         path: "llms.txt"
         bytes: 2083
-        sha256: "b37f208dc0e0fd1012f7aadcb955dc99ec0cfefef7378b88cc7c88fefc2b95ab"
+        sha256: "f405b1e4c4d4ab4663edbf13787efabe410ae9a7dffbb962ddda127e0eb54df7"
       - channel: "project_crawler_policy"
         path: "robots.txt"
         bytes: 83
@@ -477,7 +477,7 @@ landometerBuild:
       - channel: "sitemap"
         path: "sitemap.xml"
         bytes: 1149
-        sha256: "6c38223bb89e117d07b6ee4b8c7b8c76e3881ed8dc56e1b217f5445d70fd29b0"
+        sha256: "cb2a59f39925d566a33b5cc902e66d9b737fc4c6ab289000f822b4ed000ba581"
       - channel: "site_css"
         path: "site.css"
         bytes: 57273
@@ -524,21 +524,21 @@ landometerBuild:
         sha256: "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild02-ui-20260831-01"
-      catalogOrContentVersion: "landometer-home-rebuild02-v12"
-      issuedAt: "2026-08-31"
-      status: "published_live_verified"
+      receiptId: "rebuild02-ui-20260901-01"
+      catalogOrContentVersion: "landometer-home-rebuild02-v13"
+      issuedAt: "2026-09-01"
+      status: "candidate_local_verified"
   privacy:
     personalData: true
     sensitivity: "public"
     redactedPublicProjection: false
     governanceRecord:
-      id: "privacy-direct-inquiry-ui-20260831-01"
+      id: "privacy-direct-inquiry-ui-20260901-01"
       owner: "Montri (Landometer), per Rebuild02 work order"
       collectionBasisAndMinimumFields: "After explicit submit, the form sends topic, name, email, phone, and message; name, email, phone, and message are required."
       accessAndRetentionDeletion: "The first-party production inquiry backend owns access, retention, and deletion; those backend rules are not documented in this static repository."
       redactionAndExportRules: "Only the five visible/selected form values are posted; no telemetry or hidden visitor context is added."
-      reviewStatusAndDate: "source-reviewed 2026-08-31; prior CORS preflight retained; production POST/inbox receipt not performed"
+      reviewStatusAndDate: "source-reviewed 2026-09-01; prior CORS preflight retained; production POST/inbox receipt not performed"
       mediaReceipt: "governance/media-receipt.json"
       collectionMode: "user-supplied local contact form"
       minimumFields: "name, email, phone, and message required; topic always selected by the custom listbox"
@@ -606,7 +606,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "live pass for ui-20260831-01: installed headless Chrome rendered TH and EN at 390x844 and 1440x900 with the expected title, H1, canonical, build receipt and JSON-LD, zero horizontal overflow and no first-party request failures; the branded missing route returned HTTP 404. Ten governed files matched GitHub Pages byte-for-byte. The exhaustive SC-20 matrix remains open"
+    renderedBrowserGate: "local pass for ui-20260901-01: installed headless Chrome rendered the restored English North Star on the Thai route at 320x568, 390x844, 768x1024 and 1440x900 with lang=en, computed Arvo 700, zero horizontal overflow and full hero containment; live publication and byte parity remain pending. The exhaustive SC-20 matrix remains open"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"

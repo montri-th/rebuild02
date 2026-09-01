@@ -12,14 +12,14 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_live_verified",
+    "evidenceStatus": "source_limited_local_verified",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260831-01"
+    "artifactBuildId": "ui-20260901-01"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260831-01",
+      "id": "ui-20260901-01",
       "path": "governance/site-manifest.json"
     }
   },
@@ -72,7 +72,7 @@
     "telemetry": false,
     "thirdPartyRenderingRuntime": "lazy near-viewport activation in both themes; DS-owned shells follow the selected theme while cross-origin provider internals retain provider styling",
     "staticInitialHtml": true,
-    "discoveryHardening": "intent-bearing bilingual titles and Thai primary H1; root metadata parity with no redirect-shell JSON-LD; stable owned-domain Organization identity tied to visible company facts on canonical locale pages; branded 404; navigation-only llms.txt; project-path hostname-root limitation recorded"
+    "discoveryHardening": "intent-bearing bilingual titles with the owner-approved English North Star as H1 in both locales; Thai-route H1 carries lang=en and resolves to Arvo while Thai intent remains in visible supporting copy and metadata; root metadata parity with no redirect-shell JSON-LD; stable owned-domain Organization identity tied to visible company facts on canonical locale pages; branded 404; navigation-only llms.txt; project-path hostname-root limitation recorded"
   },
   "security": {
     "securityBaselineRef": "first_party_public_inquiry_api",
@@ -84,21 +84,21 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260831-01",
+    "artifactBuildId": "ui-20260901-01",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260831-01",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v12",
-      "issuedAt": "2026-08-31",
-      "status": "published_live_verified"
+      "receiptId": "rebuild02-ui-20260901-01",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v13",
+      "issuedAt": "2026-09-01",
+      "status": "candidate_local_verified"
     },
     "releaseFileHashes": [
-      {"path": "index.html", "bytes": 6124, "sha256": "51d1f78c3d93fe79a859ce0b24514da2a4bd2f0b7ccdfd40cf7ec4ea4a57466b"},
-      {"path": "Landometer-Home-TH.dc.html", "bytes": 99406, "sha256": "4e15a809bee6a42ede8f44abcb1a8d97be5713027a81fdc531833d33bfcac45a"},
-      {"path": "Landometer-Home-EN.dc.html", "bytes": 81900, "sha256": "01a2207a8f8faa860300c14b81f683290e55551d6690851875f9ea79361ff70d"},
-      {"path": "404.html", "bytes": 4556, "sha256": "785384df34647567f91d78d7eb978daa39ab7e11a50c910c23d1935dc6b16adc"},
-      {"path": "llms.txt", "bytes": 2083, "sha256": "b37f208dc0e0fd1012f7aadcb955dc99ec0cfefef7378b88cc7c88fefc2b95ab"},
+      {"path": "index.html", "bytes": 6124, "sha256": "5305f6531d97742b275775435d400c2d8c099fb5934bec58f24bda27c0a86374"},
+      {"path": "Landometer-Home-TH.dc.html", "bytes": 99303, "sha256": "5e61609b5ae0e1d5a4ab38d3a0b237f75a8a120fbd41432e1ede5e5e8672f65a"},
+      {"path": "Landometer-Home-EN.dc.html", "bytes": 81900, "sha256": "f948064f73c7ea0b4d5593210793dba0f80faa211a8ae251e42a11b09d7c8793"},
+      {"path": "404.html", "bytes": 4556, "sha256": "29cf3bdba08988784aa0a57c7ba7d6deaa5c5bf2292e37e2b06ffea00384a101"},
+      {"path": "llms.txt", "bytes": 2083, "sha256": "f405b1e4c4d4ab4663edbf13787efabe410ae9a7dffbb962ddda127e0eb54df7"},
       {"path": "robots.txt", "bytes": 83, "sha256": "a830d2c121000ba9c2abad1fc1a76a29edffce2f6d6f57c8970f72efb09b601f"},
-      {"path": "sitemap.xml", "bytes": 1149, "sha256": "6c38223bb89e117d07b6ee4b8c7b8c76e3881ed8dc56e1b217f5445d70fd29b0"}
+      {"path": "sitemap.xml", "bytes": 1149, "sha256": "cb2a59f39925d566a33b5cc902e66d9b737fc4c6ab289000f822b4ed000ba581"}
     ]
   },
   "network": {
@@ -368,24 +368,24 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "llms.txt navigation index", "branded noindex 404.html", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "published_live_verified",
-    "verifiedArtifactCommit": "e1d47bbebf8e1be3404b1f9f90d62326ad59e081",
-    "verifiedArtifactTree": "01f96b41950718e02a596a90d84e39dbe8607fb8",
-    "pagesBuildState": "built",
-    "pagesBuildId": 1185423885,
-    "pagesBuildDurationMs": 21076,
-    "pagesBuildUpdatedAt": "2026-08-31T09:23:02Z",
-    "verifiedAt": "2026-08-31T09:30:36Z",
-    "liveRouteEvidence": "pass: root/index/TH/EN/404/llms/robots/sitemap/_ds returned expected status and MIME; unknown route returned HTTP 404 with branded noindex recovery; nine browser/search/AI crawler user agents received the full 99406-byte Thai semantic HTML",
-    "liveByteParity": "pass: index, TH, EN, 404, llms, robots, sitemap, site.css, site.js and DS styles.css matched artifact SHA-256 byte-for-byte",
+    "currentReleaseState": "candidate_local_verified",
+    "verifiedArtifactCommit": null,
+    "verifiedArtifactTree": null,
+    "pagesBuildState": "pending",
+    "pagesBuildId": null,
+    "pagesBuildDurationMs": null,
+    "pagesBuildUpdatedAt": null,
+    "verifiedAt": null,
+    "liveRouteEvidence": "pending for ui-20260901-01; previous ui-20260831-01 evidence retained as history only",
+    "liveByteParity": "pending for ui-20260901-01; previous ui-20260831-01 evidence retained as history only",
     "previousVerifiedRelease": {
-      "artifactBuildId": "ui-20260830-11",
-      "artifactCommit": "ce107609659acb7f49b804b4178fa4dd6d9ae863",
-      "attestationCommit": "fc3e7696f7c7e6a1491db03fd641ba43bd752b44",
-      "pagesBuildId": 6168455185,
-      "scope": "historical evidence only; does not attest ui-20260831-01"
+      "artifactBuildId": "ui-20260831-01",
+      "artifactCommit": "e1d47bbebf8e1be3404b1f9f90d62326ad59e081",
+      "attestationCommit": "da46a8b8f51b8b41de8dd82f455821bbcb9a676e",
+      "pagesBuildId": 1185423885,
+      "scope": "historical evidence only; does not attest ui-20260901-01"
     },
-    "candidateLocalEvidence": "pass: ui-20260831-01 script syntax, diff hygiene, JSON-LD/JSON/YAML parsing, unique IDs and local HTTP/MIME for root/index/TH/EN/404/llms/sitemap/_ds; installed headless Chrome rendered the new Thai H1 at 320/390/768/1440 with zero horizontal overflow and inside the hero; no CSS/JS or governed media bytes changed",
+    "candidateLocalEvidence": "pass: ui-20260901-01 script syntax, diff hygiene, JSON-LD/JSON/YAML parsing, unique IDs and local HTTP/MIME for root/index/TH/EN/404/llms/sitemap/_ds; installed headless Chrome rendered the exact owner-approved English North Star on the Thai route at 320/390/768/1440 with lang=en, computed Arvo 700, zero horizontal overflow and full hero containment; no CSS/JS or governed media bytes changed",
     "localBrowserEvidence": {
       "matrix": [
         "EN and TH at widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440",
@@ -396,13 +396,13 @@
     },
     "liveBrowserEvidence": {
       "engine": "installed headless Chrome via Playwright",
-      "verifiedAt": "2026-08-31T09:30:36Z",
+      "verifiedAt": null,
       "routes": [
         "TH at 390x844 and 1440x900",
         "EN at 390x844 and 1440x900",
         "branded missing route at 390x844"
       ],
-      "verified": "pass for ui-20260831-01: both locale routes returned HTTP 200 and exposed the expected localized title, H1, canonical URL, one JSON-LD block and build ui-20260831-01; each H1 stayed within the viewport, document overflow remained zero and no first-party request failed. The missing route returned HTTP 404 with the branded noindex recovery page. Unchanged interaction behavior retains the targeted ui-20260830-11 baseline evidence."
+      "verified": "pending for ui-20260901-01; local headless Chrome passed the restored Thai-route H1 at 320/390/768/1440 with lang=en, computed Arvo 700, zero horizontal overflow and full hero containment. Unchanged interaction behavior retains the targeted ui-20260830-11 baseline evidence."
     }
   },
   "growth": {
@@ -429,7 +429,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "live pass for ui-20260831-01: TH and EN rendered at 390x844 and 1440x900 with expected title, H1, canonical, build receipt and JSON-LD, zero horizontal overflow and no first-party request failures; the branded missing route returned HTTP 404. Ten governed files matched production byte-for-byte. The exhaustive SC-20 matrix remains open",
+    "renderedBrowserGate": "local pass for ui-20260901-01: the restored English North Star rendered on the Thai route at 320x568, 390x844, 768x1024 and 1440x900 with lang=en, computed Arvo 700, zero horizontal overflow and full hero containment; live publication and byte parity remain pending. The exhaustive SC-20 matrix remains open",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {

@@ -2,9 +2,8 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. Current published artifact:
-`ui-20260831-01` (GitHub Pages build `1185423885`; artifact commit
-`e1d47bbebf8e1be3404b1f9f90d62326ad59e081`; live-byte verification passed;
+install, bundler, CI workflow, or build step. Current corrective candidate:
+`ui-20260901-01` (locally verified; publication and live-byte attestation pending;
 machine validation remains pending).
 
 | File | Purpose |
@@ -113,7 +112,10 @@ machine validation remains pending).
   ItemList for the five products and tailored service route. The root redirect shell now
   mirrors the Thai canonical metadata and offers substantive fallback navigation. The
   project also publishes a branded `404.html` and navigation-only `llms.txt`; neither is
-  represented as a ranking guarantee or agent authority. Project-path `robots.txt` and
+  represented as a ranking guarantee or agent authority. The owner-approved English
+  North Star remains the primary H1 in both locales and explicitly carries `lang="en"`;
+  Thai intent remains visible in the Thai eyebrow, subheadline and description as well as
+  in metadata. Project-path `robots.txt` and
   `sitemap.xml` remain useful files but cannot govern the `montri-th.github.io` hostname
   root. Release dates change only when Rebuild02 content actually changes.
 - The contact form sends JSON directly to Landometer's public inquiry API. The office
@@ -137,12 +139,8 @@ suffixes are route contracts and must not be renamed.
 validation language. Release checks passed script syntax, diff hygiene,
 JSON-LD/JSON/YAML parsing, local resource existence, unique IDs and local HTTP/MIME checks
 for root, index, TH, EN, the branded 404, `llms.txt`, sitemap and the DS stylesheet. The
-new Thai primary H1 was rendered at 320, 390, 768 and 1440 px with zero horizontal
-overflow and remained inside the first-view hero. GitHub Pages build `1185423885`
-published artifact commit `e1d47bb…`. Root, index, TH, EN, the branded 404,
-`llms.txt`, `robots.txt`, sitemap and DS CSS returned the expected live status and MIME;
-an unknown route returned the branded HTTP 404. Ten governed public files matched the
-artifact byte-for-byte. Live headless Chrome at 390×844 and 1440×900 loaded both locale
-pages with the expected title, H1, canonical, build receipt and JSON-LD, with no
-horizontal overflow or first-party request failure. The exhaustive SC-20 matrix and
-production accessibility audit remain open.
+corrective Thai hero was rendered at 320, 390, 768 and 1440 px with the exact
+owner-approved English H1, `lang="en"`, computed Arvo 700, zero horizontal overflow and
+full containment inside the first-view hero. Publication and live-byte checks for
+`ui-20260901-01` remain pending. CSS, JavaScript and governed media bytes are unchanged.
+The exhaustive SC-20 matrix and production accessibility audit remain open.

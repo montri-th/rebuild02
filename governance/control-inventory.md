@@ -1,6 +1,6 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260831-01` published and live-byte verified
+Artifact build: `ui-20260901-01` corrective candidate locally verified; publication pending
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
@@ -50,9 +50,11 @@ Source and rendered assertions:
   `mailto:hello@landometer.com` after explicit visitor action.
 - The contact API accepted the GitHub Pages origin in a 2026-08-29 CORS preflight and
   rejected GET with 405. No production POST or inbox receipt is claimed in this source audit.
-- Root, Thai and English page metadata now use explicit city-data and Location Intelligence
-  intent, and the Thai page carries a Thai primary H1 while retaining the English brand
-  line as secondary copy. The canonical locale pages retain static semantic HTML, canonical/hreflang,
+- Root, Thai and English page metadata use explicit city-data and Location Intelligence
+  intent. The owner-approved English North Star is the primary H1 on both locale pages;
+  the Thai-route H1 carries `lang="en"` and resolves to Arvo, while Thai search intent
+  remains in the Thai metadata, eyebrow, subheadline and description. The canonical
+  locale pages retain static semantic HTML, canonical/hreflang,
   social metadata and evidence-bound JSON-LD. Organization, WebSite and WebPage nodes use
   one stable official-organization identifier and only identity, address, contact and page
   facts that are visible in the public artifact. No Product, Offer, Dataset, price, rating
@@ -126,15 +128,13 @@ Source and rendered assertions:
   and type. At widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440, local QA
   found all computed nowrap, zero `.btn` overflow, no Location CTA above 48 px and no page
   overflow.
-- Release `ui-20260831-01` passed `node --check`, `git diff --check`,
+- Corrective candidate `ui-20260901-01` passed `node --check`, `git diff --check`,
   JSON-LD/JSON/YAML parsing, resource existence and unique HTML IDs. Root, index, TH, EN and
   404 returned HTTP 200 `text/html`; `llms.txt` returned `text/plain`, the sitemap returned
   `application/xml`, and the DS stylesheet returned `text/css`. Installed headless Chrome
-  rendered the new Thai H1 at 320/390/768/1440 with zero horizontal overflow and inside the
-  first-view hero. GitHub Pages build `1185423885` published artifact commit
-  `e1d47bbebf8e1be3404b1f9f90d62326ad59e081` (tree `01f96b4…`). Live route/MIME,
-  branded HTTP 404, nine crawler-user-agent, ten-file SHA-256 parity and TH/EN Chrome
-  checks at 390/1440 passed with no horizontal overflow or first-party request failure.
+  rendered the restored English North Star on the Thai route at 320/390/768/1440 with
+  `lang="en"`, computed Arvo 700, zero horizontal overflow and full containment inside the
+  first-view hero. Publication, live route/MIME and live-byte checks are pending.
   CSS, JavaScript and governed media bytes remain unchanged from the targeted interaction
   baseline `ui-20260830-11`; the exhaustive SC-20 matrix remains open.
 - Products and Services exposes five product paths with consistent capsule conversation
