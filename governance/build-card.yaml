@@ -59,7 +59,7 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "source_limited_local_verified"
+    evidenceStatus: "source_limited_live_verified"
     authorizationSource: "ongoing user request explicitly includes publishing the new candidate after the current additions"
     visibility: "public"
     indexable: true
@@ -102,17 +102,19 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "candidate_local_verified"
+    readiness: "live_verified"
     publicSafe: true
-    status: "candidate_local_verified"
-    qrOrLinkTest: "pending for ui-20260901-01; previous ui-20260831-01 live evidence is retained as history only"
-    verifiedArtifactCommit: ""
-    verifiedArtifactTree: ""
-    pagesBuildCommit: ""
-    pagesBuildState: "pending"
-    pagesBuildDurationMs: 0
-    pagesBuildUpdatedAt: ""
-    liveByteAttestationAt: ""
+    status: "published_live_verified"
+    qrOrLinkTest: "pass for ui-20260901-01: live root/index/TH/EN/404/llms/robots/sitemap/_ds returned expected status and MIME; an unknown route returned the branded HTTP 404"
+    verifiedArtifactCommit: "f384da3b7d91087598c99f738e97633bd23c6bb1"
+    verifiedArtifactTree: "956b6009c926950e065c0bfe9aab638f12753b56"
+    pagesBuildCommit: "f384da3b7d91087598c99f738e97633bd23c6bb1"
+    pagesBuildState: "built"
+    pagesBuildId: 1188237884
+    pagesWorkflowRunId: 33535403331
+    pagesBuildDurationMs: 164987
+    pagesBuildUpdatedAt: "2026-09-01T17:05:06Z"
+    liveByteAttestationAt: "2026-09-01T17:09:31Z"
     previousVerifiedRelease: "ui-20260831-01 artifact commit e1d47bbebf8e1be3404b1f9f90d62326ad59e081 with attestation commit da46a8b8f51b8b41de8dd82f455821bbcb9a676e; retained as history only"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
@@ -527,7 +529,7 @@ landometerBuild:
       receiptId: "rebuild02-ui-20260901-01"
       catalogOrContentVersion: "landometer-home-rebuild02-v13"
       issuedAt: "2026-09-01"
-      status: "candidate_local_verified"
+      status: "published_live_verified"
   privacy:
     personalData: true
     sensitivity: "public"
@@ -606,7 +608,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "local pass for ui-20260901-01: installed headless Chrome rendered the restored English North Star on the Thai route at 320x568, 390x844, 768x1024 and 1440x900 with lang=en, computed Arvo 700, zero horizontal overflow and full hero containment; live publication and byte parity remain pending. The exhaustive SC-20 matrix remains open"
+    renderedBrowserGate: "live pass for ui-20260901-01: installed headless Chrome rendered TH and EN at 390x844 and 1440x900 with the expected title, exact approved H1, canonical, build and JSON-LD, zero horizontal overflow and no first-party request failures; the Thai-route H1 carried lang=en and computed to Arvo 700; the branded missing route returned HTTP 404. Ten governed files matched GitHub Pages byte-for-byte. The exhaustive SC-20 matrix remains open"
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"

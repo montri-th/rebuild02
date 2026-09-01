@@ -12,7 +12,7 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_local_verified",
+    "evidenceStatus": "source_limited_live_verified",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
@@ -89,7 +89,7 @@
       "receiptId": "rebuild02-ui-20260901-01",
       "catalogOrContentVersion": "landometer-home-rebuild02-v13",
       "issuedAt": "2026-09-01",
-      "status": "candidate_local_verified"
+      "status": "published_live_verified"
     },
     "releaseFileHashes": [
       {"path": "index.html", "bytes": 6124, "sha256": "5305f6531d97742b275775435d400c2d8c099fb5934bec58f24bda27c0a86374"},
@@ -368,16 +368,17 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "llms.txt navigation index", "branded noindex 404.html", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "candidate_local_verified",
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "pending",
-    "pagesBuildId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending for ui-20260901-01; previous ui-20260831-01 evidence retained as history only",
-    "liveByteParity": "pending for ui-20260901-01; previous ui-20260831-01 evidence retained as history only",
+    "currentReleaseState": "published_live_verified",
+    "verifiedArtifactCommit": "f384da3b7d91087598c99f738e97633bd23c6bb1",
+    "verifiedArtifactTree": "956b6009c926950e065c0bfe9aab638f12753b56",
+    "pagesBuildState": "built",
+    "pagesBuildId": 1188237884,
+    "pagesWorkflowRunId": 33535403331,
+    "pagesBuildDurationMs": 164987,
+    "pagesBuildUpdatedAt": "2026-09-01T17:05:06Z",
+    "verifiedAt": "2026-09-01T17:09:31Z",
+    "liveRouteEvidence": "pass: root/index/TH/EN/404/llms/robots/sitemap/_ds returned expected status and MIME; unknown route returned HTTP 404 with branded noindex recovery",
+    "liveByteParity": "pass: index, TH, EN, 404, llms, robots, sitemap, site.css, site.js and DS styles.css matched artifact SHA-256 byte-for-byte",
     "previousVerifiedRelease": {
       "artifactBuildId": "ui-20260831-01",
       "artifactCommit": "e1d47bbebf8e1be3404b1f9f90d62326ad59e081",
@@ -396,13 +397,13 @@
     },
     "liveBrowserEvidence": {
       "engine": "installed headless Chrome via Playwright",
-      "verifiedAt": null,
+      "verifiedAt": "2026-09-01T17:09:31Z",
       "routes": [
         "TH at 390x844 and 1440x900",
         "EN at 390x844 and 1440x900",
         "branded missing route at 390x844"
       ],
-      "verified": "pending for ui-20260901-01; local headless Chrome passed the restored Thai-route H1 at 320/390/768/1440 with lang=en, computed Arvo 700, zero horizontal overflow and full hero containment. Unchanged interaction behavior retains the targeted ui-20260830-11 baseline evidence."
+      "verified": "pass for ui-20260901-01: both locale routes returned HTTP 200 and exposed the expected localized title, exact approved H1, canonical URL, one JSON-LD block and build ui-20260901-01; the Thai-route H1 carried lang=en and computed to Arvo 700; each H1 stayed within the viewport, document overflow remained zero and no first-party request failed. The missing route returned HTTP 404 with the branded noindex recovery page. Unchanged interaction behavior retains the targeted ui-20260830-11 baseline evidence."
     }
   },
   "growth": {
@@ -429,7 +430,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "local pass for ui-20260901-01: the restored English North Star rendered on the Thai route at 320x568, 390x844, 768x1024 and 1440x900 with lang=en, computed Arvo 700, zero horizontal overflow and full hero containment; live publication and byte parity remain pending. The exhaustive SC-20 matrix remains open",
+    "renderedBrowserGate": "live pass for ui-20260901-01: TH and EN rendered at 390x844 and 1440x900 with expected title, exact approved H1, canonical, build and JSON-LD, zero horizontal overflow and no first-party request failures; the Thai-route H1 carried lang=en and computed to Arvo 700; the branded missing route returned HTTP 404. Ten governed files matched production byte-for-byte. The exhaustive SC-20 matrix remains open",
     "productionAccessibilityGate": "open"
   },
   "selfCheck": {

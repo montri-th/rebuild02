@@ -2,8 +2,9 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. Current corrective candidate:
-`ui-20260901-01` (locally verified; publication and live-byte attestation pending;
+install, bundler, CI workflow, or build step. Current published artifact:
+`ui-20260901-01` (GitHub Pages build `1188237884`; artifact commit
+`f384da3b7d91087598c99f738e97633bd23c6bb1`; live-byte verification passed;
 machine validation remains pending).
 
 | File | Purpose |
@@ -141,6 +142,8 @@ JSON-LD/JSON/YAML parsing, local resource existence, unique IDs and local HTTP/M
 for root, index, TH, EN, the branded 404, `llms.txt`, sitemap and the DS stylesheet. The
 corrective Thai hero was rendered at 320, 390, 768 and 1440 px with the exact
 owner-approved English H1, `lang="en"`, computed Arvo 700, zero horizontal overflow and
-full containment inside the first-view hero. Publication and live-byte checks for
-`ui-20260901-01` remain pending. CSS, JavaScript and governed media bytes are unchanged.
-The exhaustive SC-20 matrix and production accessibility audit remain open.
+full containment inside the first-view hero. GitHub Pages build `1188237884` published
+artifact commit `f384da3…`; live route/MIME, branded 404, ten-file byte parity and
+TH/EN browser checks at 390/1440 passed without overflow or first-party failures. CSS,
+JavaScript and governed media bytes are unchanged. The exhaustive SC-20 matrix and
+production accessibility audit remain open.

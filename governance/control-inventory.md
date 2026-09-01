@@ -1,6 +1,6 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260901-01` corrective candidate locally verified; publication pending
+Artifact build: `ui-20260901-01` published and live-byte verified
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
@@ -128,13 +128,16 @@ Source and rendered assertions:
   and type. At widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440, local QA
   found all computed nowrap, zero `.btn` overflow, no Location CTA above 48 px and no page
   overflow.
-- Corrective candidate `ui-20260901-01` passed `node --check`, `git diff --check`,
+- Corrective release `ui-20260901-01` passed `node --check`, `git diff --check`,
   JSON-LD/JSON/YAML parsing, resource existence and unique HTML IDs. Root, index, TH, EN and
   404 returned HTTP 200 `text/html`; `llms.txt` returned `text/plain`, the sitemap returned
   `application/xml`, and the DS stylesheet returned `text/css`. Installed headless Chrome
   rendered the restored English North Star on the Thai route at 320/390/768/1440 with
   `lang="en"`, computed Arvo 700, zero horizontal overflow and full containment inside the
-  first-view hero. Publication, live route/MIME and live-byte checks are pending.
+  first-view hero. GitHub Pages build `1188237884` published artifact commit
+  `f384da3b7d91087598c99f738e97633bd23c6bb1` (tree `956b600…`). Live route/MIME,
+  branded HTTP 404, ten-file SHA-256 parity and TH/EN Chrome checks at 390/1440 passed
+  with no horizontal overflow or first-party request failure.
   CSS, JavaScript and governed media bytes remain unchanged from the targeted interaction
   baseline `ui-20260830-11`; the exhaustive SC-20 matrix remains open.
 - Products and Services exposes five product paths with consistent capsule conversation
