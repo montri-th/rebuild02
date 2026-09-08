@@ -2,10 +2,11 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. Current published artifact:
-`ui-20260901-01` (GitHub Pages build `1188237884`; artifact commit
-`f384da3b7d91087598c99f738e97633bd23c6bb1`; live-byte verification passed;
-machine validation remains pending).
+install, bundler, CI workflow, or build step. Current candidate:
+`ui-20260908-01` (`rebuild02-ui-20260908-01`; local settled-byte browser regression and
+all three private Drive handoff readbacks passed; publication and live verification remain
+pending; machine validation remains pending). The immediately
+previous live-verified artifact is `ui-20260901-01` and does not attest this candidate.
 
 | File | Purpose |
 |---|---|
@@ -17,8 +18,8 @@ machine validation remains pending).
 | `robots.txt`, `sitemap.xml` | Project-path crawler and canonical locale discovery files |
 | `_ds/landometer-design-system-…/` | DS tokens, base CSS, and self-hosted webfonts |
 | `site.css`, `site.js` | Responsive presentation and progressive enhancement |
-| `assets/` | Responsive media, identity, testimonials, and icon font |
-| `governance/` | Build Card, manifest, control inventory, and QA receipts |
+| `assets/` | Responsive media, identity, testimonials, icon font, and version-pinned Landometer/CityChat/ijji motif assets |
+| `governance/` | Build Card, manifest, control inventory, QA receipts, and `motif-integration.json` Drive/handoff boundary |
 
 ## Current experience
 
@@ -26,23 +27,26 @@ machine validation remains pending).
   wordmark directly on the surface. It contracts through a 50% scale of the complete
   navigation row to a 29 px desktop / 27 px mobile calm state while a visitor scrolls
   down, then returns to full prominence on upward scroll, focus, hover, or menu use. The
-  desktop and in-menu sign-in CTA retain their real capsule action beneath a repeating
-  text sweep. Reduced motion keeps the navbar prominent and removes the loop. Theme and
-  locale utilities remain 44 px circles. Dark-theme menu, utility, menu-toggle and
+  desktop and in-menu sign-in CTA retain their real capsule action beneath one finite
+  3.7-second sweep and 1.09-second flick. Reduced motion and the page motion control
+  suppress that overlay. Motion, theme, and locale utilities remain 44 px circles. Dark-theme menu, utility, menu-toggle and
   topic-option hover/focus states now mix a stronger accent tint into the raised surface;
   selected states remain quieter and no accent rail is introduced. Local computed-state
   QA confirmed the dark hover surface changes from transparent to
   `color(srgb .244784 .393333 .443686)` while retaining light text.
 - The hero fills the first viewport beneath the 76 px desktop / 68 px mobile header.
-  Its photograph pans slowly within its crop, alternates direction, and becomes static
-  when reduced motion is requested. Its section link is a single underlined text action
-  with a downward arrow.
+  Its photograph is static. A product-neutral Landometer `dial.quiet` orientation motif
+  runs once for 1.26 seconds, has an exact SVG fallback, and never replays, loops, or
+  receives parallax. The section link remains a single underlined text action with a
+  downward arrow.
 - The approved page-reveal motion remains unchanged: grouped, once-only entrances with
   32 px vertical or 36 px directional travel, 760/920 ms timing, and a 150 ms stagger
   capped at 450 ms. Reduced motion presents the final state immediately.
 - The Living video is a 14.8-second, silent, metadata-stripped portrait excerpt. It is
   attached only near the viewport, then plays muted, inline, and looping without
-  controls. Responsive 4:3 and 4:5 crops keep faces and surrounding street life in view.
+  native controls. Reduced motion keeps the poster, and the visible page motion action
+  pauses/resumes playback. Responsive 4:3 and 4:5 crops keep faces and surrounding street
+  life in view.
 - The CityMETER Business Dynamics hero uses a current, same-composition 16:9 capture
   with 960, 1600, and 2560 px AVIF/WebP sources. The Land pillar and the land-appraisal,
   building and flood tiles use fresh responsive r5 captures; the fourth tile is a
@@ -75,9 +79,14 @@ machine validation remains pending).
   Landometer Arvo wordmark and names CityMETER in a separate heading. CityWiki pairs the
   symbol with its Arvo product wordmark, while land/property tools keeps the shared lockup
   geometry. The CityWiki frame carries linked CC BY 2.0 attribution, and Property Tax
-  Simulator is visibly identified as a legacy asset. CityChat and ijji
-  retain exact official identity assets, while CityChat uses a complete fixed-light
-  contrast contract without a filled Brand Blue action. Projects and partnerships is
+  Simulator is visibly identified as a legacy asset. CityChat uses the owner-approved 3a
+  “เสียงบ้านเรา” light motif on exact `#FCFCFA`, while its governed official lockup stays
+  static. ijji uses the verified r3 mark-only 6.4-second logo sting on Brand Blue and keeps
+  the exact still visible until all nine layers load and decode or whenever a dependency
+  fails. Both product-specific treatments run once, never replay or parallax, and are not
+  generalized into Landometer capability. The earlier CityChat/ijji photographs and the
+  historical ijji compact PNG remain committed but are not rendered. CityChat retains its
+  complete fixed-light contrast contract without a filled Brand Blue action. Projects and partnerships is
   separated as a tailored service route. Product-specific claims remain inside their
   own cards rather than being generalized across Landometer. The CityMETER card restores
   the responsive 960/1600 AVIF/WebP Business Dynamics family; the automotive market-share
@@ -98,12 +107,12 @@ machine validation remains pending).
   `rgb(32, 41, 45)` and the dark embed surround resolved to `rgb(43, 53, 52)`. The 390 px
   Instagram frame/card measured 436/499 px with 57 px before the following card, with no
   substitute surface or fake blank tail.
-- The hero keeps its 32-second ambient pan and adds a shallow, overscanned scroll parallax
-  capped at 20 px. Substantial static content imagery in the Land/CityWiki/Landom pillars,
+- The hero photograph and all three motif stages are excluded from scroll-linked movement.
+  Substantial static content imagery in the Land/CityWiki/Landom pillars,
   Location Intelligence, Products and Services, tailored service, and CityMETER showcase
-  areas uses the same bounded scroll-linked depth treatment. Brand marks, provider surfaces,
-  video, and testimonial identity assets are excluded. All parallax layers freeze under the
-  user's reduced-motion preference without changing the governed media bytes.
+  areas retains a bounded scroll-linked depth treatment. Brand and identity marks, provider
+  surfaces, video, and testimonial identity assets are also excluded. Eligible parallax
+  freezes under reduced motion and the page motion action without changing governed bytes.
 - The company-story disclosure reveals its two paragraphs in sequence and resolves into
   the four-beat line “Let us cultivate our city with data.” Reduced motion presents the
   complete thought immediately.
@@ -121,13 +130,30 @@ machine validation remains pending).
   root. Release dates change only when Rebuild02 content actually changes.
 - The contact form sends JSON directly to Landometer's public inquiry API. The office
   email is also a 44 px `mailto:` action for visitors who prefer their mail app. The page
-  stores only the visitor's theme preference and has no analytics or form persistence.
+  stores only the visitor's theme preference; the motion pause is transient. There is no
+  analytics or form persistence.
 - The footer includes the office map plus 44 px circular, icon-only Facebook, Instagram,
   TikTok, LinkedIn and X links. Their accessible platform names remain in the markup while
   the visible marks use rounded outline strokes. Other interface icons continue to use the
   self-hosted rounded-outline Material Symbols contract. Computed local QA confirmed all
   `.icon-symbol` instances use Material Symbols Rounded at FILL 0 / wght 300; all social
   SVGs use fill none, 1.65 px strokes and round caps/joins, and footer targets are 44 px.
+  The motion action is the only separate UI-icon construction: an explicit inline 24 px
+  pause/play SVG pair with no fill, current-colour stroke, and rounded caps/joins. The
+  self-hosted Material subset and active Material ligature count remain 25.
+
+## Motif handoff
+
+`governance/motif-integration.json` pins the selected asset IDs, product scopes, surfaces,
+runtime/fallback paths, dependency hashes, owner-approval boundary, and private Drive folder.
+The account-scoped selected-assets ZIP is readback-verified at 307,923 bytes / SHA-256
+`f396ecec…` (Drive file `1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ`), and the Claude read-first
+file is readback-verified at 4,755 bytes / SHA-256 `3ef70b50…` (Drive file
+`1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ`). The final QA-bound integration manifest is also
+readback-verified with exact local-file parity at 14,991 bytes / SHA-256 `27d0e64d…`
+(Drive file `16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D`, modified
+`2026-09-08T08:29:50Z`). The folder is private and not publicly shared; no automatic or
+background synchronization is claimed.
 
 ## Publishing
 
@@ -137,13 +163,21 @@ suffixes are route contracts and must not be renamed.
 
 `machineValidation` remains `pending` and `conformanceLevel` remains
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
-validation language. Release checks passed script syntax, diff hygiene,
-JSON-LD/JSON/YAML parsing, local resource existence, unique IDs and local HTTP/MIME checks
-for root, index, TH, EN, the branded 404, `llms.txt`, sitemap and the DS stylesheet. The
-corrective Thai hero was rendered at 320, 390, 768 and 1440 px with the exact
-owner-approved English H1, `lang="en"`, computed Arvo 700, zero horizontal overflow and
-full containment inside the first-view hero. GitHub Pages build `1188237884` published
-artifact commit `f384da3…`; live route/MIME, branded 404, ten-file byte parity and
-TH/EN browser checks at 390/1440 passed without overflow or first-party failures. CSS,
-JavaScript and governed media bytes are unchanged. The exhaustive SC-20 matrix and
-production accessibility audit remain open.
+validation language. Candidate source/hash checks pin `site.css` at 59,675 bytes / SHA-256
+`664f20cc…` and settled `site.js` at 56,933 bytes / SHA-256 `70e4e0b2…`. A fresh local
+regression rechecked that JavaScript hash unchanged at `2026-09-08T08:23:44Z` and passed
+16/16 bilingual viewport/theme combinations, 4/4 additional 360 px checks, the complete
+first-party asset sweep, CityChat finite/no-replay behavior, ijji cold/slow/404/decode-
+rejection/pause-resume/completion/no-replay behavior, reduced motion, no JavaScript, Thai
+130%, keyboard/focus, pagehide, print finalization, and stage/fallback visual parity. True
+Chrome UI zoom and native hidden-tab visibility remain proxy-only in headless testing; a
+selected loading budget, the exhaustive provider/social matrix, production checks, and the
+production accessibility audit remain open. Existing third-party social panels may render
+blank/partial and Facebook may emit external console noise; the first-party sweep was
+clean. GitHub Pages remains configured for `main` / root with HTTPS enforced and provider
+status `built`, but that configuration/state does not prove candidate deployment. The prior
+artifact `f384da3…` used workflow `33535403331` / build `1188237884`; later attestation HEAD
+`8cb5cb5…` triggered successful workflow `33536483613`. Neither run attests this candidate.
+No new candidate commit, Pages run, live route/MIME, or live-byte parity is claimed before
+publication. After deployment, every emitted motif runtime, fallback, and ijji layer must
+receive final-URL/2xx/MIME/byte/hash attestation and a public browser check.

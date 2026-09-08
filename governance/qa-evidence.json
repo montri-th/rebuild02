@@ -1,117 +1,160 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260901-01",
+  "artifactBuildId": "ui-20260908-01",
+  "releaseReceiptId": "rebuild02-ui-20260908-01",
+  "status": "candidate_local_rendered_verified_publication_pending",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
+  "settledCandidateHashes": {
+    "index.html": {"bytes": 6256, "sha256": "69630bd6d8debf21df5de5a133c25f52452c2620f49283d4e9b6935aac7bd41e"},
+    "Landometer-Home-TH.dc.html": {"bytes": 99767, "sha256": "3cc5f378914c87f395fca59913e681271b9018fd6a7d5fe8f3b3fc1d93c24ac4"},
+    "Landometer-Home-EN.dc.html": {"bytes": 82422, "sha256": "1fa3e5f476a94f64cf0176d3d108185554f42cac55fd0bc26117da83997499b8"},
+    "404.html": {"bytes": 4556, "sha256": "ece5b328143a9a603d324edfea9092a1321dddf15a61fdca81bedc5ad19e0314"},
+    "llms.txt": {"bytes": 2083, "sha256": "280fbdf2dfd446863b39345b08d5d52124f07f08958a83db58309a92622a1ec3"},
+    "robots.txt": {"bytes": 83, "sha256": "a830d2c121000ba9c2abad1fc1a76a29edffce2f6d6f57c8970f72efb09b601f"},
+    "sitemap.xml": {"bytes": 1149, "sha256": "50805ca858bcaa43b67f3210768330a65584befd3ef2d63072b132495f417c90"},
+    "site.css": {"bytes": 59675, "sha256": "664f20ccb87e1f79ee959628c3be290152f3f2bf5937828290c6826f7694375d"},
+    "site.js": {"bytes": 56933, "sha256": "70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf"}
+  },
   "sourceAndStructure": {
-    "locales": [
-      "th",
-      "en"
-    ],
-    "bilingualParity": "pass",
+    "locales": ["th", "en"],
+    "bilingualParity": "pass at source",
     "h1PerLocale": 1,
+    "landometerMetaCountPerLocale": 5,
+    "citychatMetaCountPerLocale": 1,
     "duplicateIds": 0,
     "localResourceReferenceErrors": 0,
-    "javascriptSyntax": "pass",
-    "gitDiffCheck": "pass",
+    "javascriptSyntax": "pass for settled site.js SHA-256 70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf",
+    "gitDiffCheck": "pass after the five-file candidate governance set settled",
     "materialSymbolFile": "assets/fonts/material-symbols-rounded-rebuild02-r10.ttf",
     "materialSymbolFileGlyphs": 25,
     "activeMaterialSymbolLigatures": 25,
     "missingIconGlyphs": 0,
-    "socialBrandMarks": "computed local pass: five inline rounded-outline SVG marks resolve to fill none, stroke width 1.65 and round caps/joins; footer targets are 44 px and icon-only while platform labels remain available to assistive technology",
-    "videoContract": "one muted playsinline autoplay loop video without controls in each locale",
+    "inlineSvgControlMarks": "one localized motion-toggle pause/play pair uses explicit 24 px inline SVG paths with fill none, currentColor stroke and rounded linecap/linejoin; it is outside the Material Symbols subset",
+    "socialBrandMarks": "five inline rounded-outline SVG marks are separate brand marks; footer targets are 44 px and icon-only while platform labels remain available to assistive technology",
+    "videoContract": "one muted playsinline autoplay loop video without controls in each locale; reduced motion keeps its poster and the visible page motion control pauses/resumes playback",
     "exactRallyCopy": "Let us cultivate our city with data."
   },
+  "motifAuthority": {
+    "governancePath": "governance/motif-integration.json",
+    "overlayRelease": "1.2.1",
+    "overlaySourceCommit": "57eeb7c953dc8b45fe6fe97f1251467d09b0b199",
+    "manifestSha256": "77e8185104751e2c21c2e10fb8c5d771821bcb8123e02f116638fdbf3968d483",
+    "ownerApprovalSha256": "82e5614cf8545746becfc23318a3dff93c70c61f8a23ad628d69c6b70aa08fb0",
+    "compatibility": "The owner-approved motif overlay is separate from LDS. Rebuild02 remains on LDS 0.9.0-r7 with machine validation pending and authoring_aligned conformance.",
+    "cityChatApproval": "owner explicitly approved the supplied CityChat files on 2026-09-08 for the CityChat product scope",
+    "cityChatLogoException": "the two proposed CityChat logo SVG hashes differ from their package register and are excluded; the existing governed official lockup remains static",
+    "assetHashClosure": "pass for the 16 committed motif files listed in governance/motif-integration.json",
+    "drivePackage": {
+      "status": "selected_assets_zip_read_first_and_final_QA_bound_manifest_readback_verified",
+      "access": "private_account_scoped_not_shared",
+      "folderUrl": "https://drive.google.com/drive/folders/1_VaLIjW_eZdtGzRjsKIGDabGmIRKmGND",
+      "zip": {"fileId": "1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ", "bytes": 307923, "sha256": "f396ecece1a9038817e3c45108217dbd15087d2568e8956c9b956ccf3bdd5a1e", "readback": "raw_bytes_match"},
+      "readFirst": {"fileId": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ", "bytes": 4755, "sha256": "3ef70b50c6a748c401180d8aa77e4c05e0947f53ab51fda84066ab2ac1f24e97", "readback": "exact_base64_match"},
+      "manifest": {"fileId": "16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D", "bytes": 14991, "sha256": "27d0e64df1b2acc2cb8e72e37b4549e84da5b6b00240108255d1f85e17b163b7", "readback": "exact_base64_match", "driveModifiedAt": "2026-09-08T08:29:50Z", "status": "final_QA_and_resume_event_bound_copy_verified"},
+      "boundary": "account-scoped handoff only; the Drive manifest exactly matches the local governance file; no public sharing or background synchronization is claimed"
+    }
+  },
   "currentRoundChecks": {
-    "citymeterSnapshots": "pass: the Land pillar and appraisal/building/flood tiles use fresh immutable r5 responsive AVIF/WebP captures; Business Dynamics uses the existing 960/1600/2560 set; Population uses the current governed close-up at its displayed card size",
-    "landResponsiveSelection": "pass: 640/1200/1800 candidates with sizes=(min-width:701px) 50vw, 100vw; right-aligned cover preserves the selected-building detail panel",
-    "tileResponsiveSelection": "pass: four tiles use CSS-aligned sizes with the horizontal-card branch through 700 px and no missing candidates",
-    "semanticIcons": "pass at source and computed local style: all .icon-symbol instances resolve through Material Symbols Rounded at FILL 0 and wght 300; the bookmark rail uses unique widgets, monitoring, newspaper and mail outline glyphs; the five social marks use rounded outline strokes; product logos remain identity assets rather than UI glyphs",
-    "citymeterCtaHierarchy": "pass: one solid primary Explore-all action, one outlined secondary conversation action and one circular share utility",
-    "externalLinkCue": "pass: visible external-link terminals use a typographic ↗ cue with no text decoration; target-blank links carry noopener noreferrer",
-    "mapCopy": {
-      "th": "ปากคลองตลาด อยู่ตรงไหนใน Google Maps",
-      "en": "Where is Pak Khlong Talat on Google Maps?"
-    },
-    "landomEntries": "pass: join, team work, company thinking and current work",
-    "storyMotion": "pass: three staged 820 ms steps with 80/260/480 ms delays and a four-beat rally; reduced motion resolves immediately",
-    "dynamicReducedMotion": "pass in controlled in-app Chromium: initial reduce produced no src, paused=true, autoplay=false and readyState=0 with poster present; normal-near played at readyState=4; normal-to-reduce removed src and restored readyState=0; reduce-to-normal replayed only near the viewport; the same transition offscreen stayed paused with no src until the video returned near",
-    "socialEditorialGrid": "pass in local rendering: real TikTok, Facebook, Instagram and LinkedIn provider content loaded in dark; dark-light-dark preserved all frame src values and TikTok loaded state; DS shell changed rgb(252,252,250) to rgb(32,41,45), dark embed surround was rgb(43,53,52), no substitute appeared, and the 390 px Instagram iframe/card measured 436/499 px with 57 px before the next card and no fake blank tail",
-    "locationCtaSingleLine": "pass in local TH/EN rendering at widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440: all computed nowrap, zero .btn overflow, no Location CTA above 48 px and no page overflow",
-    "darkHoverContrast": "pass in local computed-state QA: dark menu and topic-option hover changed from transparent to color(srgb .244784 .393333 .443686) with light text; utility and menu-toggle use the same stronger dark hover/focus treatment",
-    "locationNarrative": "pass at source: six product-neutral, image-led routes cover catchment competition, proof of demand, white space/site selection, branch comparison, area-performance monitoring and Location-based Market Listening; branch comparison now owns the exact automotive market-share CityMETER PNG, while monitoring retains its distinct municipal-income screenshot; neither is represented as current analytical evidence; every route has a benefit-led conversation CTA",
-    "locationQuestionCarousel": "pass at source: both locale routes contain one localized, keyboard-focusable Location rail with exactly six semantic source cards; site.js adds sanitized aria-hidden inert six-card head and tail clone cycles, normalizes after pointer/touch/keyboard movement in either direction, and preserves the logical card across ResizeObserver remeasurement",
-    "testimonialCarousel": "pass at source: both locale routes contain six semantic testimonial source cards and use the same sanitized, inert, bidirectional and resize-stable loop implementation as Location Intelligence",
-    "loopRevealParity": "pass in local rendering at 390, 768 and 1440: both loop rails survived ArrowLeft/ArrowRight boundary traversal; every data-loop-item source/clone group was always 0/3 or 3/3 revealed, never mixed, with no page overflow",
-    "productEcosystem": "pass at source: five image-led product cards use one capsule conversation CTA, an explicit fit cue and product-scoped copy; desktop presents CityMETER and CityChat as equal featured cards above ijji, CityWiki and land tools; the restored CityMETER card pairs the r6 symbol and Landometer Arvo wordmark with a separate CityMETER heading, while CityWiki retains its Arvo product wordmark and land tools retains the shared lockup geometry; projects/partnerships remains separate",
-    "productMediaR8": "pass at source: CityMETER restores the responsive 960/1600 AVIF/WebP Business Dynamics family; the exact 9dbfe9a2… automotive market-share PNG moves exclusively to Location Intelligence branch potential; CityWiki and Property Tax Simulator retain the exact b371882d… and 422b0a35… PNG product examples; Location area performance retains 198c0d59…",
-    "overlayCreditFocus": "pass at source and computed style: CityWiki attribution links keep the 3 px / 2 px focus geometry and override the theme ring with the overlay's white foreground, preserving a high-contrast indicator on the opaque dark caption surface in both themes",
-    "cityChatContrast": "pass: source-token calculations establish primary/secondary/hover contrast, and current-build computed styles confirm 10.31:1 for the dark outlined action against the beige card, 8.31:1 for secondary text against the beige card, and 9.30:1 for fit text against its local light surface in dark mode; the fixed-light card remains readable under both page themes.",
-    "searchAndAgentDiscovery": "live verified within GitHub Pages limits: root, Thai and English metadata align with explicit city-data and Location Intelligence intent; the owner-approved English North Star remains the primary H1 in both locales, and the Thai-route H1 carries lang=en while Thai intent remains in visible Thai supporting copy and metadata; canonical-locale Organization/WebSite/WebPage JSON-LD uses one stable organization identifier and only visible contact, address, identity and page facts; the redirect shell intentionally carries no JSON-LD; canonical locale pages retain the evidence-bound six-item ItemList without Product, Offer, Dataset, price, rating or review claims; a branded noindex 404 and navigation-only llms.txt are live. Repository-level robots.txt and sitemap.xml cannot publish montri-th.github.io host-root policy files from this project path; llms.txt is not treated as ranking evidence, a permission grant or agent authority",
-    "heroNorthStar": "pass in installed headless Chrome at 320x568, 390x844, 768x1024 and 1440x900: the Thai route exposes the exact H1 Visualize City, Shape Tomorrow., lang=en, computed Arvo 700, zero horizontal overflow and full containment within the hero",
-    "bookmarkSemantics": "pass with explicit owner override: desktop and mobile navigation use the same four unique rounded-outline meanings; the active state remains FILL 0 and changes only its surface/ink, preserving the owner's all-interface-icons-outline direction rather than the r7 handoff's FILL 1 active example; hover uses blue tint, press uses soft plus downward travel, and every control has an accessible label",
-    "underlineBoundary": "pass: UI icons and arrow cues have no underline; underline decoration is applied only to dedicated visible-text spans",
-    "scrollParallaxDecision": "pass at source with owner authorization: hero media retains its requestAnimationFrame parallax capped at plus/minus 20 px; substantial static imagery in pillar, Location Intelligence, product, tailored-service and CityMETER showcase frames receives a separately bounded requestAnimationFrame layer; reduced motion freezes every layer, and brand marks, provider surfaces, video and testimonial identity assets are excluded",
+    "productEcosystem": "pass at source: five media-led product cards retain product-scoped copy and one conversation CTA; CityChat uses the approved 3a motif plus its static official lockup, ijji uses the verified r3 mark-only sting, and neither product-specific behavior is generalized into Landometer portfolio truth",
+    "productMediaBoundary": "pass at source: the earlier CityChat community and ijji vendor photographs plus assets/products/ijji-logo-official.png remain committed but are not rendered in ui-20260908-01",
+    "heroMotionDecision": "pass at source: the hero photograph is static and has no transform; landometer.dial.quiet is a decorative 1.26-second finite-once orientation motif with an exact SVG fallback and no replay, loop or parallax",
+    "cityChatMotif": "local rendered pass on settled bytes: the exact owner-approved light 3a fallback and runtime use #FCFCFA, begin at threshold 0.14, finish once by 2.04 seconds, import once and do not replay after re-entry",
+    "ijjiMotif": "local rendered pass on settled bytes: no layer/runtime work before the 14% gate; all nine layers load+decode before mount; cold, slow, HTTP 404 and synthetic decode-rejection cases preserve the still; pause/resume retains timeline position; the 6.4-second Brand Blue sting completes once and does not replay after re-entry",
+    "motionControl": "local rendered keyboard/focus pass: one localized menu control has explicit pause/play SVG states and transient aria-pressed state; it coordinates CSS/JavaScript motion, motif timelines, static-image parallax and Living video without localStorage persistence",
+    "reducedMotionAndFallback": "local rendered pass on settled bytes: no-JavaScript, reduced-motion, print and runtime-failure paths retain exact complete stills",
+    "scrollParallaxDecision": "pass at source: only substantial static imagery in eligible pillar, Location Intelligence, product, tailored-service and CityMETER showcase frames receives bounded requestAnimationFrame movement; hero media, motif stages, brand/identity, provider surfaces, video and testimonial marks are excluded; reduced motion and page pause freeze it",
+    "locationNarrative": "pass at source: six product-neutral routes retain their evidence boundaries and benefit-led conversation CTAs",
+    "contactBoundary": "the form posts only after explicit visitor submit; no production POST or inbox receipt is claimed",
     "caveatCopyOnCustomerPage": 0
+  },
+  "supersededLocalRenderedEvidence": {
+    "status": "informative_only_not_current_byte_attestation",
+    "testedSiteJs": {"bytes": 56861, "sha256": "21a03695db58f97e1ac866403db4fa1f1b919a4099be795839739ff956b2fc92"},
+    "summary": "The immediately preceding local Chromium report passed 16/16 TH/EN x 320/390/768/1440 x light/dark combinations with no first-party failures or horizontal overflow; CityChat finished once by 2040 ms; ijji preserved its fallback through slow and HTTP-failure simulations, paused/resumed without a timeline reset, finished at 6.4 seconds and did not replay; reduced-motion and no-JavaScript stills were visible.",
+    "supersededBecause": "site.js changed afterward so image.decode() rejection now propagates to the ijji fallback path"
+  },
+  "settledByteBrowserRegression": {
+    "requiredSiteJsSha256": "70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf",
+    "testedSiteJsSha256": "70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf",
+    "verifiedUnchangedAfterTestingAt": "2026-09-08T08:23:44Z",
+    "status": "pass_local_rendered",
+    "coverage": {
+      "viewportThemeMatrix": "16/16 pass: TH/EN x 320/390/768/1440 x light/dark; HTTP 200, no horizontal overflow and zero first-party request/page/HTTP errors",
+      "additional360Px": "4/4 pass across both locales and themes",
+      "firstPartyAssetSweep": "2/2 locales; zero failed requests, HTTP errors or unresolved images",
+      "cityChat": "finite 2040 ms, one runtime import and no replay on re-entry",
+      "ijji": "cold/slow/404/synthetic decode-rejection/pause-resume/6.4-second completion/no-reentry-replay pass; decode rejection left fallback loaded and visible with is-fallback-only, zero component mounts, zero starts and zero unhandled/page/console/request/HTTP errors",
+      "accessibilityAndFallback": "reduced motion, no JavaScript, Thai 130% text simulation, keyboard/focus, native pagehide, print finalization and stage/fallback visual parity pass"
+    },
+    "additionalOpenExperienceChecks": [
+      "true Chrome UI zoom; headless QA used a passing CDP 2x plus 360 px reflow proxy",
+      "native hidden-tab visibility; headless QA used a passing controlled document.hidden/visibilitychange proxy",
+      "existing third-party social panels may be blank or partial and Facebook may emit external console noise; this is not a first-party motif failure"
+    ],
+    "knownNonResetEventCaveat": "ijji-sting-start fires again when a paused timeline resumes, although currentTime does not reset and the animation does not replay",
+    "screenshots": []
+  },
+  "loadingAndPerformance": {
+    "status": "open_no_selected_budget",
+    "committedMotifFiles": 16,
+    "committedMotifBytes": 425511,
+    "landometerFamilyBytes": 29768,
+    "cityChatFamilyBytes": 54148,
+    "ijjiFamilyBytes": 341595,
+    "ijjiNineRuntimeLayerBytes": 218641,
+    "knownLifecycle": "CityChat runtime is requested once after intersection; ijji runtime is loaded from the head but its nine layers are not requested before 14% intersection; exact fallbacks remain visible during cold/slow loading",
+    "requiredBeforePerformancePass": "select and measure maximum LCP, request count, transferred bytes and post-warm transfer; do not infer network transfer from committed file size"
   },
   "networkBoundary": {
     "primaryRendering": "same-origin static HTML/CSS/JS and governed media",
-    "socialActivation": "both themes within 480 px of the viewport; no provider surface initializes before its target approaches the observer margin",
-    "socialProviders": [
-      "TikTok",
-      "Facebook",
-      "Instagram",
-      "LinkedIn"
-    ],
-    "providerFreshness": "TikTok, Facebook and Instagram are provider-rendered when activated, subject to provider caching; LinkedIn remains a featured post; X is outbound-only because its timeline widget rendered a zero-size hidden frame in local desktop and mobile tests",
+    "socialActivation": "provider surfaces attach within 480 px of their cards; third-party Facebook console noise is outside the first-party error pass and must not be described as zero total console errors",
+    "socialProviders": ["TikTok", "Facebook", "Instagram", "LinkedIn"],
     "contactEndpoint": "https://landometer.com/api/v2/public/inquiry/save",
     "contactActivation": "explicit visitor submit only",
     "productionPostSent": false,
     "officeEmail": "mailto:hello@landometer.com after explicit click"
   },
-  "localRenderedChecks": {
-    "engine": "Codex in-app Chromium on 2026-08-30 plus installed headless Chrome and deterministic source/local-HTTP discovery checks on 2026-09-01",
-    "result": "ui-20260901-01 passed source, structured-data, local/live HTTP/MIME, ten-file byte parity and targeted restored-hero browser gates; CSS, JavaScript and governed media are byte-unchanged from the ui-20260830-11 browser baseline; exhaustive SC-20 remains open",
-    "verified": [
-      "EN and TH at widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440 had zero .btn overflow, all computed nowrap, no Location CTA above 48 px and no page overflow",
-      "dark menu and topic-option hover changed from transparent to color(srgb .244784 .393333 .443686) with light text",
-      "both loop rails at 390, 768 and 1440 survived ArrowLeft/ArrowRight boundary traversal; every logical source/clone reveal group remained 0/3 or 3/3, never mixed, with no page overflow",
-      "real TikTok, Facebook, Instagram and LinkedIn content loaded in dark; dark-light-dark preserved all frame sources and TikTok state while only the DS-owned shell/surround changed theme",
-      "all .icon-symbol computed Material Symbols Rounded FILL 0 / wght 300; social SVGs computed fill none, stroke width 1.65 and round caps/joins; footer social targets were 44 px and icon-only with hidden accessible labels",
-      "node --check, git diff --check, JSON/YAML parse, local resource existence and unique HTML ID checks passed",
-      "candidate root/index, TH, EN and 404 returned local HTTP 200 text/html; llms.txt returned text/plain, sitemap.xml returned application/xml and the DS stylesheet returned text/css; all inline JSON-LD blocks parsed",
-      "the restored English North Star rendered on the Thai route at 320x568, 390x844, 768x1024 and 1440x900 with lang=en, computed Arvo 700, zero document overflow and full containment inside the hero"
-    ],
-    "screenshots": []
-  },
   "browserAndProductionGates": {
-    "localHttp": "pass for ui-20260901-01: root/index/TH/EN/404 returned HTTP 200 text/html, llms.txt returned HTTP 200 text/plain, sitemap.xml returned HTTP 200 application/xml and the DS stylesheet returned HTTP 200 text/css",
-    "publicationAuthorization": "authorized by the ongoing user request that explicitly includes publishing the new candidate after the current additions",
-    "publicationStatus": "pass: ui-20260901-01 artifact commit f384da3b7d91087598c99f738e97633bd23c6bb1 was published by GitHub Pages build 1188237884 and live-attested at 2026-09-01T17:09:31Z",
+    "publicationAuthorization": "authorized by the ongoing user request",
+    "candidateStatus": "local source and settled-byte rendered checks passed; publication pending",
     "productionArtifact": {
-      "scope": "published ui-20260901-01",
+      "scope": "candidate ui-20260908-01",
       "repository": "https://github.com/montri-th/rebuild02",
       "branch": "main",
-      "commit": "f384da3b7d91087598c99f738e97633bd23c6bb1",
-      "tree": "956b6009c926950e065c0bfe9aab638f12753b56",
-      "previousVerifiedRelease": {
-        "artifactBuildId": "ui-20260831-01",
-        "commit": "e1d47bbebf8e1be3404b1f9f90d62326ad59e081",
-        "tree": "01f96b41950718e02a596a90d84e39dbe8607fb8"
-      }
+      "reviewedHeadSha": null,
+      "mergeCommitSha": null,
+      "reviewedTreeOrDiffContained": "pending publication",
+      "deployedSourceSha": null
     },
     "pagesBuild": {
-      "scope": "published ui-20260901-01",
-      "id": 1188237884,
-      "state": "built",
-      "commit": "f384da3b7d91087598c99f738e97633bd23c6bb1",
-      "durationMs": 164987,
-      "updatedAt": "2026-09-01T17:05:06Z",
-      "previousVerifiedBuildId": 1185423885
+      "scope": "candidate ui-20260908-01",
+      "id": null,
+      "workflowRunId": null,
+      "state": "not_started",
+      "commit": null,
+      "updatedAt": null
     },
-    "liveHttpAndMime": "pass for ui-20260901-01: root/index/TH/EN/404 returned HTTP 200 text/html; llms and robots text/plain; sitemap application/xml; DS CSS text/css; unknown route HTTP 404 text/html",
-    "liveByteParity": "pass for ui-20260901-01: index, TH, EN, 404, llms, robots, sitemap, site.css, site.js and DS styles.css matched production SHA-256 byte-for-byte",
-    "liveBrowser": "pass for ui-20260901-01: installed headless Chrome loaded TH and EN at 390x844 and 1440x900 with expected localized title, exact approved H1, canonical, build and JSON-LD, no horizontal overflow and no first-party request failure; the Thai-route H1 carried lang=en and computed to Arvo 700; branded missing route returned HTTP 404 and noindex recovery. ui-20260830-11 remains the targeted interaction baseline because CSS, JavaScript and governed media are unchanged"
+    "providerConfiguration": {
+      "sourceBranch": "main",
+      "sourcePath": "/",
+      "httpsEnforced": true,
+      "providerStatus": "built",
+      "scope": "pre-release provider configuration/state only; not candidate deployment evidence"
+    },
+    "liveHttpAndMime": "pending publication",
+    "liveByteParity": "pending publication; cover every emitted current route plus site.css, site.js and all motif runtime/fallback/dependency URLs with final URL, 2xx, MIME, bytes and SHA-256",
+    "liveBrowser": "pending publication",
+    "previousVerifiedRelease": {
+      "artifactBuildId": "ui-20260901-01",
+      "artifactCommit": "f384da3b7d91087598c99f738e97633bd23c6bb1",
+      "artifactTree": "956b6009c926950e065c0bfe9aab638f12753b56",
+      "artifactPagesWorkflowRunId": 33535403331,
+      "attestationCommit": "8cb5cb599557672261008aad53eaf78c42d352d0",
+      "attestationPagesWorkflowRunId": 33536483613,
+      "pagesBuildId": 1188237884,
+      "scope": "historical evidence only: artifact publication and later attestation/deployed-HEAD runs are distinct; neither attests ui-20260908-01"
+    }
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"
 }

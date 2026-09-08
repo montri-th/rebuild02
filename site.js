@@ -5,6 +5,84 @@
   var motionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
   root.classList.add('js-ready');
 
+  function pageMotionPaused() {
+    return root.getAttribute('data-motion-paused') === 'true';
+  }
+
+  function pageMotionCanRun() {
+    return !pageMotionPaused() && !document.hidden;
+  }
+
+  function installMotionControls() {
+    var controls = Array.prototype.slice.call(document.querySelectorAll('[data-motion-toggle]'));
+    var isThai = (root.lang || '').toLowerCase().indexOf('th') === 0;
+    var userPaused = false;
+
+    function systemReduced() {
+      return Boolean(motionQuery && motionQuery.matches);
+    }
+
+    function copyFor(paused) {
+      if (systemReduced()) {
+        return isThai
+          ? { label: 'ระบบตั้งค่าให้ลดภาพเคลื่อนไหว' }
+          : { label: 'Motion reduced by system' };
+      }
+
+      if (isThai) {
+        return paused
+          ? { label: 'เล่นภาพเคลื่อนไหว' }
+          : { label: 'หยุดภาพเคลื่อนไหว' };
+      }
+
+      return paused
+        ? { label: 'Play motion' }
+        : { label: 'Pause motion' };
+    }
+
+    function render(paused) {
+      var copy = copyFor(paused);
+
+      controls.forEach(function (control) {
+        var label = control.querySelector('[data-motion-toggle-label]');
+
+        control.setAttribute('aria-pressed', paused ? 'true' : 'false');
+        control.setAttribute('aria-disabled', systemReduced() ? 'true' : 'false');
+        control.setAttribute('aria-label', copy.label);
+        control.setAttribute('title', copy.label);
+        if (label) label.textContent = copy.label;
+      });
+    }
+
+    function setPaused(paused) {
+      var nextPaused = Boolean(paused);
+      root.setAttribute('data-motion-paused', nextPaused ? 'true' : 'false');
+      render(nextPaused);
+      document.dispatchEvent(new CustomEvent('landometer:motionchange', {
+        detail: { paused: nextPaused }
+      }));
+    }
+
+    controls.forEach(function (control) {
+      control.addEventListener('click', function () {
+        if (systemReduced()) return;
+        userPaused = !pageMotionPaused();
+        setPaused(userPaused);
+      });
+    });
+
+    if (motionQuery) {
+      var syncPreference = function (event) {
+        setPaused(event.matches ? true : userPaused);
+      };
+
+      if (motionQuery.addEventListener) motionQuery.addEventListener('change', syncPreference);
+      else if (motionQuery.addListener) motionQuery.addListener(syncPreference);
+    }
+
+    setPaused(systemReduced());
+  }
+
   function resolveTheme(mode) {
     return mode === 'dark' || (mode === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
       ? 'dark'
@@ -60,7 +138,7 @@
     var wakeTimer = 0;
 
     function reducedMotion() {
-      return Boolean(motionQuery && motionQuery.matches);
+      return pageMotionPaused() || Boolean(motionQuery && motionQuery.matches);
     }
 
     function setCalm(isCalm) {
@@ -110,6 +188,11 @@
       menuOpen = Boolean(event.detail && event.detail.open);
       if (menuOpen) setCalm(false);
       else if (!pointerInside && !focusInside) syncFromPagePosition();
+    });
+
+    document.addEventListener('landometer:motionchange', function (event) {
+      if (event.detail && event.detail.paused) setCalm(false);
+      else if (!pointerInside && !focusInside && !menuOpen) syncFromPagePosition();
     });
 
     if (wakeZone) {
@@ -482,6 +565,438 @@
     });
   }
 
+  function installLandometerMotifs() {
+    var motifs = Array.from(document.querySelectorAll('lm-motif'));
+    if (!motifs.length) return;
+
+    function meetsVisibilityThreshold(element, threshold) {
+      var bounds = element.getBoundingClientRect();
+      if (!bounds.width || !bounds.height) return false;
+      var visibleWidth = Math.max(0, Math.min(window.innerWidth, bounds.right) - Math.max(0, bounds.left));
+      var visibleHeight = Math.max(0, Math.min(window.innerHeight, bounds.bottom) - Math.max(0, bounds.top));
+      return (visibleWidth * visibleHeight) / (bounds.width * bounds.height) >= threshold;
+    }
+
+    function clearLoop(motif) {
+      if (!motif._loop) return;
+      window.clearTimeout(motif._loop);
+      motif._loop = null;
+    }
+
+    var states = motifs.map(function (motif) {
+      var state = {
+        element: motif,
+        nativePlay: typeof motif.play === 'function' ? motif.play : null,
+        pausedAnimations: [],
+        pending: false,
+        started: motif.hasAttribute('data-play')
+      };
+
+      motif.removeAttribute('loop');
+      if (state.nativePlay) {
+        motif.play = function () {
+          if (!pageMotionCanRun()) {
+            state.pending = true;
+            clearLoop(motif);
+            return undefined;
+          }
+
+          state.pending = false;
+          state.started = true;
+          return state.nativePlay.apply(motif, arguments);
+        };
+      }
+
+      return state;
+    });
+
+    function pauseState(state) {
+      clearLoop(state.element);
+      if (typeof state.element.getAnimations !== 'function') return;
+      state.element.getAnimations({ subtree: true }).forEach(function (animation) {
+        if (animation.playState !== 'running') return;
+        animation.pause();
+        if (state.pausedAnimations.indexOf(animation) === -1) state.pausedAnimations.push(animation);
+      });
+    }
+
+    function resumeState(state) {
+      if (!pageMotionCanRun()) return;
+
+      state.pausedAnimations.forEach(function (animation) {
+        if (animation.playState === 'paused') animation.play();
+      });
+      state.pausedAnimations = [];
+
+      if (state.pending && !state.started && meetsVisibilityThreshold(state.element, 0.14)) {
+        state.element.play();
+      }
+    }
+
+    function finishState(state) {
+      clearLoop(state.element);
+      state.pausedAnimations = [];
+      state.pending = false;
+      state.element.removeAttribute('data-play');
+    }
+
+    document.addEventListener('landometer:motionchange', function (event) {
+      var paused = event.detail ? Boolean(event.detail.paused) : pageMotionPaused();
+      states.forEach(paused ? pauseState : resumeState);
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      states.forEach(document.hidden ? pauseState : resumeState);
+    });
+
+    window.addEventListener('pagehide', function () {
+      states.forEach(finishState);
+    });
+    window.addEventListener('beforeprint', function () {
+      states.forEach(finishState);
+    });
+  }
+
+  function installCityChatMotifs() {
+    var hosts = Array.from(document.querySelectorAll('[data-citychat-motif]'));
+    if (!hosts.length) return;
+    var observer = null;
+    var modulePromise = null;
+
+    var states = hosts.map(function (host) {
+      return {
+        element: host,
+        inView: false,
+        started: false,
+        complete: false
+      };
+    });
+
+    function loadModule() {
+      if (modulePromise) return modulePromise;
+      var url = new URL('assets/motifs/citychat/citychat-motif-motion.js?v=1.0.1-approved-20260908', document.baseURI).href;
+      modulePromise = import(url).then(function (citychat) {
+        if (!document.querySelector('[data-citychat-motif-styles]')) {
+          var style = document.createElement('style');
+          style.setAttribute('data-citychat-motif-styles', '1.0.1-owner-approved-20260908');
+          style.textContent = citychat.css;
+          document.head.appendChild(style);
+        }
+        return citychat;
+      });
+      return modulePromise;
+    }
+
+    function completeState(state) {
+      if (state.complete) return;
+      state.complete = true;
+      if (observer) observer.unobserve(state.element);
+    }
+
+    function finishState(state) {
+      if (state.complete) return;
+      if (typeof state.element.getAnimations === 'function') {
+        state.element.getAnimations({ subtree: true }).forEach(function (animation) {
+          try { animation.finish(); } catch (error) {}
+        });
+      }
+      state.element.classList.add('is-finished');
+      completeState(state);
+    }
+
+    function watchForCompletion(state) {
+      if (typeof state.element.getAnimations !== 'function') {
+        completeState(state);
+        return;
+      }
+      var animations = state.element.getAnimations({ subtree: true });
+      if (!animations.length) {
+        completeState(state);
+        return;
+      }
+      Promise.all(animations.map(function (animation) {
+        return animation.finished.catch(function () {});
+      })).then(function () {
+        completeState(state);
+      });
+    }
+
+    function startState(state) {
+      if (state.started || state.complete || !state.inView || !pageMotionCanRun()) return;
+      state.started = true;
+      loadModule().then(function (citychat) {
+        if (state.complete) return;
+        if (!pageMotionCanRun()) {
+          state.started = false;
+          return;
+        }
+        var id = state.element.getAttribute('data-citychat-id') || 'a';
+        var rendition = state.element.getAttribute('data-citychat-rendition') || 'light';
+        var family = citychat.svg && citychat.svg[id];
+        var markup = family && family[rendition];
+        if (!markup) {
+          state.started = false;
+          return;
+        }
+        state.element.innerHTML = markup;
+        window.requestAnimationFrame(function () {
+          watchForCompletion(state);
+        });
+      }).catch(function () {
+        state.started = false;
+      });
+    }
+
+    if ('IntersectionObserver' in window) {
+      observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var state = states.find(function (candidate) { return candidate.element === entry.target; });
+          if (!state || state.complete) return;
+          state.inView = entry.isIntersecting && entry.intersectionRatio >= 0.14;
+          if (state.inView) startState(state);
+        });
+      }, { threshold: [0, 0.14], rootMargin: '0px 0px -12% 0px' });
+      states.forEach(function (state) { observer.observe(state.element); });
+    } else {
+      states.forEach(function (state) {
+        state.inView = true;
+        startState(state);
+      });
+    }
+
+    document.addEventListener('landometer:motionchange', function (event) {
+      var paused = event.detail ? Boolean(event.detail.paused) : pageMotionPaused();
+      if (!paused) states.forEach(startState);
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) states.forEach(finishState);
+    });
+
+    if (motionQuery) {
+      var finishForReducedMotion = function (event) {
+        if (event.matches) states.forEach(finishState);
+      };
+      if (motionQuery.addEventListener) motionQuery.addEventListener('change', finishForReducedMotion);
+      else if (motionQuery.addListener) motionQuery.addListener(finishForReducedMotion);
+    }
+
+    window.addEventListener('pagehide', function () {
+      states.forEach(finishState);
+    });
+    window.addEventListener('beforeprint', function () {
+      states.forEach(finishState);
+    });
+
+    if (motionQuery && motionQuery.matches) states.forEach(finishState);
+  }
+
+  function installIjjiLogoStings() {
+    var hosts = Array.from(document.querySelectorAll('[data-ijji-logo-sting]'));
+    if (!hosts.length) return;
+
+    var layerFiles = [
+      'i-1.png',
+      'i-2.png',
+      'jj.png',
+      'tag-1-1.png',
+      'tag-1-2.png',
+      'tag-1-3.png',
+      'tag-2-1.png',
+      'tag-2-2.png',
+      'tag-2-3.png'
+    ];
+    var observer = null;
+    var states = hosts.map(function (host) {
+      return {
+        element: host,
+        component: null,
+        preloadPromise: null,
+        inView: false,
+        ready: false,
+        started: false,
+        complete: false,
+        pausedByUser: false,
+        pausedByVisibility: false
+      };
+    });
+
+    function preloadImage(url) {
+      return new Promise(function (resolve, reject) {
+        var image = new Image();
+        image.decoding = 'async';
+        image.onload = function () {
+          var decode = typeof image.decode === 'function' ? image.decode() : Promise.resolve();
+          decode.then(resolve, function () {
+            reject(new Error('ijji layer decode failed: ' + url));
+          });
+        };
+        image.onerror = function () { reject(new Error('ijji layer failed: ' + url)); };
+        image.src = url;
+      });
+    }
+
+    function completeState(state) {
+      state.complete = true;
+      state.pausedByUser = false;
+      state.pausedByVisibility = false;
+      if (observer) observer.unobserve(state.element);
+    }
+
+    function preserveFallback(state) {
+      state.element.classList.add('is-fallback-only');
+      completeState(state);
+      return null;
+    }
+
+    function prepareState(state) {
+      if (state.ready) return Promise.resolve(state.component);
+      if (state.preloadPromise) return state.preloadPromise;
+      if (!window.customElements || !window.customElements.get('ijji-logo-sting')) {
+        return Promise.resolve(preserveFallback(state));
+      }
+
+      var base = new URL(state.element.getAttribute('data-ijji-assets') || 'assets/motifs/ijji/logo-sting/layers/', document.baseURI);
+      state.preloadPromise = Promise.all(layerFiles.map(function (file) {
+        return preloadImage(new URL(file, base).href);
+      })).then(function () {
+        if (state.complete || !state.element.isConnected) return null;
+
+        var logo = document.createElement('ijji-logo-sting');
+        logo.setAttribute('manual', '');
+        logo.setAttribute('notagline', '');
+        logo.setAttribute('surface', 'brand-blue');
+        logo.setAttribute('bounce', 'extra');
+        logo.setAttribute('assets', base.href);
+        logo.addEventListener('ijji-sting-end', function () {
+          completeState(state);
+        });
+        state.component = logo;
+        state.element.appendChild(logo);
+
+        return new Promise(function (resolve) {
+          window.requestAnimationFrame(function () {
+            window.requestAnimationFrame(function () {
+              if (state.complete || !state.element.isConnected) {
+                resolve(null);
+                return;
+              }
+              state.ready = true;
+              state.element.classList.add('is-runtime-ready');
+              resolve(logo);
+            });
+          });
+        });
+      }).catch(function () {
+        return preserveFallback(state);
+      });
+
+      return state.preloadPromise;
+    }
+
+    function finishState(state) {
+      if (state.complete) return;
+      if (state.component && typeof state.component.finish === 'function') {
+        state.component.finish();
+      } else {
+        completeState(state);
+      }
+    }
+
+    function startState(state) {
+      if (state.started || state.complete || !state.inView || !pageMotionCanRun()) return;
+      prepareState(state).then(function (component) {
+        if (!component || state.started || state.complete || !state.inView || !pageMotionCanRun()) return;
+        state.started = true;
+        if (typeof component.play === 'function') component.play();
+        else preserveFallback(state);
+      });
+    }
+
+    function resumeState(state) {
+      if (state.complete || !state.inView || !pageMotionCanRun()) return;
+      if (!state.started) {
+        startState(state);
+        return;
+      }
+      state.pausedByUser = false;
+      state.pausedByVisibility = false;
+      if (state.component && typeof state.component.play === 'function') state.component.play();
+    }
+
+    if ('IntersectionObserver' in window) {
+      observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var state = states.find(function (candidate) {
+            return candidate.element === entry.target;
+          });
+          if (!state || state.complete) return;
+
+          state.inView = entry.isIntersecting && entry.intersectionRatio >= 0.14;
+          if (!state.inView) {
+            if (state.started) finishState(state);
+            return;
+          }
+
+          if (!state.started) startState(state);
+          else if (state.pausedByVisibility && !pageMotionPaused()) resumeState(state);
+        });
+      }, { threshold: [0, 0.14] });
+      states.forEach(function (state) { observer.observe(state.element); });
+    } else {
+      states.forEach(function (state) {
+        state.inView = true;
+        startState(state);
+      });
+    }
+
+    document.addEventListener('landometer:motionchange', function (event) {
+      var paused = event.detail ? Boolean(event.detail.paused) : pageMotionPaused();
+      states.forEach(function (state) {
+        if (state.complete) return;
+        if (paused) {
+          if (state.started && state.component) {
+            state.pausedByUser = true;
+            state.component.pause();
+          }
+          return;
+        }
+        if (!state.started || state.pausedByUser) resumeState(state);
+      });
+    });
+
+    document.addEventListener('visibilitychange', function () {
+      states.forEach(function (state) {
+        if (state.complete) return;
+        if (document.hidden) {
+          if (state.started && state.component) {
+            state.pausedByVisibility = true;
+            state.component.pause();
+          }
+          return;
+        }
+        if (!state.started || state.pausedByVisibility) resumeState(state);
+      });
+    });
+
+    if (motionQuery) {
+      var finishForReducedMotion = function (event) {
+        if (event.matches) states.forEach(finishState);
+      };
+      if (motionQuery.addEventListener) motionQuery.addEventListener('change', finishForReducedMotion);
+      else if (motionQuery.addListener) motionQuery.addListener(finishForReducedMotion);
+    }
+
+    window.addEventListener('pagehide', function () {
+      states.forEach(finishState);
+    });
+    window.addEventListener('beforeprint', function () {
+      states.forEach(finishState);
+    });
+
+    if (motionQuery && motionQuery.matches) states.forEach(finishState);
+  }
+
   function installMotion() {
     document.querySelectorAll('.pillar, .feature-grid').forEach(function (pair) {
       var pairItems = Array.from(pair.children).filter(function (item) {
@@ -684,7 +1199,7 @@
       }
 
       function scrollToItem(item) {
-        var behavior = motionQuery && motionQuery.matches ? 'auto' : 'smooth';
+        var behavior = pageMotionPaused() || (motionQuery && motionQuery.matches) ? 'auto' : 'smooth';
         rail.scrollTo({ left: itemPosition(item), behavior: behavior });
         if (behavior === 'auto') window.requestAnimationFrame(normalizePosition);
       }
@@ -818,38 +1333,6 @@
     targets.forEach(function (target) { observer.observe(target); });
   }
 
-  function installHeroParallax() {
-    var media = document.querySelector('[data-hero-parallax]');
-    if (!media) return;
-    var ticking = false;
-
-    function update() {
-      ticking = false;
-      if (motionQuery && motionQuery.matches) {
-        media.style.setProperty('--hero-parallax-y', '0px');
-        return;
-      }
-      var rect = media.getBoundingClientRect();
-      var travel = window.innerHeight + rect.height;
-      var viewportCenter = window.innerHeight / 2;
-      var mediaCenter = rect.top + (rect.height / 2);
-      var progress = travel > 0 ? (viewportCenter - mediaCenter) / travel : 0;
-      var offset = Math.max(-20, Math.min(20, progress * 40));
-      media.style.setProperty('--hero-parallax-y', offset.toFixed(2) + 'px');
-    }
-
-    function requestUpdate() {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(update);
-    }
-
-    window.addEventListener('scroll', requestUpdate, { passive: true });
-    window.addEventListener('resize', requestUpdate);
-    if (motionQuery && motionQuery.addEventListener) motionQuery.addEventListener('change', requestUpdate);
-    requestUpdate();
-  }
-
   function installStaticImageParallax() {
     var selectors = [
       '.media-figure',
@@ -869,12 +1352,12 @@
     if (!items.length) return;
 
     var ticking = false;
-    var reduced = Boolean(motionQuery && motionQuery.matches);
+    var paused = pageMotionPaused() || document.hidden;
 
     function update() {
       ticking = false;
       items.forEach(function (item) {
-        if (reduced) {
+        if (paused) {
           item.container.style.setProperty('--static-parallax-y', '0px');
           return;
         }
@@ -902,26 +1385,40 @@
           var item = items.find(function (candidate) { return candidate.container === entry.target; });
           if (!item) return;
           item.visible = entry.isIntersecting;
-          item.container.classList.toggle('is-parallax-active', entry.isIntersecting && !reduced);
+          item.container.classList.toggle('is-parallax-active', entry.isIntersecting && !paused);
         });
         requestUpdate();
       }, { rootMargin: '20% 0px', threshold: 0 });
       items.forEach(function (item) { observer.observe(item.container); });
     } else {
-      items.forEach(function (item) { item.visible = true; });
+      items.forEach(function (item) {
+        item.visible = true;
+        item.container.classList.toggle('is-parallax-active', !paused);
+      });
     }
 
-    function syncMotionPreference() {
-      reduced = Boolean(motionQuery && motionQuery.matches);
+    function syncMotionState() {
+      paused = pageMotionPaused() || document.hidden;
       items.forEach(function (item) {
-        item.container.classList.toggle('is-parallax-active', item.visible && !reduced);
+        item.container.classList.toggle('is-parallax-active', item.visible && !paused);
       });
       requestUpdate();
     }
 
+    function settleForPrint() {
+      paused = true;
+      items.forEach(function (item) {
+        item.container.classList.remove('is-parallax-active');
+        item.container.style.setProperty('--static-parallax-y', '0px');
+      });
+    }
+
     window.addEventListener('scroll', requestUpdate, { passive: true });
     window.addEventListener('resize', requestUpdate);
-    if (motionQuery && motionQuery.addEventListener) motionQuery.addEventListener('change', syncMotionPreference);
+    document.addEventListener('landometer:motionchange', syncMotionState);
+    document.addEventListener('visibilitychange', syncMotionState);
+    window.addEventListener('beforeprint', settleForPrint);
+    window.addEventListener('afterprint', syncMotionState);
     requestUpdate();
   }
 
@@ -932,8 +1429,8 @@
       video.controls = false;
       var isNearViewport = !('IntersectionObserver' in window);
 
-      function reducedMotion() {
-        return Boolean(motionQuery && motionQuery.matches);
+      function playbackBlocked() {
+        return pageMotionPaused() || document.hidden;
       }
 
       function restorePoster() {
@@ -945,20 +1442,23 @@
       }
 
       function attachAndPlay() {
-        if (reducedMotion()) return;
+        if (playbackBlocked() || !isNearViewport) return;
         if (!video.getAttribute('src')) {
-          video.src = video.getAttribute('data-src');
+          var source = video.getAttribute('data-src');
+          if (!source) return;
+          video.src = source;
           video.load();
         }
         var attempt = video.play();
         if (attempt && attempt.catch) attempt.catch(function () {});
       }
 
-      function syncMotionPreference() {
-        if (reducedMotion()) {
+      function syncPlayback() {
+        if (playbackBlocked()) {
           video.autoplay = false;
           video.removeAttribute('autoplay');
-          restorePoster();
+          video.pause();
+          if (motionQuery && motionQuery.matches) restorePoster();
           return;
         }
         video.autoplay = true;
@@ -966,25 +1466,26 @@
         if (isNearViewport) attachAndPlay();
       }
 
-      if (motionQuery && motionQuery.addEventListener) {
-        motionQuery.addEventListener('change', syncMotionPreference);
-      }
+      document.addEventListener('landometer:motionchange', syncPlayback);
+      document.addEventListener('visibilitychange', syncPlayback);
+      window.addEventListener('beforeprint', function () { video.pause(); });
+      window.addEventListener('afterprint', syncPlayback);
+      window.addEventListener('pagehide', function () { video.pause(); });
 
       if (!('IntersectionObserver' in window)) {
-        syncMotionPreference();
+        syncPlayback();
         return;
       }
 
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           isNearViewport = entry.isIntersecting;
-          if (entry.isIntersecting) {
-            if (!reducedMotion()) attachAndPlay();
-          } else video.pause();
+          if (entry.isIntersecting) syncPlayback();
+          else video.pause();
         });
       }, { rootMargin: '240px 0px', threshold: 0.01 });
       observer.observe(video);
-      syncMotionPreference();
+      syncPlayback();
     });
   }
 
@@ -1064,6 +1565,7 @@
     });
   }
 
+  installMotionControls();
   installThemeControls();
   installCalmHeader();
   installMenu();
@@ -1073,10 +1575,12 @@
   installContactForm();
   installShareControls();
   installMediaArrival();
+  installLandometerMotifs();
+  installCityChatMotifs();
+  installIjjiLogoStings();
   installLoopingRails();
   installMotion();
   installSocialEmbeds();
-  installHeroParallax();
   installStaticImageParallax();
   installVideo();
   focusHashTarget();

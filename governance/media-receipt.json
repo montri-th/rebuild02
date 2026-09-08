@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260830-10",
+  "artifactBuildId": "ui-20260908-01",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -20,7 +20,7 @@
     }
   ],
   "productIdentityAssets": {
-    "approvalContext": "The owner explicitly assigned compact Rebuild02 product-card roles on 2026-08-30. Exact supplied or Landometer-owned runtime bytes are preserved without crop, trim, filter, recolour, animation, redraw or derived variants.",
+    "approvalContext": "The owner explicitly assigned compact Rebuild02 product-card roles on 2026-08-30. Static identity bytes remain unchanged; the 2026-09-08 owner-approved motif overlay adds product-scoped CityChat motion and the verified ijji r3 mark-only sting without modifying the original files.",
     "landometerProductCards": {
       "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
       "bytes": 38962,
@@ -47,14 +47,46 @@
       "sha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f",
       "sourceUrl": "https://ijji.landometer.com/static/images/ijji/ijjiLogoNoText.png",
       "sourceEvidence": "current Landometer-owned ijji production runtime; exact transparent PNG bytes",
-      "role": "ijji compact product-card mark",
+      "role": "retained historical ijji compact product-card mark; not rendered in ui-20260908-01",
       "transformations": "none"
     }
   },
+  "motifIntegration": {
+    "governancePath": "governance/motif-integration.json",
+    "assetClosure": "16 exact deployed files, 425,511 source bytes; every path, byte count, SHA-256, lifecycle and fallback is enumerated in governance/motif-integration.json and governance/site-manifest.json",
+    "landometer": "landometer.dial.quiet 1.2.1 in the hero; decorative, finite once, exact SVG fallback, no loop/replay/parallax",
+    "citychat": "owner-approved CityChat 3a เสียงบ้านเรา light rendition on #FCFCFA; product-specific, finite once, exact SVG fallback, no loop/replay/parallax; the official CityChat lockup remains static",
+    "ijji": "verified ijji r3 mark-only sting on #1D4497; all nine layers preload and decode after 14% intersection, the exact still remains visible until runtime readiness and on any failure, finite once with no replay/loop/parallax",
+    "driveSync": "private account-scoped source archives and the approved integration handoff are stored under the Drive integration folder recorded in governance/motif-integration.json"
+  },
+  "driveHandoffReceipt": {
+    "scope": "private account-scoped files for reuse through the connected Google Drive account; no background-sync claim and no publishing authority",
+    "folder": "https://drive.google.com/drive/folders/1_VaLIjW_eZdtGzRjsKIGDabGmIRKmGND",
+    "selectedAssetsPackage": {
+      "id": "1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ",
+      "url": "https://drive.google.com/file/d/1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ/view?usp=drivesdk",
+      "bytes": 307923,
+      "sha256": "f396ecece1a9038817e3c45108217dbd15087d2568e8956c9b956ccf3bdd5a1e"
+    },
+    "claudeReadFirst": {
+      "id": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ",
+      "url": "https://drive.google.com/file/d/1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ/view?usp=drivesdk",
+      "bytes": 4755,
+      "sha256": "3ef70b50c6a748c401180d8aa77e4c05e0947f53ab51fda84066ab2ac1f24e97"
+    },
+    "machineManifest": {
+      "id": "16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D",
+      "url": "https://drive.google.com/file/d/16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D/view?usp=drivesdk",
+      "bytes": 14991,
+      "sha256": "27d0e64df1b2acc2cb8e72e37b4549e84da5b6b00240108255d1f85e17b163b7"
+    },
+    "verifiedAt": "2026-09-08T08:29:50Z",
+    "readback": "pass: folder listed all three expected files; raw ZIP and final machine-manifest downloads matched local byte counts and SHA-256; the Markdown readback matched the local content; every file reported downloadable, shared=false and not_shared, and the ZIP permission list contained only the authenticated owner"
+  },
   "staticImagePresentation": {
-    "scope": ["Land, CityWiki and Landom pillar figures", "Location Intelligence cards", "Products and Services cards", "Projects and partnerships tailored service", "CityMETER showcase hero and tiles"],
-    "excluded": ["identity and product logos", "social provider surfaces", "Living video", "testimonial portraits and company marks"],
-    "runtimeBehavior": "requestAnimationFrame scroll parallax applies a bounded translation and small presentation scale only while relevant frames are near the viewport; prefers-reduced-motion freezes the layer",
+    "scope": ["Land, CityWiki and Landom pillar figures", "Location Intelligence cards", "non-motif Products and Services cards", "Projects and partnerships tailored service", "CityMETER showcase hero and tiles"],
+    "excluded": ["hero photograph", "Landometer quiet-dial motif", "CityChat 3a motif", "ijji mark sting", "identity and product logos", "social provider surfaces", "Living video", "testimonial portraits and company marks"],
+    "runtimeBehavior": "requestAnimationFrame scroll parallax applies a bounded translation and small presentation scale only while relevant eligible frames are near the viewport; page-level pause, document visibility, print and prefers-reduced-motion freeze the layer; the hero photograph and all three motif stages remain static in position",
     "assetBoundary": "CSS classes and transforms do not alter, crop, resize, recompress, recolour or rewrite any governed media bytes"
   },
   "livingVideo": {
@@ -68,7 +100,7 @@
     "metadataRecords": 0,
     "fastStart": true,
     "sourceSegment": "14.900–29.700 seconds from owner-supplied IMG_8633.mov",
-    "behavior": "no initial src, preload none, poster first; source attaches within 240px of the viewport, then muted playsinline autoplay loop with no controls; reduced motion keeps the poster; 4:3 desktop and 4:5 mobile crops use 50% 14% / 50% 18% object positions"
+    "behavior": "no initial src, preload none, poster first; source attaches within 240px of the viewport, then muted playsinline autoplay loop with no controls; the visible page control pauses and resumes playback without resetting, and visibility/pagehide/print suspension pauses it; reduced motion keeps the poster; 4:3 desktop and 4:5 mobile crops use 50% 14% / 50% 18% object positions"
   },
   "livingPoster": {
     "path": "assets/media/living-poster-rebuild02-r2-720.webp",
@@ -331,7 +363,8 @@
         "dimensions": "4256x2832",
         "sha256": "21946cf8226935b1489089ab78833d4693b3a83ce986e3a97ff2755fb74163e2"
       },
-      "role": "CityChat product-card atmosphere",
+      "role": "retained historical CityChat product-card atmosphere; not rendered in ui-20260908-01",
+      "deliveryState": "retained_not_rendered; replaced by the owner-approved CityChat 3a เสียงบ้านเรา light motif and its exact fallback",
       "representationBoundary": "A community reading scene; the people are not represented as CityChat users or endorsers.",
       "responsiveWidths": [720, 1200],
       "outputs": [
@@ -352,7 +385,8 @@
         "dimensions": "6240x4160",
         "sha256": "0e27bd5c66371fa66faf2ef56427d431609bccefda9ca9238ce49a52eacbf509"
       },
-      "role": "ijji product-card atmosphere",
+      "role": "retained historical ijji product-card atmosphere; not rendered in ui-20260908-01",
+      "deliveryState": "retained_not_rendered; replaced by the verified ijji r3 mark-only sting and exact still fallback",
       "representationBoundary": "A food-vendor work scene; the person is not represented as an ijji user or endorser.",
       "responsiveWidths": [720, 1200],
       "outputs": [
@@ -516,7 +550,7 @@
       "privacyAndMetadataReview": "Visible names, parcel details and values are treated as unverified interface samples rather than real-person or property assertions. Exact-copy delivery retains Adobe/ImageReady text and Photoshop XMP/document identifiers.",
       "representationBoundary": "A visibly labelled legacy asset retrieved on 2026-08-26; it is not represented as the current Property Tax Simulator interface."
     },
-    "visualReview": "Pending for ui-20260830-10 after the role reassignment, restored CityMETER responsive media and generalized static-image parallax."
+    "visualReview": "Pass for ui-20260908-01 in local Chromium: 16 bilingual viewport/theme combinations had no horizontal overflow or first-party media failures; the hero remained position-static; selected static parallax stayed within its governed eligible frames; the CityChat and ijji historical photos remained retained but unrendered; motif fallbacks survived reduced motion, no JavaScript, slow loading and simulated failure."
   },
   "locationAreaPerformanceR8": {
     "assetId": "location-area-performance-r8-198c0d59",
