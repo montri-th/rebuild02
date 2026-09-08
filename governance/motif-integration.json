@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "artifactBuildId": "ui-20260908-01",
   "releaseReceiptId": "rebuild02-ui-20260908-01",
-  "status": "candidate_local_verified",
+  "status": "published_live_verified",
   "requestBoundary": {
     "userRequest": "Update the Rebuild02 Landometer landing page with suitable animated assets and save the assets to Google Drive for shared use with Claude.",
     "cityChatOwnerApproval": "Granted explicitly by the owner in the current task on 2026-09-08. This closes the package's owner-sign-off gate for product-scoped CityChat motif use; deployed files remain bound to their observed bytes.",
@@ -165,6 +165,15 @@
     "ijjiNineLayerBytesRequestedOnlyAfterIntersection": 218641,
     "behavior": "CityChat runtime is dynamically imported at the product stage. ijji layer requests begin only after at least 14% stage intersection; the lazy exact still remains visible until successful load and decode. Browser caching may reduce transferred bytes, but no unmeasured compression or timing claim is made."
   },
+  "publication": {
+    "artifactCommit": "f38f33a9cf00c26110e040da0967261ae98b890c",
+    "artifactTree": "4458e55ffbe2b43b1990f85af6d62be63f854ed8",
+    "pagesWorkflowRunId": 34214191898,
+    "pagesBuildId": 1201690364,
+    "liveByteAttestationAt": "2026-09-08T10:18:05.929Z",
+    "liveBrowserVerifiedAt": "2026-09-08T10:25:48.050Z",
+    "evidence": "All 16 motif files matched the deployed artifact byte-for-byte. Focused live browser QA passed the bilingual mobile/desktop light/dark matrix, finite/no-replay CityChat and ijji lifecycles, pause/resume, reduced motion, fallbacks, and first-party error checks."
+  },
   "driveSync": {
     "access": "private_account_scoped",
     "motifLibraryRoot": "https://drive.google.com/drive/folders/1JXbcZovWZsOFtA9MykVeLhB_JzHg_nPh",
@@ -183,8 +192,8 @@
       "id": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ",
       "url": "https://drive.google.com/file/d/1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ/view?usp=drivesdk",
       "name": "00_CLAUDE_READ_FIRST.md",
-      "bytes": 4755,
-      "sha256": "3ef70b50c6a748c401180d8aa77e4c05e0947f53ab51fda84066ab2ac1f24e97"
+      "bytes": 4747,
+      "sha256": "eb6380a9750c144dbb745b6e52fc4c43bd0bd450dc8359c3249b04d90ac73116"
     },
     "machineManifestFile": {
       "id": "16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D",
@@ -196,7 +205,7 @@
     "approvedCityChatSourceFolder": "https://drive.google.com/drive/folders/19uIBytrOW_Ogyhct2d86Fbz14DxpkdoD",
     "verifiedSourceFolder": "https://drive.google.com/drive/folders/1rJx1LzMJ82qf40aXqaD28p8VLIeYg81P",
     "claudeInstruction": "Read 00_CLAUDE_READ_FIRST.md and this manifest before any archive prompt. Use only activeSelections for Rebuild02. CityChat 3a is owner-approved only in the CityChat product scope. Do not use the mismatched proposed logo SVGs or animate ijji state motifs as ambient decoration.",
-    "verification": "Folder listing and raw companion-file readback passed at 2026-09-08T08:04Z. All three files were downloadable, reported shared=false and source_visibility_status=not_shared; ZIP metadata showed the authenticated owner as its only permission. No broader sharing permission was added."
+    "verification": "Folder listing and final raw companion-file readbacks passed on 2026-09-08. All three files were downloadable, reported shared=false, and retained only the authenticated owner permission. No broader sharing permission was added."
   },
   "sourceArchives": [
     {"name": "CityChat มอทีฟชุมชน HTML.zip", "sha256": "3cce531d17af9b4e8159679d6678ba56339ce5eccd9527cf2049b9ec8168fbff", "classification": "owner_approved_source_with_logo_hash_exception", "driveUrl": "https://drive.google.com/file/d/1DUCN30TS-2MiK5N4Rr60imS0iuzPhTug/view?usp=drivesdk"},

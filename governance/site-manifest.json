@@ -12,7 +12,7 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_local_verified",
+    "evidenceStatus": "source_limited_live_verified",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
@@ -50,7 +50,7 @@
     "ambientHeroPan": false,
     "heroOrientationMotif": "Landometer 1.2.1 landometer.dial.quiet; decorative; exact fail-open still; finite once; no replay, loop or parallax",
     "cityChatProductMotif": "owner-approved CityChat 3a เสียงบ้านเรา light rendition; product-specific; fixed #FCFCFA surface; exact fail-open still; finite once; no replay, loop or parallax",
-    "ijjiProductLogoSting": "ijji r3 mark-only logo sting on Brand Blue; product-specific; all nine layers preload after intersection and the exact still remains until runtime readiness; finite once; no replay, loop or parallax",
+    "ijjiProductLogoSting": "ijji r3 mark-only logo sting on Brand Blue; product-specific; all nine layers load and decode after intersection and the exact still remains until runtime readiness; finite once; no replay, loop or parallax",
     "staticContentParallax": "bounded scroll-linked translation on substantial static content imagery; reduced-motion and the visible page control freeze every layer; hero media, brand marks, motif stages, provider surfaces, video and testimonial identity assets are excluded",
     "stagedStoryRally": true,
     "responsiveSocialEditorialGrid": true,
@@ -93,7 +93,7 @@
       "receiptId": "rebuild02-ui-20260908-01",
       "catalogOrContentVersion": "landometer-home-rebuild02-v14",
       "issuedAt": "2026-09-08",
-      "status": "candidate_local_verified"
+      "status": "published_live_verified"
     },
     "releaseFileHashes": [
       {"path": "index.html", "bytes": 6256, "sha256": "69630bd6d8debf21df5de5a133c25f52452c2620f49283d4e9b6935aac7bd41e"},
@@ -399,24 +399,29 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "llms.txt navigation index", "branded noindex 404.html", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "candidate_local_verified",
+    "currentReleaseState": "published_live_verified",
     "candidateArtifactBuildId": "ui-20260908-01",
-    "reviewedHeadSha": null,
-    "containmentProof": "pending final pre-push diff containment check",
+    "reviewedHeadSha": "f38f33a9cf00c26110e040da0967261ae98b890c",
+    "containmentProof": "pass: the directly pushed artifact commit f38f33a9cf00c26110e040da0967261ae98b890c has reviewed tree 4458e55ffbe2b43b1990f85af6d62be63f854ed8",
     "mergeMode": "direct_push_explicitly_authorized_by_user",
     "mergeCommitSha": null,
-    "deployedSourceSha": null,
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "not_started",
-    "pagesBuildId": null,
-    "pagesWorkflowRunId": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildUpdatedAt": null,
-    "checkedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending publication",
-    "liveByteParity": "pending publication",
+    "mergeCommitStatus": "not_applicable_direct_push_explicitly_authorized",
+    "deployedSourceSha": "f38f33a9cf00c26110e040da0967261ae98b890c",
+    "verifiedArtifactCommit": "f38f33a9cf00c26110e040da0967261ae98b890c",
+    "verifiedArtifactTree": "4458e55ffbe2b43b1990f85af6d62be63f854ed8",
+    "pagesBuildState": "built",
+    "pagesBuildId": 1201690364,
+    "pagesWorkflowRunId": 34214191898,
+    "pagesWorkflowState": "success",
+    "pagesBuildDurationMs": 27360,
+    "pagesBuildCreatedAt": "2026-09-08T10:12:18Z",
+    "pagesBuildUpdatedAt": "2026-09-08T10:12:45Z",
+    "liveByteAttestationAt": "2026-09-08T10:18:05.929Z",
+    "unknownRouteVerifiedAt": "2026-09-08T10:18:22Z",
+    "checkedAt": "2026-09-08T10:25:48.050Z",
+    "verifiedAt": "2026-09-08T10:25:48.050Z",
+    "liveRouteEvidence": "pass: root/index/TH/EN/404/llms/robots/sitemap/site.css/site.js and all 16 motif files returned intended live status/MIME; the root returned HTTP 200 before client navigation to Thai; an unknown route returned HTTP 404 text/html with branded 404 SHA-256 ece5b328143a9a603d324edfea9092a1321dddf15a61fdca81bedc5ad19e0314 at 2026-09-08T10:18:22Z",
+    "liveByteParity": "pass at 2026-09-08T10:18:05.929Z: 26 governed live probes/files matched artifact commit f38f33a9cf00c26110e040da0967261ae98b890c byte-for-byte",
     "previousVerifiedRelease": {
       "artifactBuildId": "ui-20260901-01",
       "artifactCommit": "f384da3b7d91087598c99f738e97633bd23c6bb1",
@@ -439,9 +444,19 @@
     },
     "liveBrowserEvidence": {
       "engine": "installed headless Chrome via Playwright",
-      "verifiedAt": null,
-      "routes": [],
-      "verified": "pending publication"
+      "verifiedAt": "2026-09-08T10:25:48.050Z",
+      "routes": [
+        "https://montri-th.github.io/rebuild02/",
+        "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
+        "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
+      ],
+      "matrix": "8/8 TH/EN x 390/1440 x light/dark",
+      "verified": "pass for ui-20260908-01: correct language, theme and build metadata; zero horizontal overflow and zero first-party page, console, request or HTTP failures; root returned HTTP 200 and navigated client-side to Thai; CityChat requested its module once, replaced the fallback with the exact SVG, settled by 2040 ms and did not replay; ijji began with its cold fallback and zero layer requests, then loaded all layers, mounted and completed once from 0 to 6.4 seconds with starts=1 and ends=1 and no re-entry replay; pause/resume passed; reduced motion retained static fallbacks and disabled the motion control",
+      "testedSiteJs": {"bytes": 56933, "sha256": "70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf"},
+      "screenshots": [
+        {"path": "/private/tmp/rebuild02-live-ui-20260908-01-th-mobile-390.png", "bytes": 3449130, "sha256": "cd8ef83b0e64504d7a48474a0a761a046915e9b1aef4817f40c9e7a46d88a341"},
+        {"path": "/private/tmp/rebuild02-live-ui-20260908-01-th-desktop-1440.png", "bytes": 8550376, "sha256": "c2c10b56e2cd6f07762c7b50cad41f00a04892be4973548e43a53c79fb97bb87"}
+      ]
     }
   },
   "growth": {
@@ -468,7 +483,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "local pass for ui-20260908-01 at 2026-09-08T08:23:44Z bound to site.js SHA-256 70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf: 20 bilingual viewport/theme combinations, Thai 130% text, a CDP 2x/reflow proxy, motif lifecycle and visual parity, page pause, reduced-motion, no-JavaScript, slow/load/decode failure fallbacks, keyboard focus, pagehide and print passed with zero first-party errors or horizontal overflow; native browser-chrome zoom, native hidden-tab state, provider-owned embeds and the remaining exhaustive SC-20 matrix stay open",
+    "renderedBrowserGate": "local pass at 2026-09-08T08:23:44Z plus focused live pass at 2026-09-08T10:25:48.050Z for ui-20260908-01 and exact site.js SHA-256 70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf; live 8/8 TH/EN x 390/1440 x light/dark, root-to-TH navigation, CityChat/ijji finite lifecycle, pause/resume and reduced-motion fallbacks passed with zero horizontal overflow or first-party failures; native browser-chrome zoom, native hidden-tab state, provider-owned embeds, performance budget and the remaining exhaustive SC-20 matrix stay open",
     "motifIntegrationPath": "governance/motif-integration.json",
     "productionAccessibilityGate": "open"
   },

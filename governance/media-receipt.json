@@ -71,17 +71,17 @@
     "claudeReadFirst": {
       "id": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ",
       "url": "https://drive.google.com/file/d/1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ/view?usp=drivesdk",
-      "bytes": 4755,
-      "sha256": "3ef70b50c6a748c401180d8aa77e4c05e0947f53ab51fda84066ab2ac1f24e97"
+      "bytes": 4747,
+      "sha256": "eb6380a9750c144dbb745b6e52fc4c43bd0bd450dc8359c3249b04d90ac73116"
     },
     "machineManifest": {
       "id": "16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D",
       "url": "https://drive.google.com/file/d/16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D/view?usp=drivesdk",
-      "bytes": 14991,
-      "sha256": "27d0e64df1b2acc2cb8e72e37b4549e84da5b6b00240108255d1f85e17b163b7"
+      "bytes": 15554,
+      "sha256": "d9a32b657d36c1545b9e58d8faa10e315ad93551874d066e6cd7683e6c6bf6e6"
     },
-    "verifiedAt": "2026-09-08T08:29:50Z",
-    "readback": "pass: folder listed all three expected files; raw ZIP and final machine-manifest downloads matched local byte counts and SHA-256; the Markdown readback matched the local content; every file reported downloadable, shared=false and not_shared, and the ZIP permission list contained only the authenticated owner"
+    "verifiedAt": "2026-09-08T10:39:19.747Z",
+    "readback": "pass: folder listed all three expected files; raw ZIP, clean Markdown read-first, and published machine-manifest downloads matched local byte counts and SHA-256; every file was downloadable, shared=false and not_shared, and the permission boundary remained owner-only"
   },
   "staticImagePresentation": {
     "scope": ["Land, CityWiki and Landom pillar figures", "Location Intelligence cards", "non-motif Products and Services cards", "Projects and partnerships tailored service", "CityMETER showcase hero and tiles"],

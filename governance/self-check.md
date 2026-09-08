@@ -1,14 +1,14 @@
 # Deterministic self-check — Rebuild02
 
-Artifact build: `ui-20260908-01` candidate; settled-byte local browser regression passed, publication pending
+Artifact build: `ui-20260908-01` published and live verified
 
 Machine validation: `pending`
 
 Conformance level: `authoring_aligned`
 
-This ledger keeps destination, performance, accessibility, machine-validation, and
-governance exceptions open instead of upgrading local rendered or historical evidence
-into a current production claim.
+This ledger keeps performance, accessibility, machine-validation, native-browser, and
+provider-matrix exceptions open instead of upgrading focused production evidence into an
+exhaustive conformance claim.
 
 | ID | Result | Evidence or open reason |
 |---|---|---|
@@ -26,12 +26,12 @@ into a current production claim.
 | SC-12 | pass | Root, Thai, and English metadata align with city-data and Location Intelligence intent and preserve canonical/hreflang, social, JSON-LD, branded 404, and navigation-only `llms.txt` boundaries. Project-path host-root limitations remain explicit. |
 | SC-13 | pass | TikTok, Facebook, Instagram, and LinkedIn retain the prior responsive provider-shell contract; X remains outbound-only. Third-party Facebook console noise is not counted as a first-party error pass. |
 | SC-14 | fail | Each locale now contains 109 native raw occurrences and 102 enhanced occurrences after subtracting seven mutually exclusive `noscript` links. Adding the two `tabindex="0"` rails yields 111 raw / 104 enhanced focusable totals. The new button is the localized motion control. A real contact POST/inbox outcome remains untested. |
-| SC-15 | pass | Candidate/release truth is segregated: `ui-20260908-01` has no fabricated commit, Pages run, or live parity claim; every current production field remains pending. Provider source `main`/root, HTTPS enforcement, and `built` status are configuration/state only. The previous verified release is historical: artifact `f384da3…` used workflow `33535403331` / build `1188237884`, while attestation/deployed HEAD `8cb5cb5…` triggered successful workflow `33536483613`; neither attests this candidate. |
+| SC-15 | pass | Directly authorized artifact commit `f38f33a…` (tree `4458e55…`) was deployed without a merge commit. Pages workflow `34214191898` succeeded and build `1201690364` built the same commit. At `2026-09-08T10:18:05.929Z`, 26 governed live probes/files matched exact artifact bytes; the unknown route returned HTTP 404 `text/html` with the exact branded 404 hash at `10:18:22Z`. Focused live browser QA passed at `10:25:48.050Z`. The older `ui-20260901-01` record remains history only. |
 | SC-16 | fail | The shared manifest records both locale routes but is not claimed as a complete per-route rendered-contract projection. |
 | SC-17 | pass | Retired values are absent from the public page layer; no retired literal was added. The exact CityChat overlay surface is an owner-approved product-scoped exception, not a DS token migration. |
 | SC-18 | pass | The first view has no caution/caveat block; the dated product proof band follows the hero and the null legacy row is not rendered. |
 | SC-19 | pass | The self-hosted Material Symbols file and active ligature set remain 25 glyphs at FILL 0 / wght 300. One explicit inline rounded-stroke pause/play SVG pair belongs only to the motion control and is recorded outside that font subset. Social SVGs and product identity remain separately classified. |
-| SC-20 | fail | Source/hash/syntax/JSON/JSON-LD/YAML/resource/diff checks passed after the governance set settled. A fresh local regression was rechecked unchanged at `2026-09-08T08:23:44Z` against `site.js` SHA `70e4e0b2…`: 16/16 viewport/theme combinations, 4/4 extra 360 px checks, full first-party sweep, CityChat, ijji cold/slow/404/decode rejection/pause-resume/completion/no replay, reduced motion, no-JS, Thai 130%, keyboard/focus, pagehide, print, and visual parity passed. True Chrome UI zoom and native hidden-tab visibility remain proxy-only; loading budget, exhaustive provider/social matrix, production checks, and production accessibility remain open. |
+| SC-20 | fail | Local regression passed against settled `site.js` SHA `70e4e0b2…`; live 8/8 TH/EN × 390/1440 × light/dark passed with correct language/theme/build, zero overflow and zero first-party failures. Root-to-Thai navigation, CityChat finite/no-replay, ijji cold/readiness/0→6.4-second finite/no-replay, pause/resume, and reduced-motion fallbacks passed. True Chrome UI zoom and native hidden-tab visibility remain proxy-only; the loading/performance budget, exhaustive provider/social matrix, production accessibility audit, and machine validation remain open. |
 | SC-21 | pass | The navbar remains 76/68 px when prominent and scales the complete row to a 29/27 px calm state; it restores on upward scroll, pointer/focus intent, and menu open. The motion control appears with theme and locale utilities inside the menu. |
 | SC-22 | pass | Source inspection confirms a static hero photograph, one 1.26-second quiet dial, one CityChat 3a sequence finishing by 2.04 seconds, one 6.4-second ijji mark sting after nine-layer readiness, a finite 3.7/1.09-second CTA sweep, and bounded below-fold static-image parallax. None of the three motifs replays or loops. The Living video remains the sole continuous loop and is page-pausable. |
 | SC-23 | pass | Settled-byte rendered QA confirms exact Landometer, CityChat, and ijji stills until runtimes are eligible and ready; synthetic ijji decode rejection retained its loaded mark with no component mount or start. The motion control uses explicit SVG state marks without expanding the Material subset. |

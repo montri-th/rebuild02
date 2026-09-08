@@ -1,6 +1,6 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260908-01` candidate; settled-byte local browser regression passed, publication pending
+Artifact build: `ui-20260908-01` published and live verified
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
@@ -133,17 +133,17 @@ Source and rendered assertions:
   and type. At widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440, local QA
   found all computed nowrap, zero `.btn` overflow, no Location CTA above 48 px and no page
   overflow.
-- Candidate `ui-20260908-01` passed a local regression bound to settled `site.js` SHA-256
-  `70e4e0b2…`, rechecked unchanged at `2026-09-08T08:23:44Z`. It covered 16/16
-  bilingual viewport/theme combinations, 4/4 extra 360 px checks, the full first-party
-  asset sweep, motif lifecycles and failures, reduced motion, no JavaScript, Thai 130%,
-  keyboard/focus, pagehide, print, and stage/fallback visual parity. True Chrome UI zoom
-  and native hidden-tab visibility remain proxy-only; publication, live route/MIME and
-  byte parity, production browser/accessibility, a selected loading budget, and the
-  exhaustive provider/social matrix remain open. Existing third-party social panels may
-  be blank/partial and Facebook may emit external console noise; the first-party sweep was
-  clean. The prior verified `ui-20260901-01` release is history, not evidence for this
-  candidate.
+- Published `ui-20260908-01` is bound to artifact commit `f38f33a…`, tree `4458e55…`,
+  Pages workflow `34214191898`, and Pages build `1201690364`. At
+  `2026-09-08T10:18:05.929Z`, root/index/TH/EN/404/llms/robots/sitemap/CSS/JS and all
+  16 motif files matched exact artifact bytes; an unknown route returned the exact branded
+  HTTP 404 at `10:18:22Z`. Focused live QA at `10:25:48.050Z` passed 8/8 TH/EN ×
+  390/1440 × light/dark, root-to-Thai navigation, CityChat/ijji finite lifecycles,
+  pause/resume and reduced-motion fallbacks with zero overflow or first-party failures.
+  True Chrome UI zoom and native hidden-tab visibility remain proxy-only; production
+  accessibility, a selected loading budget, and the exhaustive provider/social matrix
+  remain open. Existing third-party social panels may be blank/partial and Facebook may
+  emit external console noise. The prior `ui-20260901-01` release remains history only.
 - Products and Services exposes five product paths with consistent capsule conversation
   CTAs and an explicit fit cue. Desktop uses a 2+3 hierarchy: CityMETER and CityChat lead,
   followed by ijji, CityWiki and land/property tools. The restored CityMETER card pairs the

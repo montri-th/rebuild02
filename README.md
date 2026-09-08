@@ -2,11 +2,11 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. Current candidate:
-`ui-20260908-01` (`rebuild02-ui-20260908-01`; local settled-byte browser regression and
-all three private Drive handoff readbacks passed; publication and live verification remain
-pending; machine validation remains pending). The immediately
-previous live-verified artifact is `ui-20260901-01` and does not attest this candidate.
+install, bundler, CI workflow, or build step. Current live-verified release:
+`ui-20260908-01` (`rebuild02-ui-20260908-01`; artifact commit `f38f33a9…`, tree
+`4458e55f…`; local and production browser regression, live byte parity, and all three
+private Drive handoff readbacks passed; machine validation remains pending). The
+immediately previous live-verified artifact is `ui-20260901-01` and remains historical.
 
 | File | Purpose |
 |---|---|
@@ -148,11 +148,11 @@ previous live-verified artifact is `ui-20260901-01` and does not attest this can
 runtime/fallback paths, dependency hashes, owner-approval boundary, and private Drive folder.
 The account-scoped selected-assets ZIP is readback-verified at 307,923 bytes / SHA-256
 `f396ecec…` (Drive file `1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ`), and the Claude read-first
-file is readback-verified at 4,755 bytes / SHA-256 `3ef70b50…` (Drive file
-`1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ`). The final QA-bound integration manifest is also
-readback-verified with exact local-file parity at 14,991 bytes / SHA-256 `27d0e64d…`
+file is readback-verified at 4,747 bytes / SHA-256 `eb6380a9…` (Drive file
+`1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ`). The published live-QA-bound integration manifest is also
+readback-verified with exact local-file parity at 15,554 bytes / SHA-256 `d9a32b65…`
 (Drive file `16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D`, modified
-`2026-09-08T08:29:50Z`). The folder is private and not publicly shared; no automatic or
+`2026-09-08T10:39:19.747Z`). The folder is private and not publicly shared; no automatic or
 background synchronization is claimed.
 
 ## Publishing
@@ -163,7 +163,7 @@ suffixes are route contracts and must not be renamed.
 
 `machineValidation` remains `pending` and `conformanceLevel` remains
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
-validation language. Candidate source/hash checks pin `site.css` at 59,675 bytes / SHA-256
+validation language. Release source/hash checks pin `site.css` at 59,675 bytes / SHA-256
 `664f20cc…` and settled `site.js` at 56,933 bytes / SHA-256 `70e4e0b2…`. A fresh local
 regression rechecked that JavaScript hash unchanged at `2026-09-08T08:23:44Z` and passed
 16/16 bilingual viewport/theme combinations, 4/4 additional 360 px checks, the complete
@@ -171,13 +171,17 @@ first-party asset sweep, CityChat finite/no-replay behavior, ijji cold/slow/404/
 rejection/pause-resume/completion/no-replay behavior, reduced motion, no JavaScript, Thai
 130%, keyboard/focus, pagehide, print finalization, and stage/fallback visual parity. True
 Chrome UI zoom and native hidden-tab visibility remain proxy-only in headless testing; a
-selected loading budget, the exhaustive provider/social matrix, production checks, and the
-production accessibility audit remain open. Existing third-party social panels may render
+selected loading budget, the exhaustive provider/social matrix, and the production
+accessibility audit remain open. Existing third-party social panels may render
 blank/partial and Facebook may emit external console noise; the first-party sweep was
-clean. GitHub Pages remains configured for `main` / root with HTTPS enforced and provider
-status `built`, but that configuration/state does not prove candidate deployment. The prior
-artifact `f384da3…` used workflow `33535403331` / build `1188237884`; later attestation HEAD
-`8cb5cb5…` triggered successful workflow `33536483613`. Neither run attests this candidate.
-No new candidate commit, Pages run, live route/MIME, or live-byte parity is claimed before
-publication. After deployment, every emitted motif runtime, fallback, and ijji layer must
-receive final-URL/2xx/MIME/byte/hash attestation and a public browser check.
+clean. GitHub Pages published artifact commit
+`f38f33a9cf00c26110e040da0967261ae98b890c` (tree
+`4458e55ffbe2b43b1990f85af6d62be63f854ed8`) through successful workflow
+`34214191898` / Pages build `1201690364`. At `2026-09-08T10:18:05.929Z`, all 26 release
+URLs—core routes and files plus every motif runtime, fallback, and ijji layer—returned the
+expected final URL, 2xx status, MIME type, byte count, and SHA-256; an unknown route also
+returned the exact branded 404 with HTTP 404. Production browser QA passed at
+`2026-09-08T10:25:48.050Z` for TH/EN at 390 and 1440 px in light and dark, including
+finite/no-replay CityChat and ijji motion, pause/resume, reduced motion, and zero
+first-party errors or horizontal overflow. The prior `ui-20260901-01` workflow and build
+records remain historical and do not attest this release.

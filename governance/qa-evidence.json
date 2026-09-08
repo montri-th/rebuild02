@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "artifactBuildId": "ui-20260908-01",
   "releaseReceiptId": "rebuild02-ui-20260908-01",
-  "status": "candidate_local_rendered_verified_publication_pending",
+  "status": "published_live_verified",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
   "settledCandidateHashes": {
@@ -25,7 +25,7 @@
     "duplicateIds": 0,
     "localResourceReferenceErrors": 0,
     "javascriptSyntax": "pass for settled site.js SHA-256 70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf",
-    "gitDiffCheck": "pass after the five-file candidate governance set settled",
+    "gitDiffCheck": "pass for the settled artifact and the post-publication attestation diff",
     "materialSymbolFile": "assets/fonts/material-symbols-rounded-rebuild02-r10.ttf",
     "materialSymbolFileGlyphs": 25,
     "activeMaterialSymbolLigatures": 25,
@@ -46,12 +46,12 @@
     "cityChatLogoException": "the two proposed CityChat logo SVG hashes differ from their package register and are excluded; the existing governed official lockup remains static",
     "assetHashClosure": "pass for the 16 committed motif files listed in governance/motif-integration.json",
     "drivePackage": {
-      "status": "selected_assets_zip_read_first_and_final_QA_bound_manifest_readback_verified",
+      "status": "selected_assets_zip_read_first_and_published_live_QA_bound_manifest_readback_verified",
       "access": "private_account_scoped_not_shared",
       "folderUrl": "https://drive.google.com/drive/folders/1_VaLIjW_eZdtGzRjsKIGDabGmIRKmGND",
       "zip": {"fileId": "1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ", "bytes": 307923, "sha256": "f396ecece1a9038817e3c45108217dbd15087d2568e8956c9b956ccf3bdd5a1e", "readback": "raw_bytes_match"},
-      "readFirst": {"fileId": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ", "bytes": 4755, "sha256": "3ef70b50c6a748c401180d8aa77e4c05e0947f53ab51fda84066ab2ac1f24e97", "readback": "exact_base64_match"},
-      "manifest": {"fileId": "16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D", "bytes": 14991, "sha256": "27d0e64df1b2acc2cb8e72e37b4549e84da5b6b00240108255d1f85e17b163b7", "readback": "exact_base64_match", "driveModifiedAt": "2026-09-08T08:29:50Z", "status": "final_QA_and_resume_event_bound_copy_verified"},
+      "readFirst": {"fileId": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ", "bytes": 4747, "sha256": "eb6380a9750c144dbb745b6e52fc4c43bd0bd450dc8359c3249b04d90ac73116", "readback": "exact_base64_match", "driveModifiedAt": "2026-09-08T10:37:43.550Z"},
+      "manifest": {"fileId": "16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D", "bytes": 15554, "sha256": "d9a32b657d36c1545b9e58d8faa10e315ad93551874d066e6cd7683e6c6bf6e6", "readback": "exact_base64_match", "driveModifiedAt": "2026-09-08T10:39:19.747Z", "status": "published_live_QA_and_resume_event_bound_copy_verified"},
       "boundary": "account-scoped handoff only; the Drive manifest exactly matches the local governance file; no public sharing or background synchronization is claimed"
     }
   },
@@ -117,34 +117,50 @@
   },
   "browserAndProductionGates": {
     "publicationAuthorization": "authorized by the ongoing user request",
-    "candidateStatus": "local source and settled-byte rendered checks passed; publication pending",
+    "candidateStatus": "published live verified; named manual, performance and accessibility gates remain open",
     "productionArtifact": {
-      "scope": "candidate ui-20260908-01",
+      "scope": "published ui-20260908-01",
       "repository": "https://github.com/montri-th/rebuild02",
       "branch": "main",
-      "reviewedHeadSha": null,
+      "reviewedHeadSha": "f38f33a9cf00c26110e040da0967261ae98b890c",
       "mergeCommitSha": null,
-      "reviewedTreeOrDiffContained": "pending publication",
-      "deployedSourceSha": null
+      "mergeCommitStatus": "not_applicable_direct_push_explicitly_authorized",
+      "reviewedTreeOrDiffContained": "pass: directly pushed artifact commit f38f33a9cf00c26110e040da0967261ae98b890c has reviewed tree 4458e55ffbe2b43b1990f85af6d62be63f854ed8",
+      "artifactTree": "4458e55ffbe2b43b1990f85af6d62be63f854ed8",
+      "deployedSourceSha": "f38f33a9cf00c26110e040da0967261ae98b890c"
     },
     "pagesBuild": {
-      "scope": "candidate ui-20260908-01",
-      "id": null,
-      "workflowRunId": null,
-      "state": "not_started",
-      "commit": null,
-      "updatedAt": null
+      "scope": "published ui-20260908-01",
+      "id": 1201690364,
+      "workflowRunId": 34214191898,
+      "workflowState": "success",
+      "state": "built",
+      "commit": "f38f33a9cf00c26110e040da0967261ae98b890c",
+      "durationMs": 27360,
+      "createdAt": "2026-09-08T10:12:18Z",
+      "updatedAt": "2026-09-08T10:12:45Z"
     },
     "providerConfiguration": {
       "sourceBranch": "main",
       "sourcePath": "/",
       "httpsEnforced": true,
       "providerStatus": "built",
-      "scope": "pre-release provider configuration/state only; not candidate deployment evidence"
+      "scope": "current ui-20260908-01 deployment configuration corroborated by the recorded Pages workflow and build"
     },
-    "liveHttpAndMime": "pending publication",
-    "liveByteParity": "pending publication; cover every emitted current route plus site.css, site.js and all motif runtime/fallback/dependency URLs with final URL, 2xx, MIME, bytes and SHA-256",
-    "liveBrowser": "pending publication",
+    "liveHttpAndMime": "pass: root/index/TH/EN/404/llms/robots/sitemap/site.css/site.js and all 16 motif files returned intended live status/MIME; root returned HTTP 200 before client navigation to Thai; unknown route returned HTTP 404 text/html with branded 404 SHA-256 ece5b328143a9a603d324edfea9092a1321dddf15a61fdca81bedc5ad19e0314 at 2026-09-08T10:18:22Z",
+    "liveByteParity": "pass at 2026-09-08T10:18:05.929Z: 26 governed live probes/files matched artifact commit f38f33a9cf00c26110e040da0967261ae98b890c exactly",
+    "liveBrowser": {
+      "status": "pass_focused_production_regression",
+      "verifiedAt": "2026-09-08T10:25:48.050Z",
+      "matrix": "8/8 TH/EN x 390/1440 x light/dark",
+      "result": "correct language, theme and build; zero horizontal overflow and zero first-party page/console/request/HTTP failures; root HTTP 200 then client navigation to Thai; CityChat module requested once, exact SVG replaced fallback, settled by 2040 ms and did not replay; ijji cold fallback had zero layer requests, then all layers became ready, mounted and completed once from 0 to 6.4 seconds with starts=1 and ends=1 and no re-entry replay; pause/resume passed; reduced motion used static fallbacks with a disabled motion control",
+      "testedSiteJs": {"bytes": 56933, "sha256": "70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf"},
+      "screenshots": [
+        {"path": "/private/tmp/rebuild02-live-ui-20260908-01-th-mobile-390.png", "bytes": 3449130, "sha256": "cd8ef83b0e64504d7a48474a0a761a046915e9b1aef4817f40c9e7a46d88a341"},
+        {"path": "/private/tmp/rebuild02-live-ui-20260908-01-th-desktop-1440.png", "bytes": 8550376, "sha256": "c2c10b56e2cd6f07762c7b50cad41f00a04892be4973548e43a53c79fb97bb87"}
+      ],
+      "openBoundaries": "true Chrome UI zoom, native hidden-tab behavior, selected loading/performance budget, exhaustive provider/social matrix and production accessibility audit"
+    },
     "previousVerifiedRelease": {
       "artifactBuildId": "ui-20260901-01",
       "artifactCommit": "f384da3b7d91087598c99f738e97633bd23c6bb1",
