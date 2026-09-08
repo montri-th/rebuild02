@@ -1,6 +1,6 @@
 # Rebuild02 animated-asset handoff for Claude
 
-Candidate target: ui-20260908-02
+Candidate target: ui-20260909-01
 
 Site: <https://montri-th.github.io/rebuild02/>
 
@@ -8,7 +8,7 @@ Repository: <https://github.com/montri-th/rebuild02>
 
 Local machine manifest: governance/motif-integration.json
 
-This handoff describes the current candidate source. It is not a publication receipt and it does not claim that the ui-20260908-02 package has already been uploaded to Drive.
+This handoff describes the current candidate source. It is not a publication receipt and it does not claim that the ui-20260909-01 package has already been uploaded to Drive.
 
 ## Authority and instruction boundary
 
@@ -21,6 +21,11 @@ On 2026-09-08 the owner explicitly approved:
 - the animated ijji mark; and
 - transparent carriers for every motif and animated identity in this candidate.
 
+On 2026-09-09 the owner additionally directed every active Landometer motif to use its
+full-colour variant, asked CityChat and ijji identity marks to balance with peer product
+marks, and approved the variable-speed Living edit. Those artifact-local directions do
+not rewrite the upstream package guidance.
+
 These approvals are artifact- and product-scoped. CityChat and ijji behavior must not be generalized into shared Landometer capability.
 
 ## Current visual composition
@@ -28,7 +33,9 @@ These approvals are artifact- and product-scoped. CityChat and ijji behavior mus
 - CityChat uses the restored previous-version community photograph in the media area.
 - ijji uses the restored previous-version vendor photograph in the media area.
 - CityChat animation sits only in the product card's brand row as a static base lockup plus an animated bubble overlay.
-- The ijji mark-only sting sits only in the product card's brand row at 160–184 px.
+- CityChat sits in the shared 68 px brand row at a 270 px maximum width.
+- The ijji mark-only sting sits only in the product card's brand row at 64 × 64 px. This
+  explicit artifact-local size override does not amend the ijji package's 160 px minimum.
 - The Landometer hero uses logo.full as a large centered overlay over the hero photograph.
 - Every motif carrier is transparent. Do not add a dedicated color plate, border, card, or shadow behind a motif.
 
@@ -41,23 +48,28 @@ Machine selection boundary: release 1.2.1, family landometer.motif.v3, product s
 | Section | Exact asset ID | Variant | Meaning/job | Exact fallback |
 | --- | --- | --- | --- | --- |
 | Hero / top | landometer.logo.full | full | Animated brand opening; large hero-photo overlay | assets/motifs/landometer/svg/logo-full.svg |
-| Proof band | landometer.layers.quiet | quiet | Quiet divider into proof; never evidence encoding | assets/motifs/landometer/svg/layers-quiet.svg |
-| Land · Location · Living | landometer.rings.full | full | Section orientation around place | assets/motifs/landometer/svg/rings-full.svg |
-| Location Intelligence | landometer.dial.quiet | quiet | Orientation and question-setting; never a score | assets/motifs/landometer/svg/dial-quiet.svg |
+| Proof band | landometer.layers.full | full | Portfolio divider; never evidence encoding | assets/motifs/landometer/svg/layers-full.svg |
+| Land · Location · Living resolution | landometer.rings.full | full | Shared orientation after all three pillars, avoiding duplication with a pillar icon | assets/motifs/landometer/svg/rings-full.svg |
+| Location Intelligence | landometer.dial.full | full | Orientation and question-setting; never a score | assets/motifs/landometer/svg/dial-full.svg |
 | Products | landometer.layers.full | full | Shared foundation with product-specific layers | assets/motifs/landometer/svg/layers-full.svg |
-| Showcases | landometer.rings.quiet | quiet | Quiet spatial transition across examples | assets/motifs/landometer/svg/rings-quiet.svg |
-| CityWiki | landometer.layers.quiet | quiet | Contextual/editorial layering, not dataset encoding | assets/motifs/landometer/svg/layers-quiet.svg |
+| Showcases | landometer.rings.full | full | Spatial transition across examples | assets/motifs/landometer/svg/rings-full.svg |
+| CityWiki | landometer.layers.full | full | Contextual/editorial layering, not dataset encoding | assets/motifs/landometer/svg/layers-full.svg |
 | Landom | landometer.cultivate.full | full | Cultural closure and cultivating places with data | assets/motifs/landometer/svg/cultivate-full.svg |
 | Landometer DNA | landometer.dial.full | full | Methodology orientation, not measurement | assets/motifs/landometer/svg/dial-full.svg |
-| News | landometer.cultivate.quiet | quiet | Handoff into ongoing learning and updates | assets/motifs/landometer/svg/cultivate-quiet.svg |
-| Contact | landometer.slice.quiet | quiet | Priority/action closure | assets/motifs/landometer/svg/slice-quiet.svg |
+| News | landometer.cultivate.full | full | Handoff into ongoing learning and updates | assets/motifs/landometer/svg/cultivate-full.svg |
+| Contact | landometer.slice.full | full | Priority/action closure | assets/motifs/landometer/svg/slice-full.svg |
 
 Shared runtime:
 
 - assets/motifs/landometer/landometer-motifs.js
 - assets/motifs/landometer/landometer-motifs.css
 
-All 11 instances are decorative and aria-hidden with empty-alt final-state fallbacks. The static navigation, favicon, structured-data, social, story, and footer identity remain authoritative. The hero animation is the owner's artifact-local opening exception. Local 390 × 844 evidence observed all 13 hero subtree animations settle after about 3.76 seconds and no replay on re-entry; treat this as observed evidence, not a contractual runtime.
+All 11 instances use blue ink, are decorative and aria-hidden, and retain empty-alt
+full-colour final-state fallbacks. The static navigation, favicon, structured-data,
+social, and footer identity remain authoritative. The hero animation is the owner's
+artifact-local opening exception. Local 390 × 844 evidence observed all 13 hero subtree
+animations settle after about 3.76 seconds and no replay on re-entry; treat this as
+observed evidence, not a contractual runtime.
 
 ## CityChat product-card identity
 
@@ -79,7 +91,7 @@ The overlay's observed bytes differ from the supplied package register. The owne
 
 Load the animation only after at least 14% intersection and after the base decodes. It plays once, resolves to the final bubbles, and never replaces the restored photograph. The whole visual identity is aria-hidden; the adjacent product heading announces CityChat once.
 
-The previously selected CityChat 3a card-filling motif is not selected for ui-20260908-02.
+The previously selected CityChat 3a card-filling motif is not selected for ui-20260909-01.
 
 ## ijji product-card identity
 
@@ -94,9 +106,13 @@ Use ijji.logo-sting.mark:
 - Runtime: assets/motifs/ijji/logo-sting/ijji-logo-sting.js
 - Exact fallback: assets/motifs/ijji/logo-sting/layers/ijji-mark-still.png
 - Nine exact layer PNGs: assets/motifs/ijji/logo-sting/layers/
-- Mark-only/notagline, 6.4 seconds, 160–184 px displayed width.
+- Mark-only/notagline, 6.4 seconds, 64 × 64 px displayed size in this artifact.
 
-The package describes Brand Blue and Dark as compatible host surfaces. The latest owner instruction explicitly overrides that compatible-host guidance for this Rebuild02 candidate: use a transparent motif carrier and do not introduce a dedicated Brand Blue or Dark plate. This exception is limited to ui-20260908-02 and does not amend the ijji package or the motif-library release.
+The package describes Brand Blue and Dark as compatible host surfaces and a 160 px
+minimum mark size. The latest owner instructions explicitly override both points for this
+Rebuild02 candidate: use a transparent carrier, do not introduce a dedicated plate, and
+use a 64 × 64 px stage to balance peer marks. These exceptions are limited to
+ui-20260909-01 and do not amend the ijji package or motif-library release.
 
 Do not mount or reveal the runtime until all nine layers have loaded and decoded after the stage reaches at least 14% intersection. Keep the exact still on slow loading, any load/decode failure, reduced motion, or no JavaScript. The whole visual mark is aria-hidden; the adjacent product heading announces ijji once.
 
@@ -113,13 +129,24 @@ Do not use ijji state motifs as ambient decoration. They remain reserved for rea
 - The restored CityChat and ijji product photographs remain visible regardless of animation support.
 - The separate owner-directed Living video loop is not a motif and is outside this contract.
 
+## Living motion asset
+
+The active Living edit is
+`assets/media/living-city-rebuild02-r3-vary-speed.mp4`: 5,302,407 bytes, SHA-256
+`babfd35f8153b405596e62c7e424bb7fc9b0f92e6a94ce613564fd869c32c685`,
+13.951667 seconds, 720 × 1280, H.264 Main@3.1, silent, metadata-free, and fast-start.
+Nine retimed sections range from 0.68× to 1.45×. Keep its current poster, muted inline
+viewport-gated loop, reduced-motion still, and page-motion pause behavior. The retained r2
+file/source lineage remains provenance only and is not the active page video.
+
 ## Version boundary
 
 Rebuild02 remains on Landometer Design System 0.9.0-r7 and kit lds-kit-0.9.0-r4. Motif library 1.2.1 is an owner-approved artifact overlay governed against a later DS reference. Its use here does not upgrade or amend Rebuild02's declared DS conformance.
 
 ## Drive handoff
 
-The immutable ui-20260908-02 handoff is in this private, account-scoped folder:
+The immutable ui-20260908-02 handoff remains in this private, account-scoped historical
+folder and must not be overwritten:
 
 <https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z>
 
@@ -128,7 +155,7 @@ The immutable ui-20260908-02 handoff is in this private, account-scoped folder:
 - Selected-assets ZIP: <https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk>
   - 325,258 bytes
   - SHA-256 `676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e`
-  - 26 active exact files / 449,075 uncompressed source bytes under `selected-assets/motifs/`
+  - 26 exact historical files / 449,075 uncompressed source bytes under `selected-assets/motifs/`
   - the retained inactive CityChat 3a asset is intentionally absent
 
 Final metadata and raw-byte readbacks for all three files passed on 2026-09-08. No
@@ -136,7 +163,13 @@ public, anyone, domain, or group permission was added. This is a shared working 
 through the connected Drive account; it does not claim background synchronization or
 grant Claude independent publication authority.
 
-Do not invent IDs or reuse the ui-20260908-01 package as if it were current. Keep Drive
+The current ui-20260909-01 handoff is pending creation after the artifact commit. It must
+use a new private folder and contain a new read-first document, machine selection manifest,
+and deterministic ZIP with the 22 active motif/identity files (444,975 source bytes), the
+Living r3 video, and its poster. Record exact Drive IDs, byte lengths, SHA-256 hashes,
+owner-only permissions, and raw readback before describing that package as verified.
+
+Do not invent IDs or reuse an earlier package as if it were current. Keep Drive
 access private and account-scoped unless the owner explicitly changes that policy.
 
 The ui-20260908-01 publication and Drive receipts remain historical records in governance/motif-integration.json; they are not the selected/runtime state for this candidate.

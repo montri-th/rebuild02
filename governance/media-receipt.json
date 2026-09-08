@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260908-02",
+  "artifactBuildId": "ui-20260909-01",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -36,7 +36,7 @@
       "overlay": {"path": "assets/motifs/citychat/logo/logo-bubbles-proposal-light.svg", "bytes": 9249, "dimensions": "494x106", "observedSha256": "4f3defeb8901a9fc1b92690dab53c88c8c06532c99ef99eb8dc20f06f07f9aeb", "registeredSha256": "3154e91f107df269b783337bbb4f868037449dd4dd349aca1215069c1818e8e1"},
       "sourceEvidence": "the observed base and overlay bytes are identical in both owner-supplied CityChat archives; embedded archive instructions are reference-only",
       "provenanceException": "owner-approved observed bytes for this Rebuild02 product-card identity only; the mismatched overlay hash is explicitly recorded and the proposal is not promoted to a generally released CityChat logo",
-      "surfaceAndLifecycle": "transparent 494:106 carrier at 230 px max width; exact base and overlay are present in source HTML; runtime begins at at least 14% visibility, runs finite once, never replays or loops, and reduced-motion/no-JavaScript/failure retain the composed still",
+      "surfaceAndLifecycle": "transparent 494:106 carrier at 270 px max width in a 68 px product brand row; exact base and overlay are present in source HTML; runtime begins at at least 14% visibility, runs finite once, never replays or loops, and reduced-motion/no-JavaScript/failure retain the composed still",
       "retainedGovernedStatic": {"path": "assets/products/citychat-primary-logo-official.png", "bytes": 8371, "sha256": "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62"},
       "transformations": "none to any source bytes"
     },
@@ -55,29 +55,35 @@
         {"path": "assets/motifs/ijji/logo-sting/layers/tag-2-3.png", "bytes": 23984, "sha256": "3821e99ab1ff83edc12b95e06c2d2fc2cd1019905900a8f15fc57481b7d367c4"}
       ],
       "role": "verified ijji r3 mark-only sting in the product brand row",
-      "surfaceAndLifecycle": "transparent carrier at clamp(160px, 15vw, 184px), by owner override of compatible Brand Blue host-surface guidance; nine layers load and decode after at least 14% visibility; exact still persists until ready or on failure; finite 6.4 s once with no replay, loop or parallax",
+      "surfaceAndLifecycle": "transparent 64 × 64 px carrier in a 68 px product brand row by explicit artifact-local owner size and surface overrides; the ijji package's 160 px minimum-delivered guidance remains unchanged and is not amended; nine layers load and decode after at least 14% visibility; exact still persists until ready or on failure; finite 6.4 s once with no replay, loop or parallax",
       "retainedHistorical": {"path": "assets/products/ijji-logo-official.png", "bytes": 32921, "sha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f"},
       "transformations": "none"
     }
   },
   "motifIntegration": {
     "governancePath": "governance/motif-integration.json",
-    "assetClosure": "26 active unique files, 449,075 source bytes: Landometer CSS/runtime plus 10 unique SVG fallbacks, CityChat runtime/base/overlay, and ijji runtime/fallback/nine layers; 11 Landometer placements are emitted per locale and layers.quiet is intentionally reused",
-    "landometer": "verified Landometer 1.2.1 families logo, layers, rings, dial, cultivate and slice appear in 11 section placements; hero logo.full is prominent over the photo; every carrier is transparent by owner instruction; all motions are finite once with exact SVG fallback and no loop/replay/parallax",
+    "assetClosure": "22 active unique files, 444,975 source bytes: Landometer CSS/runtime plus 6 unique full-colour SVG fallbacks, CityChat runtime/base/overlay, and ijji runtime/fallback/nine layers; 11 Landometer placements are emitted per locale, every placement uses a full-colour variant, and repeated full-colour fallbacks are intentionally reused",
+    "landometer": "verified Landometer 1.2.1 families logo, layers, rings, dial, cultivate and slice appear in 11 section placements; every placement uses its full-colour variant, hero logo.full is prominent over the photo, and no quiet variant is active; every carrier is transparent by owner instruction; all motions are finite once with exact SVG fallback and no loop/replay/parallax",
     "citychat": "owner-approved animated light identity uses the exact base PNG and observed overlay SVG on a transparent carrier; the observed overlay SHA mismatch is an artifact-scoped provenance exception, not a general release claim",
-    "ijji": "verified ijji r3 mark-only sting at 160–184 px on a transparent carrier by owner surface override; all nine layers preload/decode after 14% intersection, exact still until readiness/failure, finite once without replay/loop/parallax",
-    "driveSync": "ui-20260908-02 private account-scoped handoff passed complete raw-byte readback for the selected-assets ZIP, Claude read-first file and artifact-selection manifest; both text snapshots were byte-identical again and all folder/file permissions remained owner-only at 2026-09-08T15:47:33.404Z; the Drive text files are immutable pre-attestation snapshots and the ui-20260908-01 package remains historical"
+    "ijji": "verified ijji r3 mark-only sting at 64 × 64 px in a 68 px product brand row on a transparent carrier by artifact-local owner overrides; the package's 160 px minimum-delivered guidance remains unchanged and is not amended; all nine layers preload/decode after 14% intersection, exact still until readiness/failure, finite once without replay/loop/parallax",
+    "driveSync": "The distinct ui-20260909-01 selection delta, including all-full Landometer fallbacks and the Living r3 video, is pending a new private Drive handoff and complete raw-byte readback. The verified ui-20260908-02 three-file handoff remains an immutable historical snapshot and must not be overwritten; no background synchronization is claimed."
   },
   "driveHandoffReceipt": {
-    "scope": "private account-scoped files for reuse through the connected Google Drive account; no background-sync claim and no publishing authority",
+    "scope": "private account-scoped files for reuse through the connected Google Drive account; current ui09 selection delta remains pending, the verified ui02 files below are immutable historical records, and no background-sync or publishing authority is claimed",
+    "currentUi09Delta": {
+      "artifactBuildId": "ui-20260909-01",
+      "status": "pending_new_private_handoff_and_complete_raw_byte_readback",
+      "scope": "selection and implementation delta only, including all-full Landometer fallbacks and Living r3; no Drive file IDs or verification claim exists yet"
+    },
+    "historicalArtifactBuildId": "ui-20260908-02",
     "folder": "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z",
-    "status": "ui02_three_file_handoff_raw_readback_verified",
+    "status": "ui09_delta_pending_ui02_three_file_handoff_immutable_historical_raw_readback_verified",
     "selectedAssetsPackage": {"id": "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM", "url": "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk", "name": "Rebuild02_Motif_Integration_ui-20260908-02.zip", "bytes": 325258, "sha256": "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e", "modifiedAt": "2026-09-08T14:47:06.579Z", "readback": "raw_bytes_match"},
     "claudeReadFirst": {"id": "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU", "url": "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk", "name": "00_CLAUDE_READ_FIRST.md", "bytes": 9675, "sha256": "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b", "modifiedAt": "2026-09-08T14:51:23.020Z", "readback": "raw_bytes_match"},
     "machineManifest": {"id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV", "url": "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk", "name": "motif-integration.ui-20260908-02.json", "bytes": 31289, "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de", "modifiedAt": "2026-09-08T14:51:32.673Z", "readback": "artifact_selection_snapshot_raw_bytes_match"},
     "verifiedAt": "2026-09-08T14:55:33Z",
     "recheckedAt": "2026-09-08T15:47:33.404Z",
-    "readback": "folder listing, raw bytes and metadata passed for exactly three files at 2026-09-08T14:55:33Z; the two text snapshots were read back byte-identically again and all four folder/file permission records remained shared=false with one owner permission and no public, anyone, domain or group permission at 2026-09-08T15:47:33.404Z; the Drive text files are immutable pre-attestation asset-selection snapshots and the repository release receipts carry later publication evidence",
+    "readback": "Historical ui-20260908-02 folder listing, raw bytes and metadata passed for exactly three files at 2026-09-08T14:55:33Z; the two text snapshots were read back byte-identically again and all four folder/file permission records remained shared=false with one owner permission and no public, anyone, domain or group permission at 2026-09-08T15:47:33.404Z. These ui02 Drive files are immutable pre-attestation asset-selection snapshots and do not attest ui-20260909-01; the repository release receipts carry later publication evidence.",
     "previousVerifiedUi01": {
       "selectedAssetsPackageId": "1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ",
       "claudeReadFirstId": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ",
@@ -93,16 +99,37 @@
     "assetBoundary": "CSS classes and transforms do not alter, crop, resize, recompress, recolour or rewrite any governed media bytes"
   },
   "livingVideo": {
-    "path": "assets/media/living-city-rebuild02-r2.mp4",
-    "bytes": 13724404,
-    "sha256": "ab31208c048ab0e3fcd32de1db96f2d0551b762067ec6c333d9e7ab731cfa9b5",
-    "durationSeconds": 14.803,
+    "path": "assets/media/living-city-rebuild02-r3-vary-speed.mp4",
+    "bytes": 5302407,
+    "sha256": "babfd35f8153b405596e62c7e424bb7fc9b0f92e6a94ce613564fd869c32c685",
+    "durationSeconds": 13.951667,
     "displayDimensions": "720x1280",
-    "codec": "H.264 Main; nominal frame rate 30.060934 fps with source/trim-boundary timing retained",
+    "codec": "H.264 Main@3.1 (avc1); nominal frame rate approximately 27.452 fps; approximately 3.04 Mbps",
     "audioTracks": 0,
     "metadataRecords": 0,
     "fastStart": true,
-    "sourceSegment": "14.900–29.700 seconds from owner-supplied IMG_8633.mov",
+    "immediateSource": {
+      "path": "assets/media/living-city-rebuild02-r2.mp4",
+      "bytes": 13724404,
+      "sha256": "ab31208c048ab0e3fcd32de1db96f2d0551b762067ec6c333d9e7ab731cfa9b5",
+      "durationSeconds": 14.803333,
+      "displayDimensions": "720x1280",
+      "codec": "H.264 Main; nominal frame rate 30.060934 fps with source/trim-boundary timing retained",
+      "sourceSegment": "14.900–29.700 seconds from owner-supplied IMG_8633.mov"
+    },
+    "sourceProvenance": "The active r3 output is a deterministic editorial derivative of the retained r2 file above; r2 remains a derivative of seconds 14.900–29.700 from owner-supplied IMG_8633.mov. The owner source stays outside the repository and its device, capture-time, and location metadata is not deployed.",
+    "speedTreatment": "Nine explicit r2 source intervals use variable playback speeds from 0.68× to 1.45×, slowing smiles, waves and people-led moments while using brisker street transitions for a warm, playful rhythm. The 7.35–9.15 second r2 interval is an intentional editorial jump; no colour transformation or audio was added.",
+    "speedSections": [
+      {"sourceSeconds": "0.20–2.40", "speed": "0.82x"},
+      {"sourceSeconds": "2.40–3.65", "speed": "1.22x"},
+      {"sourceSeconds": "3.65–4.70", "speed": "1.45x"},
+      {"sourceSeconds": "4.70–6.30", "speed": "1.12x"},
+      {"sourceSeconds": "6.30–7.35", "speed": "0.92x"},
+      {"sourceSeconds": "9.15–10.10", "speed": "0.82x"},
+      {"sourceSeconds": "10.10–11.35", "speed": "0.68x"},
+      {"sourceSeconds": "11.35–12.45", "speed": "0.74x"},
+      {"sourceSeconds": "12.45–14.55", "speed": "0.86x"}
+    ],
     "behavior": "no initial src, preload none, poster first; source attaches within 240px of the viewport, then muted playsinline autoplay loop with no controls; the visible page control pauses and resumes playback without resetting, and visibility/pagehide/print suspension pauses it; reduced motion keeps the poster; 4:3 desktop and 4:5 mobile crops use 50% 14% / 50% 18% object positions"
   },
   "livingPoster": {
@@ -366,7 +393,7 @@
         "dimensions": "4256x2832",
         "sha256": "21946cf8226935b1489089ab78833d4693b3a83ce986e3a97ff2755fb74163e2"
       },
-      "role": "active responsive CityChat product-card atmosphere in ui-20260908-02",
+      "role": "active responsive CityChat product-card atmosphere in ui-20260909-01",
       "deliveryState": "rendered above the product copy; the owner-approved animated CityChat identity is a separate transparent brand-row layer and does not replace the photograph",
       "representationBoundary": "A community reading scene; the people are not represented as CityChat users or endorsers.",
       "responsiveWidths": [720, 1200],
@@ -388,7 +415,7 @@
         "dimensions": "6240x4160",
         "sha256": "0e27bd5c66371fa66faf2ef56427d431609bccefda9ca9238ce49a52eacbf509"
       },
-      "role": "active responsive ijji product-card atmosphere in ui-20260908-02",
+      "role": "active responsive ijji product-card atmosphere in ui-20260909-01",
       "deliveryState": "rendered above the product copy; the verified ijji r3 mark-only sting is a separate transparent brand-row layer and does not replace the photograph",
       "representationBoundary": "A food-vendor work scene; the person is not represented as an ijji user or endorser.",
       "responsiveWidths": [720, 1200],
@@ -553,7 +580,7 @@
       "privacyAndMetadataReview": "Visible names, parcel details and values are treated as unverified interface samples rather than real-person or property assertions. Exact-copy delivery retains Adobe/ImageReady text and Photoshop XMP/document identifiers.",
       "representationBoundary": "A visibly labelled legacy asset retrieved on 2026-08-26; it is not represented as the current Property Tax Simulator interface."
     },
-    "visualReview": "Focused local pass for ui-20260908-02 at 2026-09-08T14:28:19Z was followed by focused production checks completed by 2026-09-08T15:50:20.728Z: 18/18 representative Thai/English viewport/theme cases from 320 through 1920 px, including four bilingual light/dark cases at 360 px, had zero horizontal overflow and no first-party runtime errors; exactly 11 transparent borderless/paddingless Landometer carriers appeared per locale; the prominent centered hero logo.full stayed within the sky at every tested width; restored CityChat and ijji photo families were visible; both transparent product-identity stages stayed contained; Landometer, CityChat and ijji completed once without re-entry replay; reduced-motion and no-JavaScript retained final fallbacks. Exact live byte parity passed 44/44 probes at 2026-09-08T15:14:46.364Z and the exact branded 404 passed at 2026-09-08T15:15:09.548Z; production accessibility, machine validation, native zoom/hidden-tab and performance-budget gates remain open."
+    "visualReview": "Focused local candidate pass for ui-20260909-01 completed at 2026-09-08T19:21:49.302Z: layout 32/32, captions 7/7 with twelve flow-safe captions per case, carousels 4/4, reduced-motion 4/4, no-JavaScript 2/2 including centered map fallback, and Living r3 video 1/1. The matrix covered both locales at light widths 320/360/390/600/601/630/640/700/768/900/1080/1081/1280/1440 and dark widths 390/1440; all 11 Landometer placements were full-colour on transparent carriers, product identities and content were balanced, captions stayed stable, exact name tokens and mobile CityMETER examples remained visible, contextual CTA contrast and centered Thailand maps passed, and there was no horizontal overflow, duplicate ID, or first-party runtime error. Publication/live bytes, the ui09 Drive delta, production accessibility, machine validation, native zoom/hidden-tab and performance-budget gates remain open; verified ui02 Drive and production evidence remains immutable historical evidence only and does not attest ui09."
   },
   "locationAreaPerformanceR8": {
     "assetId": "location-area-performance-r8-198c0d59",

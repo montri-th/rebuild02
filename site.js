@@ -1156,6 +1156,14 @@
       var resizeFrame = 0;
       var lastClientWidth = rail.clientWidth;
       var supportsScrollEnd = 'onscrollend' in rail;
+      var autoEnabled = rail.getAttribute('data-auto-scroll') === 'true';
+      var autoDelay = Math.max(3000, Number(rail.getAttribute('data-auto-delay')) || 5800);
+      var autoResumeDelay = 8000;
+      var autoRetryDelay = 1000;
+      var autoTimer = 0;
+      var pointerHover = false;
+      var focusWithin = false;
+      var autoStopped = false;
 
       function paddingStart() {
         var style = window.getComputedStyle(rail);
@@ -1296,6 +1304,64 @@
         if (behavior === 'auto') window.requestAnimationFrame(normalizePosition);
       }
 
+      function clearAuto() {
+        window.clearTimeout(autoTimer);
+        autoTimer = 0;
+      }
+
+      function railIsVisible() {
+        var bounds = rail.getBoundingClientRect();
+        var style = window.getComputedStyle(rail);
+        return bounds.width > 0 &&
+          bounds.height > 0 &&
+          bounds.right > 0 &&
+          bounds.bottom > 0 &&
+          bounds.left < window.innerWidth &&
+          bounds.top < window.innerHeight &&
+          style.display !== 'none' &&
+          style.visibility !== 'hidden';
+      }
+
+      function canAutoAdvance() {
+        return autoEnabled &&
+          railIsVisible() &&
+          !autoStopped &&
+          !pointerActive &&
+          !pointerHover &&
+          !focusWithin &&
+          pageMotionCanRun() &&
+          !(motionQuery && motionQuery.matches);
+      }
+
+      function scheduleAuto(delay) {
+        clearAuto();
+        if (!autoEnabled || autoStopped) return;
+        autoTimer = window.setTimeout(function () {
+          autoTimer = 0;
+          if (!canAutoAdvance()) {
+            if (pageMotionCanRun() && !(motionQuery && motionQuery.matches) && !pointerActive && !pointerHover && !focusWithin) {
+              scheduleAuto(autoRetryDelay);
+            }
+            return;
+          }
+          normalizePosition();
+          window.requestAnimationFrame(function () {
+            var items = Array.from(rail.children);
+            var current = nearestItemIndex(items);
+            var target = items[current + 1];
+            if (!target) {
+              normalizePosition();
+              target = originals[0];
+            }
+            scrollToItem(target);
+            scheduleAuto(autoDelay);
+          });
+        }, typeof delay === 'number' ? delay : autoDelay);
+      }
+
+      function pauseAuto() { clearAuto(); }
+      function resumeAuto() { scheduleAuto(autoResumeDelay); }
+
       rail.addEventListener('keydown', function (event) {
         if (event.target !== rail || event.altKey || event.ctrlKey || event.metaKey) return;
         var items = Array.from(rail.children);
@@ -1309,6 +1375,7 @@
         else return;
 
         event.preventDefault();
+        pauseAuto();
         scrollToItem(target);
       });
 
@@ -1320,16 +1387,46 @@
       if (supportsScrollEnd) rail.addEventListener('scrollend', normalizePosition);
       else rail.addEventListener('scroll', scheduleNormalize, { passive: true });
 
-      function beginPointer() { pointerActive = true; }
+      function beginPointer() {
+        pointerActive = true;
+        pauseAuto();
+      }
       function endPointer() {
         if (!pointerActive) return;
         pointerActive = false;
         scheduleNormalize();
+        resumeAuto();
       }
 
       rail.addEventListener('pointerdown', beginPointer, { passive: true });
       window.addEventListener('pointerup', endPointer, { passive: true });
       window.addEventListener('pointercancel', endPointer, { passive: true });
+      rail.addEventListener('pointerenter', function (event) {
+        if (event.pointerType && event.pointerType !== 'mouse') return;
+        pointerHover = true;
+        pauseAuto();
+      });
+      rail.addEventListener('pointerleave', function (event) {
+        if (event.pointerType && event.pointerType !== 'mouse') return;
+        pointerHover = false;
+        resumeAuto();
+      });
+      rail.addEventListener('focusin', function () {
+        focusWithin = true;
+        pauseAuto();
+      });
+      rail.addEventListener('focusout', function () {
+        window.setTimeout(function () {
+          focusWithin = rail.contains(document.activeElement);
+          if (!focusWithin) resumeAuto();
+        }, 0);
+      });
+      rail.addEventListener('wheel', function () {
+        pauseAuto();
+        resumeAuto();
+      }, { passive: true });
+      rail.addEventListener('touchstart', pauseAuto, { passive: true });
+      rail.addEventListener('touchend', resumeAuto, { passive: true });
 
       if ('ResizeObserver' in window) {
         var resizeObserver = new ResizeObserver(function () {
@@ -1346,6 +1443,31 @@
       }
 
       buildClones(0);
+
+      if (autoEnabled && 'IntersectionObserver' in window) {
+        var autoObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting || railIsVisible()) scheduleAuto(autoDelay);
+            else pauseAuto();
+          });
+        }, { threshold: [0, 0.05, 0.2] });
+        autoObserver.observe(rail);
+      }
+
+      function syncAutoState() {
+        if (canAutoAdvance()) scheduleAuto(autoDelay);
+        else pauseAuto();
+      }
+
+      document.addEventListener('landometer:motionchange', syncAutoState);
+      document.addEventListener('visibilitychange', syncAutoState);
+      window.addEventListener('beforeprint', pauseAuto);
+      window.addEventListener('afterprint', syncAutoState);
+      window.addEventListener('pagehide', function () {
+        autoStopped = true;
+        pauseAuto();
+      });
+      scheduleAuto(autoDelay);
     });
   }
 
@@ -1435,7 +1557,9 @@
       '.showcase-tile'
     ];
     var items = Array.from(document.querySelectorAll(selectors.join(','))).map(function (container) {
-      var layer = container.querySelector(':scope > picture') || container.querySelector(':scope > img');
+      if (container.matches('.solution-card__media--captioned')) return null;
+      var picture = container.querySelector(':scope > picture');
+      var layer = picture ? picture.querySelector('img') : container.querySelector(':scope > img');
       if (!layer) return null;
       container.classList.add('static-parallax');
       layer.classList.add('static-parallax__layer');
