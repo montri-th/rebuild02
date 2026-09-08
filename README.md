@@ -2,14 +2,14 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. The current locally verified candidate is
-`ui-20260909-01` (`rebuild02-ui-20260909-01`), content version
-`landometer-home-rebuild02-v17`; publication and live verification remain pending. The
-previous published, live-verified release is `ui-20260908-02`, artifact commit
-`c4a8fb8d2869a4aeb1a27381f3c5600370e78cec` and tree
-`f5b4a8173fa160b853f7bf780b4d8d363e524b09`, with attestation commit
-`b85bedda`. `ui-20260908-01` (`f38f33a9…`, tree `4458e55f…`) and
-`ui-20260901-01` remain earlier historical evidence. Machine validation remains pending.
+install, bundler, CI workflow, or build step. The current published and live-verified
+release is `ui-20260909-01` (`rebuild02-ui-20260909-01`), content version
+`landometer-home-rebuild02-v17`, artifact commit
+`d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27` and tree
+`27277d7a2e447ef3139b72ea51da65d130501bb7`. The preceding
+`ui-20260908-02` release (`c4a8fb8d…`, tree `f5b4a817…`) and
+`ui-20260908-01` release (`f38f33a9…`, tree `4458e55f…`) remain historical evidence;
+`ui-20260901-01` is earlier historical evidence. Machine validation remains pending.
 
 | File | Purpose |
 |---|---|
@@ -176,19 +176,22 @@ previous published, live-verified release is `ui-20260908-02`, artifact commit
 
 `governance/motif-integration.json` is the machine boundary for selected asset IDs,
 product scopes, transparent carriers, semantic jobs, runtime/fallback paths, dependency
-hashes, owner approval, and the repository-side publication receipt. The immutable private
-`ui-20260908-02` Drive folder is
-<https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z>.
-Its selected-assets ZIP, Claude read-first file, and machine manifest were read back at
-`2026-09-08T14:55:33Z` with exact byte/hash parity; all three remain owner-only and not
-publicly shared. The two Drive text files were read back byte-identically again and the
-folder/file permission records remained owner-only at `2026-09-08T15:47:33.404Z`. Those
-Drive text files are immutable pre-attestation asset-selection snapshots; the current
-publication receipt lives in repository governance and does not change any selected asset
-bytes. The handoff supports reuse through the connected Drive account without claiming
-background synchronization or independent publishing authority. A separate immutable
-`ui-20260909-01` package containing the exact all-full motif selection and Living r3 video
-is pending its post-artifact Drive handoff; the `ui-20260908-02` snapshots must not be
+hashes, owner approval, and the repository-side publication receipt. The completed,
+immutable private `ui-20260909-01` Drive handoff is
+<https://drive.google.com/drive/folders/1PGPmrZqEi_wE5ci6mEafxwXP60te7I0_>.
+Its exact three-file listing and owner-only permissions were verified at
+`2026-09-08T19:54:07Z`, and every file passed a complete raw-byte readback:
+
+- selected-assets ZIP `1uXcR4Yvg7-3UBNsv1E8G3fO067JnSBy1`, 5,708,356 bytes,
+  SHA-256 `bafb6e6061ec049a915d20a2aa115bbc6538c624f9eb402a6baae48beed94f5b`;
+- Claude read-first file `1Kfo95G15O8o2PONvvyCCfL2AoN6xx0-5`, 5,170 bytes,
+  SHA-256 `dff902b2525d6e33b32cbeeb4ff48ff01c5a56735a02600c32362fabbdbc34f4`;
+- machine selection manifest `1Qkg6OmhvkD8Qf8jYuMjKA9vMr6zmmZIr`, 14,758 bytes,
+  SHA-256 `e520746473e703cd2f815c80427d6aced0629ea2461cec53591e725e413ab321`.
+
+The handoff supports reuse through the connected Drive account without making the folder
+public and without claiming background synchronization or independent publishing
+authority. The immutable private `ui-20260908-02` folder remains historical and was not
 overwritten.
 
 ## Publishing
@@ -199,35 +202,30 @@ suffixes are route contracts and must not be renamed.
 
 `machineValidation` remains `pending` and `conformanceLevel` remains
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
-validation language. Candidate source/hash checks pin `site.css` at 65,158 bytes / SHA-256
+validation language. Release source/hash checks pin `site.css` at 65,158 bytes / SHA-256
 `52bc9727…` and `site.js` at 64,619 bytes / SHA-256 `d8424041…`. The
-`ui-20260909-01` local browser gate passed layout 32/32, captions 7/7, rails 4/4,
-reduced-motion 4/4, no-JavaScript 2/2, and Living video 1/1 at
-`2026-09-08T19:21:49.302Z`. It covers both locales, light widths from 320 through 1440 px
-including the 601/630/640/700 px header boundary, plus dark 390/1440 px. All-full
-transparent motifs, logo sizing, name wrapping, mobile showcases, CTA/card contrast,
-caption flow, centered Thailand maps, and auto/manual infinite carousels passed with no
-horizontal overflow, duplicate IDs, or first-party runtime errors. Publication and live
-verification remain pending.
+`ui-20260909-01` artifact commit `d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27` /
+tree `27277d7a2e447ef3139b72ea51da65d130501bb7` was published by successful Pages
+workflow `34269175056`, deployment `6335434394`, and build `1202614459`, created at
+`2026-09-08T19:28:30Z` and updated at `2026-09-08T19:28:55Z` after 25,644 ms. Exact live
+HTTP/MIME and byte parity passed 44/44 checks at `2026-09-08T19:34:07.169Z`; an unknown
+route returned the exact branded `404.html` with HTTP 404 at `2026-09-08T19:42:09Z`.
 
-The previous `ui-20260908-02` release remains the published/live baseline. GitHub Pages
-workflow `34242568111` published
-artifact commit `c4a8fb8d2869a4aeb1a27381f3c5600370e78cec` / tree
-`f5b4a8173fa160b853f7bf780b4d8d363e524b09` through Pages build `1202182321`, created
-`2026-09-08T15:06:01Z` and updated successfully at `2026-09-08T15:06:38Z` after
-37,391 ms. Exact live HTTP/MIME and byte parity passed 44/44 checks at
-`2026-09-08T15:14:46.364Z`; an unknown route returned the exact branded local `404.html`
-with HTTP 404 at `2026-09-08T15:15:09.548Z`. Production browser QA passed 18/18
-representative viewport/locale/theme cases from 320 through 1920 px, including a
-four-case bilingual light/dark check at 360 px, plus finite lifecycle, reduced-motion,
-no-JavaScript, and screenshot checks by `2026-09-08T15:50:20.728Z`; none of those live
-receipts attests `ui-20260909-01`.
+Production browser QA passed at `2026-09-08T19:40:52.273Z`: layout 32/32 across both
+locales, light widths 320, 360, 390, 600, 601, 630, 640, 700, 768, 900, 1080, 1081,
+1280 and 1440 px plus dark 390/1440 px; captions 7/7 with twelve captions per case; both
+rails in both locales 4/4; reduced-motion 4/4; no-JavaScript 2/2; targeted 320 px
+TikTok/embed containment 2/2; and Living r3 video 1/1. All-full transparent motifs,
+logo sizing, name wrapping, mobile showcases, CTA/card contrast, caption flow, centered
+Thailand maps, and automatic/manual infinite carousels passed with no horizontal overflow,
+duplicate IDs, or first-party runtime errors.
 
-The immediately preceding `ui-20260908-01` release remains historical evidence: artifact
-commit `f38f33a9cf00c26110e040da0967261ae98b890c`, tree
-`4458e55ffbe2b43b1990f85af6d62be63f854ed8`, successful workflow `34214191898`, Pages
-build `1201690364`, live byte verification at `2026-09-08T10:18:05.929Z`, and focused
-production browser QA at `2026-09-08T10:25:48.050Z`. None of those receipts attests the
-current candidate. True Chrome UI zoom, native hidden-tab behavior, a selected loading
-budget, the exhaustive provider/social matrix, production accessibility, and machine
-validation remain open.
+The preceding `ui-20260908-02` release remains historical: artifact commit
+`c4a8fb8d2869a4aeb1a27381f3c5600370e78cec`, tree
+`f5b4a8173fa160b853f7bf780b4d8d363e524b09`, successful workflow `34242568111`, Pages
+build `1202182321`, live byte verification at `2026-09-08T15:14:46.364Z`, and production
+browser QA at `2026-09-08T15:50:20.728Z`. `ui-20260908-01` and `ui-20260901-01` remain
+earlier historical evidence. True Chrome UI zoom, native hidden-tab behavior, injected
+asset/load/decode failure, exhaustive keyboard/focus traversal, print/pagehide, live and
+exhaustive provider behavior, production accessibility, a selected loading/performance
+budget, and machine validation remain open.

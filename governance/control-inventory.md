@@ -1,6 +1,6 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260908-02`, published and live verified
+Artifact build: `ui-20260909-01`, published and live verified
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
@@ -20,7 +20,7 @@ that all controls are visible together.
 | Inputs | 4 | Name, email and production-matched phone validation (9–24 characters) plus hidden topic value | Visible fields remain native; fallback submission encoding is not claimed compatible with the JSON API |
 | Textareas | 1 | Required contact message | Native field remains visible |
 | Native selects/details | 1 | Accessible custom listbox replaces the Safari native popup; the company history/future uses native `details`/`summary` | The story disclosure remains available without JavaScript; no native select is exposed |
-| Video | 1 | The 14.803-second 720×1280 source attaches within 240 px of the viewport, then plays muted, inline and looping with no native controls; reduced motion keeps the poster and the page motion action pauses/resumes playback | Poster only because the HTML carries no initial `src` |
+| Video | 1 | The 13.951667-second 720×1280 r3 vary-speed source attaches within 240 px of the viewport, then plays muted, inline and looping with no native controls; reduced motion keeps the poster and the page motion action pauses/resumes playback | Poster only because the HTML carries no initial `src` |
 | Third-party iframes | 3 | In either theme, Facebook timeline, Instagram profile and LinkedIn featured-post `data-src` values attach within 480 px; TikTok uses its official lazy script. DS-owned shells follow the selected theme while provider iframe internals retain provider styling | No iframe source or provider script attaches; direct channel links remain available, including X |
 
 Source and rendered assertions:
@@ -135,30 +135,38 @@ Source and rendered assertions:
   framed as an estimate from city-data signals and directs the reader toward field
   validation rather than asserting measured demand. All six Thai and six English Location
   CTA captions are shortened and governed by max-width plus nowrap with responsive padding
-  and type. At widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440, local QA
-  found all computed nowrap, zero `.btn` overflow, no Location CTA above 48 px and no page
-  overflow.
-- Release `ui-20260908-02` passed the local 8/8 TH/EN × 390/1440 × light/dark
-  matrix with the correct build, locale and theme, zero horizontal overflow or first-party
-  page/console errors, eleven transparent Landometer carriers, a contained large hero
-  logo, restored product photographs, and contained product brand rows. Reduced-motion,
-  no-JavaScript, and finite CityChat/ijji lifecycle checks also passed. Artifact commit
-  `c4a8fb8d2869a4aeb1a27381f3c5600370e78cec` / tree
-  `f5b4a8173fa160b853f7bf780b4d8d363e524b09` was published by successful workflow
-  `34242568111` and Pages build `1202182321`, created `2026-09-08T15:06:01Z` and updated
-  `2026-09-08T15:06:38Z` after 37,391 ms. Exact live HTTP/MIME and byte parity passed
-  44/44 checks at `2026-09-08T15:14:46.364Z`; an unknown route returned the exact branded
-  local `404.html` with HTTP 404 at `2026-09-08T15:15:09.548Z`. Production browser QA
-  passed 18/18 representative viewport/locale/theme cases from 320 through 1920 px,
-  including four bilingual light/dark cases at 360 px, plus finite lifecycle,
-  reduced-motion, no-JavaScript, and screenshot checks by `2026-09-08T15:50:20.728Z`. Published
-  `ui-20260908-01` remains historical evidence:
-  artifact `f38f33a…`, tree `4458e55…`, workflow `34214191898`, build `1201690364`, live
-  bytes at `2026-09-08T10:18:05.929Z`, and focused live QA at
-  `2026-09-08T10:25:48.050Z`; none attests this release. True Chrome UI zoom, native
-  hidden-tab behavior, production accessibility, a selected
-  loading budget, the exhaustive provider/social matrix, and machine validation remain
-  open.
+  and type. At widths 320, 360, 390, 600, 601, 630, 640, 700, 768, 900, 1080, 1081,
+  1280 and 1440, QA found all computed nowrap, zero `.btn` overflow, no Location CTA
+  above 48 px and no page overflow.
+- Release `ui-20260909-01` is published and live verified. Artifact commit
+  `d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27` / tree
+  `27277d7a2e447ef3139b72ea51da65d130501bb7` was published by successful Pages workflow
+  `34269175056`, deployment `6335434394`, and build `1202614459`, created
+  `2026-09-08T19:28:30Z` and updated `2026-09-08T19:28:55Z` after 25,644 ms. Exact live
+  HTTP/MIME and byte parity passed 44/44 at `2026-09-08T19:34:07.169Z`; production browser
+  QA passed layout 32/32, captions 7/7 with twelve captions per case, rails 4/4,
+  reduced-motion 4/4, no-JavaScript 2/2, targeted 320 px overflow 2/2, and Living r3
+  video 1/1 at `2026-09-08T19:40:52.273Z`. An unknown route returned the exact branded
+  local `404.html` with HTTP 404 at `2026-09-08T19:42:09Z`. The preceding
+  `ui-20260908-02` release remains historical: artifact `c4a8fb8d…`, tree `f5b4a817…`,
+  workflow `34242568111`, Pages build `1202182321`, live byte verification at
+  `2026-09-08T15:14:46.364Z`, and production browser QA at
+  `2026-09-08T15:50:20.728Z`. `ui-20260908-01` and `ui-20260901-01` remain earlier
+  historical evidence.
+- The immutable private `ui-20260909-01` Drive handoff at
+  <https://drive.google.com/drive/folders/1PGPmrZqEi_wE5ci6mEafxwXP60te7I0_> passed an
+  exact three-file listing, complete raw-byte readback, and owner-only permission check at
+  `2026-09-08T19:54:07Z`: ZIP `1uXcR4Yvg7-3UBNsv1E8G3fO067JnSBy1` is 5,708,356 bytes /
+  SHA-256 `bafb6e6061ec049a915d20a2aa115bbc6538c624f9eb402a6baae48beed94f5b`;
+  Claude read-first `1Kfo95G15O8o2PONvvyCCfL2AoN6xx0-5` is 5,170 bytes / SHA-256
+  `dff902b2525d6e33b32cbeeb4ff48ff01c5a56735a02600c32362fabbdbc34f4`; machine manifest
+  `1Qkg6OmhvkD8Qf8jYuMjKA9vMr6zmmZIr` is 14,758 bytes / SHA-256
+  `e520746473e703cd2f815c80427d6aced0629ea2461cec53591e725e413ab321`.
+  The ui02 Drive snapshot remains historical and was not overwritten. True Chrome UI
+  zoom, native hidden-tab behavior, injected asset/load/decode failure, exhaustive
+  keyboard/focus traversal, print/pagehide, live and exhaustive provider behavior,
+  production accessibility, a selected loading/performance budget, and machine validation
+  remain open.
 - Products and Services exposes five product paths with consistent capsule conversation
   CTAs and an explicit fit cue. Desktop uses a 2+3 hierarchy: CityMETER and CityChat lead,
   followed by ijji, CityWiki and land/property tools. The restored CityMETER card pairs the

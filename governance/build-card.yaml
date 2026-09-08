@@ -59,8 +59,8 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "source_limited_local_candidate_verified"
-    authorizationSource: "owner request authorizes the ui-20260909-01 responsive, full-colour motif, identity, motion, carousel, caption, CTA and media changes and publication; execution remains pending"
+    evidenceStatus: "published_live_verified_with_open_manual_machine_accessibility_and_performance_gates"
+    authorizationSource: "owner request authorized the ui-20260909-01 responsive, full-colour motif, identity, motion, carousel, caption, CTA and media changes and their direct publication"
     visibility: "public"
     indexable: true
     robots: "index,follow"
@@ -102,38 +102,41 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "local_candidate_verified_publication_pending_with_open_manual_gates"
+    readiness: "published_live_verified_with_open_manual_machine_accessibility_and_performance_gates"
     publicSafe: true
-    status: "local_candidate_verified_publication_pending"
+    status: "published_live_verified"
     qrOrLinkTest: "pass for the exact live link and governed routes; a physical QR scan was not separately performed"
-    verifiedArtifactCommit: null
-    verifiedArtifactTree: null
-    pagesBuildCommit: null
-    pagesBuildState: "pending"
-    pagesBuildId: null
-    pagesWorkflowRunId: null
-    pagesWorkflowState: "pending"
-    pagesBuildDurationMs: null
-    pagesBuildCreatedAt: null
-    pagesBuildUpdatedAt: null
-    liveByteAttestationAt: null
-    liveBrowserVerifiedAt: null
-    liveRouteEvidence: "pending for ui-20260909-01"
-    liveByteParity: "pending for ui-20260909-01"
+    verifiedArtifactCommit: "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27"
+    verifiedArtifactTree: "27277d7a2e447ef3139b72ea51da65d130501bb7"
+    pagesBuildCommit: "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27"
+    pagesBuildState: "built"
+    pagesBuildId: 1202614459
+    pagesWorkflowRunId: 34269175056
+    pagesWorkflowState: "success"
+    pagesDeploymentId: 6335434394
+    pagesDeploymentState: "success"
+    pagesBuildDurationMs: 25644
+    pagesBuildCreatedAt: "2026-09-08T19:28:30Z"
+    pagesBuildUpdatedAt: "2026-09-08T19:28:55Z"
+    liveByteAttestationAt: "2026-09-08T19:34:07.169Z"
+    liveBrowserVerifiedAt: "2026-09-08T19:40:52.273Z"
+    unknownRouteVerifiedAt: "2026-09-08T19:42:09Z"
+    liveRouteEvidence: "pass: 44/44 governed production routes returned the intended status and MIME at 2026-09-08T19:34:07.169Z; a unique cache-busted unknown route returned HTTP 404 text/html with the exact 4,556-byte branded 404 SHA-256 aaa3ee26d7d1f788312d0233942b1f002b3f884100185567bd7ad3001e79b67c at 2026-09-08T19:42:09Z"
+    liveByteParity: "pass: 44/44 governed production probes matched exact bytes from artifact commit d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 at 2026-09-08T19:34:07.169Z"
     releaseLedger:
-      reviewedHeadSha: null
+      reviewedHeadSha: "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27"
       mergeCommitSha: null
       mergeCommitStatus: "not_applicable_direct_push_explicitly_authorized"
-      reviewedTreeOrDiffContained: "pending artifact commit and tree"
-      deployedSourceSha: null
-      providerRunOrDeploymentId: null
-      checkedAt: "2026-09-08T19:21:49.302Z"
+      reviewedTreeOrDiffContained: "artifact commit d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 resolves to reviewed tree 27277d7a2e447ef3139b72ea51da65d130501bb7"
+      deployedSourceSha: "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27"
+      providerRunOrDeploymentId: "Pages workflow 34269175056 / build 1202614459 / deployment 6335434394"
+      checkedAt: "2026-09-08T19:42:09Z"
     providerConfiguration:
       sourceBranch: "main"
       sourcePath: "/"
       httpsEnforced: true
-      providerStatus: "pending_ui09_publication"
-      scope: "provider configuration retained; ui-20260909-01 Pages workflow/build pending"
+      providerStatus: "built_and_deployed_successfully"
+      scope: "current ui-20260909-01 configuration corroborated by Pages workflow 34269175056, build 1202614459 and deployment 6335434394"
     previousVerifiedRelease:
       artifactBuildId: "ui-20260908-02"
       artifactCommit: "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec"
@@ -342,31 +345,58 @@ landometerBuild:
       activeAssetClosure: "22 unique files / 444,975 source bytes: Landometer CSS, runtime and six unique full-colour SVG fallbacks; CityChat runtime, base and overlay; ijji runtime, fallback and nine layers"
       prohibitedGeneralization: "CityChat and ijji product behavior is not a shared Landometer capability. The motif overlay does not amend LDS 0.9.0-r7 or upgrade conformance."
       driveHandoff:
-        status: "ui02_immutable_snapshot_verified_ui09_delta_pending"
+        status: "ui09_exact_private_handoff_raw_readback_and_permissions_verified"
         access: "private_account_scoped_not_shared"
-        folderUrl: "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z"
+        folderId: "1PGPmrZqEi_wE5ci6mEafxwXP60te7I0_"
+        folderUrl: "https://drive.google.com/drive/folders/1PGPmrZqEi_wE5ci6mEafxwXP60te7I0_"
         selectedAssetsZip:
-          fileId: "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM"
-          url: "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk"
-          bytes: 325258
-          sha256: "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e"
-          readback: "raw_bytes_match"
+          fileId: "1uXcR4Yvg7-3UBNsv1E8G3fO067JnSBy1"
+          url: "https://drive.google.com/file/d/1uXcR4Yvg7-3UBNsv1E8G3fO067JnSBy1/view?usp=drivesdk"
+          bytes: 5708356
+          sha256: "bafb6e6061ec049a915d20a2aa115bbc6538c624f9eb402a6baae48beed94f5b"
+          readback: "complete_raw_bytes_match"
         claudeReadFirst:
-          fileId: "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU"
-          url: "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk"
-          bytes: 9675
-          sha256: "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b"
-          readback: "raw_bytes_match"
+          fileId: "1Kfo95G15O8o2PONvvyCCfL2AoN6xx0-5"
+          url: "https://drive.google.com/file/d/1Kfo95G15O8o2PONvvyCCfL2AoN6xx0-5/view?usp=drivesdk"
+          bytes: 5170
+          sha256: "dff902b2525d6e33b32cbeeb4ff48ff01c5a56735a02600c32362fabbdbc34f4"
+          readback: "complete_raw_bytes_match"
         integrationManifest:
-          fileId: "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV"
-          url: "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk"
-          bytes: 31289
-          sha256: "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de"
-          readback: "artifact_selection_snapshot_raw_bytes_match"
-          driveModifiedAt: "2026-09-08T14:51:32.673Z"
-          status: "verified_artifact_snapshot"
+          fileId: "1Qkg6OmhvkD8Qf8jYuMjKA9vMr6zmmZIr"
+          url: "https://drive.google.com/file/d/1Qkg6OmhvkD8Qf8jYuMjKA9vMr6zmmZIr/view?usp=drivesdk"
+          bytes: 14758
+          sha256: "e520746473e703cd2f815c80427d6aced0629ea2461cec53591e725e413ab321"
+          readback: "complete_raw_bytes_match"
+          status: "verified_immutable_pre_attestation_asset_selection_snapshot"
+        verifiedAt: "2026-09-08T19:54:07Z"
+        folderListing: "exactly_three_files"
+        permissions: "folder and all three files report shared=false with exactly one owner permission and no anyone, domain or group permission"
+        previousVerifiedUi02:
+          status: "immutable_historical_three_file_handoff_raw_readback_verified_not_overwritten"
+          folderUrl: "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z"
+          selectedAssetsZip:
+            fileId: "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM"
+            url: "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk"
+            bytes: 325258
+            sha256: "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e"
+            readback: "raw_bytes_match"
+          claudeReadFirst:
+            fileId: "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU"
+            url: "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk"
+            bytes: 9675
+            sha256: "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b"
+            readback: "raw_bytes_match"
+          integrationManifest:
+            fileId: "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV"
+            url: "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk"
+            bytes: 31289
+            sha256: "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de"
+            readback: "artifact_selection_snapshot_raw_bytes_match"
+          verifiedAt: "2026-09-08T14:55:33Z"
+          recheckedAt: "2026-09-08T15:47:33.404Z"
+          scope: "immutable historical ui-20260908-02 handoff; no longer current"
         previousVerifiedUi01: "historical account-scoped package/read-first/manifest readback only; does not contain or attest ui-20260908-02"
-        boundary: "The ui02 folder listing, raw-byte hashes and owner-only permission metadata passed and remain immutable. A distinct ui-20260909-01 folder/package containing the all-full motif selection and Living r3 video is pending post-artifact handoff. No existing Drive file will be overwritten and no background synchronization is claimed."
+        boundary: "The ui09 folder lists exactly the three expected files and all complete raw-byte SHA-256 readbacks matched. Folder and file permissions remain private and owner-only. The ui02 snapshot was not overwritten; no background synchronization, public sharing or independent publication authority is claimed."
     approvedPhotography:
       - "responsive Lumpini city image family"
       - "responsive Yaowarat night r7 image family"
@@ -754,7 +784,7 @@ landometerBuild:
       receiptId: "rebuild02-ui-20260909-01"
       catalogOrContentVersion: "landometer-home-rebuild02-v17"
       issuedAt: "2026-09-09"
-      status: "local_candidate_verified_publication_pending"
+      status: "published_live_verified"
   privacy:
     personalData: true
     sensitivity: "public"
@@ -833,8 +863,8 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "pass local candidate ui-20260909-01 at 2026-09-08T19:21:49.302Z with site.js SHA-256 d84240411fbb42516381bea4c12c21ca61b14b79bd5d0e4ffb69d765f64e8e53: layout 32/32 across both locales and 320–1440 px, captions 7/7 with 12/12 per case, auto/manual infinite rails 4/4, reduced-motion 4/4, no-JavaScript 2/2 and Living r3 video 1/1; all-full transparent motifs, product identity, CTA contrast, mobile showcase, name wrapping, map centering and zero overflow/duplicate IDs/first-party errors passed"
-    motifRequiredOpenChecks: "Open checks are production publication and live-byte/browser verification, native Chrome UI 130% Thai and 200% zoom, hidden-tab behavior, slow/load/decode failure injection, complete keyboard/focus traversal, pagehide, print, exhaustive provider/social matrices, a selected performance budget, production accessibility and downstream machine validation."
+    renderedBrowserGate: "pass production ui-20260909-01 at 2026-09-08T19:40:52.273Z: layout 32/32, captions 7/7, auto/manual infinite rails 4/4, reduced-motion 4/4, no-JavaScript 2/2, 320 px bilingual containment 2/2 and Living r3 video 1/1; all-full transparent motifs, product identity, CTA contrast, mobile showcase, name wrapping, map centering and zero overflow/duplicate IDs/first-party errors passed. Exact live HTTP/MIME and byte parity passed 44/44 at 2026-09-08T19:34:07.169Z, followed by the exact branded 404 at 2026-09-08T19:42:09Z."
+    motifRequiredOpenChecks: "Open checks are native Chrome UI 130% Thai and 200% zoom, native hidden-tab behavior, slow/load/decode failure injection, complete keyboard/focus traversal, pagehide, print, exhaustive provider/social matrices, a selected performance budget, production accessibility and downstream machine validation."
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"

@@ -2,7 +2,7 @@
   "schemaVersion": "1.1",
   "artifactBuildId": "ui-20260909-01",
   "releaseReceiptId": "rebuild02-ui-20260909-01",
-  "status": "local_candidate_verified_publication_and_drive_delta_pending",
+  "status": "published_live_verified_drive_handoff_verified_with_open_gates",
   "requestBoundary": {
     "userRequest": "Update the Rebuild02 Landometer landing page with suitable animated assets, restore the previous-version CityChat and ijji photographs, use approved animated identity treatments, place an exact Landometer animated logo or motif in every top-level content section according to meaning, and save the governed assets to Google Drive for shared use with Claude.",
     "latestOwnerInstruction": "Use only full-colour Landometer motifs throughout the page, keep every motif and animated-identity carrier transparent, retain the large animated hero logo, and align the CityChat and ijji product identities with their peer brand rows. The CityChat and ijji product-card photographs remain restored from the previous version.",
@@ -482,59 +482,95 @@
     },
     "heroRuntimeObservation": "At 390 by 844 CSS pixels, all 13 logo.full subtree animations were observed to settle after approximately 3.76 seconds including orchestration and rendering latency. Re-entry had zero running animations and produced no replay or page error. This is observed evidence, not a contractual duration.",
     "surfaceRule": "site.css declares transparent background, zero border, and zero shadow on section motif carriers; CityChat and ijji identity stages add no dedicated surface plate.",
-    "candidateEvidence": "ui-20260909-01 local source and checksum verification passed: Thai and English each expose the same 11 full-colour Landometer placements, every instance uses blue ink and a transparent carrier, and all 22 active motif or animated-identity files match the recorded bytes and SHA-256 values. Publication and live verification remain pending."
+    "publicationEvidence": "ui-20260909-01 was published from artifact commit d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 and tree 27277d7a2e447ef3139b72ea51da65d130501bb7. GitHub Pages workflow 34269175056 and Pages build 1202614459 succeeded; exact live byte parity passed 44/44 at 2026-09-08T19:34:07.169Z, production browser verification passed at 2026-09-08T19:40:52.273Z, and the branded unknown route returned the expected 404 at 2026-09-08T19:42:09Z."
   },
   "publication": {
-    "status": "pending_artifact_commit_and_live_verification",
-    "artifactCommit": null,
-    "artifactTree": null,
-    "pagesWorkflowRunId": null,
-    "pagesBuildId": null,
-    "liveByteAttestationAt": null,
-    "liveUnknown404AttestationAt": null,
-    "liveBrowserVerifiedAt": null,
-    "evidence": "The ui-20260909-01 local candidate verification passed. Artifact commit/tree, Pages workflow/build, exact live-byte and unknown-route checks, and production browser verification remain pending."
+    "status": "published_live_verified_with_open_gates",
+    "artifactCommit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
+    "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
+    "pagesWorkflowRunId": 34269175056,
+    "pagesBuildId": 1202614459,
+    "liveByteAttestationAt": "2026-09-08T19:34:07.169Z",
+    "liveUnknown404AttestationAt": "2026-09-08T19:42:09Z",
+    "liveBrowserVerifiedAt": "2026-09-08T19:40:52.273Z",
+    "evidence": "Exact live byte parity passed 44/44, the production browser verification passed, and the branded unknown route returned the expected HTTP 404 for artifact commit d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 and tree 27277d7a2e447ef3139b72ea51da65d130501bb7. Design System machine validation, production accessibility, true browser-UI zoom, native hidden-tab behavior, loading/performance budgets, and exhaustive provider/social checks remain open."
   },
   "driveSync": {
-    "status": "ui02_private_snapshot_verified_ui09_selection_delta_pending",
+    "status": "ui09_private_three_file_handoff_complete_raw_readback_verified_ui02_immutable_historical",
     "accessPolicy": "private_account_scoped_do_not_broaden_sharing",
     "integrationRoot": "https://drive.google.com/drive/folders/1o8ERwQwD11q4AAbD6zOAVgWQEHsIAQNw",
     "approvedIntegrationAssetsFolder": "https://drive.google.com/drive/folders/1_VaLIjW_eZdtGzRjsKIGDabGmIRKmGND",
     "releaseFolder": {
-      "id": "1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z",
-      "url": "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z",
-      "name": "Rebuild02_Motif_Integration_ui-20260908-02",
-      "status": "three_file_handoff_verified_private_immutable_historical",
-      "historicalOnly": true
+      "id": "1PGPmrZqEi_wE5ci6mEafxwXP60te7I0_",
+      "url": "https://drive.google.com/drive/folders/1PGPmrZqEi_wE5ci6mEafxwXP60te7I0_",
+      "artifactBuildId": "ui-20260909-01",
+      "parentId": "1_VaLIjW_eZdtGzRjsKIGDabGmIRKmGND",
+      "status": "exactly_three_files_verified_private_immutable",
+      "fileCount": 3,
+      "shared": false
     },
     "selectedAssetsPackage": {
-      "id": "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM",
-      "url": "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk",
-      "name": "Rebuild02_Motif_Integration_ui-20260908-02.zip",
-      "bytes": 325258,
-      "sha256": "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e",
-      "contents": "selected-assets/motifs only; 26 active exact governed files / 449,075 uncompressed bytes; deterministic path order and normalized 2026-09-08 timestamp",
-      "status": "raw_bytes_match"
+      "id": "1uXcR4Yvg7-3UBNsv1E8G3fO067JnSBy1",
+      "url": "https://drive.google.com/file/d/1uXcR4Yvg7-3UBNsv1E8G3fO067JnSBy1/view?usp=drivesdk",
+      "name": "Rebuild02_Animated_Assets_ui-20260909-01.zip",
+      "bytes": 5708356,
+      "sha256": "bafb6e6061ec049a915d20a2aa115bbc6538c624f9eb402a6baae48beed94f5b",
+      "contents": "26 archive entries: 00_CLAUDE_READ_FIRST.md, artifact-selection.ui-20260909-01.json, and 24 exact committed files under selected-assets/ comprising 22 active motif/identity files plus the Living r3 MP4 and r2 poster",
+      "status": "complete_raw_base64_readback_sha256_match"
     },
     "claudeReadFirst": {
-      "id": "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU",
-      "url": "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk",
+      "id": "1Kfo95G15O8o2PONvvyCCfL2AoN6xx0-5",
+      "url": "https://drive.google.com/file/d/1Kfo95G15O8o2PONvvyCCfL2AoN6xx0-5/view?usp=drivesdk",
       "name": "00_CLAUDE_READ_FIRST.md",
-      "bytes": 9675,
-      "sha256": "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b",
-      "status": "raw_bytes_match"
+      "bytes": 5170,
+      "sha256": "dff902b2525d6e33b32cbeeb4ff48ff01c5a56735a02600c32362fabbdbc34f4",
+      "status": "complete_raw_base64_readback_sha256_match"
     },
     "machineManifestFile": {
-      "id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV",
-      "url": "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk",
-      "name": "motif-integration.ui-20260908-02.json",
-      "bytes": 31289,
-      "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de",
-      "checksumBoundary": "This checksum covers the immutable Drive artifact-selection snapshot created before publication attestation. The current repository manifest adds only publication and snapshot-boundary evidence and is intentionally not represented as byte-identical to the Drive snapshot.",
-      "status": "artifact_selection_snapshot_raw_bytes_match"
+      "id": "1Qkg6OmhvkD8Qf8jYuMjKA9vMr6zmmZIr",
+      "url": "https://drive.google.com/file/d/1Qkg6OmhvkD8Qf8jYuMjKA9vMr6zmmZIr/view?usp=drivesdk",
+      "name": "artifact-selection.ui-20260909-01.json",
+      "bytes": 14758,
+      "sha256": "e520746473e703cd2f815c80427d6aced0629ea2461cec53591e725e413ab321",
+      "status": "complete_raw_base64_readback_sha256_match"
     },
-    "verification": "Folder listing, private permission metadata, and raw-byte readbacks for the selected-assets ZIP, Claude read-first file and artifact-selection manifest passed at 2026-09-08T14:55:33Z. The two text snapshots were read back byte-identically again and all four folder/file permission records remained owner-only at 2026-09-08T15:47:33.404Z. No public, anyone, domain, or group permission was added. The Drive manifest is intentionally retained as the immutable artifact-selection snapshot; current publication evidence is recorded in this repository manifest and the release receipts.",
-    "claudeInstruction": "Treat the private ui-20260908-02 ZIP, read-first file and manifest as immutable historical snapshots. The ui-20260909-01 all-full-colour selection, slice-full fallback, compact product-brand geometry, current governance manifest, and publication receipt are repository-side and remain pending a new post-artifact Drive handoff. Do not overwrite ui02 snapshots. Keep all carriers transparent and preserve the product-scoped CityChat and ijji owner exceptions."
+    "verifiedAt": "2026-09-08T19:54:07Z",
+    "verification": {
+      "folderListing": "exactly_three_expected_files",
+      "rawReadback": "complete_base64_content_readback_sha256_match_3_of_3",
+      "permissionScope": "release folder and all three files",
+      "shared": false,
+      "permissionCountPerObject": 1,
+      "solePermission": {
+        "emailAddress": "montri@jlifecenter.com",
+        "role": "owner"
+      },
+      "anyoneDomainOrGroupPermissionPresent": false
+    },
+    "claudeInstruction": "Use the private ui-20260909-01 ZIP, read-first file and artifact-selection manifest as the current verified animated-asset handoff. Preserve all exact bytes, transparent carriers, full-colour Landometer selections, and product-scoped CityChat and ijji exceptions. Do not overwrite the immutable historical ui-20260908-02 handoff or infer background synchronization, broader sharing, publication authority, or a normative Design System change.",
+    "historicalUi02": {
+      "immutable": true,
+      "releaseFolder": {
+        "id": "1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z",
+        "url": "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z"
+      },
+      "selectedAssetsPackage": {
+        "id": "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM",
+        "bytes": 325258,
+        "sha256": "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e"
+      },
+      "claudeReadFirst": {
+        "id": "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU",
+        "bytes": 9675,
+        "sha256": "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b"
+      },
+      "machineManifestFile": {
+        "id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV",
+        "bytes": 31289,
+        "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de"
+      },
+      "status": "verified_private_historical_do_not_overwrite"
+    }
   },
   "historicalReleases": [
     {
@@ -542,7 +578,7 @@
       "releaseReceiptId": "rebuild02-ui-20260908-02",
       "status": "published_live_verified_previous",
       "historicalOnly": true,
-      "supersededByCandidate": "ui-20260909-01",
+      "supersededBy": "ui-20260909-01",
       "selectionSummary": ["landometer.dial.quiet at Location Intelligence", "transparent carriers", "restored CityChat/ijji photographs and animated brand-row identities"],
       "publication": {
         "artifactCommit": "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec",
@@ -603,7 +639,7 @@
     "sourceArchivesFolder": "https://drive.google.com/drive/folders/18nXuEGJtrmj752EQw9JyJ5XCX-iai__3",
     "approvedCityChatSourceFolder": "https://drive.google.com/drive/folders/19uIBytrOW_Ogyhct2d86Fbz14DxpkdoD",
     "verifiedSourceFolder": "https://drive.google.com/drive/folders/1rJx1LzMJ82qf40aXqaD28p8VLIeYg81P",
-    "note": "These are pre-existing source/library references and immutable historical ui-20260908-02 handoff records, not the pending ui-20260909-01 Drive delta or its publication receipt."
+    "note": "These are pre-existing source/library references. The verified ui-20260909-01 Drive handoff is recorded under driveSync; ui-20260908-02 remains immutable historical evidence."
   },
   "sourceArchives": [
     {

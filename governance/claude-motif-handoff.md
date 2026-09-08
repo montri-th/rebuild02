@@ -1,6 +1,6 @@
 # Rebuild02 animated-asset handoff for Claude
 
-Candidate target: ui-20260909-01
+Published artifact: ui-20260909-01
 
 Site: <https://montri-th.github.io/rebuild02/>
 
@@ -8,7 +8,11 @@ Repository: <https://github.com/montri-th/rebuild02>
 
 Local machine manifest: governance/motif-integration.json
 
-This handoff describes the current candidate source. It is not a publication receipt and it does not claim that the ui-20260909-01 package has already been uploaded to Drive.
+Artifact commit: `d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27`
+
+Artifact tree: `27277d7a2e447ef3139b72ea51da65d130501bb7`
+
+Handoff status: **delivered and raw-byte verified in private Drive; recipient acknowledgment is not recorded**.
 
 ## Authority and instruction boundary
 
@@ -19,7 +23,7 @@ On 2026-09-08 the owner explicitly approved:
 - use of the supplied CityChat files in this Rebuild02 artifact, including the observed-byte logo-overlay exception;
 - the animated Landometer logo and section motifs;
 - the animated ijji mark; and
-- transparent carriers for every motif and animated identity in this candidate.
+- transparent carriers for every motif and animated identity in this artifact.
 
 On 2026-09-09 the owner additionally directed every active Landometer motif to use its
 full-colour variant, asked CityChat and ijji identity marks to balance with peer product
@@ -110,7 +114,7 @@ Use ijji.logo-sting.mark:
 
 The package describes Brand Blue and Dark as compatible host surfaces and a 160 px
 minimum mark size. The latest owner instructions explicitly override both points for this
-Rebuild02 candidate: use a transparent carrier, do not introduce a dedicated plate, and
+Rebuild02 artifact: use a transparent carrier, do not introduce a dedicated plate, and
 use a 64 × 64 px stage to balance peer marks. These exceptions are limited to
 ui-20260909-01 and do not amend the ijji package or motif-library release.
 
@@ -143,33 +147,48 @@ file/source lineage remains provenance only and is not the active page video.
 
 Rebuild02 remains on Landometer Design System 0.9.0-r7 and kit lds-kit-0.9.0-r4. Motif library 1.2.1 is an owner-approved artifact overlay governed against a later DS reference. Its use here does not upgrade or amend Rebuild02's declared DS conformance.
 
+## Publication receipt
+
+- GitHub Pages workflow `34269175056`; Pages build `1202614459`.
+- Exact live-byte parity passed 44/44 at `2026-09-08T19:34:07.169Z`.
+- Production browser verification passed at `2026-09-08T19:40:52.273Z`.
+- The branded unknown route returned the expected HTTP 404 at `2026-09-08T19:42:09Z`.
+
+The publication is verified, but Design System machine validation, production
+accessibility, true browser-UI zoom, native hidden-tab behavior, loading/performance
+budgets, and exhaustive provider/social checks remain open.
+
 ## Drive handoff
 
-The immutable ui-20260908-02 handoff remains in this private, account-scoped historical
-folder and must not be overwritten:
+The current private ui-20260909-01 handoff is:
+
+<https://drive.google.com/drive/folders/1PGPmrZqEi_wE5ci6mEafxwXP60te7I0_>
+
+Its parent is the approved integration-assets folder
+`1_VaLIjW_eZdtGzRjsKIGDabGmIRKmGND`.
+
+- Read this file first: <https://drive.google.com/file/d/1Kfo95G15O8o2PONvvyCCfL2AoN6xx0-5/view?usp=drivesdk>
+  - 5,170 bytes
+  - SHA-256 `dff902b2525d6e33b32cbeeb4ff48ff01c5a56735a02600c32362fabbdbc34f4`
+- Machine artifact-selection manifest: <https://drive.google.com/file/d/1Qkg6OmhvkD8Qf8jYuMjKA9vMr6zmmZIr/view?usp=drivesdk>
+  - 14,758 bytes
+  - SHA-256 `e520746473e703cd2f815c80427d6aced0629ea2461cec53591e725e413ab321`
+- Deterministic selected-assets ZIP: <https://drive.google.com/file/d/1uXcR4Yvg7-3UBNsv1E8G3fO067JnSBy1/view?usp=drivesdk>
+  - 5,708,356 bytes
+  - SHA-256 `bafb6e6061ec049a915d20a2aa115bbc6538c624f9eb402a6baae48beed94f5b`
+  - 26 archive entries: the two handoff documents and 24 exact committed files under `selected-assets/`, comprising 22 active motif/identity files plus the Living r3 MP4 and r2 poster.
+
+At `2026-09-08T19:54:07Z`, the folder listed exactly these three files. Complete raw
+base64 readback matched the recorded byte length and SHA-256 of all three. The folder
+and every file had `shared=false`, exactly one permission—owner
+`montri@jlifecenter.com`—and no anyone, domain, or group permission.
+
+This is a delivered private account-scoped handoff, not background synchronization,
+public sharing, independent publication authority, or recipient acknowledgment.
+
+The immutable ui-20260908-02 handoff remains historical and must not be overwritten:
 
 <https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z>
 
-- Read this file first: <https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk>
-- Machine manifest: <https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk>
-- Selected-assets ZIP: <https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk>
-  - 325,258 bytes
-  - SHA-256 `676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e`
-  - 26 exact historical files / 449,075 uncompressed source bytes under `selected-assets/motifs/`
-  - the retained inactive CityChat 3a asset is intentionally absent
-
-Final metadata and raw-byte readbacks for all three files passed on 2026-09-08. No
-public, anyone, domain, or group permission was added. This is a shared working handoff
-through the connected Drive account; it does not claim background synchronization or
-grant Claude independent publication authority.
-
-The current ui-20260909-01 handoff is pending creation after the artifact commit. It must
-use a new private folder and contain a new read-first document, machine selection manifest,
-and deterministic ZIP with the 22 active motif/identity files (444,975 source bytes), the
-Living r3 video, and its poster. Record exact Drive IDs, byte lengths, SHA-256 hashes,
-owner-only permissions, and raw readback before describing that package as verified.
-
-Do not invent IDs or reuse an earlier package as if it were current. Keep Drive
-access private and account-scoped unless the owner explicitly changes that policy.
-
-The ui-20260908-01 publication and Drive receipts remain historical records in governance/motif-integration.json; they are not the selected/runtime state for this candidate.
+The ui-20260908-01 and ui-20260908-02 publication and Drive receipts remain historical
+records in `governance/motif-integration.json`; they are not the current runtime state.

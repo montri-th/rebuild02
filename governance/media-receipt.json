@@ -66,24 +66,71 @@
     "landometer": "verified Landometer 1.2.1 families logo, layers, rings, dial, cultivate and slice appear in 11 section placements; every placement uses its full-colour variant, hero logo.full is prominent over the photo, and no quiet variant is active; every carrier is transparent by owner instruction; all motions are finite once with exact SVG fallback and no loop/replay/parallax",
     "citychat": "owner-approved animated light identity uses the exact base PNG and observed overlay SVG on a transparent carrier; the observed overlay SHA mismatch is an artifact-scoped provenance exception, not a general release claim",
     "ijji": "verified ijji r3 mark-only sting at 64 × 64 px in a 68 px product brand row on a transparent carrier by artifact-local owner overrides; the package's 160 px minimum-delivered guidance remains unchanged and is not amended; all nine layers preload/decode after 14% intersection, exact still until readiness/failure, finite once without replay/loop/parallax",
-    "driveSync": "The distinct ui-20260909-01 selection delta, including all-full Landometer fallbacks and the Living r3 video, is pending a new private Drive handoff and complete raw-byte readback. The verified ui-20260908-02 three-file handoff remains an immutable historical snapshot and must not be overwritten; no background synchronization is claimed."
+    "driveSync": "The ui-20260909-01 private three-file animated-asset handoff is complete: the folder listed exactly the expected ZIP, read-first document and artifact-selection manifest, complete raw base64 readback matched all three SHA-256 values, and the folder plus all files remained shared=false with one owner permission and no anyone, domain or group access. The verified ui-20260908-02 handoff remains immutable historical evidence and must not be overwritten; no background synchronization is claimed."
   },
   "driveHandoffReceipt": {
-    "scope": "private account-scoped files for reuse through the connected Google Drive account; current ui09 selection delta remains pending, the verified ui02 files below are immutable historical records, and no background-sync or publishing authority is claimed",
+    "scope": "private account-scoped files for reuse through the connected Google Drive account; ui09 delivery and raw-byte verification are complete, ui02 remains immutable historical evidence, and no background-sync or independent publishing authority is claimed",
     "currentUi09Delta": {
       "artifactBuildId": "ui-20260909-01",
-      "status": "pending_new_private_handoff_and_complete_raw_byte_readback",
-      "scope": "selection and implementation delta only, including all-full Landometer fallbacks and Living r3; no Drive file IDs or verification claim exists yet"
+      "status": "delivered_private_raw_readback_verified",
+      "scope": "selection and implementation delta only, including 22 active motif/identity files, Living r3 and its r2 poster",
+      "artifactCommit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
+      "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
+      "folder": {
+        "id": "1PGPmrZqEi_wE5ci6mEafxwXP60te7I0_",
+        "url": "https://drive.google.com/drive/folders/1PGPmrZqEi_wE5ci6mEafxwXP60te7I0_",
+        "parentId": "1_VaLIjW_eZdtGzRjsKIGDabGmIRKmGND",
+        "listedFileCount": 3,
+        "shared": false
+      },
+      "selectedAssetsPackage": {
+        "id": "1uXcR4Yvg7-3UBNsv1E8G3fO067JnSBy1",
+        "url": "https://drive.google.com/file/d/1uXcR4Yvg7-3UBNsv1E8G3fO067JnSBy1/view?usp=drivesdk",
+        "name": "Rebuild02_Animated_Assets_ui-20260909-01.zip",
+        "bytes": 5708356,
+        "sha256": "bafb6e6061ec049a915d20a2aa115bbc6538c624f9eb402a6baae48beed94f5b",
+        "readback": "complete_raw_base64_sha256_match"
+      },
+      "claudeReadFirst": {
+        "id": "1Kfo95G15O8o2PONvvyCCfL2AoN6xx0-5",
+        "url": "https://drive.google.com/file/d/1Kfo95G15O8o2PONvvyCCfL2AoN6xx0-5/view?usp=drivesdk",
+        "name": "00_CLAUDE_READ_FIRST.md",
+        "bytes": 5170,
+        "sha256": "dff902b2525d6e33b32cbeeb4ff48ff01c5a56735a02600c32362fabbdbc34f4",
+        "readback": "complete_raw_base64_sha256_match"
+      },
+      "machineManifest": {
+        "id": "1Qkg6OmhvkD8Qf8jYuMjKA9vMr6zmmZIr",
+        "url": "https://drive.google.com/file/d/1Qkg6OmhvkD8Qf8jYuMjKA9vMr6zmmZIr/view?usp=drivesdk",
+        "name": "artifact-selection.ui-20260909-01.json",
+        "bytes": 14758,
+        "sha256": "e520746473e703cd2f815c80427d6aced0629ea2461cec53591e725e413ab321",
+        "readback": "complete_raw_base64_sha256_match"
+      },
+      "verifiedAt": "2026-09-08T19:54:07Z",
+      "verification": "Folder listed exactly the three expected files and complete raw base64 readback matched every recorded byte length and SHA-256 value.",
+      "permissions": {
+        "objectsVerified": 4,
+        "scope": "folder and all three files",
+        "shared": false,
+        "permissionCountPerObject": 1,
+        "solePermission": {"emailAddress": "montri@jlifecenter.com", "role": "owner"},
+        "anyoneDomainOrGroupPermissionPresent": false
+      },
+      "deliveryStatus": "delivered",
+      "acknowledgmentStatus": "not_recorded"
     },
-    "historicalArtifactBuildId": "ui-20260908-02",
-    "folder": "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z",
-    "status": "ui09_delta_pending_ui02_three_file_handoff_immutable_historical_raw_readback_verified",
-    "selectedAssetsPackage": {"id": "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM", "url": "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk", "name": "Rebuild02_Motif_Integration_ui-20260908-02.zip", "bytes": 325258, "sha256": "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e", "modifiedAt": "2026-09-08T14:47:06.579Z", "readback": "raw_bytes_match"},
-    "claudeReadFirst": {"id": "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU", "url": "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk", "name": "00_CLAUDE_READ_FIRST.md", "bytes": 9675, "sha256": "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b", "modifiedAt": "2026-09-08T14:51:23.020Z", "readback": "raw_bytes_match"},
-    "machineManifest": {"id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV", "url": "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk", "name": "motif-integration.ui-20260908-02.json", "bytes": 31289, "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de", "modifiedAt": "2026-09-08T14:51:32.673Z", "readback": "artifact_selection_snapshot_raw_bytes_match"},
-    "verifiedAt": "2026-09-08T14:55:33Z",
-    "recheckedAt": "2026-09-08T15:47:33.404Z",
-    "readback": "Historical ui-20260908-02 folder listing, raw bytes and metadata passed for exactly three files at 2026-09-08T14:55:33Z; the two text snapshots were read back byte-identically again and all four folder/file permission records remained shared=false with one owner permission and no public, anyone, domain or group permission at 2026-09-08T15:47:33.404Z. These ui02 Drive files are immutable pre-attestation asset-selection snapshots and do not attest ui-20260909-01; the repository release receipts carry later publication evidence.",
+    "status": "ui09_delivered_verified_ui02_immutable_historical",
+    "historicalUi02": {
+      "artifactBuildId": "ui-20260908-02",
+      "folder": "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z",
+      "selectedAssetsPackage": {"id": "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM", "url": "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk", "name": "Rebuild02_Motif_Integration_ui-20260908-02.zip", "bytes": 325258, "sha256": "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e", "readback": "raw_bytes_match"},
+      "claudeReadFirst": {"id": "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU", "url": "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk", "name": "00_CLAUDE_READ_FIRST.md", "bytes": 9675, "sha256": "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b", "readback": "raw_bytes_match"},
+      "machineManifest": {"id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV", "url": "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk", "name": "motif-integration.ui-20260908-02.json", "bytes": 31289, "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de", "readback": "artifact_selection_snapshot_raw_bytes_match"},
+      "verifiedAt": "2026-09-08T14:55:33Z",
+      "recheckedAt": "2026-09-08T15:47:33.404Z",
+      "status": "immutable_historical_raw_readback_verified"
+    },
     "previousVerifiedUi01": {
       "selectedAssetsPackageId": "1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ",
       "claudeReadFirstId": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ",
@@ -91,6 +138,24 @@
       "verifiedAt": "2026-09-08T10:39:19.747Z",
       "scope": "historical ui-20260908-01 account-scoped readback only; does not attest ui-20260908-02"
     }
+  },
+  "publicationReceipt": {
+    "status": "published_live_verified_with_open_gates",
+    "artifactCommit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
+    "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
+    "pagesWorkflowRunId": 34269175056,
+    "pagesBuildId": 1202614459,
+    "liveByteParity": {"status": "passed_44_of_44", "verifiedAt": "2026-09-08T19:34:07.169Z"},
+    "liveBrowserVerifiedAt": "2026-09-08T19:40:52.273Z",
+    "liveUnknown404VerifiedAt": "2026-09-08T19:42:09Z",
+    "openGates": [
+      "Design System machine validation",
+      "production accessibility",
+      "true browser-UI zoom",
+      "native hidden-tab behavior",
+      "loading and performance budgets",
+      "exhaustive provider and social checks"
+    ]
   },
   "staticImagePresentation": {
     "scope": ["Land, CityWiki and Landom pillar figures", "Location Intelligence cards", "non-motif Products and Services cards", "Projects and partnerships tailored service", "CityMETER showcase hero and tiles"],
@@ -580,7 +645,7 @@
       "privacyAndMetadataReview": "Visible names, parcel details and values are treated as unverified interface samples rather than real-person or property assertions. Exact-copy delivery retains Adobe/ImageReady text and Photoshop XMP/document identifiers.",
       "representationBoundary": "A visibly labelled legacy asset retrieved on 2026-08-26; it is not represented as the current Property Tax Simulator interface."
     },
-    "visualReview": "Focused local candidate pass for ui-20260909-01 completed at 2026-09-08T19:21:49.302Z: layout 32/32, captions 7/7 with twelve flow-safe captions per case, carousels 4/4, reduced-motion 4/4, no-JavaScript 2/2 including centered map fallback, and Living r3 video 1/1. The matrix covered both locales at light widths 320/360/390/600/601/630/640/700/768/900/1080/1081/1280/1440 and dark widths 390/1440; all 11 Landometer placements were full-colour on transparent carriers, product identities and content were balanced, captions stayed stable, exact name tokens and mobile CityMETER examples remained visible, contextual CTA contrast and centered Thailand maps passed, and there was no horizontal overflow, duplicate ID, or first-party runtime error. Publication/live bytes, the ui09 Drive delta, production accessibility, machine validation, native zoom/hidden-tab and performance-budget gates remain open; verified ui02 Drive and production evidence remains immutable historical evidence only and does not attest ui09."
+    "visualReview": "Focused local candidate pass for ui-20260909-01 completed at 2026-09-08T19:21:49.302Z: layout 32/32, captions 7/7 with twelve flow-safe captions per case, carousels 4/4, reduced-motion 4/4, no-JavaScript 2/2 including centered map fallback, and Living r3 video 1/1. The matrix covered both locales at light widths 320/360/390/600/601/630/640/700/768/900/1080/1081/1280/1440 and dark widths 390/1440; all 11 Landometer placements were full-colour on transparent carriers, product identities and content were balanced, captions stayed stable, exact name tokens and mobile CityMETER examples remained visible, contextual CTA contrast and centered Thailand maps passed, and there was no horizontal overflow, duplicate ID, or first-party runtime error. Publication/live bytes and the ui09 private Drive handoff are now verified in the publicationReceipt and driveHandoffReceipt; production accessibility, machine validation, native zoom/hidden-tab, performance-budget, and exhaustive provider/social gates remain open. Verified ui02 Drive and production evidence remains immutable historical evidence only and does not attest ui09."
   },
   "locationAreaPerformanceR8": {
     "assetId": "location-area-performance-r8-198c0d59",
