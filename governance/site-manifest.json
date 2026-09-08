@@ -12,14 +12,14 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_live_verified",
+    "evidenceStatus": "source_limited_local_verified",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260908-01"
+    "artifactBuildId": "ui-20260908-02"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260908-01",
+      "id": "ui-20260908-02",
       "path": "governance/site-manifest.json"
     }
   },
@@ -48,9 +48,10 @@
     "calmNavigation": true,
     "sweepingNavigationCta": "finite once; no ambient loop; hidden while page motion is paused or reduced",
     "ambientHeroPan": false,
-    "heroOrientationMotif": "Landometer 1.2.1 landometer.dial.quiet; decorative; exact fail-open still; finite once; no replay, loop or parallax",
-    "cityChatProductMotif": "owner-approved CityChat 3a เสียงบ้านเรา light rendition; product-specific; fixed #FCFCFA surface; exact fail-open still; finite once; no replay, loop or parallax",
-    "ijjiProductLogoSting": "ijji r3 mark-only logo sting on Brand Blue; product-specific; all nine layers load and decode after intersection and the exact still remains until runtime readiness; finite once; no replay, loop or parallax",
+    "heroOrientationMotif": "Landometer 1.2.1 landometer.logo.full is the prominent animated brand opening over the hero photograph; decorative, transparent carrier, exact fail-open still, 2.87 s finite once, and no replay, loop or parallax",
+    "landometerSectionMotifs": "11 decorative placements per locale use 10 unique verified Landometer 1.2.1 SVG fallbacks across logo, layers, rings, dial, cultivate and slice families; every carrier is transparent by owner instruction; each animation is finite once after at least 14% visibility with no replay, loop or parallax",
+    "cityChatProductMotif": "owner-approved CityChat animated light logo composite in the product brand row: exact base PNG plus observed bubbles SVG from both supplied archives; transparent carrier; finite once after at least 14% visibility; no replay, loop or parallax; the observed overlay bytes are governed by an artifact-scoped owner exception because their SHA-256 differs from the package register",
+    "ijjiProductLogoSting": "verified ijji r3 mark-only logo sting at 160–184 px in the product brand row; transparent carrier by owner override of the compatible Brand Blue host-surface guidance; nine layers load and decode after intersection while the exact still remains until readiness or on failure; finite once with no replay, loop or parallax",
     "staticContentParallax": "bounded scroll-linked translation on substantial static content imagery; reduced-motion and the visible page control freeze every layer; hero media, brand marks, motif stages, provider surfaces, video and testimonial identity assets are excluded",
     "stagedStoryRally": true,
     "responsiveSocialEditorialGrid": true,
@@ -88,23 +89,23 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260908-01",
+    "artifactBuildId": "ui-20260908-02",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260908-01",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v14",
+      "receiptId": "rebuild02-ui-20260908-02",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v15",
       "issuedAt": "2026-09-08",
-      "status": "published_live_verified"
+      "status": "candidate_local_verified"
     },
     "releaseFileHashes": [
-      {"path": "index.html", "bytes": 6256, "sha256": "69630bd6d8debf21df5de5a133c25f52452c2620f49283d4e9b6935aac7bd41e"},
-      {"path": "Landometer-Home-TH.dc.html", "bytes": 99767, "sha256": "3cc5f378914c87f395fca59913e681271b9018fd6a7d5fe8f3b3fc1d93c24ac4"},
-      {"path": "Landometer-Home-EN.dc.html", "bytes": 82422, "sha256": "1fa3e5f476a94f64cf0176d3d108185554f42cac55fd0bc26117da83997499b8"},
-      {"path": "404.html", "bytes": 4556, "sha256": "ece5b328143a9a603d324edfea9092a1321dddf15a61fdca81bedc5ad19e0314"},
+      {"path": "index.html", "bytes": 6292, "sha256": "25e32e30771dddd7719be2c2fac412a0a637e288e362118306ca36896d583f1e"},
+      {"path": "Landometer-Home-TH.dc.html", "bytes": 104527, "sha256": "76007689c58fc1e06ce795b8b04094ab0b9af572b4a67c2c8088dc9d0e10e418"},
+      {"path": "Landometer-Home-EN.dc.html", "bytes": 87007, "sha256": "20a511df9938884bc425d28b7daf5e4eb3167900d4bbd3683e8804efba916146"},
+      {"path": "404.html", "bytes": 4556, "sha256": "e89032c0564f923212433da395bc07c29957194c7f8b8b60f48492de1336e548"},
       {"path": "llms.txt", "bytes": 2083, "sha256": "280fbdf2dfd446863b39345b08d5d52124f07f08958a83db58309a92622a1ec3"},
       {"path": "robots.txt", "bytes": 83, "sha256": "a830d2c121000ba9c2abad1fc1a76a29edffce2f6d6f57c8970f72efb09b601f"},
       {"path": "sitemap.xml", "bytes": 1149, "sha256": "50805ca858bcaa43b67f3210768330a65584befd3ef2d63072b132495f417c90"},
-      {"path": "site.css", "bytes": 59675, "sha256": "664f20ccb87e1f79ee959628c3be290152f3f2bf5937828290c6826f7694375d"},
-      {"path": "site.js", "bytes": 56933, "sha256": "70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf"}
+      {"path": "site.css", "bytes": 60194, "sha256": "573a3e092864e40d6a73f967ab99e463ce7f770b05f97b4491c75a2a7e42081f"},
+      {"path": "site.js", "bytes": 60258, "sha256": "06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed"}
     ]
   },
   "network": {
@@ -192,19 +193,28 @@
         "approval": "owner-assigned Rebuild02 product-card role on 2026-08-30"
       },
       "citychat": {
-        "path": "assets/products/citychat-primary-logo-official.png",
-        "bytes": 8371,
-        "dimensions": "380x82",
-        "sha256": "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62",
-        "sourceAssetId": "citychat-horizontal-lockup-png-94055c9b",
-        "placement": "exact transparent lockup directly on the card content surface with no nested logo frame"
+        "runtimePath": "assets/motifs/citychat/citychat-motif-motion.js",
+        "runtimeBytes": 43005,
+        "runtimeSha256": "cbcf4b541dfe784cdd8894770fbbd6a6495d7e8de82fc5cae4beb8257871b012",
+        "basePath": "assets/motifs/citychat/logo/lockup-without-bubbles-light.png",
+        "baseBytes": 17608,
+        "baseDimensions": "494x106",
+        "baseSha256": "df00f1c02f2c2c453dbd6a21746d015fff8079880de863b2643c9fc7c2449583",
+        "overlayPath": "assets/motifs/citychat/logo/logo-bubbles-proposal-light.svg",
+        "overlayBytes": 9249,
+        "overlayDimensions": "494x106",
+        "overlayObservedSha256": "4f3defeb8901a9fc1b92690dab53c88c8c06532c99ef99eb8dc20f06f07f9aeb",
+        "overlayRegisteredSha256": "3154e91f107df269b783337bbb4f868037449dd4dd349aca1215069c1818e8e1",
+        "provenanceException": "owner approved the observed bytes supplied identically in both CityChat archives for this Rebuild02 product-card identity on 2026-09-08; the mismatch is artifact-scoped and does not promote the proposal to a generally released CityChat logo",
+        "placement": "animated light base-plus-bubbles identity at 230 px max width in the product brand row; transparent carrier on the existing CityChat content surface; aria-hidden with the product name retained in the adjacent visually hidden h3",
+        "retainedGovernedStatic": "assets/products/citychat-primary-logo-official.png"
       },
       "ijji": {
         "runtimePath": "assets/motifs/ijji/logo-sting/ijji-logo-sting.js",
         "runtimeSha256": "1a1d1bc247b5deb92aa19e4d84524ac1f823454a9401b6ce53acf8716010433e",
         "fallbackPath": "assets/motifs/ijji/logo-sting/layers/ijji-mark-still.png",
         "fallbackSha256": "acac2c65b1a17c1956686c3fdbb2a0a6dc3c547c35be1ca128675d28b0ffc630",
-        "placement": "mark-only finite logo sting on Brand Blue after nine-layer preload; exact fallback remains until runtime readiness and on any failure",
+        "placement": "mark-only finite logo sting at clamp(160px, 15vw, 184px) on a transparent product-brand carrier after nine-layer preload; exact fallback remains until runtime readiness and on any failure; owner instruction overrides the compatible Brand Blue host-surface guidance for this artifact",
         "retainedNotRendered": "assets/products/ijji-logo-official.png"
       }
     },
@@ -367,9 +377,19 @@
     {"path": "assets/screens/location-area-performance-rebuild02-r8.png", "bytes": 2182059, "sha256": "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"},
     {"path": "assets/motifs/landometer/landometer-motifs.css", "bytes": 11190, "sha256": "7cc2deb475a8d6e4af331407b2b4b741716c458a8ce885e2fb2859374b93912e"},
     {"path": "assets/motifs/landometer/landometer-motifs.js", "bytes": 17845, "sha256": "3a5caef7918a85885b61dd53e049ea8bf2b0a3cea508f587bb14970bfe6deaf2"},
+    {"path": "assets/motifs/landometer/svg/cultivate-full.svg", "bytes": 984, "sha256": "ce494d792c12d73949a3dc8e6d18f6f93faa6aeab33d18b2de0889ab4af5af12"},
+    {"path": "assets/motifs/landometer/svg/cultivate-quiet.svg", "bytes": 1190, "sha256": "edf8538107d30b078f0d7657bac054722ee88bdc10ddf7db00e63f44d077935f"},
+    {"path": "assets/motifs/landometer/svg/dial-full.svg", "bytes": 674, "sha256": "7ecfd1165a3e7ad25a0bb01b9680c35f71ff8a98edfd411dfe1b712cee12654d"},
     {"path": "assets/motifs/landometer/svg/dial-quiet.svg", "bytes": 733, "sha256": "2e624d80b604891ad2ed3e4d5cc6268d2383f39f740ef1def5012c49aee0da1f"},
+    {"path": "assets/motifs/landometer/svg/layers-full.svg", "bytes": 741, "sha256": "a94a59a342df39591f490deec960bba2263bc1c453620c557ff84a1c47901843"},
+    {"path": "assets/motifs/landometer/svg/layers-quiet.svg", "bytes": 1274, "sha256": "e3e2bf65bcd38d34d0a07910bef44917eab76fdaf097131ec133d163f6a65a03"},
+    {"path": "assets/motifs/landometer/svg/logo-full.svg", "bytes": 1252, "sha256": "90e9543f2f86a18f891331c13be25038b4334ca7dbe55b194650bc441e3558e1"},
+    {"path": "assets/motifs/landometer/svg/rings-full.svg", "bytes": 552, "sha256": "b50ec8fa3828ee5b3504ff05e0c47c1ae55f6b644225482454ec319809552286"},
+    {"path": "assets/motifs/landometer/svg/rings-quiet.svg", "bytes": 833, "sha256": "d494be1f72e833704cd3c20d9d41f60599991d6efd5f670a86e40a7296eb566b"},
+    {"path": "assets/motifs/landometer/svg/slice-quiet.svg", "bytes": 350, "sha256": "c72114d43b81584cbb46251a5519f768087259bf135216f6ea7933a83df4de6b"},
     {"path": "assets/motifs/citychat/citychat-motif-motion.js", "bytes": 43005, "sha256": "cbcf4b541dfe784cdd8894770fbbd6a6495d7e8de82fc5cae4beb8257871b012"},
-    {"path": "assets/motifs/citychat/3a-voice-home-light.svg", "bytes": 11143, "sha256": "c175caf8dd9fb0b045af720693aa45aef588b026e4eeaa5b88754cfffa8a06eb"},
+    {"path": "assets/motifs/citychat/logo/lockup-without-bubbles-light.png", "bytes": 17608, "sha256": "df00f1c02f2c2c453dbd6a21746d015fff8079880de863b2643c9fc7c2449583"},
+    {"path": "assets/motifs/citychat/logo/logo-bubbles-proposal-light.svg", "bytes": 9249, "sha256": "4f3defeb8901a9fc1b92690dab53c88c8c06532c99ef99eb8dc20f06f07f9aeb", "status": "owner_approved_observed_bytes_artifact_scoped_manifest_hash_exception"},
     {"path": "assets/motifs/ijji/logo-sting/ijji-logo-sting.js", "bytes": 12656, "sha256": "1a1d1bc247b5deb92aa19e4d84524ac1f823454a9401b6ce53acf8716010433e"},
     {"path": "assets/motifs/ijji/logo-sting/layers/ijji-mark-still.png", "bytes": 110298, "sha256": "acac2c65b1a17c1956686c3fdbb2a0a6dc3c547c35be1ca128675d28b0ffc630"},
     {"path": "assets/motifs/ijji/logo-sting/layers/i-1.png", "bytes": 16689, "sha256": "df5fb769b2bcf84a5bbb64a5b7be424463b3883632b722cebc5d9c4a29362ac6"},
@@ -384,12 +404,19 @@
   ],
   "driveHandoff": {
     "access": "private_account_scoped_not_shared",
-    "folder": "https://drive.google.com/drive/folders/1_VaLIjW_eZdtGzRjsKIGDabGmIRKmGND",
-    "selectedAssetsPackage": "https://drive.google.com/file/d/1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ/view?usp=drivesdk",
-    "claudeReadFirst": "https://drive.google.com/file/d/1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ/view?usp=drivesdk",
-    "machineManifest": "https://drive.google.com/file/d/16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D/view?usp=drivesdk",
+    "folder": "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z",
+    "status": "ui02_three_file_handoff_raw_readback_verified",
+    "selectedAssetsPackage": {"id": "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM", "url": "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk", "bytes": 325258, "sha256": "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e"},
+    "claudeReadFirst": {"id": "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU", "url": "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk", "bytes": 9675, "sha256": "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b"},
+    "machineManifest": {"id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV", "url": "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk", "bytes": 31289, "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de"},
     "receiptPath": "governance/media-receipt.json",
-    "verification": "folder listing and raw byte readback passed on 2026-09-08; no broader permission was added"
+    "verification": "folder listing, raw-byte hashes and owner-only permission metadata passed at 2026-09-08T14:55:33Z; shared=false for the folder and all three files; no public, anyone, domain or group permission was added; no background synchronization is claimed",
+    "previousVerifiedUi01": {
+      "selectedAssetsPackage": "https://drive.google.com/file/d/1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ/view?usp=drivesdk",
+      "claudeReadFirst": "https://drive.google.com/file/d/1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ/view?usp=drivesdk",
+      "machineManifest": "https://drive.google.com/file/d/16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D/view?usp=drivesdk",
+      "scope": "historical ui-20260908-01 account-scoped readback only; does not contain or attest the ui-20260908-02 selection"
+    }
   },
   "publication": {
     "authorizationSource": "the ongoing user request explicitly authorized publishing the new candidate after the current additions",
@@ -399,64 +426,57 @@
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "llms.txt navigation index", "branded noindex 404.html", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "published_live_verified",
-    "candidateArtifactBuildId": "ui-20260908-01",
-    "reviewedHeadSha": "f38f33a9cf00c26110e040da0967261ae98b890c",
-    "containmentProof": "pass: the directly pushed artifact commit f38f33a9cf00c26110e040da0967261ae98b890c has reviewed tree 4458e55ffbe2b43b1990f85af6d62be63f854ed8",
+    "currentReleaseState": "candidate_local_rendered_verified_not_published",
+    "candidateArtifactBuildId": "ui-20260908-02",
+    "reviewedHeadSha": null,
+    "containmentProof": "pending: ui-20260908-02 has no reviewed commit or tree yet",
     "mergeMode": "direct_push_explicitly_authorized_by_user",
     "mergeCommitSha": null,
-    "mergeCommitStatus": "not_applicable_direct_push_explicitly_authorized",
-    "deployedSourceSha": "f38f33a9cf00c26110e040da0967261ae98b890c",
-    "verifiedArtifactCommit": "f38f33a9cf00c26110e040da0967261ae98b890c",
-    "verifiedArtifactTree": "4458e55ffbe2b43b1990f85af6d62be63f854ed8",
-    "pagesBuildState": "built",
-    "pagesBuildId": 1201690364,
-    "pagesWorkflowRunId": 34214191898,
-    "pagesWorkflowState": "success",
-    "pagesBuildDurationMs": 27360,
-    "pagesBuildCreatedAt": "2026-09-08T10:12:18Z",
-    "pagesBuildUpdatedAt": "2026-09-08T10:12:45Z",
-    "liveByteAttestationAt": "2026-09-08T10:18:05.929Z",
-    "unknownRouteVerifiedAt": "2026-09-08T10:18:22Z",
-    "checkedAt": "2026-09-08T10:25:48.050Z",
-    "verifiedAt": "2026-09-08T10:25:48.050Z",
-    "liveRouteEvidence": "pass: root/index/TH/EN/404/llms/robots/sitemap/site.css/site.js and all 16 motif files returned intended live status/MIME; the root returned HTTP 200 before client navigation to Thai; an unknown route returned HTTP 404 text/html with branded 404 SHA-256 ece5b328143a9a603d324edfea9092a1321dddf15a61fdca81bedc5ad19e0314 at 2026-09-08T10:18:22Z",
-    "liveByteParity": "pass at 2026-09-08T10:18:05.929Z: 26 governed live probes/files matched artifact commit f38f33a9cf00c26110e040da0967261ae98b890c byte-for-byte",
+    "mergeCommitStatus": "pending",
+    "deployedSourceSha": null,
+    "verifiedArtifactCommit": null,
+    "verifiedArtifactTree": null,
+    "pagesBuildState": "not_started",
+    "pagesBuildId": null,
+    "pagesWorkflowRunId": null,
+    "pagesWorkflowState": null,
+    "pagesBuildDurationMs": null,
+    "pagesBuildCreatedAt": null,
+    "pagesBuildUpdatedAt": null,
+    "liveByteAttestationAt": null,
+    "unknownRouteVerifiedAt": null,
+    "checkedAt": null,
+    "verifiedAt": null,
+    "liveRouteEvidence": "pending publication for ui-20260908-02",
+    "liveByteParity": "pending publication for ui-20260908-02",
     "previousVerifiedRelease": {
-      "artifactBuildId": "ui-20260901-01",
-      "artifactCommit": "f384da3b7d91087598c99f738e97633bd23c6bb1",
-      "attestationCommit": "8cb5cb599557672261008aad53eaf78c42d352d0",
-      "pagesBuildId": 1188237884,
-      "scope": "historical evidence only; does not attest ui-20260908-01"
+      "artifactBuildId": "ui-20260908-01",
+      "artifactCommit": "f38f33a9cf00c26110e040da0967261ae98b890c",
+      "artifactTree": "4458e55ffbe2b43b1990f85af6d62be63f854ed8",
+      "attestationCommit": "8434e015cfd22f57b8a75d5b56b5a87e558f27fc",
+      "pagesWorkflowRunId": 34214191898,
+      "pagesBuildId": 1201690364,
+      "scope": "historical evidence only; attests ui-20260908-01 and does not attest ui-20260908-02"
     },
-    "candidateLocalEvidence": "pass for ui-20260908-01 against settled site.js SHA-256 70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf: JavaScript syntax, diff hygiene, JSON/JSON-LD parsing, unique IDs, static artifact graph with zero missing references, local HTTP/MIME including every selected motif runtime and fallback, and the rendered motif/motion regression completed at 2026-09-08T08:23:44Z",
+    "candidateLocalEvidence": "focused rendered pass for ui-20260908-02 against site.js SHA-256 06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed at 2026-09-08T14:28:19Z; broader release, production accessibility and live-byte gates remain pending",
     "localBrowserEvidence": {
       "matrix": [
-        "TH and EN at 320, 390, 768 and 1440 px in light and dark: 16 combinations",
-        "TH and EN at 360 px in light and dark: four additional combinations",
-        "Thai at 130% root text; CDP 2x page-scale/360px reflow proxy",
-        "new motif readiness, slow/load/decode failure fallbacks, finite playback, page pause, reduced motion, no JavaScript, keyboard focus, pagehide, controlled visibility override and print"
+        "TH and EN at 390 and 1440 px in light and dark: eight combinations",
+        "11 Landometer placements and transparent carriers, hero logo.full containment, restored CityChat/ijji photographs, CityChat/ijji stage containment, finite lifecycle, reduced motion and no JavaScript"
       ],
-      "verifiedAt": "2026-09-08T08:23:44Z",
-      "testedSiteJs": {"bytes": 56933, "sha256": "70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf"},
-      "verified": "pass for ui-20260908-01: all 20 bilingual viewport/theme combinations returned HTTP 200 with zero horizontal overflow and no first-party errors; Thai 130% text had no tested clipping; hero media stayed static; the quiet dial had no loop; CityChat stayed on #FCFCFA, imported once, injected its exact 3a SVG, finished by 2040 ms and did not replay; ijji stayed on #1D4497, requested no layers while cold, loaded and decoded all nine layers before mount, retained its fallback through an 1800 ms slow layer, a simulated 404 and a simulated decode rejection, paused with zero timeline delta, resumed without resetting, ended at 6.4 seconds and did not replay; reduced-motion and no-JavaScript retained final stills; keyboard focus, pagehide and print passed; runtime-final and fallback bounds differed by at most 1 px",
-      "harnessLimitations": "Native browser-chrome zoom and native hidden-tab state were unavailable; CDP 2x/reflow and a controlled visibility override were used. Third-party social embeds remain an existing provider-owned open boundary; first-party resources were clean."
+      "verifiedAt": "2026-09-08T14:28:19Z",
+      "testedSiteJs": {"bytes": 60258, "sha256": "06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed"},
+      "verified": "pass for ui-20260908-02: all eight bilingual viewport/theme cases returned build ui-20260908-02 with zero horizontal overflow and no harness errors; each locale exposed exactly 11 transparent Landometer motif carriers; hero logo.full measured 327.59 px mobile and 544.75 px desktop within the photograph; prior exact CityChat and ijji photo families were visible; the CityChat base and observed overlay and ijji fallback remained contained; CityChat and ijji completed once without re-entry replay; reduced-motion produced zero running Landometer motifs and retained both product fallbacks; no-JavaScript retained 11 Landometer fallbacks plus both product fallbacks",
+      "harnessLimitations": "This is the focused eight-case local motif regression only. It does not rerun native browser zoom/hidden-tab, slow/load/decode failure injection, keyboard, print, pagehide, third-party providers, production accessibility, performance budgets or live HTTP/byte parity."
     },
     "liveBrowserEvidence": {
-      "engine": "installed headless Chrome via Playwright",
-      "verifiedAt": "2026-09-08T10:25:48.050Z",
-      "routes": [
-        "https://montri-th.github.io/rebuild02/",
-        "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
-        "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
-      ],
-      "matrix": "8/8 TH/EN x 390/1440 x light/dark",
-      "verified": "pass for ui-20260908-01: correct language, theme and build metadata; zero horizontal overflow and zero first-party page, console, request or HTTP failures; root returned HTTP 200 and navigated client-side to Thai; CityChat requested its module once, replaced the fallback with the exact SVG, settled by 2040 ms and did not replay; ijji began with its cold fallback and zero layer requests, then loaded all layers, mounted and completed once from 0 to 6.4 seconds with starts=1 and ends=1 and no re-entry replay; pause/resume passed; reduced motion retained static fallbacks and disabled the motion control",
-      "testedSiteJs": {"bytes": 56933, "sha256": "70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf"},
-      "screenshots": [
-        {"path": "/private/tmp/rebuild02-live-ui-20260908-01-th-mobile-390.png", "bytes": 3449130, "sha256": "cd8ef83b0e64504d7a48474a0a761a046915e9b1aef4817f40c9e7a46d88a341"},
-        {"path": "/private/tmp/rebuild02-live-ui-20260908-01-th-desktop-1440.png", "bytes": 8550376, "sha256": "c2c10b56e2cd6f07762c7b50cad41f00a04892be4973548e43a53c79fb97bb87"}
-      ]
+      "engine": null,
+      "verifiedAt": null,
+      "routes": [],
+      "matrix": "pending publication",
+      "verified": "not run for ui-20260908-02",
+      "testedSiteJs": {"bytes": 60258, "sha256": "06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed"},
+      "screenshots": []
     }
   },
   "growth": {
@@ -483,7 +503,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "local pass at 2026-09-08T08:23:44Z plus focused live pass at 2026-09-08T10:25:48.050Z for ui-20260908-01 and exact site.js SHA-256 70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf; live 8/8 TH/EN x 390/1440 x light/dark, root-to-TH navigation, CityChat/ijji finite lifecycle, pause/resume and reduced-motion fallbacks passed with zero horizontal overflow or first-party failures; native browser-chrome zoom, native hidden-tab state, provider-owned embeds, performance budget and the remaining exhaustive SC-20 matrix stay open",
+    "renderedBrowserGate": "focused local pass at 2026-09-08T14:28:19Z for ui-20260908-02 and exact site.js SHA-256 06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed: 8/8 TH/EN x 390/1440 x light/dark, 11 transparent Landometer carriers with prominent hero logo.full, restored CityChat/ijji photos, contained finite product identities, reduced-motion and no-JavaScript fallbacks, zero horizontal overflow and zero harness errors; broader release, production accessibility and live gates remain open",
     "motifIntegrationPath": "governance/motif-integration.json",
     "productionAccessibilityGate": "open"
   },

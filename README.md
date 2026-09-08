@@ -2,11 +2,11 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. Current live-verified release:
-`ui-20260908-01` (`rebuild02-ui-20260908-01`; artifact commit `f38f33a9…`, tree
-`4458e55f…`; local and production browser regression, live byte parity, and all three
-private Drive handoff readbacks passed; machine validation remains pending). The
-immediately previous live-verified artifact is `ui-20260901-01` and remains historical.
+install, bundler, CI workflow, or build step. Current source candidate:
+`ui-20260908-02` (`rebuild02-ui-20260908-02`), locally verified and not yet published or
+live-attested. The immediately preceding live-verified release is `ui-20260908-01`
+(`f38f33a9…`, tree `4458e55f…`); `ui-20260901-01` remains earlier historical evidence.
+Machine validation remains pending.
 
 | File | Purpose |
 |---|---|
@@ -35,10 +35,19 @@ immediately previous live-verified artifact is `ui-20260901-01` and remains hist
   QA confirmed the dark hover surface changes from transparent to
   `color(srgb .244784 .393333 .443686)` while retaining light text.
 - The hero fills the first viewport beneath the 76 px desktop / 68 px mobile header.
-  Its photograph is static. A product-neutral Landometer `dial.quiet` orientation motif
-  runs once for 1.26 seconds, has an exact SVG fallback, and never replays, loops, or
-  receives parallax. The section link remains a single underlined text action with a
-  downward arrow.
+  Its photograph is static. A large, owner-approved Landometer `logo.full` assembles once
+  as a transparent overlay in the photographic sky and keeps an exact SVG fallback; the
+  official navigation, favicon, and social identity files remain unchanged. The overlay
+  never loops, replays after completion, or receives parallax. The section link remains a
+  single underlined text action with a downward arrow.
+- Eleven product-neutral Landometer motif placements per locale give each major section
+  a meaning-specific visual cue without adding a card or background carrier: `logo.full`
+  opens the hero; `layers.quiet` closes the proof band; `rings.full` orients Land·Location·Living;
+  `dial.quiet` frames Location Intelligence; `layers.full` introduces products; `rings.quiet`
+  opens showcases; `layers.quiet` introduces CityWiki; `cultivate.full` closes the Landom
+  chapter; `dial.full` supports the methodology story; `cultivate.quiet` hands off to news;
+  and `slice.quiet` closes on contact. Every carrier computes to transparent with zero
+  border and padding, and every sequence is finite, decorative, and excluded from parallax.
 - The approved page-reveal motion remains unchanged: grouped, once-only entrances with
   32 px vertical or 36 px directional travel, 760/920 ms timing, and a 150 ms stagger
   capped at 450 ms. Reduced motion presents the final state immediately.
@@ -79,13 +88,15 @@ immediately previous live-verified artifact is `ui-20260901-01` and remains hist
   Landometer Arvo wordmark and names CityMETER in a separate heading. CityWiki pairs the
   symbol with its Arvo product wordmark, while land/property tools keeps the shared lockup
   geometry. The CityWiki frame carries linked CC BY 2.0 attribution, and Property Tax
-  Simulator is visibly identified as a legacy asset. CityChat uses the owner-approved 3a
-  “เสียงบ้านเรา” light motif on exact `#FCFCFA`, while its governed official lockup stays
-  static. ijji uses the verified r3 mark-only 6.4-second logo sting on Brand Blue and keeps
-  the exact still visible until all nine layers load and decode or whenever a dependency
-  fails. Both product-specific treatments run once, never replay or parallax, and are not
-  generalized into Landometer capability. The earlier CityChat/ijji photographs and the
-  historical ijji compact PNG remain committed but are not rendered. CityChat retains its
+  Simulator is visibly identified as a legacy asset. CityChat and ijji now restore the
+  previous responsive community and food-vendor photographs in their media frames. Their
+  owner-approved animated identities move into the brand rows: CityChat layers the exact
+  observed-byte bubble animation over its no-bubble lockup, while ijji uses the verified
+  r3 mark-only 6.4-second sting and keeps its exact still until all nine layers load and
+  decode or whenever a dependency fails. Both logo carriers are transparent; both
+  product-specific sequences are finite once, never replay or parallax, and are not
+  generalized into Landometer capability. The photographs remain documentary context:
+  the people shown are not represented as product users or endorsers. CityChat retains its
   complete fixed-light contrast contract without a filled Brand Blue action. Projects and partnerships is
   separated as a tailored service route. Product-specific claims remain inside their
   own cards rather than being generalized across Landometer. The CityMETER card restores
@@ -107,7 +118,8 @@ immediately previous live-verified artifact is `ui-20260901-01` and remains hist
   `rgb(32, 41, 45)` and the dark embed surround resolved to `rgb(43, 53, 52)`. The 390 px
   Instagram frame/card measured 436/499 px with 57 px before the following card, with no
   substitute surface or fake blank tail.
-- The hero photograph and all three motif stages are excluded from scroll-linked movement.
+- The hero photograph, all eleven Landometer motif carriers, and both product-logo stages
+  are excluded from scroll-linked movement.
   Substantial static content imagery in the Land/CityWiki/Landom pillars,
   Location Intelligence, Products and Services, tailored service, and CityMETER showcase
   areas retains a bounded scroll-linked depth treatment. Brand and identity marks, provider
@@ -144,16 +156,14 @@ immediately previous live-verified artifact is `ui-20260901-01` and remains hist
 
 ## Motif handoff
 
-`governance/motif-integration.json` pins the selected asset IDs, product scopes, surfaces,
-runtime/fallback paths, dependency hashes, owner-approval boundary, and private Drive folder.
-The account-scoped selected-assets ZIP is readback-verified at 307,923 bytes / SHA-256
-`f396ecec…` (Drive file `1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ`), and the Claude read-first
-file is readback-verified at 4,747 bytes / SHA-256 `eb6380a9…` (Drive file
-`1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ`). The published live-QA-bound integration manifest is also
-readback-verified with exact local-file parity at 15,554 bytes / SHA-256 `d9a32b65…`
-(Drive file `16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D`, modified
-`2026-09-08T10:39:19.747Z`). The folder is private and not publicly shared; no automatic or
-background synchronization is claimed.
+`governance/motif-integration.json` is the machine boundary for selected asset IDs,
+product scopes, transparent carriers, semantic jobs, runtime/fallback paths, dependency
+hashes, and owner approval. The immutable private `ui-20260908-02` Drive folder is
+<https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z>.
+Its selected-assets ZIP, Claude read-first file, and machine manifest were read back at
+`2026-09-08T14:55:33Z` with exact byte/hash parity; all three remain owner-only and not
+publicly shared. The handoff supports reuse through the connected Drive account without
+claiming background synchronization or independent publishing authority.
 
 ## Publishing
 
@@ -163,25 +173,21 @@ suffixes are route contracts and must not be renamed.
 
 `machineValidation` remains `pending` and `conformanceLevel` remains
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
-validation language. Release source/hash checks pin `site.css` at 59,675 bytes / SHA-256
-`664f20cc…` and settled `site.js` at 56,933 bytes / SHA-256 `70e4e0b2…`. A fresh local
-regression rechecked that JavaScript hash unchanged at `2026-09-08T08:23:44Z` and passed
-16/16 bilingual viewport/theme combinations, 4/4 additional 360 px checks, the complete
-first-party asset sweep, CityChat finite/no-replay behavior, ijji cold/slow/404/decode-
-rejection/pause-resume/completion/no-replay behavior, reduced motion, no JavaScript, Thai
-130%, keyboard/focus, pagehide, print finalization, and stage/fallback visual parity. True
-Chrome UI zoom and native hidden-tab visibility remain proxy-only in headless testing; a
-selected loading budget, the exhaustive provider/social matrix, and the production
-accessibility audit remain open. Existing third-party social panels may render
-blank/partial and Facebook may emit external console noise; the first-party sweep was
-clean. GitHub Pages published artifact commit
-`f38f33a9cf00c26110e040da0967261ae98b890c` (tree
-`4458e55ffbe2b43b1990f85af6d62be63f854ed8`) through successful workflow
-`34214191898` / Pages build `1201690364`. At `2026-09-08T10:18:05.929Z`, all 26 release
-URLs—core routes and files plus every motif runtime, fallback, and ijji layer—returned the
-expected final URL, 2xx status, MIME type, byte count, and SHA-256; an unknown route also
-returned the exact branded 404 with HTTP 404. Production browser QA passed at
-`2026-09-08T10:25:48.050Z` for TH/EN at 390 and 1440 px in light and dark, including
-finite/no-replay CityChat and ijji motion, pause/resume, reduced motion, and zero
-first-party errors or horizontal overflow. The prior `ui-20260901-01` workflow and build
-records remain historical and do not attest this release.
+validation language. Candidate source/hash checks pin `site.css` at 60,194 bytes / SHA-256
+`573a3e09…` and `site.js` at 60,258 bytes / SHA-256 `06539479…`. The current local
+browser gate passed 8/8 TH/EN × 390/1440 × light/dark cases with the correct build,
+language and theme, no horizontal overflow or first-party page/console errors, eleven
+transparent Landometer carriers, a large in-frame hero logo, restored CityChat/ijji
+photographs, and contained animated brand rows. Reduced-motion, no-JavaScript, and finite
+CityChat/ijji lifecycle checks also passed. Publication, GitHub Pages build identity, live
+HTTP/MIME and byte parity, unknown-route behavior, and production browser QA are pending
+for `ui-20260908-02`.
+
+The immediately preceding `ui-20260908-01` release remains historical evidence: artifact
+commit `f38f33a9cf00c26110e040da0967261ae98b890c`, tree
+`4458e55ffbe2b43b1990f85af6d62be63f854ed8`, successful workflow `34214191898`, Pages
+build `1201690364`, live byte verification at `2026-09-08T10:18:05.929Z`, and focused
+production browser QA at `2026-09-08T10:25:48.050Z`. None of those receipts attests the
+current candidate. True Chrome UI zoom, native hidden-tab behavior, a selected loading
+budget, the exhaustive provider/social matrix, production accessibility, and machine
+validation remain open.

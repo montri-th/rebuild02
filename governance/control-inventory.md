@@ -1,6 +1,6 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260908-01` published and live verified
+Artifact build: `ui-20260908-02` candidate, locally verified; publication pending
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
@@ -86,11 +86,16 @@ Source and rendered assertions:
   as a latest feed. The X timeline embed is omitted because its provider widget rendered
   a hidden zero-size iframe at tested desktop and mobile widths. Footer social links remain
   Facebook, Instagram, TikTok, LinkedIn and X.
-- The hero photograph is static. Its decorative Landometer quiet dial runs once for
-  1.26 seconds with an exact SVG fallback and no parallax. Substantial static content
+- The hero photograph is static. Its large owner-approved Landometer `logo.full` assembles
+  once as a transparent sky overlay, keeps an exact SVG fallback, remains within the hero
+  media frame, and receives no parallax. Ten additional product-neutral Landometer motifs
+  map to the proof, Land·Location·Living, Location Intelligence, products, showcases,
+  CityWiki, Landom, methodology, news, and contact sections according to their declared
+  semantic jobs. All eleven carriers compute to transparent with zero border and padding.
+  Substantial static content
   imagery in eligible pillar, Location Intelligence, product, tailored-service, and
-  CityMETER showcase frames retains bounded scroll-linked movement. Hero media, all motif
-  stages, brand/identity marks, provider surfaces, video, and testimonial identity assets
+  CityMETER showcase frames retains bounded scroll-linked movement. Hero media, all eleven
+  Landometer motif carriers, both product-logo stages, other brand/identity marks, provider surfaces, video, and testimonial identity assets
   are excluded; reduced motion and the page pause freeze eligible static-image movement.
 - The bilingual company history and future direction are available through a native
   disclosure; its compact identity mark changes between full-colour and cream with the theme.
@@ -133,17 +138,19 @@ Source and rendered assertions:
   and type. At widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440, local QA
   found all computed nowrap, zero `.btn` overflow, no Location CTA above 48 px and no page
   overflow.
-- Published `ui-20260908-01` is bound to artifact commit `f38f33a…`, tree `4458e55…`,
-  Pages workflow `34214191898`, and Pages build `1201690364`. At
-  `2026-09-08T10:18:05.929Z`, root/index/TH/EN/404/llms/robots/sitemap/CSS/JS and all
-  16 motif files matched exact artifact bytes; an unknown route returned the exact branded
-  HTTP 404 at `10:18:22Z`. Focused live QA at `10:25:48.050Z` passed 8/8 TH/EN ×
-  390/1440 × light/dark, root-to-Thai navigation, CityChat/ijji finite lifecycles,
-  pause/resume and reduced-motion fallbacks with zero overflow or first-party failures.
-  True Chrome UI zoom and native hidden-tab visibility remain proxy-only; production
-  accessibility, a selected loading budget, and the exhaustive provider/social matrix
-  remain open. Existing third-party social panels may be blank/partial and Facebook may
-  emit external console noise. The prior `ui-20260901-01` release remains history only.
+- Candidate `ui-20260908-02` passed the local 8/8 TH/EN × 390/1440 × light/dark
+  matrix with the correct build, locale and theme, zero horizontal overflow or first-party
+  page/console errors, eleven transparent Landometer carriers, a contained large hero
+  logo, restored product photographs, and contained product brand rows. Reduced-motion,
+  no-JavaScript, and finite CityChat/ijji lifecycle checks also passed. It has no artifact
+  commit, Pages workflow/build receipt, live byte parity, branded unknown-route result, or
+  production browser check yet. Published `ui-20260908-01` remains historical evidence:
+  artifact `f38f33a…`, tree `4458e55…`, workflow `34214191898`, build `1201690364`, live
+  bytes at `2026-09-08T10:18:05.929Z`, and focused live QA at
+  `2026-09-08T10:25:48.050Z`; none attests this candidate. True Chrome UI zoom, native
+  hidden-tab behavior, current 320/360/768 coverage, production accessibility, a selected
+  loading budget, the exhaustive provider/social matrix, machine validation, and current
+  live verification remain open.
 - Products and Services exposes five product paths with consistent capsule conversation
   CTAs and an explicit fit cue. Desktop uses a 2+3 hierarchy: CityMETER and CityChat lead,
   followed by ijji, CityWiki and land/property tools. The restored CityMETER card pairs the
@@ -152,18 +159,22 @@ Source and rendered assertions:
   restores the responsive 960/1600 AVIF/WebP Business Dynamics family. CityWiki and land
   tools keep exact r8 PNG examples; CityWiki carries two linked source/license credits and
   the tax simulator is visibly labelled as a legacy asset
-  retrieved on 26 Aug 2026. CityChat uses the owner-approved 3a “เสียงบ้านเรา” light motif
-  on exact `#FCFCFA` while its governed official lockup remains static. ijji uses the verified
-  r3 mark-only sting on Brand Blue and preserves the exact mark still until all nine runtime
-  layers load and decode; any failure retains the still. Both sequences are finite once,
-  non-parallax, and product-specific. The earlier CityChat/ijji photographs and historical
-  ijji PNG remain committed but are not rendered. Projects/partnerships remains a separate
+  retrieved on 26 Aug 2026. CityChat and ijji restore their previous responsive community
+  and food-vendor photographs. CityChat now uses the owner-approved, observed-byte bubble
+  animation over its no-bubble lockup in the brand row; ijji moves its verified r3
+  mark-only sting into its own brand row and preserves the exact mark still until all nine
+  runtime layers load and decode. Both logo carriers are transparent and both sequences are
+  finite once, non-parallax, and product-specific. The people in the photographs are not
+  represented as product users or endorsers. Projects/partnerships remains a separate
   image-led tailored service route. Product-specific copy is not generalized across Landometer.
 
-- The selected motif families add three non-focusable visual stages per locale; they do not
-  change the control totals. CityChat begins at 14% visibility and finishes by 2.04 seconds.
-  ijji begins only after 14% visibility plus nine-layer load/decode readiness, runs for
-  6.4 seconds, and does not replay after re-entry. Exact stills remain for no JavaScript,
-  reduced motion, print, and runtime failure. Settled-byte QA explicitly exercised an ijji
-  decode rejection: the fallback remained loaded and visible, no component mounted, no
-  start event fired, and no first-party or unhandled error was recorded.
+- The selected families add thirteen non-focusable visual stages per locale—eleven
+  Landometer section motifs plus CityChat and ijji animated brand rows—and do not change
+  the control totals. All carriers add no background surface, border, padding, radius, or
+  shadow. Each Landometer sequence is finite and begins only near its mapped section.
+  CityChat settles once and does not replay. ijji begins only after visibility plus
+  nine-layer load/decode readiness, runs for 6.4 seconds, and remains at 6.4 seconds after
+  re-entry. Current reduced-motion and no-JavaScript checks retained exact stills and all
+  eleven Landometer fallbacks. Print and injected ijji decode-failure evidence from
+  `ui-20260908-01` remains historical and must be repeated before it is claimed for this
+  candidate.

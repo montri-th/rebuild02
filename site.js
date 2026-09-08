@@ -568,6 +568,7 @@
   function installLandometerMotifs() {
     var motifs = Array.from(document.querySelectorAll('lm-motif'));
     if (!motifs.length) return;
+    var observer = null;
 
     function meetsVisibilityThreshold(element, threshold) {
       var bounds = element.getBoundingClientRect();
@@ -584,33 +585,64 @@
     }
 
     var states = motifs.map(function (motif) {
-      var state = {
+      motif.removeAttribute('loop');
+      return {
         element: motif,
         nativePlay: typeof motif.play === 'function' ? motif.play : null,
         pausedAnimations: [],
         pending: false,
-        started: motif.hasAttribute('data-play')
+        inView: false,
+        started: false,
+        complete: false
       };
-
-      motif.removeAttribute('loop');
-      if (state.nativePlay) {
-        motif.play = function () {
-          if (!pageMotionCanRun()) {
-            state.pending = true;
-            clearLoop(motif);
-            return undefined;
-          }
-
-          state.pending = false;
-          state.started = true;
-          return state.nativePlay.apply(motif, arguments);
-        };
-      }
-
-      return state;
     });
 
+    function completeState(state) {
+      if (state.complete) return;
+      state.complete = true;
+      state.pending = false;
+      state.pausedAnimations = [];
+      if (observer) observer.unobserve(state.element);
+    }
+
+    function watchForCompletion(state) {
+      if (typeof state.element.getAnimations !== 'function') {
+        completeState(state);
+        return;
+      }
+      var animations = state.element.getAnimations({ subtree: true });
+      if (!animations.length) {
+        completeState(state);
+        return;
+      }
+      Promise.all(animations.map(function (animation) {
+        return animation.finished.catch(function () {});
+      })).then(function () {
+        completeState(state);
+      });
+    }
+
+    function startState(state) {
+      if (state.started || state.complete || !state.inView) return;
+      if (!pageMotionCanRun()) {
+        state.pending = true;
+        return;
+      }
+      if (!state.nativePlay) {
+        completeState(state);
+        return;
+      }
+
+      state.pending = false;
+      state.started = true;
+      state.nativePlay.call(state.element);
+      window.requestAnimationFrame(function () {
+        watchForCompletion(state);
+      });
+    }
+
     function pauseState(state) {
+      if (state.complete) return;
       clearLoop(state.element);
       if (typeof state.element.getAnimations !== 'function') return;
       state.element.getAnimations({ subtree: true }).forEach(function (animation) {
@@ -621,32 +653,57 @@
     }
 
     function resumeState(state) {
-      if (!pageMotionCanRun()) return;
+      if (state.complete || !state.inView || !pageMotionCanRun()) return;
 
       state.pausedAnimations.forEach(function (animation) {
         if (animation.playState === 'paused') animation.play();
       });
       state.pausedAnimations = [];
 
-      if (state.pending && !state.started && meetsVisibilityThreshold(state.element, 0.14)) {
-        state.element.play();
-      }
+      if (!state.started && (state.pending || meetsVisibilityThreshold(state.element, 0.14))) startState(state);
     }
 
     function finishState(state) {
+      if (state.complete) return;
       clearLoop(state.element);
       state.pausedAnimations = [];
       state.pending = false;
       state.element.removeAttribute('data-play');
+      completeState(state);
+    }
+
+    if ('IntersectionObserver' in window) {
+      observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var state = states.find(function (candidate) { return candidate.element === entry.target; });
+          if (!state || state.complete) return;
+          state.inView = entry.isIntersecting;
+          if (!entry.isIntersecting) {
+            if (state.started) finishState(state);
+            return;
+          }
+          if (entry.intersectionRatio >= 0.14) startState(state);
+        });
+      }, { threshold: [0, 0.14], rootMargin: '0px 0px -12% 0px' });
+      states.forEach(function (state) { observer.observe(state.element); });
+    } else {
+      states.forEach(function (state) {
+        state.inView = true;
+        startState(state);
+      });
     }
 
     document.addEventListener('landometer:motionchange', function (event) {
       var paused = event.detail ? Boolean(event.detail.paused) : pageMotionPaused();
+      if (paused && motionQuery && motionQuery.matches) {
+        states.forEach(finishState);
+        return;
+      }
       states.forEach(paused ? pauseState : resumeState);
     });
 
     document.addEventListener('visibilitychange', function () {
-      states.forEach(document.hidden ? pauseState : resumeState);
+      states.forEach(document.hidden ? finishState : resumeState);
     });
 
     window.addEventListener('pagehide', function () {
@@ -655,6 +712,8 @@
     window.addEventListener('beforeprint', function () {
       states.forEach(finishState);
     });
+
+    if (motionQuery && motionQuery.matches) states.forEach(finishState);
   }
 
   function installCityChatMotifs() {
@@ -666,11 +725,35 @@
     var states = hosts.map(function (host) {
       return {
         element: host,
+        base: host.closest('.citychat-logo-stage') ? host.closest('.citychat-logo-stage').querySelector('.citychat-logo-stage__base') : null,
+        basePromise: null,
         inView: false,
         started: false,
         complete: false
       };
     });
+
+    function decodeBase(state) {
+      if (!state.base) return Promise.resolve();
+      if (state.basePromise) return state.basePromise;
+      state.basePromise = new Promise(function (resolve, reject) {
+        function decode() {
+          if (typeof state.base.decode !== 'function') {
+            resolve();
+            return;
+          }
+          state.base.decode().then(resolve, reject);
+        }
+        if (state.base.complete) {
+          if (state.base.naturalWidth) decode();
+          else reject(new Error('CityChat logo base failed'));
+          return;
+        }
+        state.base.addEventListener('load', decode, { once: true });
+        state.base.addEventListener('error', function () { reject(new Error('CityChat logo base failed')); }, { once: true });
+      });
+      return state.basePromise;
+    }
 
     function loadModule() {
       if (modulePromise) return modulePromise;
@@ -724,7 +807,8 @@
     function startState(state) {
       if (state.started || state.complete || !state.inView || !pageMotionCanRun()) return;
       state.started = true;
-      loadModule().then(function (citychat) {
+      Promise.all([loadModule(), decodeBase(state)]).then(function (ready) {
+        var citychat = ready[0];
         if (state.complete) return;
         if (!pageMotionCanRun()) {
           state.started = false;
@@ -739,6 +823,13 @@
           return;
         }
         state.element.innerHTML = markup;
+        var svg = state.element.querySelector('svg');
+        if (svg) {
+          svg.removeAttribute('role');
+          svg.removeAttribute('aria-label');
+          svg.setAttribute('aria-hidden', 'true');
+          svg.setAttribute('focusable', 'false');
+        }
         window.requestAnimationFrame(function () {
           watchForCompletion(state);
         });
@@ -752,8 +843,12 @@
         entries.forEach(function (entry) {
           var state = states.find(function (candidate) { return candidate.element === entry.target; });
           if (!state || state.complete) return;
-          state.inView = entry.isIntersecting && entry.intersectionRatio >= 0.14;
-          if (state.inView) startState(state);
+          state.inView = entry.isIntersecting;
+          if (!entry.isIntersecting) {
+            if (state.started) finishState(state);
+            return;
+          }
+          if (entry.intersectionRatio >= 0.14) startState(state);
         });
       }, { threshold: [0, 0.14], rootMargin: '0px 0px -12% 0px' });
       states.forEach(function (state) { observer.observe(state.element); });
@@ -865,9 +960,9 @@
         var logo = document.createElement('ijji-logo-sting');
         logo.setAttribute('manual', '');
         logo.setAttribute('notagline', '');
-        logo.setAttribute('surface', 'brand-blue');
         logo.setAttribute('bounce', 'extra');
         logo.setAttribute('assets', base.href);
+        logo.setAttribute('aria-hidden', 'true');
         logo.addEventListener('ijji-sting-end', function () {
           completeState(state);
         });
@@ -932,13 +1027,13 @@
           });
           if (!state || state.complete) return;
 
-          state.inView = entry.isIntersecting && entry.intersectionRatio >= 0.14;
-          if (!state.inView) {
+          state.inView = entry.isIntersecting;
+          if (!entry.isIntersecting) {
             if (state.started) finishState(state);
             return;
           }
 
-          if (!state.started) startState(state);
+          if (!state.started && entry.intersectionRatio >= 0.14) startState(state);
           else if (state.pausedByVisibility && !pageMotionPaused()) resumeState(state);
         });
       }, { threshold: [0, 0.14] });
@@ -969,10 +1064,7 @@
       states.forEach(function (state) {
         if (state.complete) return;
         if (document.hidden) {
-          if (state.started && state.component) {
-            state.pausedByVisibility = true;
-            state.component.pause();
-          }
+          finishState(state);
           return;
         }
         if (!state.started || state.pausedByVisibility) resumeState(state);

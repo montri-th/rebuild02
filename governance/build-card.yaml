@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260908-01"
+      id: "ui-20260908-02"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -59,7 +59,7 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "source_limited_live_verified"
+    evidenceStatus: "source_limited_local_verified"
     authorizationSource: "ongoing user request explicitly includes publishing the new candidate after the current additions"
     visibility: "public"
     indexable: true
@@ -69,12 +69,12 @@ landometerBuild:
       en: "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
     discoveryStates:
       machineReadableWhenOpened:
-        status: "live_verified"
+        status: "candidate_source_verified_live_pending"
         evidenceRefs:
           - "governance/site-manifest.json"
           - "semantic initial HTML in both locale routes"
       searchDiscoverable:
-        status: "live_verified_with_host_root_limit"
+        status: "candidate_source_verified_live_pending_with_host_root_limit"
         evidenceRefs:
           - "robots.txt"
           - "sitemap.xml"
@@ -84,12 +84,12 @@ landometerBuild:
         evidenceRefs:
           - "llms.txt is a navigation-only aid and not represented as a ranking signal"
       agentReadableOrActionable:
-        status: "live_verified_readable_not_actionable"
+        status: "candidate_source_readable_not_actionable_live_pending"
         evidenceRefs:
           - "semantic initial HTML in both locale routes"
           - "llms.txt machine-use boundary"
     webDiscovery:
-      technicalStatus: "live_verified"
+      technicalStatus: "candidate_source_verified_live_pending"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both canonical locale routes; visible-content ItemList in locale routes; redirect-shell root intentionally carries metadata but no JSON-LD"
       observations:
@@ -102,47 +102,46 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "published_live_verified_with_open_manual_gates"
+    readiness: "candidate_local_rendered_verified_publication_pending"
     publicSafe: true
-    status: "published_live_verified"
-    qrOrLinkTest: "pass for the exact live link and governed routes; a physical QR scan was not separately performed"
-    verifiedArtifactCommit: "f38f33a9cf00c26110e040da0967261ae98b890c"
-    verifiedArtifactTree: "4458e55ffbe2b43b1990f85af6d62be63f854ed8"
-    pagesBuildCommit: "f38f33a9cf00c26110e040da0967261ae98b890c"
-    pagesBuildState: "built"
-    pagesBuildId: 1201690364
-    pagesWorkflowRunId: 34214191898
-    pagesWorkflowState: "success"
-    pagesBuildDurationMs: 27360
-    pagesBuildCreatedAt: "2026-09-08T10:12:18Z"
-    pagesBuildUpdatedAt: "2026-09-08T10:12:45Z"
-    liveByteAttestationAt: "2026-09-08T10:18:05.929Z"
-    liveBrowserVerifiedAt: "2026-09-08T10:25:48.050Z"
-    liveRouteEvidence: "pass: root/index/TH/EN/404/llms/robots/sitemap/site.css/site.js and all 16 motif files returned their intended live status/MIME and exact artifact bytes; an unknown route returned HTTP 404 text/html with branded 404 SHA-256 ece5b328143a9a603d324edfea9092a1321dddf15a61fdca81bedc5ad19e0314 at 2026-09-08T10:18:22Z"
-    liveByteParity: "pass for 26 governed live probes/files at 2026-09-08T10:18:05.929Z"
+    status: "candidate_local_verified_not_published"
+    qrOrLinkTest: "pending publication for ui-20260908-02"
+    verifiedArtifactCommit: null
+    verifiedArtifactTree: null
+    pagesBuildCommit: null
+    pagesBuildState: "not_started"
+    pagesBuildId: null
+    pagesWorkflowRunId: null
+    pagesWorkflowState: null
+    pagesBuildDurationMs: null
+    pagesBuildCreatedAt: null
+    pagesBuildUpdatedAt: null
+    liveByteAttestationAt: null
+    liveBrowserVerifiedAt: null
+    liveRouteEvidence: "pending publication for ui-20260908-02"
+    liveByteParity: "pending publication for ui-20260908-02"
     releaseLedger:
-      reviewedHeadSha: "f38f33a9cf00c26110e040da0967261ae98b890c"
+      reviewedHeadSha: null
       mergeCommitSha: null
-      mergeCommitStatus: "not_applicable_direct_push_explicitly_authorized"
-      reviewedTreeOrDiffContained: "pass: directly pushed artifact commit f38f33a9cf00c26110e040da0967261ae98b890c has reviewed tree 4458e55ffbe2b43b1990f85af6d62be63f854ed8"
-      deployedSourceSha: "f38f33a9cf00c26110e040da0967261ae98b890c"
-      providerRunOrDeploymentId: 34214191898
-      checkedAt: "2026-09-08T10:25:48.050Z"
+      mergeCommitStatus: "pending"
+      reviewedTreeOrDiffContained: "pending: ui-20260908-02 has no reviewed commit or tree yet"
+      deployedSourceSha: null
+      providerRunOrDeploymentId: null
+      checkedAt: null
     providerConfiguration:
       sourceBranch: "main"
       sourcePath: "/"
       httpsEnforced: true
-      providerStatus: "built"
-      scope: "current ui-20260908-01 deployment configuration, corroborated by Pages workflow 34214191898 and build 1201690364"
+      providerStatus: "target_configuration_not_yet_exercised_for_ui02"
+      scope: "expected GitHub Pages target for ui-20260908-02; no workflow or build ID is assigned yet"
     previousVerifiedRelease:
-      artifactBuildId: "ui-20260901-01"
-      artifactCommit: "f384da3b7d91087598c99f738e97633bd23c6bb1"
-      artifactTree: "956b6009c926950e065c0bfe9aab638f12753b56"
-      artifactPagesWorkflowRunId: 33535403331
-      attestationCommit: "8cb5cb599557672261008aad53eaf78c42d352d0"
-      attestationPagesWorkflowRunId: 33536483613
-      pagesBuildId: 1188237884
-      scope: "historical evidence only: the artifact commit was published by workflow run 33535403331/build 1188237884, while the later attestation/deployed HEAD triggered successful workflow run 33536483613; neither attests ui-20260908-01"
+      artifactBuildId: "ui-20260908-01"
+      artifactCommit: "f38f33a9cf00c26110e040da0967261ae98b890c"
+      artifactTree: "4458e55ffbe2b43b1990f85af6d62be63f854ed8"
+      artifactPagesWorkflowRunId: 34214191898
+      attestationCommit: "8434e015cfd22f57b8a75d5b56b5a87e558f27fc"
+      pagesBuildId: 1201690364
+      scope: "historical evidence only: attests ui-20260908-01 and does not attest ui-20260908-02"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -187,7 +186,7 @@ landometerBuild:
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild02.ui-20260908-01"
+    channelParityKey: "landometer.home.rebuild02.ui-20260908-02"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -212,8 +211,8 @@ landometerBuild:
       - "the restored CityMETER card uses the r6 symbol plus typed Landometer Arvo wordmark and a separate CityMETER heading; CityWiki uses its Arvo product wordmark beside the symbol; the longer Land and property tools label uses the same lockup geometry and may wrap"
       - "product media notes use an opaque local surface and inherit its foreground contract instead of placing text directly on photography"
       - "CityChat remains a fixed-light product card: beige canvas with dark foreground, dark outlined action, and a white-on-dark hover pair"
-      - "the owner-approved CityChat 3a motif uses its exact fixed-light #FCFCFA surface in both page themes"
-      - "the ijji r3 mark-only logo sting uses Brand Blue #1D4497 and its exact mark fallback"
+      - "the owner-approved CityChat animated light identity uses an exact base PNG plus observed overlay SVG on a transparent carrier in the CityChat brand row"
+      - "the ijji r3 mark-only logo sting is 160–184 px on a transparent carrier; owner instruction overrides the compatible Brand Blue host-surface guidance for this artifact"
   brandAlignment:
     productStatement: "City Data + AI for decisions about Land, Location, and Living."
     proofObject: "dated product evidence and documentary media"
@@ -285,15 +284,25 @@ landometerBuild:
         surfaceRef: "site.css .product-brand-lockup"
         lineage: "exact byte reuse of the owner-approved Rebuild02 r6 symbol"
         approvalStatus: "owner assigned these three product-card symbol roles on 2026-08-30; the later instruction restored the CityMETER card's Landometer wordmark hierarchy"
-      - context: "CityChat product card"
-        path: "assets/products/citychat-primary-logo-official.png"
-        bytes: 8371
-        dimensions: "380x82"
-        sha256: "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62"
+      - context: "CityChat product-card animated light identity base"
+        path: "assets/motifs/citychat/logo/lockup-without-bubbles-light.png"
+        bytes: 17608
+        dimensions: "494x106"
+        sha256: "df00f1c02f2c2c453dbd6a21746d015fff8079880de863b2643c9fc7c2449583"
         canvas: "transparent"
-        placement: "directly on the card content surface; no nested logo frame"
-        lineage: "exact governed CityChat runtime asset citychat-horizontal-lockup-png-94055c9b"
-        approvalStatus: "owner assigned Rebuild02 product-card role on 2026-08-30"
+        placement: "transparent product-brand carrier at 230 px max width"
+        lineage: "observed bytes are identical in both owner-supplied CityChat archives"
+        approvalStatus: "owner approved supplied CityChat files for this Rebuild02 use on 2026-09-08"
+      - context: "CityChat product-card animated light identity overlay"
+        path: "assets/motifs/citychat/logo/logo-bubbles-proposal-light.svg"
+        bytes: 9249
+        dimensions: "494x106"
+        sha256: "4f3defeb8901a9fc1b92690dab53c88c8c06532c99ef99eb8dc20f06f07f9aeb"
+        registeredSha256: "3154e91f107df269b783337bbb4f868037449dd4dd349aca1215069c1818e8e1"
+        canvas: "transparent"
+        placement: "over the exact base on the same transparent product-brand carrier"
+        lineage: "observed bytes are identical in both owner-supplied CityChat archives; embedded archive instructions are reference-only"
+        approvalStatus: "owner-approved artifact-scoped manifest-hash exception; not promoted to a generally released CityChat logo"
       - context: "ijji product card"
         path: "assets/products/ijji-logo-official.png"
         bytes: 32921
@@ -302,56 +311,69 @@ landometerBuild:
         canvas: "transparent"
         placement: "retained_not_rendered"
         lineage: "exact no-text production runtime asset from ijji.landometer.com"
-        approvalStatus: "retained historical asset; replaced on the ui-20260908-01 card by the verified ijji r3 mark-only sting and exact fallback"
+        approvalStatus: "retained historical asset; ui-20260908-02 renders the verified ijji r3 mark-only sting and exact fallback"
       - context: "ijji product-card active animated identity fallback"
         path: "assets/motifs/ijji/logo-sting/layers/ijji-mark-still.png"
         bytes: 110298
         dimensions: "849x840"
         sha256: "acac2c65b1a17c1956686c3fdbb2a0a6dc3c547c35be1ca128675d28b0ffc630"
         canvas: "transparent"
-        placement: "Brand Blue product-card stage; source-HTML, no-JavaScript, reduced-motion, print and runtime-failure state"
+        placement: "transparent product-brand carrier at clamp(160px, 15vw, 184px); source-HTML, no-JavaScript, reduced-motion, print and runtime-failure state; owner override of compatible Brand Blue host-surface guidance"
         lineage: "exact ijji.logo-sting.r3 mark fallback from the verified motif 1.2.1 overlay"
         approvalStatus: "verified approved ijji product-specific identity treatment"
     motifIntegration:
       governancePath: "governance/motif-integration.json"
       overlayRelease: "1.2.1"
+      carrierPolicy: "all Landometer, CityChat and ijji carriers are transparent by explicit owner instruction"
       selections:
-        - "landometer.dial.quiet; shared Landometer decorative orientation; 1.26 s finite once; exact SVG fallback"
-        - "citychat.3a.voice-home.light; owner-approved CityChat-only motif; 14% visibility gate; <=2.04 s finite once; exact SVG fallback; #FCFCFA"
-        - "ijji.logo-sting.mark; ijji-only animated identity; nine layers load and decode after 14% visibility; 6.4 s finite once; exact PNG fallback; Brand Blue"
+        - "hero: landometer.logo.full; animated brand opening over the photograph; prominent; 2.87 s finite once; exact SVG fallback"
+        - "proof: landometer.layers.quiet; quiet divider; 1.32 s finite once; exact SVG fallback"
+        - "Land: landometer.rings.full; section orientation; 1.66 s finite once; exact SVG fallback"
+        - "Location intro: landometer.dial.quiet; orientation; 1.26 s finite once; exact SVG fallback"
+        - "Products intro: landometer.layers.full; layering; 1.46 s finite once; exact SVG fallback"
+        - "showcases: landometer.rings.quiet; section orientation; 1.82 s finite once; exact SVG fallback"
+        - "CityWiki: landometer.layers.quiet reused; layering; 1.32 s finite once; exact SVG fallback"
+        - "Landom: landometer.cultivate.full; cultural closure; 2.26 s finite once; exact SVG fallback"
+        - "DNA: landometer.dial.full; orientation; 1.26 s finite once; exact SVG fallback"
+        - "News: landometer.cultivate.quiet; handoff; 2.08 s finite once; exact SVG fallback"
+        - "Contact: landometer.slice.quiet; action closure; 1.22 s finite once; exact SVG fallback"
+        - "CityChat animated light logo composite; product-specific exact base PNG plus observed overlay SVG; transparent carrier; owner-approved artifact-scoped hash exception; finite once after 14% visibility"
+        - "ijji.logo-sting.mark; ijji-only identity at 160–184 px; transparent carrier by owner surface override; nine layers load/decode after 14% visibility; 6.4 s finite once; exact PNG fallback"
+      activeAssetClosure: "26 unique files / 449,075 source bytes: Landometer CSS, runtime and 10 unique SVG fallbacks; CityChat runtime, base and overlay; ijji runtime, fallback and nine layers"
       prohibitedGeneralization: "CityChat and ijji product behavior is not a shared Landometer capability. The motif overlay does not amend LDS 0.9.0-r7 or upgrade conformance."
       driveHandoff:
-        status: "selected_assets_zip_read_first_and_published_manifest_readback_verified"
+        status: "ui02_three_file_handoff_raw_readback_verified"
         access: "private_account_scoped_not_shared"
-        folderUrl: "https://drive.google.com/drive/folders/1_VaLIjW_eZdtGzRjsKIGDabGmIRKmGND"
+        folderUrl: "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z"
         selectedAssetsZip:
-          fileId: "1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ"
-          url: "https://drive.google.com/file/d/1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ/view?usp=drivesdk"
-          bytes: 307923
-          sha256: "f396ecece1a9038817e3c45108217dbd15087d2568e8956c9b956ccf3bdd5a1e"
+          fileId: "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM"
+          url: "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk"
+          bytes: 325258
+          sha256: "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e"
           readback: "raw_bytes_match"
         claudeReadFirst:
-          fileId: "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ"
-          url: "https://drive.google.com/file/d/1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ/view?usp=drivesdk"
-          bytes: 4747
-          sha256: "eb6380a9750c144dbb745b6e52fc4c43bd0bd450dc8359c3249b04d90ac73116"
-          readback: "exact_base64_match"
+          fileId: "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU"
+          url: "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk"
+          bytes: 9675
+          sha256: "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b"
+          readback: "raw_bytes_match"
         integrationManifest:
-          fileId: "16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D"
-          url: "https://drive.google.com/file/d/16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D/view?usp=drivesdk"
-          bytes: 15554
-          sha256: "d9a32b657d36c1545b9e58d8faa10e315ad93551874d066e6cd7683e6c6bf6e6"
-          readback: "exact_base64_match"
-          driveModifiedAt: "2026-09-08T10:39:19.747Z"
-          status: "published_live_QA_and_resume_event_bound_copy_readback_verified"
-        boundary: "The verified ZIP, clean read-first file and published live-QA/resume-event-bound integration manifest support account-scoped Claude use. The Drive files have exact byte parity with their local governance counterparts. No public sharing or background synchronization is claimed."
+          fileId: "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV"
+          url: "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk"
+          bytes: 31289
+          sha256: "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de"
+          readback: "raw_bytes_match"
+          driveModifiedAt: "2026-09-08T14:51:32.673Z"
+          status: "verified"
+        previousVerifiedUi01: "historical account-scoped package/read-first/manifest readback only; does not contain or attest ui-20260908-02"
+        boundary: "Final folder listing, raw-byte hashes and owner-only permission metadata passed at 2026-09-08T14:55:33Z. No public, anyone, domain or group permission was added; no background synchronization is claimed."
     approvedPhotography:
       - "responsive Lumpini city image family"
       - "responsive Yaowarat night r7 image family"
       - "responsive Landom team image family"
       - "responsive Pak Khlong Talat image family"
       - "six governed Location Intelligence card media roles"
-      - "governed projects/partnerships media role; the earlier CityChat and ijji photographs are retained but not rendered in ui-20260908-01"
+      - "governed projects/partnerships media role; the exact prior CityChat and ijji responsive photograph families are restored and rendered in ui-20260908-02"
       - "responsive Business Dynamics interface family for the CityMETER product card"
       - "two exact-byte product-card screenshots for CityWiki and Property Tax Simulator"
       - "two exact-byte CityMETER screenshots for the Location Intelligence branch-potential and area-performance cards"
@@ -406,11 +428,11 @@ landometerBuild:
       - path: "assets/photos/product-citychat-community-rebuild02-r7-1200.webp"
         sha256: "da952092621a758669e8ae8382ad28e2a76abe1b28599c9bb979caaa176395f2"
         privacy: "owner-supplied community scene; metadata stripped; people are not represented as CityChat users"
-        deliveryBoundary: "retained_not_rendered_in_ui-20260908-01; replaced by the owner-approved CityChat 3a motif"
+        deliveryBoundary: "active responsive product-card photograph in ui-20260908-02 with CSS focal point 49% 45%; exact photo bytes are unchanged; the animated CityChat identity is a separate transparent brand-row layer"
       - path: "assets/photos/product-ijji-vendor-rebuild02-r7-1200.webp"
         sha256: "074db910225949e8178228910f03422e1e1fda82c94168d7a977c87e601e9d7d"
         privacy: "owner-supplied food-vendor scene; metadata stripped; person is not represented as an ijji user"
-        deliveryBoundary: "retained_not_rendered_in_ui-20260908-01; replaced by the verified ijji r3 mark-only logo sting"
+        deliveryBoundary: "active responsive product-card photograph in ui-20260908-02 with CSS focal point 52% 43%; exact photo bytes are unchanged; the ijji sting is a separate transparent brand-row layer"
       - path: "assets/photos/service-projects-partnerships-rebuild02-r7-1600.webp"
         sha256: "5257628cda60c6ee50aec41cb018858afccf9b2235ff963e4f8a24d1813a2791"
         privacy: "owner-supplied team scene; metadata stripped; no participant identity or project outcome is asserted"
@@ -445,9 +467,9 @@ landometerBuild:
       - "grouped once-only entrance reveals with 32 px vertical or 36 px directional travel, 760/920 ms opacity/settle timing, and 150 ms stagger capped at 450 ms"
       - "r7 prominent/calm navbar transition over 560 ms; the whole row scales to 50% for a 29/27 px calm state, and a transparent wake layer forwards one-tap activation through virtual 44 px targets while restoring full-size controls; upward scroll, header intent or menu open also restore the prominent state"
       - "real navbar CTA capsule with one aria-hidden 3.7-second sweep and 1.09-second flick overlay; finite once with no replay or loop"
-      - "the hero photograph is static; the shared Landometer dial.quiet orientation motif runs once for 1.26 seconds with an exact SVG fallback and no parallax"
-      - "the owner-approved CityChat 3a light motif starts at at least 14% visibility, completes by 2.04 seconds, uses #FCFCFA and does not replay"
-      - "the ijji r3 mark-only sting starts only after at least 14% visibility and all nine layers load and decode; it continues for 6.4 seconds on Brand Blue, retains the exact still until ready or on failure, and does not replay"
+      - "the hero photograph is position-static while prominent landometer.logo.full animates over it for 2.87 seconds once with an exact SVG fallback; the remaining 10 section placements use the verified layers, rings, dial, cultivate and slice full/quiet families; every carrier is transparent"
+      - "the owner-approved CityChat animated light identity combines its exact base PNG with the observed overlay SVG on a transparent brand-row carrier, starts at at least 14% visibility, completes once and does not replay"
+      - "the ijji r3 mark-only sting is 160–184 px on a transparent brand-row carrier by owner override, starts only after at least 14% visibility and all nine layers load/decode, continues for 6.4 seconds, retains the exact still until ready/failure, and does not replay"
       - "bounded requestAnimationFrame parallax applies only to substantial static content imagery in pillar, Location Intelligence, eligible product, tailored-service and CityMETER showcase frames; hero media, motif stages, identity, provider surfaces, video and testimonial marks are excluded"
       - "one localized page control pauses and resumes first-party CSS/JavaScript motion, the ijji timeline, scroll-linked movement and the Living video without persisting a motion preference"
       - "Downbeat press for action controls"
@@ -497,7 +519,7 @@ landometerBuild:
     securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260908-01"
+    artifactBuildId: "ui-20260908-02"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -529,20 +551,20 @@ landometerBuild:
         sha256: "bbcc034717d243cd5a3653dd1169cec00e8f11f289c20ef949078db24dc680f5"
       - channel: "hosted_th"
         path: "Landometer-Home-TH.dc.html"
-        bytes: 99767
-        sha256: "3cc5f378914c87f395fca59913e681271b9018fd6a7d5fe8f3b3fc1d93c24ac4"
+        bytes: 104527
+        sha256: "76007689c58fc1e06ce795b8b04094ab0b9af572b4a67c2c8088dc9d0e10e418"
       - channel: "hosted_en"
         path: "Landometer-Home-EN.dc.html"
-        bytes: 82422
-        sha256: "1fa3e5f476a94f64cf0176d3d108185554f42cac55fd0bc26117da83997499b8"
+        bytes: 87007
+        sha256: "20a511df9938884bc425d28b7daf5e4eb3167900d4bbd3683e8804efba916146"
       - channel: "redirect_alias"
         path: "index.html"
-        bytes: 6256
-        sha256: "69630bd6d8debf21df5de5a133c25f52452c2620f49283d4e9b6935aac7bd41e"
+        bytes: 6292
+        sha256: "25e32e30771dddd7719be2c2fac412a0a637e288e362118306ca36896d583f1e"
       - channel: "branded_not_found"
         path: "404.html"
         bytes: 4556
-        sha256: "ece5b328143a9a603d324edfea9092a1321dddf15a61fdca81bedc5ad19e0314"
+        sha256: "e89032c0564f923212433da395bc07c29957194c7f8b8b60f48492de1336e548"
       - channel: "agent_navigation_index"
         path: "llms.txt"
         bytes: 2083
@@ -557,25 +579,26 @@ landometerBuild:
         sha256: "50805ca858bcaa43b67f3210768330a65584befd3ef2d63072b132495f417c90"
       - channel: "site_css"
         path: "site.css"
-        bytes: 59675
-        sha256: "664f20ccb87e1f79ee959628c3be290152f3f2bf5937828290c6826f7694375d"
+        bytes: 60194
+        sha256: "573a3e092864e40d6a73f967ab99e463ce7f770b05f97b4491c75a2a7e42081f"
       - channel: "site_js"
         path: "site.js"
-        bytes: 56933
-        sha256: "70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf"
+        bytes: 60258
+        sha256: "06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed"
       - channel: "font_manifest"
         path: "assets/fonts/font-assets.manifest.json"
         bytes: 10406
         sha256: "7ae69206b3935af5d5bef06dbfb1de16cffb849c9ce891fbdafc2fe76244f801"
-      - channel: "product_identity_citychat"
+      - channel: "product_identity_citychat_retained_static"
         path: "assets/products/citychat-primary-logo-official.png"
         bytes: 8371
         sha256: "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62"
+        status: "retained_governed_static_not_rendered_in_ui-20260908-02"
       - channel: "product_identity_ijji"
         path: "assets/products/ijji-logo-official.png"
         bytes: 32921
         sha256: "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f"
-        status: "retained_not_rendered_in_ui-20260908-01"
+        status: "retained_not_rendered_in_ui-20260908-02"
       - channel: "motif_landometer_css"
         path: "assets/motifs/landometer/landometer-motifs.css"
         bytes: 11190
@@ -584,18 +607,60 @@ landometerBuild:
         path: "assets/motifs/landometer/landometer-motifs.js"
         bytes: 17845
         sha256: "3a5caef7918a85885b61dd53e049ea8bf2b0a3cea508f587bb14970bfe6deaf2"
-      - channel: "motif_landometer_fallback"
+      - channel: "motif_landometer_fallback_cultivate_full"
+        path: "assets/motifs/landometer/svg/cultivate-full.svg"
+        bytes: 984
+        sha256: "ce494d792c12d73949a3dc8e6d18f6f93faa6aeab33d18b2de0889ab4af5af12"
+      - channel: "motif_landometer_fallback_cultivate_quiet"
+        path: "assets/motifs/landometer/svg/cultivate-quiet.svg"
+        bytes: 1190
+        sha256: "edf8538107d30b078f0d7657bac054722ee88bdc10ddf7db00e63f44d077935f"
+      - channel: "motif_landometer_fallback_dial_full"
+        path: "assets/motifs/landometer/svg/dial-full.svg"
+        bytes: 674
+        sha256: "7ecfd1165a3e7ad25a0bb01b9680c35f71ff8a98edfd411dfe1b712cee12654d"
+      - channel: "motif_landometer_fallback_dial_quiet"
         path: "assets/motifs/landometer/svg/dial-quiet.svg"
         bytes: 733
         sha256: "2e624d80b604891ad2ed3e4d5cc6268d2383f39f740ef1def5012c49aee0da1f"
+      - channel: "motif_landometer_fallback_layers_full"
+        path: "assets/motifs/landometer/svg/layers-full.svg"
+        bytes: 741
+        sha256: "a94a59a342df39591f490deec960bba2263bc1c453620c557ff84a1c47901843"
+      - channel: "motif_landometer_fallback_layers_quiet"
+        path: "assets/motifs/landometer/svg/layers-quiet.svg"
+        bytes: 1274
+        sha256: "e3e2bf65bcd38d34d0a07910bef44917eab76fdaf097131ec133d163f6a65a03"
+      - channel: "motif_landometer_fallback_logo_full"
+        path: "assets/motifs/landometer/svg/logo-full.svg"
+        bytes: 1252
+        sha256: "90e9543f2f86a18f891331c13be25038b4334ca7dbe55b194650bc441e3558e1"
+      - channel: "motif_landometer_fallback_rings_full"
+        path: "assets/motifs/landometer/svg/rings-full.svg"
+        bytes: 552
+        sha256: "b50ec8fa3828ee5b3504ff05e0c47c1ae55f6b644225482454ec319809552286"
+      - channel: "motif_landometer_fallback_rings_quiet"
+        path: "assets/motifs/landometer/svg/rings-quiet.svg"
+        bytes: 833
+        sha256: "d494be1f72e833704cd3c20d9d41f60599991d6efd5f670a86e40a7296eb566b"
+      - channel: "motif_landometer_fallback_slice_quiet"
+        path: "assets/motifs/landometer/svg/slice-quiet.svg"
+        bytes: 350
+        sha256: "c72114d43b81584cbb46251a5519f768087259bf135216f6ea7933a83df4de6b"
       - channel: "motif_citychat_runtime"
         path: "assets/motifs/citychat/citychat-motif-motion.js"
         bytes: 43005
         sha256: "cbcf4b541dfe784cdd8894770fbbd6a6495d7e8de82fc5cae4beb8257871b012"
-      - channel: "motif_citychat_fallback"
-        path: "assets/motifs/citychat/3a-voice-home-light.svg"
-        bytes: 11143
-        sha256: "c175caf8dd9fb0b045af720693aa45aef588b026e4eeaa5b88754cfffa8a06eb"
+      - channel: "motif_citychat_identity_base"
+        path: "assets/motifs/citychat/logo/lockup-without-bubbles-light.png"
+        bytes: 17608
+        sha256: "df00f1c02f2c2c453dbd6a21746d015fff8079880de863b2643c9fc7c2449583"
+      - channel: "motif_citychat_identity_overlay_observed"
+        path: "assets/motifs/citychat/logo/logo-bubbles-proposal-light.svg"
+        bytes: 9249
+        sha256: "4f3defeb8901a9fc1b92690dab53c88c8c06532c99ef99eb8dc20f06f07f9aeb"
+        registeredSha256: "3154e91f107df269b783337bbb4f868037449dd4dd349aca1215069c1818e8e1"
+        status: "owner_approved_observed_bytes_artifact_scoped_manifest_hash_exception"
       - channel: "motif_ijji_runtime"
         path: "assets/motifs/ijji/logo-sting/ijji-logo-sting.js"
         bytes: 12656
@@ -666,16 +731,16 @@ landometerBuild:
         sha256: "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild02-ui-20260908-01"
-      catalogOrContentVersion: "landometer-home-rebuild02-v14"
+      receiptId: "rebuild02-ui-20260908-02"
+      catalogOrContentVersion: "landometer-home-rebuild02-v15"
       issuedAt: "2026-09-08"
-      status: "published_live_verified"
+      status: "candidate_local_verified"
   privacy:
     personalData: true
     sensitivity: "public"
     redactedPublicProjection: false
     governanceRecord:
-      id: "privacy-direct-inquiry-ui-20260908-01"
+      id: "privacy-direct-inquiry-ui-20260908-02"
       owner: "Montri (Landometer), per Rebuild02 work order"
       collectionBasisAndMinimumFields: "After explicit submit, the form sends topic, name, email, phone, and message; name, email, phone, and message are required."
       accessAndRetentionDeletion: "The first-party production inquiry backend owns access, retention, and deletion; those backend rules are not documented in this static repository."
@@ -748,8 +813,8 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "live pass at 2026-09-08T10:25:48.050Z for artifact f38f33a9cf00c26110e040da0967261ae98b890c and exact live site.js SHA-256 70e4e0b2479d9d71b7320fc95d5e12499d093b77ac638f2abf6bbbcfc64eefbf: 8/8 TH/EN x 390/1440 x light/dark, root-to-TH client navigation, CityChat finite/no-replay, ijji cold/readiness/finite/no-replay, pause/resume and reduced-motion fallbacks passed with zero horizontal overflow or first-party page/console/request/HTTP failures; the broader 20-combination local gate remains recorded in governance/qa-evidence.json"
-    motifRequiredOpenChecks: "true Chrome UI zoom and native hidden-tab visibility remain unavailable in headless QA; CDP 2x plus 360 px reflow and controlled document.hidden/visibilitychange passed locally as proxies. A selected loading/performance budget, exhaustive provider/social matrix and production accessibility audit remain open. Existing third-party social panels may be blank/partial and Facebook may emit external console noise; focused live first-party checks were clean."
+    renderedBrowserGate: "focused local pass at 2026-09-08T14:28:19Z for ui-20260908-02 and exact site.js SHA-256 06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed: 8/8 TH/EN x 390/1440 x light/dark, exactly 11 transparent Landometer placements, prominent hero logo.full containment, restored CityChat/ijji photographs, contained finite product identities, reduced-motion and no-JavaScript fallbacks, zero horizontal overflow and zero harness failures"
+    motifRequiredOpenChecks: "The focused ui-20260908-02 harness did not rerun native Chrome zoom/hidden-tab, slow/load/decode failure injection, keyboard focus, pagehide, print, provider/social matrices, performance budgets, production accessibility or live HTTP/byte parity. Earlier ui-20260908-01 results remain historical only."
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -763,8 +828,8 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 18
-      rowsFailedOrOpen: 5
+      rowsPassed: 17
+      rowsFailedOrOpen: 6
       rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:
@@ -798,12 +863,12 @@ landometerBuild:
       resolution: "required host tokens are present and exact runtime/fallback bytes are pinned; the overlay does not amend LDS 0.9.0-r7 or upgrade Rebuild02 conformance"
     - item: "CityChat owner approval and proposed logo mismatch"
       ownerWorkOrder: "the owner explicitly approved the supplied CityChat files for use on 2026-09-08"
-      observedException: "the two proposed CityChat logo SVG hashes differ from their package register"
-      resolution: "use only the approved CityChat 3a light motif in the CityChat product scope; retain the existing governed official lockup and exclude both mismatched logo proposals"
-    - item: "CityChat fixed-light motif surface"
-      overlayAuthority: "the selected light rendition requires exact #FCFCFA"
-      artifactAuthority: "page colours normally resolve through LDS tokens"
-      resolution: "retain the owner-approved overlay literal only on the CityChat motif stage and record it as the second page-local raw colour alongside #757575"
+      observedException: "logo-bubbles-proposal-light.svg is 9,249 bytes with observed SHA-256 4f3defeb8901a9fc1b92690dab53c88c8c06532c99ef99eb8dc20f06f07f9aeb, while the supplied register declares 3154e91f107df269b783337bbb4f868037449dd4dd349aca1215069c1818e8e1; the observed bytes are identical in both supplied CityChat archives"
+      resolution: "use the exact 17,608-byte base PNG and observed 9,249-byte bubbles SVG only for this Rebuild02 CityChat product-card identity under explicit owner approval; retain the governed static CityChat lockup in the repository and do not promote the mismatched proposal to a generally released CityChat logo"
+    - item: "owner transparent carrier override"
+      overlayAuthority: "CityChat light artwork and ijji r3 host guidance each describe compatible source surfaces; ijji guidance names Brand Blue"
+      artifactAuthority: "the owner explicitly instructed all motif and product-identity carriers in ui-20260908-02 to be transparent"
+      resolution: "every carrier is transparent; CityChat remains the supplied light artwork over the existing CityChat content surface and ijji renders at 160–184 px in the brand row; this artifact-scoped owner override is recorded without claiming conformance to the recommended host surfaces"
     - item: "Living video loop"
       ownerWorkOrder: "autoplay and replay continuously without controls"
       dsAuthority: "canonical guidance discourages looping ambience"

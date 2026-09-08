@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260908-01",
+  "artifactBuildId": "ui-20260908-02",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -20,7 +20,7 @@
     }
   ],
   "productIdentityAssets": {
-    "approvalContext": "The owner explicitly assigned compact Rebuild02 product-card roles on 2026-08-30. Static identity bytes remain unchanged; the 2026-09-08 owner-approved motif overlay adds product-scoped CityChat motion and the verified ijji r3 mark-only sting without modifying the original files.",
+    "approvalContext": "The owner explicitly approved the supplied CityChat files on 2026-09-08 and instructed every motif/identity carrier in this candidate to remain transparent. CityChat and ijji motion stays product-scoped and does not become a shared Landometer capability.",
     "landometerProductCards": {
       "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
       "bytes": 38962,
@@ -30,63 +30,65 @@
       "transformations": "none"
     },
     "citychat": {
-      "path": "assets/products/citychat-primary-logo-official.png",
-      "bytes": 8371,
-      "dimensions": "380x82",
-      "sha256": "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62",
-      "sourceAssetId": "citychat-horizontal-lockup-png-94055c9b",
-      "sourceCommit": "a0b70489f587c8b71395f88e3da076119a085205",
-      "sourceEvidence": "governed CityChat runtime identity manifest; exact transparent PNG bytes",
-      "role": "CityChat product card horizontal lockup on a DS brand-beige identity surface",
-      "transformations": "none"
+      "role": "owner-approved animated CityChat light identity in the product brand row",
+      "runtime": {"path": "assets/motifs/citychat/citychat-motif-motion.js", "bytes": 43005, "sha256": "cbcf4b541dfe784cdd8894770fbbd6a6495d7e8de82fc5cae4beb8257871b012"},
+      "base": {"path": "assets/motifs/citychat/logo/lockup-without-bubbles-light.png", "bytes": 17608, "dimensions": "494x106", "sha256": "df00f1c02f2c2c453dbd6a21746d015fff8079880de863b2643c9fc7c2449583"},
+      "overlay": {"path": "assets/motifs/citychat/logo/logo-bubbles-proposal-light.svg", "bytes": 9249, "dimensions": "494x106", "observedSha256": "4f3defeb8901a9fc1b92690dab53c88c8c06532c99ef99eb8dc20f06f07f9aeb", "registeredSha256": "3154e91f107df269b783337bbb4f868037449dd4dd349aca1215069c1818e8e1"},
+      "sourceEvidence": "the observed base and overlay bytes are identical in both owner-supplied CityChat archives; embedded archive instructions are reference-only",
+      "provenanceException": "owner-approved observed bytes for this Rebuild02 product-card identity only; the mismatched overlay hash is explicitly recorded and the proposal is not promoted to a generally released CityChat logo",
+      "surfaceAndLifecycle": "transparent 494:106 carrier at 230 px max width; exact base and overlay are present in source HTML; runtime begins at at least 14% visibility, runs finite once, never replays or loops, and reduced-motion/no-JavaScript/failure retain the composed still",
+      "retainedGovernedStatic": {"path": "assets/products/citychat-primary-logo-official.png", "bytes": 8371, "sha256": "94055c9b084eebaa585b3d31bef750abe87a1162fc1ec3be077f7fbcb2465e62"},
+      "transformations": "none to any source bytes"
     },
     "ijji": {
-      "path": "assets/products/ijji-logo-official.png",
-      "bytes": 32921,
-      "dimensions": "725x725",
-      "sha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f",
-      "sourceUrl": "https://ijji.landometer.com/static/images/ijji/ijjiLogoNoText.png",
-      "sourceEvidence": "current Landometer-owned ijji production runtime; exact transparent PNG bytes",
-      "role": "retained historical ijji compact product-card mark; not rendered in ui-20260908-01",
+      "runtime": {"path": "assets/motifs/ijji/logo-sting/ijji-logo-sting.js", "bytes": 12656, "sha256": "1a1d1bc247b5deb92aa19e4d84524ac1f823454a9401b6ce53acf8716010433e"},
+      "fallback": {"path": "assets/motifs/ijji/logo-sting/layers/ijji-mark-still.png", "bytes": 110298, "dimensions": "849x840", "sha256": "acac2c65b1a17c1956686c3fdbb2a0a6dc3c547c35be1ca128675d28b0ffc630"},
+      "layers": [
+        {"path": "assets/motifs/ijji/logo-sting/layers/i-1.png", "bytes": 16689, "sha256": "df5fb769b2bcf84a5bbb64a5b7be424463b3883632b722cebc5d9c4a29362ac6"},
+        {"path": "assets/motifs/ijji/logo-sting/layers/i-2.png", "bytes": 16357, "sha256": "857ca5198e350fd02f644d492f1b7b0b14b9cacb9f2dd21f2031788678ce80f5"},
+        {"path": "assets/motifs/ijji/logo-sting/layers/jj.png", "bytes": 46738, "sha256": "cb2743b05ee7d3270bef5e5f5a5bec2916e6fe6b1e99d85793ebbd1ec398dd93"},
+        {"path": "assets/motifs/ijji/logo-sting/layers/tag-1-1.png", "bytes": 17822, "sha256": "6b51513e93df40e2a00b928d606373e688a3b6dd9e6869a6e803a7bef5ab7784"},
+        {"path": "assets/motifs/ijji/logo-sting/layers/tag-1-2.png", "bytes": 32636, "sha256": "fb72390fe3125ed5c5ab9c2bafd03fb71cb74e751ebd7f14737ac7c0367117fa"},
+        {"path": "assets/motifs/ijji/logo-sting/layers/tag-1-3.png", "bytes": 24199, "sha256": "5e01f5a2303ba67e18e69153003ba1f363e6eb1c80b67aa68115b8e434072ff0"},
+        {"path": "assets/motifs/ijji/logo-sting/layers/tag-2-1.png", "bytes": 24136, "sha256": "2e4529e6961ffa9508ae12e4346cba6870f009cc4851e2a9c613e69ef7999cf8"},
+        {"path": "assets/motifs/ijji/logo-sting/layers/tag-2-2.png", "bytes": 16080, "sha256": "ea066302ab3f407d258260f85ba19cd184b5ddbfa313f1f480726639b9ef3713"},
+        {"path": "assets/motifs/ijji/logo-sting/layers/tag-2-3.png", "bytes": 23984, "sha256": "3821e99ab1ff83edc12b95e06c2d2fc2cd1019905900a8f15fc57481b7d367c4"}
+      ],
+      "role": "verified ijji r3 mark-only sting in the product brand row",
+      "surfaceAndLifecycle": "transparent carrier at clamp(160px, 15vw, 184px), by owner override of compatible Brand Blue host-surface guidance; nine layers load and decode after at least 14% visibility; exact still persists until ready or on failure; finite 6.4 s once with no replay, loop or parallax",
+      "retainedHistorical": {"path": "assets/products/ijji-logo-official.png", "bytes": 32921, "sha256": "ae1e436b44abd7ac3762847e17799b156cbecae2ab56b98ce841050ff8f8662f"},
       "transformations": "none"
     }
   },
   "motifIntegration": {
     "governancePath": "governance/motif-integration.json",
-    "assetClosure": "16 exact deployed files, 425,511 source bytes; every path, byte count, SHA-256, lifecycle and fallback is enumerated in governance/motif-integration.json and governance/site-manifest.json",
-    "landometer": "landometer.dial.quiet 1.2.1 in the hero; decorative, finite once, exact SVG fallback, no loop/replay/parallax",
-    "citychat": "owner-approved CityChat 3a เสียงบ้านเรา light rendition on #FCFCFA; product-specific, finite once, exact SVG fallback, no loop/replay/parallax; the official CityChat lockup remains static",
-    "ijji": "verified ijji r3 mark-only sting on #1D4497; all nine layers preload and decode after 14% intersection, the exact still remains visible until runtime readiness and on any failure, finite once with no replay/loop/parallax",
-    "driveSync": "private account-scoped source archives and the approved integration handoff are stored under the Drive integration folder recorded in governance/motif-integration.json"
+    "assetClosure": "26 active unique files, 449,075 source bytes: Landometer CSS/runtime plus 10 unique SVG fallbacks, CityChat runtime/base/overlay, and ijji runtime/fallback/nine layers; 11 Landometer placements are emitted per locale and layers.quiet is intentionally reused",
+    "landometer": "verified Landometer 1.2.1 families logo, layers, rings, dial, cultivate and slice appear in 11 section placements; hero logo.full is prominent over the photo; every carrier is transparent by owner instruction; all motions are finite once with exact SVG fallback and no loop/replay/parallax",
+    "citychat": "owner-approved animated light identity uses the exact base PNG and observed overlay SVG on a transparent carrier; the observed overlay SHA mismatch is an artifact-scoped provenance exception, not a general release claim",
+    "ijji": "verified ijji r3 mark-only sting at 160–184 px on a transparent carrier by owner surface override; all nine layers preload/decode after 14% intersection, exact still until readiness/failure, finite once without replay/loop/parallax",
+    "driveSync": "ui-20260908-02 private account-scoped handoff passed final raw-byte readback for the selected-assets ZIP, Claude read-first file and machine manifest; the ui-20260908-01 package remains historical"
   },
   "driveHandoffReceipt": {
     "scope": "private account-scoped files for reuse through the connected Google Drive account; no background-sync claim and no publishing authority",
-    "folder": "https://drive.google.com/drive/folders/1_VaLIjW_eZdtGzRjsKIGDabGmIRKmGND",
-    "selectedAssetsPackage": {
-      "id": "1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ",
-      "url": "https://drive.google.com/file/d/1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ/view?usp=drivesdk",
-      "bytes": 307923,
-      "sha256": "f396ecece1a9038817e3c45108217dbd15087d2568e8956c9b956ccf3bdd5a1e"
-    },
-    "claudeReadFirst": {
-      "id": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ",
-      "url": "https://drive.google.com/file/d/1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ/view?usp=drivesdk",
-      "bytes": 4747,
-      "sha256": "eb6380a9750c144dbb745b6e52fc4c43bd0bd450dc8359c3249b04d90ac73116"
-    },
-    "machineManifest": {
-      "id": "16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D",
-      "url": "https://drive.google.com/file/d/16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D/view?usp=drivesdk",
-      "bytes": 15554,
-      "sha256": "d9a32b657d36c1545b9e58d8faa10e315ad93551874d066e6cd7683e6c6bf6e6"
-    },
-    "verifiedAt": "2026-09-08T10:39:19.747Z",
-    "readback": "pass: folder listed all three expected files; raw ZIP, clean Markdown read-first, and published machine-manifest downloads matched local byte counts and SHA-256; every file was downloadable, shared=false and not_shared, and the permission boundary remained owner-only"
+    "folder": "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z",
+    "status": "ui02_three_file_handoff_raw_readback_verified",
+    "selectedAssetsPackage": {"id": "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM", "url": "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk", "name": "Rebuild02_Motif_Integration_ui-20260908-02.zip", "bytes": 325258, "sha256": "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e", "modifiedAt": "2026-09-08T14:47:06.579Z", "readback": "raw_bytes_match"},
+    "claudeReadFirst": {"id": "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU", "url": "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk", "name": "00_CLAUDE_READ_FIRST.md", "bytes": 9675, "sha256": "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b", "modifiedAt": "2026-09-08T14:51:23.020Z", "readback": "raw_bytes_match"},
+    "machineManifest": {"id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV", "url": "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk", "name": "motif-integration.ui-20260908-02.json", "bytes": 31289, "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de", "modifiedAt": "2026-09-08T14:51:32.673Z", "readback": "raw_bytes_match"},
+    "verifiedAt": "2026-09-08T14:55:33Z",
+    "readback": "folder listing, raw bytes and metadata passed for exactly three files; each file and the folder report shared=false with one owner permission and no public, anyone, domain or group permission",
+    "previousVerifiedUi01": {
+      "selectedAssetsPackageId": "1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ",
+      "claudeReadFirstId": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ",
+      "machineManifestId": "16WdaTYa2xub-n34LqnBW4O1ZsxVIHr6D",
+      "verifiedAt": "2026-09-08T10:39:19.747Z",
+      "scope": "historical ui-20260908-01 account-scoped readback only; does not attest ui-20260908-02"
+    }
   },
   "staticImagePresentation": {
     "scope": ["Land, CityWiki and Landom pillar figures", "Location Intelligence cards", "non-motif Products and Services cards", "Projects and partnerships tailored service", "CityMETER showcase hero and tiles"],
-    "excluded": ["hero photograph", "Landometer quiet-dial motif", "CityChat 3a motif", "ijji mark sting", "identity and product logos", "social provider surfaces", "Living video", "testimonial portraits and company marks"],
-    "runtimeBehavior": "requestAnimationFrame scroll parallax applies a bounded translation and small presentation scale only while relevant eligible frames are near the viewport; page-level pause, document visibility, print and prefers-reduced-motion freeze the layer; the hero photograph and all three motif stages remain static in position",
+    "excluded": ["hero photograph", "all 11 Landometer motif placements", "CityChat animated identity", "ijji mark sting", "identity and product logos", "social provider surfaces", "Living video", "testimonial portraits and company marks"],
+    "runtimeBehavior": "requestAnimationFrame scroll parallax applies a bounded translation and small presentation scale only while relevant eligible frames are near the viewport; page-level pause, document visibility, print and prefers-reduced-motion freeze the layer; the hero photograph and all thirteen motif or animated-identity stages remain static in position",
     "assetBoundary": "CSS classes and transforms do not alter, crop, resize, recompress, recolour or rewrite any governed media bytes"
   },
   "livingVideo": {
@@ -363,8 +365,8 @@
         "dimensions": "4256x2832",
         "sha256": "21946cf8226935b1489089ab78833d4693b3a83ce986e3a97ff2755fb74163e2"
       },
-      "role": "retained historical CityChat product-card atmosphere; not rendered in ui-20260908-01",
-      "deliveryState": "retained_not_rendered; replaced by the owner-approved CityChat 3a เสียงบ้านเรา light motif and its exact fallback",
+      "role": "active responsive CityChat product-card atmosphere in ui-20260908-02",
+      "deliveryState": "rendered above the product copy; the owner-approved animated CityChat identity is a separate transparent brand-row layer and does not replace the photograph",
       "representationBoundary": "A community reading scene; the people are not represented as CityChat users or endorsers.",
       "responsiveWidths": [720, 1200],
       "outputs": [
@@ -372,10 +374,10 @@
         {"path": "assets/photos/product-citychat-community-rebuild02-r7-1200.webp", "bytes": 121836, "dimensions": "1200x799", "sha256": "da952092621a758669e8ae8382ad28e2a76abe1b28599c9bb979caaa176395f2"}
       ],
       "alt": {
-        "th": "คนสี่คนนั่งอ่านหนังสือเล่มเล็กและพูดคุยกันในพื้นที่ชุมชน",
-        "en": "Four people reading booklets and talking together in a community setting"
+        "th": "คนสี่คนกำลังอ่านและแลกเปลี่ยนข้อมูลร่วมกัน",
+        "en": "Four people reading and discussing information together"
       },
-      "compositionReview": "No generation crop; all four people remain in frame. Recommended runtime focal point: 50% 48%."
+      "compositionReview": "No generation crop; both exact derivatives remain unchanged. Current CSS cover presentation uses 49% 45%; all four people remain represented without a CityChat user or endorsement claim."
     },
     "productIjji": {
       "source": {
@@ -385,8 +387,8 @@
         "dimensions": "6240x4160",
         "sha256": "0e27bd5c66371fa66faf2ef56427d431609bccefda9ca9238ce49a52eacbf509"
       },
-      "role": "retained historical ijji product-card atmosphere; not rendered in ui-20260908-01",
-      "deliveryState": "retained_not_rendered; replaced by the verified ijji r3 mark-only sting and exact still fallback",
+      "role": "active responsive ijji product-card atmosphere in ui-20260908-02",
+      "deliveryState": "rendered above the product copy; the verified ijji r3 mark-only sting is a separate transparent brand-row layer and does not replace the photograph",
       "representationBoundary": "A food-vendor work scene; the person is not represented as an ijji user or endorser.",
       "responsiveWidths": [720, 1200],
       "outputs": [
@@ -394,10 +396,10 @@
         {"path": "assets/photos/product-ijji-vendor-rebuild02-r7-1200.webp", "bytes": 112108, "dimensions": "1200x800", "sha256": "074db910225949e8178228910f03422e1e1fda82c94168d7a977c87e601e9d7d"}
       ],
       "alt": {
-        "th": "ผู้ขายอาหารกำลังยิ้มและเตรียมอาหารในร้าน",
-        "en": "A food vendor smiling while preparing food at a market stall"
+        "th": "ผู้ประกอบการร้านอาหารกำลังทำงานและยิ้มอยู่หลังเคาน์เตอร์",
+        "en": "A food-business operator smiling as she works behind the counter"
       },
-      "compositionReview": "No generation crop; the vendor's face and work area remain in frame. Recommended runtime focal point: 50% 42%."
+      "compositionReview": "No generation crop; both exact derivatives remain unchanged. Current CSS cover presentation uses 52% 43%; the operator and work context remain visible without an ijji user or endorsement claim."
     },
     "serviceProjectsPartnerships": {
       "source": {
@@ -550,7 +552,7 @@
       "privacyAndMetadataReview": "Visible names, parcel details and values are treated as unverified interface samples rather than real-person or property assertions. Exact-copy delivery retains Adobe/ImageReady text and Photoshop XMP/document identifiers.",
       "representationBoundary": "A visibly labelled legacy asset retrieved on 2026-08-26; it is not represented as the current Property Tax Simulator interface."
     },
-    "visualReview": "Pass for ui-20260908-01 in local Chromium: 16 bilingual viewport/theme combinations had no horizontal overflow or first-party media failures; the hero remained position-static; selected static parallax stayed within its governed eligible frames; the CityChat and ijji historical photos remained retained but unrendered; motif fallbacks survived reduced motion, no JavaScript, slow loading and simulated failure."
+    "visualReview": "Focused local pass for ui-20260908-02 at 2026-09-08T14:28:19Z: 8/8 TH/EN x 390/1440 x light/dark cases had zero horizontal overflow and no harness errors; exactly 11 transparent Landometer carriers appeared per locale; prominent hero logo.full stayed within the photograph; restored CityChat and ijji photo families were visible; both transparent product-identity stages stayed contained; CityChat and ijji completed once without replay; reduced-motion and no-JavaScript retained final fallbacks. Broader release, production accessibility and live-byte gates were not run for this candidate."
   },
   "locationAreaPerformanceR8": {
     "assetId": "location-area-performance-r8-198c0d59",
