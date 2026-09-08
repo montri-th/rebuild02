@@ -59,8 +59,8 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "source_limited_local_verified"
-    authorizationSource: "ongoing user request explicitly includes publishing the new candidate after the current additions"
+    evidenceStatus: "source_limited_live_verified"
+    authorizationSource: "ongoing user request explicitly includes publishing ui-20260908-02 after the current additions"
     visibility: "public"
     indexable: true
     robots: "index,follow"
@@ -69,12 +69,12 @@ landometerBuild:
       en: "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
     discoveryStates:
       machineReadableWhenOpened:
-        status: "candidate_source_verified_live_pending"
+        status: "live_verified"
         evidenceRefs:
           - "governance/site-manifest.json"
           - "semantic initial HTML in both locale routes"
       searchDiscoverable:
-        status: "candidate_source_verified_live_pending_with_host_root_limit"
+        status: "live_verified_with_host_root_limit"
         evidenceRefs:
           - "robots.txt"
           - "sitemap.xml"
@@ -84,12 +84,12 @@ landometerBuild:
         evidenceRefs:
           - "llms.txt is a navigation-only aid and not represented as a ranking signal"
       agentReadableOrActionable:
-        status: "candidate_source_readable_not_actionable_live_pending"
+        status: "live_verified_readable_not_actionable"
         evidenceRefs:
           - "semantic initial HTML in both locale routes"
           - "llms.txt machine-use boundary"
     webDiscovery:
-      technicalStatus: "candidate_source_verified_live_pending"
+      technicalStatus: "live_verified"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both canonical locale routes; visible-content ItemList in locale routes; redirect-shell root intentionally carries metadata but no JSON-LD"
       observations:
@@ -102,38 +102,38 @@ landometerBuild:
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "candidate_local_rendered_verified_publication_pending"
+    readiness: "published_live_verified_with_open_manual_gates"
     publicSafe: true
-    status: "candidate_local_verified_not_published"
-    qrOrLinkTest: "pending publication for ui-20260908-02"
-    verifiedArtifactCommit: null
-    verifiedArtifactTree: null
-    pagesBuildCommit: null
-    pagesBuildState: "not_started"
-    pagesBuildId: null
-    pagesWorkflowRunId: null
-    pagesWorkflowState: null
-    pagesBuildDurationMs: null
-    pagesBuildCreatedAt: null
-    pagesBuildUpdatedAt: null
-    liveByteAttestationAt: null
-    liveBrowserVerifiedAt: null
-    liveRouteEvidence: "pending publication for ui-20260908-02"
-    liveByteParity: "pending publication for ui-20260908-02"
+    status: "published_live_verified"
+    qrOrLinkTest: "pass for the exact live link and governed routes; a physical QR scan was not separately performed"
+    verifiedArtifactCommit: "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec"
+    verifiedArtifactTree: "f5b4a8173fa160b853f7bf780b4d8d363e524b09"
+    pagesBuildCommit: "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec"
+    pagesBuildState: "built"
+    pagesBuildId: 1202182321
+    pagesWorkflowRunId: 34242568111
+    pagesWorkflowState: "success"
+    pagesBuildDurationMs: 37391
+    pagesBuildCreatedAt: "2026-09-08T15:06:01Z"
+    pagesBuildUpdatedAt: "2026-09-08T15:06:38Z"
+    liveByteAttestationAt: "2026-09-08T15:14:46.364Z"
+    liveBrowserVerifiedAt: "2026-09-08T15:50:20.728Z"
+    liveRouteEvidence: "pass: 44/44 governed root, locale, discovery, runtime, motif, product-media and governance probes returned their intended live status/MIME and exact artifact bytes at 2026-09-08T15:14:46.364Z; an unknown route returned HTTP 404 text/html with exact branded 404 SHA-256 e89032c0564f923212433da395bc07c29957194c7f8b8b60f48492de1336e548 at 2026-09-08T15:15:09.548Z"
+    liveByteParity: "pass for 44/44 governed live probes/files at 2026-09-08T15:14:46.364Z"
     releaseLedger:
-      reviewedHeadSha: null
+      reviewedHeadSha: "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec"
       mergeCommitSha: null
-      mergeCommitStatus: "pending"
-      reviewedTreeOrDiffContained: "pending: ui-20260908-02 has no reviewed commit or tree yet"
-      deployedSourceSha: null
-      providerRunOrDeploymentId: null
-      checkedAt: null
+      mergeCommitStatus: "not_applicable_direct_push_explicitly_authorized"
+      reviewedTreeOrDiffContained: "pass: directly pushed artifact commit c4a8fb8d2869a4aeb1a27381f3c5600370e78cec has reviewed tree f5b4a8173fa160b853f7bf780b4d8d363e524b09"
+      deployedSourceSha: "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec"
+      providerRunOrDeploymentId: 34242568111
+      checkedAt: "2026-09-08T15:50:20.728Z"
     providerConfiguration:
       sourceBranch: "main"
       sourcePath: "/"
       httpsEnforced: true
-      providerStatus: "target_configuration_not_yet_exercised_for_ui02"
-      scope: "expected GitHub Pages target for ui-20260908-02; no workflow or build ID is assigned yet"
+      providerStatus: "built"
+      scope: "current ui-20260908-02 deployment configuration, corroborated by Pages workflow 34242568111 and build 1202182321"
     previousVerifiedRelease:
       artifactBuildId: "ui-20260908-01"
       artifactCommit: "f38f33a9cf00c26110e040da0967261ae98b890c"
@@ -362,11 +362,11 @@ landometerBuild:
           url: "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk"
           bytes: 31289
           sha256: "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de"
-          readback: "raw_bytes_match"
+          readback: "artifact_selection_snapshot_raw_bytes_match"
           driveModifiedAt: "2026-09-08T14:51:32.673Z"
-          status: "verified"
+          status: "verified_artifact_snapshot"
         previousVerifiedUi01: "historical account-scoped package/read-first/manifest readback only; does not contain or attest ui-20260908-02"
-        boundary: "Final folder listing, raw-byte hashes and owner-only permission metadata passed at 2026-09-08T14:55:33Z. No public, anyone, domain or group permission was added; no background synchronization is claimed."
+        boundary: "Complete folder listing, raw-byte hashes and owner-only permission metadata passed at 2026-09-08T14:55:33Z. Both text snapshots were byte-identical again and all folder/file permissions remained owner-only at 2026-09-08T15:47:33.404Z. The Drive text files are immutable pre-attestation asset-selection snapshots; current publication evidence is repository-side. No public, anyone, domain or group permission was added; no background synchronization is claimed."
     approvedPhotography:
       - "responsive Lumpini city image family"
       - "responsive Yaowarat night r7 image family"
@@ -734,7 +734,7 @@ landometerBuild:
       receiptId: "rebuild02-ui-20260908-02"
       catalogOrContentVersion: "landometer-home-rebuild02-v15"
       issuedAt: "2026-09-08"
-      status: "candidate_local_verified"
+      status: "published_live_verified"
   privacy:
     personalData: true
     sensitivity: "public"
@@ -813,8 +813,8 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "focused local pass at 2026-09-08T14:28:19Z for ui-20260908-02 and exact site.js SHA-256 06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed: 8/8 TH/EN x 390/1440 x light/dark, exactly 11 transparent Landometer placements, prominent hero logo.full containment, restored CityChat/ijji photographs, contained finite product identities, reduced-motion and no-JavaScript fallbacks, zero horizontal overflow and zero harness failures"
-    motifRequiredOpenChecks: "The focused ui-20260908-02 harness did not rerun native Chrome zoom/hidden-tab, slow/load/decode failure injection, keyboard focus, pagehide, print, provider/social matrices, performance budgets, production accessibility or live HTTP/byte parity. Earlier ui-20260908-01 results remain historical only."
+    renderedBrowserGate: "pass: focused local matrix at 2026-09-08T14:28:19Z plus production Chrome completed by 2026-09-08T15:50:20.728Z for exact artifact c4a8fb8d2869a4aeb1a27381f3c5600370e78cec and site.js SHA-256 06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed; production 18/18 representative TH/EN light/dark cases span 320–1920 px, including four bilingual 360 px cases, and pass transparent carriers, large hero-logo containment, restored CityChat/ijji photographs, finite once-only lifecycle, reduced-motion, no-JavaScript, screenshots, zero horizontal overflow and zero first-party runtime failures"
+    motifRequiredOpenChecks: "Open checks are native Chrome UI zoom and hidden-tab behavior, slow/load/decode failure injection, keyboard/focus traversal, pagehide, print, exhaustive provider/social matrices, a selected performance budget and production accessibility. Live HTTP/MIME, exact-byte parity and the branded unknown-route gate passed for ui-20260908-02."
     productionAccessibilityGate: "open"
   determinism:
     buildKitSource: "Appendix E"
@@ -828,8 +828,8 @@ landometerBuild:
     selfCheck:
       run: true
       rowsTotal: 23
-      rowsPassed: 17
-      rowsFailedOrOpen: 6
+      rowsPassed: 18
+      rowsFailedOrOpen: 5
       rowsNotApplicable: 0
       resultPath: "governance/self-check.md"
   iconSystem:

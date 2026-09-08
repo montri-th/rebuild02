@@ -12,7 +12,7 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "source_limited_local_verified",
+    "evidenceStatus": "source_limited_live_verified",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
@@ -94,7 +94,7 @@
       "receiptId": "rebuild02-ui-20260908-02",
       "catalogOrContentVersion": "landometer-home-rebuild02-v15",
       "issuedAt": "2026-09-08",
-      "status": "candidate_local_verified"
+      "status": "published_live_verified"
     },
     "releaseFileHashes": [
       {"path": "index.html", "bytes": 6292, "sha256": "25e32e30771dddd7719be2c2fac412a0a637e288e362118306ca36896d583f1e"},
@@ -408,9 +408,10 @@
     "status": "ui02_three_file_handoff_raw_readback_verified",
     "selectedAssetsPackage": {"id": "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM", "url": "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk", "bytes": 325258, "sha256": "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e"},
     "claudeReadFirst": {"id": "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU", "url": "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk", "bytes": 9675, "sha256": "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b"},
-    "machineManifest": {"id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV", "url": "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk", "bytes": 31289, "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de"},
+    "machineManifest": {"id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV", "url": "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk", "bytes": 31289, "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de", "scope": "immutable pre-attestation asset-selection snapshot; current publication receipt is repository-side"},
     "receiptPath": "governance/media-receipt.json",
-    "verification": "folder listing, raw-byte hashes and owner-only permission metadata passed at 2026-09-08T14:55:33Z; shared=false for the folder and all three files; no public, anyone, domain or group permission was added; no background synchronization is claimed",
+    "recheckedAt": "2026-09-08T15:47:33.404Z",
+    "verification": "folder listing, raw-byte hashes and owner-only permission metadata passed at 2026-09-08T14:55:33Z; the two Drive text snapshots were byte-identical to their repository artifact snapshots and all four folder/file permission records remained owner-only at 2026-09-08T15:47:33.404Z; shared=false for the folder and all three files; no public, anyone, domain or group permission was added; the Drive machine manifest remains an immutable pre-attestation asset-selection snapshot and no background synchronization is claimed",
     "previousVerifiedUi01": {
       "selectedAssetsPackage": "https://drive.google.com/file/d/1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ/view?usp=drivesdk",
       "claudeReadFirst": "https://drive.google.com/file/d/1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ/view?usp=drivesdk",
@@ -419,36 +420,36 @@
     }
   },
   "publication": {
-    "authorizationSource": "the ongoing user request explicitly authorized publishing the new candidate after the current additions",
+    "authorizationSource": "the ongoing user request explicitly authorized publishing ui-20260908-02 after the current additions",
     "repository": "https://github.com/montri-th/rebuild02",
     "branch": "main",
     "pagesRoot": "/",
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "llms.txt navigation index", "branded noindex 404.html", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "candidate_local_rendered_verified_not_published",
+    "currentReleaseState": "published_live_verified",
     "candidateArtifactBuildId": "ui-20260908-02",
-    "reviewedHeadSha": null,
-    "containmentProof": "pending: ui-20260908-02 has no reviewed commit or tree yet",
+    "reviewedHeadSha": "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec",
+    "containmentProof": "artifact commit c4a8fb8d2869a4aeb1a27381f3c5600370e78cec was reviewed and resolves to immutable tree f5b4a8173fa160b853f7bf780b4d8d363e524b09",
     "mergeMode": "direct_push_explicitly_authorized_by_user",
     "mergeCommitSha": null,
-    "mergeCommitStatus": "pending",
-    "deployedSourceSha": null,
-    "verifiedArtifactCommit": null,
-    "verifiedArtifactTree": null,
-    "pagesBuildState": "not_started",
-    "pagesBuildId": null,
-    "pagesWorkflowRunId": null,
-    "pagesWorkflowState": null,
-    "pagesBuildDurationMs": null,
-    "pagesBuildCreatedAt": null,
-    "pagesBuildUpdatedAt": null,
-    "liveByteAttestationAt": null,
-    "unknownRouteVerifiedAt": null,
-    "checkedAt": null,
-    "verifiedAt": null,
-    "liveRouteEvidence": "pending publication for ui-20260908-02",
-    "liveByteParity": "pending publication for ui-20260908-02",
+    "mergeCommitStatus": "not_applicable_direct_push_explicitly_authorized",
+    "deployedSourceSha": "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec",
+    "verifiedArtifactCommit": "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec",
+    "verifiedArtifactTree": "f5b4a8173fa160b853f7bf780b4d8d363e524b09",
+    "pagesBuildState": "built",
+    "pagesBuildId": 1202182321,
+    "pagesWorkflowRunId": 34242568111,
+    "pagesWorkflowState": "success",
+    "pagesBuildDurationMs": 37391,
+    "pagesBuildCreatedAt": "2026-09-08T15:06:01Z",
+    "pagesBuildUpdatedAt": "2026-09-08T15:06:38Z",
+    "liveByteAttestationAt": "2026-09-08T15:14:46.364Z",
+    "unknownRouteVerifiedAt": "2026-09-08T15:15:09.548Z",
+    "checkedAt": "2026-09-08T15:50:20.728Z",
+    "verifiedAt": "2026-09-08T15:50:20.728Z",
+    "liveRouteEvidence": "pass: root, Thai and English routes returned HTTP 200 with expected MIME types; an unknown project route returned HTTP 404 and the exact 4,556-byte branded 404 payload at 2026-09-08T15:15:09.548Z",
+    "liveByteParity": "pass: 44/44 root, route, discovery, runtime, motif, animated-identity, restored-photo and governance probes matched the artifact bytes at 2026-09-08T15:14:46.364Z",
     "previousVerifiedRelease": {
       "artifactBuildId": "ui-20260908-01",
       "artifactCommit": "f38f33a9cf00c26110e040da0967261ae98b890c",
@@ -458,7 +459,7 @@
       "pagesBuildId": 1201690364,
       "scope": "historical evidence only; attests ui-20260908-01 and does not attest ui-20260908-02"
     },
-    "candidateLocalEvidence": "focused rendered pass for ui-20260908-02 against site.js SHA-256 06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed at 2026-09-08T14:28:19Z; broader release, production accessibility and live-byte gates remain pending",
+    "candidateLocalEvidence": "focused rendered pass for ui-20260908-02 against site.js SHA-256 06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed at 2026-09-08T14:28:19Z preceded the published live verification; production accessibility, machine validation and other named manual gates remain open",
     "localBrowserEvidence": {
       "matrix": [
         "TH and EN at 390 and 1440 px in light and dark: eight combinations",
@@ -470,13 +471,17 @@
       "harnessLimitations": "This is the focused eight-case local motif regression only. It does not rerun native browser zoom/hidden-tab, slow/load/decode failure injection, keyboard, print, pagehide, third-party providers, production accessibility, performance budgets or live HTTP/byte parity."
     },
     "liveBrowserEvidence": {
-      "engine": null,
-      "verifiedAt": null,
-      "routes": [],
-      "matrix": "pending publication",
-      "verified": "not run for ui-20260908-02",
+      "engine": "Google Chrome via Playwright, headless",
+      "verifiedAt": "2026-09-08T15:50:20.728Z",
+      "routes": ["Landometer-Home-TH.dc.html", "Landometer-Home-EN.dc.html"],
+      "matrix": "18/18 representative locale/viewport/theme cases passed: the primary matrix covered Thai at 320, 375, 390, 414, 768, 1024, 1280, 1440 and 1920 px plus English at 320, 390, 768, 1024 and 1440 px with alternating light/dark; four supplementary cases covered both locales at 360 px in light and dark",
+      "verified": "pass: build and locale identity, zero horizontal overflow, exactly 11 transparent borderless/paddingless Landometer motif carriers, prominent centered hero logo.full contained in the sky at every tested width, restored CityChat and ijji photographs, transparent contained product-logo stages, finite single-play Landometer/CityChat/ijji lifecycles with no re-entry replay, reduced-motion and no-JavaScript fallbacks, resolved critical media and zero first-party runtime errors",
       "testedSiteJs": {"bytes": 60258, "sha256": "06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed"},
-      "screenshots": []
+      "screenshots": [
+        "/private/tmp/rebuild02-live-ui-20260908-02-th-mobile-320.png",
+        "/private/tmp/rebuild02-live-ui-20260908-02-th-tablet-768.png",
+        "/private/tmp/rebuild02-live-ui-20260908-02-th-desktop-1440.png"
+      ]
     }
   },
   "growth": {
@@ -503,7 +508,7 @@
     "fontManifestPath": "assets/fonts/font-assets.manifest.json",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "renderedBrowserGate": "focused local pass at 2026-09-08T14:28:19Z for ui-20260908-02 and exact site.js SHA-256 06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed: 8/8 TH/EN x 390/1440 x light/dark, 11 transparent Landometer carriers with prominent hero logo.full, restored CityChat/ijji photos, contained finite product identities, reduced-motion and no-JavaScript fallbacks, zero horizontal overflow and zero harness errors; broader release, production accessibility and live gates remain open",
+    "renderedBrowserGate": "local pass at 2026-09-08T14:28:19Z followed by focused production checks completed by 2026-09-08T15:50:20.728Z for ui-20260908-02 and exact site.js SHA-256 06539479bc07fc5d1b5e14cd21f4a04271e76b25bee563d245c1961182645eed: 18/18 representative bilingual cases from 320 through 1920 px including four 360 px locale/theme cases, 11 transparent Landometer carriers with a prominent centered hero logo.full, restored CityChat/ijji photos, contained finite product identities, reduced-motion and no-JavaScript fallbacks, zero horizontal overflow and zero first-party runtime errors; production accessibility, machine validation, native zoom/hidden-tab, slow/decode failure injection, keyboard/print/pagehide, exhaustive provider/social and performance-budget gates remain open",
     "motifIntegrationPath": "governance/motif-integration.json",
     "productionAccessibilityGate": "open"
   },

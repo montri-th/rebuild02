@@ -20,7 +20,7 @@
     }
   ],
   "productIdentityAssets": {
-    "approvalContext": "The owner explicitly approved the supplied CityChat files on 2026-09-08 and instructed every motif/identity carrier in this candidate to remain transparent. CityChat and ijji motion stays product-scoped and does not become a shared Landometer capability.",
+    "approvalContext": "The owner explicitly approved the supplied CityChat files on 2026-09-08 and instructed every motif/identity carrier in this release to remain transparent. CityChat and ijji motion stays product-scoped and does not become a shared Landometer capability.",
     "landometerProductCards": {
       "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
       "bytes": 38962,
@@ -66,7 +66,7 @@
     "landometer": "verified Landometer 1.2.1 families logo, layers, rings, dial, cultivate and slice appear in 11 section placements; hero logo.full is prominent over the photo; every carrier is transparent by owner instruction; all motions are finite once with exact SVG fallback and no loop/replay/parallax",
     "citychat": "owner-approved animated light identity uses the exact base PNG and observed overlay SVG on a transparent carrier; the observed overlay SHA mismatch is an artifact-scoped provenance exception, not a general release claim",
     "ijji": "verified ijji r3 mark-only sting at 160–184 px on a transparent carrier by owner surface override; all nine layers preload/decode after 14% intersection, exact still until readiness/failure, finite once without replay/loop/parallax",
-    "driveSync": "ui-20260908-02 private account-scoped handoff passed final raw-byte readback for the selected-assets ZIP, Claude read-first file and machine manifest; the ui-20260908-01 package remains historical"
+    "driveSync": "ui-20260908-02 private account-scoped handoff passed complete raw-byte readback for the selected-assets ZIP, Claude read-first file and artifact-selection manifest; both text snapshots were byte-identical again and all folder/file permissions remained owner-only at 2026-09-08T15:47:33.404Z; the Drive text files are immutable pre-attestation snapshots and the ui-20260908-01 package remains historical"
   },
   "driveHandoffReceipt": {
     "scope": "private account-scoped files for reuse through the connected Google Drive account; no background-sync claim and no publishing authority",
@@ -74,9 +74,10 @@
     "status": "ui02_three_file_handoff_raw_readback_verified",
     "selectedAssetsPackage": {"id": "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM", "url": "https://drive.google.com/file/d/1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM/view?usp=drivesdk", "name": "Rebuild02_Motif_Integration_ui-20260908-02.zip", "bytes": 325258, "sha256": "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e", "modifiedAt": "2026-09-08T14:47:06.579Z", "readback": "raw_bytes_match"},
     "claudeReadFirst": {"id": "1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU", "url": "https://drive.google.com/file/d/1hSOQH5zofsaWjcvpKyAwsHJZQ-vm4HsU/view?usp=drivesdk", "name": "00_CLAUDE_READ_FIRST.md", "bytes": 9675, "sha256": "3972b81bf136f7be351f7c5a9a2a3008f5c4dde5c733430cda0a1094e308ce7b", "modifiedAt": "2026-09-08T14:51:23.020Z", "readback": "raw_bytes_match"},
-    "machineManifest": {"id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV", "url": "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk", "name": "motif-integration.ui-20260908-02.json", "bytes": 31289, "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de", "modifiedAt": "2026-09-08T14:51:32.673Z", "readback": "raw_bytes_match"},
+    "machineManifest": {"id": "1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV", "url": "https://drive.google.com/file/d/1VpgxgSKi07A4krRqXrhEJtp69pCLm2IV/view?usp=drivesdk", "name": "motif-integration.ui-20260908-02.json", "bytes": 31289, "sha256": "59c0b8f7e7b4e8df4a112a84dfc183ab9e1335eaa90ce5a3d05eff687f9076de", "modifiedAt": "2026-09-08T14:51:32.673Z", "readback": "artifact_selection_snapshot_raw_bytes_match"},
     "verifiedAt": "2026-09-08T14:55:33Z",
-    "readback": "folder listing, raw bytes and metadata passed for exactly three files; each file and the folder report shared=false with one owner permission and no public, anyone, domain or group permission",
+    "recheckedAt": "2026-09-08T15:47:33.404Z",
+    "readback": "folder listing, raw bytes and metadata passed for exactly three files at 2026-09-08T14:55:33Z; the two text snapshots were read back byte-identically again and all four folder/file permission records remained shared=false with one owner permission and no public, anyone, domain or group permission at 2026-09-08T15:47:33.404Z; the Drive text files are immutable pre-attestation asset-selection snapshots and the repository release receipts carry later publication evidence",
     "previousVerifiedUi01": {
       "selectedAssetsPackageId": "1ljtyycMw_b_awI1gPReaF2s9Ik05GJGJ",
       "claudeReadFirstId": "1zFWJSTMVL5FOIO0hKOPBo5qTyB41PVQJ",
@@ -552,7 +553,7 @@
       "privacyAndMetadataReview": "Visible names, parcel details and values are treated as unverified interface samples rather than real-person or property assertions. Exact-copy delivery retains Adobe/ImageReady text and Photoshop XMP/document identifiers.",
       "representationBoundary": "A visibly labelled legacy asset retrieved on 2026-08-26; it is not represented as the current Property Tax Simulator interface."
     },
-    "visualReview": "Focused local pass for ui-20260908-02 at 2026-09-08T14:28:19Z: 8/8 TH/EN x 390/1440 x light/dark cases had zero horizontal overflow and no harness errors; exactly 11 transparent Landometer carriers appeared per locale; prominent hero logo.full stayed within the photograph; restored CityChat and ijji photo families were visible; both transparent product-identity stages stayed contained; CityChat and ijji completed once without replay; reduced-motion and no-JavaScript retained final fallbacks. Broader release, production accessibility and live-byte gates were not run for this candidate."
+    "visualReview": "Focused local pass for ui-20260908-02 at 2026-09-08T14:28:19Z was followed by focused production checks completed by 2026-09-08T15:50:20.728Z: 18/18 representative Thai/English viewport/theme cases from 320 through 1920 px, including four bilingual light/dark cases at 360 px, had zero horizontal overflow and no first-party runtime errors; exactly 11 transparent borderless/paddingless Landometer carriers appeared per locale; the prominent centered hero logo.full stayed within the sky at every tested width; restored CityChat and ijji photo families were visible; both transparent product-identity stages stayed contained; Landometer, CityChat and ijji completed once without re-entry replay; reduced-motion and no-JavaScript retained final fallbacks. Exact live byte parity passed 44/44 probes at 2026-09-08T15:14:46.364Z and the exact branded 404 passed at 2026-09-08T15:15:09.548Z; production accessibility, machine validation, native zoom/hidden-tab and performance-budget gates remain open."
   },
   "locationAreaPerformanceR8": {
     "assetId": "location-area-performance-r8-198c0d59",

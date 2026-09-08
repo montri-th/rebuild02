@@ -2,11 +2,12 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. Current source candidate:
-`ui-20260908-02` (`rebuild02-ui-20260908-02`), locally verified and not yet published or
-live-attested. The immediately preceding live-verified release is `ui-20260908-01`
-(`f38f33a9…`, tree `4458e55f…`); `ui-20260901-01` remains earlier historical evidence.
-Machine validation remains pending.
+install, bundler, CI workflow, or build step. The current published, live-verified release
+is `ui-20260908-02` (`rebuild02-ui-20260908-02`), artifact commit
+`c4a8fb8d2869a4aeb1a27381f3c5600370e78cec` and tree
+`f5b4a8173fa160b853f7bf780b4d8d363e524b09`. The immediately preceding release is
+`ui-20260908-01` (`f38f33a9…`, tree `4458e55f…`); `ui-20260901-01` remains earlier
+historical evidence. Machine validation remains pending.
 
 | File | Purpose |
 |---|---|
@@ -158,12 +159,17 @@ Machine validation remains pending.
 
 `governance/motif-integration.json` is the machine boundary for selected asset IDs,
 product scopes, transparent carriers, semantic jobs, runtime/fallback paths, dependency
-hashes, and owner approval. The immutable private `ui-20260908-02` Drive folder is
+hashes, owner approval, and the repository-side publication receipt. The immutable private
+`ui-20260908-02` Drive folder is
 <https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z>.
 Its selected-assets ZIP, Claude read-first file, and machine manifest were read back at
 `2026-09-08T14:55:33Z` with exact byte/hash parity; all three remain owner-only and not
-publicly shared. The handoff supports reuse through the connected Drive account without
-claiming background synchronization or independent publishing authority.
+publicly shared. The two Drive text files were read back byte-identically again and the
+folder/file permission records remained owner-only at `2026-09-08T15:47:33.404Z`. Those
+Drive text files are immutable pre-attestation asset-selection snapshots; the current
+publication receipt lives in repository governance and does not change any selected asset
+bytes. The handoff supports reuse through the connected Drive account without claiming
+background synchronization or independent publishing authority.
 
 ## Publishing
 
@@ -173,21 +179,28 @@ suffixes are route contracts and must not be renamed.
 
 `machineValidation` remains `pending` and `conformanceLevel` remains
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
-validation language. Candidate source/hash checks pin `site.css` at 60,194 bytes / SHA-256
+validation language. Published-artifact source/hash checks pin `site.css` at 60,194 bytes / SHA-256
 `573a3e09…` and `site.js` at 60,258 bytes / SHA-256 `06539479…`. The current local
 browser gate passed 8/8 TH/EN × 390/1440 × light/dark cases with the correct build,
 language and theme, no horizontal overflow or first-party page/console errors, eleven
 transparent Landometer carriers, a large in-frame hero logo, restored CityChat/ijji
 photographs, and contained animated brand rows. Reduced-motion, no-JavaScript, and finite
-CityChat/ijji lifecycle checks also passed. Publication, GitHub Pages build identity, live
-HTTP/MIME and byte parity, unknown-route behavior, and production browser QA are pending
-for `ui-20260908-02`.
+CityChat/ijji lifecycle checks also passed. GitHub Pages workflow `34242568111` published
+artifact commit `c4a8fb8d2869a4aeb1a27381f3c5600370e78cec` / tree
+`f5b4a8173fa160b853f7bf780b4d8d363e524b09` through Pages build `1202182321`, created
+`2026-09-08T15:06:01Z` and updated successfully at `2026-09-08T15:06:38Z` after
+37,391 ms. Exact live HTTP/MIME and byte parity passed 44/44 checks at
+`2026-09-08T15:14:46.364Z`; an unknown route returned the exact branded local `404.html`
+with HTTP 404 at `2026-09-08T15:15:09.548Z`. Production browser QA passed 18/18
+representative viewport/locale/theme cases from 320 through 1920 px, including a
+four-case bilingual light/dark check at 360 px, plus finite lifecycle, reduced-motion,
+no-JavaScript, and screenshot checks by `2026-09-08T15:50:20.728Z`.
 
 The immediately preceding `ui-20260908-01` release remains historical evidence: artifact
 commit `f38f33a9cf00c26110e040da0967261ae98b890c`, tree
 `4458e55ffbe2b43b1990f85af6d62be63f854ed8`, successful workflow `34214191898`, Pages
 build `1201690364`, live byte verification at `2026-09-08T10:18:05.929Z`, and focused
 production browser QA at `2026-09-08T10:25:48.050Z`. None of those receipts attests the
-current candidate. True Chrome UI zoom, native hidden-tab behavior, a selected loading
+current release. True Chrome UI zoom, native hidden-tab behavior, a selected loading
 budget, the exhaustive provider/social matrix, production accessibility, and machine
 validation remain open.

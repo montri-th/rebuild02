@@ -1,6 +1,6 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260908-02` candidate, locally verified; publication pending
+Artifact build: `ui-20260908-02`, published and live verified
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
@@ -138,19 +138,27 @@ Source and rendered assertions:
   and type. At widths 320, 360, 390, 600, 768, 900, 1080, 1081, 1280 and 1440, local QA
   found all computed nowrap, zero `.btn` overflow, no Location CTA above 48 px and no page
   overflow.
-- Candidate `ui-20260908-02` passed the local 8/8 TH/EN × 390/1440 × light/dark
+- Release `ui-20260908-02` passed the local 8/8 TH/EN × 390/1440 × light/dark
   matrix with the correct build, locale and theme, zero horizontal overflow or first-party
   page/console errors, eleven transparent Landometer carriers, a contained large hero
   logo, restored product photographs, and contained product brand rows. Reduced-motion,
-  no-JavaScript, and finite CityChat/ijji lifecycle checks also passed. It has no artifact
-  commit, Pages workflow/build receipt, live byte parity, branded unknown-route result, or
-  production browser check yet. Published `ui-20260908-01` remains historical evidence:
+  no-JavaScript, and finite CityChat/ijji lifecycle checks also passed. Artifact commit
+  `c4a8fb8d2869a4aeb1a27381f3c5600370e78cec` / tree
+  `f5b4a8173fa160b853f7bf780b4d8d363e524b09` was published by successful workflow
+  `34242568111` and Pages build `1202182321`, created `2026-09-08T15:06:01Z` and updated
+  `2026-09-08T15:06:38Z` after 37,391 ms. Exact live HTTP/MIME and byte parity passed
+  44/44 checks at `2026-09-08T15:14:46.364Z`; an unknown route returned the exact branded
+  local `404.html` with HTTP 404 at `2026-09-08T15:15:09.548Z`. Production browser QA
+  passed 18/18 representative viewport/locale/theme cases from 320 through 1920 px,
+  including four bilingual light/dark cases at 360 px, plus finite lifecycle,
+  reduced-motion, no-JavaScript, and screenshot checks by `2026-09-08T15:50:20.728Z`. Published
+  `ui-20260908-01` remains historical evidence:
   artifact `f38f33a…`, tree `4458e55…`, workflow `34214191898`, build `1201690364`, live
   bytes at `2026-09-08T10:18:05.929Z`, and focused live QA at
-  `2026-09-08T10:25:48.050Z`; none attests this candidate. True Chrome UI zoom, native
-  hidden-tab behavior, current 320/360/768 coverage, production accessibility, a selected
-  loading budget, the exhaustive provider/social matrix, machine validation, and current
-  live verification remain open.
+  `2026-09-08T10:25:48.050Z`; none attests this release. True Chrome UI zoom, native
+  hidden-tab behavior, production accessibility, a selected
+  loading budget, the exhaustive provider/social matrix, and machine validation remain
+  open.
 - Products and Services exposes five product paths with consistent capsule conversation
   CTAs and an explicit fit cue. Desktop uses a 2+3 hierarchy: CityMETER and CityChat lead,
   followed by ijji, CityWiki and land/property tools. The restored CityMETER card pairs the
@@ -177,4 +185,4 @@ Source and rendered assertions:
   re-entry. Current reduced-motion and no-JavaScript checks retained exact stills and all
   eleven Landometer fallbacks. Print and injected ijji decode-failure evidence from
   `ui-20260908-01` remains historical and must be repeated before it is claimed for this
-  candidate.
+  release.
