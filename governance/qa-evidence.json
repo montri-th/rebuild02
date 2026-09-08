@@ -59,8 +59,8 @@
       "permissions": "folder and all three files report shared=false with exactly one owner permission for montri@jlifecenter.com and no anyone, domain or group permission",
       "boundary": "Private account-scoped handoff for reuse through the connected Drive account; no background synchronization, public sharing or independent publication authority is claimed."
     },
-    "currentUi02DriveHandoff": {
-      "scope": "ui-20260908-02 active motif and animated-identity assets only",
+    "historicalUi02DriveHandoff": {
+      "scope": "historical ui-20260908-02 active motif and animated-identity assets only; does not attest ui-20260909-01",
       "access": "private_account_scoped_not_shared",
       "folderUrl": "https://drive.google.com/drive/folders/1IZt3gTqMwfyp-t0MI4YYLMdGXswwlk6Z",
       "zip": {"fileId": "1hdNpbTbyjSX2Mjy2y0T57Y9_nizrHwVM", "bytes": 325258, "sha256": "676c6d09ea2068a6f43294ed3443594f1a69a356c368d5c6c06ab15d89715f1e", "readback": "raw_bytes_match"},
@@ -254,7 +254,7 @@
       "artifactTree": "f5b4a8173fa160b853f7bf780b4d8d363e524b09",
       "artifactWorkflowRunId": 34242568111,
       "pagesBuildId": 1202182321,
-      "attestationCommit": "b85bedda",
+      "attestationCommit": "b85bedda93a4c7ee4f59698e59d1874c4a3cb7e0",
       "liveByteVerifiedAt": "2026-09-08T15:14:46.364Z",
       "liveBrowserVerifiedAt": "2026-09-08T15:50:20.728Z"
     },

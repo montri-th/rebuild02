@@ -490,10 +490,14 @@
     "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
     "pagesWorkflowRunId": 34269175056,
     "pagesBuildId": 1202614459,
+    "pagesDeploymentId": 6335434394,
+    "pagesDeploymentState": "success",
+    "pagesDeploymentCreatedAt": "2026-09-08T19:28:43Z",
+    "pagesDeploymentUpdatedAt": "2026-09-08T19:29:03Z",
     "liveByteAttestationAt": "2026-09-08T19:34:07.169Z",
     "liveUnknown404AttestationAt": "2026-09-08T19:42:09Z",
     "liveBrowserVerifiedAt": "2026-09-08T19:40:52.273Z",
-    "evidence": "Exact live byte parity passed 44/44, the production browser verification passed, and the branded unknown route returned the expected HTTP 404 for artifact commit d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 and tree 27277d7a2e447ef3139b72ea51da65d130501bb7. Design System machine validation, production accessibility, true browser-UI zoom, native hidden-tab behavior, loading/performance budgets, and exhaustive provider/social checks remain open."
+    "evidence": "Exact live byte parity passed 44/44, the production browser verification passed, and the branded unknown route returned the expected HTTP 404 for artifact commit d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 and tree 27277d7a2e447ef3139b72ea51da65d130501bb7. Design System machine validation, production accessibility, true browser-UI zoom, native hidden-tab behavior, injected asset/load/decode failures, exhaustive keyboard/focus traversal, print/pagehide behavior, loading/performance budgets, and exhaustive provider/social checks remain open."
   },
   "driveSync": {
     "status": "ui09_private_three_file_handoff_complete_raw_readback_verified_ui02_immutable_historical",
@@ -583,7 +587,7 @@
       "publication": {
         "artifactCommit": "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec",
         "artifactTree": "f5b4a8173fa160b853f7bf780b4d8d363e524b09",
-        "attestationCommit": "b85bedda",
+        "attestationCommit": "b85bedda93a4c7ee4f59698e59d1874c4a3cb7e0",
         "pagesWorkflowRunId": 34242568111,
         "pagesBuildId": 1202182321,
         "liveByteAttestationAt": "2026-09-08T15:14:46.364Z",

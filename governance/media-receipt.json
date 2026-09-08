@@ -145,6 +145,10 @@
     "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
     "pagesWorkflowRunId": 34269175056,
     "pagesBuildId": 1202614459,
+    "pagesDeploymentId": 6335434394,
+    "pagesDeploymentState": "success",
+    "pagesDeploymentCreatedAt": "2026-09-08T19:28:43Z",
+    "pagesDeploymentUpdatedAt": "2026-09-08T19:29:03Z",
     "liveByteParity": {"status": "passed_44_of_44", "verifiedAt": "2026-09-08T19:34:07.169Z"},
     "liveBrowserVerifiedAt": "2026-09-08T19:40:52.273Z",
     "liveUnknown404VerifiedAt": "2026-09-08T19:42:09Z",
@@ -153,6 +157,9 @@
       "production accessibility",
       "true browser-UI zoom",
       "native hidden-tab behavior",
+      "injected asset, load and decode failures",
+      "exhaustive keyboard and focus traversal",
+      "print and pagehide behavior",
       "loading and performance budgets",
       "exhaustive provider and social checks"
     ]

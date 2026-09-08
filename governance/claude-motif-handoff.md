@@ -149,14 +149,16 @@ Rebuild02 remains on Landometer Design System 0.9.0-r7 and kit lds-kit-0.9.0-r4.
 
 ## Publication receipt
 
-- GitHub Pages workflow `34269175056`; Pages build `1202614459`.
+- GitHub Pages workflow `34269175056`; Pages build `1202614459`; deployment
+  `6335434394` completed successfully from the exact artifact commit.
 - Exact live-byte parity passed 44/44 at `2026-09-08T19:34:07.169Z`.
 - Production browser verification passed at `2026-09-08T19:40:52.273Z`.
 - The branded unknown route returned the expected HTTP 404 at `2026-09-08T19:42:09Z`.
 
 The publication is verified, but Design System machine validation, production
-accessibility, true browser-UI zoom, native hidden-tab behavior, loading/performance
-budgets, and exhaustive provider/social checks remain open.
+accessibility, true browser-UI zoom, native hidden-tab behavior, injected
+asset/load/decode failures, exhaustive keyboard/focus traversal, print/pagehide,
+loading/performance budgets, and exhaustive provider/social checks remain open.
 
 ## Drive handoff
 
