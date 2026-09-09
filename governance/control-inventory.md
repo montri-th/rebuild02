@@ -1,6 +1,6 @@
 # Rebuild02 control inventory
 
-Artifact build: `ui-20260909-01`, published and live verified
+Artifact build: `ui-20260909-02`, locally validated; publication pending
 
 Routes: `Landometer-Home-TH.dc.html`, `Landometer-Home-EN.dc.html`
 
@@ -138,7 +138,13 @@ Source and rendered assertions:
   and type. At widths 320, 360, 390, 600, 601, 630, 640, 700, 768, 900, 1080, 1081,
   1280 and 1440, QA found all computed nowrap, zero `.btn` overflow, no Location CTA
   above 48 px and no page overflow.
-- Release `ui-20260909-01` is published and live verified. Artifact commit
+- Candidate `ui-20260909-02` changes only the initial discovery metadata, sitemap dates,
+  build receipts and social-preview asset. The deterministic 1200×630 JPEG uses the
+  approved r6 symbol at 350×350 px on a high-contrast central panel; full 1.91:1 and
+  centred 1:1, 4:3 and 16:9 crops passed local review. Root, Thai and English Open Graph,
+  Twitter and WebPage JSON-LD references use its immutable content-hashed URL. Publication,
+  exact live-byte parity and third-party crawler cache observation remain pending.
+- Previous release `ui-20260909-01` is published and live verified. Artifact commit
   `d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27` / tree
   `27277d7a2e447ef3139b72ea51da65d130501bb7` was published by successful Pages workflow
   `34269175056`, deployment `6335434394`, and build `1202614459`, created

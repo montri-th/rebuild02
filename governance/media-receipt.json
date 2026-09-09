@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260909-01",
+  "artifactBuildId": "ui-20260909-02",
   "sourceInputs": [
     {
       "name": "IMG_8633.mov",
@@ -140,18 +140,26 @@
     }
   },
   "publicationReceipt": {
-    "status": "published_live_verified_with_open_gates",
-    "artifactCommit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
-    "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
-    "pagesWorkflowRunId": 34269175056,
-    "pagesBuildId": 1202614459,
-    "pagesDeploymentId": 6335434394,
-    "pagesDeploymentState": "success",
-    "pagesDeploymentCreatedAt": "2026-09-08T19:28:43Z",
-    "pagesDeploymentUpdatedAt": "2026-09-08T19:29:03Z",
-    "liveByteParity": {"status": "passed_44_of_44", "verifiedAt": "2026-09-08T19:34:07.169Z"},
-    "liveBrowserVerifiedAt": "2026-09-08T19:40:52.273Z",
-    "liveUnknown404VerifiedAt": "2026-09-08T19:42:09Z",
+    "status": "candidate_local_validated_pending_publication",
+    "artifactCommit": null,
+    "artifactTree": null,
+    "pagesWorkflowRunId": null,
+    "pagesBuildId": null,
+    "pagesDeploymentId": null,
+    "pagesDeploymentState": "pending",
+    "pagesDeploymentCreatedAt": null,
+    "pagesDeploymentUpdatedAt": null,
+    "liveByteParity": {"status": "pending_publication", "verifiedAt": null},
+    "liveBrowserVerifiedAt": null,
+    "liveUnknown404VerifiedAt": null,
+    "previousVerifiedUi01": {
+      "artifactCommit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
+      "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
+      "pagesWorkflowRunId": 34269175056,
+      "pagesBuildId": 1202614459,
+      "pagesDeploymentId": 6335434394,
+      "scope": "previous live release and unchanged behavioral base; does not attest the ui-20260909-02 social preview"
+    },
     "openGates": [
       "Design System machine validation",
       "production accessibility",
@@ -534,11 +542,14 @@
     }
   },
   "socialPreview": {
-    "path": "assets/social/landometer-rebuild02-og-1200x630.jpg",
-    "bytes": 385727,
+    "path": "assets/social/landometer-rebuild02-social-logo-cb8b44fd-1200x630.jpg",
+    "bytes": 247904,
     "dimensions": "1200x630",
-    "sha256": "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12",
-    "lineage": "centred 1600x840 crop at y=780 from assets/photos/hero-lumpini-1600.webp, resized to 1200x630 JPEG at quality 88"
+    "sha256": "cb8b44fd2dff568eebb9b3d17633f7b059df5d77a2318cf2607f68f175191a4a",
+    "lineage": "crop x=0, y=780, width=1600, height=840 from assets/photos/hero-lumpini-1600.webp; approved r6 symbol composited at high resolution on a white contrast panel; one LANCZOS downsample to 1200x630; progressive JPEG quality 90 with 4:4:4 subsampling and stripped metadata",
+    "roleReceipt": "governance/social-preview-receipt.json",
+    "cropReview": "pass for full 1.91:1 and centred 1:1, 4:3 and 16:9 crops; the complete symbol remains inside the conservative central safe area",
+    "previousAsset": "assets/social/landometer-rebuild02-og-1200x630.jpg retained only as the immutable historical share image; it is not a source for the current derivative"
   },
   "testimonials": {
     "mappingEvidence": "Legacy DOM and adjacent asset order checked 2026-08-28; no role inferred where the source did not state one.",
@@ -652,7 +663,7 @@
       "privacyAndMetadataReview": "Visible names, parcel details and values are treated as unverified interface samples rather than real-person or property assertions. Exact-copy delivery retains Adobe/ImageReady text and Photoshop XMP/document identifiers.",
       "representationBoundary": "A visibly labelled legacy asset retrieved on 2026-08-26; it is not represented as the current Property Tax Simulator interface."
     },
-    "visualReview": "Focused local candidate pass for ui-20260909-01 completed at 2026-09-08T19:21:49.302Z: layout 32/32, captions 7/7 with twelve flow-safe captions per case, carousels 4/4, reduced-motion 4/4, no-JavaScript 2/2 including centered map fallback, and Living r3 video 1/1. The matrix covered both locales at light widths 320/360/390/600/601/630/640/700/768/900/1080/1081/1280/1440 and dark widths 390/1440; all 11 Landometer placements were full-colour on transparent carriers, product identities and content were balanced, captions stayed stable, exact name tokens and mobile CityMETER examples remained visible, contextual CTA contrast and centered Thailand maps passed, and there was no horizontal overflow, duplicate ID, or first-party runtime error. Publication/live bytes and the ui09 private Drive handoff are now verified in the publicationReceipt and driveHandoffReceipt; production accessibility, machine validation, native zoom/hidden-tab, performance-budget, and exhaustive provider/social gates remain open. Verified ui02 Drive and production evidence remains immutable historical evidence only and does not attest ui09."
+    "visualReview": "The ui-20260909-02 social-preview delta passed exact local metadata, JSON-LD, image-byte, deterministic-rebuild and full/1:1/4:3/16:9 crop checks. The page body, CSS, JavaScript and product media are unchanged from the ui-20260909-01 production browser pass. Publication/live bytes and third-party crawler caches remain separate gates until the ui02 release completes."
   },
   "locationAreaPerformanceR8": {
     "assetId": "location-area-performance-r8-198c0d59",

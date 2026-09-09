@@ -1,31 +1,32 @@
 {
   "schemaVersion": "1.0",
-  "artifactBuildId": "ui-20260909-01",
-  "releaseReceiptId": "rebuild02-ui-20260909-01",
-  "status": "published_live_verified_and_private_drive_handoff_verified_with_open_manual_machine_accessibility_and_performance_gates",
+  "artifactBuildId": "ui-20260909-02",
+  "releaseReceiptId": "rebuild02-ui-20260909-02",
+  "status": "candidate_local_validated_pending_publication_with_open_manual_machine_accessibility_performance_and_third_party_cache_gates",
   "machineValidation": "pending",
   "conformanceLevel": "authoring_aligned",
   "settledCandidateHashes": {
-    "index.html": {"bytes": 6292, "sha256": "52e69380bfaeda4ae33bc866fe3b8b2e688935668e3cf1717f1e35a60eec9adc"},
-    "Landometer-Home-TH.dc.html": {"bytes": 108046, "sha256": "6406ead7e63717c865645e52475e14fd6187592fd285613594a0974009deb400"},
-    "Landometer-Home-EN.dc.html": {"bytes": 90017, "sha256": "44dbde1fbdf0e21304d25a1b41b33dc54cbe38f5ccd029cae51d32f6fdca06d7"},
-    "404.html": {"bytes": 4556, "sha256": "aaa3ee26d7d1f788312d0233942b1f002b3f884100185567bd7ad3001e79b67c"},
+    "index.html": {"bytes": 6784, "sha256": "5bb30aa56e4b3fe11c594ee02a7ac119966cfa8eee3266955075f71b71cedce0"},
+    "Landometer-Home-TH.dc.html": {"bytes": 108556, "sha256": "6d6eb63fb9642e15deac59739b233e9e2180554ef321bb60996ee12c908674c5"},
+    "Landometer-Home-EN.dc.html": {"bytes": 90451, "sha256": "baf0fb07c11dcb504bddb7c442df09210b97e69518b843fc81afd768984ade9e"},
+    "404.html": {"bytes": 4556, "sha256": "48932897e01d04503517cbb6aab7a6209849b29023e84756dc8b28f20113ccba"},
     "llms.txt": {"bytes": 2083, "sha256": "280fbdf2dfd446863b39345b08d5d52124f07f08958a83db58309a92622a1ec3"},
     "robots.txt": {"bytes": 83, "sha256": "a830d2c121000ba9c2abad1fc1a76a29edffce2f6d6f57c8970f72efb09b601f"},
-    "sitemap.xml": {"bytes": 1149, "sha256": "50805ca858bcaa43b67f3210768330a65584befd3ef2d63072b132495f417c90"},
+    "sitemap.xml": {"bytes": 1149, "sha256": "89c6d646ee2ea2fd63c173d1dff848723c9b0c2278a382eee8dea46212a4346d"},
     "site.css": {"bytes": 65158, "sha256": "52bc9727ea04d58c2a41490e45c77bbf46b7391c6e43370e524404407ab8bbaa"},
-    "site.js": {"bytes": 64619, "sha256": "d84240411fbb42516381bea4c12c21ca61b14b79bd5d0e4ffb69d765f64e8e53"}
+    "site.js": {"bytes": 64619, "sha256": "d84240411fbb42516381bea4c12c21ca61b14b79bd5d0e4ffb69d765f64e8e53"},
+    "assets/social/landometer-rebuild02-social-logo-cb8b44fd-1200x630.jpg": {"bytes": 247904, "sha256": "cb8b44fd2dff568eebb9b3d17633f7b059df5d77a2318cf2607f68f175191a4a"}
   },
   "sourceAndStructure": {
     "locales": ["th", "en"],
     "bilingualParity": "pass at source",
     "h1PerLocale": 1,
-    "landometerMetaCountPerLocale": 5,
+    "landometerMetaCountPerLocale": 6,
     "citychatAnimatedIdentityMetaCountPerLocale": 1,
     "duplicateIds": 0,
     "localResourceReferenceErrors": 0,
     "javascriptSyntax": "pass for local-candidate site.js SHA-256 d84240411fbb42516381bea4c12c21ca61b14b79bd5d0e4ffb69d765f64e8e53 and the three motif runtimes",
-    "gitDiffCheck": "pass for the committed ui-20260909-01 artifact at d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 / tree 27277d7a2e447ef3139b72ea51da65d130501bb7",
+    "gitDiffCheck": "pending artifact commit for ui-20260909-02; candidate social-preview source and deterministic output are locally validated",
     "materialSymbolFile": "assets/fonts/material-symbols-rounded-rebuild02-r10.ttf",
     "materialSymbolFileGlyphs": 25,
     "activeMaterialSymbolLigatures": 25,
@@ -83,7 +84,7 @@
   "currentRoundChecks": {
     "productEcosystem": "pass at source and in the final local matrix: five media-led product cards retain product-scoped copy and one conversation CTA; CityChat and ijji use their earlier approved photographs while their owner-approved animated identities remain in the brand rows rather than the media frames",
     "productMediaBoundary": "pass at source and in the final local matrix: the responsive CityChat community and ijji food-vendor photographs are rendered again; the people shown are documentary context and are not represented as product users or endorsers",
-    "heroMotionDecision": "pass at source and in the final local matrix: the hero photograph remains static while a large landometer.logo.full assembles once as a transparent in-frame overlay that stays prominent and contained at every tested viewport; navigation, favicon and social identity remain unchanged",
+    "heroMotionDecision": "pass at source and in the final local matrix: the hero photograph remains static while a large landometer.logo.full assembles once as a transparent in-frame overlay that stays prominent and contained at every tested viewport; navigation and favicon identity remain unchanged, while the social preview now uses the approved r6 symbol in a dedicated crop-safe composition",
     "semanticLandometerMotifs": {
       "countPerLocale": 11,
       "totalAcrossLocales": 22,
@@ -139,7 +140,7 @@
       "noJavaScript": "2/2 pass: TH and EN retain all 11 transparent full-color Landometer SVG fallbacks, both product-identity fallbacks, centered Thailand maps, visible captions and no horizontal overflow",
       "livingVideo": "1/1 pass: living-city-rebuild02-r3-vary-speed.mp4 decoded and rendered as the active warm vary-speed slow-motion Living media with its poster/reduced-motion contract intact"
     },
-    "currentCoverageBoundary": "This section remains local final-candidate evidence and does not by itself attest publication or production. Current ui-20260909-01 commit, Pages, live-byte, unknown-route, and production-browser evidence is recorded separately under browserAndProductionGates. True browser zoom, native hidden-tab state, exhaustive keyboard/focus traversal, print, injected failure, a selected performance budget, exhaustive providers, production accessibility, and machine-package validation remain open."
+    "currentCoverageBoundary": "The page body, CSS, JavaScript and product media are unchanged from the ui-20260909-01 production-browser baseline. The ui-20260909-02 social-preview delta has separate local metadata, image-byte, deterministic-rebuild and crop evidence; publication, live-byte parity and third-party card caches remain separate gates. True browser zoom, native hidden-tab state, exhaustive keyboard/focus traversal, print, injected failure, a selected performance budget, exhaustive providers, production accessibility, and machine-package validation remain open."
   },
   "loadingAndPerformance": {
     "status": "open_no_selected_budget",
@@ -163,110 +164,67 @@
     "officeEmail": "mailto:hello@landometer.com after explicit click"
   },
   "browserAndProductionGates": {
-    "publicationAuthorization": "authorized by the ongoing user request",
-    "candidateStatus": "ui-20260909-01 is committed, published through GitHub Pages, exact-live-byte verified, unknown-route verified, production-browser verified, and delivered as an exact private Drive handoff; the named manual, machine, accessibility, performance, provider, and failure-injection gates remain open",
+    "publicationAuthorization": "authorized by the owner's request to update the existing Rebuild02 site",
+    "candidateStatus": "ui-20260909-02 passed local social-preview validation; artifact commit, Pages delivery, exact live-byte parity and third-party cache observations remain pending",
     "productionArtifact": {
-      "scope": "current published ui-20260909-01 artifact",
+      "scope": "current ui-20260909-02 candidate",
       "repository": "https://github.com/montri-th/rebuild02",
       "branch": "main",
-      "reviewedHeadSha": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
-      "artifactCommit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
+      "reviewedHeadSha": null,
+      "artifactCommit": null,
       "mergeCommitSha": null,
       "mergeCommitStatus": "not_applicable_direct_push_explicitly_authorized",
-      "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
-      "deployedSourceSha": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
-      "committedAt": "2026-09-08T19:27:51Z",
-      "status": "published_live_verified"
+      "artifactTree": null,
+      "deployedSourceSha": null,
+      "committedAt": null,
+      "status": "candidate_local_validated"
     },
     "pagesBuild": {
-      "scope": "current ui-20260909-01 commit-bound Pages workflow and build-job evidence",
-      "id": 1202614459,
-      "workflowRunId": 34269175056,
-      "workflowName": "pages build and deployment",
-      "workflowRunNumber": 33,
-      "workflowRunAttempt": 1,
-      "workflowState": "success",
-      "state": "built",
-      "commit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
-      "createdAt": "2026-09-08T19:28:31Z",
-      "updatedAt": "2026-09-08T19:29:03Z",
-      "workflowDurationSeconds": 32,
-      "buildJob": {"id": 102206097125, "status": "completed", "conclusion": "success", "startedAt": "2026-09-08T19:28:35Z", "completedAt": "2026-09-08T19:28:42Z"},
-      "reportBuildStatusJob": {"id": 102206149236, "status": "completed", "conclusion": "success", "startedAt": "2026-09-08T19:28:45Z", "completedAt": "2026-09-08T19:28:48Z"},
-      "pagesBuildCreatedAt": "2026-09-08T19:28:30Z",
-      "pagesBuildUpdatedAt": "2026-09-08T19:28:55Z",
-      "pagesBuildDurationMs": 25644,
-      "pagesBuildApiId": 1202614459,
-      "pagesBuildApiBoundary": "The recorded authenticated Pages build receipt identifies build 1202614459. A later unauthenticated latest-build recheck returned 404, so the public commit-bound workflow, build job, deploy job, and deployment status provide corroborating provider evidence."
+      "scope": "current ui-20260909-02 candidate",
+      "workflowRunId": null,
+      "workflowState": "pending",
+      "commit": null
     },
     "pagesDeployment": {
-      "scope": "current ui-20260909-01 GitHub Pages deployment",
-      "deploymentId": 6335434394,
-      "deploymentStatusId": 18007346005,
+      "scope": "current ui-20260909-02 candidate",
+      "deploymentId": null,
       "environment": "github-pages",
       "environmentUrl": "https://montri-th.github.io/rebuild02/",
-      "commit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
+      "commit": null,
       "ref": "main",
-      "deployJob": {"id": 102206149369, "status": "completed", "conclusion": "success", "startedAt": "2026-09-08T19:28:46Z", "completedAt": "2026-09-08T19:29:03Z"},
-      "state": "success",
-      "createdAt": "2026-09-08T19:28:43Z",
-      "updatedAt": "2026-09-08T19:29:03Z"
+      "state": "pending"
     },
     "providerConfiguration": {
       "sourceBranch": "main",
       "sourcePath": "/",
       "httpsEnforced": true,
-      "providerStatus": "built_and_deployed_successfully",
-      "scope": "current ui-20260909-01 configuration corroborated by Pages workflow 34269175056 and deployment 6335434394"
+      "providerStatus": "pending_publication",
+      "scope": "current ui-20260909-02 candidate"
     },
-    "liveHttpAndMime": "pass 44/44 at 2026-09-08T19:34:07.169Z: every release-owned live page and critical-asset probe reached its intended final URL with the expected 2xx status and MIME before byte comparison",
-    "liveByteParity": "pass 44/44 exact byte-count and SHA-256 comparisons at 2026-09-08T19:34:07.169Z against the committed ui-20260909-01 artifact",
-    "liveUnknownRoute": {
-      "status": "pass_exact_branded_404",
-      "verifiedAt": "2026-09-08T19:42:09Z",
-      "requestedUrl": "https://montri-th.github.io/rebuild02/__codex-404-attestation-ui-20260909-01-d8eb2bd0-c6d84b7f.html?cb=20260909T023001Z",
-      "finalUrl": "https://montri-th.github.io/rebuild02/__codex-404-attestation-ui-20260909-01-d8eb2bd0-c6d84b7f.html?cb=20260909T023001Z",
-      "redirects": 0,
-      "httpStatus": 404,
-      "mime": "text/html; charset=utf-8",
-      "bytes": 4556,
-      "sha256": "aaa3ee26d7d1f788312d0233942b1f002b3f884100185567bd7ad3001e79b67c",
-      "localPath": "404.html",
-      "localBytesAndShaMatch": true
+    "localSocialPreview": {
+      "status": "pass",
+      "asset": "assets/social/landometer-rebuild02-social-logo-cb8b44fd-1200x630.jpg",
+      "bytes": 247904,
+      "sha256": "cb8b44fd2dff568eebb9b3d17633f7b059df5d77a2318cf2607f68f175191a4a",
+      "metadataRoutes": ["index.html", "Landometer-Home-TH.dc.html", "Landometer-Home-EN.dc.html"],
+      "cropReview": "pass for full 1.91:1 and centred 1:1, 4:3 and 16:9 crops",
+      "receipt": "governance/social-preview-receipt.json"
     },
-    "liveBrowser": {
-      "status": "pass_production_ui_20260909_01",
-      "verifiedAt": "2026-09-08T19:40:52.273Z",
-      "matrix": "32/32 production locale/viewport/theme cases passed with the intended ui-20260909-01 build, no horizontal overflow, duplicate IDs, or first-party runtime errors",
-      "captions": "7/7 captioned-media fixtures passed with captions remaining in normal flow below their images without overlay or clipping",
-      "rails": "4/4 pass: both locale instances of both rails auto-scroll, wrap infinitely in both directions, retain manual drag/button control, pause for required interaction and motion states, and recover automatic movement correctly",
-      "reducedMotion": "4/4 pass: static motif and product-identity fallbacks remain visible, automatic carousel and parallax motion stop, media remains centered, and no horizontal overflow occurs",
-      "noJavaScript": "2/2 pass: both locales retain all 11 transparent full-color Landometer fallbacks, CityChat and ijji fallbacks, centered Thailand maps, visible captions, and no horizontal overflow",
-      "mobile320Containment": "2/2 pass: Thai and English product identities, content, CTAs, captions, maps, and early CityMETER showcase presentation remain contained at 320 px",
-      "livingVideo": "1/1 pass: living-city-rebuild02-r3-vary-speed.mp4 decoded and rendered as the active Living media with poster and reduced-motion behavior intact",
-      "openBoundaries": "machine-package/downstream validation, true Chrome UI zoom, native hidden-tab behavior, slow/load/decode failure injection, keyboard/focus traversal, pagehide, print, selected loading/performance budget, exhaustive provider/social matrix and production accessibility audit"
-    },
+    "liveHttpAndMime": "pending publication",
+    "liveByteParity": "pending publication",
+    "liveUnknownRoute": {"status": "pending publication"},
+    "thirdPartyCacheObservation": "open: platform crawlers control card refresh and crop; origin correctness will be attested separately from cached client previews",
     "previousVerifiedRelease": {
-      "artifactBuildId": "ui-20260908-02",
-      "releaseReceiptId": "rebuild02-ui-20260908-02",
-      "scope": "previous published/live release; none of these receipts attests ui-20260909-01",
-      "artifactCommit": "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec",
-      "artifactTree": "f5b4a8173fa160b853f7bf780b4d8d363e524b09",
-      "artifactWorkflowRunId": 34242568111,
-      "pagesBuildId": 1202182321,
-      "attestationCommit": "b85bedda93a4c7ee4f59698e59d1874c4a3cb7e0",
-      "liveByteVerifiedAt": "2026-09-08T15:14:46.364Z",
-      "liveBrowserVerifiedAt": "2026-09-08T15:50:20.728Z"
-    },
-    "earlierVerifiedRelease": {
-      "artifactBuildId": "ui-20260901-01",
-      "artifactCommit": "f384da3b7d91087598c99f738e97633bd23c6bb1",
-      "artifactTree": "956b6009c926950e065c0bfe9aab638f12753b56",
-      "artifactPagesWorkflowRunId": 33535403331,
-      "attestationCommit": "8cb5cb599557672261008aad53eaf78c42d352d0",
-      "attestationPagesWorkflowRunId": 33536483613,
-      "pagesBuildId": 1188237884,
-      "scope": "earlier historical evidence only"
+      "artifactBuildId": "ui-20260909-01",
+      "releaseReceiptId": "rebuild02-ui-20260909-01",
+      "scope": "previous published/live release and unchanged behavioral baseline for ui-20260909-02",
+      "artifactCommit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
+      "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
+      "artifactWorkflowRunId": 34269175056,
+      "pagesBuildId": 1202614459,
+      "attestationCommit": "38c9d5e9b0c74b59fe05d35774fe855e597c15b9",
+      "liveByteVerifiedAt": "2026-09-08T19:34:07.169Z",
+      "liveBrowserVerifiedAt": "2026-09-08T19:40:52.273Z"
     }
   },
   "productionAccessibilityGate": "open; no zero-critical/serious automated claim"

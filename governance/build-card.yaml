@@ -21,7 +21,7 @@ landometerBuild:
       bytes: 2141429
       sha256: "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     currentArtifactBuild:
-      id: "ui-20260909-01"
+      id: "ui-20260909-02"
       path: "governance/site-manifest.json"
   authority:
     authoringMasterSha256: "52ef41f1b231f8b84955a40c21a018991a114a4f5eaabd8c5111816bf8d645b1"
@@ -59,8 +59,8 @@ landometerBuild:
     altOrCaptionPackage: ""
     deliveredSizeTest: ""
   publication:
-    evidenceStatus: "published_live_verified_with_open_manual_machine_accessibility_and_performance_gates"
-    authorizationSource: "owner request authorized the ui-20260909-01 responsive, full-colour motif, identity, motion, carousel, caption, CTA and media changes and their direct publication"
+    evidenceStatus: "candidate_local_validated_pending_publication"
+    authorizationSource: "owner request on 2026-09-09 authorized a large, clear Landometer logo in share thumbnails across platforms and direct publication to the existing Rebuild02 site"
     visibility: "public"
     indexable: true
     robots: "index,follow"
@@ -69,12 +69,12 @@ landometerBuild:
       en: "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html"
     discoveryStates:
       machineReadableWhenOpened:
-        status: "live_verified"
+        status: "candidate_local_validated"
         evidenceRefs:
           - "governance/site-manifest.json"
           - "semantic initial HTML in both locale routes"
       searchDiscoverable:
-        status: "live_verified_with_host_root_limit"
+        status: "candidate_local_validated_with_host_root_limit"
         evidenceRefs:
           - "robots.txt"
           - "sitemap.xml"
@@ -84,12 +84,12 @@ landometerBuild:
         evidenceRefs:
           - "llms.txt is a navigation-only aid and not represented as a ranking signal"
       agentReadableOrActionable:
-        status: "live_verified_readable_not_actionable"
+        status: "candidate_local_validated_readable_not_actionable"
         evidenceRefs:
           - "semantic initial HTML in both locale routes"
           - "llms.txt machine-use boundary"
     webDiscovery:
-      technicalStatus: "live_verified"
+      technicalStatus: "candidate_local_validated"
       sitemapRef: "sitemap.xml"
       structuredDataRef: "Organization/WebSite/WebPage JSON-LD in both canonical locale routes; visible-content ItemList in locale routes; redirect-shell root intentionally carries metadata but no JSON-LD"
       observations:
@@ -98,53 +98,54 @@ landometerBuild:
         - "project-path robots and sitemap cannot govern the montri-th.github.io hostname root"
         - "llms.txt is navigation-only and grants neither data access nor agent authority"
     socialPreviews:
-      - "assets/social/landometer-rebuild02-og-1200x630.jpg"
+      - "assets/social/landometer-rebuild02-social-logo-cb8b44fd-1200x630.jpg"
   destination:
     required: true
     url: "https://montri-th.github.io/rebuild02/"
-    readiness: "published_live_verified_with_open_manual_machine_accessibility_and_performance_gates"
+    readiness: "candidate_local_validated_pending_publication"
     publicSafe: true
-    status: "published_live_verified"
-    qrOrLinkTest: "pass for the exact live link and governed routes; a physical QR scan was not separately performed"
-    verifiedArtifactCommit: "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27"
-    verifiedArtifactTree: "27277d7a2e447ef3139b72ea51da65d130501bb7"
-    pagesBuildCommit: "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27"
-    pagesBuildState: "built"
-    pagesBuildId: 1202614459
-    pagesWorkflowRunId: 34269175056
-    pagesWorkflowState: "success"
-    pagesDeploymentId: 6335434394
-    pagesDeploymentState: "success"
-    pagesBuildDurationMs: 25644
-    pagesBuildCreatedAt: "2026-09-08T19:28:30Z"
-    pagesBuildUpdatedAt: "2026-09-08T19:28:55Z"
-    liveByteAttestationAt: "2026-09-08T19:34:07.169Z"
-    liveBrowserVerifiedAt: "2026-09-08T19:40:52.273Z"
-    unknownRouteVerifiedAt: "2026-09-08T19:42:09Z"
-    liveRouteEvidence: "pass: 44/44 governed production routes returned the intended status and MIME at 2026-09-08T19:34:07.169Z; a unique cache-busted unknown route returned HTTP 404 text/html with the exact 4,556-byte branded 404 SHA-256 aaa3ee26d7d1f788312d0233942b1f002b3f884100185567bd7ad3001e79b67c at 2026-09-08T19:42:09Z"
-    liveByteParity: "pass: 44/44 governed production probes matched exact bytes from artifact commit d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 at 2026-09-08T19:34:07.169Z"
+    status: "candidate_local_validated_pending_publication"
+    qrOrLinkTest: "pending publication; the social card passed local metadata and crop review"
+    verifiedArtifactCommit: null
+    verifiedArtifactTree: null
+    pagesBuildCommit: null
+    pagesBuildState: "pending"
+    pagesBuildId: null
+    pagesWorkflowRunId: null
+    pagesWorkflowState: "pending"
+    pagesDeploymentId: null
+    pagesDeploymentState: "pending"
+    pagesBuildDurationMs: null
+    pagesBuildCreatedAt: null
+    pagesBuildUpdatedAt: null
+    liveByteAttestationAt: null
+    liveBrowserVerifiedAt: null
+    unknownRouteVerifiedAt: null
+    liveRouteEvidence: "pending publication"
+    liveByteParity: "pending publication"
     releaseLedger:
-      reviewedHeadSha: "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27"
+      reviewedHeadSha: null
       mergeCommitSha: null
       mergeCommitStatus: "not_applicable_direct_push_explicitly_authorized"
-      reviewedTreeOrDiffContained: "artifact commit d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 resolves to reviewed tree 27277d7a2e447ef3139b72ea51da65d130501bb7"
-      deployedSourceSha: "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27"
-      providerRunOrDeploymentId: "Pages workflow 34269175056 / build 1202614459 / deployment 6335434394"
-      checkedAt: "2026-09-08T19:42:09Z"
+      reviewedTreeOrDiffContained: "pending artifact commit"
+      deployedSourceSha: null
+      providerRunOrDeploymentId: null
+      checkedAt: null
     providerConfiguration:
       sourceBranch: "main"
       sourcePath: "/"
       httpsEnforced: true
-      providerStatus: "built_and_deployed_successfully"
-      scope: "current ui-20260909-01 configuration corroborated by Pages workflow 34269175056, build 1202614459 and deployment 6335434394"
+      providerStatus: "pending_publication"
+      scope: "current ui-20260909-02 candidate; provider evidence pending"
     previousVerifiedRelease:
-      artifactBuildId: "ui-20260908-02"
-      artifactCommit: "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec"
-      artifactTree: "f5b4a8173fa160b853f7bf780b4d8d363e524b09"
-      artifactPagesWorkflowRunId: 34242568111
-      attestationCommit: "b85bedda93a4c7ee4f59698e59d1874c4a3cb7e0"
-      pagesBuildId: 1202182321
-      scope: "previous published/live release; does not attest ui-20260909-01"
+      artifactBuildId: "ui-20260909-01"
+      artifactCommit: "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27"
+      artifactTree: "27277d7a2e447ef3139b72ea51da65d130501bb7"
+      artifactPagesWorkflowRunId: 34269175056
+      attestationCommit: "38c9d5e9b0c74b59fe05d35774fe855e597c15b9"
+      pagesBuildId: 1202614459
+      pagesDeploymentId: 6335434394
+      scope: "previous published/live release and unchanged behavioral base for ui-20260909-02"
   audience:
     primary: "People deciding whether a Landometer product or evidence route fits a land, location, or living question."
     role: "public visitor"
@@ -189,7 +190,7 @@ landometerBuild:
     nextUsefulAction: "Copy a version/date-bound proof link or continue to a product-owned route."
     nextTriggerOrCleanCompletion: "Contact Landometer or leave with an exact evidence link."
     dominantObject: "Landometer ecosystem home"
-    channelParityKey: "landometer.home.rebuild02.ui-20260909-01"
+    channelParityKey: "landometer.home.rebuild02.ui-20260909-02"
     brandSignatures:
       - "Measure"
       - "Ground"
@@ -473,7 +474,11 @@ landometerBuild:
         privacy: "owner-supplied team scene; metadata stripped; no participant identity or project outcome is asserted"
       - path: "assets/social/landometer-rebuild02-og-1200x630.jpg"
         sha256: "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12"
-        privacy: "derived from approved Lumpini city photography for Open Graph and Twitter cards"
+        privacy: "historical social preview retained as an immutable previous-output record; no longer emitted and not used as the source of the current derivative"
+      - path: "assets/social/landometer-rebuild02-social-logo-cb8b44fd-1200x630.jpg"
+        sha256: "cb8b44fd2dff568eebb9b3d17633f7b059df5d77a2318cf2607f68f175191a4a"
+        privacy: "public social-preview derivative of approved Lumpini city photography and approved r6 symbol; no private content or added claim"
+        deliveryBoundary: "active immutable Open Graph, Twitter summary_large_image and WebPage primary-image asset for ui-20260909-02; full and centred 1:1, 4:3 and 16:9 crops reviewed"
       - path: "assets/screens/citymeter-market-share-product-rebuild02-r8.png"
         sha256: "9dbfe9a20d1a723f649224358edecb566c3ab7afa0f7d8f4c46db5ca92fd802f"
         privacy: "exact owner-supplied public CityMETER interface screenshot assigned to the Location Intelligence branch-potential card; source ICC/XMP/EXIF screenshot records retained; vehicle brands are interface examples and not endorsements"
@@ -556,7 +561,7 @@ landometerBuild:
     securityBaselineRef: "first_party_public_inquiry_api"
   deliveryIdentity:
     colorSetId: "color-srgb-05"
-    artifactBuildId: "ui-20260909-01"
+    artifactBuildId: "ui-20260909-02"
     tokenRegistry:
       path: "_ds/landometer-design-system-514efc4b-e202-4d55-846b-96c15056a8cc/build-kit/lds-tokens.css"
       version: "6"
@@ -781,10 +786,10 @@ landometerBuild:
         sha256: "198c0d59696c769120cbf32de538414ee0a6f3e599de4183670b12d14b34c739"
     visualBaselineTheme: "light"
     releaseReceipt:
-      receiptId: "rebuild02-ui-20260909-01"
-      catalogOrContentVersion: "landometer-home-rebuild02-v17"
+      receiptId: "rebuild02-ui-20260909-02"
+      catalogOrContentVersion: "landometer-home-rebuild02-v18"
       issuedAt: "2026-09-09"
-      status: "published_live_verified"
+      status: "candidate_local_validated"
   privacy:
     personalData: true
     sensitivity: "public"
@@ -863,7 +868,7 @@ landometerBuild:
     controlInventoryPath: "governance/control-inventory.md"
     machineValidation: "pending"
     conformanceLevel: "authoring_aligned"
-    renderedBrowserGate: "pass production ui-20260909-01 at 2026-09-08T19:40:52.273Z: layout 32/32, captions 7/7, auto/manual infinite rails 4/4, reduced-motion 4/4, no-JavaScript 2/2, 320 px bilingual containment 2/2 and Living r3 video 1/1; all-full transparent motifs, product identity, CTA contrast, mobile showcase, name wrapping, map centering and zero overflow/duplicate IDs/first-party errors passed. Exact live HTTP/MIME and byte parity passed 44/44 at 2026-09-08T19:34:07.169Z, followed by the exact branded 404 at 2026-09-08T19:42:09Z."
+    renderedBrowserGate: "ui-20260909-02 local social-preview pass: root/Thai/English initial metadata, localized alt, Thai/English JSON-LD, sitemap, exact 1200x630 JPEG bytes, deterministic rebuild and full/1:1/4:3/16:9 crop review passed. Page body, CSS, JavaScript and product media remain unchanged from the ui-20260909-01 production browser pass; ui02 production delivery remains pending."
     motifRequiredOpenChecks: "Open checks are native Chrome UI 130% Thai and 200% zoom, native hidden-tab behavior, slow/load/decode failure injection, complete keyboard/focus traversal, pagehide, print, exhaustive provider/social matrices, a selected performance budget, production accessibility and downstream machine validation."
     productionAccessibilityGate: "open"
   determinism:

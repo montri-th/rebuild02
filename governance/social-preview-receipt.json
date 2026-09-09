@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "assetId": "landometer.social-preview.share-logo.cb8b44fd",
+  "artifactBuildId": "ui-20260909-02",
+  "releaseReceiptId": "rebuild02-ui-20260909-02",
+  "revision": "share-20260909-01-cb8b44fd",
+  "status": "candidate_local_validated",
+  "role": "public social preview for Open Graph and Twitter summary_large_image",
+  "publicationBasis": "The owner explicitly requested a large, clear Landometer logo in link-share thumbnails across platforms on 2026-09-09.",
+  "scope": {
+    "host": "https://montri-th.github.io",
+    "projectPath": "/rebuild02/",
+    "localeRoutes": [
+      "index.html",
+      "Landometer-Home-TH.dc.html",
+      "Landometer-Home-EN.dc.html"
+    ],
+    "visibility": "public",
+    "indexability": "index,follow,max-image-preview:large"
+  },
+  "approvedInputs": {
+    "background": {
+      "path": "assets/photos/hero-lumpini-1600.webp",
+      "role": "approved public Hero photograph used as the exact social-preview composition background",
+      "mime": "image/webp",
+      "dimensions": "1600x2400",
+      "bytes": 601894,
+      "sha256": "3969fa1da1b96d81f695f96e619a2454d557c8f1410d402b743844f6f98275cd"
+    },
+    "identity": {
+      "path": "assets/identity/landometer-symbol-color-rebuild02-r6.png",
+      "assetId": "landometer-symbol-color-rebuild02-r6",
+      "role": "approved full-colour compact Landometer identity assigned by the owner to this social-preview composition",
+      "mime": "image/png",
+      "dimensions": "1601x1601",
+      "sha256": "b818eeb6a6f4abeb7a8fac2b858de0e7a03a662dff371842a29ebfe4c21d12f6",
+      "transparentCanvas": true
+    }
+  },
+  "transformation": {
+    "script": "scripts/build_social_preview.py",
+    "runtime": "Python 3.12.14, Pillow 12.3.0",
+    "sourceCanvas": "1600x2400",
+    "sourceCrop": [0, 780, 1600, 840],
+    "workingCanvas": "1600x840",
+    "outputCanvas": "1200x630",
+    "backgroundColorHandling": "assumed_srgb",
+    "identityResize": "1601x1601 to 467x467 at the working canvas, then the complete composition to 1200x630 with Pillow LANCZOS; final identity box is 350x350",
+    "identityPosition": [567, 187],
+    "panelBox": [487, 107, 1113, 733],
+    "panelSurface": "opaque white with #D1DBD9 outline and fixed shadow",
+    "encoding": "progressive JPEG, quality 90, 4:4:4 subsampling, metadata stripped",
+    "prohibitedReuse": "This composition is approved only as the Rebuild02 social preview. It is not a new standalone logo, favicon, header lockup, app icon, or Design System identity variant."
+  },
+  "output": {
+    "path": "assets/social/landometer-rebuild02-social-logo-cb8b44fd-1200x630.jpg",
+    "publicUrl": "https://montri-th.github.io/rebuild02/assets/social/landometer-rebuild02-social-logo-cb8b44fd-1200x630.jpg",
+    "mime": "image/jpeg",
+    "dimensions": "1200x630",
+    "bytes": 247904,
+    "sha256": "cb8b44fd2dff568eebb9b3d17633f7b059df5d77a2318cf2607f68f175191a4a",
+    "transparentCanvas": false,
+    "cacheRevision": "immutable filename suffix cb8b44fd"
+  },
+  "metadata": {
+    "openGraph": [
+      "og:image",
+      "og:image:secure_url",
+      "og:image:type=image/jpeg",
+      "og:image:width=1200",
+      "og:image:height=630",
+      "localized og:image:alt"
+    ],
+    "twitter": [
+      "twitter:card=summary_large_image",
+      "twitter:image",
+      "localized twitter:image:alt"
+    ],
+    "structuredData": "The Thai and English WebPage primaryImageOfPage ImageObject uses the same immutable public URL and 1200x630 dimensions.",
+    "rootParity": "The redirect-shell root emits the same Thai share metadata before redirecting to the canonical Thai page."
+  },
+  "alt": {
+    "th": "โลโก้สี Landometer ขนาดใหญ่เหนือภาพเส้นขอบฟ้ากรุงเทพฯ และสวนลุมพินี",
+    "en": "Large full-colour Landometer logo over the Bangkok skyline and Lumphini Park"
+  },
+  "visualReview": {
+    "reviewedAt": "2026-09-09T14:29:41Z",
+    "states": [
+      "1200x630 full landscape",
+      "630x630 centre crop",
+      "840x630 centre crop",
+      "1120x630 centre crop"
+    ],
+    "result": "pass: the approved symbol remains complete, centred, high-contrast and immediately recognizable in every reviewed crop; the image contains no added claim or private content",
+    "safeArea": [285, 0, 915, 630],
+    "reviewMethod": "side-by-side visual inspection of the full 1.91:1 image and centred 1:1, 4:3 and 16:9 crops"
+  },
+  "validation": {
+    "local": "pass: exact image bytes, three initial-HTML metadata sets, localized alt text, Thai/English JSON-LD and sitemap dates validated",
+    "sourceDiff": "pass: reviewed delta is limited to the governed social-preview image and its deterministic build/check scripts, discovery metadata, release identifiers, sitemap dates and matching governance records",
+    "production": "pending publication",
+    "thirdPartyCacheBoundary": "Origin metadata and immutable image bytes can be verified. Individual platforms control their own crawler schedule, crop, and cached card; no universal cache purge is claimed."
+  }
+}

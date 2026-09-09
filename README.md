@@ -2,9 +2,10 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. The current published and live-verified
-release is `ui-20260909-01` (`rebuild02-ui-20260909-01`), content version
-`landometer-home-rebuild02-v17`, artifact commit
+install, bundler, CI workflow, or build step. The current locally validated candidate is
+`ui-20260909-02` (`rebuild02-ui-20260909-02`), content version
+`landometer-home-rebuild02-v18`; publication evidence is pending. The previous published
+and live-verified behavioral baseline is `ui-20260909-01`, artifact commit
 `d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27` and tree
 `27277d7a2e447ef3139b72ea51da65d130501bb7`. The preceding
 `ui-20260908-02` release (`c4a8fb8d…`, tree `f5b4a817…`) and
@@ -40,7 +41,7 @@ release is `ui-20260909-01` (`rebuild02-ui-20260909-01`), content version
 - The hero fills the first viewport beneath the 76 px desktop / 68 px mobile header.
   Its photograph is static. A large, owner-approved Landometer `logo.full` assembles once
   as a transparent overlay in the photographic sky and keeps an exact SVG fallback; the
-  official navigation, favicon, and social identity files remain unchanged. The overlay
+  official navigation and favicon identity files remain unchanged. The overlay
   never loops, replays after completion, or receives parallax. The section link remains a
   single underlined text action with a downward arrow.
 - Eleven product-neutral Landometer motif placements per locale give each major section
@@ -171,6 +172,15 @@ release is `ui-20260909-01` (`rebuild02-ui-20260909-01`), content version
   The motion action is the only separate UI-icon construction: an explicit inline 24 px
   pause/play SVG pair with no fill, current-colour stroke, and rounded caps/joins. The
   self-hosted Material subset and active Material ligature count remain 25.
+- Link sharing uses one opaque 1200×630 JPEG with the approved full-colour r6 Landometer
+  symbol at 350×350 px on a high-contrast central panel over the approved Lumpini hero
+  photograph. The complete mark survives reviewed centred 1:1, 4:3 and 16:9 crops.
+  Root, Thai and English initial HTML emit the same immutable content-hashed image URL
+  through Open Graph and Twitter metadata; Thai and English WebPage JSON-LD use it as
+  `primaryImageOfPage`. `scripts/build_social_preview.py` reproduces the output with
+  Python 3.12 and Pillow 12.3, and `scripts/check_social_preview.py` verifies the exact
+  image, metadata, localized alt text and sitemap dates. Platform crawlers retain control
+  of their own cached cards, crop and refresh schedule.
 
 ## Motif handoff
 
@@ -204,7 +214,9 @@ suffixes are route contracts and must not be renamed.
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
 validation language. Release source/hash checks pin `site.css` at 65,158 bytes / SHA-256
 `52bc9727…` and `site.js` at 64,619 bytes / SHA-256 `d8424041…`. The
-`ui-20260909-01` artifact commit `d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27` /
+The `ui-20260909-02` social-preview candidate is locally validated and authorized for
+direct publication; its artifact commit, Pages run and live-byte receipt are pending.
+The previous `ui-20260909-01` artifact commit `d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27` /
 tree `27277d7a2e447ef3139b72ea51da65d130501bb7` was published by successful Pages
 workflow `34269175056`, deployment `6335434394`, and build `1202614459`, created at
 `2026-09-08T19:28:30Z` and updated at `2026-09-08T19:28:55Z` after 25,644 ms. Exact live

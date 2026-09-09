@@ -12,14 +12,14 @@
     "delivery": "deployable_public",
     "language": "th",
     "additionalLanguages": ["en"],
-    "evidenceStatus": "published_live_verified",
+    "evidenceStatus": "candidate_local_validated",
     "visibility": "public",
     "indexable": true,
     "canonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-TH.dc.html",
     "alternateCanonicalUrl": "https://montri-th.github.io/rebuild02/Landometer-Home-EN.dc.html",
     "machineValidation": "pending",
     "conformanceLevel": "authoring_aligned",
-    "artifactBuildId": "ui-20260909-01"
+    "artifactBuildId": "ui-20260909-02"
   },
   "colorDelivery": {
     "registryId": "color-srgb-05",
@@ -28,7 +28,7 @@
       "sha256": "0788b25be195307821ac7c26159d5011e840c4c0da385ba6c9237e90fbaf7f1a"
     },
     "currentArtifactBuild": {
-      "id": "ui-20260909-01",
+      "id": "ui-20260909-02",
       "path": "governance/site-manifest.json"
     }
   },
@@ -68,6 +68,7 @@
     "thailandMapCentering": "both Business Dynamics Thailand-map snapshots use the same centered presentation in JavaScript, reduced-motion and no-JavaScript states",
     "darkHoverContrast": "dark-theme menu and topic-option hover changed from transparent to color(srgb .244784 .393333 .443686) with light text; utility/menu-toggle use the same 34% interaction-accent mix and selected states use 16%",
     "socialIconTreatment": "computed local pass: all .icon-symbol instances use Material Symbols Rounded at FILL 0 / wght 300; the motion control is one explicit inline rounded-stroke SVG pause/play pair because those glyphs are absent from the governed subset; social SVGs use fill none, stroke width 1.65 and round caps/joins; five footer destinations are 44 px, icon-only and retain visually hidden accessible labels",
+    "socialPreviewIdentity": "the approved r6 full-colour Landometer symbol is rendered at 350 × 350 px over a single-downsample derivative of the approved 1600 px Hero photograph; the complete mark and white contrast panel remain inside the central 630 × 630 crop-safe slice, and an immutable content-hashed filename is emitted for Open Graph, Twitter and WebPage JSON-LD",
     "productEcosystem": true,
     "productDesktopHierarchy": "two featured cards above three standard cards",
     "governedProductMedia": true,
@@ -94,25 +95,26 @@
   },
   "deliveryIdentity": {
     "colorSetId": "color-srgb-05",
-    "artifactBuildId": "ui-20260909-01",
+    "artifactBuildId": "ui-20260909-02",
     "releaseReceipt": {
-      "receiptId": "rebuild02-ui-20260909-01",
-      "catalogOrContentVersion": "landometer-home-rebuild02-v17",
+      "receiptId": "rebuild02-ui-20260909-02",
+      "catalogOrContentVersion": "landometer-home-rebuild02-v18",
       "issuedAt": "2026-09-09",
-      "status": "published_live_verified"
+      "status": "candidate_local_validated"
     },
     "releaseFileHashes": [
-      {"path": "index.html", "bytes": 6292, "sha256": "52e69380bfaeda4ae33bc866fe3b8b2e688935668e3cf1717f1e35a60eec9adc"},
-      {"path": "Landometer-Home-TH.dc.html", "bytes": 108046, "sha256": "6406ead7e63717c865645e52475e14fd6187592fd285613594a0974009deb400"},
-      {"path": "Landometer-Home-EN.dc.html", "bytes": 90017, "sha256": "44dbde1fbdf0e21304d25a1b41b33dc54cbe38f5ccd029cae51d32f6fdca06d7"},
-      {"path": "404.html", "bytes": 4556, "sha256": "aaa3ee26d7d1f788312d0233942b1f002b3f884100185567bd7ad3001e79b67c"},
+      {"path": "index.html", "bytes": 6784, "sha256": "5bb30aa56e4b3fe11c594ee02a7ac119966cfa8eee3266955075f71b71cedce0"},
+      {"path": "Landometer-Home-TH.dc.html", "bytes": 108556, "sha256": "6d6eb63fb9642e15deac59739b233e9e2180554ef321bb60996ee12c908674c5"},
+      {"path": "Landometer-Home-EN.dc.html", "bytes": 90451, "sha256": "baf0fb07c11dcb504bddb7c442df09210b97e69518b843fc81afd768984ade9e"},
+      {"path": "404.html", "bytes": 4556, "sha256": "48932897e01d04503517cbb6aab7a6209849b29023e84756dc8b28f20113ccba"},
       {"path": "llms.txt", "bytes": 2083, "sha256": "280fbdf2dfd446863b39345b08d5d52124f07f08958a83db58309a92622a1ec3"},
       {"path": "robots.txt", "bytes": 83, "sha256": "a830d2c121000ba9c2abad1fc1a76a29edffce2f6d6f57c8970f72efb09b601f"},
-      {"path": "sitemap.xml", "bytes": 1149, "sha256": "50805ca858bcaa43b67f3210768330a65584befd3ef2d63072b132495f417c90"},
+      {"path": "sitemap.xml", "bytes": 1149, "sha256": "89c6d646ee2ea2fd63c173d1dff848723c9b0c2278a382eee8dea46212a4346d"},
       {"path": "site.css", "bytes": 65158, "sha256": "52bc9727ea04d58c2a41490e45c77bbf46b7391c6e43370e524404407ab8bbaa"},
       {"path": "site.js", "bytes": 64619, "sha256": "d84240411fbb42516381bea4c12c21ca61b14b79bd5d0e4ffb69d765f64e8e53"},
       {"path": "assets/media/living-city-rebuild02-r3-vary-speed.mp4", "bytes": 5302407, "sha256": "babfd35f8153b405596e62c7e424bb7fc9b0f92e6a94ce613564fd869c32c685"},
-      {"path": "assets/motifs/landometer/svg/slice-full.svg", "bytes": 280, "sha256": "8d0dfb62d1ac92738afcd76e8b61b544a5c72bf10b165983235900558447b2df"}
+      {"path": "assets/motifs/landometer/svg/slice-full.svg", "bytes": 280, "sha256": "8d0dfb62d1ac92738afcd76e8b61b544a5c72bf10b165983235900558447b2df"},
+      {"path": "assets/social/landometer-rebuild02-social-logo-cb8b44fd-1200x630.jpg", "bytes": 247904, "sha256": "cb8b44fd2dff568eebb9b3d17633f7b059df5d77a2318cf2607f68f175191a4a"}
     ]
   },
   "network": {
@@ -225,7 +227,14 @@
         "retainedNotRendered": "assets/products/ijji-logo-official.png"
       }
     },
-    "socialPreview": "assets/social/landometer-rebuild02-og-1200x630.jpg"
+    "socialPreview": {
+      "path": "assets/social/landometer-rebuild02-social-logo-cb8b44fd-1200x630.jpg",
+      "bytes": 247904,
+      "dimensions": "1200x630",
+      "sha256": "cb8b44fd2dff568eebb9b3d17633f7b059df5d77a2318cf2607f68f175191a4a",
+      "revision": "share-20260909-01-cb8b44fd",
+      "roleReceipt": "governance/social-preview-receipt.json"
+    }
   },
   "governedObject": {
     "id": "landometer.system-figures.v1",
@@ -365,7 +374,14 @@
     {
       "path": "assets/social/landometer-rebuild02-og-1200x630.jpg",
       "bytes": 385727,
-      "sha256": "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12"
+      "sha256": "e800325215ae36b735663cd03a93831e70c853338b82330320bb7a9383b74d12",
+      "status": "retained_historical_previous_social_preview_not_emitted"
+    },
+    {
+      "path": "assets/social/landometer-rebuild02-social-logo-cb8b44fd-1200x630.jpg",
+      "bytes": 247904,
+      "sha256": "cb8b44fd2dff568eebb9b3d17633f7b059df5d77a2318cf2607f68f175191a4a",
+      "status": "active_social_preview_ui-20260909-02"
     },
     {"path": "assets/photos/location-yaowarat-night-rebuild02-r7-720.webp", "bytes": 91074, "sha256": "5a09f2fba0e3694aba5562bbbc9a6cccc739721a26c1bb239d29b0633aa131a7"},
     {"path": "assets/photos/location-yaowarat-night-rebuild02-r7-1200.webp", "bytes": 203942, "sha256": "fd78e3501f1b5ed39d0e9c9c683806085eb4625d07867afab6680f2fcdb02734"},
@@ -443,50 +459,51 @@
     }
   },
   "publication": {
-    "authorizationSource": "the owner's current request authorized the ui-20260909-01 responsive, full-colour motif, identity, motion, carousel, caption, CTA and media changes and their direct publication",
+    "authorizationSource": "the owner's 2026-09-09 request authorized a large, clear Landometer logo in share thumbnails across platforms and direct publication to the existing Rebuild02 site",
     "repository": "https://github.com/montri-th/rebuild02",
     "branch": "main",
     "pagesRoot": "/",
     "liveUrl": "https://montri-th.github.io/rebuild02/",
     "indexingSignal": "index,follow",
     "discoveryArtifacts": ["robots.txt", "sitemap.xml", "llms.txt navigation index", "branded noindex 404.html", "canonical and hreflang links", "Open Graph and Twitter metadata", "Organization/WebSite/WebPage/ItemList JSON-LD"],
-    "currentReleaseState": "published_live_verified",
-    "candidateArtifactBuildId": "ui-20260909-01",
-    "reviewedHeadSha": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
-    "containmentProof": "artifact commit d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 resolves to tree 27277d7a2e447ef3139b72ea51da65d130501bb7",
+    "currentReleaseState": "candidate_local_validated_pending_publication",
+    "candidateArtifactBuildId": "ui-20260909-02",
+    "reviewedHeadSha": null,
+    "containmentProof": "pending artifact commit",
     "mergeMode": "direct_push_explicitly_authorized_by_user",
     "mergeCommitSha": null,
     "mergeCommitStatus": "not_applicable_direct_push_explicitly_authorized",
-    "deployedSourceSha": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
-    "verifiedArtifactCommit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
-    "verifiedArtifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
-    "pagesBuildState": "built",
-    "pagesBuildId": 1202614459,
-    "pagesWorkflowRunId": 34269175056,
-    "pagesWorkflowState": "success",
-    "pagesDeploymentId": 6335434394,
-    "pagesDeploymentState": "success",
-    "pagesDeploymentCreatedAt": "2026-09-08T19:28:43Z",
-    "pagesDeploymentUpdatedAt": "2026-09-08T19:29:03Z",
-    "pagesBuildDurationMs": 25644,
-    "pagesBuildCreatedAt": "2026-09-08T19:28:30Z",
-    "pagesBuildUpdatedAt": "2026-09-08T19:28:55Z",
-    "liveByteAttestationAt": "2026-09-08T19:34:07.169Z",
-    "unknownRouteVerifiedAt": "2026-09-08T19:42:09Z",
-    "checkedAt": "2026-09-08T19:42:09Z",
-    "verifiedAt": "2026-09-08T19:42:09Z",
-    "liveRouteEvidence": "pass: 44/44 governed production routes returned the intended status and MIME at 2026-09-08T19:34:07.169Z; an unknown route returned HTTP 404 text/html with exact branded 404 bytes at 2026-09-08T19:42:09Z",
-    "liveByteParity": "pass: 44/44 governed production probes matched exact bytes from artifact commit d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27 at 2026-09-08T19:34:07.169Z",
+    "deployedSourceSha": null,
+    "verifiedArtifactCommit": null,
+    "verifiedArtifactTree": null,
+    "pagesBuildState": "pending",
+    "pagesBuildId": null,
+    "pagesWorkflowRunId": null,
+    "pagesWorkflowState": "pending",
+    "pagesDeploymentId": null,
+    "pagesDeploymentState": "pending",
+    "pagesDeploymentCreatedAt": null,
+    "pagesDeploymentUpdatedAt": null,
+    "pagesBuildDurationMs": null,
+    "pagesBuildCreatedAt": null,
+    "pagesBuildUpdatedAt": null,
+    "liveByteAttestationAt": null,
+    "unknownRouteVerifiedAt": null,
+    "checkedAt": null,
+    "verifiedAt": null,
+    "liveRouteEvidence": "pending publication",
+    "liveByteParity": "pending publication",
     "previousVerifiedRelease": {
-      "artifactBuildId": "ui-20260908-02",
-      "artifactCommit": "c4a8fb8d2869a4aeb1a27381f3c5600370e78cec",
-      "artifactTree": "f5b4a8173fa160b853f7bf780b4d8d363e524b09",
-      "attestationCommit": "b85bedda93a4c7ee4f59698e59d1874c4a3cb7e0",
-      "pagesWorkflowRunId": 34242568111,
-      "pagesBuildId": 1202182321,
-      "scope": "previous published/live release; does not attest ui-20260909-01"
+      "artifactBuildId": "ui-20260909-01",
+      "artifactCommit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
+      "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
+      "attestationCommit": "38c9d5e9b0c74b59fe05d35774fe855e597c15b9",
+      "pagesWorkflowRunId": 34269175056,
+      "pagesBuildId": 1202614459,
+      "pagesDeploymentId": 6335434394,
+      "scope": "previous published/live release and unchanged behavioral base for ui-20260909-02"
     },
-    "candidateLocalEvidence": "ui-20260909-01 passed layout 32/32, caption 7/7, carousel 4/4, reduced-motion 4/4, no-JavaScript 2/2 and Living-video 1/1 at 2026-09-08T19:21:49.302Z. The matrix covers both locales, light widths 320/360/390/600/601/630/640/700/768/900/1080/1081/1280/1440 and dark 390/1440, with all-full transparent motifs, stable captions, exact name tokens, balanced product identity, mobile CityMETER examples, contextual CTA contrast, centered Thailand maps, and no overflow, duplicate IDs or first-party errors. Publication and live evidence are attested separately in this object.",
+    "candidateLocalEvidence": "ui-20260909-02 passed exact local social-preview validation for the root, Thai and English initial HTML, localized Open Graph/Twitter alt text, Thai/English WebPage JSON-LD, sitemap dates, image MIME/dimensions/bytes/SHA-256, deterministic rebuild, and full/1:1/4:3/16:9 crop review. The page body, CSS, JavaScript and product media are unchanged from the ui-20260909-01 browser-verified baseline; publication and third-party cache observations are separate gates.",
     "localBrowserEvidence": {
       "matrix": [
         "TH and EN at 320, 360, 390, 600, 601, 630, 640, 700, 768, 900, 1080, 1081, 1280 and 1440 px in light plus 390 and 1440 px in dark: 32 combinations",
