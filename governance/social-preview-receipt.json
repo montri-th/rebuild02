@@ -4,7 +4,7 @@
   "artifactBuildId": "ui-20260909-02",
   "releaseReceiptId": "rebuild02-ui-20260909-02",
   "revision": "share-20260909-01-cb8b44fd",
-  "status": "candidate_local_validated",
+  "status": "published_live_verified_with_third_party_cache_boundary",
   "role": "public social preview for Open Graph and Twitter summary_large_image",
   "publicationBasis": "The owner explicitly requested a large, clear Landometer logo in link-share thumbnails across platforms on 2026-09-09.",
   "scope": {
@@ -98,7 +98,8 @@
   "validation": {
     "local": "pass: exact image bytes, three initial-HTML metadata sets, localized alt text, Thai/English JSON-LD and sitemap dates validated",
     "sourceDiff": "pass: reviewed delta is limited to the governed social-preview image and its deterministic build/check scripts, discovery metadata, release identifiers, sitemap dates and matching governance records",
-    "production": "pending publication",
+    "production": "pass: artifact commit 8f76fac118922798d104867db8a636123844aa75 / tree 86e97aea0695b3386d731f7f91b160345cf5925c published through workflow 34366676243, Pages build 1204362341 and deployment 6352637363; root, Thai, English, sitemap, image and branded 404 bytes matched production at 2026-09-09T14:56:44Z",
+    "crawlerOriginMatrix": "pass at 2026-09-09T14:58:20Z: Discordbot, facebookexternalhit, Twitterbot, LinkedInBot, Slackbot-LinkExpanding and LINE user agents each received HTTP 200, the exact 6,784-byte root HTML and the same immutable image metadata",
     "thirdPartyCacheBoundary": "Origin metadata and immutable image bytes can be verified. Individual platforms control their own crawler schedule, crop, and cached card; no universal cache purge is claimed."
   }
 }

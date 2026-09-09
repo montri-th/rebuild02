@@ -2,10 +2,12 @@
 
 Customer-facing bilingual Landometer home page delivered as static initial HTML on
 Landometer Design System v0.9.0-r7. It uses no client rendering framework, package
-install, bundler, CI workflow, or build step. The current locally validated candidate is
+install, bundler, CI workflow, or build step. The current published and live-verified release is
 `ui-20260909-02` (`rebuild02-ui-20260909-02`), content version
-`landometer-home-rebuild02-v18`; publication evidence is pending. The previous published
-and live-verified behavioral baseline is `ui-20260909-01`, artifact commit
+`landometer-home-rebuild02-v18`, artifact commit
+`8f76fac118922798d104867db8a636123844aa75` and tree
+`86e97aea0695b3386d731f7f91b160345cf5925c`. The previous published and
+live-verified behavioral baseline is `ui-20260909-01`, artifact commit
 `d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27` and tree
 `27277d7a2e447ef3139b72ea51da65d130501bb7`. The preceding
 `ui-20260908-02` release (`c4a8fb8d…`, tree `f5b4a817…`) and
@@ -214,9 +216,15 @@ suffixes are route contracts and must not be renamed.
 `authoring_aligned`; the public pages themselves contain no customer-facing caveat or
 validation language. Release source/hash checks pin `site.css` at 65,158 bytes / SHA-256
 `52bc9727…` and `site.js` at 64,619 bytes / SHA-256 `d8424041…`. The
-The `ui-20260909-02` social-preview candidate is locally validated and authorized for
-direct publication; its artifact commit, Pages run and live-byte receipt are pending.
-The previous `ui-20260909-01` artifact commit `d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27` /
+The `ui-20260909-02` social-preview release was published from artifact commit
+`8f76fac118922798d104867db8a636123844aa75` / tree
+`86e97aea0695b3386d731f7f91b160345cf5925c` by successful workflow
+`34366676243`, Pages build `1204362341`, and deployment `6352637363`. Root, Thai,
+English, social JPEG, sitemap and branded 404 HTTP/MIME/byte parity passed 6/6 at
+`2026-09-09T14:56:44Z`; six crawler user-agent origin probes passed at
+`2026-09-09T14:58:20Z`. Third-party stored-card refresh and final crop remain controlled
+by each platform. The previous `ui-20260909-01` artifact commit
+`d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27` /
 tree `27277d7a2e447ef3139b72ea51da65d130501bb7` was published by successful Pages
 workflow `34269175056`, deployment `6335434394`, and build `1202614459`, created at
 `2026-09-08T19:28:30Z` and updated at `2026-09-08T19:28:55Z` after 25,644 ms. Exact live

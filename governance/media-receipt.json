@@ -140,18 +140,19 @@
     }
   },
   "publicationReceipt": {
-    "status": "candidate_local_validated_pending_publication",
-    "artifactCommit": null,
-    "artifactTree": null,
-    "pagesWorkflowRunId": null,
-    "pagesBuildId": null,
-    "pagesDeploymentId": null,
-    "pagesDeploymentState": "pending",
-    "pagesDeploymentCreatedAt": null,
-    "pagesDeploymentUpdatedAt": null,
-    "liveByteParity": {"status": "pending_publication", "verifiedAt": null},
+    "status": "published_live_verified_with_third_party_cache_boundary",
+    "artifactCommit": "8f76fac118922798d104867db8a636123844aa75",
+    "artifactTree": "86e97aea0695b3386d731f7f91b160345cf5925c",
+    "pagesWorkflowRunId": 34366676243,
+    "pagesBuildId": 1204362341,
+    "pagesDeploymentId": 6352637363,
+    "pagesDeploymentState": "success",
+    "pagesDeploymentCreatedAt": "2026-09-09T14:54:20Z",
+    "pagesDeploymentUpdatedAt": "2026-09-09T14:54:34Z",
+    "liveByteParity": {"status": "pass_6_of_6_release_owned_probes", "verifiedAt": "2026-09-09T14:56:44Z"},
     "liveBrowserVerifiedAt": null,
-    "liveUnknown404VerifiedAt": null,
+    "liveUnknown404VerifiedAt": "2026-09-09T14:56:44Z",
+    "socialCrawlerOriginMatrix": "pass 6/6 at 2026-09-09T14:58:20Z for Discordbot, Meta, X, LinkedIn, Slack and LINE user agents; platform-side caches remain outside the origin receipt",
     "previousVerifiedUi01": {
       "artifactCommit": "d8eb2bd0ccca6322042b8be4ae4dcdd3b90eee27",
       "artifactTree": "27277d7a2e447ef3139b72ea51da65d130501bb7",
@@ -663,7 +664,7 @@
       "privacyAndMetadataReview": "Visible names, parcel details and values are treated as unverified interface samples rather than real-person or property assertions. Exact-copy delivery retains Adobe/ImageReady text and Photoshop XMP/document identifiers.",
       "representationBoundary": "A visibly labelled legacy asset retrieved on 2026-08-26; it is not represented as the current Property Tax Simulator interface."
     },
-    "visualReview": "The ui-20260909-02 social-preview delta passed exact local metadata, JSON-LD, image-byte, deterministic-rebuild and full/1:1/4:3/16:9 crop checks. The page body, CSS, JavaScript and product media are unchanged from the ui-20260909-01 production browser pass. Publication/live bytes and third-party crawler caches remain separate gates until the ui02 release completes."
+    "visualReview": "The ui-20260909-02 social-preview delta passed exact local metadata, JSON-LD, image-byte, deterministic-rebuild and full/1:1/4:3/16:9 crop checks, followed by 6/6 exact live-byte probes and 6/6 crawler user-agent origin probes. The page body, CSS, JavaScript and product media are unchanged from the ui-20260909-01 production browser pass. Third-party stored-card refresh and final crop remain provider-controlled."
   },
   "locationAreaPerformanceR8": {
     "assetId": "location-area-performance-r8-198c0d59",
